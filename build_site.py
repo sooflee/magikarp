@@ -52,6 +52,10 @@ header.mast .kicker{{font-size:13px;color:var(--accent);font-style:italic;margin
 .post .dek{{font-size:15px;color:var(--muted);margin:0}}
 .post .tags{{font-size:12.5px;color:var(--faint);margin:6px 0 0}}
 /* issue page sections */
+.lede{{font-size:19px;line-height:1.6;margin:24px 0 0;color:var(--fg)}}
+.act{{text-align:center;margin:42px 0 0}}
+.act .actlabel{{font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--fg)}}
+.act hr{{border:0;border-top:2px solid var(--fg);margin:8px 0 0}}
 .sec{{padding-top:30px}}
 .sec h2{{font-size:21px;line-height:1.3;letter-spacing:-0.01em;margin:0 0 2px;font-weight:700}}
 .sec .sub{{font-size:13px;font-weight:600;color:var(--accent);margin:0 0 9px}}
@@ -173,9 +177,10 @@ def render_momentum(doc: dict) -> str:
         return ""
     ser, weeks = m["series"], m["weeks"]
     iss = regime_engine.latest_issue(doc)
+    covered = set(iss.get("regimes", {})) - {"markets"}   # only chart regimes we cover
     rows = []
     for k in sorted(ser, key=lambda k: -ser[k][-1]):
-        if k == "markets":            # tracked via the market model, not HN attention
+        if k not in covered:
             continue
         cur = ser[k][-1]
         prev = ser[k][-2] if len(ser[k]) > 1 else cur
@@ -201,8 +206,8 @@ def render_momentum(doc: dict) -> str:
                   f'<ul class="links">{moves}</ul>' if moves else "")
     return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
             f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
-            f'<p class="means">Number of the week&rsquo;s top Hacker News stories that fall in '
-            f'each regime, this week against last.</p>'
+            f'<p class="means">Number of the week&rsquo;s top Hacker News stories in '
+            f'each regime we cover, this week against last.</p>'
             f'<table class="mkt">{"".join(rows)}</table>{moves_html}</div>')
 
 
@@ -361,8 +366,8 @@ def render_watch(watch: list) -> str:
             f'<div class="watch"><div class="t">{esc(w["trend"])} '
             f'<span class="st">&middot; {esc(w["status"])}</span></div>'
             f'<div class="why">{esc(w["why_exponential"])}</div>'
-            f'<div class="via"><strong>What to watch:</strong> {esc(w["watch"])}. '
-            f'<strong>Where it shows up:</strong> {esc(w["expressions"])}.</div></div>')
+            f'<div class="via"><strong>What to watch:</strong> {esc(w["watch"])} '
+            f'<strong>Where it shows up:</strong> {esc(w["expressions"])}</div></div>')
     if old:
         out.append('<div class="watch small" style="color:#b3b3b3;border:0;font-style:italic">Still on watch</div>')
         for w in old:
@@ -372,27 +377,40 @@ def render_watch(watch: list) -> str:
     return "".join(out)
 
 
+def render_lede(iss: dict) -> str:
+    return f'<p class="lede">{esc(iss["lede"])}</p>' if iss.get("lede") else ""
+
+
+def render_act(title: str) -> str:
+    return f'<div class="act"><div class="actlabel">{esc(title)}</div><hr></div>'
+
+
+def _regime(doc, iss, key):
+    r = iss.get("regimes", {}).get(key)
+    return render_regime(doc["regime_defs"].get(key, {}).get("label", key), r) if r else ""
+
+
 def render_issue_page(doc: dict, iss: dict) -> str:
-    defs = doc["regime_defs"]
     reg = iss.get("regimes", {})
-    # order must match the email: what-changed, regimes, commodities, markets,
-    # contrarian, undercurrent, watch, across
-    secs = [render_what_changed(doc), render_momentum(doc)]
-    for key, r in reg.items():
-        if key == "markets":
-            continue
-        secs.append(render_regime(defs.get(key, {}).get("label", key), r))
+    secs = [render_lede(iss), render_what_changed(doc), render_momentum(doc)]
+    # Act 1 — the tech world
+    secs.append(render_act("The tech world"))
+    secs.append(_regime(doc, iss, "tech_policy"))
+    secs.append(_regime(doc, iss, "ai_agents"))
+    secs.append(render_watch(doc.get("bsig_watch", [])))
+    if iss.get("across_sources"):
+        secs.append(render_across(iss["across_sources"]))
+    if iss.get("undercurrent"):
+        secs.append(render_undercurrent(iss["undercurrent"]))
+    # Act 2 — the wider world
+    secs.append(render_act("The wider world"))
+    secs.append(_regime(doc, iss, "geopolitics"))
     if iss.get("commodities"):
         secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
     secs.append(render_radar(iss))
-    if iss.get("undercurrent"):
-        secs.append(render_undercurrent(iss["undercurrent"]))
     secs.append(render_watch_next(iss))
-    secs.append(render_watch(doc.get("bsig_watch", [])))
-    if iss.get("across_sources"):
-        secs.append(render_across(iss["across_sources"]))
     inner = (
         f'<header class="mast"><h1><a href="../">The Current Regime</a></h1>'
         f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</div></header>'

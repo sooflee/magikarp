@@ -103,9 +103,10 @@ def _momentum_html(state):
     if not m:
         return ""
     series, weeks = m["series"], m["weeks"]
+    covered = set(ISSUE.get("regimes", {})) - {"markets"}   # only chart regimes we cover
     rows = []
     for k in sorted(series, key=lambda k: -series[k][-1]):
-        if k == "markets":            # tracked via the market model, not HN attention
+        if k not in covered:
             continue
         cur = series[k][-1]
         prev = series[k][-2] if len(series[k]) > 1 else cur
@@ -130,7 +131,7 @@ def _momentum_html(state):
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Where the week&rsquo;s attention went.</h2>
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
-              <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories that fall in each regime, this week against last.</p>
+              <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
               {_market_moves_html(ISSUE)}
             </td>
@@ -316,28 +317,63 @@ def _across_html(a):
 """
 
 
+def _act_html(title):
+    return f"""
+          <tr>
+            <td style="padding:46px 0 0; text-align:center;">
+              <p style="margin:0 0 8px; color:#1a1a1a; font-size:13px; letter-spacing:3px; text-transform:uppercase; font-weight:700; font-family:{SERIF};">{esc(title)}</p>
+              <div style="border-top:2px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div>
+            </td>
+          </tr>
+"""
+
+
+def _lede_html():
+    if not ISSUE.get("lede"):
+        return ""
+    return f"""
+          <tr>
+            <td style="padding:28px 0 0;">
+              <p style="margin:0; color:#1a1a1a; font-size:19px; line-height:1.6; font-family:{SERIF};">{esc(ISSUE['lede'])}</p>
+            </td>
+          </tr>
+"""
+
+
+def _regime_section(key):
+    r = ISSUE.get("regimes", {}).get(key)
+    if not r:
+        return ""
+    return _section_html(DEFS.get(key, {}).get("label", key), r.get("headline", key),
+                         r.get("summary", ""), r.get("links"), r.get("items"))
+
+
 def build_html():
     reg = ISSUE.get("regimes", {})
-    body = [regime_engine.render_changed_html(STATE), _momentum_html(STATE)]
-    for key, r in reg.items():            # editorial regimes (incl. geopolitics)
-        if key == "markets":
-            continue
-        body.append(_section_html(DEFS.get(key, {}).get("label", key),
-                                  r.get("headline", key), r.get("summary", ""),
-                                  r.get("links"), r.get("items")))
+    body = [_lede_html(), regime_engine.render_changed_html(STATE), _momentum_html(STATE)]
+
+    # Act 1 — the tech world
+    body.append(_act_html("The tech world"))
+    body.append(_regime_section("tech_policy"))
+    body.append(_regime_section("ai_agents"))
+    body.append(regime_engine.render_watch_html(STATE))
+    if ISSUE.get("across_sources"):
+        body.append(_across_html(ISSUE["across_sources"]))
+    if ISSUE.get("undercurrent"):
+        u = ISSUE["undercurrent"]
+        body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
+                                  u.get("summary", ""), u.get("links")))
+
+    # Act 2 — the wider world
+    body.append(_act_html("The wider world"))
+    body.append(_regime_section("geopolitics"))
     if ISSUE.get("commodities"):
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
         body.append(_market_html(reg["markets"]))
     body.append(_radar_html(ISSUE))
-    if ISSUE.get("undercurrent"):
-        u = ISSUE["undercurrent"]
-        body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
-                                  u.get("summary", ""), u.get("links")))
+
     body.append(_watch_next_html(ISSUE))
-    body.append(regime_engine.render_watch_html(STATE))
-    if ISSUE.get("across_sources"):
-        body.append(_across_html(ISSUE["across_sources"]))
 
     return f"""\
 <!DOCTYPE html>
@@ -396,12 +432,15 @@ def build_plain():
            "Sourced from the week's top posts on news.ycombinator.com, with claims",
            "verified against primary reporting, and a market-regime read.", "",
            "-" * 74, ""]
+    if ISSUE.get("lede"):
+        out += [ISSUE["lede"], "", "-" * 74, ""]
     m = ISSUE.get("momentum")
     if m:
         ser = m["series"]
         out += [f"WHERE ATTENTION WENT (regime momentum, {m['weeks'][0]} vs {m['weeks'][-1]}):", ""]
+        covered = set(ISSUE.get("regimes", {})) - {"markets"}
         for k in sorted(ser, key=lambda k: -ser[k][-1]):
-            if k == "markets":
+            if k not in covered:
                 continue
             cur = ser[k][-1]
             prev = ser[k][-2] if len(ser[k]) > 1 else cur
