@@ -1,40 +1,54 @@
-# HN Weekly Themes Briefing
+# The Current Regime
 
-A weekly briefing that pulls the top Hacker News stories from the past 7 days and
-distills them into popular **themes** — split into perishable *Events* and recurring
-*Currents*.
+A weekly newsletter that reads the week's top Hacker News posts (plus GitHub
+trending and arXiv), names the **regimes** organizing the moment, verifies every
+claim against primary reporting, and tracks how those regimes change over time.
 
-## How it runs
+- **Public archive:** https://www.bwang.io/magikarp/
+- **Design reference:** bwang.io/elekid · accent `#1a7f4b`
 
-A **cloud routine** (scheduled Claude Code agent) generates the briefing automatically.
-It runs on Anthropic's cloud infra, so it fires whether or not this machine is on.
+## How an issue is made
 
-| | |
-|---|---|
-| Routine ID | `trig_01PARqr7swfpBeKGnBSzPGuE` |
-| Schedule | `0 12 * * 1` — Mondays 12:00 UTC (**8am EDT / 7am EST**) |
-| Model | claude-opus-4-8 (curation/organization task) |
-| Data source | HN Algolia Search API (public, no auth) |
-| Output | markdown briefing in the routine session + `briefing.md` |
+The full curation and organization process lives in the skill at
+[`.claude/skills/current-regime/SKILL.md`](.claude/skills/current-regime/SKILL.md).
+In short, each week:
 
-**Manage / read results:** https://claude.ai/code/routines/trig_01PARqr7swfpBeKGnBSzPGuE
+1. `python3 sources.py` — pull HN (by points), GitHub trending, arXiv.
+2. `python3 classify.py` — tag stories into regimes, record momentum.
+3. `../ekans` `daily_check.py` — refresh the market regime (optional).
+4. Choose the live regimes; write a direct headline, a didactic paragraph, and a
+   verifiable implication for each. Verify all claims against primary reporting.
+5. Append the issue to `regime_state.json` and `the-current-regime.md`.
+6. `python3 build_site.py` — rebuild the archive in `docs/`.
+7. `send_regime_email.py` — send over Gmail SMTP (`GMAIL_APP_PASSWORD`).
+8. Commit and push.
 
-## Checking that it ran
+House style: didactic and flowing, no em-dashes, plain language, no internal
+jargon or code names in reader-facing text.
 
-The briefing appears as a session in the routines UI each Monday. If a week looks
-skipped, open the routine and hit **Run now** to backfill it.
+## Scheduling
+
+A cloud routine (`trig_01PARqr7swfpBeKGnBSzPGuE`) runs the curation weekly.
+Manage it at https://claude.ai/code/routines/trig_01PARqr7swfpBeKGnBSzPGuE.
+Delivery is currently manual via `send_regime_email.py`.
 
 ## Local preview
 
-Run the same data query locally to eyeball the week before/without the routine:
-
 ```sh
-./fetch_hn.sh            # last 7 days, >150 points
-./fetch_hn.sh 30 150     # last 30 days
+python3 sources.py            # this week across all sources
+python3 classify.py --dry-run # regime classification, nothing written
+python3 regime_engine.py      # the week-over-week diff + watchlist
+./fetch_hn.sh                 # raw HN query (last 7 days, >150 points)
 ```
 
-## Delivery note
+## Files
 
-There's currently no email/Slack connector on the account, so the briefing lives in
-the routines web UI. To get it delivered to an inbox or channel, connect one at
-https://claude.ai/customize/connectors and the routine can be updated to use it.
+| Path | Purpose |
+|---|---|
+| `sources.py` | HN + GitHub trending + arXiv fetchers |
+| `classify.py` | daily news to regime classifier |
+| `regime_state.json` | regime definitions, per-issue state, watchlist |
+| `regime_engine.py` | week-over-week diff + rendered blocks |
+| `send_regime_email.py` | assembles + sends the issue |
+| `build_site.py` | renders the public archive into `docs/` |
+| `the-current-regime.md` | running ledger of every issue |

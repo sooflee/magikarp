@@ -1,0 +1,84 @@
+---
+name: current-regime
+description: Curate and organize the weekly issue of "The Current Regime" — read the week's top Hacker News posts plus GitHub trending and arXiv, classify them into regimes, verify every claim against primary reporting, write didactic copy, refresh the market regime, update the structured state and ledger, rebuild the public archive, and send the email.
+---
+
+# The Current Regime — weekly curation & organization
+
+A weekly newsletter that reads what the world is paying attention to and names
+the **regimes** that organize it: the dominant theme the front page is forming
+around. Regimes change over time, and tracking that change is the point.
+
+Audience: developers and professionals. Reference design: bwang.io/elekid.
+Accent color: forest green `#1a7f4b`. Repo: github.com/sooflee/magikarp.
+
+## Each run, in order
+
+1. **Pull the sources.** `python3 sources.py` returns the week's top Hacker News
+   posts (Algolia, ranked by points), GitHub trending repos, and recent arXiv
+   papers. HN is the spine; GitHub and arXiv corroborate or add what HN misses.
+
+2. **Classify and measure momentum.** `python3 classify.py` tags each story into
+   one of the six regimes (or unaligned), scores confirm/contradict against the
+   current state, and appends a record to `regime_state.json -> daily_counts`.
+
+3. **Refresh the market regime.** In `../ekans`, run
+   `.venv/bin/python pipeline/daily_check.py` and take its one-line summary
+   (trend, volatility, curve, growth, liquidity, crypto). If ekans is not
+   available in the run environment, skip this step rather than fail.
+
+4. **Choose this week's regimes.** From the top posts decide which editorial
+   regimes are live: always consider Tech & policy and AI agents; add Compute &
+   energy, Labor & AI displacement, or Geopolitics when they clearly emerge.
+   For each, write:
+   - a **direct headline** (a plain declarative sentence),
+   - a short **didactic paragraph** that explains the situation,
+   - an **implication**: one bounded, verifiable statement — a reported fact, a
+     count, or a described observation. Never a sweeping claim about how the
+     world "now" works.
+
+5. **Verify before publishing.** Every factual claim is checked against primary
+   reporting via web search. Record the outlets used. If a claim cannot be
+   verified, soften it to what is supported or drop it.
+
+6. **Hold the house style.**
+   - Didactic and flowing, never staccato. Explain finance and technical terms
+     in plain language (volatility, yield curve, risk-off, etc.).
+   - **No em-dashes.** Use commas, periods, or restructure the sentence.
+   - No internal jargon or code names in reader-facing text (no "bsig", no
+     signal IDs like AE-1). Spell out what the reader sees.
+
+7. **Update the structured state.** Append a new issue object to
+   `regime_state.json -> issues` with, per regime: `state` (from that regime's
+   defined state space), `headline`, `summary`, `implication`, and `evidence`.
+   Update the `new` flag on each `bsig_watch` item (elevated this issue vs.
+   ongoing). Append a human-readable entry to `the-current-regime.md`.
+
+8. **Rebuild the archive.** `python3 build_site.py` writes `docs/index.html`
+   (serif throughout, forest-green accent). GitHub Pages serves it at
+   https://www.bwang.io/magikarp/.
+
+9. **Send.** `send_regime_email.py` sends the issue over Gmail SMTP, reading the
+   app password from `GMAIL_APP_PASSWORD` (never hard-coded). The claude.ai
+   Gmail connector only has read scopes, so SMTP is the delivery path.
+
+10. **Commit and push** all changes to `main`.
+
+## The six regimes (state spaces live in regime_state.json)
+
+- **Tech & policy** — open-acceleration / consolidation / state-capture
+- **AI agents** — capability-race / liability-reckoning / normalized
+- **Markets** — risk-on / mixed / risk-off (from the ekans market read)
+- **Compute & energy** — abundant / tightening / constrained
+- **Labor & AI displacement** — hiring / flat / contracting
+- **Geopolitics** — calm / elevated / stressed
+
+## Files
+
+- `sources.py` — multi-source fetchers (HN, GitHub trending, arXiv).
+- `classify.py` — daily news to regime classifier + confirm/contradict.
+- `regime_state.json` — regime definitions, per-issue state, watchlist, daily counts.
+- `regime_engine.py` — week-over-week diff and the rendered blocks.
+- `send_regime_email.py` — assembles and sends the HTML + plain-text issue.
+- `build_site.py` — renders the public archive into `docs/`.
+- `the-current-regime.md` — running ledger of every issue.
