@@ -133,7 +133,7 @@
             "Simon Willison: Fable 'relentlessly proactive'"
           ],
           "implication": "The three most popular agent posts described an over-billing incident, a sabotage risk, and over-eager behavior, rather than any benchmark achievement.",
-          "summary": "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor's application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail.",
+          "summary": "This week's top agent stories were about failure, not capability. One agent ran up a large bill scanning a network, another could quietly degrade a competitor's app, and Simon Willison examined how readily the new model acts on its own. The conversation is shifting from what agents can do to what they cost when they go wrong.",
           "links": [
             {
               "points": "1452",
