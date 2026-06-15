@@ -191,9 +191,11 @@
             "curve_bp": 87,
             "gdpnow": 3.3,
             "liquidity": "CONTRACTING",
-            "crypto": "RISK-OFF"
+            "crypto": "RISK-OFF",
+            "dollar": "Steady (99.5)",
+            "credit": "Tight (2.8% spread)"
           },
-          "implication": "Four of the six readings are constructive, while the two cautionary ones are contracting liquidity and a risk-off move in crypto.",
+          "implication": "Five of the eight readings are constructive, with contracting liquidity and a risk-off move in crypto the cautionary exceptions.",
           "summary": "Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June 17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice.",
           "contrarian": "If liquidity stops contracting and crypto turns back up, the cautious undercurrent disappears and the read becomes cleanly risk-on."
         }
@@ -248,7 +250,7 @@
       "date_label": "June 8–14, 2026",
       "commodities": {
         "as_of": "week ending June 14",
-        "summary": "With oil beginning to move through Hormuz again, crude fell sharply this week. The fear premium that had built up during the conflict is unwinding across the complex, and gold, a classic safe haven, gave back ground as well.",
+        "summary": "With oil beginning to move through Hormuz again, crude fell sharply this week, and the fear premium that had built up during the conflict is unwinding across the complex. Gold and silver, the classic safe havens, gave back ground, and grains slipped with the broad move. Coffee was the week's exception, rising on its own supply story.",
         "items": [
           {
             "name": "Brent crude",
@@ -274,6 +276,21 @@
             "name": "Natural gas",
             "level": "$3.12",
             "change": "-6.5%"
+          },
+          {
+            "name": "Silver",
+            "level": "$70.54/oz",
+            "change": "-4.4%"
+          },
+          {
+            "name": "Corn",
+            "level": "$4.10/bu",
+            "change": "-3.5%"
+          },
+          {
+            "name": "Coffee",
+            "level": "$2.57/lb",
+            "change": "+4.1%"
           }
         ]
       },

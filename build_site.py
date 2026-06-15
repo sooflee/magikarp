@@ -281,14 +281,22 @@ def render_across(a: dict) -> str:
             f'<p><strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p></div>')
 
 
+MKT_ORDER = [("trend", "Trend"), ("vol", "Volatility"), ("curve_bp", "Yield curve"),
+             ("gdpnow", "Growth (GDPNow)"), ("dollar", "Dollar"), ("credit", "Credit"),
+             ("liquidity", "Liquidity"), ("crypto", "Crypto")]
+MKT_FMT = {"curve_bp": lambda v: f"Steep (+{v} bp)", "vol": lambda v: f"Calm ({v})",
+           "gdpnow": lambda v: f"{v}%"}
+MKT_SENSE = {"trend": "pos", "vol": "pos", "curve_bp": "pos", "gdpnow": "pos",
+             "dollar": "neutral", "credit": "pos", "liquidity": "neg", "crypto": "neg"}
+MKT_COLOR = {"pos": "#1a7f4b", "neg": "#b1300f", "neutral": "#1a1a1a"}
+
+
 def render_markets(m: dict) -> str:
     sg = m.get("signals", {})
-    order = [("trend", "Trend"), ("vol", "Volatility"), ("curve_bp", "Yield curve"),
-             ("gdpnow", "Growth (GDPNow)"), ("liquidity", "Liquidity"), ("crypto", "Crypto")]
-    fmt = {"curve_bp": lambda v: f"Steep (+{v} bp)", "vol": lambda v: f"Calm ({v})",
-           "gdpnow": lambda v: f"{v}%"}
-    rows = "".join(f'<tr><td>{lbl}</td><td class="v">{esc(fmt.get(k, lambda v: v)(sg[k]))}</td></tr>'
-                   for k, lbl in order if k in sg)
+    rows = "".join(
+        f'<tr><td>{lbl}</td><td class="v" style="color:{MKT_COLOR[MKT_SENSE.get(k,"neutral")]}">'
+        f'{esc(MKT_FMT.get(k, lambda v: v)(sg[k]))}</td></tr>'
+        for k, lbl in MKT_ORDER if k in sg)
     summary = f"<p>{esc(m['summary'])}</p>" if m.get("summary") else ""
     means = (
         '<p class="means">Volatility measures how much the market is expected to '

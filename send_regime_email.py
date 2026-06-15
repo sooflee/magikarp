@@ -42,11 +42,14 @@ MARKET_MEANS = (
     "market.")
 
 MKT_ORDER = [("trend", "Trend"), ("vol", "Volatility"), ("curve_bp", "Yield curve"),
-             ("gdpnow", "Growth (GDPNow)"), ("liquidity", "Liquidity"), ("crypto", "Crypto")]
+             ("gdpnow", "Growth (GDPNow)"), ("dollar", "Dollar"), ("credit", "Credit"),
+             ("liquidity", "Liquidity"), ("crypto", "Crypto")]
 MKT_FMT = {"vol": lambda v: f"Calm ({v})", "curve_bp": lambda v: f"Steep (+{v} bp)",
            "gdpnow": lambda v: f"{v}%"}
-MKT_POS = {"trend": True, "vol": True, "curve_bp": True, "gdpnow": True,
-           "liquidity": False, "crypto": False}
+# sense: "pos" constructive (green), "neg" cautious (red), "neutral" (dark)
+MKT_SENSE = {"trend": "pos", "vol": "pos", "curve_bp": "pos", "gdpnow": "pos",
+             "dollar": "neutral", "credit": "pos", "liquidity": "neg", "crypto": "neg"}
+MKT_COLOR = {"pos": "#1a7f4b", "neg": "#b1300f", "neutral": "#1a1a1a"}
 
 
 def esc(s) -> str:
@@ -173,7 +176,7 @@ def _market_html(m):
         if key not in sg:
             continue
         val = MKT_FMT.get(key, lambda v: v)(sg[key])
-        color = "#1a7f4b" if MKT_POS.get(key) else "#b1300f"
+        color = MKT_COLOR[MKT_SENSE.get(key, "neutral")]
         rows.append(
             f'<tr><td style="padding:9px 2px; border-bottom:1px solid #ededed; '
             f'font-family:{SERIF}; font-size:15px; color:#666;">{label}</td>'
