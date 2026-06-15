@@ -449,7 +449,6 @@ def render_index(doc: dict, issues: list) -> str:
     inner = (
         '<header class="mast home"><h1>The Current Regime</h1>'
         f'<p class="subwrap"><a class="subscribe" href="{SUBSCRIBE_HREF}">Subscribe</a></p>'
-        '<p class="subnote">A weekly read, free. Click subscribe and just send the email.</p>'
         '</header>'
         + "".join(posts)
     )
