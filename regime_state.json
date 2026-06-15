@@ -455,18 +455,18 @@
   "bsig_watch": [
     {
       "trend": "AI datacenter power demand",
-      "why_exponential": "The largest cloud companies are raising their capital spending sharply, year after year, which pulls forward years of new electricity demand. Power-capacity prices and nuclear-plant restarts are now repricing faster than most analysts expected.",
-      "watch": "Sharp jumps in regional power-capacity prices, cloud companies raising their spending forecasts again, and new approvals to restart nuclear plants to feed data centers.",
-      "expressions": "Power utilities and nuclear operators such as Constellation and Vistra.",
+      "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected.",
+      "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers.",
+      "expressions": "Constellation, Vistra, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",
       "new": true
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
-      "why_exponential": "The price of running AI models has collapsed over the past two years, and now the newest frontier models have reversed course and raised their pricing. As the economics of running models on general-purpose GPUs come under strain, companies are shifting toward custom chips.",
-      "watch": "Whether the price of using top AI models keeps climbing, and whether custom-chip makers keep posting fast data-center growth.",
-      "expressions": "Custom-silicon makers such as Marvell and Broadcom.",
+      "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips.",
+      "watch": "Rising prices for top models, and fast data-center growth at custom-chip makers.",
+      "expressions": "Marvell, Broadcom, and other custom-silicon makers.",
       "bsig_ref": "AS-B",
       "status": "active regime",
       "new": true
@@ -475,15 +475,15 @@
       "trend": "Sovereign GPU scramble",
       "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
       "watch": "Government announcements of national AI computing projects and the supply conflicts they create.",
-      "expressions": "Nvidia, plus national power and data-center projects.",
+      "expressions": "Nvidia and national power and data-center projects.",
       "bsig_ref": "AS-C",
       "status": "event-driven",
       "new": false
     },
     {
       "trend": "Crypto leverage & dry powder",
-      "why_exponential": "Leverage in crypto futures and the supply of stablecoins both swing sharply, and extreme readings often come before reversals. Crypto is currently in a risk-off phase.",
-      "watch": "Unusually high leverage in crypto futures, or an unusually large pile of stablecoins waiting on the sidelines, both of which often come before sharp moves.",
+      "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
+      "watch": "Extreme futures leverage, or an unusually large stablecoin pile.",
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
       "status": "watch (crypto risk-off)",
@@ -493,7 +493,7 @@
       "trend": "Resource-scarcity chains",
       "why_exponential": "Droughts and water limits ripple through several steps before they reach markets. Reduced hydroelectric output raises demand for natural gas, and water stress can slow chip fabrication. Each step tends to amplify the one before it.",
       "watch": "Western US drought deep enough to cut hydroelectric power, and water limits that slow chip factories.",
-      "expressions": "Natural-gas prices and chipmakers exposed to water stress.",
+      "expressions": "Natural-gas prices and water-stressed chipmakers.",
       "bsig_ref": "AH-1 / AH-2",
       "status": "watch",
       "new": false
