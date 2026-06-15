@@ -110,25 +110,29 @@ def diff(state: dict, prev_idx: int = -2, cur_idx: int = -1) -> dict:
 def render_text(state: dict) -> str:
     d = diff(state)
     cur, prev = d["cur"], d["prev"]
-    lines = [f"WHAT CHANGED · issue {cur['id']} vs {prev['id']} "
-             f"({prev['date']} -> {cur['date']})", ""]
     cregs = cur.get("regimes", {})
+    lines = []
 
-    def impl(key):
-        return cregs.get(key, {}).get("implication", "")
+    if not prev.get("partial"):
+        lines += [f"WHAT CHANGED · issue {cur['id']} vs {prev['id']} "
+                  f"({prev['date']} -> {cur['date']})", ""]
 
-    def emit(key, label, oneliner):
-        lines.append(f"  - {label}: {oneliner}")
-        if impl(key):
-            lines.append(f"      => {impl(key)}")
+        def impl(key):
+            return cregs.get(key, {}).get("implication", "")
 
-    for key, label, a, b in d["changed"]:
-        emit(key, label, f"{a} -> {b}")
-    for key, label, st, sig in d["steady"]:
-        if sig:
-            emit(key, label, ", ".join(sig))
-    for key, label, st, head in d["new"]:
-        emit(key, label, head)
+        def emit(key, label, oneliner):
+            lines.append(f"  - {label}: {oneliner}")
+            if impl(key):
+                lines.append(f"      => {impl(key)}")
+
+        for key, label, a, b in d["changed"]:
+            emit(key, label, f"{a} -> {b}")
+        for key, label, st, sig in d["steady"]:
+            if sig:
+                emit(key, label, ", ".join(sig))
+        for key, label, st, head in d["new"]:
+            emit(key, label, head)
+        lines.append("")
     watch = state.get("bsig_watch", [])
     lines += ["", "EXPONENTIAL TRENDS TO WATCH", ""]
     for w in [w for w in watch if w.get("new")]:
@@ -156,6 +160,8 @@ def _eyebrow(txt):
 def render_changed_html(state: dict) -> str:
     d = diff(state)
     cur, prev = d["cur"], d["prev"]
+    if prev.get("partial"):
+        return ""   # nothing meaningful to diff against the baseline issue
     cregs = cur.get("regimes", {})
 
     def row(key, label, oneliner):

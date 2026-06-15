@@ -164,16 +164,23 @@ def render_momentum(doc: dict) -> str:
     if not m:
         return ""
     ser, weeks = m["series"], m["weeks"]
+    iss = regime_engine.latest_issue(doc)
     rows = []
     for k in sorted(ser, key=lambda k: -ser[k][-1]):
+        if k == "markets":            # tracked via the market model, not HN attention
+            continue
         cur = ser[k][-1]
         prev = ser[k][-2] if len(ser[k]) > 1 else cur
         if cur == 0 and prev == 0:
             continue
         arr, color = ("&#9650;", "#1a7f4b") if cur > prev else (
             ("&#9660;", "#b1300f") if cur < prev else ("&#9644;", "#9aa0aa"))
-        label = doc["regime_defs"].get(k, {}).get("label", k)
-        rows.append(f'<tr><td>{esc(label)}</td><td class="v" style="font-weight:400">'
+        label = esc(doc["regime_defs"].get(k, {}).get("label", k))
+        st = iss.get("regimes", {}).get(k, {}).get("state")
+        if st:
+            label += (f' <span class="traj" style="display:inline;margin:0">'
+                      f'&middot; week {regime_engine.weeks_in_state(doc, k)} in {esc(st)}</span>')
+        rows.append(f'<tr><td>{label}</td><td class="v" style="font-weight:400;white-space:nowrap">'
                     f'<span style="color:var(--faint)">{prev} &rarr; </span>'
                     f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
     return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
@@ -204,6 +211,8 @@ def render_watch_next(iss: dict) -> str:
 
 def render_what_changed(doc: dict) -> str:
     d = regime_engine.diff(doc)
+    if d["prev"].get("partial"):
+        return ""   # nothing meaningful to diff against the baseline issue
     cregs = d["cur"].get("regimes", {})
 
     def impl(k):
@@ -263,20 +272,13 @@ def render_undercurrent(u: dict) -> str:
 
 
 def render_across(a: dict) -> str:
-    gh, ax = a.get("github", []), a.get("arxiv", [])
-    if not gh and not ax:
+    gh = a.get("github", [])
+    if not gh:
         return ""
-    out = ['<div class="sec across"><h2>What&rsquo;s getting built and published.</h2>'
-           '<p class="sub">Across the sources</p>']
-    if gh:
-        items = " &middot; ".join(f'<a href="{esc(r["url"])}">{esc(r["title"])}</a>' for r in gh)
-        out.append(f'<p><strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p>')
-    if ax:
-        items = "".join(f'<li><a href="{esc(x["url"])}">{esc(x["title"])}</a></li>' for x in ax)
-        out.append('<p style="margin-bottom:2px"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
-                   f'<ul class="links">{items}</ul>')
-    out.append("</div>")
-    return "".join(out)
+    items = " &middot; ".join(f'<a href="{esc(r["url"])}">{esc(r["title"])}</a>' for r in gh)
+    return ('<div class="sec across"><h2>What&rsquo;s getting built and published.</h2>'
+            '<p class="sub">Across the sources</p>'
+            f'<p><strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p></div>')
 
 
 def render_markets(m: dict) -> str:
@@ -331,8 +333,7 @@ def render_issue_page(doc: dict, iss: dict) -> str:
     for key, r in reg.items():
         if key == "markets":
             continue
-        secs.append(render_regime(defs.get(key, {}).get("label", key), r,
-                                  regime_engine.trajectory_line(doc, key)))
+        secs.append(render_regime(defs.get(key, {}).get("label", key), r))
     if iss.get("commodities"):
         secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:

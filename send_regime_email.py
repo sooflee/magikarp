@@ -102,18 +102,24 @@ def _momentum_html(state):
     series, weeks = m["series"], m["weeks"]
     rows = []
     for k in sorted(series, key=lambda k: -series[k][-1]):
+        if k == "markets":            # tracked via the market model, not HN attention
+            continue
         cur = series[k][-1]
         prev = series[k][-2] if len(series[k]) > 1 else cur
         if cur == 0 and prev == 0:
             continue
         arrow, color = ("&#9650;", "#1a7f4b") if cur > prev else (
             ("&#9660;", "#b1300f") if cur < prev else ("&#9644;", "#9a9a9a"))
-        label = DEFS.get(k, {}).get("label", k)
+        label = esc(DEFS.get(k, {}).get("label", k))
+        st = ISSUE.get("regimes", {}).get(k, {}).get("state")
+        if st:
+            label += (f' <span style="color:#9a9a9a; font-size:13px; font-style:italic;">'
+                      f'&middot; week {regime_engine.weeks_in_state(state, k)} in {esc(st)}</span>')
         rows.append(
             f'<tr><td style="padding:8px 2px; border-bottom:1px solid #ededed; '
-            f'font-family:{SERIF}; font-size:15px; color:#1a1a1a;">{esc(label)}</td>'
+            f'font-family:{SERIF}; font-size:15px; color:#1a1a1a;">{label}</td>'
             f'<td align="right" style="padding:8px 2px; border-bottom:1px solid #ededed; '
-            f'font-family:{SERIF}; font-size:15px; color:#9a9a9a;">{prev} &rarr; '
+            f'font-family:{SERIF}; font-size:15px; color:#9a9a9a; white-space:nowrap;">{prev} &rarr; '
             f'<span style="color:#1a1a1a; font-weight:700;">{cur}</span> '
             f'<span style="color:{color};">{arrow}</span></td></tr>')
     return f"""
@@ -234,24 +240,15 @@ def _contrarian_html(issue):
 
 
 def _across_html(a):
-    gh, ax = a.get("github", []), a.get("arxiv", [])
-    if not gh and not ax:
+    gh = a.get("github", [])
+    if not gh:
         return ""
-    rows = []
-    if gh:
-        items = " &nbsp;&middot;&nbsp; ".join(
-            f'<a href="{r["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(r["title"])}</a>'
-            for r in gh[:5])
-        rows.append(
-            f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SERIF}; color:#1a1a1a;">'
-            f'<strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}:<br>{items}</p>')
-    if ax:
-        items = "".join(
-            f'<li style="margin:0 0 5px;"><a href="{x["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(x["title"])}</a></li>'
-            for x in ax)
-        rows.append(
-            f'<p style="margin:0 0 4px; font-size:15px; font-family:{SERIF}; color:#1a1a1a;"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
-            f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.6; font-family:{SERIF}; color:#444;">{items}</ul>')
+    items = " &nbsp;&middot;&nbsp; ".join(
+        f'<a href="{r["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(r["title"])}</a>'
+        for r in gh[:5])
+    rows = [
+        f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SERIF}; color:#1a1a1a;">'
+        f'<strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p>']
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
@@ -271,8 +268,7 @@ def build_html():
             continue
         body.append(_section_html(DEFS.get(key, {}).get("label", key),
                                   r.get("headline", key), r.get("summary", ""),
-                                  r.get("links"), r.get("items"),
-                                  regime_engine.trajectory_line(STATE, key)))
+                                  r.get("links"), r.get("items")))
     if ISSUE.get("commodities"):
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
@@ -348,21 +344,23 @@ def build_plain():
         ser = m["series"]
         out += [f"WHERE ATTENTION WENT (regime momentum, {m['weeks'][0]} vs {m['weeks'][-1]}):", ""]
         for k in sorted(ser, key=lambda k: -ser[k][-1]):
+            if k == "markets":
+                continue
             cur = ser[k][-1]
             prev = ser[k][-2] if len(ser[k]) > 1 else cur
             if cur == 0 and prev == 0:
                 continue
             arrow = "up" if cur > prev else ("down" if cur < prev else "flat")
-            out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow})")
+            st = ISSUE.get("regimes", {}).get(k, {}).get("state")
+            tail = f", week {regime_engine.weeks_in_state(STATE, k)} in {st}" if st else ""
+            out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow}){tail}")
         out.append("")
     for key, r in reg.items():
         if key == "markets":
             continue
         label = DEFS.get(key, {}).get("label", key).upper()
-        traj = regime_engine.trajectory_line(STATE, key)
-        head = f"{label}: {r.get('headline','')}" + (f"  [{traj}]" if traj else "")
         refs = _items_text(r.get("items")) or _links_text(r.get("links")).rstrip()
-        out += [head, "", r.get("summary", ""), "", refs, ""]
+        out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "", refs, ""]
     if ISSUE.get("commodities"):
         c = ISSUE["commodities"]
         out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]
@@ -392,12 +390,10 @@ def build_plain():
     out += [regime_engine.render_text(STATE), ""]
     if ISSUE.get("across_sources"):
         a = ISSUE["across_sources"]
-        out += ["ACROSS THE SOURCES", ""]
         if a.get("github"):
-            out.append("GitHub trending: " + ", ".join(r["title"] for r in a["github"][:5]))
-        if a.get("arxiv"):
-            out += ["arXiv (cs.AI/LG/CL):"] + [f"  - {x['title']}" for x in a["arxiv"]]
-        out.append("")
+            out += ["ACROSS THE SOURCES", "",
+                    f"GitHub trending shows {a.get('github_theme','')}: "
+                    + ", ".join(r["title"] for r in a["github"][:5]), ""]
     out += ["-" * 74, "Regimes change. Understanding the world within a changing context."]
     return "\n".join(out)
 
