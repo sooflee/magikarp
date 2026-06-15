@@ -73,7 +73,7 @@ def diff(state: dict, prev_idx: int = -2, cur_idx: int = -1) -> dict:
 def render_text(state: dict) -> str:
     d = diff(state)
     cur, prev = d["cur"], d["prev"]
-    lines = [f"WHAT CHANGED — issue {cur['id']} vs {prev['id']} "
+    lines = [f"WHAT CHANGED · issue {cur['id']} vs {prev['id']} "
              f"({prev['date']} -> {cur['date']})", ""]
     cregs = cur.get("regimes", {})
 
@@ -104,7 +104,7 @@ def render_text(state: dict) -> str:
         lines.append("")
         lines.append("  Still on watch:")
         for w in old:
-            lines.append(f"    - {w['trend']} [{w['status']}] — {w['expressions']}")
+            lines.append(f"    - {w['trend']} [{w['status']}]: {w['expressions']}")
     return "\n".join(lines)
 
 

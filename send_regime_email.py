@@ -17,28 +17,27 @@ import sources
 
 SENDER = "bensonw.dev@gmail.com"
 RECIPIENT = "bensonw.dev@gmail.com"
-SUBJECT = "The Current Regime · 001 — June 8–14, 2026"
+SUBJECT = "The Current Regime · 001 · June 8–14, 2026"
 
 PLAIN_BODY = """\
 THE CURRENT REGIME
-Issue 001 - Week of June 8-14, 2026
-Sourced from the week's top posts on news.ycombinator.com, claims verified
-against primary reporting, plus a market-regime read.
+Issue 001 · Week of June 8-14, 2026
+Sourced from the week's top posts on news.ycombinator.com, with claims
+verified against primary reporting, and a market-regime read.
 
 --------------------------------------------------------------------------
 
-TECH & POLICY: Frontier-model access is now export-controlled.
+TECH & POLICY: The government took a frontier model offline.
 
-On June 12 the US Commerce Department ordered Anthropic to suspend access to
-Fable 5 and Mythos 5 for all foreign nationals, citing national security.
-Anthropic disabled both models for every customer to comply; its other models
-were unaffected. Reporting ties the directive to Amazon CEO Andy Jassy, who
-told US officials that Amazon researchers had prompted Fable 5 into producing
-material useful for cyberattacks. Anthropic called those vulnerabilities
-"previously known" and "minor." It is the first time a frontier model has gone
-offline by government order rather than a company's own decision. The
-"Open source AI must win" post trending alongside it is the direct reaction:
-weights you hold locally cannot be switched off remotely.
+On June 12, the United States Commerce Department ordered Anthropic to suspend
+access to its Fable 5 and Mythos 5 models for all foreign nationals, citing
+national security. To comply, Anthropic disabled both models for every
+customer, while its other models continued to operate. Reporting connects the
+order to Amazon's chief executive, Andy Jassy, who told officials that Amazon
+researchers had prompted Fable 5 into producing material useful for
+cyberattacks. Anthropic responded that these vulnerabilities were already known
+and minor. This appears to be the first time a frontier model has been taken
+offline by government order rather than by a company's own decision.
 
 - US directive (Anthropic): https://www.anthropic.com/news/fable-mythos-access
 - Fable 5 / Mythos 5 launch: https://www.anthropic.com/news/claude-fable-5-mythos-5
@@ -46,36 +45,43 @@ weights you hold locally cannot be switched off remotely.
 - Open source AI must win: https://opensourceaimustwin.com/
 - German court holds Google liable for AI Overviews: https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/
 
-AI AGENTS: Judged on liability, not capability.
+AI AGENTS: The agent conversation turns toward cost and failure.
 
-The agent posts that ranked this week were about cost and failure, not
-benchmarks: an agent that ran up a large bill scanning a network, an argument
-that a coding assistant could quietly degrade a competitor's app, and Simon
-Willison on Fable being "relentlessly proactive." The question has shifted from
-what agents can do to what they cost when they go wrong.
+This week, the agent stories that rose to the top were not about new
+capabilities or benchmark results. Instead, each described something going
+wrong. One recounted an agent that ran up a large bill while scanning a
+network. Another argued that a coding assistant could quietly degrade a
+competitor's application. A third, written by Simon Willison, examined how
+readily the new model acts on its own initiative. Together they suggest that
+attention is moving away from what agents can do and toward what they cost when
+they fail.
 
 - AI agent bankrupted its operator scanning DN42: https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/
 - If Claude Fable stops helping you, you'll never know: https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html
 - Claude Fable is relentlessly proactive (Simon Willison): https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/
 
-MARKETS: Risk-on tape, risk-off undercurrent. (as of 2026-06-14)
+MARKETS: A calm market with a cautious undercurrent. (as of 2026-06-14)
 
 Trend UP, volatility CALM (0.86), yield curve STEEP (+87bp), Atlanta Fed
-GDPNow 3.3%, liquidity CONTRACTING, crypto RISK-OFF. Equity momentum and growth
-are intact, but liquidity is draining and crypto has decoupled to the downside.
-Next Federal Reserve rate decision is June 17. Directional read only, not
-investment advice.
+GDPNow 3.3%, liquidity CONTRACTING, crypto RISK-OFF. Stock-market momentum and
+economic growth both remain healthy, while financial liquidity is contracting
+and cryptocurrencies have fallen away from stocks. The next Federal Reserve
+interest-rate decision arrives on June 17. This is a directional read of
+conditions, not investment advice.
 
-What the readings mean: Volatility (near-term vs longer-term expected market
-swings) eased 0.91 -> 0.86, i.e. less immediate stress. A steep yield curve
-(long minus short government rates, +87bp) usually signals expected growth, not
-recession. Crypto "risk-off" means money is leaving the most speculative assets
-- Bitcoin is falling and no longer moving with stocks, often an early caution
-sign beneath a calm surface.
+What the readings mean: Volatility measures how much the market is expected to
+move in the near term compared with the longer term, so a lower reading (0.86,
+down from 0.91) means traders see less immediate stress. The yield curve is the
+gap between long-term and short-term government borrowing rates, and a steep
+curve (+87bp) usually points to expected growth rather than recession. When
+crypto is described as risk-off, investors are stepping back from the most
+speculative assets, which often serves as an early note of caution beneath an
+otherwise calm market.
 
-UNDERCURRENT: A pull back toward human-made, legible work.
+UNDERCURRENT: A quieter pull toward human-made work.
 
-A quieter counter-theme rewarding human effort and the simple web.
+Running beneath the week's main stories is a quieter countercurrent that
+rewards human effort and the plain, readable web.
 - If you ask for human attention, demonstrate human effort: https://tombedor.dev/human-attention-and-human-effort/
 - Building an HTML-first site doubled our users: https://mohkohn.co.uk/writing/html-first/
 - Making Graphics Like it's 1993: https://staniks.github.io/articles/catlantean-3d-blog-1/
@@ -89,6 +95,7 @@ Regimes change. Understanding the world within a changing context.
 SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,Georgia,"
          "'Times New Roman',serif")
 SANS = SERIF  # alias: every text element renders in the serif face
+ACCENT = "#1a7f4b"  # forest-green accent
 
 
 def _li(points, text, href):
@@ -97,7 +104,7 @@ def _li(points, text, href):
         '<tr>'
         f'<td style="padding:9px 0; border-bottom:1px solid #ededed; '
         f'font-family:{SANS}; font-size:16px; line-height:1.5; vertical-align:top;">'
-        f'<a href="{href}" style="color:#0b5fff; text-decoration:underline;">{text}</a>'
+        f'<a href="{href}" style="color:{ACCENT}; text-decoration:underline;">{text}</a>'
         f'<span style="color:#9a9a9a; font-size:13px;"> &nbsp;&middot;&nbsp; {pts} pts</span>'
         '</td></tr>'
     )
@@ -105,9 +112,9 @@ def _li(points, text, href):
 
 LINKS_POLICY = "".join([
     _li("3121", "US directive to suspend access to Fable 5 and Mythos 5 (Anthropic)", "https://www.anthropic.com/news/fable-mythos-access"),
-    _li("2620", "Claude Fable 5 / Mythos 5 — the launch behind it", "https://www.anthropic.com/news/claude-fable-5-mythos-5"),
+    _li("2620", "Claude Fable 5 and Mythos 5, the launch behind the order", "https://www.anthropic.com/news/claude-fable-5-mythos-5"),
     _li("&nbsp;780", "What triggered it: Amazon CEO’s talks with US officials (WSJ)", "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578"),
-    _li("1569", "“Open source AI must win” — the local-weights reaction", "https://opensourceaimustwin.com/"),
+    _li("1569", "“Open source AI must win,” the local-weights reaction", "https://opensourceaimustwin.com/"),
     _li("1015", "German court holds Google liable for false AI Overviews", "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/"),
 ])
 
@@ -133,7 +140,7 @@ def section(subtitle, title, paragraph, links_html=""):
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">{title}</h2>
-              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">{subtitle}</p>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SANS};">{subtitle}</p>
               <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">{paragraph}</p>
               {links}
             </td>
@@ -188,23 +195,23 @@ def build_cross_source_html():
     rows = []
     if gh:
         items = " &nbsp;&middot;&nbsp; ".join(
-            f'<a href="{r["url"]}" style="color:#0b5fff; text-decoration:underline;">{r["title"]}</a>'
+            f'<a href="{r["url"]}" style="color:{ACCENT}; text-decoration:underline;">{r["title"]}</a>'
             for r in gh[:5])
         rows.append(
             f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SANS}; color:#1a1a1a;">'
-            f'<strong>GitHub trending</strong> &mdash; {_gh_theme(gh)}:<br>{items}</p>')
+            f'<strong>GitHub trending</strong> shows {_gh_theme(gh)}:<br>{items}</p>')
     if ax:
         items = "".join(
-            f'<li style="margin:0 0 5px;"><a href="{a["url"]}" style="color:#0b5fff; text-decoration:underline;">{a["title"]}</a></li>'
+            f'<li style="margin:0 0 5px;"><a href="{a["url"]}" style="color:{ACCENT}; text-decoration:underline;">{a["title"]}</a></li>'
             for a in ax)
         rows.append(
-            f'<p style="margin:0 0 4px; font-size:15px; font-family:{SANS}; color:#1a1a1a;"><strong>arXiv</strong> &mdash; latest in cs.AI / cs.LG / cs.CL:</p>'
+            f'<p style="margin:0 0 4px; font-size:15px; font-family:{SANS}; color:#1a1a1a;"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
             f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.6; font-family:{SANS}; color:#444;">{items}</ul>')
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">What&rsquo;s getting built and published.</h2>
-              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Across the sources</p>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SANS};">Across the sources</p>
               {''.join(rows)}
             </td>
           </tr>
@@ -243,31 +250,28 @@ HTML_BODY = f"""\
           {WHAT_CHANGED_HTML}
 
           {section("Tech &amp; policy", "The government took a frontier model offline.",
-            "On June 12 the US Commerce Department ordered Anthropic to suspend access to Fable&nbsp;5 and Mythos&nbsp;5 for all foreign nationals, citing national security. Anthropic disabled both models for every customer to comply; its other models were unaffected. Reporting ties the directive to Amazon CEO Andy Jassy, who told officials that Amazon researchers had prompted Fable&nbsp;5 into producing material useful for cyberattacks &mdash; vulnerabilities Anthropic called &ldquo;previously known&rdquo; and &ldquo;minor.&rdquo; It is the first time a frontier model has gone offline by government order rather than a company&rsquo;s own decision.",
+            "On June 12, the United States Commerce Department ordered Anthropic to suspend access to its Fable&nbsp;5 and Mythos&nbsp;5 models for all foreign nationals, citing national security. To comply, Anthropic disabled both models for every customer, while its other models continued to operate. Reporting connects the order to Amazon&rsquo;s chief executive, Andy Jassy, who told officials that Amazon researchers had prompted Fable&nbsp;5 into producing material useful for cyberattacks. Anthropic responded that these vulnerabilities were already known and minor. This appears to be the first time a frontier model has been taken offline by government order rather than by a company&rsquo;s own decision.",
             LINKS_POLICY)}
 
-          {section("AI agents", "Agents are now judged by what they break.",
-            "The agent posts that ranked this week were about cost and failure, not benchmarks: an agent that ran up a large bill scanning a network, an argument that a coding assistant could quietly degrade a competitor&rsquo;s app, and Simon Willison on Fable being &ldquo;relentlessly proactive.&rdquo; The question has shifted from what agents can do to what they cost when they go wrong.",
+          {section("AI agents", "The agent conversation turns toward cost and failure.",
+            "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor&rsquo;s application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail.",
             LINKS_AGENTS)}
 
           <!-- Market regime (first-class section + the card table) -->
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">Risk-on tape, risk-off undercurrent.</h2>
-              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Markets &middot; as of June&nbsp;14</p>
-              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">Equity momentum and growth are intact, but liquidity is draining and crypto has decoupled to the downside. Next Federal Reserve rate decision is June&nbsp;17. Directional read only &mdash; not investment advice.</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">A calm market with a cautious undercurrent.</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SANS};">Markets &middot; as of June&nbsp;14</p>
+              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June&nbsp;17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{MARKET_TABLE}</table>
-              <p style="margin:16px 0 0; color:#555; font-size:14px; line-height:1.7; font-family:{SANS};">
-                <strong>What the readings mean.</strong>
-                <em>Volatility</em> here is the ratio of near-term to longer-term expected stock-market swings; it eased from 0.91 to 0.86, meaning traders see <em>less</em> immediate stress &mdash; a calm tape.
-                The <em>yield curve</em> is long-term minus short-term government borrowing rates; at +87&nbsp;basis points it is &ldquo;steep,&rdquo; which usually signals expectations of decent growth rather than recession.
-                Crypto at <em>risk-off</em> means money is backing out of the most speculative assets &mdash; Bitcoin is falling and no longer rising alongside stocks, often an early note of caution underneath an otherwise calm market.
+              <p style="margin:16px 0 0; color:#555; font-size:15px; line-height:1.8; font-family:{SANS};">
+                Volatility measures how much the market is expected to move in the near term compared with the longer term, so a lower reading means traders see less immediate stress. The yield curve is the gap between long-term and short-term government borrowing rates, and a steep curve usually points to expected growth rather than recession. When crypto is described as risk-off, investors are stepping back from the most speculative assets, which often serves as an early note of caution beneath an otherwise calm market.
               </p>
             </td>
           </tr>
 
-          {section("Undercurrent", "A pull back toward human-made work.",
-            "A quieter counter-theme rewarding human effort and the simple web.",
+          {section("Undercurrent", "A quieter pull toward human-made work.",
+            "Running beneath the week&rsquo;s main stories is a quieter countercurrent that rewards human effort and the plain, readable web. Several of the most-shared posts argued for craft, simplicity, and pages that load and read easily.",
             LINKS_UNDER)}
 
           {CROSS_SOURCE_HTML}

@@ -86,28 +86,30 @@
       "regimes": {
         "tech_policy": {
           "state": "state-capture",
-          "headline": "Frontier-model access is now export-controlled.",
+          "headline": "The government took a frontier model offline.",
           "evidence": [
             "US Commerce directive suspended foreign access to Fable 5 / Mythos 5; Anthropic disabled both for all users",
             "Amazon CEO Jassy triggered it; Anthropic called vulns 'previously known' and 'minor'",
             "'Open source AI must win' trending as the local-weights reaction",
             "German court holds Google liable for AI Overviews"
           ],
-          "implication": "The directive covers all foreign nationals — including some of Anthropic's own staff — not only foreign customers."
+          "implication": "The order applies to all foreign nationals, including some of Anthropic's own staff, rather than only to foreign customers.",
+          "summary": "On June 12, the United States Commerce Department ordered Anthropic to suspend access to its Fable 5 and Mythos 5 models for all foreign nationals, citing national security. To comply, Anthropic disabled both models for every customer, while its other models continued to operate. Reporting connects the order to Amazon's chief executive, Andy Jassy, who told officials that Amazon researchers had prompted Fable 5 into producing material useful for cyberattacks. Anthropic responded that these vulnerabilities were already known and minor. This appears to be the first time a frontier model has been taken offline by government order rather than by a company's own decision."
         },
         "ai_agents": {
           "state": "liability-reckoning",
-          "headline": "Judged on liability, not capability.",
+          "headline": "The agent conversation turns toward cost and failure.",
           "evidence": [
             "AI agent bankrupted operator scanning DN42",
             "'If Claude Fable stops helping you, you'll never know'",
             "Simon Willison: Fable 'relentlessly proactive'"
           ],
-          "implication": "The three top agent posts described an over-billing incident, a sabotage risk, and over-eager behavior — not benchmark wins."
+          "implication": "The three most popular agent posts described an over-billing incident, a sabotage risk, and over-eager behavior, rather than any benchmark achievement.",
+          "summary": "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor's application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail."
         },
         "markets": {
           "state": "mixed",
-          "headline": "Risk-on tape, risk-off undercurrent.",
+          "headline": "A calm market with a cautious undercurrent.",
           "signals": {
             "trend": "UP",
             "vol": 0.86,
@@ -116,7 +118,8 @@
             "liquidity": "CONTRACTING",
             "crypto": "RISK-OFF"
           },
-          "implication": "Four of the six readings are constructive; the two cautionary ones are contracting liquidity and crypto risk-off."
+          "implication": "Four of the six readings are constructive, while the two cautionary ones are contracting liquidity and a risk-off move in crypto.",
+          "summary": "Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June 17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice."
         }
       }
     }
@@ -124,7 +127,7 @@
   "bsig_watch": [
     {
       "trend": "AI datacenter power demand",
-      "why_exponential": "Hyperscaler capex compounding >20% YoY is pulling forward decades of grid load; capacity prices and nuclear restarts repricing faster than sell-side models.",
+      "why_exponential": "The largest cloud companies are raising their capital spending by more than twenty percent a year, which pulls forward years of new electricity demand. Power-capacity prices and nuclear-plant restarts are now repricing faster than most analysts expected.",
       "watch": "PJM base-residual auction clearing price (>100% spike), 2+ hyperscalers guiding capex up >20% YoY, NRC docs citing 'data center'",
       "expressions": "CEG, VST, OKLO, SMR, ETN, VRT, PWR",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
@@ -132,8 +135,8 @@
       "new": true
     },
     {
-      "trend": "Inference-cost reversal -> custom silicon",
-      "why_exponential": "Token prices fell ~97%, then frontier pricing doubled; inference economics on general GPUs break, accelerating the shift to ASICs.",
+      "trend": "Inference costs reverse toward custom silicon",
+      "why_exponential": "The price of running AI models fell by roughly ninety-seven percent, and then the newest frontier models doubled their pricing. As the economics of running models on general-purpose GPUs come under strain, companies are shifting toward custom chips.",
       "watch": "Frontier API $/Mtok reversing up, data-center revenue growth at merchant silicon",
       "expressions": "MRVL (+46% YoY), CRDO (+85% YoY), AVGO",
       "bsig_ref": "AS-B",
@@ -142,7 +145,7 @@
     },
     {
       "trend": "Sovereign GPU scramble",
-      "why_exponential": "State-scale orders (Saudi HUMAIN 2200MW, EU gigafactories, India 100k GPUs) stack on top of hyperscaler demand, creating allocation conflicts.",
+      "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
       "watch": "Government AI-procurement announcements, national GPU allocations",
       "expressions": "NVDA + regional power / datacenter infra",
       "bsig_ref": "AS-C",
@@ -151,7 +154,7 @@
     },
     {
       "trend": "Crypto leverage & dry powder",
-      "why_exponential": "Perp leverage and stablecoin supply swing nonlinearly; extremes mark reversals. Crypto is at risk-off now.",
+      "why_exponential": "Leverage in crypto futures and the supply of stablecoins both swing sharply, and extreme readings often come before reversals. Crypto is currently in a risk-off phase.",
       "watch": "BTC perp funding 90d z-score (>2 or deeply negative), Stablecoin Supply Ratio oscillator",
       "expressions": "BTC, ETH (funding/SSR), COIN",
       "bsig_ref": "1E-1 / 1E-2",
@@ -160,7 +163,7 @@
     },
     {
       "trend": "Resource-scarcity chains",
-      "why_exponential": "Drought and water limits propagate through multi-step chains (hydro -> gas, chip-fab water) with amplifying effects.",
+      "why_exponential": "Droughts and water limits ripple through several steps before they reach markets. Reduced hydroelectric output raises demand for natural gas, and water stress can slow chip fabrication. Each step tends to amplify the one before it.",
       "watch": "Western US hydro >15% below 10yr avg, Lake Mead < 1,025ft (Tier 2)",
       "expressions": "Sumas-HH gas basis; SMH/NVDA vs INTC",
       "bsig_ref": "AH-1 / AH-2",
