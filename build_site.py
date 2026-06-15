@@ -67,6 +67,8 @@ ul.links .pts{{color:var(--faint);font-size:12px}}
 ul.chg{{margin:6px 0 0;padding-left:18px}}
 ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
 .across p{{font-size:15px;line-height:1.6;margin:0 0 8px}}
+.story{{font-size:15px;line-height:1.5;margin:12px 0 0}}
+.story .cmt{{color:var(--muted);font-size:14px}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
 table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
 table.mkt td.v{{text-align:right;font-weight:700}}
@@ -135,12 +137,21 @@ def render_links(links: list) -> str:
     return f'<ul class="links">{rows}</ul>'
 
 
+def render_items(items: list) -> str:
+    if not items:
+        return ""
+    return "".join(
+        f'<p class="story"><a href="{esc(it["url"])}">{esc(it["title"])}</a><br>'
+        f'<span class="cmt">{esc(it.get("comment",""))}</span></p>'
+        for it in items)
+
+
 def render_regime(label: str, r: dict) -> str:
     body = r.get("summary") or " ".join(r.get("evidence", []))
     impl = (f'<p class="impl">{esc(r["implication"])}</p>' if r.get("implication") else "")
     return (f'<div class="sec"><h2>{esc(r.get("headline", label))}{badge(r.get("state",""))}</h2>'
-            f'<p class="sub">{esc(label)}</p><p>{esc(body)}</p>{impl}'
-            f'{render_links(r.get("links"))}</div>')
+            f'<p class="sub">{esc(label)}</p><p>{esc(body)}</p>'
+            f'{render_items(r.get("items"))}{render_links(r.get("links"))}{impl}</div>')
 
 
 def render_what_changed(doc: dict) -> str:

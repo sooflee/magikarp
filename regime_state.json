@@ -155,20 +155,32 @@
         },
         "geopolitics": {
           "state": "stressed",
-          "headline": "Oil is starting to flow through Hormuz again.",
-          "summary": "The Strait of Hormuz, the chokepoint for roughly a fifth of the world's seaborne oil, had been effectively closed since early March after fighting between the United States, Israel, and Iran made shipping insurance unavailable. As of June 12, the United States Energy Secretary said flows have recovered to about 7 million barrels a day, roughly half of the volume that had been stranded, and that the United States intends to reopen the waterway fully. Industry estimates suggest full flows may not return until 2027.",
-          "implication": "About half of the stranded oil shipments are moving again, which eases a supply shock that had pushed prices up; full flows are not expected before 2027.",
-          "links": [
+          "headline": "War, election meddling, and a China rift crowd the week.",
+          "summary": "Away from the technology stories, the biggest news of the week was about state power. A possible deal to end the Iran war, covert influence operations in Western elections, a sudden freeze between China and Europe, and a fresh government push against encrypted messaging.",
+          "implication": "Four of the week's biggest non-technology stories are about states asserting control, whether over a shipping lane, an election, a trade relationship, or an encrypted app.",
+          "contrarian": "A durable Iran ceasefire and a thaw in the China-EU freeze would turn this from a story about rising state friction into one about de-escalation.",
+          "items": [
             {
-              "title": "Hormuz oil flows recover to 7 million barrels daily (Bloomberg)",
-              "url": "https://www.bloomberg.com/news/articles/2026-06-12/trump-s-energy-chief-says-half-of-hormuz-stoppages-are-restored"
+              "title": "Trump says a deal with Iran will reopen the Strait of Hormuz (CNBC)",
+              "url": "https://www.cnbc.com/2026/06/11/iran-war-us-trump-strikes-centcom-oil-investors.html",
+              "comment": "This is the event behind the drop in crude in the Commodities section, and it removes much of the supply risk that had weighed on the market regime."
             },
             {
-              "title": "Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg)",
-              "url": "https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens"
+              "title": "Israeli firm BlackCore suspected of meddling in New York and Scotland votes (Reuters)",
+              "url": "https://www.reuters.com/world/israeli-firm-blackcore-also-suspected-meddling-nyc-scotland-votes-french-2026-06-11/",
+              "comment": "It is the same concentration-of-capability problem the Tech and policy regime tracks in AI, aimed at elections instead: powerful influence tools in a few private hands, with no identified sponsor."
+            },
+            {
+              "title": "China cancels high-level meetings with the EU before a summit (FT, via US News)",
+              "url": "https://www.usnews.com/news/world/articles/2026-06-11/china-cancels-high-level-meetings-with-eu-ft-reports",
+              "comment": "Great-power friction over trade and rare earths is part of the backdrop for the contracting-liquidity and risk-off readings in the market regime."
+            },
+            {
+              "title": "Signal: surveillance is not safety, on the UK's latest privacy threat (Signal)",
+              "url": "https://signal.org/blog/pdfs/2026-06-08-uk-surveillance-is-not-safety.pdf",
+              "comment": "It rhymes with this issue's lead regime. Where Washington moved to control who may run a model, London is moving to weaken encrypted messaging, both expansions of state reach over technology."
             }
-          ],
-          "contrarian": "A durable ceasefire would restore full Hormuz flows well before the 2027 estimate and remove the oil-supply risk altogether."
+          ]
         },
         "markets": {
           "state": "mixed",

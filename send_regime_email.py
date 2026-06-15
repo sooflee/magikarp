@@ -67,13 +67,24 @@ def _links_html(links):
             f'style="margin-top:8px;">{rows}</table>')
 
 
-def _section_html(label, title, paragraph, links=None):
+def _items_html(items):
+    if not items:
+        return ""
+    return "".join(
+        f'<p style="margin:14px 0 0; font-size:16px; line-height:1.6; font-family:{SERIF};">'
+        f'<a href="{it["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(it["title"])}</a><br>'
+        f'<span style="color:#555;">{esc(it.get("comment",""))}</span></p>'
+        for it in items)
+
+
+def _section_html(label, title, paragraph, links=None, items=None):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(title)}</h2>
               <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
               <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(paragraph)}</p>
+              {_items_html(items)}
               {_links_html(links)}
             </td>
           </tr>
@@ -190,7 +201,8 @@ def build_html():
         if key == "markets":
             continue
         body.append(_section_html(DEFS.get(key, {}).get("label", key),
-                                  r.get("headline", key), r.get("summary", ""), r.get("links")))
+                                  r.get("headline", key), r.get("summary", ""),
+                                  r.get("links"), r.get("items")))
     if ISSUE.get("commodities"):
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
@@ -246,6 +258,15 @@ def _links_text(links):
     return "".join(f"- {l['title']}: {l['url']}\n" for l in (links or []))
 
 
+def _items_text(items):
+    out = []
+    for it in (items or []):
+        out.append(f"- {it['title']}: {it['url']}")
+        if it.get("comment"):
+            out.append(f"    {it['comment']}")
+    return "\n".join(out)
+
+
 def build_plain():
     reg = ISSUE.get("regimes", {})
     out = ["THE CURRENT REGIME", f"Issue {ISSUE['id']} · {DATE_LABEL}",
@@ -256,8 +277,8 @@ def build_plain():
         if key == "markets":
             continue
         label = DEFS.get(key, {}).get("label", key).upper()
-        out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "",
-                _links_text(r.get("links")).rstrip(), ""]
+        refs = _items_text(r.get("items")) or _links_text(r.get("links")).rstrip()
+        out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "", refs, ""]
     if ISSUE.get("commodities"):
         c = ISSUE["commodities"]
         out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]
