@@ -24,6 +24,15 @@ DOCS = ROOT / "docs"
 ACCENT = "#1a7f4b"
 SUBSCRIBE_HREF = ("mailto:bensonw.dev@gmail.com?subject=subscribe&body="
                   "Just%20send%20this%20email%20to%20subscribe%20to%20The%20Current%20Regime.")
+# Type an address; the box opens a pre-filled "subscribe" email whose body carries
+# that address, which signups.py reads over IMAP and saves to subscribers.txt.
+SUBSCRIBE_FORM = (
+    '<form class="joinform" onsubmit="var e=this.em.value.trim();'
+    "if(e){location.href=&#39;mailto:bensonw.dev@gmail.com?subject=subscribe&amp;body=&#39;"
+    "+encodeURIComponent(&#39;subscribe: &#39;+e);}return false;\">"
+    '<input class="joininput" type="email" name="em" required placeholder="you@example.com">'
+    '<button type="submit" class="subscribe">Join email list</button>'
+    '</form>')
 WARN_STATES = {"state-capture", "risk-off", "contracting", "liability-reckoning",
                "stressed", "constrained"}
 
@@ -102,8 +111,14 @@ footer{{margin-top:48px;border-top:1px solid var(--accent);padding-top:14px;
   font-size:12.5px;color:var(--faint);text-align:center;line-height:1.7}}
 footer a{{color:var(--accent)}}
 .subwrap{{text-align:center;margin:18px 0 0}}
-a.subscribe{{display:inline-block;background:var(--accent);color:#fff;
-  text-decoration:none;font-size:14px;font-weight:600;padding:9px 22px;border-radius:4px}}
+.joinform{{display:flex;gap:8px;justify-content:center;align-items:stretch;margin:32px 0 0;flex-wrap:wrap}}
+.joininput{{border:1px solid var(--line);border-radius:4px;padding:9px 13px;
+  font-size:14px;font-family:var(--serif);color:var(--fg);min-width:220px}}
+.joininput:focus{{outline:none;border-color:var(--accent)}}
+a.subscribe,button.subscribe{{display:inline-block;background:transparent;color:var(--accent);
+  border:1.5px solid var(--accent);text-decoration:none;font-size:14px;font-weight:600;
+  padding:8px 20px;border-radius:4px;cursor:pointer;font-family:var(--serif)}}
+a.subscribe:hover,button.subscribe:hover{{background:var(--accent);color:#fff}}
 .subnote{{text-align:center;font-size:12.5px;color:var(--faint);margin:8px 0 0}}
 """
 
@@ -449,7 +464,7 @@ def render_index(doc: dict, issues: list) -> str:
     inner = (
         '<header class="mast home"><h1>The Current Regime</h1></header>'
         + "".join(posts)
-        + f'<p class="subwrap"><a class="subscribe" href="{SUBSCRIBE_HREF}">Join email list</a></p>'
+        + SUBSCRIBE_FORM
     )
     return page("The Current Regime", inner)
 

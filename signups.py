@@ -16,8 +16,31 @@ import email
 import email.utils
 import imaplib
 import os
+import re
 import sys
 from pathlib import Path
+
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+def body_email(msg):
+    """The address typed into the site's box arrives as 'subscribe: x@y.com' in
+    the body. Prefer that over the sender so the typed value is what's saved."""
+    text = ""
+    if msg.is_multipart():
+        for part in msg.walk():
+            if part.get_content_type() == "text/plain":
+                try:
+                    text += part.get_payload(decode=True).decode(errors="replace")
+                except Exception:
+                    pass
+    else:
+        try:
+            text = msg.get_payload(decode=True).decode(errors="replace")
+        except Exception:
+            text = ""
+    m = EMAIL_RE.search(text)
+    return m.group(0).lower() if m else None
 
 ACCOUNT = "bensonw.dev@gmail.com"
 SUBSCRIBERS = Path(__file__).resolve().parent / "subscribers.txt"
@@ -65,7 +88,7 @@ def fetch_requests(app_password):
         if subj == "unsubscribe":
             unsubs.add(sender)
         elif subj == "subscribe":
-            subs.add(sender)
+            subs.add(body_email(msg) or sender)   # typed address if present, else sender
         else:
             continue                        # leave unrelated mail untouched (stays unread)
         M.store(num, "+FLAGS", "\\Seen")    # mark the real request processed
