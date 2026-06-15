@@ -39,6 +39,9 @@ Subscribers are managed with plain Gmail — no third-party provider.
 - The site's **Subscribe** button opens a pre-filled email (subject `subscribe`).
 - `signups.py` reads `subscribe` / `unsubscribe` mail over IMAP and updates
   `subscribers.txt` (gitignored; it holds addresses and stays local).
+- `add_subscriber.py` adds/removes addresses by hand:
+  `python3 add_subscriber.py alice@example.com` (or no args to type them in,
+  `--list` to view, `--remove` to drop).
 - `send_regime_email.py` sends the latest issue to everyone in `subscribers.txt`
   (BCC-style via `to_addrs`, with a `List-Unsubscribe` header). `--test` sends only
   to the owner; `--dry-run` sends nothing.
