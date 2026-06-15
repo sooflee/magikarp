@@ -15,6 +15,8 @@ import html
 import json
 from pathlib import Path
 
+import regime_engine
+
 ROOT = Path(__file__).resolve().parent
 STATE = ROOT / "regime_state.json"
 DOCS = ROOT / "docs"
@@ -59,6 +61,12 @@ header.mast .kicker{{font-size:13px;color:var(--accent);font-style:italic;margin
   margin-left:7px;vertical-align:middle}}
 .badge.warn{{background:#fbeae6;color:var(--warn)}}
 .impl{{color:var(--muted);font-size:15px}}
+ul.links{{margin:8px 0 0;padding-left:18px}}
+ul.links li{{margin:0 0 4px;font-size:14px;line-height:1.45}}
+ul.links .pts{{color:var(--faint);font-size:12px}}
+ul.chg{{margin:6px 0 0;padding-left:18px}}
+ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
+.across p{{font-size:15px;line-height:1.6;margin:0 0 8px}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
 table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
 table.mkt td.v{{text-align:right;font-weight:700}}
@@ -118,11 +126,73 @@ def week_label(iss: dict) -> str:
     return iss.get("week", "").replace("/", " to ")
 
 
+def render_links(links: list) -> str:
+    if not links:
+        return ""
+    rows = "".join(
+        f'<li><a href="{esc(l["url"])}">{esc(l["title"])}</a> '
+        f'<span class="pts">{esc(l.get("points",""))} pts</span></li>'
+        for l in links)
+    return f'<ul class="links">{rows}</ul>'
+
+
 def render_regime(label: str, r: dict) -> str:
     body = r.get("summary") or " ".join(r.get("evidence", []))
     impl = (f'<p class="impl">{esc(r["implication"])}</p>' if r.get("implication") else "")
     return (f'<div class="sec"><h2>{esc(r.get("headline", label))}{badge(r.get("state",""))}</h2>'
-            f'<p class="sub">{esc(label)}</p><p>{esc(body)}</p>{impl}</div>')
+            f'<p class="sub">{esc(label)}</p><p>{esc(body)}</p>{impl}'
+            f'{render_links(r.get("links"))}</div>')
+
+
+def render_what_changed(doc: dict) -> str:
+    d = regime_engine.diff(doc)
+    cregs = d["cur"].get("regimes", {})
+
+    def impl(k):
+        return cregs.get(k, {}).get("implication", "")
+
+    items = []
+    for key, label, a, b in d["changed"]:
+        items.append((f'<strong>{esc(label)}:</strong> {esc(a)} &rarr; <strong>{esc(b)}</strong>', impl(key)))
+    for key, label, st, sig in d["steady"]:
+        if sig:
+            items.append((f'<strong>{esc(label)}:</strong> {esc(", ".join(sig))}', impl(key)))
+    for key, label, st, head in d["new"]:
+        items.append((f'<strong>{esc(label)}:</strong> {esc(head)}', impl(key)))
+    if not items:
+        return ""
+    lis = ""
+    for one, im in items:
+        lis += f'<li>{one}'
+        if im:
+            lis += f'<br><span style="color:var(--muted)">{esc(im)}</span>'
+        lis += '</li>'
+    return (f'<div class="sec"><h2>What changed.</h2>'
+            f'<p class="sub">Since {esc(d["prev"]["date"])}</p>'
+            f'<ul class="chg">{lis}</ul></div>')
+
+
+def render_undercurrent(u: dict) -> str:
+    return (f'<div class="sec"><h2>{esc(u["headline"])}</h2>'
+            f'<p class="sub">{esc(u.get("label","Undercurrent"))}</p>'
+            f'<p>{esc(u.get("summary",""))}</p>{render_links(u.get("links"))}</div>')
+
+
+def render_across(a: dict) -> str:
+    gh, ax = a.get("github", []), a.get("arxiv", [])
+    if not gh and not ax:
+        return ""
+    out = ['<div class="sec across"><h2>What&rsquo;s getting built and published.</h2>'
+           '<p class="sub">Across the sources</p>']
+    if gh:
+        items = " &middot; ".join(f'<a href="{esc(r["url"])}">{esc(r["title"])}</a>' for r in gh)
+        out.append(f'<p><strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p>')
+    if ax:
+        items = "".join(f'<li><a href="{esc(x["url"])}">{esc(x["title"])}</a></li>' for x in ax)
+        out.append('<p style="margin-bottom:2px"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
+                   f'<ul class="links">{items}</ul>')
+    out.append("</div>")
+    return "".join(out)
 
 
 def render_markets(m: dict) -> str:
@@ -171,19 +241,24 @@ def render_watch(watch: list) -> str:
 def render_issue_page(doc: dict, iss: dict) -> str:
     defs = doc["regime_defs"]
     reg = iss.get("regimes", {})
-    secs = []
+    # email order: what-changed, editorial regimes (+links), markets, undercurrent, across, watch
+    secs = [render_what_changed(doc)]
     for key, r in reg.items():
         if key == "markets":
             continue
         secs.append(render_regime(defs.get(key, {}).get("label", key), r))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
+    if iss.get("undercurrent"):
+        secs.append(render_undercurrent(iss["undercurrent"]))
+    if iss.get("across_sources"):
+        secs.append(render_across(iss["across_sources"]))
+    secs.append(render_watch(doc.get("bsig_watch", [])))
     inner = (
         f'<header class="mast"><h1><a href="../">The Current Regime</a></h1>'
         f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</div></header>'
         f'<p class="back" style="margin-top:14px"><a href="../">&larr; all issues</a></p>'
         + "".join(secs)
-        + render_watch(doc.get("bsig_watch", []))
     )
     return page(f"The Current Regime · Issue {iss['id']}", inner)
 

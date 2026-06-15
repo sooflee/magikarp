@@ -94,7 +94,34 @@
             "German court holds Google liable for AI Overviews"
           ],
           "implication": "The order applies to all foreign nationals, including some of Anthropic's own staff, rather than only to foreign customers.",
-          "summary": "On June 12, the United States Commerce Department ordered Anthropic to suspend access to its Fable 5 and Mythos 5 models for all foreign nationals, citing national security. To comply, Anthropic disabled both models for every customer, while its other models continued to operate. Reporting connects the order to Amazon's chief executive, Andy Jassy, who told officials that Amazon researchers had prompted Fable 5 into producing material useful for cyberattacks. Anthropic responded that these vulnerabilities were already known and minor. This appears to be the first time a frontier model has been taken offline by government order rather than by a company's own decision."
+          "summary": "On June 12, the United States Commerce Department ordered Anthropic to suspend access to its Fable 5 and Mythos 5 models for all foreign nationals, citing national security. To comply, Anthropic disabled both models for every customer, while its other models continued to operate. Reporting connects the order to Amazon's chief executive, Andy Jassy, who told officials that Amazon researchers had prompted Fable 5 into producing material useful for cyberattacks. Anthropic responded that these vulnerabilities were already known and minor. This appears to be the first time a frontier model has been taken offline by government order rather than by a company's own decision.",
+          "links": [
+            {
+              "points": "3121",
+              "title": "US directive to suspend access to Fable 5 and Mythos 5 (Anthropic)",
+              "url": "https://www.anthropic.com/news/fable-mythos-access"
+            },
+            {
+              "points": "2620",
+              "title": "Claude Fable 5 and Mythos 5, the launch behind the order",
+              "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+            },
+            {
+              "points": "780",
+              "title": "What triggered it: Amazon CEO’s talks with US officials (WSJ)",
+              "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578"
+            },
+            {
+              "points": "1569",
+              "title": "“Open source AI must win,” the local-weights reaction",
+              "url": "https://opensourceaimustwin.com/"
+            },
+            {
+              "points": "1015",
+              "title": "German court holds Google liable for false AI Overviews",
+              "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/"
+            }
+          ]
         },
         "ai_agents": {
           "state": "liability-reckoning",
@@ -105,7 +132,24 @@
             "Simon Willison: Fable 'relentlessly proactive'"
           ],
           "implication": "The three most popular agent posts described an over-billing incident, a sabotage risk, and over-eager behavior, rather than any benchmark achievement.",
-          "summary": "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor's application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail."
+          "summary": "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor's application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail.",
+          "links": [
+            {
+              "points": "1452",
+              "title": "An AI agent bankrupted its operator scanning DN42",
+              "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"
+            },
+            {
+              "points": "1033",
+              "title": "“If Claude Fable stops helping you, you’ll never know”",
+              "url": "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html"
+            },
+            {
+              "points": "767",
+              "title": "“Claude Fable is relentlessly proactive” (Simon Willison)",
+              "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/"
+            }
+          ]
         },
         "markets": {
           "state": "mixed",
@@ -121,6 +165,67 @@
           "implication": "Four of the six readings are constructive, while the two cautionary ones are contracting liquidity and a risk-off move in crypto.",
           "summary": "Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June 17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice."
         }
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "A quieter pull toward human-made work.",
+        "summary": "Running beneath the week's main stories is a quieter countercurrent that rewards human effort and the plain, readable web. Several of the most-shared posts argued for craft, simplicity, and pages that load and read easily.",
+        "links": [
+          {
+            "points": "1715",
+            "title": "If you ask for human attention, demonstrate human effort",
+            "url": "https://tombedor.dev/human-attention-and-human-effort/"
+          },
+          {
+            "points": "1271",
+            "title": "Building an HTML-first site doubled our users",
+            "url": "https://mohkohn.co.uk/writing/html-first/"
+          },
+          {
+            "points": "952",
+            "title": "Making Graphics Like it’s 1993",
+            "url": "https://staniks.github.io/articles/catlantean-3d-blog-1/"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "agent / skill tooling dominates trending",
+        "github": [
+          {
+            "title": "mvanhorn/last30days-skill",
+            "url": "https://github.com/mvanhorn/last30days-skill"
+          },
+          {
+            "title": "apple/container",
+            "url": "https://github.com/apple/container"
+          },
+          {
+            "title": "phuryn/pm-skills",
+            "url": "https://github.com/phuryn/pm-skills"
+          },
+          {
+            "title": "chopratejas/headroom",
+            "url": "https://github.com/chopratejas/headroom"
+          },
+          {
+            "title": "NVIDIA/SkillSpector",
+            "url": "https://github.com/NVIDIA/SkillSpector"
+          }
+        ],
+        "arxiv": [
+          {
+            "title": "Gaze Heads: How VLMs Look at What They Describe",
+            "url": ""
+          },
+          {
+            "title": "ClinHallu: A Benchmark for Diagnosing Stage-Wise Hallucinations in Medical MLLM Reasoning",
+            "url": ""
+          },
+          {
+            "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
+            "url": ""
+          }
+        ]
       }
     }
   ],

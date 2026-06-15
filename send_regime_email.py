@@ -180,16 +180,10 @@ def _gh_theme(repos):
 
 
 def build_cross_source_html():
-    """Live 'Across the sources' block from GitHub trending + arXiv. Guarded:
-    any fetch failure drops the offending list, an empty block is omitted."""
-    try:
-        gh = sources.fetch_github_trending(limit=6)
-    except Exception:
-        gh = []
-    try:
-        ax = sources.fetch_arxiv(limit=3)
-    except Exception:
-        ax = []
+    """'Across the sources' block from the issue's stored snapshot, so the email
+    and the public archive show identical items. Empty block is omitted."""
+    a = (STATE["issues"][-1].get("across_sources") or {})
+    gh, ax = a.get("github", []), a.get("arxiv", [])
     if not gh and not ax:
         return ""
     rows = []
@@ -199,11 +193,11 @@ def build_cross_source_html():
             for r in gh[:5])
         rows.append(
             f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SANS}; color:#1a1a1a;">'
-            f'<strong>GitHub trending</strong> shows {_gh_theme(gh)}:<br>{items}</p>')
+            f'<strong>GitHub trending</strong> shows {a.get("github_theme","")}:<br>{items}</p>')
     if ax:
         items = "".join(
-            f'<li style="margin:0 0 5px;"><a href="{a["url"]}" style="color:{ACCENT}; text-decoration:underline;">{a["title"]}</a></li>'
-            for a in ax)
+            f'<li style="margin:0 0 5px;"><a href="{x["url"]}" style="color:{ACCENT}; text-decoration:underline;">{x["title"]}</a></li>'
+            for x in ax)
         rows.append(
             f'<p style="margin:0 0 4px; font-size:15px; font-family:{SANS}; color:#1a1a1a;"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
             f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.6; font-family:{SANS}; color:#444;">{items}</ul>')
