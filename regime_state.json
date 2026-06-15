@@ -250,7 +250,7 @@
       "date_label": "June 8–14, 2026",
       "commodities": {
         "as_of": "week ending June 14",
-        "summary": "With oil moving through Hormuz again, crude fell sharply and the conflict's fear premium is unwinding across the complex. Gold and silver gave back ground and grains slipped with them; coffee was the exception, rising on its own supply story.",
+        "summary": "With oil moving through Hormuz again, crude fell sharply and the conflict's fear premium is unwinding across the complex. Gold and silver gave back ground and grains slipped with them; coffee was the exception, rising while the rest of the complex fell.",
         "items": [
           {
             "name": "Brent crude",
@@ -327,11 +327,6 @@
         }
       },
       "watch_next": [
-        {
-          "when": "June 17",
-          "event": "Federal Reserve rate decision",
-          "note": "Markets price a near-certain hold, so the statement language will matter more than the move itself."
-        },
         {
           "when": "June 18-19",
           "event": "European Council summit in Brussels",
@@ -460,7 +455,7 @@
   "bsig_watch": [
     {
       "trend": "AI datacenter power demand",
-      "why_exponential": "The largest cloud companies are raising their capital spending by more than twenty percent a year, which pulls forward years of new electricity demand. Power-capacity prices and nuclear-plant restarts are now repricing faster than most analysts expected.",
+      "why_exponential": "The largest cloud companies are raising their capital spending sharply, year after year, which pulls forward years of new electricity demand. Power-capacity prices and nuclear-plant restarts are now repricing faster than most analysts expected.",
       "watch": "Sharp jumps in regional power-capacity prices, cloud companies raising their spending forecasts again, and new approvals to restart nuclear plants to feed data centers.",
       "expressions": "Power utilities and nuclear operators such as Constellation and Vistra.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
@@ -469,7 +464,7 @@
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
-      "why_exponential": "The price of running AI models fell by roughly ninety-seven percent, and then the newest frontier models doubled their pricing. As the economics of running models on general-purpose GPUs come under strain, companies are shifting toward custom chips.",
+      "why_exponential": "The price of running AI models has collapsed over the past two years, and now the newest frontier models have reversed course and raised their pricing. As the economics of running models on general-purpose GPUs come under strain, companies are shifting toward custom chips.",
       "watch": "Whether the price of using top AI models keeps climbing, and whether custom-chip makers keep posting fast data-center growth.",
       "expressions": "Custom-silicon makers such as Marvell and Broadcom.",
       "bsig_ref": "AS-B",

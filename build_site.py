@@ -85,6 +85,7 @@ ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
 .radar-steady{{color:#b3b3b3;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 0}}
 .rcompact{{font-size:14px;line-height:1.55;color:#555;margin:7px 0 0}}
 .rcompact .rdir{{color:var(--accent);font-style:italic}}
+.ghnote{{font-size:14px;line-height:1.6;color:var(--muted);margin:14px 0 0}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
 table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
 table.mkt td.v{{text-align:right;font-weight:700}}
@@ -196,18 +197,21 @@ def render_momentum(doc: dict) -> str:
         rows.append(f'<tr><td>{label}</td><td class="v" style="font-weight:400;white-space:nowrap">'
                     f'<span style="color:var(--faint)">{prev} &rarr; </span>'
                     f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
+    return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
+            f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
+            f'<p class="means">Number of the week&rsquo;s top Hacker News stories in '
+            f'each regime we cover, this week against last.</p>'
+            f'<table class="mkt">{"".join(rows)}</table></div>')
+
+
+def render_moves(iss: dict) -> str:
     moves = ""
     for mv in iss.get("market_moves", []):
         arr = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "&#9644;")
         moves += (f'<li><a href="{esc(mv["url"])}">{esc(mv["market"])}</a> '
                   f'<span style="color:#9aa0aa">{arr}</span> {esc(mv.get("detail",""))}</li>')
-    moves_html = (f'<p style="margin:16px 0 4px"><strong>Prediction-market moves this week:</strong></p>'
-                  f'<ul class="links">{moves}</ul>' if moves else "")
-    return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
-            f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
-            f'<p class="means">Number of the week&rsquo;s top Hacker News stories in '
-            f'each regime we cover, this week against last.</p>'
-            f'<table class="mkt">{"".join(rows)}</table>{moves_html}</div>')
+    return (f'<p style="margin-top:18px"><strong>What moved this week:</strong></p>'
+            f'<ul class="links">{moves}</ul>') if moves else ""
 
 
 def render_watch_next(iss: dict) -> str:
@@ -250,7 +254,7 @@ def render_radar(iss: dict) -> str:
             '<p class="sub">Regime radar &middot; read through prediction markets</p>'
             '<p class="means">The slow currents beneath the week. Each is read from a basket of '
             'dated, money-backed markets, not a single headline.</p>'
-            f'{"".join(blocks)}</div>')
+            f'{"".join(blocks)}{render_moves(iss)}</div>')
 
 
 def render_what_changed(doc: dict) -> str:
@@ -315,14 +319,13 @@ def render_undercurrent(u: dict) -> str:
             f'<p>{esc(u.get("summary",""))}</p>{render_links(u.get("links"))}</div>')
 
 
-def render_across(a: dict) -> str:
+def render_across_inline(a: dict) -> str:
     gh = a.get("github", [])
     if not gh:
         return ""
     items = " &middot; ".join(f'<a href="{esc(r["url"])}">{esc(r["title"])}</a>' for r in gh)
-    return ('<div class="sec across"><h2>What&rsquo;s getting built and published.</h2>'
-            '<p class="sub">Across the sources</p>'
-            f'<p><strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p></div>')
+    return ('<p class="ghnote"><strong>On GitHub this week</strong>, trending is mostly '
+            f'{esc(a.get("github_theme",""))}: {items}</p>')
 
 
 MKT_ORDER = [("trend", "Trend"), ("vol", "Volatility"), ("curve_bp", "Yield curve"),
@@ -396,9 +399,9 @@ def render_issue_page(doc: dict, iss: dict) -> str:
     secs.append(render_act("The tech world"))
     secs.append(_regime(doc, iss, "tech_policy"))
     secs.append(_regime(doc, iss, "ai_agents"))
-    secs.append(render_watch(doc.get("bsig_watch", [])))
     if iss.get("across_sources"):
-        secs.append(render_across(iss["across_sources"]))
+        secs.append(render_across_inline(iss["across_sources"]))   # GitHub note under agents
+    secs.append(render_watch(doc.get("bsig_watch", [])))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     # Act 2 — the wider world

@@ -133,7 +133,6 @@ def _momentum_html(state):
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
               <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
-              {_market_moves_html(ISSUE)}
             </td>
           </tr>
 """
@@ -150,8 +149,8 @@ def _market_moves_html(issue):
             f'<li style="margin:0 0 6px;"><a href="{mv["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(mv["market"])}</a> '
             f'<span style="color:#9a9a9a;">{arrow}</span> {esc(mv.get("detail",""))}</li>')
     return (
-        f'<p style="margin:16px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
-        f'<strong>Prediction-market moves this week:</strong></p>'
+        f'<p style="margin:18px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
+        f'<strong>What moved this week:</strong></p>'
         f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.55; font-family:{SERIF}; color:#555;">{"".join(lis)}</ul>')
 
 
@@ -210,6 +209,7 @@ def _radar_html(issue):
             f'<p style="margin:16px 0 0; color:#b3b3b3; font-size:12px; letter-spacing:1.5px; '
             f'text-transform:uppercase; font-family:{SERIF};">Holding steady</p>')
         blocks += [_radar_compact(r) for r in steady]
+    blocks.append(_market_moves_html(issue))   # this week's deltas, alongside the levels
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
@@ -295,22 +295,17 @@ def _contrarian_html(issue):
 """
 
 
-def _across_html(a):
+def _across_inline(a):
     gh = a.get("github", [])
     if not gh:
         return ""
-    items = " &nbsp;&middot;&nbsp; ".join(
+    items = " &middot; ".join(
         f'<a href="{r["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(r["title"])}</a>'
         for r in gh[:5])
-    rows = [
-        f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SERIF}; color:#1a1a1a;">'
-        f'<strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}: {items}</p>']
     return f"""
           <tr>
-            <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What&rsquo;s getting built and published.</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Across the sources</p>
-              {''.join(rows)}
+            <td style="padding:16px 0 0;">
+              <p style="margin:0; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};"><strong>On GitHub this week</strong>, trending is mostly {esc(a.get("github_theme",""))}: {items}</p>
             </td>
           </tr>
 """
@@ -355,9 +350,9 @@ def build_html():
     body.append(_act_html("The tech world"))
     body.append(_regime_section("tech_policy"))
     body.append(_regime_section("ai_agents"))
-    body.append(regime_engine.render_watch_html(STATE))
     if ISSUE.get("across_sources"):
-        body.append(_across_html(ISSUE["across_sources"]))
+        body.append(_across_inline(ISSUE["across_sources"]))   # GitHub note folded under agents
+    body.append(regime_engine.render_watch_html(STATE))
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
@@ -450,12 +445,6 @@ def build_plain():
             tail = f", week {regime_engine.weeks_in_state(STATE, k)} in {st}" if st else ""
             out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow}){tail}")
         out.append("")
-        if ISSUE.get("market_moves"):
-            out.append("  Prediction-market moves this week:")
-            for mv in ISSUE["market_moves"]:
-                d = {"up": "up", "down": "down"}.get(mv.get("dir"), "flat")
-                out.append(f"    - {mv['market']} ({d}): {mv.get('detail','')}  {mv['url']}")
-            out.append("")
     for key, r in reg.items():
         if key == "markets":
             continue
@@ -495,6 +484,12 @@ def build_plain():
                 b0 = (r.get("basket") or [None])[0]
                 fact = f" {b0['metric']}: {b0['value']}." if b0 else ""
                 out.append(f"    - {r['name']} ({r.get('direction','')}).{fact}")
+            out.append("")
+        if ISSUE.get("market_moves"):
+            out.append("  What moved this week:")
+            for mv in ISSUE["market_moves"]:
+                dd = {"up": "up", "down": "down"}.get(mv.get("dir"), "flat")
+                out.append(f"    - {mv['market']} ({dd}): {mv.get('detail','')}  {mv['url']}")
             out.append("")
     if ISSUE.get("watch_next"):
         out += ["WHAT TO WATCH NEXT WEEK:", ""]
