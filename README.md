@@ -54,8 +54,11 @@ Subscribers are managed with plain Gmail — no third-party provider.
 ## Weekly automation (launchd)
 
 `run_weekly.sh` ingests sign-ups, generates the issue with Claude (headless),
-builds the archive, pushes, and delivers. By default it sends a **preview to the
-owner**; set `AUTO_SEND=1` to publish to the full list.
+builds the archive, pushes, and sends a **preview to the owner only**. It never
+emails subscribers. Publishing to the list is a deliberate manual step after you
+review the preview: `GMAIL_APP_PASSWORD=... python3 send_regime_email.py`.
+
+(The cloud routine is disabled; the local job is the only scheduled run.)
 
 One-time setup:
 
@@ -72,8 +75,7 @@ launchctl load ~/Library/LaunchAgents/com.bwang.currentregime.weekly.plist
 AUTO_SEND=1 ./run_weekly.sh  # publish to subscribers
 ```
 
-Logs go to `weekly.log`. Note: the local job and the cloud routine both generate
-issues — run only one to avoid double-publishing.
+Logs go to `weekly.log`.
 
 ## Local preview
 

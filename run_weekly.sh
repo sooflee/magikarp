@@ -2,15 +2,17 @@
 # Weekly driver for The Current Regime. Intended to be run by launchd.
 #
 # Flow: ingest sign-ups -> generate the issue (Claude, headless) -> build the
-# archive -> commit/push -> send. By default it sends a PREVIEW to the owner
-# only; set AUTO_SEND=1 to send to the full subscriber list.
+# archive -> commit/push -> send a PREVIEW to the owner only.
+#
+# This job never emails subscribers. Publishing to the list is a deliberate,
+# manual step you run after reviewing the preview:
+#   GMAIL_APP_PASSWORD=... python3 send_regime_email.py
 #
 # Secrets: the Gmail app password is read from the macOS Keychain. One-time setup:
 #   security add-generic-password -s the-current-regime -a gmail -w 'APP PASSWORD'
 #
 # Env toggles:
-#   GENERATE=0   skip the Claude generation step (just rebuild + send current issue)
-#   AUTO_SEND=1  send to the whole subscriber list instead of a preview to the owner
+#   GENERATE=0   skip the Claude generation step (just rebuild + preview)
 
 set -uo pipefail
 export PATH="/Users/benson/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
@@ -45,13 +47,8 @@ python3 build_site.py || log "build_site failed"
 git add -A && git commit -m "weekly run $(date '+%Y-%m-%d')" >/dev/null 2>&1 || true
 if git push >/dev/null 2>&1; then log "pushed"; else log "push skipped/failed"; fi
 
-# --- deliver ---
-if [ "${AUTO_SEND:-0}" = "1" ]; then
-  log "sending to the full subscriber list"
-  python3 send_regime_email.py
-else
-  log "sending preview to owner only (set AUTO_SEND=1 to publish to subscribers)"
-  python3 send_regime_email.py --test
-  log "preview sent. To publish to subscribers: GMAIL_APP_PASSWORD=... python3 send_regime_email.py"
-fi
+# --- deliver: PREVIEW TO OWNER ONLY (never the list) ---
+log "sending preview to owner only"
+python3 send_regime_email.py --test
+log "preview sent. Review it, then publish manually: python3 send_regime_email.py"
 log "done"
