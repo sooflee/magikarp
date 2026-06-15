@@ -156,14 +156,14 @@
         "geopolitics": {
           "state": "stressed",
           "headline": "War, election meddling, and a China rift crowd the week.",
-          "summary": "Away from the technology stories, the biggest news of the week was about state power. A possible deal to end the Iran war, covert influence operations in Western elections, a sudden freeze between China and Europe, and a fresh government push against encrypted messaging.",
+          "summary": "Away from technology, the week's biggest news was about state power: a possible end to the Iran war, covert election-meddling across Western democracies, a sudden China-EU freeze, and a fresh push against encrypted messaging.",
           "implication": "Four of the week's biggest non-technology stories are about states asserting control, whether over a shipping lane, an election, a trade relationship, or an encrypted app.",
           "contrarian": "A durable Iran ceasefire and a thaw in the China-EU freeze would turn this from a story about rising state friction into one about de-escalation.",
           "items": [
             {
               "title": "Trump says a deal with Iran will reopen the Strait of Hormuz (CNBC)",
               "url": "https://www.cnbc.com/2026/06/11/iran-war-us-trump-strikes-centcom-oil-investors.html",
-              "comment": "This is the event behind the drop in crude in the Commodities section, and it removes much of the supply risk that had weighed on the market regime."
+              "comment": "The event behind the drop in crude in the Commodities section; it lifts much of the supply risk that had weighed on markets."
             },
             {
               "title": "Israeli firm BlackCore suspected of meddling in New York and Scotland votes (Reuters)",
@@ -173,7 +173,7 @@
             {
               "title": "China cancels high-level meetings with the EU before a summit (FT, via US News)",
               "url": "https://www.usnews.com/news/world/articles/2026-06-11/china-cancels-high-level-meetings-with-eu-ft-reports",
-              "comment": "Great-power friction over trade and rare earths is part of the backdrop for the contracting-liquidity and risk-off readings in the market regime."
+              "comment": "Great-power friction over trade and rare earths, part of the backdrop for the contracting-liquidity and risk-off market readings."
             },
             {
               "title": "Signal: surveillance is not safety, on the UK's latest privacy threat (Signal)",
@@ -196,14 +196,14 @@
             "credit": "Tight (2.8% spread)"
           },
           "implication": "Five of the eight readings are constructive, with contracting liquidity and a risk-off move in crypto the cautionary exceptions.",
-          "summary": "Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June 17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice.",
+          "summary": "Stock-market momentum and growth both remain healthy, while liquidity is contracting and crypto has decoupled to the downside. The next Federal Reserve rate decision lands June 17. The readings below are directional only, not investment advice.",
           "contrarian": "If liquidity stops contracting and crypto turns back up, the cautious undercurrent disappears and the read becomes cleanly risk-on."
         }
       },
       "undercurrent": {
         "label": "Undercurrent",
         "headline": "A quieter pull toward human-made work.",
-        "summary": "Running beneath the week's main stories is a quieter countercurrent that rewards human effort and the plain, readable web. Several of the most-shared posts argued for craft, simplicity, and pages that load and read easily.",
+        "summary": "Beneath the week's main stories runs a quieter countercurrent that rewards human effort and the plain, readable web, with posts arguing for craft, simplicity, and pages that load and read easily.",
         "links": [
           {
             "points": "1715",
@@ -250,7 +250,7 @@
       "date_label": "June 8–14, 2026",
       "commodities": {
         "as_of": "week ending June 14",
-        "summary": "With oil beginning to move through Hormuz again, crude fell sharply this week, and the fear premium that had built up during the conflict is unwinding across the complex. Gold and silver, the classic safe havens, gave back ground, and grains slipped with the broad move. Coffee was the week's exception, rising on its own supply story.",
+        "summary": "With oil moving through Hormuz again, crude fell sharply and the conflict's fear premium is unwinding across the complex. Gold and silver gave back ground and grains slipped with them; coffee was the exception, rising on its own supply story.",
         "items": [
           {
             "name": "Brent crude",
