@@ -165,7 +165,7 @@ def page(title: str, inner: str) -> str:
 <style>{CSS}</style>
 </head><body><div class="wrap">
 {inner}
-<footer><a href="{SUBSCRIBE_HREF}">Join email list</a> &middot; <a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
+<footer><a href="https://www.bwang.io/magikarp/#join">Join email list</a> &middot; <a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
 Market notes are directional only and are not investment advice.</footer>
 </div></body></html>
 """
@@ -493,7 +493,7 @@ def render_index(doc: dict, issues: list) -> str:
     inner = (
         '<header class="mast home"><h1>The Current Regime</h1></header>'
         + "".join(posts)
-        + SUBSCRIBE_FORM
+        + '<div id="join">' + SUBSCRIBE_FORM + '</div>'
     )
     return page("The Current Regime", inner)
 

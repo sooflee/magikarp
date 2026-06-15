@@ -1,3 +1,1 @@
-# Paste your deployed Apps Script Web app URL below (the line that ends in /exec),
-# then run: python3 build_site.py
-# Until a real https:// URL is here, the site falls back to the mailto signup.
+https://script.google.com/macros/s/AKfycbzYYu2VbinjS2kVzRobg3x1tPraKkVbT0LDQJia3tH7U-3xHjpCucKa_ijGsbC7ssyhkw/exec

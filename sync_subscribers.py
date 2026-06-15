@@ -8,13 +8,16 @@ Usage:
     python3 sync_subscribers.py --dry-run
 """
 
+import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 URL_FILE = ROOT / "apps_script_url.txt"
+KEY_FILE = ROOT / "apps_script_key.txt"
 SUBSCRIBERS = ROOT / "subscribers.txt"
 EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
@@ -24,6 +27,17 @@ def apps_url():
         for line in URL_FILE.read_text().splitlines():
             line = line.strip()
             if line.startswith("https://"):
+                return line
+    return ""
+
+
+def read_key():
+    if os.environ.get("APPS_SCRIPT_KEY"):
+        return os.environ["APPS_SCRIPT_KEY"].strip()
+    if KEY_FILE.exists():
+        for line in KEY_FILE.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
                 return line
     return ""
 
@@ -46,6 +60,9 @@ def main() -> int:
         print("no Apps Script URL in apps_script_url.txt; skipping sheet sync")
         return 0
     dry = "--dry-run" in sys.argv
+    key = read_key()
+    if key:
+        url = url + ("&" if "?" in url else "?") + urllib.parse.urlencode({"key": key})
     try:
         data = urllib.request.urlopen(url, timeout=20).read().decode("utf-8", "replace")
     except Exception as e:

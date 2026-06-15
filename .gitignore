@@ -3,6 +3,8 @@
 *.local
 # subscriber list holds PII — keep local
 subscribers.txt
+# read key for the signup sheet — secret, keep local
+apps_script_key.txt
 # python
 __pycache__/
 *.pyc
