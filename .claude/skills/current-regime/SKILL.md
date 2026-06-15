@@ -64,7 +64,29 @@ Accent color: forest green `#1a7f4b`. Repo: github.com/sooflee/magikarp.
 
 10. **Commit and push** all changes to `main`.
 
-## The six regimes (state spaces live in regime_state.json)
+## The structural picture (regime radar)
+
+Beyond the weekly editorial regimes, each issue carries a **regime radar**: a set
+of slow, structural regimes read through prediction markets. A regime is a
+structural current (Dedollarization, Monetary policy, Fragmentation, the AI
+buildout, AI sovereignty), not an event. A single market ("Iran ceasefire holds")
+is an event, never a regime.
+
+Read a regime from the **drift of a basket** of dated, liquid markets, not one
+headline:
+- Pick 2-3 dated, resolvable markets per regime (Polymarket and Kalshi for
+  econ/politics, Metaculus for long-horizon structural questions).
+- Record each market's value and, from issue 02 on, its week-over-week move.
+- Flag any market that crosses 50% or moves more than 10 points, and watch for
+  divergence (the market drifting while the spot read stays calm).
+- Weight by liquidity: a high probability on thin volume is noise; cite volume.
+- If a regime has no liquid market (AI governance today), say so. The absence is
+  itself a finding.
+
+Store these in `regime_state.json -> issues[].structural_regimes` as
+`{name, direction, read, basket:[{metric, value, url}]}`. Verify every figure.
+
+## The six weekly regimes (state spaces live in regime_state.json)
 
 - **Tech & policy** — open-acceleration / consolidation / state-capture
 - **AI agents** — capability-race / liability-reckoning / normalized
