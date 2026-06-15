@@ -78,6 +78,9 @@ ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
 .radar .rdir{{color:var(--accent);font-style:italic;font-size:13px}}
 .radar .rread{{font-size:15px;line-height:1.55;margin:0 0 5px}}
 .radar .rbask{{margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.45;color:var(--muted)}}
+.radar-steady{{color:#b3b3b3;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 0}}
+.rcompact{{font-size:14px;line-height:1.55;color:#555;margin:7px 0 0}}
+.rcompact .rdir{{color:var(--accent);font-style:italic}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
 table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
 table.mkt td.v{{text-align:right;font-weight:700}}
@@ -188,11 +191,19 @@ def render_momentum(doc: dict) -> str:
         rows.append(f'<tr><td>{label}</td><td class="v" style="font-weight:400;white-space:nowrap">'
                     f'<span style="color:var(--faint)">{prev} &rarr; </span>'
                     f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
+    moves = ""
+    for mv in iss.get("market_moves", []):
+        arr = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "")
+        color = "#1a7f4b" if mv.get("dir") == "up" else "#b1300f"
+        moves += (f'<li><a href="{esc(mv["url"])}">{esc(mv["market"])}</a> '
+                  f'<span style="color:{color}">{arr}</span> {esc(mv.get("detail",""))}</li>')
+    moves_html = (f'<p style="margin:16px 0 4px"><strong>Biggest prediction-market move this week:</strong></p>'
+                  f'<ul class="links">{moves}</ul>' if moves else "")
     return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
             f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
             f'<p class="means">Number of the week&rsquo;s top Hacker News stories that fall in '
             f'each regime, this week against last.</p>'
-            f'<table class="mkt">{"".join(rows)}</table></div>')
+            f'<table class="mkt">{"".join(rows)}</table>{moves_html}</div>')
 
 
 def render_watch_next(iss: dict) -> str:
@@ -212,7 +223,7 @@ def render_radar(iss: dict) -> str:
     if not regs:
         return ""
     blocks = []
-    for r in regs:
+    for r in [r for r in regs if r.get("spotlight")]:
         basket = "".join(
             f'<li>{esc(b["metric"])}: <strong>{esc(b["value"])}</strong>'
             + (f' <a href="{esc(b["url"])}">source</a>' if b.get("url") else "")
@@ -222,6 +233,15 @@ def render_radar(iss: dict) -> str:
             f'<span class="rdir">{esc(r.get("direction",""))}</span></p>'
             f'<p class="rread">{esc(r["read"])}</p>'
             f'<ul class="rbask">{basket}</ul></div>')
+    steady = [r for r in regs if not r.get("spotlight")]
+    if steady:
+        blocks.append('<p class="radar-steady">Holding steady</p>')
+        for r in steady:
+            b0 = (r.get("basket") or [None])[0]
+            fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
+            blocks.append(
+                f'<p class="rcompact"><strong>{esc(r["name"])}</strong> '
+                f'<span class="rdir">{esc(r.get("direction",""))}</span>.{fact}</p>')
     return ('<div class="sec"><h2>The structural picture.</h2>'
             '<p class="sub">Regime radar &middot; read through prediction markets</p>'
             '<p class="means">The slow currents beneath the week. Each is read from a basket of '

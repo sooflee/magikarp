@@ -132,9 +132,27 @@ def _momentum_html(state):
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
               <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories that fall in each regime, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+              {_market_moves_html(ISSUE)}
             </td>
           </tr>
 """
+
+
+def _market_moves_html(issue):
+    moves = issue.get("market_moves", [])
+    if not moves:
+        return ""
+    lis = []
+    for mv in moves:
+        arrow = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "")
+        color = "#1a7f4b" if mv.get("dir") == "up" else "#b1300f"
+        lis.append(
+            f'<li style="margin:0 0 5px;"><a href="{mv["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(mv["market"])}</a> '
+            f'<span style="color:{color};">{arrow}</span> {esc(mv.get("detail",""))}</li>')
+    return (
+        f'<p style="margin:16px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
+        f'<strong>Biggest prediction-market move this week:</strong></p>'
+        f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.55; font-family:{SERIF}; color:#555;">{"".join(lis)}</ul>')
 
 
 def _watch_next_html(issue):
@@ -159,12 +177,21 @@ def _watch_next_html(issue):
 """
 
 
+def _radar_compact(r):
+    b0 = (r.get("basket") or [None])[0]
+    fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
+    return (f'<p style="margin:7px 0 0; font-family:{SERIF}; font-size:14px; line-height:1.55; color:#555;">'
+            f'<strong style="color:#1a1a1a;">{esc(r["name"])}</strong> '
+            f'<span style="color:{ACCENT}; font-style:italic;">{esc(r.get("direction",""))}</span>.'
+            f'{fact}</p>')
+
+
 def _radar_html(issue):
     regs = issue.get("structural_regimes", [])
     if not regs:
         return ""
     blocks = []
-    for r in regs:
+    for r in [r for r in regs if r.get("spotlight")]:
         basket = "".join(
             f'<li style="margin:0 0 3px;">{esc(b["metric"])}: <strong>{esc(b["value"])}</strong>'
             + (f' <a href="{b["url"]}" style="color:{ACCENT}; text-decoration:underline;">source</a>' if b.get("url") else "")
@@ -177,6 +204,12 @@ def _radar_html(issue):
             f'<p style="margin:0 0 6px; font-family:{SERIF}; font-size:15px; line-height:1.6; color:#1a1a1a;">{esc(r["read"])}</p>'
             f'<ul style="margin:0; padding:0 0 0 20px; font-family:{SERIF}; font-size:13px; line-height:1.5; color:#666;">{basket}</ul>'
             f'</div>')
+    steady = [r for r in regs if not r.get("spotlight")]
+    if steady:
+        blocks.append(
+            f'<p style="margin:16px 0 0; color:#b3b3b3; font-size:12px; letter-spacing:1.5px; '
+            f'text-transform:uppercase; font-family:{SERIF};">Holding steady</p>')
+        blocks += [_radar_compact(r) for r in steady]
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
@@ -379,6 +412,12 @@ def build_plain():
             tail = f", week {regime_engine.weeks_in_state(STATE, k)} in {st}" if st else ""
             out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow}){tail}")
         out.append("")
+        if ISSUE.get("market_moves"):
+            out.append("  Biggest prediction-market move this week:")
+            for mv in ISSUE["market_moves"]:
+                d = {"up": "up", "down": "down"}.get(mv.get("dir"), "")
+                out.append(f"    - {mv['market']} ({d}): {mv.get('detail','')}  {mv['url']}")
+            out.append("")
     for key, r in reg.items():
         if key == "markets":
             continue
@@ -402,13 +441,22 @@ def build_plain():
         out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",
                 _links_text(u.get("links")).rstrip(), ""]
     if ISSUE.get("structural_regimes"):
+        regs = ISSUE["structural_regimes"]
         out += ["THE STRUCTURAL PICTURE (regime radar, read through prediction markets):", ""]
-        for r in ISSUE["structural_regimes"]:
+        for r in [r for r in regs if r.get("spotlight")]:
             out.append(f"  {r['name']} [{r.get('direction','')}]")
             out.append(f"    {r['read']}")
             for b in r.get("basket", []):
                 u = f"  {b['url']}" if b.get("url") else ""
                 out.append(f"    - {b['metric']}: {b['value']}{u}")
+            out.append("")
+        steady = [r for r in regs if not r.get("spotlight")]
+        if steady:
+            out.append("  Holding steady:")
+            for r in steady:
+                b0 = (r.get("basket") or [None])[0]
+                fact = f" {b0['metric']}: {b0['value']}." if b0 else ""
+                out.append(f"    - {r['name']} ({r.get('direction','')}).{fact}")
             out.append("")
     if ISSUE.get("watch_next"):
         out += ["WHAT TO WATCH NEXT WEEK:", ""]
