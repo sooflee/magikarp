@@ -64,6 +64,25 @@ Accent color: forest green `#1a7f4b`. Repo: github.com/sooflee/magikarp.
 
 10. **Commit and push** all changes to `main`.
 
+## Adaptive depth: let the issue breathe with the week
+
+Issue length should scale with how much actually happened. A week with a war
+ending, a model nationalized, or a Fed surprise runs long; a quiet week runs
+short. Do not pad a slow week to last week's length, and do not truncate a
+genuinely eventful one. Concretely, vary these by significance, not by habit:
+
+- **Prediction-market moves** (`market_moves`): include only markets that genuinely
+  moved or are decision-relevant this week. That might be one, it might be five.
+  If nothing moved, omit the block; the momentum table stands on its own.
+- **Structural radar** (`spotlight`): spotlight only regimes with real news or a
+  possible shift. Most weeks, most regimes are steady one-liners. A pivotal week
+  promotes several to the full block.
+- **Geopolitics**: 3 to 5 stories, fewer in a thin week.
+- **Watchlist** (`new`): full cards only for what is elevated this week.
+
+The renderers already degrade gracefully to zero items in any of these, so a
+short issue is a feature, not a failure.
+
 ## The structural picture (regime radar)
 
 Beyond the weekly editorial regimes, each issue carries a **regime radar**: a set
