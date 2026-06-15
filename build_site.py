@@ -198,11 +198,10 @@ def render_momentum(doc: dict) -> str:
                     f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
     moves = ""
     for mv in iss.get("market_moves", []):
-        arr = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "")
-        color = "#1a7f4b" if mv.get("dir") == "up" else "#b1300f"
+        arr = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "&#9644;")
         moves += (f'<li><a href="{esc(mv["url"])}">{esc(mv["market"])}</a> '
-                  f'<span style="color:{color}">{arr}</span> {esc(mv.get("detail",""))}</li>')
-    moves_html = (f'<p style="margin:16px 0 4px"><strong>Biggest prediction-market move this week:</strong></p>'
+                  f'<span style="color:#9aa0aa">{arr}</span> {esc(mv.get("detail",""))}</li>')
+    moves_html = (f'<p style="margin:16px 0 4px"><strong>Prediction-market moves this week:</strong></p>'
                   f'<ul class="links">{moves}</ul>' if moves else "")
     return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
             f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'

@@ -145,14 +145,13 @@ def _market_moves_html(issue):
         return ""
     lis = []
     for mv in moves:
-        arrow = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "")
-        color = "#1a7f4b" if mv.get("dir") == "up" else "#b1300f"
+        arrow = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "&#9644;")
         lis.append(
-            f'<li style="margin:0 0 5px;"><a href="{mv["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(mv["market"])}</a> '
-            f'<span style="color:{color};">{arrow}</span> {esc(mv.get("detail",""))}</li>')
+            f'<li style="margin:0 0 6px;"><a href="{mv["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(mv["market"])}</a> '
+            f'<span style="color:#9a9a9a;">{arrow}</span> {esc(mv.get("detail",""))}</li>')
     return (
         f'<p style="margin:16px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
-        f'<strong>Biggest prediction-market move this week:</strong></p>'
+        f'<strong>Prediction-market moves this week:</strong></p>'
         f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.55; font-family:{SERIF}; color:#555;">{"".join(lis)}</ul>')
 
 
@@ -452,9 +451,9 @@ def build_plain():
             out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow}){tail}")
         out.append("")
         if ISSUE.get("market_moves"):
-            out.append("  Biggest prediction-market move this week:")
+            out.append("  Prediction-market moves this week:")
             for mv in ISSUE["market_moves"]:
-                d = {"up": "up", "down": "down"}.get(mv.get("dir"), "")
+                d = {"up": "up", "down": "down"}.get(mv.get("dir"), "flat")
                 out.append(f"    - {mv['market']} ({d}): {mv.get('detail','')}  {mv['url']}")
             out.append("")
     for key, r in reg.items():

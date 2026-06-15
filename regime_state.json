@@ -439,8 +439,20 @@
         {
           "market": "US-Iran permanent peace deal",
           "dir": "up",
-          "detail": "surged after Trump canceled planned strikes on June 11 and global leaders backed a deal on June 15. Volume has climbed to $310M, and a July signing is now priced as near-certain. This is the move that pulled oil lower.",
+          "detail": "surged after Trump canceled planned strikes on June 11 and global leaders backed a deal on June 15. Volume has climbed to $310M and a July signing is now priced near-certain. It eased the Fragmentation regime and pulled oil lower.",
           "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by"
+        },
+        {
+          "market": "A 2026 Fed rate cut",
+          "dir": "down",
+          "detail": "odds fell sharply after May inflation hit 4.2 percent, the highest since 2023. Zero cuts this year is now the favorite, near 77 percent. It hardens the higher-for-longer monetary regime.",
+          "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026"
+        },
+        {
+          "market": "US recession by end of 2026",
+          "dir": "flat",
+          "detail": "held low, near 15 percent, as traders pointed to AI capital spending and a low-hire, low-fire labor market. It keeps the market regime's growth reading intact.",
+          "url": "https://polymarket.com/event/us-recession-by-end-of-2026"
         }
       ]
     }
