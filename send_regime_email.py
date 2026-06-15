@@ -207,7 +207,6 @@ def build_html():
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
         body.append(_market_html(reg["markets"]))
-    body.append(_contrarian_html(ISSUE))
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
@@ -291,12 +290,6 @@ def build_plain():
         out += [f"MARKETS: {m.get('headline','')}", "", m.get("summary", ""), "",
                 "  " + ", ".join(f"{lbl} {sig[k]}" for k, lbl in MKT_ORDER if k in sig),
                 "", MARKET_MEANS, ""]
-    contr = [(DEFS.get(k, {}).get("label", k), r["contrarian"])
-             for k, r in reg.items() if r.get("contrarian")]
-    if contr:
-        out += ["CONTRARIAN READ (what could change this):", ""]
-        out += [f"  {lbl}. {line}" for lbl, line in contr]
-        out.append("")
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",

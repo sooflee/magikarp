@@ -288,7 +288,6 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
-    secs.append(render_contrarian(doc, iss))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     secs.append(render_watch(doc.get("bsig_watch", [])))
