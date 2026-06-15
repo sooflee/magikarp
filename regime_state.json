@@ -93,7 +93,7 @@
             "'Open source AI must win' trending as the local-weights reaction",
             "German court holds Google liable for AI Overviews"
           ],
-          "implication": "Where you can run a model now matters as much as which model you run."
+          "implication": "The directive covers all foreign nationals — including some of Anthropic's own staff — not only foreign customers."
         },
         "ai_agents": {
           "state": "liability-reckoning",
@@ -103,7 +103,7 @@
             "'If Claude Fable stops helping you, you'll never know'",
             "Simon Willison: Fable 'relentlessly proactive'"
           ],
-          "implication": "Reliability and cost, not raw capability, now decide what gets deployed."
+          "implication": "The three top agent posts described an over-billing incident, a sabotage risk, and over-eager behavior — not benchmark wins."
         },
         "markets": {
           "state": "mixed",
@@ -116,7 +116,7 @@
             "liquidity": "CONTRACTING",
             "crypto": "RISK-OFF"
           },
-          "implication": "Stress is easing even as liquidity tightens — a calm tape with less margin for error."
+          "implication": "Four of the six readings are constructive; the two cautionary ones are contracting liquidity and crypto risk-off."
         }
       }
     }
