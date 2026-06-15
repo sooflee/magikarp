@@ -22,6 +22,8 @@ STATE = ROOT / "regime_state.json"
 DOCS = ROOT / "docs"
 
 ACCENT = "#1a7f4b"
+SUBSCRIBE_HREF = ("mailto:bensonw.dev@gmail.com?subject=subscribe&body="
+                  "Just%20send%20this%20email%20to%20subscribe%20to%20The%20Current%20Regime.")
 WARN_STATES = {"state-capture", "risk-off", "contracting", "liability-reckoning",
                "stressed", "constrained"}
 
@@ -99,6 +101,10 @@ table.mkt td.v{{text-align:right;font-weight:700}}
 footer{{margin-top:48px;border-top:1px solid var(--accent);padding-top:14px;
   font-size:12.5px;color:var(--faint);text-align:center;line-height:1.7}}
 footer a{{color:var(--accent)}}
+.subwrap{{text-align:center;margin:18px 0 0}}
+a.subscribe{{display:inline-block;background:var(--accent);color:#fff;
+  text-decoration:none;font-size:14px;font-weight:600;padding:9px 22px;border-radius:4px}}
+.subnote{{text-align:center;font-size:12.5px;color:var(--faint);margin:8px 0 0}}
 """
 
 
@@ -115,7 +121,7 @@ def page(title: str, inner: str) -> str:
 <style>{CSS}</style>
 </head><body><div class="wrap">
 {inner}
-<footer>The Current Regime &middot; <a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
+<footer><a href="{SUBSCRIBE_HREF}">Subscribe</a> &middot; <a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
 Market notes are directional only and are not investment advice.</footer>
 </div></body></html>
 """
@@ -441,7 +447,10 @@ def render_index(doc: dict, issues: list) -> str:
             f'<p class="tags">{esc(_tags(doc, iss))}</p>'
             f'</div>')
     inner = (
-        '<header class="mast home"><h1>The Current Regime</h1></header>'
+        '<header class="mast home"><h1>The Current Regime</h1>'
+        f'<p class="subwrap"><a class="subscribe" href="{SUBSCRIBE_HREF}">Subscribe</a></p>'
+        '<p class="subnote">A weekly read, free. Click subscribe and just send the email.</p>'
+        '</header>'
         + "".join(posts)
     )
     return page("The Current Regime", inner)

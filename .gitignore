@@ -1,6 +1,8 @@
 # secrets / env
 .env
 *.local
+# subscriber list holds PII — keep local
+subscribers.txt
 # python
 __pycache__/
 *.pyc
@@ -8,3 +10,5 @@ __pycache__/
 venv/
 # os
 .DS_Store
+# logs
+weekly.log

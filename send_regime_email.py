@@ -16,11 +16,27 @@ import smtplib
 import ssl
 import sys
 from email.message import EmailMessage
+from pathlib import Path
 
 import regime_engine
 
 SENDER = "bensonw.dev@gmail.com"
 RECIPIENT = "bensonw.dev@gmail.com"
+SUBSCRIBERS = Path(__file__).resolve().parent / "subscribers.txt"
+
+
+def load_subscribers():
+    """One email per line in subscribers.txt; blanks and #comments ignored.
+    Falls back to just the sender if the list is missing or empty."""
+    if SUBSCRIBERS.exists():
+        subs = []
+        for line in SUBSCRIBERS.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "@" in line:
+                subs.append(line)
+        if subs:
+            return subs
+    return [SENDER]
 
 SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,Georgia,"
          "'Times New Roman',serif")
@@ -525,19 +541,31 @@ def main() -> int:
         print("ERROR: set GMAIL_APP_PASSWORD first.", file=sys.stderr)
         return 1
 
+    recipients = load_subscribers()
+    dry = "--dry-run" in sys.argv
+    only_me = "--test" in sys.argv
+    if only_me:
+        recipients = [SENDER]
+
     msg = EmailMessage()
-    msg["From"] = SENDER
-    msg["To"] = RECIPIENT
+    msg["From"] = f"The Current Regime <{SENDER}>"
+    msg["To"] = SENDER                       # list goes out via to_addrs, not headers
     msg["Subject"] = SUBJECT
+    # one-click unsubscribe (a reply that signups.py will process)
+    msg["List-Unsubscribe"] = f"<mailto:{SENDER}?subject=unsubscribe>"
     msg.set_content(build_plain())
     msg.add_alternative(build_html(), subtype="html")
+
+    if dry:
+        print(f"[dry-run] would send '{SUBJECT}' to {len(recipients)} recipient(s)")
+        return 0
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(SENDER, app_password)
-        server.send_message(msg)
+        server.send_message(msg, from_addr=SENDER, to_addrs=recipients)
 
-    print(f"Sent '{SUBJECT}' to {RECIPIENT}")
+    print(f"Sent '{SUBJECT}' to {len(recipients)} recipient(s)")
     return 0
 
 

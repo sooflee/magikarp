@@ -32,6 +32,41 @@ A cloud routine (`trig_01PARqr7swfpBeKGnBSzPGuE`) runs the curation weekly.
 Manage it at https://claude.ai/code/routines/trig_01PARqr7swfpBeKGnBSzPGuE.
 Delivery is currently manual via `send_regime_email.py`.
 
+## Sign-ups and delivery
+
+Subscribers are managed with plain Gmail — no third-party provider.
+
+- The site's **Subscribe** button opens a pre-filled email (subject `subscribe`).
+- `signups.py` reads `subscribe` / `unsubscribe` mail over IMAP and updates
+  `subscribers.txt` (gitignored; it holds addresses and stays local).
+- `send_regime_email.py` sends the latest issue to everyone in `subscribers.txt`
+  (BCC-style via `to_addrs`, with a `List-Unsubscribe` header). `--test` sends only
+  to the owner; `--dry-run` sends nothing.
+
+## Weekly automation (launchd)
+
+`run_weekly.sh` ingests sign-ups, generates the issue with Claude (headless),
+builds the archive, pushes, and delivers. By default it sends a **preview to the
+owner**; set `AUTO_SEND=1` to publish to the full list.
+
+One-time setup:
+
+```sh
+# 1. store the Gmail app password in the Keychain (not in any file)
+security add-generic-password -s the-current-regime -a gmail -w 'YOUR_APP_PASSWORD'
+
+# 2. install the weekly job (Mondays 8am local)
+cp com.bwang.currentregime.weekly.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.bwang.currentregime.weekly.plist
+
+# run it once by hand to test:
+./run_weekly.sh            # preview to owner
+AUTO_SEND=1 ./run_weekly.sh  # publish to subscribers
+```
+
+Logs go to `weekly.log`. Note: the local job and the cloud routine both generate
+issues — run only one to avoid double-publishing.
+
 ## Local preview
 
 ```sh
