@@ -28,6 +28,43 @@ def load() -> dict:
     return json.loads(STATE.read_text())
 
 
+def latest_issue(state: dict) -> dict:
+    return [i for i in state["issues"] if not i.get("partial")][-1]
+
+
+def momentum(state: dict):
+    return latest_issue(state).get("momentum")
+
+
+def weeks_in_state(state: dict, key: str) -> int:
+    issues = [i for i in state["issues"] if key in i.get("regimes", {})]
+    if not issues:
+        return 0
+    cur = issues[-1]["regimes"][key].get("state")
+    n = 0
+    for iss in reversed(issues):
+        if iss["regimes"][key].get("state") == cur:
+            n += 1
+        else:
+            break
+    return n
+
+
+def trajectory_line(state: dict, key: str):
+    """Compact 'Rising · week N in <state>' line for a regime, or None."""
+    m = momentum(state)
+    if not m or key not in m.get("series", {}):
+        return None
+    ser = m["series"][key]
+    if len(ser) < 2:
+        return None
+    prev, cur = ser[-2], ser[-1]
+    direction = "Rising" if cur > prev else ("Cooling" if cur < prev else "Steady")
+    st = latest_issue(state)["regimes"].get(key, {}).get("state", "")
+    n = weeks_in_state(state, key)
+    return f"{direction} · week {n} in {st}" if st else direction
+
+
 def _issue(state: dict, idx: int) -> dict | None:
     issues = state.get("issues", [])
     return issues[idx] if -len(issues) <= idx < len(issues) else None

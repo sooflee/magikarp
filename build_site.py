@@ -69,6 +69,10 @@ ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
 .across p{{font-size:15px;line-height:1.6;margin:0 0 8px}}
 .story{{font-size:15px;line-height:1.5;margin:12px 0 0}}
 .story .cmt{{color:var(--muted);font-size:14px}}
+.traj{{color:var(--faint);font-size:13px;font-style:italic;margin:0 0 10px}}
+.wn{{font-size:15px;line-height:1.5;margin:10px 0 0;padding-bottom:8px;border-bottom:1px solid var(--line)}}
+.wn .when{{color:var(--accent);font-weight:700}}
+.wn .cmt{{color:var(--muted);font-size:14px}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
 table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
 table.mkt td.v{{text-align:right;font-weight:700}}
@@ -146,12 +150,56 @@ def render_items(items: list) -> str:
         for it in items)
 
 
-def render_regime(label: str, r: dict) -> str:
+def render_regime(label: str, r: dict, traj: str = None) -> str:
     body = r.get("summary") or " ".join(r.get("evidence", []))
     impl = (f'<p class="impl">{esc(r["implication"])}</p>' if r.get("implication") else "")
+    traj_html = f'<p class="traj">{esc(traj)}</p>' if traj else ""
     return (f'<div class="sec"><h2>{esc(r.get("headline", label))}{badge(r.get("state",""))}</h2>'
-            f'<p class="sub">{esc(label)}</p><p>{esc(body)}</p>'
+            f'<p class="sub">{esc(label)}</p>{traj_html}<p>{esc(body)}</p>'
             f'{render_items(r.get("items"))}{render_links(r.get("links"))}{impl}</div>')
+
+
+def render_momentum(doc: dict) -> str:
+    m = regime_engine.momentum(doc)
+    if not m:
+        return ""
+    ser, weeks = m["series"], m["weeks"]
+    rows = []
+    for k in sorted(ser, key=lambda k: -ser[k][-1]):
+        cur = ser[k][-1]
+        prev = ser[k][-2] if len(ser[k]) > 1 else cur
+        if cur == 0 and prev == 0:
+            continue
+        arr, color = ("&#9650;", "#1a7f4b") if cur > prev else (
+            ("&#9660;", "#b1300f") if cur < prev else ("&#9644;", "#9aa0aa"))
+        label = doc["regime_defs"].get(k, {}).get("label", k)
+        rows.append(f'<tr><td>{esc(label)}</td><td class="v" style="font-weight:400">'
+                    f'<span style="color:var(--faint)">{prev} &rarr; </span>'
+                    f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
+    return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
+            f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
+            f'<p class="means">Number of the week&rsquo;s top Hacker News stories that fall in '
+            f'each regime, this week against last.</p>'
+            f'<table class="mkt">{"".join(rows)}</table></div>')
+
+
+def render_watch_next(iss: dict) -> str:
+    wn, odds = iss.get("watch_next", []), iss.get("odds", [])
+    if not wn and not odds:
+        return ""
+    rows = "".join(
+        f'<p class="wn"><span class="when">{esc(it.get("when",""))}</span> '
+        f'<strong>{esc(it.get("event",""))}</strong><br>'
+        f'<span class="cmt">{esc(it.get("note",""))}</span></p>' for it in wn)
+    odds_html = ""
+    if odds:
+        lis = "".join(
+            f'<li><a href="{esc(o["url"])}">{esc(o["q"])}</a>: <strong>{esc(o["prob"])}</strong> '
+            f'<span style="color:var(--faint)">({esc(o["src"])})</span></li>' for o in odds)
+        odds_html = (f'<p style="margin-top:16px"><strong>What the betting markets think:</strong></p>'
+                     f'<ul class="links">{lis}</ul>')
+    return (f'<div class="sec"><h2>What to watch next week.</h2>'
+            f'<p class="sub">The calendar ahead</p>{rows}{odds_html}</div>')
 
 
 def render_what_changed(doc: dict) -> str:
@@ -279,17 +327,19 @@ def render_issue_page(doc: dict, iss: dict) -> str:
     reg = iss.get("regimes", {})
     # order must match the email: what-changed, regimes, commodities, markets,
     # contrarian, undercurrent, watch, across
-    secs = [render_what_changed(doc)]
+    secs = [render_what_changed(doc), render_momentum(doc)]
     for key, r in reg.items():
         if key == "markets":
             continue
-        secs.append(render_regime(defs.get(key, {}).get("label", key), r))
+        secs.append(render_regime(defs.get(key, {}).get("label", key), r,
+                                  regime_engine.trajectory_line(doc, key)))
     if iss.get("commodities"):
         secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
+    secs.append(render_watch_next(iss))
     secs.append(render_watch(doc.get("bsig_watch", [])))
     if iss.get("across_sources"):
         secs.append(render_across(iss["across_sources"]))

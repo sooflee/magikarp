@@ -77,15 +77,84 @@ def _items_html(items):
         for it in items)
 
 
-def _section_html(label, title, paragraph, links=None, items=None):
+def _section_html(label, title, paragraph, links=None, items=None, trajectory=None):
+    traj = (f'<p style="margin:0 0 12px; color:#9a9a9a; font-size:13px; font-style:italic; '
+            f'font-family:{SERIF};">{esc(trajectory)}</p>' if trajectory else "")
+    sub_mb = "2px" if trajectory else "14px"
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(title)}</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
+              <p style="margin:0 0 {sub_mb}; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
+              {traj}
               <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(paragraph)}</p>
               {_items_html(items)}
               {_links_html(links)}
+            </td>
+          </tr>
+"""
+
+
+def _momentum_html(state):
+    m = regime_engine.momentum(state)
+    if not m:
+        return ""
+    series, weeks = m["series"], m["weeks"]
+    rows = []
+    for k in sorted(series, key=lambda k: -series[k][-1]):
+        cur = series[k][-1]
+        prev = series[k][-2] if len(series[k]) > 1 else cur
+        if cur == 0 and prev == 0:
+            continue
+        arrow, color = ("&#9650;", "#1a7f4b") if cur > prev else (
+            ("&#9660;", "#b1300f") if cur < prev else ("&#9644;", "#9a9a9a"))
+        label = DEFS.get(k, {}).get("label", k)
+        rows.append(
+            f'<tr><td style="padding:8px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; color:#1a1a1a;">{esc(label)}</td>'
+            f'<td align="right" style="padding:8px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; color:#9a9a9a;">{prev} &rarr; '
+            f'<span style="color:#1a1a1a; font-weight:700;">{cur}</span> '
+            f'<span style="color:{color};">{arrow}</span></td></tr>')
+    return f"""
+          <tr>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Where the week&rsquo;s attention went.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
+              <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories that fall in each regime, this week against last.</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+            </td>
+          </tr>
+"""
+
+
+def _watch_next_html(issue):
+    wn, odds = issue.get("watch_next", []), issue.get("odds", [])
+    if not wn and not odds:
+        return ""
+    rows = []
+    for it in wn:
+        rows.append(
+            f'<tr><td style="padding:10px 0; border-bottom:1px solid #ededed; font-family:{SERIF};">'
+            f'<span style="color:{ACCENT}; font-weight:700; font-size:15px;">{esc(it.get("when",""))}</span> '
+            f'<span style="color:#1a1a1a; font-weight:700; font-size:16px;">{esc(it.get("event",""))}</span><br>'
+            f'<span style="color:#555; font-size:15px; line-height:1.55;">{esc(it.get("note",""))}</span></td></tr>')
+    odds_html = ""
+    if odds:
+        lis = "".join(
+            f'<li style="margin:0 0 5px;"><a href="{o["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(o["q"])}</a>: '
+            f'<strong>{esc(o["prob"])}</strong> <span style="color:#9a9a9a;">({esc(o["src"])})</span></li>'
+            for o in odds)
+        odds_html = (
+            f'<p style="margin:18px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};"><strong>What the betting markets think:</strong></p>'
+            f'<ul style="margin:0; padding:0 0 0 20px; font-size:15px; line-height:1.6; font-family:{SERIF}; color:#1a1a1a;">{lis}</ul>')
+    return f"""
+          <tr>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What to watch next week.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">The calendar ahead</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+              {odds_html}
             </td>
           </tr>
 """
@@ -196,13 +265,14 @@ def _across_html(a):
 
 def build_html():
     reg = ISSUE.get("regimes", {})
-    body = [regime_engine.render_changed_html(STATE)]
+    body = [regime_engine.render_changed_html(STATE), _momentum_html(STATE)]
     for key, r in reg.items():            # editorial regimes (incl. geopolitics)
         if key == "markets":
             continue
         body.append(_section_html(DEFS.get(key, {}).get("label", key),
                                   r.get("headline", key), r.get("summary", ""),
-                                  r.get("links"), r.get("items")))
+                                  r.get("links"), r.get("items"),
+                                  regime_engine.trajectory_line(STATE, key)))
     if ISSUE.get("commodities"):
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
@@ -211,6 +281,7 @@ def build_html():
         u = ISSUE["undercurrent"]
         body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
                                   u.get("summary", ""), u.get("links")))
+    body.append(_watch_next_html(ISSUE))
     body.append(regime_engine.render_watch_html(STATE))
     if ISSUE.get("across_sources"):
         body.append(_across_html(ISSUE["across_sources"]))
@@ -272,12 +343,26 @@ def build_plain():
            "Sourced from the week's top posts on news.ycombinator.com, with claims",
            "verified against primary reporting, and a market-regime read.", "",
            "-" * 74, ""]
+    m = ISSUE.get("momentum")
+    if m:
+        ser = m["series"]
+        out += [f"WHERE ATTENTION WENT (regime momentum, {m['weeks'][0]} vs {m['weeks'][-1]}):", ""]
+        for k in sorted(ser, key=lambda k: -ser[k][-1]):
+            cur = ser[k][-1]
+            prev = ser[k][-2] if len(ser[k]) > 1 else cur
+            if cur == 0 and prev == 0:
+                continue
+            arrow = "up" if cur > prev else ("down" if cur < prev else "flat")
+            out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow})")
+        out.append("")
     for key, r in reg.items():
         if key == "markets":
             continue
         label = DEFS.get(key, {}).get("label", key).upper()
+        traj = regime_engine.trajectory_line(STATE, key)
+        head = f"{label}: {r.get('headline','')}" + (f"  [{traj}]" if traj else "")
         refs = _items_text(r.get("items")) or _links_text(r.get("links")).rstrip()
-        out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "", refs, ""]
+        out += [head, "", r.get("summary", ""), "", refs, ""]
     if ISSUE.get("commodities"):
         c = ISSUE["commodities"]
         out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]
@@ -294,6 +379,16 @@ def build_plain():
         u = ISSUE["undercurrent"]
         out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",
                 _links_text(u.get("links")).rstrip(), ""]
+    if ISSUE.get("watch_next"):
+        out += ["WHAT TO WATCH NEXT WEEK:", ""]
+        for it in ISSUE["watch_next"]:
+            out.append(f"  {it.get('when','')} - {it.get('event','')}: {it.get('note','')}")
+        out.append("")
+    if ISSUE.get("odds"):
+        out += ["What the betting markets think:"]
+        for o in ISSUE["odds"]:
+            out.append(f"  {o['q']}: {o['prob']} ({o['src']})  {o['url']}")
+        out.append("")
     out += [regime_engine.render_text(STATE), ""]
     if ISSUE.get("across_sources"):
         a = ISSUE["across_sources"]
