@@ -287,13 +287,21 @@ def render_what_changed(doc: dict) -> str:
             f'<ul class="chg">{lis}</ul></div>')
 
 
+def _chg_mag(chg):
+    try:
+        return abs(float(chg.replace("%", "").replace("+", "")))
+    except Exception:
+        return 999.0
+
+
 def render_commodities(c: dict) -> str:
+    floor = c.get("min_change", 0)
     rows = "".join(
         f'<tr><td>{esc(it["name"])}</td>'
         f'<td class="v">{esc(it.get("level",""))}</td>'
         f'<td class="v" style="font-weight:400;color:'
         f'{"#b1300f" if it.get("change","").startswith("-") else "#1a7f4b"}">{esc(it.get("change",""))}</td></tr>'
-        for it in c.get("items", []))
+        for it in c.get("items", []) if _chg_mag(it.get("change", "")) >= floor)
     return (f'<div class="sec"><h2>Crude falls as the fear premium unwinds.</h2>'
             f'<p class="sub">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>'
             f'<p>{esc(c.get("summary",""))}</p>'

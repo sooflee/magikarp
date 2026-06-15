@@ -248,10 +248,20 @@ def _market_html(m):
 """
 
 
+def _chg_mag(chg):
+    try:
+        return abs(float(chg.replace("%", "").replace("+", "")))
+    except Exception:
+        return 999.0
+
+
 def _commodities_html(c):
+    floor = c.get("min_change", 0)
     rows = []
     for it in c.get("items", []):
         chg = it.get("change", "")
+        if _chg_mag(chg) < floor:          # only big movers
+            continue
         color = "#b1300f" if chg.startswith("-") else "#1a7f4b"
         rows.append(
             f'<tr><td style="padding:9px 2px; border-bottom:1px solid #ededed; '
@@ -455,6 +465,8 @@ def build_plain():
         c = ISSUE["commodities"]
         out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]
         for it in c["items"]:
+            if _chg_mag(it.get("change", "")) < c.get("min_change", 0):
+                continue
             out.append(f"  {it['name']}: {it.get('level','')} ({it.get('change','')})")
         out.append("")
     if "markets" in reg:

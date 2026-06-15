@@ -250,7 +250,7 @@
       "date_label": "June 8–14, 2026",
       "commodities": {
         "as_of": "week ending June 14",
-        "summary": "With oil moving through Hormuz again, crude fell sharply and the conflict's fear premium is unwinding across the complex. Gold and silver gave back ground and grains slipped with them; coffee was the exception, rising while the rest of the complex fell.",
+        "summary": "With oil moving through Hormuz again, crude tumbled roughly 8 percent and the conflict's fear premium is unwinding across the complex; gold, silver and natural gas fell with it, while coffee was the exception. With the strait reopening, analysts expect still more oil to reach the market, pointing to softer energy prices ahead.",
         "items": [
           {
             "name": "Brent crude",
@@ -292,7 +292,8 @@
             "level": "$2.57/lb",
             "change": "+4.1%"
           }
-        ]
+        ],
+        "min_change": 4.0
       },
       "momentum": {
         "weeks": [
