@@ -84,7 +84,16 @@ headline:
   itself a finding.
 
 Store these in `regime_state.json -> issues[].structural_regimes` as
-`{name, direction, read, basket:[{metric, value, url}]}`. Verify every figure.
+`{name, direction, read, basket:[{metric, value, url}], spotlight}`. Verify every figure.
+
+Keep the radar short by default. Set `spotlight: true` only on regimes with real
+news or a possible structural shift that week; those get the full block. The rest
+collapse to a one-line "Holding steady" summary. Most weeks, most regimes are steady.
+
+Also surface the week's **biggest prediction-market moves** in the momentum section
+(`issues[].market_moves: [{market, dir, detail, url}]`): which dated markets swung
+hardest and why. From issue 02 on, compute the week-over-week delta from the prior
+issue's stored basket values rather than describing the move qualitatively.
 
 ## The six weekly regimes (state spaces live in regime_state.json)
 
