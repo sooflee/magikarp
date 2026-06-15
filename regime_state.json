@@ -121,7 +121,8 @@
               "title": "German court holds Google liable for false AI Overviews",
               "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/"
             }
-          ]
+          ],
+          "contrarian": "A court has already paused the ban once and the Justice Department is appealing, so state control over model access may prove weaker than this week suggests."
         },
         "ai_agents": {
           "state": "liability-reckoning",
@@ -149,7 +150,8 @@
               "title": "“Claude Fable is relentlessly proactive” (Simon Willison)",
               "url": "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/"
             }
-          ]
+          ],
+          "contrarian": "If the next frontier model ships with strong reliability guarantees, attention could swing back to capability as quickly as it left."
         },
         "geopolitics": {
           "state": "stressed",
@@ -165,7 +167,8 @@
               "title": "Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg)",
               "url": "https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens"
             }
-          ]
+          ],
+          "contrarian": "A durable ceasefire would restore full Hormuz flows well before the 2027 estimate and remove the oil-supply risk altogether."
         },
         "markets": {
           "state": "mixed",
@@ -179,7 +182,8 @@
             "crypto": "RISK-OFF"
           },
           "implication": "Four of the six readings are constructive, while the two cautionary ones are contracting liquidity and a risk-off move in crypto.",
-          "summary": "Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June 17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice."
+          "summary": "Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June 17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice.",
+          "contrarian": "If liquidity stops contracting and crypto turns back up, the cautious undercurrent disappears and the read becomes cleanly risk-on."
         }
       },
       "undercurrent": {
@@ -240,6 +244,38 @@
           {
             "title": "Persona-Pruner: Sculpting Lightweight Models for Role-Playing",
             "url": ""
+          }
+        ]
+      },
+      "date_label": "June 8–14, 2026",
+      "commodities": {
+        "as_of": "week ending June 15",
+        "summary": "With oil beginning to move through Hormuz again, crude fell sharply this week. The fear premium that had built up during the conflict is unwinding across the complex, and gold, a classic safe haven, gave back ground as well.",
+        "items": [
+          {
+            "name": "Brent crude",
+            "level": "$87",
+            "change": "-8.1%"
+          },
+          {
+            "name": "WTI crude",
+            "level": "$85",
+            "change": "-8.8%"
+          },
+          {
+            "name": "Gold",
+            "level": "$4,215",
+            "change": "-5.8%"
+          },
+          {
+            "name": "Copper",
+            "level": "$6.43/lb",
+            "change": "-1.2%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "$3.12",
+            "change": "-6.5%"
           }
         ]
       }

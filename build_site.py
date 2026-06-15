@@ -171,6 +171,32 @@ def render_what_changed(doc: dict) -> str:
             f'<ul class="chg">{lis}</ul></div>')
 
 
+def render_commodities(c: dict) -> str:
+    rows = "".join(
+        f'<tr><td>{esc(it["name"])}</td>'
+        f'<td class="v">{esc(it.get("level",""))}</td>'
+        f'<td class="v" style="font-weight:400;color:'
+        f'{"#b1300f" if it.get("change","").startswith("-") else "#1a7f4b"}">{esc(it.get("change",""))}</td></tr>'
+        for it in c.get("items", []))
+    return (f'<div class="sec"><h2>Crude falls as the fear premium unwinds.</h2>'
+            f'<p class="sub">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>'
+            f'<p>{esc(c.get("summary",""))}</p>'
+            f'<table class="mkt">{rows}</table></div>')
+
+
+def render_contrarian(doc: dict, iss: dict) -> str:
+    rows = []
+    for key, r in iss.get("regimes", {}).items():
+        if not r.get("contrarian"):
+            continue
+        label = doc["regime_defs"].get(key, {}).get("label", key)
+        rows.append(f'<li><strong>{esc(label)}.</strong> {esc(r["contrarian"])}</li>')
+    if not rows:
+        return ""
+    return (f'<div class="sec"><h2>What could change this.</h2>'
+            f'<p class="sub">Contrarian read</p><ul class="chg">{"".join(rows)}</ul></div>')
+
+
 def render_undercurrent(u: dict) -> str:
     return (f'<div class="sec"><h2>{esc(u["headline"])}</h2>'
             f'<p class="sub">{esc(u.get("label","Undercurrent"))}</p>'
@@ -240,14 +266,18 @@ def render_watch(watch: list) -> str:
 def render_issue_page(doc: dict, iss: dict) -> str:
     defs = doc["regime_defs"]
     reg = iss.get("regimes", {})
-    # email order: what-changed, editorial regimes (+links), markets, undercurrent, across, watch
+    # order must match the email: what-changed, regimes, commodities, markets,
+    # contrarian, undercurrent, watch, across
     secs = [render_what_changed(doc)]
     for key, r in reg.items():
         if key == "markets":
             continue
         secs.append(render_regime(defs.get(key, {}).get("label", key), r))
+    if iss.get("commodities"):
+        secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
+    secs.append(render_contrarian(doc, iss))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     secs.append(render_watch(doc.get("bsig_watch", [])))

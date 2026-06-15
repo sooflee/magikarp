@@ -139,8 +139,9 @@ def render_changed_html(state: dict) -> str:
         rows.append('<li>No changes.</li>')
     return f"""
           <tr>
-            <td style="padding:38px 0 0;">
-              {_eyebrow(f"What changed &middot; {prev['date']} &rarr; {cur['date']}")}
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">What changed.</h2>
+              <p style="margin:0 0 10px; color:#1a7f4b; font-size:14px; font-weight:600; font-family:{SANS};">Since {prev['date']}</p>
               <ul style="margin:0; padding:0 0 0 20px; color:#1a1a1a; font-size:16px; line-height:1.7; font-family:{SANS};">
                 {''.join(rows)}
               </ul>
@@ -182,7 +183,7 @@ def render_watch_html(state: dict) -> str:
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">Exponential trends to watch.</h2>
-              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Signals to watch</p>
+              <p style="margin:0 0 14px; color:#1a7f4b; font-size:14px; font-weight:600; font-family:{SANS};">Signals to watch</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{cards}</table>
             </td>
           </tr>

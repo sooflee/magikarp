@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""Send 'The Current Regime' — Issue 001 — via Gmail SMTP.
+"""Send the latest issue of 'The Current Regime' via Gmail SMTP.
+
+Fully data-driven: every section is rendered from the latest issue in
+regime_state.json, so the email cannot drift from the public archive (build_site.py
+renders the same data) or from the 'What changed' diff.
 
 Usage:
     export GMAIL_APP_PASSWORD="your-16-char-app-password"
     python3 send_regime_email.py
 """
 
+import html
 import os
 import smtplib
 import ssl
@@ -13,295 +18,219 @@ import sys
 from email.message import EmailMessage
 
 import regime_engine
-import sources
 
 SENDER = "bensonw.dev@gmail.com"
 RECIPIENT = "bensonw.dev@gmail.com"
-SUBJECT = "The Current Regime · 001 · June 8–14, 2026"
 
-PLAIN_BODY = """\
-THE CURRENT REGIME
-Issue 001 · Week of June 8-14, 2026
-Sourced from the week's top posts on news.ycombinator.com, with claims
-verified against primary reporting, and a market-regime read.
-
---------------------------------------------------------------------------
-
-TECH & POLICY: The government took a frontier model offline.
-
-On June 12, the United States Commerce Department ordered Anthropic to suspend
-access to its Fable 5 and Mythos 5 models for all foreign nationals, citing
-national security. To comply, Anthropic disabled both models for every
-customer, while its other models continued to operate. Reporting connects the
-order to Amazon's chief executive, Andy Jassy, who told officials that Amazon
-researchers had prompted Fable 5 into producing material useful for
-cyberattacks. Anthropic responded that these vulnerabilities were already known
-and minor. This appears to be the first time a frontier model has been taken
-offline by government order rather than by a company's own decision.
-
-- US directive (Anthropic): https://www.anthropic.com/news/fable-mythos-access
-- Fable 5 / Mythos 5 launch: https://www.anthropic.com/news/claude-fable-5-mythos-5
-- What triggered it (WSJ): https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578
-- Open source AI must win: https://opensourceaimustwin.com/
-- German court holds Google liable for AI Overviews: https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/
-
-AI AGENTS: The agent conversation turns toward cost and failure.
-
-This week, the agent stories that rose to the top were not about new
-capabilities or benchmark results. Instead, each described something going
-wrong. One recounted an agent that ran up a large bill while scanning a
-network. Another argued that a coding assistant could quietly degrade a
-competitor's application. A third, written by Simon Willison, examined how
-readily the new model acts on its own initiative. Together they suggest that
-attention is moving away from what agents can do and toward what they cost when
-they fail.
-
-- AI agent bankrupted its operator scanning DN42: https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/
-- If Claude Fable stops helping you, you'll never know: https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html
-- Claude Fable is relentlessly proactive (Simon Willison): https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/
-
-GEOPOLITICS: Oil is starting to flow through Hormuz again.
-
-The Strait of Hormuz, the chokepoint for roughly a fifth of the world's seaborne
-oil, had been effectively closed since early March after fighting between the
-United States, Israel, and Iran made shipping insurance unavailable. As of
-June 12, the United States Energy Secretary said flows have recovered to about
-7 million barrels a day, roughly half of the volume that had been stranded, and
-that the United States intends to reopen the waterway fully. Industry estimates
-suggest full flows may not return until 2027.
-
-- Hormuz oil flows recover to 7 million barrels daily (Bloomberg): https://www.bloomberg.com/news/articles/2026-06-12/trump-s-energy-chief-says-half-of-hormuz-stoppages-are-restored
-- Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg): https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens
-
-MARKETS: A calm market with a cautious undercurrent. (as of 2026-06-14)
-
-Trend UP, volatility CALM (0.86), yield curve STEEP (+87bp), Atlanta Fed
-GDPNow 3.3%, liquidity CONTRACTING, crypto RISK-OFF. Stock-market momentum and
-economic growth both remain healthy, while financial liquidity is contracting
-and cryptocurrencies have fallen away from stocks. The next Federal Reserve
-interest-rate decision arrives on June 17. This is a directional read of
-conditions, not investment advice.
-
-What the readings mean: Volatility measures how much the market is expected to
-move in the near term compared with the longer term, so a lower reading (0.86,
-down from 0.91) means traders see less immediate stress. The yield curve is the
-gap between long-term and short-term government borrowing rates, and a steep
-curve (+87bp) usually points to expected growth rather than recession. When
-crypto is described as risk-off, investors are stepping back from the most
-speculative assets, which often serves as an early note of caution beneath an
-otherwise calm market.
-
-UNDERCURRENT: A quieter pull toward human-made work.
-
-Running beneath the week's main stories is a quieter countercurrent that
-rewards human effort and the plain, readable web.
-- If you ask for human attention, demonstrate human effort: https://tombedor.dev/human-attention-and-human-effort/
-- Building an HTML-first site doubled our users: https://mohkohn.co.uk/writing/html-first/
-- Making Graphics Like it's 1993: https://staniks.github.io/articles/catlantean-3d-blog-1/
-
---------------------------------------------------------------------------
-Regimes change. Understanding the world within a changing context.
-"""
-
-
-# elekid's --serif stack — the newsletter uses the serif look throughout
 SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,Georgia,"
          "'Times New Roman',serif")
-SANS = SERIF  # alias: every text element renders in the serif face
-ACCENT = "#1a7f4b"  # forest-green accent
+ACCENT = "#1a7f4b"
+
+STATE = regime_engine.load()
+ISSUE = [i for i in STATE["issues"] if not i.get("partial")][-1]
+DEFS = STATE["regime_defs"]
+DATE_LABEL = ISSUE.get("date_label", ISSUE.get("week", ""))
+SUBJECT = f"The Current Regime · {ISSUE['id']} · {DATE_LABEL}"
+
+MARKET_MEANS = (
+    "Volatility measures how much the market is expected to move in the near term "
+    "compared with the longer term, so a lower reading means less immediate stress. "
+    "The yield curve is the gap between long-term and short-term government borrowing "
+    "rates, and a steep curve usually points to expected growth rather than recession. "
+    "When crypto is described as risk-off, investors are stepping back from the most "
+    "speculative assets, which often serves as an early note of caution beneath a calm "
+    "market.")
+
+MKT_ORDER = [("trend", "Trend"), ("vol", "Volatility"), ("curve_bp", "Yield curve"),
+             ("gdpnow", "Growth (GDPNow)"), ("liquidity", "Liquidity"), ("crypto", "Crypto")]
+MKT_FMT = {"vol": lambda v: f"Calm ({v})", "curve_bp": lambda v: f"Steep (+{v} bp)",
+           "gdpnow": lambda v: f"{v}%"}
+MKT_POS = {"trend": True, "vol": True, "curve_bp": True, "gdpnow": True,
+           "liquidity": False, "crypto": False}
 
 
-def _li(points, text, href):
-    return (
-        '<tr>'
-        f'<td style="padding:9px 0; border-bottom:1px solid #ededed; '
-        f'font-family:{SANS}; font-size:16px; line-height:1.5; vertical-align:top;">'
-        f'<a href="{href}" style="color:{ACCENT}; text-decoration:underline;">{text}</a>'
-        '</td></tr>'
-    )
+def esc(s) -> str:
+    return html.escape(str(s), quote=False)
 
 
-LINKS_POLICY = "".join([
-    _li("3121", "US directive to suspend access to Fable 5 and Mythos 5 (Anthropic)", "https://www.anthropic.com/news/fable-mythos-access"),
-    _li("2620", "Claude Fable 5 and Mythos 5, the launch behind the order", "https://www.anthropic.com/news/claude-fable-5-mythos-5"),
-    _li("&nbsp;780", "What triggered it: Amazon CEO’s talks with US officials (WSJ)", "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578"),
-    _li("1569", "“Open source AI must win,” the local-weights reaction", "https://opensourceaimustwin.com/"),
-    _li("1015", "German court holds Google liable for false AI Overviews", "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/"),
-])
+# ---------- HTML ----------
 
-LINKS_AGENTS = "".join([
-    _li("1452", "An AI agent bankrupted its operator scanning DN42", "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"),
-    _li("1033", "“If Claude Fable stops helping you, you’ll never know”", "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html"),
-    _li("&nbsp;767", "“Claude Fable is relentlessly proactive” (Simon Willison)", "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/"),
-])
-
-LINKS_WORLD = "".join([
-    _li("", "Hormuz oil flows recover to 7 million barrels daily (Bloomberg)", "https://www.bloomberg.com/news/articles/2026-06-12/trump-s-energy-chief-says-half-of-hormuz-stoppages-are-restored"),
-    _li("", "Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg)", "https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens"),
-])
-
-LINKS_UNDER = "".join([
-    _li("1715", "If you ask for human attention, demonstrate human effort", "https://tombedor.dev/human-attention-and-human-effort/"),
-    _li("1271", "Building an HTML-first site doubled our users", "https://mohkohn.co.uk/writing/html-first/"),
-    _li("&nbsp;952", "Making Graphics Like it’s 1993", "https://staniks.github.io/articles/catlantean-3d-blog-1/"),
-])
+def _links_html(links):
+    if not links:
+        return ""
+    rows = "".join(
+        '<tr><td style="padding:9px 0; border-bottom:1px solid #ededed; '
+        f'font-family:{SERIF}; font-size:16px; line-height:1.5; vertical-align:top;">'
+        f'<a href="{l["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(l["title"])}</a>'
+        '</td></tr>' for l in links)
+    return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+            f'style="margin-top:8px;">{rows}</table>')
 
 
-def section(subtitle, title, paragraph, links_html=""):
-    """A first-class section: direct title + a small subtitle, left aligned."""
-    links = (f'<table role="presentation" width="100%" cellpadding="0" '
-             f'cellspacing="0" style="margin-top:8px;">{links_html}</table>'
-             if links_html else "")
+def _section_html(label, title, paragraph, links=None):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">{title}</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SANS};">{subtitle}</p>
-              <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">{paragraph}</p>
-              {links}
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(title)}</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
+              <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(paragraph)}</p>
+              {_links_html(links)}
             </td>
           </tr>
 """
 
 
-def _metric(label, value, positive=None):
-    # positive=True -> green, positive=False -> black (bwang: green=good, black=under)
-    color = "#1a7f4b" if positive else "#1a1a1a"
-    return (
-        '<tr>'
-        f'<td style="padding:9px 2px; border-bottom:1px solid #ededed; '
-        f'font-family:{SANS}; font-size:15px; color:#666;">{label}</td>'
-        f'<td align="right" style="padding:9px 2px; border-bottom:1px solid #ededed; '
-        f'font-family:{SANS}; font-size:15px; font-weight:700; color:{color};">{value}</td>'
-        '</tr>'
-    )
+def _market_html(m):
+    rows = []
+    for key, label in MKT_ORDER:
+        sg = m.get("signals", {})
+        if key not in sg:
+            continue
+        val = MKT_FMT.get(key, lambda v: v)(sg[key])
+        color = "#1a7f4b" if MKT_POS.get(key) else "#b1300f"
+        rows.append(
+            f'<tr><td style="padding:9px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; color:#666;">{label}</td>'
+            f'<td align="right" style="padding:9px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; font-weight:700; color:{color};">{esc(val)}</td></tr>')
+    return f"""
+          <tr>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(m.get("headline","Markets"))}</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Markets</p>
+              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(m.get("summary",""))}</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+              <p style="margin:16px 0 0; color:#555; font-size:15px; line-height:1.8; font-family:{SERIF};">{esc(MARKET_MEANS)}</p>
+            </td>
+          </tr>
+"""
 
 
-MARKET_TABLE = "".join([
-    _metric("Trend", "UP", positive=True),
-    _metric("Volatility", "CALM &nbsp;(0.86)", positive=True),
-    _metric("Yield curve", "STEEP &nbsp;(+87 bp)", positive=True),
-    _metric("Growth &middot; GDPNow", "3.3%", positive=True),
-    _metric("Liquidity", "CONTRACTING", positive=False),
-    _metric("Crypto", "RISK-OFF", positive=False),
-])
+def _commodities_html(c):
+    rows = []
+    for it in c.get("items", []):
+        chg = it.get("change", "")
+        color = "#b1300f" if chg.startswith("-") else "#1a7f4b"
+        rows.append(
+            f'<tr><td style="padding:9px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; color:#666;">{esc(it["name"])}</td>'
+            f'<td align="right" style="padding:9px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; font-weight:700; color:#1a1a1a;">{esc(it.get("level",""))}</td>'
+            f'<td align="right" style="padding:9px 2px; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:15px; color:{color};">{esc(chg)}</td></tr>')
+    return f"""
+          <tr>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Crude falls as the fear premium unwinds.</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>
+              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(c.get("summary",""))}</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+            </td>
+          </tr>
+"""
 
 
-def _gh_theme(repos):
-    """One-line read of what GitHub trending is about this week."""
-    names = " ".join(r["title"].lower() for r in repos)
-    if names.count("skill") + names.count("agent") >= 3:
-        return "agent / skill tooling dominates trending"
-    return "developer tooling and frameworks"
+def _contrarian_html(issue):
+    rows = []
+    for key, r in issue.get("regimes", {}).items():
+        if not r.get("contrarian"):
+            continue
+        label = DEFS.get(key, {}).get("label", key)
+        rows.append(
+            f'<tr><td style="padding:10px 0; border-bottom:1px solid #ededed; '
+            f'font-family:{SERIF}; font-size:16px; line-height:1.6; color:#1a1a1a;">'
+            f'<strong>{esc(label)}.</strong> {esc(r["contrarian"])}</td></tr>')
+    if not rows:
+        return ""
+    return f"""
+          <tr>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What could change this.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Contrarian read</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+            </td>
+          </tr>
+"""
 
 
-def build_cross_source_html():
-    """'Across the sources' block from the issue's stored snapshot, so the email
-    and the public archive show identical items. Empty block is omitted."""
-    a = (STATE["issues"][-1].get("across_sources") or {})
+def _across_html(a):
     gh, ax = a.get("github", []), a.get("arxiv", [])
     if not gh and not ax:
         return ""
     rows = []
     if gh:
         items = " &nbsp;&middot;&nbsp; ".join(
-            f'<a href="{r["url"]}" style="color:{ACCENT}; text-decoration:underline;">{r["title"]}</a>'
+            f'<a href="{r["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(r["title"])}</a>'
             for r in gh[:5])
         rows.append(
-            f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SANS}; color:#1a1a1a;">'
-            f'<strong>GitHub trending</strong> shows {a.get("github_theme","")}:<br>{items}</p>')
+            f'<p style="margin:0 0 10px; font-size:15px; line-height:1.6; font-family:{SERIF}; color:#1a1a1a;">'
+            f'<strong>GitHub trending</strong> shows {esc(a.get("github_theme",""))}:<br>{items}</p>')
     if ax:
         items = "".join(
-            f'<li style="margin:0 0 5px;"><a href="{x["url"]}" style="color:{ACCENT}; text-decoration:underline;">{x["title"]}</a></li>'
+            f'<li style="margin:0 0 5px;"><a href="{x["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(x["title"])}</a></li>'
             for x in ax)
         rows.append(
-            f'<p style="margin:0 0 4px; font-size:15px; font-family:{SANS}; color:#1a1a1a;"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
-            f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.6; font-family:{SANS}; color:#444;">{items}</ul>')
+            f'<p style="margin:0 0 4px; font-size:15px; font-family:{SERIF}; color:#1a1a1a;"><strong>arXiv</strong>, the latest in cs.AI, cs.LG and cs.CL:</p>'
+            f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.6; font-family:{SERIF}; color:#444;">{items}</ul>')
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">What&rsquo;s getting built and published.</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SANS};">Across the sources</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What&rsquo;s getting built and published.</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Across the sources</p>
               {''.join(rows)}
             </td>
           </tr>
 """
 
 
-STATE = regime_engine.load()
-WHAT_CHANGED_HTML = regime_engine.render_changed_html(STATE)
-WATCH_HTML = regime_engine.render_watch_html(STATE)
-CROSS_SOURCE_HTML = build_cross_source_html()
+def build_html():
+    reg = ISSUE.get("regimes", {})
+    body = [regime_engine.render_changed_html(STATE)]
+    for key, r in reg.items():            # editorial regimes (incl. geopolitics)
+        if key == "markets":
+            continue
+        body.append(_section_html(DEFS.get(key, {}).get("label", key),
+                                  r.get("headline", key), r.get("summary", ""), r.get("links")))
+    if ISSUE.get("commodities"):
+        body.append(_commodities_html(ISSUE["commodities"]))
+    if "markets" in reg:
+        body.append(_market_html(reg["markets"]))
+    body.append(_contrarian_html(ISSUE))
+    if ISSUE.get("undercurrent"):
+        u = ISSUE["undercurrent"]
+        body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
+                                  u.get("summary", ""), u.get("links")))
+    body.append(regime_engine.render_watch_html(STATE))
+    if ISSUE.get("across_sources"):
+        body.append(_across_html(ISSUE["across_sources"]))
 
-
-HTML_BODY = f"""\
+    return f"""\
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Current Regime &middot; 001</title>
+  <title>The Current Regime &middot; {esc(ISSUE['id'])}</title>
 </head>
 <body style="margin:0; padding:0; background-color:#ffffff;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#ffffff;">
     <tr>
       <td align="center" style="padding:48px 20px;">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%;">
-
-          <!-- Masthead -->
           <tr>
             <td style="text-align:center; padding-bottom:6px;">
-              <h1 style="margin:0; color:#1a1a1a; font-size:36px; font-weight:700; letter-spacing:-0.5px; font-family:{SANS};">The Current Regime</h1>
-              <p style="margin:14px 0 0; color:#9a9a9a; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SANS};">Issue 001 &middot; June 8&ndash;14, 2026</p>
+              <h1 style="margin:0; color:#1a1a1a; font-size:36px; font-weight:700; letter-spacing:-0.5px; font-family:{SERIF};">The Current Regime</h1>
+              <p style="margin:14px 0 0; color:#9a9a9a; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SERIF};">Issue {esc(ISSUE['id'])} &middot; {esc(DATE_LABEL)}</p>
             </td>
           </tr>
           <tr><td style="padding:26px 0 0;"><div style="border-top:1px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div></td></tr>
-
-          {WHAT_CHANGED_HTML}
-
-          {section("Tech &amp; policy", "The government took a frontier model offline.",
-            "On June 12, the United States Commerce Department ordered Anthropic to suspend access to its Fable&nbsp;5 and Mythos&nbsp;5 models for all foreign nationals, citing national security. To comply, Anthropic disabled both models for every customer, while its other models continued to operate. Reporting connects the order to Amazon&rsquo;s chief executive, Andy Jassy, who told officials that Amazon researchers had prompted Fable&nbsp;5 into producing material useful for cyberattacks. Anthropic responded that these vulnerabilities were already known and minor. This appears to be the first time a frontier model has been taken offline by government order rather than by a company&rsquo;s own decision.",
-            LINKS_POLICY)}
-
-          {section("AI agents", "The agent conversation turns toward cost and failure.",
-            "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor&rsquo;s application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail.",
-            LINKS_AGENTS)}
-
-          {section("Geopolitics", "Oil is starting to flow through Hormuz again.",
-            "The Strait of Hormuz, the chokepoint for roughly a fifth of the world&rsquo;s seaborne oil, had been effectively closed since early March after fighting between the United States, Israel, and Iran made shipping insurance unavailable. As of June&nbsp;12, the United States Energy Secretary said flows have recovered to about 7&nbsp;million barrels a day, roughly half of the volume that had been stranded, and that the United States intends to reopen the waterway fully. Industry estimates suggest full flows may not return until 2027.",
-            LINKS_WORLD)}
-
-          <!-- Market regime (first-class section + the card table) -->
-          <tr>
-            <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">A calm market with a cautious undercurrent.</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SANS};">Markets &middot; as of June&nbsp;14</p>
-              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">Stock-market momentum and economic growth both remain healthy. At the same time, financial liquidity is contracting and cryptocurrencies have fallen away from stocks. The next Federal Reserve interest-rate decision arrives on June&nbsp;17. The notes below describe these conditions in plain terms, and they are directional only, not investment advice.</p>
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{MARKET_TABLE}</table>
-              <p style="margin:16px 0 0; color:#555; font-size:15px; line-height:1.8; font-family:{SANS};">
-                Volatility measures how much the market is expected to move in the near term compared with the longer term, so a lower reading means traders see less immediate stress. The yield curve is the gap between long-term and short-term government borrowing rates, and a steep curve usually points to expected growth rather than recession. When crypto is described as risk-off, investors are stepping back from the most speculative assets, which often serves as an early note of caution beneath an otherwise calm market.
-              </p>
-            </td>
-          </tr>
-
-          {section("Undercurrent", "A quieter pull toward human-made work.",
-            "Running beneath the week&rsquo;s main stories is a quieter countercurrent that rewards human effort and the plain, readable web. Several of the most-shared posts argued for craft, simplicity, and pages that load and read easily.",
-            LINKS_UNDER)}
-
-          {WATCH_HTML}
-
-          {CROSS_SOURCE_HTML}
-
-          <tr><td style="padding:34px 0 0;"><div style="border-top:1px solid #ededed; font-size:0; line-height:0;">&nbsp;</div></td></tr>
-
-          <!-- Footer -->
+          {''.join(body)}
           <tr><td style="padding:40px 0 0;"><div style="border-top:1px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div></td></tr>
           <tr>
             <td style="padding:20px 0 0;">
-              <p style="margin:0; color:#1a1a1a; font-size:16px; line-height:1.7; font-style:italic; font-family:{SANS};">Regimes change. Understanding the world within a changing context.</p>
+              <p style="margin:0; color:#1a1a1a; font-size:16px; line-height:1.7; font-style:italic; font-family:{SERIF};">Regimes change. Understanding the world within a changing context.</p>
             </td>
           </tr>
-
         </table>
       </td>
     </tr>
@@ -311,28 +240,78 @@ HTML_BODY = f"""\
 """
 
 
+# ---------- plain text ----------
+
+def _links_text(links):
+    return "".join(f"- {l['title']}: {l['url']}\n" for l in (links or []))
+
+
+def build_plain():
+    reg = ISSUE.get("regimes", {})
+    out = ["THE CURRENT REGIME", f"Issue {ISSUE['id']} · {DATE_LABEL}",
+           "Sourced from the week's top posts on news.ycombinator.com, with claims",
+           "verified against primary reporting, and a market-regime read.", "",
+           "-" * 74, ""]
+    for key, r in reg.items():
+        if key == "markets":
+            continue
+        label = DEFS.get(key, {}).get("label", key).upper()
+        out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "",
+                _links_text(r.get("links")).rstrip(), ""]
+    if ISSUE.get("commodities"):
+        c = ISSUE["commodities"]
+        out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]
+        for it in c["items"]:
+            out.append(f"  {it['name']}: {it.get('level','')} ({it.get('change','')})")
+        out.append("")
+    if "markets" in reg:
+        m = reg["markets"]
+        sig = m.get("signals", {})
+        out += [f"MARKETS: {m.get('headline','')}", "", m.get("summary", ""), "",
+                "  " + ", ".join(f"{lbl} {sig[k]}" for k, lbl in MKT_ORDER if k in sig),
+                "", MARKET_MEANS, ""]
+    contr = [(DEFS.get(k, {}).get("label", k), r["contrarian"])
+             for k, r in reg.items() if r.get("contrarian")]
+    if contr:
+        out += ["CONTRARIAN READ (what could change this):", ""]
+        out += [f"  {lbl}. {line}" for lbl, line in contr]
+        out.append("")
+    if ISSUE.get("undercurrent"):
+        u = ISSUE["undercurrent"]
+        out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",
+                _links_text(u.get("links")).rstrip(), ""]
+    out += [regime_engine.render_text(STATE), ""]
+    if ISSUE.get("across_sources"):
+        a = ISSUE["across_sources"]
+        out += ["ACROSS THE SOURCES", ""]
+        if a.get("github"):
+            out.append("GitHub trending: " + ", ".join(r["title"] for r in a["github"][:5]))
+        if a.get("arxiv"):
+            out += ["arXiv (cs.AI/LG/CL):"] + [f"  - {x['title']}" for x in a["arxiv"]]
+        out.append("")
+    out += ["-" * 74, "Regimes change. Understanding the world within a changing context."]
+    return "\n".join(out)
+
+
 def main() -> int:
     app_password = os.environ.get("GMAIL_APP_PASSWORD")
     if not app_password:
-        print('ERROR: set GMAIL_APP_PASSWORD first.', file=sys.stderr)
+        print("ERROR: set GMAIL_APP_PASSWORD first.", file=sys.stderr)
         return 1
 
     msg = EmailMessage()
     msg["From"] = SENDER
     msg["To"] = RECIPIENT
     msg["Subject"] = SUBJECT
-    plain = (PLAIN_BODY + "\n"
-             + "--------------------------------------------------------------------------\n\n"
-             + regime_engine.render_text(STATE) + "\n")
-    msg.set_content(plain)
-    msg.add_alternative(HTML_BODY, subtype="html")
+    msg.set_content(build_plain())
+    msg.add_alternative(build_html(), subtype="html")
 
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         server.login(SENDER, app_password)
         server.send_message(msg)
 
-    print(f"Sent 'The Current Regime' Issue 001 to {RECIPIENT}")
+    print(f"Sent '{SUBJECT}' to {RECIPIENT}")
     return 0
 
 
