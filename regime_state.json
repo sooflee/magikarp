@@ -21,7 +21,7 @@
       "rule": "What the agent discourse rewards. capability-race = benchmarks/awe; liability-reckoning = cost/failure/risk dominate; normalized = boring/utility."
     },
     "markets": {
-      "label": "Markets (bsig)",
+      "label": "Markets",
       "states": [
         "risk-on",
         "mixed",
@@ -92,7 +92,8 @@
             "Amazon CEO Jassy triggered it; Anthropic called vulns 'previously known' and 'minor'",
             "'Open source AI must win' trending as the local-weights reaction",
             "German court holds Google liable for AI Overviews"
-          ]
+          ],
+          "implication": "Where you can run a model now matters as much as which model you run."
         },
         "ai_agents": {
           "state": "liability-reckoning",
@@ -101,7 +102,8 @@
             "AI agent bankrupted operator scanning DN42",
             "'If Claude Fable stops helping you, you'll never know'",
             "Simon Willison: Fable 'relentlessly proactive'"
-          ]
+          ],
+          "implication": "Reliability and cost, not raw capability, now decide what gets deployed."
         },
         "markets": {
           "state": "mixed",
@@ -113,7 +115,8 @@
             "gdpnow": 3.3,
             "liquidity": "CONTRACTING",
             "crypto": "RISK-OFF"
-          }
+          },
+          "implication": "Stress is easing even as liquidity tightens — a calm tape with less margin for error."
         }
       }
     }
@@ -148,7 +151,7 @@
     },
     {
       "trend": "Crypto leverage & dry powder",
-      "why_exponential": "Perp leverage and stablecoin supply swing nonlinearly; extremes mark reversals. bsig has crypto at RISK-OFF now.",
+      "why_exponential": "Perp leverage and stablecoin supply swing nonlinearly; extremes mark reversals. Crypto is at risk-off now.",
       "watch": "BTC perp funding 90d z-score (>2 or deeply negative), Stablecoin Supply Ratio oscillator",
       "expressions": "BTC, ETH (funding/SSR), COIN",
       "bsig_ref": "1E-1 / 1E-2",
@@ -163,6 +166,61 @@
       "bsig_ref": "AH-1 / AH-2",
       "status": "watch",
       "new": false
+    }
+  ],
+  "daily_counts": [
+    {
+      "date": "2026-06-14",
+      "window_days": 7,
+      "total": 50,
+      "counts": {
+        "tech_policy": 6,
+        "ai_agents": 12,
+        "compute_energy": 3,
+        "markets": 0,
+        "labor_ai": 1,
+        "geopolitics": 2,
+        "unaligned": 26
+      },
+      "top_regime": "ai_agents",
+      "confirm_contradict": {
+        "tech_policy": {
+          "confirm": 3,
+          "contradict": 2
+        },
+        "ai_agents": {
+          "confirm": 2,
+          "contradict": 0
+        },
+        "markets": {
+          "confirm": 0,
+          "contradict": 0
+        }
+      },
+      "examples": {
+        "tech_policy": [
+          "Open source AI must win",
+          "German ruling declares Google liable for false answers in AI Overviews",
+          "Noise infusion banned from statistical products published by Census Bureau"
+        ],
+        "ai_agents": [
+          "Statement on US government directive to suspend access to Fable 5 and Mythos 5",
+          "Claude Fable 5",
+          "AI agent bankrupted their operator while trying to scan DN42"
+        ],
+        "compute_energy": [
+          "Electric motors with no rare earths",
+          "Mercedes‑Benz starts large‑scale production of electric axial flux motor",
+          "Solar generates more energy in US than coal for first time"
+        ],
+        "labor_ai": [
+          "CEOs who think AI replaces their employees are just bad CEOs"
+        ],
+        "geopolitics": [
+          "Israeli firm BlackCore suspected of meddling in New York and Scotland votes",
+          "Pokémon Go Scans Trained the Navigation Tech for Military Drones"
+        ]
+      }
     }
   ]
 }

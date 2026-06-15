@@ -18,9 +18,10 @@ from pathlib import Path
 
 STATE = Path(__file__).resolve().parent / "regime_state.json"
 
-# Matches the --sans custom property on bwang.io/elekid
-SANS = ("-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,"
-        "system-ui,sans-serif")
+# elekid's --serif stack — the newsletter uses the serif look throughout
+SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,Georgia,"
+         "'Times New Roman',serif")
+SANS = SERIF  # alias: every text element renders in the serif face
 
 
 def load() -> dict:
@@ -74,26 +75,36 @@ def render_text(state: dict) -> str:
     cur, prev = d["cur"], d["prev"]
     lines = [f"WHAT CHANGED — issue {cur['id']} vs {prev['id']} "
              f"({prev['date']} -> {cur['date']})", ""]
-    if d["changed"]:
-        lines.append("Regime shifts:")
-        for _, label, a, b in d["changed"]:
-            lines.append(f"  * {label}: {a} -> {b}")
-    else:
-        lines.append("Regime shifts: none (states held).")
+    cregs = cur.get("regimes", {})
+
+    def impl(key):
+        return cregs.get(key, {}).get("implication", "")
+
+    def emit(key, label, oneliner):
+        lines.append(f"  - {label}: {oneliner}")
+        if impl(key):
+            lines.append(f"      => {impl(key)}")
+
+    for key, label, a, b in d["changed"]:
+        emit(key, label, f"{a} -> {b}")
     for key, label, st, sig in d["steady"]:
         if sig:
-            lines.append(f"  ~ {label}: held at {st}, but {', '.join(sig)}")
-    if d["new"]:
-        lines.append("")
-        lines.append("Newly tracked this issue:")
-        for _, label, st, head in d["new"]:
-            lines.append(f"  + {label}: {st} — {head}")
-    lines += ["", "SIGNALS TO WATCH (bsig) — exponential trends", ""]
-    for w in state.get("bsig_watch", []):
+            emit(key, label, ", ".join(sig))
+    for key, label, st, head in d["new"]:
+        emit(key, label, head)
+    watch = state.get("bsig_watch", [])
+    lines += ["", "EXPONENTIAL TRENDS TO WATCH", ""]
+    for w in [w for w in watch if w.get("new")]:
         lines.append(f"  - {w['trend']}  [{w['status']}]")
         lines.append(f"      why: {w['why_exponential']}")
         lines.append(f"      watch: {w['watch']}")
-        lines.append(f"      via: {w['expressions']}  (bsig {w['bsig_ref']})")
+        lines.append(f"      via: {w['expressions']}")
+    old = [w for w in watch if not w.get("new")]
+    if old:
+        lines.append("")
+        lines.append("  Still on watch:")
+        for w in old:
+            lines.append(f"    - {w['trend']} [{w['status']}] — {w['expressions']}")
     return "\n".join(lines)
 
 
@@ -108,18 +119,22 @@ def _eyebrow(txt):
 def render_changed_html(state: dict) -> str:
     d = diff(state)
     cur, prev = d["cur"], d["prev"]
+    cregs = cur.get("regimes", {})
+
+    def row(key, label, oneliner):
+        impl = cregs.get(key, {}).get("implication", "")
+        impl_html = (f'<br><span style="color:#9a9a9a;">{impl}</span>' if impl else "")
+        return (f'<li style="margin:0 0 14px;"><strong>{label}:</strong> '
+                f'{oneliner}{impl_html}</li>')
+
     rows = []
-    for _, label, a, b in d["changed"]:
-        rows.append(f'<li style="margin:0 0 8px;"><strong>{label}:</strong> '
-                    f'<span style="color:#9a9a9a;">{a}</span> &rarr; '
-                    f'<strong>{b}</strong></li>')
+    for key, label, a, b in d["changed"]:
+        rows.append(row(key, label, f'{a} &rarr; <strong>{b}</strong>'))
     for key, label, st, sig in d["steady"]:
         if sig:
-            rows.append(f'<li style="margin:0 0 8px;"><strong>{label}:</strong> '
-                        f'held at {st} &mdash; {", ".join(sig)}</li>')
-    for _, label, st, head in d["new"]:
-        rows.append(f'<li style="margin:0 0 8px;"><strong>{label}:</strong> '
-                    f'now tracking &mdash; <em>{head}</em> ({st})</li>')
+            rows.append(row(key, label, ", ".join(sig)))
+    for key, label, st, head in d["new"]:
+        rows.append(row(key, label, head))
     if not rows:
         rows.append('<li>No changes.</li>')
     return f"""
@@ -141,7 +156,7 @@ def _watch_card_full(w: dict) -> str:
                   <span style="font-size:12px; font-weight:400; color:#9a9a9a;">&nbsp;&middot;&nbsp;{w['status']}</span></p>
                 <p style="margin:0 0 6px; font-size:15px; line-height:1.6; color:#444;">{w['why_exponential']}</p>
                 <p style="margin:0; font-size:14px; line-height:1.6; color:#666;"><strong>Watch:</strong> {w['watch']}<br>
-                  <strong>Via:</strong> {w['expressions']} <span style="color:#9a9a9a;">(bsig {w['bsig_ref']})</span></p>
+                  <strong>Where it shows up:</strong> {w['expressions']}</p>
               </td></tr>"""
 
 
@@ -150,7 +165,7 @@ def _watch_card_small(w: dict) -> str:
     return f"""
               <tr><td style="padding:8px 0; border-bottom:1px solid #f1f1f1; font-family:{SANS}; font-size:13px; line-height:1.5; color:#888;">
                 <strong style="color:#555;">{w['trend']}</strong> &middot; {w['status']} &middot;
-                <span style="color:#999;">{w['expressions']} (bsig {w['bsig_ref']})</span></td></tr>"""
+                <span style="color:#999;">{w['expressions']}</span></td></tr>"""
 
 
 def render_watch_html(state: dict) -> str:
@@ -167,7 +182,7 @@ def render_watch_html(state: dict) -> str:
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">Exponential trends to watch.</h2>
-              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Signals to watch &middot; bsig</p>
+              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Signals to watch</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{cards}</table>
             </td>
           </tr>

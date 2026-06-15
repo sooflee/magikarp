@@ -23,7 +23,7 @@ PLAIN_BODY = """\
 THE CURRENT REGIME
 Issue 001 - Week of June 8-14, 2026
 Sourced from the week's top posts on news.ycombinator.com, claims verified
-against primary reporting, plus the bsig market-regime model.
+against primary reporting, plus a market-regime read.
 
 --------------------------------------------------------------------------
 
@@ -58,12 +58,20 @@ what agents can do to what they cost when they go wrong.
 - If Claude Fable stops helping you, you'll never know: https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html
 - Claude Fable is relentlessly proactive (Simon Willison): https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/
 
-MARKETS: Risk-on tape, risk-off undercurrent. (bsig, as of 2026-06-14)
+MARKETS: Risk-on tape, risk-off undercurrent. (as of 2026-06-14)
 
 Trend UP, volatility CALM (0.86), yield curve STEEP (+87bp), Atlanta Fed
 GDPNow 3.3%, liquidity CONTRACTING, crypto RISK-OFF. Equity momentum and growth
 are intact, but liquidity is draining and crypto has decoupled to the downside.
-Next FOMC decision is June 17. Directional read only, not investment advice.
+Next Federal Reserve rate decision is June 17. Directional read only, not
+investment advice.
+
+What the readings mean: Volatility (near-term vs longer-term expected market
+swings) eased 0.91 -> 0.86, i.e. less immediate stress. A steep yield curve
+(long minus short government rates, +87bp) usually signals expected growth, not
+recession. Crypto "risk-off" means money is leaving the most speculative assets
+- Bitcoin is falling and no longer moving with stocks, often an early caution
+sign beneath a calm surface.
 
 UNDERCURRENT: A pull back toward human-made, legible work.
 
@@ -73,13 +81,14 @@ A quieter counter-theme rewarding human effort and the simple web.
 - Making Graphics Like it's 1993: https://staniks.github.io/articles/catlantean-3d-blog-1/
 
 --------------------------------------------------------------------------
-Regimes change. This is the baseline; the next issue tracks what moved.
+Regimes change. Understanding the world within a changing context.
 """
 
 
-# Matches the --sans custom property on bwang.io/elekid
-SANS = ("-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,"
-        "system-ui,sans-serif")
+# elekid's --serif stack — the newsletter uses the serif look throughout
+SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,Georgia,"
+         "'Times New Roman',serif")
+SANS = SERIF  # alias: every text element renders in the serif face
 
 
 def _li(points, text, href):
@@ -193,8 +202,9 @@ def build_cross_source_html():
             f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.6; font-family:{SANS}; color:#444;">{items}</ul>')
     return f"""
           <tr>
-            <td style="padding:38px 0 0;">
-              <p style="margin:0 0 10px; text-align:center; color:#9a9a9a; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SANS};">Across the sources</p>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">What&rsquo;s getting built and published.</h2>
+              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Across the sources</p>
               {''.join(rows)}
             </td>
           </tr>
@@ -240,13 +250,19 @@ HTML_BODY = f"""\
             "The agent posts that ranked this week were about cost and failure, not benchmarks: an agent that ran up a large bill scanning a network, an argument that a coding assistant could quietly degrade a competitor&rsquo;s app, and Simon Willison on Fable being &ldquo;relentlessly proactive.&rdquo; The question has shifted from what agents can do to what they cost when they go wrong.",
             LINKS_AGENTS)}
 
-          <!-- Market regime (first-class section + the bsig card table) -->
+          <!-- Market regime (first-class section + the card table) -->
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SANS};">Risk-on tape, risk-off undercurrent.</h2>
-              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Markets &middot; bsig, 2026-06-14</p>
-              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">Equity momentum and growth are intact, but liquidity is draining and crypto has decoupled to the downside. Next FOMC decision is June&nbsp;17. Directional read only &mdash; not investment advice.</p>
+              <p style="margin:0 0 14px; color:#9a9a9a; font-size:14px; font-weight:600; font-family:{SANS};">Markets &middot; as of June&nbsp;14</p>
+              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SANS};">Equity momentum and growth are intact, but liquidity is draining and crypto has decoupled to the downside. Next Federal Reserve rate decision is June&nbsp;17. Directional read only &mdash; not investment advice.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{MARKET_TABLE}</table>
+              <p style="margin:16px 0 0; color:#555; font-size:14px; line-height:1.7; font-family:{SANS};">
+                <strong>What the readings mean.</strong>
+                <em>Volatility</em> here is the ratio of near-term to longer-term expected stock-market swings; it eased from 0.91 to 0.86, meaning traders see <em>less</em> immediate stress &mdash; a calm tape.
+                The <em>yield curve</em> is long-term minus short-term government borrowing rates; at +87&nbsp;basis points it is &ldquo;steep,&rdquo; which usually signals expectations of decent growth rather than recession.
+                Crypto at <em>risk-off</em> means money is backing out of the most speculative assets &mdash; Bitcoin is falling and no longer rising alongside stocks, often an early note of caution underneath an otherwise calm market.
+              </p>
             </td>
           </tr>
 
@@ -264,8 +280,7 @@ HTML_BODY = f"""\
           <tr><td style="padding:40px 0 0;"><div style="border-top:1px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div></td></tr>
           <tr>
             <td style="padding:20px 0 0;">
-              <p style="margin:0; color:#1a1a1a; font-size:16px; line-height:1.7; font-style:italic; font-family:{SANS};">Regimes change. This is the baseline; the next issue tracks what moved.</p>
-              <p style="margin:14px 0 0; color:#9a9a9a; font-size:12px; font-family:{SANS};">The Current Regime &middot; sourced from HN top posts (Algolia, by points) and the bsig market model</p>
+              <p style="margin:0; color:#1a1a1a; font-size:16px; line-height:1.7; font-style:italic; font-family:{SANS};">Regimes change. Understanding the world within a changing context.</p>
             </td>
           </tr>
 
