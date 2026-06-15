@@ -138,8 +138,8 @@ def _momentum_html(state):
 
 
 def _watch_next_html(issue):
-    wn, odds = issue.get("watch_next", []), issue.get("odds", [])
-    if not wn and not odds:
+    wn = issue.get("watch_next", [])
+    if not wn:
         return ""
     rows = []
     for it in wn:
@@ -148,22 +148,42 @@ def _watch_next_html(issue):
             f'<span style="color:{ACCENT}; font-weight:700; font-size:15px;">{esc(it.get("when",""))}</span> '
             f'<span style="color:#1a1a1a; font-weight:700; font-size:16px;">{esc(it.get("event",""))}</span><br>'
             f'<span style="color:#555; font-size:15px; line-height:1.55;">{esc(it.get("note",""))}</span></td></tr>')
-    odds_html = ""
-    if odds:
-        lis = "".join(
-            f'<li style="margin:0 0 5px;"><a href="{o["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(o["q"])}</a>: '
-            f'<strong>{esc(o["prob"])}</strong> <span style="color:#9a9a9a;">({esc(o["src"])})</span></li>'
-            for o in odds)
-        odds_html = (
-            f'<p style="margin:18px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};"><strong>What the betting markets think:</strong></p>'
-            f'<ul style="margin:0; padding:0 0 0 20px; font-size:15px; line-height:1.6; font-family:{SERIF}; color:#1a1a1a;">{lis}</ul>')
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What to watch next week.</h2>
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">The calendar ahead</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
-              {odds_html}
+            </td>
+          </tr>
+"""
+
+
+def _radar_html(issue):
+    regs = issue.get("structural_regimes", [])
+    if not regs:
+        return ""
+    blocks = []
+    for r in regs:
+        basket = "".join(
+            f'<li style="margin:0 0 3px;">{esc(b["metric"])}: <strong>{esc(b["value"])}</strong>'
+            + (f' <a href="{b["url"]}" style="color:{ACCENT}; text-decoration:underline;">source</a>' if b.get("url") else "")
+            + '</li>' for b in r.get("basket", []))
+        blocks.append(
+            f'<div style="padding:16px 0; border-bottom:1px solid #ededed;">'
+            f'<p style="margin:0 0 4px; font-family:{SERIF}; font-size:17px;">'
+            f'<strong>{esc(r["name"])}</strong> '
+            f'<span style="color:{ACCENT}; font-style:italic; font-size:14px;">{esc(r.get("direction",""))}</span></p>'
+            f'<p style="margin:0 0 6px; font-family:{SERIF}; font-size:15px; line-height:1.6; color:#1a1a1a;">{esc(r["read"])}</p>'
+            f'<ul style="margin:0; padding:0 0 0 20px; font-family:{SERIF}; font-size:13px; line-height:1.5; color:#666;">{basket}</ul>'
+            f'</div>')
+    return f"""
+          <tr>
+            <td style="padding:40px 0 0;">
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">The structural picture.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through prediction markets</p>
+              <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated, money-backed markets, not a single headline.</p>
+              {''.join(blocks)}
             </td>
           </tr>
 """
@@ -276,6 +296,7 @@ def build_html():
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
         body.append(_market_html(reg["markets"]))
+    body.append(_radar_html(ISSUE))
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
@@ -380,15 +401,19 @@ def build_plain():
         u = ISSUE["undercurrent"]
         out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",
                 _links_text(u.get("links")).rstrip(), ""]
+    if ISSUE.get("structural_regimes"):
+        out += ["THE STRUCTURAL PICTURE (regime radar, read through prediction markets):", ""]
+        for r in ISSUE["structural_regimes"]:
+            out.append(f"  {r['name']} [{r.get('direction','')}]")
+            out.append(f"    {r['read']}")
+            for b in r.get("basket", []):
+                u = f"  {b['url']}" if b.get("url") else ""
+                out.append(f"    - {b['metric']}: {b['value']}{u}")
+            out.append("")
     if ISSUE.get("watch_next"):
         out += ["WHAT TO WATCH NEXT WEEK:", ""]
         for it in ISSUE["watch_next"]:
             out.append(f"  {it.get('when','')} - {it.get('event','')}: {it.get('note','')}")
-        out.append("")
-    if ISSUE.get("odds"):
-        out += ["What the betting markets think:"]
-        for o in ISSUE["odds"]:
-            out.append(f"  {o['q']}: {o['prob']} ({o['src']})  {o['url']}")
         out.append("")
     out += [regime_engine.render_text(STATE), ""]
     if ISSUE.get("across_sources"):

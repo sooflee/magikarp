@@ -73,6 +73,11 @@ ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
 .wn{{font-size:15px;line-height:1.5;margin:10px 0 0;padding-bottom:8px;border-bottom:1px solid var(--line)}}
 .wn .when{{color:var(--accent);font-weight:700}}
 .wn .cmt{{color:var(--muted);font-size:14px}}
+.radar{{padding:14px 0;border-bottom:1px solid var(--line)}}
+.radar .rname{{font-size:16px;margin:0 0 3px}}
+.radar .rdir{{color:var(--accent);font-style:italic;font-size:13px}}
+.radar .rread{{font-size:15px;line-height:1.55;margin:0 0 5px}}
+.radar .rbask{{margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.45;color:var(--muted)}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
 table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
 table.mkt td.v{{text-align:right;font-weight:700}}
@@ -191,22 +196,37 @@ def render_momentum(doc: dict) -> str:
 
 
 def render_watch_next(iss: dict) -> str:
-    wn, odds = iss.get("watch_next", []), iss.get("odds", [])
-    if not wn and not odds:
+    wn = iss.get("watch_next", [])
+    if not wn:
         return ""
     rows = "".join(
         f'<p class="wn"><span class="when">{esc(it.get("when",""))}</span> '
         f'<strong>{esc(it.get("event",""))}</strong><br>'
         f'<span class="cmt">{esc(it.get("note",""))}</span></p>' for it in wn)
-    odds_html = ""
-    if odds:
-        lis = "".join(
-            f'<li><a href="{esc(o["url"])}">{esc(o["q"])}</a>: <strong>{esc(o["prob"])}</strong> '
-            f'<span style="color:var(--faint)">({esc(o["src"])})</span></li>' for o in odds)
-        odds_html = (f'<p style="margin-top:16px"><strong>What the betting markets think:</strong></p>'
-                     f'<ul class="links">{lis}</ul>')
     return (f'<div class="sec"><h2>What to watch next week.</h2>'
-            f'<p class="sub">The calendar ahead</p>{rows}{odds_html}</div>')
+            f'<p class="sub">The calendar ahead</p>{rows}</div>')
+
+
+def render_radar(iss: dict) -> str:
+    regs = iss.get("structural_regimes", [])
+    if not regs:
+        return ""
+    blocks = []
+    for r in regs:
+        basket = "".join(
+            f'<li>{esc(b["metric"])}: <strong>{esc(b["value"])}</strong>'
+            + (f' <a href="{esc(b["url"])}">source</a>' if b.get("url") else "")
+            + '</li>' for b in r.get("basket", []))
+        blocks.append(
+            f'<div class="radar"><p class="rname"><strong>{esc(r["name"])}</strong> '
+            f'<span class="rdir">{esc(r.get("direction",""))}</span></p>'
+            f'<p class="rread">{esc(r["read"])}</p>'
+            f'<ul class="rbask">{basket}</ul></div>')
+    return ('<div class="sec"><h2>The structural picture.</h2>'
+            '<p class="sub">Regime radar &middot; read through prediction markets</p>'
+            '<p class="means">The slow currents beneath the week. Each is read from a basket of '
+            'dated, money-backed markets, not a single headline.</p>'
+            f'{"".join(blocks)}</div>')
 
 
 def render_what_changed(doc: dict) -> str:
@@ -346,6 +366,7 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
+    secs.append(render_radar(iss))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     secs.append(render_watch_next(iss))

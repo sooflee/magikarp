@@ -343,18 +343,91 @@
           "note": "A ruling would show whether state control over frontier-model access is hardening or loosening."
         }
       ],
-      "odds": [
+      "structural_regimes": [
         {
-          "q": "The Fed holds rates at the June meeting",
-          "prob": "~98%",
-          "src": "Polymarket",
-          "url": "https://polymarket.com/event/fed-decision-in-june-825"
+          "name": "Dedollarization",
+          "direction": "strengthening",
+          "read": "The dollar's share of global reserves has fallen to about 56 percent, a thirty-year low, and slips below 50 percent once central-bank gold is counted. Central banks have bought more than 4,000 tonnes of gold since 2022 and are expected to add another 750 to 850 tonnes this year. This is the slow current beneath the Gold and Dollar readings above.",
+          "basket": [
+            {
+              "metric": "Dollar share of global reserves",
+              "value": "about 56%, down from 71% in 1999",
+              "url": "https://coincodex.com/article/79742/gold-surpasses-us-treasuries-central-bank-reserves"
+            },
+            {
+              "metric": "Central-bank gold buying, 2026 forecast",
+              "value": "750 to 850 tonnes",
+              "url": "https://www.fxstreet.com/analysis/central-bank-gold-buying-and-the-quiet-acceleration-of-de-dollarization-202606081738"
+            },
+            {
+              "metric": "BRICS+ share of global gold reserves",
+              "value": "17.4%, up from 11.2% in 2019",
+              "url": "https://www.fxstreet.com/analysis/central-bank-gold-buying-and-the-quiet-acceleration-of-de-dollarization-202606081738"
+            }
+          ]
         },
         {
-          "q": "A US-Iran permanent peace deal by the end of 2026",
-          "prob": "~69%",
-          "src": "Polymarket, $259M volume",
-          "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by"
+          "name": "Monetary policy: higher for longer",
+          "direction": "easing stalled",
+          "read": "Prediction markets make zero Federal Reserve cuts in 2026 the favorite, priced somewhere between 57 and 77 percent depending on the market, against the Fed's own projection of one cut. May inflation at 4.2 percent, the highest since 2023, is the reason.",
+          "basket": [
+            {
+              "metric": "Fed cuts in 2026 (Polymarket)",
+              "value": "zero is the favorite",
+              "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026"
+            },
+            {
+              "metric": "May CPI",
+              "value": "4.2% year over year, highest since 2023",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "name": "Fragmentation",
+          "direction": "deepening, no rupture",
+          "read": "The US-China tariff truce is holding but fragile, with no new deal and continued decoupling in critical minerals, where China controls about 90 percent of rare-earth processing. Markets still treat a Taiwan invasion as a tail risk, near 6 percent by year end. China's snub of the EU this week is the latest crack.",
+          "basket": [
+            {
+              "metric": "US-China tariff deal (Polymarket)",
+              "value": "no deal is the lean",
+              "url": "https://polymarket.com/event/us-x-china-tariff-agreement-by-may-31"
+            },
+            {
+              "metric": "China invades Taiwan by end-2026 (Polymarket)",
+              "value": "about 6%",
+              "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027"
+            }
+          ]
+        },
+        {
+          "name": "The AI buildout",
+          "direction": "accelerating, medium timeline",
+          "read": "Forecasters put the first publicly announced general AI system around 2028, with a 14 to 27 percent chance within 2026, while capital keeps pouring into compute and power. The structural bet is that capability keeps compounding, which is what the watchlist below is built on.",
+          "basket": [
+            {
+              "metric": "General AI announced in 2026 (Kalshi, Polymarket)",
+              "value": "14 to 27%",
+              "url": "https://www.metaculus.com/questions/19356/transformative-ai-date/"
+            },
+            {
+              "metric": "Transformative-AI median date (Metaculus)",
+              "value": "around 2031",
+              "url": "https://www.metaculus.com/questions/19356/transformative-ai-date/"
+            }
+          ]
+        },
+        {
+          "name": "AI sovereignty",
+          "direction": "hardening (markets thin)",
+          "read": "This week's removal of Fable 5 and Mythos 5 by government order fits a structural shift toward states gating who can run frontier models. Notably, liquid prediction markets do not yet price AI governance directly, so this regime has to be read from events and policy rather than odds, which is itself a finding.",
+          "basket": [
+            {
+              "metric": "Dedicated AI-governance prediction markets",
+              "value": "thin to nonexistent",
+              "url": ""
+            }
+          ]
         }
       ]
     }
