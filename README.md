@@ -36,7 +36,12 @@ Delivery is currently manual via `send_regime_email.py`.
 
 Subscribers are managed with plain Gmail — no third-party provider.
 
-- The site's **Subscribe** button opens a pre-filled email (subject `subscribe`).
+- The site's **Join email list** box posts directly to a Google Apps Script
+  web app, which appends the address to a Google Sheet (no mail client). Deploy
+  steps are in `apps_script.gs`; paste the deployment URL into `apps_script_url.txt`
+  and run `build_site.py`. `sync_subscribers.py` pulls the Sheet into
+  `subscribers.txt` (run weekly, before sending). Until the URL is set, the box
+  falls back to a `subscribe` mailto.
 - `signups.py` reads `subscribe` / `unsubscribe` mail over IMAP and updates
   `subscribers.txt` (gitignored; it holds addresses and stays local).
 - `add_subscriber.py` adds/removes addresses by hand:

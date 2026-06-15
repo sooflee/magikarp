@@ -24,15 +24,44 @@ DOCS = ROOT / "docs"
 ACCENT = "#1a7f4b"
 SUBSCRIBE_HREF = ("mailto:bensonw.dev@gmail.com?subject=subscribe&body="
                   "Just%20send%20this%20email%20to%20subscribe%20to%20The%20Current%20Regime.")
-# Type an address; the box opens a pre-filled "subscribe" email whose body carries
-# that address, which signups.py reads over IMAP and saves to subscribers.txt.
-SUBSCRIBE_FORM = (
-    '<form class="joinform" onsubmit="var e=this.em.value.trim();'
-    "if(e){location.href=&#39;mailto:bensonw.dev@gmail.com?subject=subscribe&amp;body=&#39;"
-    "+encodeURIComponent(&#39;subscribe: &#39;+e);}return false;\">"
-    '<input class="joininput" type="email" name="em" required placeholder="you@example.com">'
-    '<button type="submit" class="subscribe">Join email list</button>'
-    '</form>')
+
+
+def _apps_script_url():
+    p = Path(__file__).resolve().parent / "apps_script_url.txt"
+    if p.exists():
+        for line in p.read_text().splitlines():
+            line = line.strip()
+            if line.startswith("https://"):
+                return line
+    return ""
+
+
+APPS_URL = _apps_script_url()
+
+if APPS_URL:
+    # Box POSTs directly to the Apps Script (Google Sheet); no mail client.
+    SUBSCRIBE_FORM = (
+        '<form class="joinform" id="joinform">'
+        '<input class="joininput" type="email" name="email" required placeholder="you@example.com">'
+        '<button type="submit" class="subscribe">Join email list</button></form>'
+        '<p class="subnote" id="joinmsg" style="display:none">Thanks, you&rsquo;re on the list.</p>'
+        "<script>(function(){var f=document.getElementById('joinform');"
+        "f.addEventListener('submit',function(ev){ev.preventDefault();"
+        "var em=f.email.value.trim();if(!em)return;"
+        "fetch('" + APPS_URL + "',{method:'POST',mode:'no-cors',"
+        "body:new URLSearchParams({email:em})});"
+        "f.style.display='none';document.getElementById('joinmsg').style.display='block';"
+        "});})();</script>")
+else:
+    # Fallback until the Apps Script URL is set: box drops the typed address into a
+    # "subscribe" email that signups.py reads over IMAP.
+    SUBSCRIBE_FORM = (
+        '<form class="joinform" onsubmit="var e=this.em.value.trim();'
+        "if(e){location.href=&#39;mailto:bensonw.dev@gmail.com?subject=subscribe&amp;body=&#39;"
+        "+encodeURIComponent(&#39;subscribe: &#39;+e);}return false;\">"
+        '<input class="joininput" type="email" name="em" required placeholder="you@example.com">'
+        '<button type="submit" class="subscribe">Join email list</button>'
+        '</form>')
 WARN_STATES = {"state-capture", "risk-off", "contracting", "liability-reckoning",
                "stressed", "constrained"}
 

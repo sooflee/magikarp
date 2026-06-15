@@ -1,0 +1,3 @@
+# Paste your deployed Apps Script Web app URL below (the line that ends in /exec),
+# then run: python3 build_site.py
+# Until a real https:// URL is here, the site falls back to the mailto signup.

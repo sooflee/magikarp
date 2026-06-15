@@ -26,7 +26,9 @@ if [ -z "${GMAIL_APP_PASSWORD:-}" ]; then
 fi
 
 # --- sign-ups ---
-log "ingesting sign-ups"
+log "syncing sign-ups from the Google Sheet"
+python3 sync_subscribers.py || log "sheet sync failed (continuing)"
+log "ingesting sign-ups from email (mailto / unsubscribes)"
 python3 signups.py || log "signups step failed (continuing)"
 
 # --- generate this week's issue ---
