@@ -151,6 +151,22 @@
             }
           ]
         },
+        "geopolitics": {
+          "state": "stressed",
+          "headline": "Oil is starting to flow through Hormuz again.",
+          "summary": "The Strait of Hormuz, the chokepoint for roughly a fifth of the world's seaborne oil, had been effectively closed since early March after fighting between the United States, Israel, and Iran made shipping insurance unavailable. As of June 12, the United States Energy Secretary said flows have recovered to about 7 million barrels a day, roughly half of the volume that had been stranded, and that the United States intends to reopen the waterway fully. Industry estimates suggest full flows may not return until 2027.",
+          "implication": "About half of the stranded oil shipments are moving again, which eases a supply shock that had pushed prices up; full flows are not expected before 2027.",
+          "links": [
+            {
+              "title": "Hormuz oil flows recover to 7 million barrels daily (Bloomberg)",
+              "url": "https://www.bloomberg.com/news/articles/2026-06-12/trump-s-energy-chief-says-half-of-hormuz-stoppages-are-restored"
+            },
+            {
+              "title": "Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg)",
+              "url": "https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens"
+            }
+          ]
+        },
         "markets": {
           "state": "mixed",
           "headline": "A calm market with a cautious undercurrent.",

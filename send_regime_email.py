@@ -60,6 +60,19 @@ they fail.
 - If Claude Fable stops helping you, you'll never know: https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html
 - Claude Fable is relentlessly proactive (Simon Willison): https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/
 
+GEOPOLITICS: Oil is starting to flow through Hormuz again.
+
+The Strait of Hormuz, the chokepoint for roughly a fifth of the world's seaborne
+oil, had been effectively closed since early March after fighting between the
+United States, Israel, and Iran made shipping insurance unavailable. As of
+June 12, the United States Energy Secretary said flows have recovered to about
+7 million barrels a day, roughly half of the volume that had been stranded, and
+that the United States intends to reopen the waterway fully. Industry estimates
+suggest full flows may not return until 2027.
+
+- Hormuz oil flows recover to 7 million barrels daily (Bloomberg): https://www.bloomberg.com/news/articles/2026-06-12/trump-s-energy-chief-says-half-of-hormuz-stoppages-are-restored
+- Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg): https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens
+
 MARKETS: A calm market with a cautious undercurrent. (as of 2026-06-14)
 
 Trend UP, volatility CALM (0.86), yield curve STEEP (+87bp), Atlanta Fed
@@ -99,13 +112,11 @@ ACCENT = "#1a7f4b"  # forest-green accent
 
 
 def _li(points, text, href):
-    pts = points.replace("&nbsp;", "").strip()
     return (
         '<tr>'
         f'<td style="padding:9px 0; border-bottom:1px solid #ededed; '
         f'font-family:{SANS}; font-size:16px; line-height:1.5; vertical-align:top;">'
         f'<a href="{href}" style="color:{ACCENT}; text-decoration:underline;">{text}</a>'
-        f'<span style="color:#9a9a9a; font-size:13px;"> &nbsp;&middot;&nbsp; {pts} pts</span>'
         '</td></tr>'
     )
 
@@ -122,6 +133,11 @@ LINKS_AGENTS = "".join([
     _li("1452", "An AI agent bankrupted its operator scanning DN42", "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/"),
     _li("1033", "“If Claude Fable stops helping you, you’ll never know”", "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html"),
     _li("&nbsp;767", "“Claude Fable is relentlessly proactive” (Simon Willison)", "https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/"),
+])
+
+LINKS_WORLD = "".join([
+    _li("", "Hormuz oil flows recover to 7 million barrels daily (Bloomberg)", "https://www.bloomberg.com/news/articles/2026-06-12/trump-s-energy-chief-says-half-of-hormuz-stoppages-are-restored"),
+    _li("", "Brace for a flood of oil as soon as the Strait of Hormuz reopens (Bloomberg)", "https://www.bloomberg.com/opinion/articles/2026-06-08/brace-for-a-flood-of-oil-as-soon-as-the-strait-of-hormuz-reopens"),
 ])
 
 LINKS_UNDER = "".join([
@@ -251,6 +267,10 @@ HTML_BODY = f"""\
             "This week, the agent stories that rose to the top were not about new capabilities or benchmark results. Instead, each described something going wrong. One recounted an agent that ran up a large bill while scanning a network. Another argued that a coding assistant could quietly degrade a competitor&rsquo;s application. A third, written by Simon Willison, examined how readily the new model acts on its own initiative. Together they suggest that attention is moving away from what agents can do and toward what they cost when they fail.",
             LINKS_AGENTS)}
 
+          {section("Geopolitics", "Oil is starting to flow through Hormuz again.",
+            "The Strait of Hormuz, the chokepoint for roughly a fifth of the world&rsquo;s seaborne oil, had been effectively closed since early March after fighting between the United States, Israel, and Iran made shipping insurance unavailable. As of June&nbsp;12, the United States Energy Secretary said flows have recovered to about 7&nbsp;million barrels a day, roughly half of the volume that had been stranded, and that the United States intends to reopen the waterway fully. Industry estimates suggest full flows may not return until 2027.",
+            LINKS_WORLD)}
+
           <!-- Market regime (first-class section + the card table) -->
           <tr>
             <td style="padding:40px 0 0;">
@@ -268,9 +288,9 @@ HTML_BODY = f"""\
             "Running beneath the week&rsquo;s main stories is a quieter countercurrent that rewards human effort and the plain, readable web. Several of the most-shared posts argued for craft, simplicity, and pages that load and read easily.",
             LINKS_UNDER)}
 
-          {CROSS_SOURCE_HTML}
-
           {WATCH_HTML}
+
+          {CROSS_SOURCE_HTML}
 
           <tr><td style="padding:34px 0 0;"><div style="border-top:1px solid #ededed; font-size:0; line-height:0;">&nbsp;</div></td></tr>
 

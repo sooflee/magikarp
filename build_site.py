@@ -130,8 +130,7 @@ def render_links(links: list) -> str:
     if not links:
         return ""
     rows = "".join(
-        f'<li><a href="{esc(l["url"])}">{esc(l["title"])}</a> '
-        f'<span class="pts">{esc(l.get("points",""))} pts</span></li>'
+        f'<li><a href="{esc(l["url"])}">{esc(l["title"])}</a></li>'
         for l in links)
     return f'<ul class="links">{rows}</ul>'
 
@@ -251,9 +250,9 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_markets(reg["markets"]))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
+    secs.append(render_watch(doc.get("bsig_watch", [])))
     if iss.get("across_sources"):
         secs.append(render_across(iss["across_sources"]))
-    secs.append(render_watch(doc.get("bsig_watch", [])))
     inner = (
         f'<header class="mast"><h1><a href="../">The Current Regime</a></h1>'
         f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</div></header>'
