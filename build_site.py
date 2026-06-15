@@ -183,6 +183,7 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</div></header>'
         f'<p class="back" style="margin-top:14px"><a href="../">&larr; all issues</a></p>'
         + "".join(secs)
+        + render_watch(doc.get("bsig_watch", []))
     )
     return page(f"The Current Regime · Issue {iss['id']}", inner)
 
@@ -200,7 +201,6 @@ def render_index(doc: dict, issues: list) -> str:
     inner = (
         '<header class="mast home"><h1>The Current Regime</h1></header>'
         + "".join(posts)
-        + render_watch(doc.get("bsig_watch", []))
     )
     return page("The Current Regime", inner)
 
