@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "note": "Structured state for 'The Current Regime'. Each issue records a state per regime so week-over-week diffs are computable. Regimes can change; that change is the product.",
+  "regime_defs": {
+    "tech_policy": {
+      "label": "Tech & policy",
+      "states": [
+        "open-acceleration",
+        "consolidation",
+        "state-capture"
+      ],
+      "rule": "Who controls model access. open-acceleration = capability race, few constraints; consolidation = a few labs/clouds dominate; state-capture = governments gate access (export controls, takedowns)."
+    },
+    "ai_agents": {
+      "label": "AI agents",
+      "states": [
+        "capability-race",
+        "liability-reckoning",
+        "normalized"
+      ],
+      "rule": "What the agent discourse rewards. capability-race = benchmarks/awe; liability-reckoning = cost/failure/risk dominate; normalized = boring/utility."
+    },
+    "markets": {
+      "label": "Markets (bsig)",
+      "states": [
+        "risk-on",
+        "mixed",
+        "risk-off"
+      ],
+      "rule": "Composite of bsig cards: trend, volatility, curve, growth, liquidity, crypto. risk-on = trend up + calm vol; risk-off = trend down or stressed vol; mixed = constructive tape with a contracting-liquidity or crypto-risk-off undercurrent."
+    },
+    "compute_energy": {
+      "label": "Compute & energy",
+      "states": [
+        "abundant",
+        "tightening",
+        "constrained"
+      ],
+      "rule": "Physical substrate of AI. Signals: PJM capacity prices, hyperscaler capex guidance, GPU rental $/hr, nuclear-for-DC activity."
+    },
+    "labor_ai": {
+      "label": "Labor & AI displacement",
+      "states": [
+        "hiring",
+        "flat",
+        "contracting"
+      ],
+      "rule": "Signals: tech layoffs (layoffs.fyi), JOLTS openings, dev-job-posting trend."
+    },
+    "geopolitics": {
+      "label": "Geopolitics",
+      "states": [
+        "calm",
+        "elevated",
+        "stressed"
+      ],
+      "rule": "Signals: GPR index, oil as risk gauge, count of export-control / sanction actions."
+    }
+  },
+  "issues": [
+    {
+      "id": "000",
+      "week": "2026-06-01/2026-06-07",
+      "date": "2026-06-12",
+      "partial": true,
+      "note": "Pre-launch baseline. Only the bsig market regime is captured (from regime.html as of 2026-06-12); editorial regimes begin at issue 001.",
+      "regimes": {
+        "markets": {
+          "state": "mixed",
+          "signals": {
+            "trend": "UP",
+            "vol": 0.91,
+            "curve_bp": 84,
+            "gdpnow": 3.3,
+            "liquidity": "CONTRACTING",
+            "crypto": "RISK-OFF"
+          }
+        }
+      }
+    },
+    {
+      "id": "001",
+      "week": "2026-06-08/2026-06-14",
+      "date": "2026-06-14",
+      "partial": false,
+      "regimes": {
+        "tech_policy": {
+          "state": "state-capture",
+          "headline": "Frontier-model access is now export-controlled.",
+          "evidence": [
+            "US Commerce directive suspended foreign access to Fable 5 / Mythos 5; Anthropic disabled both for all users",
+            "Amazon CEO Jassy triggered it; Anthropic called vulns 'previously known' and 'minor'",
+            "'Open source AI must win' trending as the local-weights reaction",
+            "German court holds Google liable for AI Overviews"
+          ]
+        },
+        "ai_agents": {
+          "state": "liability-reckoning",
+          "headline": "Judged on liability, not capability.",
+          "evidence": [
+            "AI agent bankrupted operator scanning DN42",
+            "'If Claude Fable stops helping you, you'll never know'",
+            "Simon Willison: Fable 'relentlessly proactive'"
+          ]
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "Risk-on tape, risk-off undercurrent.",
+          "signals": {
+            "trend": "UP",
+            "vol": 0.86,
+            "curve_bp": 87,
+            "gdpnow": 3.3,
+            "liquidity": "CONTRACTING",
+            "crypto": "RISK-OFF"
+          }
+        }
+      }
+    }
+  ],
+  "bsig_watch": [
+    {
+      "trend": "AI datacenter power demand",
+      "why_exponential": "Hyperscaler capex compounding >20% YoY is pulling forward decades of grid load; capacity prices and nuclear restarts repricing faster than sell-side models.",
+      "watch": "PJM base-residual auction clearing price (>100% spike), 2+ hyperscalers guiding capex up >20% YoY, NRC docs citing 'data center'",
+      "expressions": "CEG, VST, OKLO, SMR, ETN, VRT, PWR",
+      "bsig_ref": "AE-1 / AE-2 / AE-3",
+      "status": "active regime",
+      "new": true
+    },
+    {
+      "trend": "Inference-cost reversal -> custom silicon",
+      "why_exponential": "Token prices fell ~97%, then frontier pricing doubled; inference economics on general GPUs break, accelerating the shift to ASICs.",
+      "watch": "Frontier API $/Mtok reversing up, data-center revenue growth at merchant silicon",
+      "expressions": "MRVL (+46% YoY), CRDO (+85% YoY), AVGO",
+      "bsig_ref": "AS-B",
+      "status": "active regime",
+      "new": true
+    },
+    {
+      "trend": "Sovereign GPU scramble",
+      "why_exponential": "State-scale orders (Saudi HUMAIN 2200MW, EU gigafactories, India 100k GPUs) stack on top of hyperscaler demand, creating allocation conflicts.",
+      "watch": "Government AI-procurement announcements, national GPU allocations",
+      "expressions": "NVDA + regional power / datacenter infra",
+      "bsig_ref": "AS-C",
+      "status": "event-driven",
+      "new": false
+    },
+    {
+      "trend": "Crypto leverage & dry powder",
+      "why_exponential": "Perp leverage and stablecoin supply swing nonlinearly; extremes mark reversals. bsig has crypto at RISK-OFF now.",
+      "watch": "BTC perp funding 90d z-score (>2 or deeply negative), Stablecoin Supply Ratio oscillator",
+      "expressions": "BTC, ETH (funding/SSR), COIN",
+      "bsig_ref": "1E-1 / 1E-2",
+      "status": "watch (crypto risk-off)",
+      "new": true
+    },
+    {
+      "trend": "Resource-scarcity chains",
+      "why_exponential": "Drought and water limits propagate through multi-step chains (hydro -> gas, chip-fab water) with amplifying effects.",
+      "watch": "Western US hydro >15% below 10yr avg, Lake Mead < 1,025ft (Tier 2)",
+      "expressions": "Sumas-HH gas basis; SMH/NVDA vs INTC",
+      "bsig_ref": "AH-1 / AH-2",
+      "status": "watch",
+      "new": false
+    }
+  ]
+}
