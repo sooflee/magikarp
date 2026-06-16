@@ -251,7 +251,7 @@ def render_momentum(doc: dict) -> str:
             f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
             f'<p class="means">Number of the week&rsquo;s top Hacker News stories in '
             f'each regime we cover, this week against last.</p>'
-            f'<table class="mkt">{"".join(rows)}</table></div>')
+            f'<table class="mkt">{"".join(rows)}</table>{render_moves(iss)}</div>')
 
 
 def render_moves(iss: dict) -> str:
@@ -260,7 +260,7 @@ def render_moves(iss: dict) -> str:
         arr = "&#9650;" if mv.get("dir") == "up" else ("&#9660;" if mv.get("dir") == "down" else "&#9644;")
         moves += (f'<li><a href="{esc(mv["url"])}">{esc(mv["market"])}</a> '
                   f'<span style="color:#9aa0aa">{arr}</span> {esc(mv.get("detail",""))}</li>')
-    return (f'<p style="margin-top:18px"><strong>What moved this week:</strong></p>'
+    return (f'<p style="margin-top:18px"><strong>Markets that swung this week:</strong></p>'
             f'<ul class="links">{moves}</ul>') if moves else ""
 
 
@@ -301,10 +301,10 @@ def render_radar(iss: dict) -> str:
                 f'<p class="rcompact"><strong>{esc(r["name"])}</strong> '
                 f'<span class="rdir">{esc(r.get("direction",""))}</span>.{fact}</p>')
     return ('<div class="sec"><h2>The structural picture.</h2>'
-            '<p class="sub">Regime radar &middot; read through prediction markets</p>'
+            '<p class="sub">Regime radar &middot; read through markets and hard data</p>'
             '<p class="means">The slow currents beneath the week. Each is read from a basket of '
-            'dated, money-backed markets, not a single headline.</p>'
-            f'{"".join(blocks)}{render_moves(iss)}</div>')
+            'dated markets and hard data, not a single headline.</p>'
+            f'{"".join(blocks)}</div>')
 
 
 def render_what_changed(doc: dict) -> str:

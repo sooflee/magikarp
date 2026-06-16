@@ -91,6 +91,15 @@ structural current (Dedollarization, Monetary policy, Fragmentation, the AI
 buildout, AI sovereignty), not an event. A single market ("Iran ceasefire holds")
 is an event, never a regime.
 
+**Which markets, and when to cite one.** Only present a prediction market when it
+is **high volume AND has a large signal swing**; otherwise use hard data and label
+the section honestly ("markets and hard data," not "prediction markets"). Platform
+preference: **Kalshi** first (regulated, cleaner read) and **Metaculus** for
+long-horizon forecasts; **Polymarket is fine when it is the high-volume market for
+a question** (it is well-calibrated at high volume). The volume + swing bar is the
+real accuracy gate, so a thin or static market should not be quoted at all. Put the
+week's high-volume, big-swing markets in "Where the week's attention went."
+
 Read a regime from the **drift of a basket** of dated, liquid markets, not one
 headline:
 - Pick 2-3 dated, resolvable markets per regime (Polymarket and Kalshi for

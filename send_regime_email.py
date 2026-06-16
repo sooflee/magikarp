@@ -149,6 +149,7 @@ def _momentum_html(state):
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
               <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+              {_market_moves_html(ISSUE)}
             </td>
           </tr>
 """
@@ -166,7 +167,7 @@ def _market_moves_html(issue):
             f'<span style="color:#9a9a9a;">{arrow}</span> {esc(mv.get("detail",""))}</li>')
     return (
         f'<p style="margin:18px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
-        f'<strong>What moved this week:</strong></p>'
+        f'<strong>Markets that swung this week:</strong></p>'
         f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.55; font-family:{SERIF}; color:#555;">{"".join(lis)}</ul>')
 
 
@@ -225,12 +226,11 @@ def _radar_html(issue):
             f'<p style="margin:16px 0 0; color:#b3b3b3; font-size:12px; letter-spacing:1.5px; '
             f'text-transform:uppercase; font-family:{SERIF};">Holding steady</p>')
         blocks += [_radar_compact(r) for r in steady]
-    blocks.append(_market_moves_html(issue))   # this week's deltas, alongside the levels
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">The structural picture.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through prediction markets</p>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through markets and hard data</p>
               <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated, money-backed markets, not a single headline.</p>
               {''.join(blocks)}
             </td>
@@ -471,6 +471,12 @@ def build_plain():
             tail = f", week {regime_engine.weeks_in_state(STATE, k)} in {st}" if st else ""
             out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow}){tail}")
         out.append("")
+        if ISSUE.get("market_moves"):
+            out.append("  Markets that swung this week:")
+            for mv in ISSUE["market_moves"]:
+                dd = {"up": "up", "down": "down"}.get(mv.get("dir"), "flat")
+                out.append(f"    - {mv['market']} ({dd}): {mv.get('detail','')}  {mv['url']}")
+            out.append("")
     for key, r in reg.items():
         if key == "markets":
             continue
@@ -497,7 +503,7 @@ def build_plain():
                 _links_text(u.get("links")).rstrip(), ""]
     if ISSUE.get("structural_regimes"):
         regs = ISSUE["structural_regimes"]
-        out += ["THE STRUCTURAL PICTURE (regime radar, read through prediction markets):", ""]
+        out += ["THE STRUCTURAL PICTURE (regime radar, read through markets and hard data):", ""]
         for r in [r for r in regs if r.get("spotlight")]:
             out.append(f"  {r['name']} [{r.get('direction','')}]")
             out.append(f"    {r['read']}")
@@ -512,12 +518,6 @@ def build_plain():
                 b0 = (r.get("basket") or [None])[0]
                 fact = f" {b0['metric']}: {b0['value']}." if b0 else ""
                 out.append(f"    - {r['name']} ({r.get('direction','')}).{fact}")
-            out.append("")
-        if ISSUE.get("market_moves"):
-            out.append("  What moved this week:")
-            for mv in ISSUE["market_moves"]:
-                dd = {"up": "up", "down": "down"}.get(mv.get("dir"), "flat")
-                out.append(f"    - {mv['market']} ({dd}): {mv.get('detail','')}  {mv['url']}")
             out.append("")
     if ISSUE.get("watch_next"):
         out += ["WHAT TO WATCH NEXT WEEK:", ""]

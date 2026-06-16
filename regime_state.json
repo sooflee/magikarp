@@ -346,7 +346,7 @@
           "read": "The model takedown in the Tech and policy section is one instance of a deeper shift: governments moving to control who can run frontier models, through export controls and outright removals. Unusually, no liquid prediction market prices AI governance yet, so this regime has to be read from policy rather than odds, which is itself a finding.",
           "basket": [
             {
-              "metric": "Dedicated AI-governance prediction markets",
+              "metric": "Dedicated AI-governance markets on Kalshi or Polymarket",
               "value": "thin to nonexistent",
               "url": ""
             }
@@ -356,17 +356,17 @@
         {
           "name": "Fragmentation",
           "direction": "deepening, no rupture",
-          "read": "The US-China tariff truce is holding but fragile, with no new deal and continued decoupling in critical minerals, where China controls about 90 percent of rare-earth processing. Markets still treat a Taiwan invasion as a tail risk, near 6 percent by year end. China's snub of the EU this week is the latest crack.",
+          "read": "The US-China tariff truce is holding but fragile, with no new deal and continued decoupling in critical minerals, where China controls about 90 percent of rare-earth processing. China's snub of the EU this week is the latest crack.",
           "basket": [
             {
-              "metric": "US-China tariff deal (Polymarket)",
-              "value": "no deal is the lean",
-              "url": "https://polymarket.com/event/us-x-china-tariff-agreement-by-may-31"
+              "metric": "China's share of rare-earth processing",
+              "value": "about 90%",
+              "url": ""
             },
             {
-              "metric": "China invades Taiwan by end-2026 (Polymarket)",
-              "value": "about 6%",
-              "url": "https://polymarket.com/event/will-china-invade-taiwan-before-2027"
+              "metric": "EU-China goods deficit, Q1 2026",
+              "value": "98 billion euros",
+              "url": ""
             }
           ],
           "spotlight": true
@@ -397,16 +397,16 @@
         {
           "name": "Monetary policy: higher for longer",
           "direction": "easing stalled",
-          "read": "Prediction markets make zero Federal Reserve cuts in 2026 the favorite, priced somewhere between 57 and 77 percent depending on the market, against the Fed's own projection of one cut. May inflation at 4.2 percent, the highest since 2023, is the reason.",
+          "read": "Markets and economists alike see no Federal Reserve cuts in 2026. About 70 percent of economists now expect rates unchanged through year-end, and Goldman has pushed its first cut to 2027, after May inflation hit 4.2 percent, the highest since 2023.",
           "basket": [
-            {
-              "metric": "Fed cuts in 2026 (Polymarket)",
-              "value": "zero is the favorite",
-              "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026"
-            },
             {
               "metric": "May CPI",
               "value": "4.2% year over year, highest since 2023",
+              "url": ""
+            },
+            {
+              "metric": "Economist consensus",
+              "value": "about 70% expect no 2026 cut; Goldman now sees the first cut in 2027",
               "url": ""
             }
           ],
@@ -418,13 +418,13 @@
           "read": "Forecasters put the first publicly announced general AI system around 2028, with a 14 to 27 percent chance within 2026, while capital keeps pouring into compute and power. The structural bet is that capability keeps compounding, which is what the watchlist below is built on.",
           "basket": [
             {
-              "metric": "General AI announced in 2026 (Kalshi, Polymarket)",
-              "value": "14 to 27%",
+              "metric": "Transformative-AI median date (Metaculus)",
+              "value": "around 2031",
               "url": "https://www.metaculus.com/questions/19356/transformative-ai-date/"
             },
             {
-              "metric": "Transformative-AI median date (Metaculus)",
-              "value": "around 2031",
+              "metric": "General AI announced in 2026 (Kalshi, Metaculus)",
+              "value": "roughly 14 to 27%",
               "url": "https://www.metaculus.com/questions/19356/transformative-ai-date/"
             }
           ],
@@ -433,22 +433,16 @@
       ],
       "market_moves": [
         {
-          "market": "US-Iran permanent peace deal",
+          "market": "A US-Iran deal by 2027 (Kalshi)",
           "dir": "up",
-          "detail": "surged after Trump canceled planned strikes on June 11 and global leaders backed a deal on June 15. Volume has climbed to $310M and a July signing is now priced near-certain. It eased the Fragmentation regime and pulled oil lower.",
-          "url": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by"
+          "detail": "The most-traded conflict markets, over $1B wagered, whipsawed this week: US strikes on June 11, then a June 14-15 framework to reopen the Strait of Hormuz. Kalshi puts a deal by 2027 near 58 percent. This is what pulled oil and recession odds lower.",
+          "url": "https://kalshi.com/category/politics/iran"
         },
         {
-          "market": "A 2026 Fed rate cut",
+          "market": "A US recession in 2026 (Kalshi)",
           "dir": "down",
-          "detail": "odds fell sharply after May inflation hit 4.2 percent, the highest since 2023. Zero cuts this year is now the favorite, near 77 percent. It hardens the higher-for-longer monetary regime.",
-          "url": "https://polymarket.com/event/how-many-fed-rate-cuts-in-2026"
-        },
-        {
-          "market": "US recession by end of 2026",
-          "dir": "flat",
-          "detail": "held low, near 15 percent, as traders pointed to AI capital spending and a low-hire, low-fire labor market. It keeps the market regime's growth reading intact.",
-          "url": "https://polymarket.com/event/us-recession-by-end-of-2026"
+          "detail": "Fell roughly 10 points as the Iran war cooled and oil dropped, back toward the high teens after spiking above 34 percent when oil topped $100. One of the most active macro markets.",
+          "url": "https://kalshi.com/markets/kxrecssnber/recession/kxrecssnber-26"
         }
       ]
     }
