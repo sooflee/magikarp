@@ -70,85 +70,86 @@ CSS = f"""
   --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;
   --fg:#1a1a1a; --muted:#6b7280; --faint:#9aa0aa; --line:#e8e8e8;
   --accent:{ACCENT}; --accent-bg:#e7f3ec; --bg:#fff; --warn:#b1300f;
+  --fs-display:30px; --fs-head:22px; --fs-body:17px; --fs-detail:15px; --fs-meta:13px;
 }}
 *{{box-sizing:border-box}}
 html{{-webkit-text-size-adjust:100%}}
-body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--serif);
+body{{margin:0;background:var(--bg);color:var(--fg);font:var(--fs-body)/1.7 var(--serif);
   -webkit-font-smoothing:antialiased}}
 .wrap{{max-width:640px;margin:0 auto;padding:52px 22px 72px}}
 a{{color:var(--accent)}}
 header.mast{{border-bottom:1px solid var(--accent);padding-bottom:16px;margin-bottom:8px}}
 header.mast.home{{text-align:center;padding-bottom:20px}}
-header.mast h1{{font-size:30px;line-height:1.1;letter-spacing:-0.02em;margin:0;font-weight:700}}
+header.mast h1{{font-size:var(--fs-display);line-height:1.1;letter-spacing:-0.02em;margin:0;font-weight:700}}
 header.mast h1 a{{color:var(--fg);text-decoration:none}}
-header.mast .kicker{{font-size:13px;color:var(--accent);font-style:italic;margin-top:8px}}
-.back{{font-size:13px;font-style:italic}}
+header.mast .kicker{{font-size:var(--fs-meta);color:var(--accent);font-style:italic;margin-top:8px}}
+.back{{font-size:var(--fs-meta);font-style:italic}}
 /* index: issues as posts */
 .post{{padding:22px 0;border-bottom:1px solid var(--line)}}
-.post .date{{font-size:12.5px;color:var(--faint);margin:0 0 3px}}
-.post h2{{font-size:21px;line-height:1.25;letter-spacing:-0.01em;margin:0 0 4px;font-weight:700}}
+.post .date{{font-size:var(--fs-meta);color:var(--faint);margin:0 0 3px}}
+.post h2{{font-size:var(--fs-head);line-height:1.25;letter-spacing:-0.01em;margin:0 0 4px;font-weight:700}}
 .post h2 a{{color:var(--fg);text-decoration:none}}
 .post h2 a:hover{{color:var(--accent)}}
-.post .dek{{font-size:15px;color:var(--muted);margin:0}}
-.post .tags{{font-size:12.5px;color:var(--faint);margin:6px 0 0}}
+.post .dek{{font-size:var(--fs-detail);color:var(--muted);margin:0}}
+.post .tags{{font-size:var(--fs-meta);color:var(--faint);margin:6px 0 0}}
 /* issue page sections */
-.lede{{font-size:19px;line-height:1.6;margin:24px 0 0;color:var(--fg)}}
+.lede{{font-size:var(--fs-body);line-height:1.6;margin:24px 0 0;color:var(--fg)}}
 .act{{text-align:center;margin:42px 0 0}}
-.act .actlabel{{font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--fg)}}
+.act .actlabel{{font-size:var(--fs-meta);letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--fg)}}
 .act hr{{border:0;border-top:2px solid var(--fg);margin:8px 0 0}}
 .sec{{padding-top:30px}}
-.sec h2{{font-size:21px;line-height:1.3;letter-spacing:-0.01em;margin:0 0 2px;font-weight:700}}
-.sec .sub{{font-size:13px;font-weight:600;color:var(--accent);margin:0 0 9px}}
-.sec p{{font-size:16px;line-height:1.65;margin:0 0 9px}}
-.badge{{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 7px;
+.sec h2{{font-size:var(--fs-head);line-height:1.3;letter-spacing:-0.01em;margin:0 0 2px;font-weight:700}}
+.sec .sub{{font-size:var(--fs-meta);font-weight:600;color:var(--accent);margin:0 0 9px}}
+.sec p{{font-size:var(--fs-body);line-height:1.65;margin:0 0 9px}}
+.badge{{display:inline-block;font-size:var(--fs-meta);font-weight:600;padding:1px 7px;
   border-radius:3px;background:var(--accent-bg);color:var(--accent);
   margin-left:7px;vertical-align:middle}}
 .badge.warn{{background:#fbeae6;color:var(--warn)}}
-.impl{{color:var(--muted);font-size:15px}}
+.impl{{color:var(--muted);font-size:var(--fs-detail)}}
 ul.links{{margin:8px 0 0;padding-left:18px}}
-ul.links li{{margin:0 0 4px;font-size:14px;line-height:1.45}}
-ul.links .pts{{color:var(--faint);font-size:12px}}
+ul.links li{{margin:0 0 4px;font-size:var(--fs-detail);line-height:1.45}}
+ul.links .pts{{color:var(--faint);font-size:var(--fs-meta)}}
 ul.chg{{margin:6px 0 0;padding-left:18px}}
-ul.chg li{{margin:0 0 8px;font-size:15px;line-height:1.5}}
-.across p{{font-size:15px;line-height:1.6;margin:0 0 8px}}
-.story{{font-size:15px;line-height:1.5;margin:12px 0 0}}
-.story .cmt{{color:var(--muted);font-size:14px}}
-.traj{{color:var(--faint);font-size:13px;font-style:italic;margin:0 0 10px}}
-.wn{{font-size:15px;line-height:1.5;margin:10px 0 0;padding-bottom:8px;border-bottom:1px solid var(--line)}}
+ul.chg li{{margin:0 0 8px;font-size:var(--fs-detail);line-height:1.5}}
+.across p{{font-size:var(--fs-detail);line-height:1.6;margin:0 0 8px}}
+.story{{font-size:var(--fs-detail);line-height:1.5;margin:12px 0 0}}
+.story .cmt{{color:var(--muted);font-size:var(--fs-detail)}}
+.traj{{color:var(--faint);font-size:var(--fs-meta);font-style:italic;margin:0 0 10px}}
+.wn{{font-size:var(--fs-detail);line-height:1.5;margin:10px 0 0;padding-bottom:8px;border-bottom:1px solid var(--line)}}
 .wn .when{{color:var(--accent);font-weight:700}}
-.wn .cmt{{color:var(--muted);font-size:14px}}
+.wn .cmt{{color:var(--muted);font-size:var(--fs-detail)}}
 .radar{{padding:14px 0;border-bottom:1px solid var(--line)}}
-.radar .rname{{font-size:16px;margin:0 0 3px}}
-.radar .rdir{{color:var(--accent);font-style:italic;font-size:13px}}
-.radar .rread{{font-size:15px;line-height:1.55;margin:0 0 5px}}
-.radar .rbask{{margin:0;padding:0 0 0 18px;font-size:13px;line-height:1.45;color:var(--muted)}}
-.radar-steady{{color:#b3b3b3;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 0}}
-.rcompact{{font-size:14px;line-height:1.55;color:#555;margin:7px 0 0}}
+.radar .rname{{font-size:var(--fs-body);margin:0 0 3px}}
+.radar .rdir{{color:var(--accent);font-style:italic;font-size:var(--fs-meta)}}
+.radar .rread{{font-size:var(--fs-detail);line-height:1.55;margin:0 0 5px}}
+.radar .rbask{{margin:0;padding:0 0 0 18px;font-size:var(--fs-meta);line-height:1.45;color:var(--muted)}}
+.radar-steady{{color:#b3b3b3;font-size:var(--fs-meta);letter-spacing:1.5px;text-transform:uppercase;margin:16px 0 0}}
+.rcompact{{font-size:var(--fs-detail);line-height:1.55;color:#555;margin:7px 0 0}}
 .rcompact .rdir{{color:var(--accent);font-style:italic}}
-.ghnote{{font-size:14px;line-height:1.6;color:var(--muted);margin:14px 0 0}}
+.ghnote{{font-size:var(--fs-detail);line-height:1.6;color:var(--muted);margin:14px 0 0}}
 table.mkt{{width:100%;border-collapse:collapse;margin:8px 0 0}}
-table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px}}
+table.mkt td{{padding:7px 2px;border-bottom:1px solid var(--line);font-size:var(--fs-detail)}}
 table.mkt td.v{{text-align:right;font-weight:700}}
-.means{{color:var(--muted);font-size:14px;line-height:1.7;margin-top:12px}}
+.means{{color:var(--muted);font-size:var(--fs-detail);line-height:1.7;margin-top:12px}}
 .watch{{padding:12px 0;border-bottom:1px solid var(--line)}}
-.watch .t{{font-size:16px;font-weight:700}}
-.watch .st{{font-size:12.5px;color:var(--faint);font-weight:400;font-style:italic}}
-.watch .why{{font-size:14px;color:#333;margin:4px 0}}
-.watch .via{{font-size:13px;color:var(--muted)}}
-.watch.small{{padding:6px 0;font-size:13px;color:#999}}
+.watch .t{{font-size:var(--fs-body);font-weight:700}}
+.watch .st{{font-size:var(--fs-meta);color:var(--faint);font-weight:400;font-style:italic}}
+.watch .why{{font-size:var(--fs-detail);color:#333;margin:4px 0}}
+.watch .via{{font-size:var(--fs-meta);color:var(--muted)}}
+.watch.small{{padding:6px 0;font-size:var(--fs-meta);color:#999}}
 footer{{margin-top:48px;border-top:1px solid var(--accent);padding-top:14px;
-  font-size:12.5px;color:var(--faint);text-align:center;line-height:1.7}}
+  font-size:var(--fs-meta);color:var(--faint);text-align:center;line-height:1.7}}
 footer a{{color:var(--accent)}}
 .subwrap{{text-align:center;margin:18px 0 0}}
 .joinform{{display:flex;gap:8px;justify-content:center;align-items:stretch;margin:32px 0 0;flex-wrap:wrap}}
 .joininput{{border:1px solid var(--line);border-radius:4px;padding:9px 13px;
-  font-size:14px;font-family:var(--serif);color:var(--fg);min-width:220px}}
+  font-size:var(--fs-detail);font-family:var(--serif);color:var(--fg);min-width:220px}}
 .joininput:focus{{outline:none;border-color:var(--accent)}}
 a.subscribe,button.subscribe{{display:inline-block;background:transparent;color:var(--accent);
-  border:1.5px solid var(--accent);text-decoration:none;font-size:14px;font-weight:600;
+  border:1.5px solid var(--accent);text-decoration:none;font-size:var(--fs-detail);font-weight:600;
   padding:8px 20px;border-radius:4px;cursor:pointer;font-family:var(--serif)}}
 a.subscribe:hover,button.subscribe:hover{{background:var(--accent);color:#fff}}
-.subnote{{text-align:center;font-size:12.5px;color:var(--faint);margin:8px 0 0}}
+.subnote{{text-align:center;font-size:var(--fs-meta);color:var(--faint);margin:8px 0 0}}
 """
 
 

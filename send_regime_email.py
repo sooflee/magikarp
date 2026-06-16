@@ -79,7 +79,7 @@ def _links_html(links):
         return ""
     rows = "".join(
         '<tr><td style="padding:9px 0; border-bottom:1px solid #ededed; '
-        f'font-family:{SERIF}; font-size:16px; line-height:1.5; vertical-align:top;">'
+        f'font-family:{SERIF}; font-size:15px; line-height:1.5; vertical-align:top;">'
         f'<a href="{l["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(l["title"])}</a>'
         '</td></tr>' for l in links)
     return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
@@ -90,7 +90,7 @@ def _items_html(items):
     if not items:
         return ""
     return "".join(
-        f'<p style="margin:14px 0 0; font-size:16px; line-height:1.6; font-family:{SERIF};">'
+        f'<p style="margin:14px 0 0; font-size:15px; line-height:1.6; font-family:{SERIF};">'
         f'<a href="{it["url"]}" style="color:{ACCENT}; text-decoration:underline;">{esc(it["title"])}</a><br>'
         f'<span style="color:#555;">{esc(it.get("comment",""))}</span></p>'
         for it in items)
@@ -103,8 +103,8 @@ def _section_html(label, title, paragraph, links=None, items=None, trajectory=No
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(title)}</h2>
-              <p style="margin:0 0 {sub_mb}; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(title)}</h2>
+              <p style="margin:0 0 {sub_mb}; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
               {traj}
               <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(paragraph)}</p>
               {_items_html(items)}
@@ -145,9 +145,9 @@ def _momentum_html(state):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Where the week&rsquo;s attention went.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
-              <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Where the week&rsquo;s attention went.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
+              <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
               {_market_moves_html(ISSUE)}
             </td>
@@ -168,7 +168,7 @@ def _market_moves_html(issue):
     return (
         f'<p style="margin:18px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
         f'<strong>Markets that swung this week:</strong></p>'
-        f'<ul style="margin:0; padding:0 0 0 20px; font-size:14px; line-height:1.55; font-family:{SERIF}; color:#555;">{"".join(lis)}</ul>')
+        f'<ul style="margin:0; padding:0 0 0 20px; font-size:15px; line-height:1.55; font-family:{SERIF}; color:#555;">{"".join(lis)}</ul>')
 
 
 def _watch_next_html(issue):
@@ -180,13 +180,13 @@ def _watch_next_html(issue):
         rows.append(
             f'<tr><td style="padding:10px 0; border-bottom:1px solid #ededed; font-family:{SERIF};">'
             f'<span style="color:{ACCENT}; font-weight:700; font-size:15px;">{esc(it.get("when",""))}</span> '
-            f'<span style="color:#1a1a1a; font-weight:700; font-size:16px;">{esc(it.get("event",""))}</span><br>'
+            f'<span style="color:#1a1a1a; font-weight:700; font-size:15px;">{esc(it.get("event",""))}</span><br>'
             f'<span style="color:#555; font-size:15px; line-height:1.55;">{esc(it.get("note",""))}</span></td></tr>')
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What to watch next week.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">The calendar ahead</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What to watch next week.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">The calendar ahead</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
             </td>
           </tr>
@@ -196,7 +196,7 @@ def _watch_next_html(issue):
 def _radar_compact(r):
     b0 = (r.get("basket") or [None])[0]
     fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
-    return (f'<p style="margin:7px 0 0; font-family:{SERIF}; font-size:14px; line-height:1.55; color:#555;">'
+    return (f'<p style="margin:7px 0 0; font-family:{SERIF}; font-size:15px; line-height:1.55; color:#555;">'
             f'<strong style="color:#1a1a1a;">{esc(r["name"])}</strong> '
             f'<span style="color:{ACCENT}; font-style:italic;">{esc(r.get("direction",""))}</span>.'
             f'{fact}</p>')
@@ -216,22 +216,22 @@ def _radar_html(issue):
             f'<div style="padding:16px 0; border-bottom:1px solid #ededed;">'
             f'<p style="margin:0 0 4px; font-family:{SERIF}; font-size:17px;">'
             f'<strong>{esc(r["name"])}</strong> '
-            f'<span style="color:{ACCENT}; font-style:italic; font-size:14px;">{esc(r.get("direction",""))}</span></p>'
+            f'<span style="color:{ACCENT}; font-style:italic; font-size:15px;">{esc(r.get("direction",""))}</span></p>'
             f'<p style="margin:0 0 6px; font-family:{SERIF}; font-size:15px; line-height:1.6; color:#1a1a1a;">{esc(r["read"])}</p>'
             f'<ul style="margin:0; padding:0 0 0 20px; font-family:{SERIF}; font-size:13px; line-height:1.5; color:#666;">{basket}</ul>'
             f'</div>')
     steady = [r for r in regs if not r.get("spotlight")]
     if steady:
         blocks.append(
-            f'<p style="margin:16px 0 0; color:#b3b3b3; font-size:12px; letter-spacing:1.5px; '
+            f'<p style="margin:16px 0 0; color:#b3b3b3; font-size:13px; letter-spacing:1.5px; '
             f'text-transform:uppercase; font-family:{SERIF};">Holding steady</p>')
         blocks += [_radar_compact(r) for r in steady]
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">The structural picture.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through markets and hard data</p>
-              <p style="margin:0 0 6px; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated, money-backed markets, not a single headline.</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">The structural picture.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through markets and hard data</p>
+              <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated, money-backed markets, not a single headline.</p>
               {''.join(blocks)}
             </td>
           </tr>
@@ -254,8 +254,8 @@ def _market_html(m):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(m.get("headline","Markets"))}</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Markets</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(m.get("headline","Markets"))}</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Markets</p>
               <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(m.get("summary",""))}</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
               <p style="margin:16px 0 0; color:#555; font-size:15px; line-height:1.8; font-family:{SERIF};">{esc(MARKET_MEANS)}</p>
@@ -289,8 +289,8 @@ def _commodities_html(c):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Crude falls as the fear premium unwinds.</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Crude falls as the fear premium unwinds.</h2>
+              <p style="margin:0 0 14px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>
               <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(c.get("summary",""))}</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
             </td>
@@ -306,15 +306,15 @@ def _contrarian_html(issue):
         label = DEFS.get(key, {}).get("label", key)
         rows.append(
             f'<tr><td style="padding:10px 0; border-bottom:1px solid #ededed; '
-            f'font-family:{SERIF}; font-size:16px; line-height:1.6; color:#1a1a1a;">'
+            f'font-family:{SERIF}; font-size:15px; line-height:1.6; color:#1a1a1a;">'
             f'<strong>{esc(label)}.</strong> {esc(r["contrarian"])}</td></tr>')
     if not rows:
         return ""
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:26px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What could change this.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:14px; font-weight:600; font-family:{SERIF};">Contrarian read</p>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What could change this.</h2>
+              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Contrarian read</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
             </td>
           </tr>
@@ -331,7 +331,7 @@ def _across_inline(a):
     return f"""
           <tr>
             <td style="padding:16px 0 0;">
-              <p style="margin:0; color:#555; font-size:14px; line-height:1.6; font-family:{SERIF};"><strong>On GitHub this week</strong>, trending is mostly {esc(a.get("github_theme",""))}: {items}</p>
+              <p style="margin:0; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};"><strong>On GitHub this week</strong>, trending is mostly {esc(a.get("github_theme",""))}: {items}</p>
             </td>
           </tr>
 """
@@ -354,7 +354,7 @@ def _lede_html():
     return f"""
           <tr>
             <td style="padding:28px 0 0;">
-              <p style="margin:0; color:#1a1a1a; font-size:19px; line-height:1.6; font-family:{SERIF};">{esc(ISSUE['lede'])}</p>
+              <p style="margin:0; color:#1a1a1a; font-size:17px; line-height:1.6; font-family:{SERIF};">{esc(ISSUE['lede'])}</p>
             </td>
           </tr>
 """
@@ -410,8 +410,8 @@ def build_html():
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%;">
           <tr>
             <td style="text-align:center; padding-bottom:6px;">
-              <h1 style="margin:0; color:#1a1a1a; font-size:36px; font-weight:700; letter-spacing:-0.5px; font-family:{SERIF};">The Current Regime</h1>
-              <p style="margin:14px 0 0; color:#9a9a9a; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SERIF};">Issue {esc(ISSUE['id'])} &middot; {esc(DATE_LABEL)}</p>
+              <h1 style="margin:0; color:#1a1a1a; font-size:32px; font-weight:700; letter-spacing:-0.5px; font-family:{SERIF};">The Current Regime</h1>
+              <p style="margin:14px 0 0; color:#9a9a9a; font-size:13px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SERIF};">Issue {esc(ISSUE['id'])} &middot; {esc(DATE_LABEL)}</p>
             </td>
           </tr>
           <tr><td style="padding:26px 0 0;"><div style="border-top:1px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div></td></tr>
@@ -419,7 +419,7 @@ def build_html():
           <tr><td style="padding:40px 0 0;"><div style="border-top:1px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div></td></tr>
           <tr>
             <td style="padding:20px 0 0;">
-              <p style="margin:0; color:#1a1a1a; font-size:16px; line-height:1.7; font-style:italic; font-family:{SERIF};">Regimes change. Understanding the world within a changing context.</p>
+              <p style="margin:0; color:#1a1a1a; font-size:15px; line-height:1.7; font-style:italic; font-family:{SERIF};">Regimes change. Understanding the world within a changing context.</p>
             </td>
           </tr>
         </table>
