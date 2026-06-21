@@ -63,27 +63,27 @@ decoupled down. Next FOMC June 17. Directional only — not investment advice.
 ## Issue 002 — Week of 2026-06-15 → 2026-06-21
 
 Tone: direct, claims verified against primary reporting. Links included.
-Three regime changes this week: Tech & policy state-capture -> open-acceleration,
-AI agents liability-reckoning -> normalized, Geopolitics stressed -> elevated.
-Markets stays mixed: the tape firmed (vol collapsed, S&P highs, spreads tight)
-but crypto risk-off and drained liquidity keep the cautious undercurrent.
+Reframed (multi-regime sweep): foreground the week's new structural shifts and
+go lighter on last week's continuations. Three regime changes: Tech & policy
+state-capture -> consolidation, AI agents liability-reckoning -> normalized,
+Geopolitics stressed -> elevated. Markets stays mixed. Tier-1 structural
+spotlights: global monetary tightening, compute's power/memory wall, energy
+majors retreating from the transition.
 
-### Regime — Tech & policy: the takedown backfired into a run on local AI
+### Regime — Tech & policy: a consolidation wave (record IPO + chip mergers)
 
-Last week's government model takedown drew its mirror image: a flight to models
-that cannot be revoked. Running capable models locally topped HN, developers
-reported swapping hosted Claude/GPT for local models in daily coding, and
-GLM-5.2 took the lead among open-weights models on Artificial Analysis. Norway
-near-banned AI in primary schools and Switzerland lifted its nuclear ban, but
-the week's energy was grassroots, not regulatory. Counter-force: SpaceX's
-reported $60B move for Cursor's maker and Hyundai taking full control of Boston
-Dynamics show consolidation has not paused.
+The week's capital flowed toward scale and concentration even as builders fled
+to local models. SpaceX completed the largest IPO on record (~$75B raised,
+~$1.77T, +19% week one); Qualcomm is in talks to buy Tenstorrent for up to $10B;
+TSMC and Amkor signed a 10-year US packaging pact. With last week's
+SpaceX-Cursor and Hyundai-Boston Dynamics deals, the market is rewarding
+consolidation. Counter-current (lighter than last week): the open-weights flight
+(GLM-5.2 leads open weights) continues as a hedge against state control.
 
-- 1575 — Running local models is good now — https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/
-- 1305 — Ask HN: replaced Claude/GPT with a local model for daily coding? — https://news.ycombinator.com/item?id=48542100
--  902 — GLM-5.2 is the new leading open-weights model — https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index
--  807 — Swiss parliament lifts ban on new nuclear power plants — https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html
--  801 — Norway imposes near ban on AI in elementary school — https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/
+- SpaceX completes the largest IPO on record (CNBC) — https://www.cnbc.com/2026/06/15/spacex-stock-record-ipo-debut.html
+- Qualcomm in talks to buy Tenstorrent for up to $10B (Reuters/Yahoo) — https://finance.yahoo.com/technology/ai/articles/qualcomm-talks-acquire-ai-chip-230401789.html
+- TSMC and Amkor forge a 10-year US advanced-packaging pact (TrendForce) — https://www.trendforce.com/news/2026/06/17/news-tsmc-amkor-forge-10-year-arizona-advanced-packaging-partnership-to-complete-the-u-s-chip-supply-chain/
+-  902 — GLM-5.2 leads open weights (counter-current) — https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index
 
 ### Regime — AI agents: normalized into quiet, local utility
 
@@ -102,15 +102,21 @@ June 17 (Warsh's first meeting) but the dot plot flipped to a hike (median year-
 see a hike). Directional
 only — not investment advice.
 
-### Geopolitics: the Iran war ends on paper, frays in practice
+### Geopolitics: state friction spreads beyond the Iran truce
 
-US-Iran 14-point MOU signed June 17 to end the war and reopen Hormuz; Iran
-declared the strait closed again June 20 over alleged ceasefire violations, yet
-CENTCOM reported 55 ships and 17M+ barrels still transited Saturday. Brussels
-summit centered on China's rare-earth dominance.
-- US-Iran MOU text (CNN) — https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl
+Iran ceasefire holds on paper, frays in practice (Hormuz "closed" June 20, oil
+still flowing). Bigger movements elsewhere: Ukraine struck a refinery ~2,000 km
+inside Siberia and the Crimean Bridge (June 20-21); North Korea has fired more
+ballistic missiles in 2026 than in all of 2025, hardening its axis with Russia.
+- Ukraine strikes a Siberian refinery and the Crimean Bridge (Kyiv Independent) — https://kyivindependent.com/ukraine-reportedly-strikes-oil-terminal-in-occupied-crimea/
 - Iran closes Strait of Hormuz (Washington Times) — https://www.washingtontimes.com/news/2026/jun/20/iran-closes-strait-hormuz-blaming-israel-violating-ceasefire/
-- Rare-earth access EU priority at Brussels summit (Reuters/Investing) — https://www.investing.com/news/commodities-news/rare-earth-access-is-the-european-unions-priority-at-china-summit-4102952
+
+### Structural radar — Tier-1 shifts foregrounded this issue
+
+- Global monetary tightening: BoJ to 1.00% (June 16, highest since 1995); ECB hiked June (first since 2023); BoE held but dissent 7-2 — https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html
+- Compute hits the power/memory wall: FERC orders all six grid operators to rewrite data-center interconnection rules (June 18); worst memory shortage in ~15 years — https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/
+- Energy majors retreat: Shell selling its entire offshore-wind portfolio ($1B+, June 15), after BP — https://renews.biz/112083/shell-planning-1bn-offshore-wind-sale/
+- Demoted to "holding steady" (lighter on last week): AI sovereignty, Fragmentation, Dedollarization.
 
 ### Commodities (week ending June 21)
 
@@ -125,6 +131,6 @@ all-time low ~17–18%; USDA/Farm Progress drought reporting.
 -  968 — I found 10k GitHub repositories distributing Trojan malware — https://orchidfiles.com/github-repositories-distributing-malware/
 -  787 — Curl will not accept vulnerability reports during July 2026 — https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/
 
-### Watch list
-- Resource-scarcity chains (drought -> grains/power/chips): elevated to a full card on the Plains drought
-- 60-day US-Iran ceasefire window; July 29 FOMC (first hike watch); Nov 2026 rare-earth pause expiry
+### Watch list / watch next
+- Resource-scarcity chains (drought -> grains/power/chips): full card on the Plains drought
+- GPT-5.6 launch window (June 22-28, ~83% on Polymarket); EU Chat Control trilogue (June 29); July 29 FOMC (first-hike watch)
