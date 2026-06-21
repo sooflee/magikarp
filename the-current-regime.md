@@ -98,7 +98,8 @@ From Projects/ekans (`pipeline/daily_check.py`) + yfinance/FRED:
 Trend UP, volatility LOW (VIX/VIX3M 0.84; VIX ~16, -16% wk), curve STEEP +79bp,
 GDPNow 3.0%, liquidity DRAINED (RRP ~$0B), crypto RISK-OFF, dollar firm (DXY
 100.9, +1%), credit tight (HY OAS 2.63%, in from 2.80%). Fed held 3.50–3.75% on
-June 17 (Warsh's first meeting) but the dot plot flipped to a hike. Directional
+June 17 (Warsh's first meeting) but the dot plot flipped to a hike (median year-end dot 3.8% from 3.4%; 9 of 18 dots
+see a hike). Directional
 only — not investment advice.
 
 ### Geopolitics: the Iran war ends on paper, frays in practice
@@ -114,8 +115,8 @@ summit centered on China's rare-earth dominance.
 ### Commodities (week ending June 21)
 
 Oil kept falling (WTI -9.8%, Brent -7.7%) as the MOU let tankers keep moving.
-Grains surged on a southern Plains drought (corn +7.9%, wheat +4.5%). Silver
--4.4%. Verification: Fed FOMC statement 2026-06-17; CNBC; Kalshi recession
+Wheat surged on a southern Plains drought (+4.5%, smallest US hard-red-winter-wheat
+crop since the 1950s); corn and soy did not follow. Silver -4.4%. Verification: Fed FOMC statement 2026-06-17; CNBC; Kalshi recession
 all-time low ~17–18%; USDA/Farm Progress drought reporting.
 
 ### Undercurrent: trust in the supply chain is getting expensive

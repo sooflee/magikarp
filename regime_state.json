@@ -503,7 +503,7 @@
         "tech_policy": {
           "state": "open-acceleration",
           "headline": "The model takedown backfired into a run on local AI.",
-          "summary": "Last week the US ordered a frontier model offline; this week the reply came from the opposite direction. The most-read tech posts were about running capable models on your own hardware, developers swapping hosted Claude and GPT for local models in daily coding, and GLM-5.2 taking the lead among open-weights models on a public benchmark. Access that cannot be revoked is suddenly the point. Norway moved to bar AI from primary schools and Switzerland lifted its nuclear ban, but the week's energy was grassroots, not regulatory.",
+          "summary": "Last week the US ordered a frontier model offline; this week the reply came from the opposite direction. The most-read tech posts were about running capable models on your own hardware, developers swapping hosted Claude and GPT for local models in daily coding, and GLM-5.2 taking the lead among open-weights models on a public benchmark. Access that cannot be revoked is suddenly the point. Norway moved to bar AI from primary schools and Switzerland's parliament voted to lift its nuclear ban, with a referendum still to come, but the week's energy was grassroots, not regulatory.",
           "implication": "Three of the week's most-upvoted tech posts were about running models locally or open weights, including a new open-weights benchmark leader, rather than any hosted-model release.",
           "evidence": [
             "'Running local models is good now' reached 1,575 points",
@@ -538,7 +538,7 @@
               "url": "https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html"
             }
           ],
-          "contrarian": "The state machinery is still hardening underneath: a June 2 executive order seeks federal pre-release review of top models and the EU is racing to build sovereign capacity, which is precisely what pushed builders to local weights. Local models also still trail the frontier, and the same week brought SpaceX's reported $60B move for Cursor's maker and Hyundai taking full control of Boston Dynamics, so consolidation has not paused either."
+          "contrarian": "The state machinery is still hardening underneath: a June 2 executive order set up a voluntary federal pre-release review of top models and the EU is racing to build sovereign capacity, which is precisely what pushed builders to local weights. Local models also still trail the frontier, and the same week brought SpaceX's reported $60B move for Cursor's maker and Hyundai taking full control of Boston Dynamics, so consolidation has not paused either."
         },
         "ai_agents": {
           "state": "normalized",
@@ -561,11 +561,11 @@
         "geopolitics": {
           "state": "elevated",
           "headline": "The Iran war is ending on paper and fraying in practice.",
-          "summary": "The big world story moved from war to a shaky peace. The US and Iran signed a memorandum on June 17 to end the war and reopen the Strait of Hormuz, easing some financial restrictions and setting up nuclear talks. By Saturday Iran declared the strait closed again over alleged ceasefire violations tied to Israeli strikes in Lebanon, even as US Central Command said dozens of tankers kept transiting. In Brussels, European leaders met with China's grip on rare earths at the top of the agenda.",
+          "summary": "The big world story moved from war to a shaky peace. The US and Iran signed a memorandum on June 17 to extend the ceasefire and reopen the Strait of Hormuz, easing some financial restrictions and setting up nuclear talks, a step toward ending the war rather than a final treaty. By Saturday Iran declared the strait closed again over alleged ceasefire violations tied to Israeli strikes in Lebanon, even as US Central Command said dozens of tankers kept transiting. In Brussels, European leaders pressed for tougher trade defenses against China.",
           "implication": "Iran signed a deal to reopen the Strait of Hormuz on June 17 and declared it closed again three days later, yet US Central Command reported 55 merchant ships and more than 17 million barrels of oil still transited on Saturday.",
           "items": [
             {
-              "title": "US and Iran release a 14-point memorandum to end the war and reopen Hormuz (CNN)",
+              "title": "US and Iran sign a 14-point memorandum to extend the ceasefire and reopen Hormuz (CNN)",
               "url": "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
               "comment": "The event behind oil's continued slide in the Commodities section; the war's fear premium kept unwinding even as the deal frayed."
             },
@@ -575,9 +575,9 @@
               "comment": "Why Geopolitics stays elevated rather than calm: the ceasefire is real but brittle, and tankers kept moving in spite of the announcement."
             },
             {
-              "title": "Rare-earth access is the EU's priority at the Brussels summit (Reuters via Investing.com)",
-              "url": "https://www.investing.com/news/commodities-news/rare-earth-access-is-the-european-unions-priority-at-china-summit-4102952",
-              "comment": "Ties to the Fragmentation regime; EU leaders handed the Commission a mandate to toughen trade defenses against China, even as a Chinese rare-earth export-control pause runs only to November 2026."
+              "title": "EU leaders push tougher trade defenses against China at the European Council (Reuters via Investing.com)",
+              "url": "https://www.investing.com/news/economic-indicators/eu-leaders-to-strive-for-unity-on-china-trade-imbalance-4749692",
+              "comment": "Ties to the Fragmentation regime; at the June 18-19 Council, EU leaders directed the Commission to strengthen its trade-defense instruments as cheap Chinese exports widen the trade gap, while a Chinese rare-earth export-control pause runs only to November 2026."
             }
           ],
           "contrarian": "If the strait stays open in practice and the memorandum holds through its 60-day window, this tips from elevated back toward calm."
@@ -596,7 +596,7 @@
             "credit": "Tight (2.6% spread)"
           },
           "implication": "Six of the eight readings are constructive, but crypto stayed risk-off and overnight liquidity drained to near zero, the two cautions that keep the read mixed rather than cleanly risk-on.",
-          "summary": "Last week's caution narrowed without disappearing. Stock-market volatility collapsed, the S&P 500 made fresh highs, oil fell, and high-yield credit spreads tightened to 2.6 percent. But the Federal Reserve held its rate at 3.5 to 3.75 percent on June 17 and its new projections lean toward a hike rather than a cut, while Bitcoin and Ether stayed weak, down sharply from last year's highs. A constructive tape with a hawkish Fed and a crypto bear market underneath is the definition of a mixed read. The readings below are directional only, not investment advice.",
+          "summary": "Last week's caution narrowed without disappearing. Stock-market volatility collapsed and equities held just below the records they set earlier in June, oil fell, and high-yield credit spreads tightened to about 2.6 percent. But the Federal Reserve held its rate at 3.5 to 3.75 percent on June 17 and its new projections lean toward a hike rather than a cut, while Bitcoin and Ether stayed weak, down sharply from last year's highs. A constructive tape with a hawkish Fed and a crypto bear market underneath is the definition of a mixed read. The readings below are directional only, not investment advice.",
           "contrarian": "If crypto turns back up and liquidity stops draining while the Fed stays on hold, the undercurrent clears and the read tips cleanly risk-on; a hot inflation print would push it the other way."
         }
       },
@@ -649,7 +649,7 @@
       "commodities": {
         "as_of": "week ending June 21",
         "min_change": 4.0,
-        "summary": "Oil kept falling, with WTI down nearly 10 percent and Brent off about 8 percent, as the US-Iran memorandum let tankers keep moving through Hormuz and the war's fear premium drained away. The week's surprise was in the fields: corn jumped almost 8 percent and wheat more than 4 percent as a deepening drought across the southern Plains threatens the smallest US winter-wheat crop in decades. Silver slipped with the broader metals. With oil still flowing and the strait's closure so far rhetorical, energy looks soft into summer, while grain prices now hinge on Plains rainfall.",
+        "summary": "Oil kept falling, with WTI down nearly 10 percent and Brent off about 8 percent, as the US-Iran memorandum let tankers keep moving through Hormuz and the war's fear premium drained away. The exception was wheat, which jumped more than 4 percent as a deepening drought across the southern Plains, with more than 60 percent of the winter-wheat crop in drought, threatens the smallest US hard-red-winter-wheat harvest since the 1950s; corn and soybeans did not follow. Silver slipped with the broader metals. With oil still flowing and the strait's closure so far rhetorical, energy looks soft into summer, while wheat now hinges on Plains rainfall.",
         "items": [
           {
             "name": "WTI crude",
@@ -663,12 +663,12 @@
           },
           {
             "name": "Corn",
-            "level": "$4.44/bu",
-            "change": "+7.9%"
+            "level": "$4.16",
+            "change": "-2.5%"
           },
           {
             "name": "Wheat",
-            "level": "$6.13/bu",
+            "level": "$6.10",
             "change": "+4.5%"
           },
           {
@@ -767,7 +767,7 @@
         {
           "name": "AI sovereignty",
           "direction": "contested (state vs. local)",
-          "read": "Last week's government takedown of a frontier model met its mirror image this week: a rush toward models that cannot be switched off remotely. GLM-5.2, an MIT-licensed open-weights model, took the lead on a public intelligence benchmark, developers reported swapping hosted assistants for local ones, and running capable models locally topped Hacker News. State control is hardening at the same time, with a June 2 executive order seeking federal pre-release review of top models, while nations from South Korea to France commit hundreds of billions to sovereign compute. Control and the open-weights escape hatch are intensifying together. No liquid market prices AI governance, so the regime is read from behavior, not odds.",
+          "read": "Last week's government takedown of a frontier model met its mirror image this week: a rush toward models that cannot be switched off remotely. GLM-5.2, an MIT-licensed open-weights model, took the lead on a public intelligence benchmark, developers reported swapping hosted assistants for local ones, and running capable models locally topped Hacker News. State control is hardening at the same time, with a June 2 executive order setting up a voluntary federal pre-release review of top models, while nations from South Korea to France commit hundreds of billions to sovereign compute. Control and the open-weights escape hatch are intensifying together. No liquid market prices AI governance, so the regime is read from behavior, not odds.",
           "basket": [
             {
               "metric": "Leading open-weights model (Artificial Analysis)",
@@ -776,7 +776,7 @@
             },
             {
               "metric": "US federal pre-release model review (executive order, June 2)",
-              "value": "30-day pre-release access sought",
+              "value": "voluntary 30-day pre-release access sought",
               "url": ""
             },
             {
@@ -790,7 +790,7 @@
         {
           "name": "Fragmentation",
           "direction": "deepening, truce holding",
-          "read": "The US-China rare-earth standoff is paused, not resolved. Beijing's suspension of its October export controls runs only to November 2026, and at this week's Brussels summit EU leaders handed the Commission a mandate to toughen trade defenses against subsidized Chinese goods. China still controls about 90 percent of rare-earth processing, so the leverage is unchanged even while the controls are off. A pause with an expiry date, hardening posture on both sides, is the shape of this regime.",
+          "read": "The US-China rare-earth standoff is paused, not resolved. Beijing's suspension of its October export controls runs only to November 2026, and at this week's Brussels summit EU leaders directed the Commission to strengthen its trade-defense instruments as cheap Chinese exports widen the trade gap. China still controls about 90 percent of rare-earth processing, so the leverage is unchanged even while the controls are off. A pause with an expiry date, hardening posture on both sides, is the shape of this regime.",
           "basket": [
             {
               "metric": "China's share of rare-earth processing",
@@ -808,7 +808,7 @@
         {
           "name": "Dedollarization",
           "direction": "strengthening, dollar bounce",
-          "read": "The dollar firmed to a one-year high this week on the hawkish Fed, a counter to the long trend rather than a break in it. The structural picture is intact: the dollar's share of allocated reserves sat at 56.8 percent at the end of 2025 by the IMF's count, near a multi-decade low, and central banks bought 863 tonnes of gold in 2025, with a record 45 percent of reserve managers planning to add more. A firmer dollar in a risk-off-leaning week does not undo a multi-year reserve shift.",
+          "read": "The dollar firmed to a one-year high this week on the hawkish Fed, a counter to the long trend rather than a break in it. The structural picture is intact: the dollar's share of global reserves sat at 56.8 percent at the end of 2025 by the IMF's count, near a multi-decade low, and central banks bought 863 tonnes of gold in 2025, with a record 45 percent of reserve managers planning to add more. A firmer dollar in a risk-off-leaning week does not undo a multi-year reserve shift.",
           "basket": [
             {
               "metric": "Dollar index (DXY)",
@@ -816,7 +816,7 @@
               "url": ""
             },
             {
-              "metric": "Dollar share of allocated reserves (IMF COFER, end-2025)",
+              "metric": "Dollar share of global FX reserves (IMF COFER, end-2025)",
               "value": "56.8%",
               "url": "https://data.imf.org/en/news/october%201%202025%20cofer"
             },
@@ -831,16 +831,16 @@
         {
           "name": "The AI buildout",
           "direction": "accelerating, medium timeline",
-          "read": "Forecasters still put the first publicly announced general AI system around 2031, with a low but rising chance within 2026, while the physical buildout grinds on. Switzerland's parliament voted this week to lift its ban on new nuclear plants, the kind of power-supply decision the buildout increasingly forces. The structural bet is that capability keeps compounding, which is what the watchlist is built on.",
+          "read": "Forecasters still cluster the first publicly announced general AI system in the late 2020s to early 2030s, with a low but rising chance within 2026, while the physical buildout grinds on. Switzerland's parliament voted this week to lift its ban on new nuclear plants, pending a referendum, the kind of power-supply decision the buildout increasingly forces. The structural bet is that capability keeps compounding, which is what the watchlist is built on.",
           "basket": [
             {
               "metric": "Transformative-AI median date (Metaculus)",
-              "value": "around 2031",
+              "value": "late 2020s to early 2030s",
               "url": "https://www.metaculus.com/questions/19356/transformative-ai-date/"
             },
             {
               "metric": "Power-supply policy",
-              "value": "Switzerland lifts its ban on new nuclear plants",
+              "value": "Switzerland's parliament votes to lift its nuclear ban (referendum pending)",
               "url": "https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html"
             }
           ],
@@ -861,7 +861,7 @@
         {
           "when": "Around November 2026",
           "event": "China's rare-earth export-control pause expires",
-          "note": "The deadline hanging over both the EU-China and US-China truces; the Brussels summit was about getting ahead of it."
+          "note": "The deadline hanging over both the EU-China and US-China truces; EU leaders used the June 18-19 Council to push for tougher trade defenses ahead of it."
         }
       ],
       "bsig_watch": [
@@ -903,7 +903,7 @@
         },
         {
           "trend": "Resource-scarcity chains",
-          "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat and corn up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+          "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
           "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
           "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
           "bsig_ref": "AH-1 / AH-2",
@@ -952,7 +952,7 @@
     },
     {
       "trend": "Resource-scarcity chains",
-      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat and corn up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
       "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
       "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
       "bsig_ref": "AH-1 / AH-2",
