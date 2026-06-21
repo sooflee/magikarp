@@ -116,7 +116,13 @@ ballistic missiles in 2026 than in all of 2025, hardening its axis with Russia.
 - Global monetary tightening: BoJ to 1.00% (June 16, highest since 1995); ECB hiked June (first since 2023); BoE held but dissent 7-2 — https://www.cnbc.com/2026/06/16/boj-rate-hike-historic-inflation.html
 - Compute hits the power/memory wall: FERC orders all six grid operators to rewrite data-center interconnection rules (June 18); worst memory shortage in ~15 years — https://insideclimatenews.org/news/18062026/federal-energy-regulatory-commission-data-center-orders/
 - Energy majors retreat: Shell selling its entire offshore-wind portfolio ($1B+, June 15), after BP — https://renews.biz/112083/shell-planning-1bn-offshore-wind-sale/
+- Labor and AI displacement (Tier 2): AI the #1 stated reason for US cuts, 3rd straight month (~40% of May layoffs, record) — https://www.techtimes.com/articles/318466/20260616/tech-layoffs-hit-1115-day-2026-companies-cite-ai-cuts-fail-boost-returns.htm
 - Demoted to "holding steady" (lighter on last week): AI sovereignty, Fragmentation, Dedollarization.
+
+### Watchlist additions (Tier 2/3)
+- Device attestation as a gatekeeper (Tier 2, full card): VW blocked ~500k GrapheneOS users via Play Integrity (June 19); EU Chat Control trilogue June 29.
+- Robotaxis hit the regulation wall (Tier 2): Waymo recalled ~3,900 cars after freeway-construction-zone incidents (June 18).
+- Consumer-AI labs pivot into medicine (Tier 3): Midjourney's full-body "ultrasonic CT" (June 18); GSK-Nuvalent ~$10.6B; CRISPR cancer-shredding.
 
 ### Commodities (week ending June 21)
 

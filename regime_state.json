@@ -808,6 +808,29 @@
           "spotlight": true
         },
         {
+          "name": "Labor and AI displacement",
+          "direction": "AI now the top stated reason for cuts",
+          "read": "For a third straight month, AI was the single largest stated reason for US job cuts: the May Challenger report attributed about 40 percent of layoffs to AI, the highest monthly total on record, as the pace of tech cuts ran near 1,100 a day, almost double last year. The headline labor market is still standing, with unemployment near 4.3 percent, so this is a white-collar and tech-sector squeeze rather than an economy-wide downturn, but AI-attributed displacement has moved from anecdote to the dominant layoff narrative.",
+          "basket": [
+            {
+              "metric": "AI share of US layoffs (May, Challenger)",
+              "value": "about 40%, a record monthly total",
+              "url": "https://www.techtimes.com/articles/318466/20260616/tech-layoffs-hit-1115-day-2026-companies-cite-ai-cuts-fail-boost-returns.htm"
+            },
+            {
+              "metric": "Pace of 2026 tech cuts",
+              "value": "~1,100 a day, nearly double 2025",
+              "url": ""
+            },
+            {
+              "metric": "US unemployment",
+              "value": "about 4.3% (still resilient)",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
           "name": "AI sovereignty",
           "direction": "contested (state vs. local)",
           "read": "Last week's government takedown of a frontier model met a flight to open weights this week; control and the open-weights escape hatch are intensifying together.",
@@ -909,6 +932,33 @@
           "bsig_ref": "AH-1 / AH-2",
           "status": "watch",
           "new": true
+        },
+        {
+          "trend": "Device attestation as a gatekeeper",
+          "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all. This week Volkswagen began silently blocking roughly half a million GrapheneOS users through Google's Play Integrity checks, the same week GrapheneOS shipped its Android 17 port, sharpening the conflict between hardened, user-controlled devices and ecosystems that lock them out.",
+          "watch": "More apps enforcing Play Integrity-style attestation, and the EU's June 29 'Chat Control' trilogue on mandatory message-scanning.",
+          "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
+          "bsig_ref": "",
+          "status": "watch (digital rights)",
+          "new": true
+        },
+        {
+          "trend": "Robotaxis hit the regulation wall",
+          "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls. Waymo recalled about 3,900 robotaxis this week after thirteen cases of cars driving into freeway construction zones.",
+          "watch": "More NHTSA recalls and freeway-service limits as fleets expand.",
+          "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
+          "bsig_ref": "",
+          "status": "watch (autonomy)",
+          "new": false
+        },
+        {
+          "trend": "Consumer-AI labs pivot into medicine",
+          "why_exponential": "Frontier consumer-AI labs are moving into medical hardware and diagnostics. Midjourney unveiled a no-radiation full-body 'ultrasonic CT' scanner this week, while pharma M&A surged (GSK's roughly 10.6 billion dollar deal for Nuvalent) and a CRISPR technique showed it could selectively shred cancer cells. Most of this is early-stage, but the direction is clear.",
+          "watch": "FDA clearances for AI-lab medical devices and more big pharma-AI tie-ups.",
+          "expressions": "Midjourney, large pharma, and gene-editing firms.",
+          "bsig_ref": "",
+          "status": "watch (AI in medicine)",
+          "new": false
         }
       ],
       "lede": "This week the money moved toward scale even as the code moved toward the edges: a record space IPO and a wave of chip mergers on one side, a flight to local AI on the other, all under a global turn toward tighter money."
@@ -959,6 +1009,33 @@
       "bsig_ref": "AH-1 / AH-2",
       "status": "watch",
       "new": true
+    },
+    {
+      "trend": "Device attestation as a gatekeeper",
+      "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all. This week Volkswagen began silently blocking roughly half a million GrapheneOS users through Google's Play Integrity checks, the same week GrapheneOS shipped its Android 17 port, sharpening the conflict between hardened, user-controlled devices and ecosystems that lock them out.",
+      "watch": "More apps enforcing Play Integrity-style attestation, and the EU's June 29 'Chat Control' trilogue on mandatory message-scanning.",
+      "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
+      "bsig_ref": "",
+      "status": "watch (digital rights)",
+      "new": true
+    },
+    {
+      "trend": "Robotaxis hit the regulation wall",
+      "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls. Waymo recalled about 3,900 robotaxis this week after thirteen cases of cars driving into freeway construction zones.",
+      "watch": "More NHTSA recalls and freeway-service limits as fleets expand.",
+      "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
+      "bsig_ref": "",
+      "status": "watch (autonomy)",
+      "new": false
+    },
+    {
+      "trend": "Consumer-AI labs pivot into medicine",
+      "why_exponential": "Frontier consumer-AI labs are moving into medical hardware and diagnostics. Midjourney unveiled a no-radiation full-body 'ultrasonic CT' scanner this week, while pharma M&A surged (GSK's roughly 10.6 billion dollar deal for Nuvalent) and a CRISPR technique showed it could selectively shred cancer cells. Most of this is early-stage, but the direction is clear.",
+      "watch": "FDA clearances for AI-lab medical devices and more big pharma-AI tie-ups.",
+      "expressions": "Midjourney, large pharma, and gene-editing firms.",
+      "bsig_ref": "",
+      "status": "watch (AI in medicine)",
+      "new": false
     }
   ],
   "daily_counts": [
