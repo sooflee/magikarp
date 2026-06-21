@@ -444,6 +444,472 @@
           "detail": "Fell roughly 10 points as the Iran war cooled and oil dropped, back toward the high teens after spiking above 34 percent when oil topped $100. One of the most active macro markets.",
           "url": "https://kalshi.com/markets/kxrecssnber/recession/kxrecssnber-26"
         }
+      ],
+      "bsig_watch": [
+        {
+          "trend": "AI datacenter power demand",
+          "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected.",
+          "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers.",
+          "expressions": "Constellation, Vistra, and other power and nuclear operators.",
+          "bsig_ref": "AE-1 / AE-2 / AE-3",
+          "status": "active regime",
+          "new": true
+        },
+        {
+          "trend": "Inference costs reverse toward custom silicon",
+          "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips.",
+          "watch": "Rising prices for top models, and fast data-center growth at custom-chip makers.",
+          "expressions": "Marvell, Broadcom, and other custom-silicon makers.",
+          "bsig_ref": "AS-B",
+          "status": "active regime",
+          "new": true
+        },
+        {
+          "trend": "Sovereign GPU scramble",
+          "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
+          "watch": "Government announcements of national AI computing projects and the supply conflicts they create.",
+          "expressions": "Nvidia and national power and data-center projects.",
+          "bsig_ref": "AS-C",
+          "status": "event-driven",
+          "new": false
+        },
+        {
+          "trend": "Crypto leverage & dry powder",
+          "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
+          "watch": "Extreme futures leverage, or an unusually large stablecoin pile.",
+          "expressions": "Bitcoin, Ether, and Coinbase.",
+          "bsig_ref": "1E-1 / 1E-2",
+          "status": "watch (crypto risk-off)",
+          "new": true
+        },
+        {
+          "trend": "Resource-scarcity chains",
+          "why_exponential": "Droughts and water limits ripple through several steps before they reach markets. Reduced hydroelectric output raises demand for natural gas, and water stress can slow chip fabrication. Each step tends to amplify the one before it.",
+          "watch": "Western US drought deep enough to cut hydroelectric power, and water limits that slow chip factories.",
+          "expressions": "Natural-gas prices and water-stressed chipmakers.",
+          "bsig_ref": "AH-1 / AH-2",
+          "status": "watch",
+          "new": false
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "week": "2026-06-15/2026-06-21",
+      "date": "2026-06-21",
+      "partial": false,
+      "date_label": "June 15–21, 2026",
+      "regimes": {
+        "tech_policy": {
+          "state": "open-acceleration",
+          "headline": "The model takedown backfired into a run on local AI.",
+          "summary": "Last week the US ordered a frontier model offline; this week the reply came from the opposite direction. The most-read tech posts were about running capable models on your own hardware, developers swapping hosted Claude and GPT for local models in daily coding, and GLM-5.2 taking the lead among open-weights models on a public benchmark. Access that cannot be revoked is suddenly the point. Norway moved to bar AI from primary schools and Switzerland lifted its nuclear ban, but the week's energy was grassroots, not regulatory.",
+          "implication": "Three of the week's most-upvoted tech posts were about running models locally or open weights, including a new open-weights benchmark leader, rather than any hosted-model release.",
+          "evidence": [
+            "'Running local models is good now' reached 1,575 points",
+            "'Has anyone replaced Claude/GPT with a local model for daily coding?' reached 1,305",
+            "GLM-5.2 named the leading open-weights model on Artificial Analysis (902)",
+            "Norway near-ban on AI in primary school; Swiss parliament lifts its nuclear ban"
+          ],
+          "links": [
+            {
+              "points": "1575",
+              "title": "Running local models is good now",
+              "url": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/"
+            },
+            {
+              "points": "1305",
+              "title": "Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding?",
+              "url": "https://news.ycombinator.com/item?id=48542100"
+            },
+            {
+              "points": "902",
+              "title": "GLM-5.2 is the new leading open-weights model on Artificial Analysis",
+              "url": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index"
+            },
+            {
+              "points": "801",
+              "title": "Norway imposes a near ban on AI in elementary school",
+              "url": "https://www.reuters.com/technology/norway-imposes-near-ban-ai-elementary-school-2026-06-19/"
+            },
+            {
+              "points": "807",
+              "title": "Swiss parliament lifts its ban on new nuclear power plants",
+              "url": "https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html"
+            }
+          ],
+          "contrarian": "The state machinery is still hardening underneath: a June 2 executive order seeks federal pre-release review of top models and the EU is racing to build sovereign capacity, which is precisely what pushed builders to local weights. Local models also still trail the frontier, and the same week brought SpaceX's reported $60B move for Cursor's maker and Hyundai taking full control of Boston Dynamics, so consolidation has not paused either."
+        },
+        "ai_agents": {
+          "state": "normalized",
+          "headline": "The agent frenzy cooled into quiet, local utility.",
+          "summary": "After last week's run of agent horror stories, the conversation went quiet. The question on top now is practical, whether a local model can replace hosted Claude or GPT for everyday coding, the kind of boring, utility-grade framing that marks a technology settling in. Agent posts fell from roughly fourteen of the week's top stories to four. The drama gave way to people quietly deciding which model to run.",
+          "implication": "Agent-related stories in HN's top 50 fell from about fourteen the prior week to four this week, and the most-upvoted one asks whether a local model can replace hosted assistants for daily coding.",
+          "evidence": [
+            "Top agent posts fell from ~14 to 4 week over week",
+            "The leading agent post is a practical 'can a local model replace hosted coding assistants' question (1,305)"
+          ],
+          "links": [
+            {
+              "points": "1305",
+              "title": "Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding?",
+              "url": "https://news.ycombinator.com/item?id=48542100"
+            }
+          ],
+          "contrarian": "A single strong frontier release could swing attention straight back to capability; normalization is a lull, not an endpoint."
+        },
+        "geopolitics": {
+          "state": "elevated",
+          "headline": "The Iran war is ending on paper and fraying in practice.",
+          "summary": "The big world story moved from war to a shaky peace. The US and Iran signed a memorandum on June 17 to end the war and reopen the Strait of Hormuz, easing some financial restrictions and setting up nuclear talks. By Saturday Iran declared the strait closed again over alleged ceasefire violations tied to Israeli strikes in Lebanon, even as US Central Command said dozens of tankers kept transiting. In Brussels, European leaders met with China's grip on rare earths at the top of the agenda.",
+          "implication": "Iran signed a deal to reopen the Strait of Hormuz on June 17 and declared it closed again three days later, yet US Central Command reported 55 merchant ships and more than 17 million barrels of oil still transited on Saturday.",
+          "items": [
+            {
+              "title": "US and Iran release a 14-point memorandum to end the war and reopen Hormuz (CNN)",
+              "url": "https://www.cnn.com/2026/06/17/middleeast/us-iran-war-mou-text-intl",
+              "comment": "The event behind oil's continued slide in the Commodities section; the war's fear premium kept unwinding even as the deal frayed."
+            },
+            {
+              "title": "Iran declares the Strait of Hormuz closed over alleged ceasefire violations (Washington Times)",
+              "url": "https://www.washingtontimes.com/news/2026/jun/20/iran-closes-strait-hormuz-blaming-israel-violating-ceasefire/",
+              "comment": "Why Geopolitics stays elevated rather than calm: the ceasefire is real but brittle, and tankers kept moving in spite of the announcement."
+            },
+            {
+              "title": "Rare-earth access is the EU's priority at the Brussels summit (Reuters via Investing.com)",
+              "url": "https://www.investing.com/news/commodities-news/rare-earth-access-is-the-european-unions-priority-at-china-summit-4102952",
+              "comment": "Ties to the Fragmentation regime; EU leaders handed the Commission a mandate to toughen trade defenses against China, even as a Chinese rare-earth export-control pause runs only to November 2026."
+            }
+          ],
+          "contrarian": "If the strait stays open in practice and the memorandum holds through its 60-day window, this tips from elevated back toward calm."
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "The tape firmed, but the cautious undercurrent did not clear.",
+          "signals": {
+            "trend": "UP",
+            "vol": 0.84,
+            "curve_bp": 79,
+            "gdpnow": 3.0,
+            "liquidity": "DRAINED",
+            "crypto": "RISK-OFF",
+            "dollar": "Firm (100.9)",
+            "credit": "Tight (2.6% spread)"
+          },
+          "implication": "Six of the eight readings are constructive, but crypto stayed risk-off and overnight liquidity drained to near zero, the two cautions that keep the read mixed rather than cleanly risk-on.",
+          "summary": "Last week's caution narrowed without disappearing. Stock-market volatility collapsed, the S&P 500 made fresh highs, oil fell, and high-yield credit spreads tightened to 2.6 percent. But the Federal Reserve held its rate at 3.5 to 3.75 percent on June 17 and its new projections lean toward a hike rather than a cut, while Bitcoin and Ether stayed weak, down sharply from last year's highs. A constructive tape with a hawkish Fed and a crypto bear market underneath is the definition of a mixed read. The readings below are directional only, not investment advice.",
+          "contrarian": "If crypto turns back up and liquidity stops draining while the Fed stays on hold, the undercurrent clears and the read tips cleanly risk-on; a hot inflation print would push it the other way."
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Jun 14",
+          "Jun 21"
+        ],
+        "series": {
+          "tech_policy": [
+            6,
+            6
+          ],
+          "ai_agents": [
+            14,
+            4
+          ],
+          "compute_energy": [
+            6,
+            0
+          ],
+          "markets": [
+            0,
+            0
+          ],
+          "labor_ai": [
+            1,
+            2
+          ],
+          "geopolitics": [
+            3,
+            0
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "Next Fed move: a 2026 rate hike (Kalshi)",
+          "dir": "up",
+          "detail": "The Fed held at 3.5 to 3.75 percent on June 17 in Kevin Warsh's first meeting as chair, but its dot plot flipped hawkish: nine of eighteen officials now project a rate hike before year-end, and they see PCE inflation at 3.6 percent. A market that spent the spring debating cuts swung toward a hike and toward roughly 57 percent odds of no cut at all in 2026.",
+          "url": "https://kalshi.com/markets/kxfedhike/next-fed-rate-hike/fedhike"
+        },
+        {
+          "market": "A US recession in 2026 (Kalshi)",
+          "dir": "down",
+          "detail": "Fell to an all-time low near 17 to 18 percent as the Iran war cooled and oil dropped about 10 percent. One of the most active macro markets, with the 'no' side now firmly dominant.",
+          "url": "https://kalshi.com/markets/kxrecssnber/recession/kxrecssnber-26"
+        }
+      ],
+      "commodities": {
+        "as_of": "week ending June 21",
+        "min_change": 4.0,
+        "summary": "Oil kept falling, with WTI down nearly 10 percent and Brent off about 8 percent, as the US-Iran memorandum let tankers keep moving through Hormuz and the war's fear premium drained away. The week's surprise was in the fields: corn jumped almost 8 percent and wheat more than 4 percent as a deepening drought across the southern Plains threatens the smallest US winter-wheat crop in decades. Silver slipped with the broader metals. With oil still flowing and the strait's closure so far rhetorical, energy looks soft into summer, while grain prices now hinge on Plains rainfall.",
+        "items": [
+          {
+            "name": "WTI crude",
+            "level": "$76.54",
+            "change": "-9.8%"
+          },
+          {
+            "name": "Brent crude",
+            "level": "$80.59",
+            "change": "-7.7%"
+          },
+          {
+            "name": "Corn",
+            "level": "$4.44/bu",
+            "change": "+7.9%"
+          },
+          {
+            "name": "Wheat",
+            "level": "$6.13/bu",
+            "change": "+4.5%"
+          },
+          {
+            "name": "Silver",
+            "level": "$64.91/oz",
+            "change": "-4.4%"
+          },
+          {
+            "name": "Gold",
+            "level": "$4,173",
+            "change": "-1.0%"
+          },
+          {
+            "name": "Copper",
+            "level": "$6.34/lb",
+            "change": "-1.5%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "$3.20",
+            "change": "+2.5%"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "Trust in the supply chain is getting expensive.",
+        "summary": "Beneath the model news ran a darker thread about whom and what to trust. The week's single most-upvoted story was a backdoor hidden in a LinkedIn job offer, a researcher found ten thousand GitHub repositories seeding Trojan malware, and the maintainer of curl said he will stop accepting vulnerability reports for a month, worn down by low-quality, often AI-generated submissions. As code and contact get cheaper to fake, the cost is shifting to verifying them.",
+        "links": [
+          {
+            "points": "1607",
+            "title": "A backdoor in a LinkedIn job offer",
+            "url": "https://roman.pt/posts/linkedin-backdoor/"
+          },
+          {
+            "points": "968",
+            "title": "I found 10k GitHub repositories distributing Trojan malware",
+            "url": "https://orchidfiles.com/github-repositories-distributing-malware/"
+          },
+          {
+            "points": "787",
+            "title": "Curl will not accept vulnerability reports during July 2026",
+            "url": "https://daniel.haxx.se/blog/2026/06/15/curl-summer-of-bliss/"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "agent memory and skills tooling",
+        "github": [
+          {
+            "title": "DeusData/codebase-memory-mcp",
+            "url": "https://github.com/DeusData/codebase-memory-mcp"
+          },
+          {
+            "title": "Panniantong/Agent-Reach",
+            "url": "https://github.com/Panniantong/Agent-Reach"
+          },
+          {
+            "title": "addyosmani/agent-skills",
+            "url": "https://github.com/addyosmani/agent-skills"
+          },
+          {
+            "title": "NVIDIA/SkillSpector",
+            "url": "https://github.com/NVIDIA/SkillSpector"
+          },
+          {
+            "title": "chopratejas/headroom",
+            "url": "https://github.com/chopratejas/headroom"
+          }
+        ]
+      },
+      "structural_regimes": [
+        {
+          "name": "Monetary policy: hikes back on the table",
+          "direction": "tightening bias returns",
+          "read": "The Federal Reserve held its rate at 3.5 to 3.75 percent on June 17, Kevin Warsh's first meeting as chair, but the new projections flipped hawkish: the median rate path for year-end rose to 3.8 percent from 3.4 percent in March, and the committee split nine for a hike, eight for no change, and one for a cut. Year-end PCE inflation was marked up to 3.6 percent from 2.7 percent. A market that spent the spring debating cuts is now pricing a possible hike. Higher-for-longer has quietly become higher-from-here.",
+          "basket": [
+            {
+              "metric": "Fed funds target (held June 17)",
+              "value": "3.50 to 3.75%",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm"
+            },
+            {
+              "metric": "Median year-end dot",
+              "value": "3.8%, up from 3.4% in March",
+              "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html"
+            },
+            {
+              "metric": "Committee split for 2026",
+              "value": "9 hike, 8 hold, 1 cut; year-end PCE seen 3.6%",
+              "url": "https://www.cnn.com/2026/06/17/economy/fed-rate-decision-june-kevin-warsh"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "AI sovereignty",
+          "direction": "contested (state vs. local)",
+          "read": "Last week's government takedown of a frontier model met its mirror image this week: a rush toward models that cannot be switched off remotely. GLM-5.2, an MIT-licensed open-weights model, took the lead on a public intelligence benchmark, developers reported swapping hosted assistants for local ones, and running capable models locally topped Hacker News. State control is hardening at the same time, with a June 2 executive order seeking federal pre-release review of top models, while nations from South Korea to France commit hundreds of billions to sovereign compute. Control and the open-weights escape hatch are intensifying together. No liquid market prices AI governance, so the regime is read from behavior, not odds.",
+          "basket": [
+            {
+              "metric": "Leading open-weights model (Artificial Analysis)",
+              "value": "GLM-5.2, MIT-licensed",
+              "url": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index"
+            },
+            {
+              "metric": "US federal pre-release model review (executive order, June 2)",
+              "value": "30-day pre-release access sought",
+              "url": ""
+            },
+            {
+              "metric": "Dedicated AI-governance markets on Kalshi or Polymarket",
+              "value": "thin to nonexistent",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Fragmentation",
+          "direction": "deepening, truce holding",
+          "read": "The US-China rare-earth standoff is paused, not resolved. Beijing's suspension of its October export controls runs only to November 2026, and at this week's Brussels summit EU leaders handed the Commission a mandate to toughen trade defenses against subsidized Chinese goods. China still controls about 90 percent of rare-earth processing, so the leverage is unchanged even while the controls are off. A pause with an expiry date, hardening posture on both sides, is the shape of this regime.",
+          "basket": [
+            {
+              "metric": "China's share of rare-earth processing",
+              "value": "about 90%",
+              "url": ""
+            },
+            {
+              "metric": "China's export-control suspension expiry",
+              "value": "around November 2026",
+              "url": ""
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "strengthening, dollar bounce",
+          "read": "The dollar firmed to a one-year high this week on the hawkish Fed, a counter to the long trend rather than a break in it. The structural picture is intact: the dollar's share of allocated reserves sat at 56.8 percent at the end of 2025 by the IMF's count, near a multi-decade low, and central banks bought 863 tonnes of gold in 2025, with a record 45 percent of reserve managers planning to add more. A firmer dollar in a risk-off-leaning week does not undo a multi-year reserve shift.",
+          "basket": [
+            {
+              "metric": "Dollar index (DXY)",
+              "value": "about 100.8, a one-year high",
+              "url": ""
+            },
+            {
+              "metric": "Dollar share of allocated reserves (IMF COFER, end-2025)",
+              "value": "56.8%",
+              "url": "https://data.imf.org/en/news/october%201%202025%20cofer"
+            },
+            {
+              "metric": "Central-bank gold buying, 2025",
+              "value": "863 tonnes; 45% of managers plan to add more",
+              "url": "https://www.gold.org/goldhub/research/central-bank-gold-reserves-survey-2026/perspectives-on-gold-reserves"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "The AI buildout",
+          "direction": "accelerating, medium timeline",
+          "read": "Forecasters still put the first publicly announced general AI system around 2031, with a low but rising chance within 2026, while the physical buildout grinds on. Switzerland's parliament voted this week to lift its ban on new nuclear plants, the kind of power-supply decision the buildout increasingly forces. The structural bet is that capability keeps compounding, which is what the watchlist is built on.",
+          "basket": [
+            {
+              "metric": "Transformative-AI median date (Metaculus)",
+              "value": "around 2031",
+              "url": "https://www.metaculus.com/questions/19356/transformative-ai-date/"
+            },
+            {
+              "metric": "Power-supply policy",
+              "value": "Switzerland lifts its ban on new nuclear plants",
+              "url": "https://www.bluewin.ch/en/news/switzerland/parliament-lifts-ban-on-new-nuclear-power-plants-3257535.html"
+            }
+          ],
+          "spotlight": false
+        }
+      ],
+      "watch_next": [
+        {
+          "when": "Through ~Aug 16",
+          "event": "The 60-day US-Iran ceasefire window",
+          "note": "Watch whether the Strait of Hormuz stays open in practice; tankers kept moving even after Iran's June 20 closure announcement."
+        },
+        {
+          "when": "July 29",
+          "event": "Next Federal Reserve meeting",
+          "note": "After the hawkish June dot plot, the market is now watching for the first hike rather than a cut."
+        },
+        {
+          "when": "Around November 2026",
+          "event": "China's rare-earth export-control pause expires",
+          "note": "The deadline hanging over both the EU-China and US-China truces; the Brussels summit was about getting ahead of it."
+        }
+      ],
+      "bsig_watch": [
+        {
+          "trend": "AI datacenter power demand",
+          "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected.",
+          "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers.",
+          "expressions": "Constellation, Vistra, and other power and nuclear operators.",
+          "bsig_ref": "AE-1 / AE-2 / AE-3",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "Inference costs reverse toward custom silicon",
+          "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips.",
+          "watch": "Rising prices for top models, and fast data-center growth at custom-chip makers.",
+          "expressions": "Marvell, Broadcom, and other custom-silicon makers.",
+          "bsig_ref": "AS-B",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "Sovereign GPU scramble",
+          "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
+          "watch": "Government announcements of national AI computing projects and the supply conflicts they create.",
+          "expressions": "Nvidia and national power and data-center projects.",
+          "bsig_ref": "AS-C",
+          "status": "event-driven",
+          "new": false
+        },
+        {
+          "trend": "Crypto leverage & dry powder",
+          "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
+          "watch": "Extreme futures leverage, or an unusually large stablecoin pile.",
+          "expressions": "Bitcoin, Ether, and Coinbase.",
+          "bsig_ref": "1E-1 / 1E-2",
+          "status": "watch (crypto risk-off)",
+          "new": false
+        },
+        {
+          "trend": "Resource-scarcity chains",
+          "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat and corn up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+          "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
+          "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
+          "bsig_ref": "AH-1 / AH-2",
+          "status": "watch",
+          "new": true
+        }
       ]
     }
   ],
@@ -455,7 +921,7 @@
       "expressions": "Constellation, Vistra, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",
-      "new": true
+      "new": false
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
@@ -464,7 +930,7 @@
       "expressions": "Marvell, Broadcom, and other custom-silicon makers.",
       "bsig_ref": "AS-B",
       "status": "active regime",
-      "new": true
+      "new": false
     },
     {
       "trend": "Sovereign GPU scramble",
@@ -482,16 +948,16 @@
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
       "status": "watch (crypto risk-off)",
-      "new": true
+      "new": false
     },
     {
       "trend": "Resource-scarcity chains",
-      "why_exponential": "Droughts and water limits ripple through several steps before they reach markets. Reduced hydroelectric output raises demand for natural gas, and water stress can slow chip fabrication. Each step tends to amplify the one before it.",
-      "watch": "Western US drought deep enough to cut hydroelectric power, and water limits that slow chip factories.",
-      "expressions": "Natural-gas prices and water-stressed chipmakers.",
+      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat and corn up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+      "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
+      "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
       "bsig_ref": "AH-1 / AH-2",
       "status": "watch",
-      "new": false
+      "new": true
     }
   ],
   "daily_counts": [

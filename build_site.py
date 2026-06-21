@@ -166,7 +166,7 @@ def page(title: str, inner: str) -> str:
 <style>{CSS}</style>
 </head><body><div class="wrap">
 {inner}
-<footer><a href="https://www.bwang.io/magikarp/#join">Join email list</a> &middot; <a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
+<footer><a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
 Market notes are directional only and are not investment advice.</footer>
 </div></body></html>
 """
@@ -223,12 +223,34 @@ def render_regime(label: str, r: dict, traj: str = None) -> str:
             f'{render_items(r.get("items"))}{render_links(r.get("links"))}{impl}</div>')
 
 
-def render_momentum(doc: dict) -> str:
-    m = regime_engine.momentum(doc)
+def _abs_index(doc: dict, iss: dict) -> int:
+    for i, it in enumerate(doc.get("issues", [])):
+        if it.get("id") == iss.get("id"):
+            return i
+    return len(doc.get("issues", [])) - 1
+
+
+def _weeks_in_state_asof(doc: dict, key: str, idx: int) -> int:
+    """weeks_in_state as of issue at absolute index idx (not just the latest)."""
+    issues = [i for i in doc.get("issues", [])[:idx + 1] if key in i.get("regimes", {})]
+    if not issues:
+        return 0
+    cur = issues[-1]["regimes"][key].get("state")
+    n = 0
+    for it in reversed(issues):
+        if it["regimes"][key].get("state") == cur:
+            n += 1
+        else:
+            break
+    return n
+
+
+def render_momentum(doc: dict, iss: dict) -> str:
+    m = iss.get("momentum")
     if not m:
         return ""
     ser, weeks = m["series"], m["weeks"]
-    iss = regime_engine.latest_issue(doc)
+    idx = _abs_index(doc, iss)
     covered = set(iss.get("regimes", {})) - {"markets"}   # only chart regimes we cover
     rows = []
     for k in sorted(ser, key=lambda k: -ser[k][-1]):
@@ -244,7 +266,7 @@ def render_momentum(doc: dict) -> str:
         st = iss.get("regimes", {}).get(k, {}).get("state")
         if st:
             label += (f' <span class="traj" style="display:inline;margin:0">'
-                      f'&middot; week {regime_engine.weeks_in_state(doc, k)} in {esc(st)}</span>')
+                      f'&middot; week {_weeks_in_state_asof(doc, k, idx)} in {esc(st)}</span>')
         rows.append(f'<tr><td>{label}</td><td class="v" style="font-weight:400;white-space:nowrap">'
                     f'<span style="color:var(--faint)">{prev} &rarr; </span>'
                     f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
@@ -308,9 +330,12 @@ def render_radar(iss: dict) -> str:
             f'{"".join(blocks)}</div>')
 
 
-def render_what_changed(doc: dict) -> str:
-    d = regime_engine.diff(doc)
-    if d["prev"].get("partial"):
+def render_what_changed(doc: dict, iss: dict) -> str:
+    idx = _abs_index(doc, iss)
+    if idx <= 0:
+        return ""
+    d = regime_engine.diff(doc, idx - 1, idx)
+    if not d["prev"] or d["prev"].get("partial"):
         return ""   # nothing meaningful to diff against the baseline issue
     cregs = d["cur"].get("regimes", {})
 
@@ -453,14 +478,14 @@ def _regime(doc, iss, key):
 
 def render_issue_page(doc: dict, iss: dict) -> str:
     reg = iss.get("regimes", {})
-    secs = [render_lede(iss), render_what_changed(doc), render_momentum(doc)]
+    secs = [render_lede(iss), render_what_changed(doc, iss), render_momentum(doc, iss)]
     # Act 1 — the tech world
     secs.append(render_act("The tech world"))
     secs.append(_regime(doc, iss, "tech_policy"))
     secs.append(_regime(doc, iss, "ai_agents"))
     if iss.get("across_sources"):
         secs.append(render_across_inline(iss["across_sources"]))   # GitHub note under agents
-    secs.append(render_watch(doc.get("bsig_watch", [])))
+    secs.append(render_watch(iss.get("bsig_watch") or doc.get("bsig_watch", [])))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     # Act 2 — the wider world
