@@ -874,7 +874,7 @@
         {
           "when": "June 22-28",
           "event": "OpenAI's GPT-5.6 launch window",
-          "note": "Prediction markets put roughly 83 percent odds on a release this week; the capability race resumes."
+          "note": "After the chief scientist signaled a meaningful upgrade, a release could land within days; the capability race resumes."
         },
         {
           "when": "June 29",
@@ -926,7 +926,7 @@
         },
         {
           "trend": "Resource-scarcity chains",
-          "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+          "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US hard-red-winter-wheat crop since the 1950s, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
           "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
           "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
           "bsig_ref": "AH-1 / AH-2",
@@ -936,7 +936,7 @@
         {
           "trend": "Device attestation as a gatekeeper",
           "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all. This week Volkswagen began silently blocking roughly half a million GrapheneOS users through Google's Play Integrity checks, the same week GrapheneOS shipped its Android 17 port, sharpening the conflict between hardened, user-controlled devices and ecosystems that lock them out.",
-          "watch": "More apps enforcing Play Integrity-style attestation, and the EU's June 29 'Chat Control' trilogue on mandatory message-scanning.",
+          "watch": "More apps enforcing Play Integrity-style attestation, and lawmakers mandating message-scanning or age verification.",
           "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
           "bsig_ref": "",
           "status": "watch (digital rights)",
@@ -961,7 +961,7 @@
           "new": false
         }
       ],
-      "lede": "This week the money moved toward scale even as the code moved toward the edges: a record space IPO and a wave of chip mergers on one side, a flight to local AI on the other, all under a global turn toward tighter money."
+      "lede": "This week the money moved toward scale even as the code moved toward the edges: a record space IPO and a flurry of chip dealmaking on one side, a flight to local AI on the other, all under a global turn toward tighter money."
     }
   ],
   "bsig_watch": [
@@ -1003,7 +1003,7 @@
     },
     {
       "trend": "Resource-scarcity chains",
-      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US winter-wheat crop in decades, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US hard-red-winter-wheat crop since the 1950s, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
       "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
       "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
       "bsig_ref": "AH-1 / AH-2",
@@ -1013,7 +1013,7 @@
     {
       "trend": "Device attestation as a gatekeeper",
       "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all. This week Volkswagen began silently blocking roughly half a million GrapheneOS users through Google's Play Integrity checks, the same week GrapheneOS shipped its Android 17 port, sharpening the conflict between hardened, user-controlled devices and ecosystems that lock them out.",
-      "watch": "More apps enforcing Play Integrity-style attestation, and the EU's June 29 'Chat Control' trilogue on mandatory message-scanning.",
+      "watch": "More apps enforcing Play Integrity-style attestation, and lawmakers mandating message-scanning or age verification.",
       "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
       "bsig_ref": "",
       "status": "watch (digital rights)",
