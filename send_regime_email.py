@@ -96,10 +96,12 @@ def _items_html(items):
         for it in items)
 
 
-def _section_html(label, title, paragraph, links=None, items=None, trajectory=None):
+def _section_html(label, title, paragraph, links=None, items=None, trajectory=None, implication=None):
     traj = (f'<p style="margin:0 0 12px; color:#9a9a9a; font-size:13px; font-style:italic; '
             f'font-family:{SERIF};">{esc(trajectory)}</p>' if trajectory else "")
     sub_mb = "2px" if trajectory else "14px"
+    impl = (f'<p style="margin:12px 0 0; color:#666; font-size:14px; line-height:1.6; '
+            f'font-style:italic; font-family:{SERIF};">{esc(implication)}</p>' if implication else "")
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
@@ -109,6 +111,7 @@ def _section_html(label, title, paragraph, links=None, items=None, trajectory=No
               <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(paragraph)}</p>
               {_items_html(items)}
               {_links_html(links)}
+              {impl}
             </td>
           </tr>
 """
@@ -149,10 +152,25 @@ def _momentum_html(state):
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
               <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
+              {_changed_block_html(state)}
               {_market_moves_html(ISSUE)}
             </td>
           </tr>
 """
+
+
+def _changed_block_html(state):
+    items = regime_engine.changed_items(state)
+    if not items:
+        return ""
+    lis = "".join(
+        f'<li style="margin:0 0 6px;"><strong>{esc(lbl)}:</strong> '
+        f'{esc(one).replace("-&gt;", "&rarr;")}</li>' for lbl, one in items)
+    return (
+        f'<p style="margin:18px 0 4px; color:#1a1a1a; font-size:15px; font-family:{SERIF};">'
+        f'<strong>What changed this week:</strong></p>'
+        f'<ul style="margin:0; padding:0 0 0 20px; font-size:15px; line-height:1.55; '
+        f'font-family:{SERIF}; color:#555;">{lis}</ul>')
 
 
 def _market_moves_html(issue):
@@ -365,12 +383,13 @@ def _regime_section(key):
     if not r:
         return ""
     return _section_html(DEFS.get(key, {}).get("label", key), r.get("headline", key),
-                         r.get("summary", ""), r.get("links"), r.get("items"))
+                         r.get("summary", ""), r.get("links"), r.get("items"),
+                         implication=r.get("implication"))
 
 
 def build_html():
     reg = ISSUE.get("regimes", {})
-    body = [_lede_html(), regime_engine.render_changed_html(STATE), _momentum_html(STATE)]
+    body = [_lede_html(), _momentum_html(STATE)]
 
     # Act 1 — the tech world
     body.append(_act_html("The tech world"))
@@ -471,6 +490,12 @@ def build_plain():
             tail = f", week {regime_engine.weeks_in_state(STATE, k)} in {st}" if st else ""
             out.append(f"  {DEFS.get(k, {}).get('label', k)}: {prev} -> {cur} ({arrow}){tail}")
         out.append("")
+        chg = regime_engine.changed_items(STATE)
+        if chg:
+            out.append("  What changed this week:")
+            for lbl, one in chg:
+                out.append(f"    - {lbl}: {one}")
+            out.append("")
         if ISSUE.get("market_moves"):
             out.append("  Markets that swung this week:")
             for mv in ISSUE["market_moves"]:
@@ -483,6 +508,8 @@ def build_plain():
         label = DEFS.get(key, {}).get("label", key).upper()
         refs = _items_text(r.get("items")) or _links_text(r.get("links")).rstrip()
         out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "", refs, ""]
+        if r.get("implication"):
+            out += [r["implication"], ""]
     if ISSUE.get("commodities"):
         c = ISSUE["commodities"]
         out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]

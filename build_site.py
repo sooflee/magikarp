@@ -270,11 +270,19 @@ def render_momentum(doc: dict, iss: dict) -> str:
         rows.append(f'<tr><td>{label}</td><td class="v" style="font-weight:400;white-space:nowrap">'
                     f'<span style="color:var(--faint)">{prev} &rarr; </span>'
                     f'<strong>{cur}</strong> <span style="color:{color}">{arr}</span></td></tr>')
+    chg = regime_engine.changed_items(doc, idx - 1, idx) if idx > 0 else []
+    chg_html = ""
+    if chg:
+        lis = "".join(
+            f'<li><strong>{esc(lbl)}:</strong> {esc(one).replace("-&gt;", "&rarr;")}</li>'
+            for lbl, one in chg)
+        chg_html = ('<p style="margin-top:18px"><strong>What changed this week:</strong></p>'
+                    f'<ul class="chg">{lis}</ul>')
     return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
             f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
             f'<p class="means">Number of the week&rsquo;s top Hacker News stories in '
             f'each regime we cover, this week against last.</p>'
-            f'<table class="mkt">{"".join(rows)}</table>{render_moves(iss)}</div>')
+            f'<table class="mkt">{"".join(rows)}</table>{chg_html}{render_moves(iss)}</div>')
 
 
 def render_moves(iss: dict) -> str:
@@ -328,39 +336,6 @@ def render_radar(iss: dict) -> str:
             '<p class="means">The slow currents beneath the week. Each is read from a basket of '
             'dated markets and hard data, not a single headline.</p>'
             f'{"".join(blocks)}</div>')
-
-
-def render_what_changed(doc: dict, iss: dict) -> str:
-    idx = _abs_index(doc, iss)
-    if idx <= 0:
-        return ""
-    d = regime_engine.diff(doc, idx - 1, idx)
-    if not d["prev"] or d["prev"].get("partial"):
-        return ""   # nothing meaningful to diff against the baseline issue
-    cregs = d["cur"].get("regimes", {})
-
-    def impl(k):
-        return cregs.get(k, {}).get("implication", "")
-
-    items = []
-    for key, label, a, b in d["changed"]:
-        items.append((f'<strong>{esc(label)}:</strong> {esc(a)} &rarr; <strong>{esc(b)}</strong>', impl(key)))
-    for key, label, st, sig in d["steady"]:
-        if sig:
-            items.append((f'<strong>{esc(label)}:</strong> {esc(", ".join(sig))}', impl(key)))
-    for key, label, st, head in d["new"]:
-        items.append((f'<strong>{esc(label)}:</strong> {esc(head)}', impl(key)))
-    if not items:
-        return ""
-    lis = ""
-    for one, im in items:
-        lis += f'<li>{one}'
-        if im:
-            lis += f'<br><span style="color:var(--muted)">{esc(im)}</span>'
-        lis += '</li>'
-    return (f'<div class="sec"><h2>What changed.</h2>'
-            f'<p class="sub">Since {esc(d["prev"]["date"])}</p>'
-            f'<ul class="chg">{lis}</ul></div>')
 
 
 def _chg_mag(chg):
@@ -478,7 +453,7 @@ def _regime(doc, iss, key):
 
 def render_issue_page(doc: dict, iss: dict) -> str:
     reg = iss.get("regimes", {})
-    secs = [render_lede(iss), render_what_changed(doc, iss), render_momentum(doc, iss)]
+    secs = [render_lede(iss), render_momentum(doc, iss)]
     # Act 1 — the tech world
     secs.append(render_act("The tech world"))
     secs.append(_regime(doc, iss, "tech_policy"))

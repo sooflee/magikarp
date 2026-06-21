@@ -105,34 +105,30 @@ def diff(state: dict, prev_idx: int = -2, cur_idx: int = -1) -> dict:
     return {"prev": prev, "cur": cur, "changed": changes, "new": new, "steady": steady}
 
 
+def changed_items(state: dict, prev_idx: int = -2, cur_idx: int = -1) -> list:
+    """Trimmed week-over-week changes (no implication paragraphs), folded into the
+    'Where the week's attention went' section. Each item is (label, oneliner).
+    Returns [] when the prior issue is the partial baseline."""
+    d = diff(state, prev_idx, cur_idx)
+    if not d["prev"] or d["prev"].get("partial"):
+        return []
+    out = []
+    for _key, label, a, b in d["changed"]:
+        out.append((label, f"{a} -> {b}"))
+    for _key, label, _st, sig in d["steady"]:
+        if sig:
+            out.append((label, ", ".join(sig)))
+    for _key, label, _st, head in d["new"]:
+        out.append((label, head))
+    return out
+
+
 # ---- text ----
 
 def render_text(state: dict) -> str:
-    d = diff(state)
-    cur, prev = d["cur"], d["prev"]
-    cregs = cur.get("regimes", {})
+    """Watchlist block only. The week-over-week change list is folded into the
+    attention section by the issue renderers (see changed_items)."""
     lines = []
-
-    if not prev.get("partial"):
-        lines += [f"WHAT CHANGED · issue {cur['id']} vs {prev['id']} "
-                  f"({prev['date']} -> {cur['date']})", ""]
-
-        def impl(key):
-            return cregs.get(key, {}).get("implication", "")
-
-        def emit(key, label, oneliner):
-            lines.append(f"  - {label}: {oneliner}")
-            if impl(key):
-                lines.append(f"      => {impl(key)}")
-
-        for key, label, a, b in d["changed"]:
-            emit(key, label, f"{a} -> {b}")
-        for key, label, st, sig in d["steady"]:
-            if sig:
-                emit(key, label, ", ".join(sig))
-        for key, label, st, head in d["new"]:
-            emit(key, label, head)
-        lines.append("")
     watch = state.get("bsig_watch", [])
     lines += ["", "EXPONENTIAL TRENDS TO WATCH", ""]
     for w in [w for w in watch if w.get("new")]:
