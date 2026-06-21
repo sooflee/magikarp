@@ -468,8 +468,8 @@ def _items_text(items):
 def build_plain():
     reg = ISSUE.get("regimes", {})
     out = ["THE CURRENT REGIME", f"Issue {ISSUE['id']} · {DATE_LABEL}",
-           "Sourced from the week's top posts on news.ycombinator.com, with claims",
-           "verified against primary reporting, and a market-regime read.", "",
+           "Sourced from the week's top posts on Hacker News and wider reporting,",
+           "claims verified against primary sources, with a market-regime read.", "",
            "-" * 74, ""]
     if ISSUE.get("lede"):
         out += [ISSUE["lede"], "", "-" * 74, ""]
