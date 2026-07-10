@@ -353,7 +353,7 @@ def render_commodities(c: dict) -> str:
         f'<td class="v" style="font-weight:400;color:'
         f'{"#b1300f" if it.get("change","").startswith("-") else "#1a7f4b"}">{esc(it.get("change",""))}</td></tr>'
         for it in c.get("items", []) if _chg_mag(it.get("change", "")) >= floor)
-    return (f'<div class="sec"><h2>Crude falls as the fear premium unwinds.</h2>'
+    return (f'<div class="sec"><h2>{esc(c.get("headline", "Crude falls as the fear premium unwinds."))}</h2>'
             f'<p class="sub">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>'
             f'<p>{esc(c.get("summary",""))}</p>'
             f'<table class="mkt">{rows}</table></div>')
@@ -395,12 +395,23 @@ MKT_FMT = {"curve_bp": lambda v: f"Steep (+{v} bp)", "vol": lambda v: f"Calm ({v
 MKT_SENSE = {"trend": "pos", "vol": "pos", "curve_bp": "pos", "gdpnow": "pos",
              "dollar": "neutral", "credit": "pos", "liquidity": "neg", "crypto": "neg"}
 MKT_COLOR = {"pos": "#1a7f4b", "neg": "#b1300f", "neutral": "#1a1a1a"}
+# Directional tokens color by value, so a down/risk-off week reads red and a
+# recovering week reads green. Unmatched values fall back to the per-key sense,
+# which keeps earlier issues rendering exactly as before.
+MKT_VALUE_SENSE = {"UP": "pos", "DOWN": "neg", "RISK-ON": "pos", "RISK-OFF": "neg",
+                   "AMPLE": "pos", "EXPANDING": "pos", "DRAINED": "neg",
+                   "DRAINING": "neg", "CONTRACTING": "neg"}
+
+
+def mkt_color(key, val) -> str:
+    sense = MKT_VALUE_SENSE.get(str(val).strip().upper(), MKT_SENSE.get(key, "neutral"))
+    return MKT_COLOR[sense]
 
 
 def render_markets(m: dict) -> str:
     sg = m.get("signals", {})
     rows = "".join(
-        f'<tr><td>{lbl}</td><td class="v" style="color:{MKT_COLOR[MKT_SENSE.get(k,"neutral")]}">'
+        f'<tr><td>{lbl}</td><td class="v" style="color:{mkt_color(k, sg[k])}">'
         f'{esc(MKT_FMT.get(k, lambda v: v)(sg[k]))}</td></tr>'
         for k, lbl in MKT_ORDER if k in sg)
     summary = f"<p>{esc(m['summary'])}</p>" if m.get("summary") else ""

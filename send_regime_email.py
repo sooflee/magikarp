@@ -66,6 +66,17 @@ MKT_FMT = {"vol": lambda v: f"Calm ({v})", "curve_bp": lambda v: f"Steep (+{v} b
 MKT_SENSE = {"trend": "pos", "vol": "pos", "curve_bp": "pos", "gdpnow": "pos",
              "dollar": "neutral", "credit": "pos", "liquidity": "neg", "crypto": "neg"}
 MKT_COLOR = {"pos": "#1a7f4b", "neg": "#b1300f", "neutral": "#1a1a1a"}
+# Directional tokens color by value (a down/risk-off week reads red, a recovering
+# week green); unmatched values fall back to the per-key sense, so earlier issues
+# render exactly as before.
+MKT_VALUE_SENSE = {"UP": "pos", "DOWN": "neg", "RISK-ON": "pos", "RISK-OFF": "neg",
+                   "AMPLE": "pos", "EXPANDING": "pos", "DRAINED": "neg",
+                   "DRAINING": "neg", "CONTRACTING": "neg"}
+
+
+def mkt_color(key, val) -> str:
+    sense = MKT_VALUE_SENSE.get(str(val).strip().upper(), MKT_SENSE.get(key, "neutral"))
+    return MKT_COLOR[sense]
 
 
 def esc(s) -> str:
@@ -263,7 +274,7 @@ def _market_html(m):
         if key not in sg:
             continue
         val = MKT_FMT.get(key, lambda v: v)(sg[key])
-        color = MKT_COLOR[MKT_SENSE.get(key, "neutral")]
+        color = mkt_color(key, sg[key])
         rows.append(
             f'<tr><td style="padding:9px 2px; border-bottom:1px solid #ededed; '
             f'font-family:{SERIF}; font-size:15px; color:#666;">{label}</td>'
@@ -307,7 +318,7 @@ def _commodities_html(c):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Crude falls as the fear premium unwinds.</h2>
+              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(c.get("headline", "Crude falls as the fear premium unwinds."))}</h2>
               <p style="margin:0 0 14px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>
               <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(c.get("summary",""))}</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>

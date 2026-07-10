@@ -953,6 +953,1224 @@
         }
       ],
       "lede": "This week the money moved toward scale even as the code moved toward the edges: a record space IPO and a flurry of chip dealmaking on one side, a flight to local AI on the other, all under a global turn toward tighter money."
+    },
+    {
+      "id": "03",
+      "week": "2026-06-22/2026-06-28",
+      "date": "2026-06-28",
+      "date_label": "June 22–28, 2026",
+      "partial": false,
+      "lede": "The week's dominant question was who gets to prove they are, and to whom: the US government took a direct hand in who may use a frontier model, an age-verification wave spread across the web, and the model race reopened through cheap open weights.",
+      "regimes": {
+        "tech_policy": {
+          "state": "state-capture",
+          "headline": "Identity checks arrive at the door of the internet.",
+          "summary": "This week the loudest thread was identity as a gate. The US government took a direct hand in access to frontier AI: OpenAI's new model, GPT-5.6, codenamed Sol, was reviewed by the Commerce Department before launch and made available at first to only about twenty approved organizations. In parallel, an age-verification wave spread across US states, the European Union, and Australia, requiring face scans or identity documents to reach ordinary websites, while EU negotiators met behind closed doors over mandatory scanning of private messages. The connective tissue is proof of identity as the price of entry.",
+          "implication": "OpenAI launched GPT-5.6 on June 26 to roughly twenty organizations individually vetted by the US Commerce Department, the first time the federal government has decided in advance who may use a frontier model.",
+          "evidence": [
+            "GPT-5.6 (Sol) launched June 26 to ~20 government-vetted organizations; the access limits were lifted July 8",
+            "Commerce's Center for AI Standards and Innovation ran the review, citing coding, biology, and cybersecurity risks",
+            "Age-verification laws spread across US states, the EU (one compliant solution per member state by end-2026), and Australia",
+            "The EU's fifth closed-door 'Chat Control' negotiation on June 29 deadlocked over scanning encrypted messages"
+          ],
+          "links": [
+            {
+              "title": "OpenAI limits GPT-5.6 to partners approved by the US government (CNBC)",
+              "url": "https://www.cnbc.com/2026/06/26/openai-limits-new-ai-models-to-trusted-partners-request-us-government.html"
+            },
+            {
+              "title": "The 'papers, please' era of the internet will decimate your privacy (FIRE)",
+              "url": "https://expression.fire.org/p/the-papers-please-era-of-the-internet"
+            },
+            {
+              "title": "MEPs and the closed-door revival of EU message scanning (The Register)",
+              "url": "https://www.theregister.com/security/2026/07/09/meps-fail-to-prevent-chat-control-snoopfest-revival/5269379"
+            }
+          ],
+          "contrarian": "The gate has an escape hatch. The same week, an open-weights model beat the frontier labs on a security benchmark, and the government limits on GPT-5.6 were lifted within two weeks, so control and its workarounds are hardening together rather than one beating the other."
+        },
+        "ai_agents": {
+          "state": "capability-race",
+          "headline": "The model race reopens, and it runs through open weights.",
+          "summary": "After a quiet stretch, the capability contest returned with force, and its sharpest edge came from open weights. A Chinese open-weights model, GLM 5.2 from Zhipu AI, beat Anthropic's Claude on a published security benchmark at a fraction of the cost. OpenAI unveiled its first custom inference chip, built with Broadcom, to cut the price of running models. And Anthropic told US officials that Alibaba had run the largest model-extraction campaign it has ever seen. The race is no longer only about who has the best model, but who can copy it, cheapen it, and gate it.",
+          "implication": "Anthropic told US officials that operators tied to Alibaba ran about 28.8 million exchanges through roughly 25,000 fraudulent accounts between April 22 and June 5 to extract its models, which it called the largest known distillation attack against it.",
+          "evidence": [
+            "GLM 5.2 (Zhipu AI, MIT license) beat Claude on Semgrep's IDOR security benchmark, about 39% versus 28% F1, at roughly $0.17 per vulnerability found",
+            "OpenAI unveiled 'Jalapeno,' its first custom inference chip, co-designed with Broadcom, on June 24",
+            "Anthropic accused Alibaba of running ~28.8 million exchanges through ~25,000 fake accounts to distill its models"
+          ],
+          "links": [
+            {
+              "points": "1113",
+              "title": "GLM 5.2 beats Claude in our cyber benchmarks (Semgrep)",
+              "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
+            },
+            {
+              "points": "831",
+              "title": "OpenAI unveils its first custom chip, built by Broadcom (TechCrunch)",
+              "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/"
+            },
+            {
+              "points": "813",
+              "title": "Anthropic says Alibaba illicitly extracted its model capabilities (CNBC)",
+              "url": "https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html"
+            }
+          ],
+          "contrarian": "Distillation cuts both ways. If open-weights models can cheaply match the frontier, the labs' moat is thin; if the labs are right that copying is theft, the next fight is legal rather than technical."
+        },
+        "geopolitics": {
+          "state": "elevated",
+          "headline": "The friction holds, loosely.",
+          "summary": "The week's conflicts simmered rather than broke. Ukraine launched one of its largest drone assaults of the war, striking a dozen Russian regions and occupied Crimea and pressing its campaign against Russian oil logistics. The US-Iran memorandum signed on June 17 frayed within days over nuclear inspections and the Strait of Hormuz, with the United Nations moving to evacuate some eleven thousand sailors stranded there even as tankers kept moving. In the Pacific, China's aircraft carrier returned home from a long deployment as Beijing signaled it would make maritime surveys near Taiwan routine.",
+          "implication": "Ukraine struck a dozen Russian regions and occupied Crimea in one of its largest drone assaults of the war around June 25-26, while the United Nations began evacuating roughly eleven thousand sailors stranded in the Strait of Hormuz.",
+          "items": [
+            {
+              "title": "Ukraine launches one of its largest drone assaults of the war (NPR)",
+              "url": "https://www.npr.org/2026/06/26/nx-s1-5872256/russia-ukraine-war-drone-strikes",
+              "comment": "The economic-attrition strategy against Russian energy logistics keeps maturing, hitting refineries and fuel supply far from the front."
+            },
+            {
+              "title": "US and Iran at odds over inspections and Hormuz days after the memorandum (Al Jazeera)",
+              "url": "https://www.aljazeera.com/news/liveblog/2026/6/24/iran-war-live-trump-tehran-at-odds-over-nuclear-inspections-hormuz",
+              "comment": "The June 17 memorandum is holding only loosely, which is one reason oil kept sliding even amid the friction."
+            },
+            {
+              "title": "China's Liaoning carrier returns to Qingdao after a long Pacific deployment (AEI)",
+              "url": "https://www.aei.org/articles/china-taiwan-update-june-26-2026/",
+              "comment": "Beijing is turning pressure near Taiwan from episodic drills into a routine presence."
+            }
+          ],
+          "contrarian": "If the Iran memorandum survives its sixty-day window and Ukraine's deep strikes draw no wider Russian response, the friction stays contained; a single miscalculation in Hormuz would change that quickly."
+        },
+        "markets": {
+          "state": "risk-off",
+          "headline": "A broad de-risking as the spring rally pauses.",
+          "signals": {
+            "trend": "DOWN",
+            "vol": 18.4,
+            "curve_bp": 71,
+            "dollar": "Firm (101.4)",
+            "crypto": "RISK-OFF"
+          },
+          "implication": "US stocks fell about two percent on the week while crude dropped nearly ten percent, silver more than ten percent, and Bitcoin about six percent, a rare stretch in which equities, commodities, and crypto declined together.",
+          "summary": "For the first time in weeks the tape turned down across the board. US stocks fell about two percent, expected volatility rose from a low base, and the assets that had led the spring retreated together: crude dropped nearly ten percent as the Iran fear premium drained, silver fell more than ten percent, and Bitcoin and Ether slid. The dollar firmed to a one-year high as money moved to safety. With the Federal Reserve still leaning toward a hike rather than a cut, a down week in stocks, commodities, and crypto at once is a clean risk-off reading. The signals below are directional only, not investment advice.",
+          "contrarian": "The de-risking was orderly rather than a panic. Volatility rose from a low base and credit spreads barely moved, so this reads as a pause in a strong tape rather than the start of a downturn."
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Jun 21",
+          "Jun 28"
+        ],
+        "series": {
+          "tech_policy": [
+            6,
+            8
+          ],
+          "ai_agents": [
+            4,
+            7
+          ],
+          "compute_energy": [
+            0,
+            2
+          ],
+          "geopolitics": [
+            0,
+            3
+          ],
+          "labor_ai": [
+            2,
+            1
+          ],
+          "markets": [
+            0,
+            1
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "OpenAI ships GPT-5.6 in June (Polymarket)",
+          "dir": "up",
+          "detail": "Prediction markets had put strong odds on a June launch, and OpenAI shipped GPT-5.6 on June 26, resolving the question. The twist was distribution rather than timing: access was gated at first to about twenty organizations approved by the US government.",
+          "url": "https://www.cnbc.com/2026/06/26/openai-limits-new-ai-models-to-trusted-partners-request-us-government.html"
+        }
+      ],
+      "commodities": {
+        "as_of": "week ending June 26",
+        "min_change": 4.0,
+        "headline": "Crude and silver lead a broad commodity sell-off.",
+        "summary": "Commodities fell with everything else. Crude kept sliding as the Iran fear premium drained away, with WTI down nearly ten percent and Brent close behind. Silver led the metals lower, off more than ten percent, as the risk-off turn hit precious and industrial metals alike, and gold slipped even in a week that usually favors it. Wheat gave back much of the prior week's drought spike. The broad decline matched the week's de-risking across stocks and crypto, and it leaves energy looking soft into summer.",
+        "items": [
+          {
+            "name": "WTI crude",
+            "level": "$69.23",
+            "change": "-9.6%"
+          },
+          {
+            "name": "Brent crude",
+            "level": "$71.99",
+            "change": "-9.8%"
+          },
+          {
+            "name": "Silver",
+            "level": "$59.22/oz",
+            "change": "-10.6%"
+          },
+          {
+            "name": "Wheat",
+            "level": "$5.78",
+            "change": "-4.5%"
+          },
+          {
+            "name": "Copper",
+            "level": "$6.14/lb",
+            "change": "-3.7%"
+          },
+          {
+            "name": "Gold",
+            "level": "$4,079",
+            "change": "-3.4%"
+          },
+          {
+            "name": "Corn",
+            "level": "$4.13",
+            "change": "-1.1%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "$3.23",
+            "change": "-0.1%"
+          },
+          {
+            "name": "Soybeans",
+            "level": "$11.26",
+            "change": "+0.3%"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "As the gates go up, developers reach for tools they can own.",
+        "summary": "Beneath the identity-and-access news ran a quiet migration toward software you hold rather than rent. Deno shipped a desktop runtime, the week's most-discussed AI question was whether a local model can replace a hosted one for daily work, and on-device projects from swipe keyboards to self-hosted apps kept climbing. As access to the frontier gets gated and metered, the counter-move is to run smaller, open tools locally, where no one can revoke the key.",
+        "links": [
+          {
+            "points": "1122",
+            "title": "Deno Desktop",
+            "url": "https://deno.com/blog/desktop"
+          },
+          {
+            "points": "708",
+            "title": "FUTO Swipe: a new on-device swipe typing model",
+            "url": "https://swipe.futo.org/"
+          }
+        ]
+      },
+      "watch_next": [
+        {
+          "when": "Early July",
+          "event": "GPT-5.6 public release",
+          "note": "After launching to about twenty vetted organizations, OpenAI signaled a wider rollout within days, which would end the government access limits."
+        },
+        {
+          "when": "July 4",
+          "event": "US wind and solar tax-credit cliff",
+          "note": "Projects must start construction by this date to keep the federal production and investment credits, a hard deadline for Western clean-energy developers."
+        },
+        {
+          "when": "July 7-9",
+          "event": "EU Parliament votes on message scanning",
+          "note": "After the closed-door talks deadlocked, the fight moves to a parliamentary vote on extending the interim scanning rule."
+        },
+        {
+          "when": "July 28-29",
+          "event": "Next Federal Reserve meeting",
+          "note": "With the Fed's dot plot leaning toward a hike and the ECB already tightening, the watch is for the first increase."
+        }
+      ],
+      "bsig_watch": [
+        {
+          "trend": "AI datacenter power demand",
+          "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected.",
+          "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers.",
+          "expressions": "Constellation, Vistra, and other power and nuclear operators.",
+          "bsig_ref": "AE-1 / AE-2 / AE-3",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "Inference costs reverse toward custom silicon",
+          "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips.",
+          "watch": "Rising prices for top models, and fast data-center growth at custom-chip makers.",
+          "expressions": "Marvell, Broadcom, and other custom-silicon makers.",
+          "bsig_ref": "AS-B",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "Sovereign GPU scramble",
+          "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
+          "watch": "Government announcements of national AI computing projects and the supply conflicts they create.",
+          "expressions": "Nvidia and national power and data-center projects.",
+          "bsig_ref": "AS-C",
+          "status": "event-driven",
+          "new": false
+        },
+        {
+          "trend": "Crypto leverage & dry powder",
+          "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
+          "watch": "Extreme futures leverage, or an unusually large stablecoin pile.",
+          "expressions": "Bitcoin, Ether, and Coinbase.",
+          "bsig_ref": "1E-1 / 1E-2",
+          "status": "watch (crypto risk-off)",
+          "new": false
+        },
+        {
+          "trend": "Resource-scarcity chains",
+          "why_exponential": "Droughts and heat ripple through several steps before they reach markets, and each step amplifies the last. Water stress that hits crops can also slow chip fabrication and cut hydroelectric power, so one shock shows up in grain, gas, and silicon at once.",
+          "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
+          "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
+          "bsig_ref": "AH-1 / AH-2",
+          "status": "watch",
+          "new": false
+        },
+        {
+          "trend": "Identity gates and device attestation",
+          "why_exponential": "Proof of who you are, and of what device you run, is becoming the price of entry to ordinary services. This week the US government vetted who could use a frontier model, an age-verification wave spread across states and the EU, and negotiators met over mandatory message scanning.",
+          "watch": "More age-verification and message-scanning laws, and more services demanding cryptographic device attestation.",
+          "expressions": "Age-verification vendors, Google Play Integrity, and message-scanning law.",
+          "bsig_ref": "",
+          "status": "escalating (digital rights)",
+          "new": true
+        },
+        {
+          "trend": "Robotaxis hit the regulation wall",
+          "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls. Waymo recalled about 3,900 robotaxis this week after thirteen cases of cars driving into freeway construction zones.",
+          "watch": "More NHTSA recalls and freeway-service limits as fleets expand.",
+          "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
+          "bsig_ref": "",
+          "status": "watch (autonomy)",
+          "new": false
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Global monetary tightening",
+          "direction": "synchronized, the cutting cycle is over",
+          "read": "The turn toward tighter money hardened. The European Central Bank raised rates on June 17 for the first time since 2023, lifting its deposit rate to 2.25 percent, and the US Federal Reserve held at 3.50 to 3.75 percent while dropping the expectation of a cut this year. With the Bank of Japan already at its highest rate since the 1990s, the major central banks are leaning the same way, driven by the same sticky, energy-fed inflation.",
+          "basket": [
+            {
+              "metric": "ECB deposit rate",
+              "value": "2.25%, first hike since 2023 (June 17)",
+              "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html"
+            },
+            {
+              "metric": "US Fed funds rate",
+              "value": "held at 3.50-3.75%, 2026 cut removed from the dots",
+              "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html"
+            },
+            {
+              "metric": "Bank of Japan policy rate",
+              "value": "1.00%, highest since 1995",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Compute hits the power and memory wall",
+          "direction": "constraint binding, regulators stepping in",
+          "read": "The binding constraint on AI stayed electricity, not chips. US energy regulators ordered grid operators to fast-track how data centers connect, aiming to clear large requests within about ninety days, and the largest US grid operator added an advisory to warn when supply could tighten even without extreme weather. Analysts see global data-center power demand rising more than a quarter this year. Capacity is now rationed by the grid.",
+          "basket": [
+            {
+              "metric": "FERC order",
+              "value": "grid operators told to fast-track data-center interconnections (~90 days)",
+              "url": "https://techcrunch.com/2026/06/18/ai-data-centers-just-got-a-government-mandated-fast-lane-to-the-grid/"
+            },
+            {
+              "metric": "PJM Interconnection",
+              "value": "added a capacity advisory as AI demand strains supply (June 24)",
+              "url": "https://www.bloomberg.com/news/articles/2026-06-24/us-largest-grid-updates-emergency-plan-as-ai-stretches-capacity"
+            },
+            {
+              "metric": "Global data-center power demand",
+              "value": "seen up ~26% in 2026, to ~132 GW (Gartner)",
+              "url": "https://www.gartner.com/en/newsroom/press-releases/2026-06-10-gartner-says-data-center-electricity-demand-to-grow-26-percent-in-2026"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Labor and AI displacement",
+          "direction": "AI now the top stated reason for cuts",
+          "read": "For a fourth straight month, AI was the single largest stated reason for US job cuts. Technology firms announced roughly 139,000 cuts in the first half of 2026, up more than eighty percent from a year earlier, and Oracle disclosed about twenty-one thousand cuts over the prior year. The headline labor market is still standing, so this remains a white-collar and tech-sector squeeze rather than an economy-wide downturn.",
+          "basket": [
+            {
+              "metric": "AI as stated layoff reason",
+              "value": "top reason for US job cuts, fourth straight month",
+              "url": "https://www.techtimes.com/articles/319588/20260703/ai-leads-us-job-cuts-record-4th-month-tech-claims-31-h1-layoffs.htm"
+            },
+            {
+              "metric": "Tech layoffs, H1 2026",
+              "value": "~139,000 announced, up ~83% year over year",
+              "url": "https://www.hrdive.com/news/tech-layoffs-surge-83percent-h1-2026-challenger-ai-disruption/824320/"
+            },
+            {
+              "metric": "Oracle",
+              "value": "~21,000 cuts disclosed over 12 months (June 22 filing)",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "AI sovereignty",
+          "direction": "contested (state vs. open)",
+          "read": "The government gated access to GPT-5.6 while a Chinese open-weights model beat the frontier labs on a benchmark; state control and the open-weights escape hatch keep intensifying together.",
+          "basket": [
+            {
+              "metric": "Leading open-weights model",
+              "value": "GLM 5.2 (MIT-licensed), from Zhipu AI",
+              "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Energy majors retreat from the transition",
+          "direction": "back to hydrocarbons",
+          "read": "Western oil majors keep steering capital back to oil and gas, and a US tax-credit cliff for wind and solar at the start of July adds to the squeeze on Western clean-energy projects.",
+          "basket": [
+            {
+              "metric": "US wind and solar tax credits",
+              "value": "begin-construction cliff around July 4",
+              "url": ""
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "strengthening, dollar bounce",
+          "read": "The dollar firmed to a one-year high this week as money moved to safety, a counter to the long reserve-diversification trend rather than a break in it.",
+          "basket": [
+            {
+              "metric": "Dollar share of global FX reserves (IMF, end-2025)",
+              "value": "56.8%",
+              "url": "https://data.imf.org/en/datasets/IMF.STA:COFER"
+            }
+          ],
+          "spotlight": false
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "week": "2026-06-29/2026-07-05",
+      "date": "2026-07-05",
+      "date_label": "June 29 – July 5, 2026",
+      "partial": false,
+      "lede": "A quieter week turned on a single reversal: the US lifted the export controls that had pulled two frontier models offline, even as the machinery of digital identity kept tightening underneath.",
+      "regimes": {
+        "tech_policy": {
+          "state": "consolidation",
+          "headline": "The government reverses course on frontier-model access.",
+          "summary": "The week's pivot was a reversal. Eighteen days after ordering Anthropic to suspend foreign access to its most capable models, the Commerce Department lifted the export controls on Claude Fable 5 and Mythos 5, and the company began restoring access the next day. The retreat came after Anthropic agreed to detect and address security risks and redeployed the models with new safeguards. Underneath the headline, the slower machinery of digital identity kept advancing: Virginia banned the sale of precise location data, Spain moved to bar state firms from Palantir, and Europe's digital-ID wallets were shown to lean on Google and Apple.",
+          "implication": "The Commerce Department lifted its export controls on Claude Fable 5 and Mythos 5 after an eighteen-day freeze, and Anthropic said it would begin restoring access the following day.",
+          "evidence": [
+            "Commerce lifted the export controls on Claude Fable 5 and Mythos 5 (reported June 30) after an 18-day freeze",
+            "The reversal followed Anthropic agreeing to proactively detect and address security risks",
+            "Virginia's ban on selling precise geolocation data took effect July 1, the third US state to do so",
+            "Spain directed state-backed firms to stop new contracts with Palantir over national-security concerns"
+          ],
+          "links": [
+            {
+              "title": "Trump administration lifts export controls on Claude Fable 5 and Mythos 5 (CNBC)",
+              "url": "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html"
+            },
+            {
+              "title": "Virginia bans the sale of precise geolocation data (The Record)",
+              "url": "https://therecord.media/virginia-enacts-ban-on-precise-geolocation-data"
+            },
+            {
+              "title": "European digital ID wallets rely on Google and Apple attestation (Waag)",
+              "url": "https://waag.org/en/article/european-digital-id-wallets-are-gift-google-and-apple/"
+            }
+          ],
+          "contrarian": "The reversal looks like a win for open access, but it was granted on conditions: the models came back with new classifiers and a promise to police them, so the government kept the leverage it established, and simply chose not to use it this time."
+        },
+        "ai_agents": {
+          "state": "capability-race",
+          "headline": "New models ship as trust in the tools gets scrutinized.",
+          "summary": "The releases kept coming while users looked harder at what the tools do quietly. Anthropic shipped Claude Sonnet 5 as its new default, priced below the frontier, and Alibaba's Qwen 3.6 27B drew attention as a capable model small enough to run locally. But the week's most-read story was a researcher's finding that Claude Code had been quietly altering a line in its own prompt to fingerprint requests from Chinese AI labs and proxies. Anthropic called it an experiment and shipped a version that removed it. The tools are getting better and cheaper, and also more closely watched.",
+          "implication": "Anthropic shipped Claude Sonnet 5 on June 30 at introductory pricing of two dollars per million input tokens and ten per million output, and separately removed code from Claude Code that a researcher showed was fingerprinting requests by timezone and proxy.",
+          "evidence": [
+            "Claude Sonnet 5 launched June 30 as the default for free and paid tiers, at $2 / $10 per million tokens through August",
+            "A researcher found Claude Code altered its prompt to fingerprint Chinese-AI-lab and proxy traffic; Anthropic called it an experiment and removed it",
+            "Alibaba's Qwen 3.6 27B (Apache 2.0, 256K context) drew attention as a local-development sweet spot"
+          ],
+          "links": [
+            {
+              "points": "2444",
+              "title": "Claude Code is steganographically marking requests (thereallo.dev)",
+              "url": "https://thereallo.dev/blog/claude-code-prompt-steganography"
+            },
+            {
+              "points": "1265",
+              "title": "Claude Sonnet 5 (Anthropic)",
+              "url": "https://www.anthropic.com/news/claude-sonnet-5"
+            },
+            {
+              "points": "1192",
+              "title": "Qwen 3.6 27B is the sweet spot for local development",
+              "url": "https://qwen.ai/blog?id=qwen3.6-27b"
+            }
+          ],
+          "contrarian": "Cheaper, more capable models that also run locally are exactly what erodes the frontier labs' pricing power, so the same week that showcased the labs' reach also showed why their moat is narrowing."
+        },
+        "geopolitics": {
+          "state": "elevated",
+          "headline": "Talks stall as the strikes continue.",
+          "summary": "Diplomacy stalled while the fighting did not. US-Iran talks in Doha went nowhere, with Tehran denying that technical meetings were even scheduled, leaving the June memorandum in limbo. Russia hit Kyiv with an eleven-hour barrage of drones and missiles that killed dozens and wounded more than a hundred, one of the heaviest attacks on the capital of the war. In Gaza, Israeli forces took more territory and killed more people in June than in any earlier month of the year. And in Brussels, Belgian police removed two accredited journalists at a US embassy event, a small sign of how far friction now reaches.",
+          "implication": "Russia struck Kyiv with roughly seventy-four missiles and nearly five hundred drones over about eleven hours overnight on July 2, killing at least thirty-one people and wounding more than a hundred.",
+          "items": [
+            {
+              "title": "Russia hits Kyiv with an 11-hour drone and missile barrage (Al Jazeera)",
+              "url": "https://www.aljazeera.com/news/2026/7/3/russian-advance-collapses-in-ukraine-as-anxiety-rises-in-moscow",
+              "comment": "One of the heaviest attacks on the capital of the war, even as Russia's own front-line advance stalled."
+            },
+            {
+              "title": "US-Iran talks in Doha stall as Tehran holds firm (CNN)",
+              "url": "https://www.cnn.com/2026/07/01/world/live-news/iran-war-trump",
+              "comment": "The June 17 memorandum is drifting toward its deadline without an implementing deal, the fragile calm that kept oil soft."
+            },
+            {
+              "title": "US ambassador had Belgian police stop our reporting (The European Correspondent)",
+              "url": "https://europeancorrespondent.com/en/r/the-us-ambassador-had-belgian-police-stop-our-reporting",
+              "comment": "Two accredited journalists were removed and questioned at a US event in Brussels, a friction between state power and the press that is spreading beyond the obvious flashpoints."
+            }
+          ],
+          "contrarian": "Russia's battlefield advance has stalled even as its strikes on cities intensify, so the war may be settling into an attritional stalemate rather than tipping decisively either way."
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "A sharp rebound, led by the assets that fell hardest.",
+          "signals": {
+            "trend": "UP",
+            "vol": 16.2,
+            "curve_bp": 82,
+            "dollar": "Softer (100.9)",
+            "crypto": "RISK-ON"
+          },
+          "implication": "US stocks rose about two percent to a fresh record and expected volatility fell back toward its lows, while Ether jumped nearly thirteen percent and Bitcoin about five percent, reversing much of the prior week's decline.",
+          "summary": "The prior week's de-risking reversed almost as fast as it arrived. US stocks rose about two percent to a new record, expected volatility fell back toward its lows, and the assets that had led the sell-off led the bounce: Ether jumped nearly thirteen percent and Bitcoin about five percent. Oil steadied near sixty-nine dollars and the dollar eased. But the Federal Reserve is still leaning toward a hike, and one strong week after one weak week, with the yield curve steepening, leaves the read recovering rather than cleanly risk-on. The signals below are directional only, not investment advice.",
+          "contrarian": "A one-week round trip in both directions is a sign of a market without conviction. If the Fed confirms a hike at the end of July, the rebound could stall as fast as it came."
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Jun 28",
+          "Jul 5"
+        ],
+        "series": {
+          "tech_policy": [
+            8,
+            5
+          ],
+          "ai_agents": [
+            7,
+            5
+          ],
+          "compute_energy": [
+            2,
+            1
+          ],
+          "geopolitics": [
+            3,
+            2
+          ],
+          "labor_ai": [
+            1,
+            1
+          ],
+          "markets": [
+            1,
+            1
+          ]
+        }
+      },
+      "market_moves": [],
+      "commodities": {
+        "as_of": "week ending July 3",
+        "min_change": 2.0,
+        "headline": "Oil finds a floor; grains and silver firm.",
+        "summary": "After two weeks of steep declines, energy steadied. Crude barely moved as the market found a floor near sixty-nine dollars, with the war premium already drained. The week's action shifted to grains, which firmed as corn rose about three percent, and to silver, up more than two percent as metals stabilized. It was a quiet week for raw materials, the calm between the war's price spike and whatever comes next, and a backdrop that let stocks and crypto do the moving instead.",
+        "items": [
+          {
+            "name": "Corn",
+            "level": "$4.25",
+            "change": "+3.0%"
+          },
+          {
+            "name": "Silver",
+            "level": "$60.64/oz",
+            "change": "+2.4%"
+          },
+          {
+            "name": "Wheat",
+            "level": "$5.91",
+            "change": "+2.1%"
+          },
+          {
+            "name": "Gold",
+            "level": "$4,113",
+            "change": "+0.8%"
+          },
+          {
+            "name": "Soybeans",
+            "level": "$11.32",
+            "change": "+0.5%"
+          },
+          {
+            "name": "Copper",
+            "level": "$6.11/lb",
+            "change": "-0.4%"
+          },
+          {
+            "name": "WTI crude",
+            "level": "$68.69",
+            "change": "-0.8%"
+          },
+          {
+            "name": "Brent crude",
+            "level": "$71.80",
+            "change": "-0.3%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "$3.20",
+            "change": "-1.1%"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "You do not own what you paid for.",
+        "summary": "A thread about digital ownership ran through the week's reading. Sony deleted five hundred and fifty-one films that PlayStation owners had bought, Sony confirmed physical disc production for new PlayStation games would end in early 2028, and a proposed new top-level domain, dot-self, was pitched to make self-hosting easier. The common thread is that a purchase increasingly buys a revocable license rather than a durable thing, and the counter-move, again, is to hold your own copy.",
+        "links": [
+          {
+            "points": "789",
+            "title": "Physical disc production ending in January 2028 for new PlayStation games",
+            "url": "https://www.pcgamer.com/hardware/physical-disc-production-is-ending-for-new-playstation-games/"
+          },
+          {
+            "points": "676",
+            "title": ".self: a new top-level domain designed to support self-hosting",
+            "url": "https://github.com/selftld/self"
+          }
+        ]
+      },
+      "watch_next": [
+        {
+          "when": "July 7-9",
+          "event": "EU Parliament vote on message scanning",
+          "note": "The parliament decides whether to extend the interim rule that lets platforms scan private messages, a test of encryption across the bloc."
+        },
+        {
+          "when": "July 20",
+          "event": "US Section 301 tariff deadline",
+          "note": "A trade investigation could trigger proposed duties near twelve percent on dozens of countries, the next step in the tariff campaign."
+        },
+        {
+          "when": "By mid-August",
+          "event": "US-Iran memorandum window",
+          "note": "The sixty-day clock on the June 17 memorandum runs down without an implementing deal, keeping the Hormuz risk alive."
+        },
+        {
+          "when": "July 28-29",
+          "event": "Next Federal Reserve meeting",
+          "note": "Markets price a hold, but the dot plot still points to at least one more hike this year."
+        }
+      ],
+      "bsig_watch": [
+        {
+          "trend": "AI datacenter power demand",
+          "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected.",
+          "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers.",
+          "expressions": "Constellation, Vistra, and other power and nuclear operators.",
+          "bsig_ref": "AE-1 / AE-2 / AE-3",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "Inference costs reverse toward custom silicon",
+          "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips.",
+          "watch": "Rising prices for top models, and fast data-center growth at custom-chip makers.",
+          "expressions": "Marvell, Broadcom, and other custom-silicon makers.",
+          "bsig_ref": "AS-B",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "Sovereign GPU scramble",
+          "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
+          "watch": "Government announcements of national AI computing projects and the supply conflicts they create.",
+          "expressions": "Nvidia and national power and data-center projects.",
+          "bsig_ref": "AS-C",
+          "status": "event-driven",
+          "new": false
+        },
+        {
+          "trend": "Crypto leverage & dry powder",
+          "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
+          "watch": "Extreme futures leverage, or an unusually large stablecoin pile.",
+          "expressions": "Bitcoin, Ether, and Coinbase.",
+          "bsig_ref": "1E-1 / 1E-2",
+          "status": "watch (crypto risk-off)",
+          "new": false
+        },
+        {
+          "trend": "Resource-scarcity chains",
+          "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US hard-red-winter-wheat crop since the 1950s, pushing wheat up sharply this week, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+          "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
+          "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
+          "bsig_ref": "AH-1 / AH-2",
+          "status": "watch",
+          "new": false
+        },
+        {
+          "trend": "Identity gates and device attestation",
+          "why_exponential": "The plumbing of digital identity kept advancing this week: Europe's ID wallets were shown to depend on Google and Apple attestation, Android moved toward mandatory developer verification, and Virginia banned selling precise location data. Trusted-device checks increasingly decide what software you can run.",
+          "watch": "Mandatory developer verification, ID-wallet attestation requirements, and state location-data bans.",
+          "expressions": "Google Play Integrity, Apple device attestation, and EU digital-ID wallets.",
+          "bsig_ref": "",
+          "status": "escalating (digital rights)",
+          "new": true
+        },
+        {
+          "trend": "Robotaxis hit the regulation wall",
+          "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls. Waymo recalled about 3,900 robotaxis this week after thirteen cases of cars driving into freeway construction zones.",
+          "watch": "More NHTSA recalls and freeway-service limits as fleets expand.",
+          "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
+          "bsig_ref": "",
+          "status": "watch (autonomy)",
+          "new": false
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Compute hits the power and memory wall",
+          "direction": "constraint binding, moving to cooling",
+          "read": "The power wall extended into a heat wall. As AI training racks push past 150 kilowatts, far above the old norm, traditional air cooling hits a ceiling around twenty kilowatts, forcing a shift to liquid cooling and making humidity in tropical data-center hubs a real limit. The constraint on the buildout keeps moving down the stack, from chips to power to the physical problem of removing heat.",
+          "basket": [
+            {
+              "metric": "AI rack power",
+              "value": "now routinely >150 kW, some designs target 300 kW",
+              "url": "https://datacenternews.asia/story/beyond-air-rethinking-data-center-cooling-for-the-ai-era"
+            },
+            {
+              "metric": "Air-cooling ceiling",
+              "value": "~20 kW per rack, pushing the shift to liquid cooling",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "AI sovereignty",
+          "direction": "contested, state blinks first",
+          "read": "The clearest move of the week was a retreat. The US Commerce Department lifted the export controls that had pulled two frontier models offline for eighteen days, choosing not to press the leverage it had established. Control still exists, but the state showed it would rather license access than block it, at least when the lab agrees to police itself.",
+          "basket": [
+            {
+              "metric": "Commerce export controls",
+              "value": "lifted on Claude Fable 5 and Mythos 5 after an 18-day freeze",
+              "url": "https://www.cnbc.com/2026/06/30/anthropic-says-trump-admin-has-lifted-export-controls-on-claude-fable-5-and-mythos-5.html"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Global monetary tightening",
+          "direction": "synchronized, on hold before the next move",
+          "read": "The central banks paused to watch. The Federal Reserve's June minutes flagged elevated upside inflation risk, and markets moved toward pricing a hold at the late-July meeting while the year-end path still points to at least one more hike. After the ECB's June increase, the tightening bias is intact even in a quiet week.",
+          "basket": [
+            {
+              "metric": "US Fed funds rate",
+              "value": "3.50-3.75%; minutes cite upside inflation risk",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm"
+            },
+            {
+              "metric": "Median 2026 dot",
+              "value": "~3.8%, implying at least one more hike",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Labor and AI displacement",
+          "direction": "cuts spread across tech",
+          "read": "The layoffs kept coming, with Microsoft cutting roughly 4,800 roles and Nike about 1,400, many in technology.",
+          "basket": [
+            {
+              "metric": "This week's cuts",
+              "value": "Microsoft ~4,800, Nike ~1,400",
+              "url": "https://techcrunch.com/2026/07/06/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Energy majors retreat from the transition",
+          "direction": "back to hydrocarbons",
+          "read": "The US wind and solar tax-credit cliff arrived on July 4, requiring projects to be under construction to keep the federal credits, tightening the squeeze on Western clean-energy developers.",
+          "basket": [
+            {
+              "metric": "US wind and solar tax credits",
+              "value": "begin-construction deadline passed July 4",
+              "url": "https://www.canarymedia.com/articles/solar/solar-wind-trump-obstacles-tax-credits"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "steady, dollar eased",
+          "read": "The dollar gave back a little of its bounce as risk appetite returned, leaving the long reserve-diversification trend intact but quiet.",
+          "basket": [
+            {
+              "metric": "Dollar share of global FX reserves (IMF, end-2025)",
+              "value": "56.8%",
+              "url": "https://data.imf.org/en/datasets/IMF.STA:COFER"
+            }
+          ],
+          "spotlight": false
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "week": "2026-07-06/2026-07-12",
+      "date": "2026-07-10",
+      "date_label": "July 6–12, 2026",
+      "partial": false,
+      "lede": "Two forces pushed at once this week: a wave of new AI models priced to undercut the leaders, and a European surveillance law that survived the vote meant to kill it.",
+      "regimes": {
+        "tech_policy": {
+          "state": "state-capture",
+          "headline": "Europe keeps the power to scan private messages.",
+          "summary": "The surveillance thread that ran under the spring came to a head in Brussels. The European Parliament failed to block an extension of the rule that lets platforms scan private messages for known child-abuse material: a July 9 motion to reject it drew 314 votes, a majority of those present but short of the 361 needed, so the measure survived and now runs to April 2028. The same week, a mandate took effect requiring every new car sold in the bloc to watch the driver's eyes. The counter-example was American: John Deere settled with regulators to give farmers a real right to repair their own equipment.",
+          "implication": "A European Parliament motion to reject the message-scanning extension drew 314 votes on July 9, short of the 361-vote absolute majority needed to stop it, so the interim scanning rule survived and now runs until April 3, 2028.",
+          "evidence": [
+            "The EU's message-scanning extension survived: 314 voted to reject on July 9, short of the 361 needed, so it runs to April 2028",
+            "A July 7 mandate requires every new EU car to carry an eye-tracking driver-distraction warning system",
+            "John Deere settled with the FTC and five states to give farmers and independent shops the same repair tools as dealers for ten years"
+          ],
+          "links": [
+            {
+              "title": "EU Parliament fails to block the message-scanning revival (The Register)",
+              "url": "https://www.theregister.com/security/2026/07/09/meps-fail-to-prevent-chat-control-snoopfest-revival/5269379"
+            },
+            {
+              "title": "Every new car sold in the EU must include driver monitoring (Carscoops)",
+              "url": "https://www.carscoops.com/2026/07/eu-driver-monitoring-mandate/"
+            },
+            {
+              "title": "FTC and states secure a right-to-repair settlement with John Deere (Engadget)",
+              "url": "https://www.engadget.com/2210939/ftc-reaches-settlement-that-brings-right-to-repair-to-john-deere-farm-equipment/"
+            }
+          ],
+          "contrarian": "The John Deere settlement shows the same regulatory machinery can expand user rights as easily as it can restrict them; which way it points depends less on the technology than on who the pressure is coming from."
+        },
+        "ai_agents": {
+          "state": "capability-race",
+          "headline": "A flood of models, priced to undercut the leaders.",
+          "summary": "The release valve opened all at once. OpenAI made GPT-5.6 public after its government review and shipped GPT-Live, a voice model that listens and speaks at the same time. xAI released Grok 4.5 at roughly two dollars per million input tokens, well under the frontier price, and the argument that cheap open-weights models will collapse the industry's fat margins went viral. Beneath the launches, a security researcher tricked GitHub's AI agent into leaking private code with nothing more than a public bug report. The models are multiplying and getting cheaper, and their new powers are opening new holes.",
+          "implication": "xAI released Grok 4.5 at about two dollars per million input tokens and six per million output, which reporting framed as roughly sixty percent below comparable models from Anthropic and OpenAI, days after OpenAI made GPT-5.6 public.",
+          "evidence": [
+            "OpenAI released GPT-5.6 publicly on July 9 and shipped GPT-Live, a full-duplex voice model, on July 8",
+            "xAI's Grok 4.5 (July 8) is priced at ~$2 / $6 per million tokens, about 60% below comparable frontier models",
+            "Researchers showed a public GitHub issue could trick GitHub's AI agent into exfiltrating private repositories ('GitLost')"
+          ],
+          "links": [
+            {
+              "points": "1234",
+              "title": "GPT-5.6 (OpenAI)",
+              "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+            },
+            {
+              "points": "762",
+              "title": "Grok 4.5 (xAI)",
+              "url": "https://x.ai/news/grok-4-5"
+            },
+            {
+              "points": "534",
+              "title": "GitLost: tricking GitHub's AI agent into leaking private repos (Noma)",
+              "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/"
+            }
+          ],
+          "contrarian": "If the margin-collapse thesis is right, the flood of cheap models is a race to the bottom that no one wins; if it is wrong, and inference is quietly profitable even at these prices, the leaders can cut prices and keep their lead."
+        },
+        "geopolitics": {
+          "state": "elevated",
+          "headline": "Strikes intensify as the trade map is redrawn.",
+          "summary": "The war and the trade system both moved. Russia escalated its air campaign on the eve of a NATO summit, launching well over a hundred drones and missiles in a single night, while Ukraine, running low on interceptors, struck back at Russian refineries and shipping. On trade, the United States let its North American pact roll on without renewal, a new US-Europe deal capping most tariffs at fifteen percent took effect, and China signaled it would cut tariffs on US grain, easing one front even as others hardened. The pattern is less a single crisis than a steady rewiring of who fights and who trades with whom.",
+          "implication": "Russia launched roughly 169 drones plus ballistic and anti-radar missiles in a single overnight attack around July 8, while a new US-Europe trade deal capping most tariffs at fifteen percent took effect on July 1.",
+          "items": [
+            {
+              "title": "Russian attacks intensify on the eve of a NATO summit (Al Jazeera)",
+              "url": "https://www.aljazeera.com/news/2026/7/6/russian-attacks-on-ukraine-kill-11-on-eve-of-nato-summit-authorities-say",
+              "comment": "Ukraine intercepted only a fraction of the incoming missiles as Patriot stocks run low, sharpening the case for its strikes on Russian energy."
+            },
+            {
+              "title": "US declines to renew its North American trade pact at the July review (Washington Post)",
+              "url": "https://www.washingtonpost.com/business/2026/07/01/trump-ignores-deadline-extending-usmca-seeks-improved-deal/",
+              "comment": "The pact stays in force under annual reviews, a managed uncertainty that keeps trading partners on a short leash."
+            },
+            {
+              "title": "China plans to lower tariffs on US soybeans and grain (Price Group)",
+              "url": "https://blog.pricegroup.com/2026/07/09/grains-report-07-09-2026/",
+              "comment": "A thaw on one trade front, and part of why grain prices firmed this week."
+            }
+          ],
+          "contrarian": "The trade deals and the grain thaw suggest the economic fragmentation is negotiated rather than headlong, so the friction may keep resolving into managed arrangements rather than open breaks."
+        },
+        "markets": {
+          "state": "risk-on",
+          "headline": "Stocks grind to new highs as the commodity bid returns.",
+          "signals": {
+            "trend": "UP",
+            "vol": 16.1,
+            "curve_bp": 86,
+            "dollar": "Flat (100.8)",
+            "crypto": "RISK-ON"
+          },
+          "implication": "US stocks edged to a fresh record with volatility near its lows, while crude rebounded more than four percent and grains rallied over four percent, a mild return of the inflation pressure the Federal Reserve is watching.",
+          "summary": "The tape kept grinding higher into a quiet, confident week. US stocks edged to another record, expected volatility sat near its lows, and Bitcoin firmed. The notable change was underneath: after weeks of falling prices, commodities turned broadly higher, with crude up more than four percent and grains rallying on Chinese buying and a European heatwave. A rising market with rising raw-material prices is constructive for now, but it revives the inflation question just as the Federal Reserve meets at the end of the month. The signals below are directional only, not investment advice.",
+          "contrarian": "The return of the commodity bid is the risk to this calm. If crude and grains keep climbing into the Fed meeting, the hike the dot plot points to becomes easier to justify, and the grind higher could stall."
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Jul 5",
+          "Jul 12"
+        ],
+        "series": {
+          "tech_policy": [
+            5,
+            6
+          ],
+          "ai_agents": [
+            5,
+            8
+          ],
+          "compute_energy": [
+            1,
+            0
+          ],
+          "geopolitics": [
+            2,
+            2
+          ],
+          "labor_ai": [
+            1,
+            2
+          ],
+          "markets": [
+            1,
+            1
+          ]
+        }
+      },
+      "market_moves": [],
+      "commodities": {
+        "as_of": "week ending July 10",
+        "min_change": 4.0,
+        "headline": "Crude and grains rebound in a broad commodity bid.",
+        "summary": "Commodities turned broadly higher after weeks of decline. Crude rebounded, with Brent up more than five percent, as the market steadied and demand held through the summer. Grains rallied hard, corn up more than five percent and wheat over four, on Chinese buying and a European heatwave that threatens to cut French corn output by roughly a third. Natural gas was the exception, off almost seven percent. The return of a broad bid to raw materials is a mild inflationary tilt, and it lands just before the Federal Reserve meets.",
+        "items": [
+          {
+            "name": "Corn",
+            "level": "$4.49",
+            "change": "+5.6%"
+          },
+          {
+            "name": "Brent crude",
+            "level": "$75.79",
+            "change": "+5.6%"
+          },
+          {
+            "name": "WTI crude",
+            "level": "$71.59",
+            "change": "+4.2%"
+          },
+          {
+            "name": "Wheat",
+            "level": "$6.16",
+            "change": "+4.2%"
+          },
+          {
+            "name": "Soybeans",
+            "level": "$11.74",
+            "change": "+3.7%"
+          },
+          {
+            "name": "Copper",
+            "level": "$6.28/lb",
+            "change": "+2.6%"
+          },
+          {
+            "name": "Gold",
+            "level": "$4,113",
+            "change": "+0.0%"
+          },
+          {
+            "name": "Silver",
+            "level": "$60.06/oz",
+            "change": "-1.0%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "$2.98",
+            "change": "-6.7%"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "AI meeting assistants and agent tooling",
+        "github": [
+          {
+            "title": "Zackriya-Solutions/meetily",
+            "url": "https://github.com/Zackriya-Solutions/meetily"
+          },
+          {
+            "title": "usestrix/strix",
+            "url": "https://github.com/usestrix/strix"
+          },
+          {
+            "title": "alibaba/page-agent",
+            "url": "https://github.com/alibaba/page-agent"
+          },
+          {
+            "title": "openai/codex-plugin-cc",
+            "url": "https://github.com/openai/codex-plugin-cc"
+          },
+          {
+            "title": "asgeirtj/system_prompts_leaks",
+            "url": "https://github.com/asgeirtj/system_prompts_leaks"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "The AI agent is the new insider threat.",
+        "summary": "As coding agents gain real access, they are becoming the softest way in. This week researchers showed that a single public bug report could steer GitHub's AI agent into leaking private repositories, the classic trap of an assistant with broad read access, untrusted input, and a way to send data out. It follows the prior week's discovery of hidden fingerprinting inside a popular coding tool. The more these agents can do on their own, the more their permissions become the attack surface.",
+        "links": [
+          {
+            "points": "534",
+            "title": "GitLost: we tricked GitHub's AI agent into leaking private repos (The Register)",
+            "url": "https://www.theregister.com/security/2026/07/07/github_ai_agent_leaks_private_repos/5267924"
+          },
+          {
+            "points": "534",
+            "title": "A public GitHub issue could trick GitHub's AI into leaking code (The Hacker News)",
+            "url": "https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html"
+          }
+        ]
+      },
+      "watch_next": [
+        {
+          "when": "July 20",
+          "event": "US Section 301 tariff deadline",
+          "note": "A decision could set proposed duties near twelve percent on dozens of countries, widening the tariff campaign."
+        },
+        {
+          "when": "July 28-29",
+          "event": "Next Federal Reserve meeting",
+          "note": "With commodities firming and the dot plot pointing to a hike, this is the meeting to watch for the first increase."
+        },
+        {
+          "when": "By mid-August",
+          "event": "US-Iran memorandum window",
+          "note": "The sixty-day clock keeps running without an implementing deal, and the Strait of Hormuz stays the pressure point."
+        },
+        {
+          "when": "Ongoing",
+          "event": "GPT-5.6 and Grok 4.5 in the EU",
+          "note": "Both shipped outside the European Union first; watch when and how they clear the bloc's rules."
+        }
+      ],
+      "bsig_watch": [
+        {
+          "trend": "AI datacenter power demand",
+          "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected.",
+          "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers.",
+          "expressions": "Constellation, Vistra, and other power and nuclear operators.",
+          "bsig_ref": "AE-1 / AE-2 / AE-3",
+          "status": "active regime",
+          "new": false
+        },
+        {
+          "trend": "The AI margin question",
+          "why_exponential": "Cheap open-weights models and aggressively priced new entrants are testing whether the fat gross margins of closed AI services can hold. Grok 4.5 shipped this week at roughly sixty percent below comparable frontier prices, and the 'margin collapse' argument went viral.",
+          "watch": "Price cuts on frontier models, open-weights parity on hard benchmarks, and any disclosure of real inference margins.",
+          "expressions": "Frontier labs, open-weights model makers, and custom-silicon makers.",
+          "bsig_ref": "AS-B",
+          "status": "escalating",
+          "new": true
+        },
+        {
+          "trend": "Sovereign GPU scramble",
+          "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. This demand sits on top of existing cloud demand and creates competition for supply.",
+          "watch": "Government announcements of national AI computing projects and the supply conflicts they create.",
+          "expressions": "Nvidia and national power and data-center projects.",
+          "bsig_ref": "AS-C",
+          "status": "event-driven",
+          "new": false
+        },
+        {
+          "trend": "Crypto leverage & dry powder",
+          "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
+          "watch": "Extreme futures leverage, or an unusually large stablecoin pile.",
+          "expressions": "Bitcoin, Ether, and Coinbase.",
+          "bsig_ref": "1E-1 / 1E-2",
+          "status": "watch (crypto risk-off)",
+          "new": false
+        },
+        {
+          "trend": "Resource-scarcity chains",
+          "why_exponential": "Heat is rippling into markets again. A European heatwave threatens to cut French corn output by roughly a third and pushed grains sharply higher this week, the same water and power stress that can also slow chip fabrication and strain the grid.",
+          "watch": "Heat and drought deep enough to keep lifting grain prices or cut power output, and water limits that slow chip factories.",
+          "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
+          "bsig_ref": "AH-1 / AH-2",
+          "status": "escalating",
+          "new": true
+        },
+        {
+          "trend": "Device attestation as a gatekeeper",
+          "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all. This week Volkswagen began silently blocking roughly half a million GrapheneOS users through Google's Play Integrity checks, the same week GrapheneOS shipped its Android 17 port, sharpening the conflict between hardened, user-controlled devices and ecosystems that lock them out.",
+          "watch": "More apps enforcing Play Integrity-style attestation, and lawmakers mandating message-scanning or age verification.",
+          "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
+          "bsig_ref": "",
+          "status": "watch (digital rights)",
+          "new": false
+        },
+        {
+          "trend": "Robotaxis hit the regulation wall",
+          "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls. Waymo recalled about 3,900 robotaxis this week after thirteen cases of cars driving into freeway construction zones.",
+          "watch": "More NHTSA recalls and freeway-service limits as fleets expand.",
+          "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
+          "bsig_ref": "",
+          "status": "watch (autonomy)",
+          "new": false
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Compute hits the power and memory wall",
+          "direction": "constraint binding, heat makes it worse",
+          "read": "A US heatwave in early July strained the grid and sharpened the question of how much new AI load it can absorb. With tens of gigawatts of AI data-center capacity planned and high-voltage substation lead times running three to five years, developers are increasingly bringing their own power, much of it natural gas. The bottleneck is no longer chips but the physical grid and the years it takes to expand it.",
+          "basket": [
+            {
+              "metric": "US heatwave",
+              "value": "early-July grid strain renewed scrutiny of AI data-center demand",
+              "url": "https://www.aljazeera.com/economy/2026/7/3/us-heatwave-raises-alarms-over-ai-data-centre-energy-demands"
+            },
+            {
+              "metric": "Substation lead times",
+              "value": "3-5 years, the binding bottleneck; driving 'bring your own power'",
+              "url": "https://www.helpnetsecurity.com/2026/07/07/ai-data-centers-demand-expansion/"
+            },
+            {
+              "metric": "Global data-center power demand",
+              "value": "seen up ~27% in 2026, to ~132 GW (Gartner)",
+              "url": "https://www.gartner.com/en/newsroom/press-releases/2026-06-10-gartner-says-data-center-electricity-demand-to-grow-26-percent-in-2026"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "negotiated, not headlong",
+          "read": "The trade map was redrawn without a rupture. The United States let its North American pact roll on without renewal, a new US-Europe deal capping most tariffs at fifteen percent took effect on July 1, and China signaled it would cut tariffs on US grain. The fragmentation is real but managed, a web of deadlines and reviews rather than a clean break, with a Section 301 decision due July 20.",
+          "basket": [
+            {
+              "metric": "US-Europe trade deal",
+              "value": "15% ceiling on most EU goods, effective July 1",
+              "url": "https://www.bhfs.com/insight/trump-tariffs-upcoming-deadlines/"
+            },
+            {
+              "metric": "North American pact",
+              "value": "not renewed at the July 1 review; stays in force under annual reviews",
+              "url": "https://www.washingtonpost.com/business/2026/07/01/trump-ignores-deadline-extending-usmca-seeks-improved-deal/"
+            },
+            {
+              "metric": "China grain tariffs",
+              "value": "signaled cuts on US soybeans and grain",
+              "url": "https://blog.pricegroup.com/2026/07/09/grains-report-07-09-2026/"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "The AI margin question",
+          "direction": "opening up",
+          "read": "The economics of AI became the argument of the week. xAI shipped Grok 4.5 at roughly sixty percent below comparable frontier prices, and a viral thesis held that cheap open-weights models will collapse the fat gross margins of closed AI services. The rebuttal, that inference is quietly profitable even at low prices, is unproven either way. What is clear is that price, not just capability, is now the battleground.",
+          "basket": [
+            {
+              "metric": "Grok 4.5 pricing",
+              "value": "~$2 / $6 per million tokens, ~60% below comparable models",
+              "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+            },
+            {
+              "metric": "GLM 5.2",
+              "value": "MIT-licensed open weights near closed-source coding scores",
+              "url": "https://the-decoder.com/zhipu-ais-glm-5-2-closes-in-on-closed-source-leaders-in-coding-marathons/"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Labor and AI displacement",
+          "direction": "reaching creative and engineering teams",
+          "read": "Microsoft cut roughly half of id Software, the storied game studio, hitting its engine and visual-effects teams hardest as part of the largest restructure in Xbox's history.",
+          "basket": [
+            {
+              "metric": "id Software",
+              "value": "~136 roles cut (about half the studio), engine and VFX teams hit hardest",
+              "url": "https://www.gamedeveloper.com/business/report-around-half-of-the-id-software-team-have-been-laid-off"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Global monetary tightening",
+          "direction": "on hold, hike still on the table",
+          "read": "Ahead of the late-July meeting, markets priced roughly a four-in-five chance the Fed holds, but the year-end dot still points to at least one more hike, and this week's commodity bid revived the inflation question.",
+          "basket": [
+            {
+              "metric": "July FOMC odds",
+              "value": "~78% hold / ~22% hike; median 2026 dot ~3.8%",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "AI sovereignty",
+          "direction": "contested, models ship outside the EU first",
+          "read": "Both GPT-5.6 and Grok 4.5 shipped outside the European Union first, a quiet sign that the bloc's rules now shape where frontier models appear.",
+          "basket": [
+            {
+              "metric": "EU availability",
+              "value": "Grok 4.5 not available in the EU at launch; GPT-5.6 rollout staged",
+              "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+            }
+          ],
+          "spotlight": false
+        }
+      ]
     }
   ],
   "bsig_watch": [
