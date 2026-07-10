@@ -960,13 +960,13 @@
       "date": "2026-06-28",
       "date_label": "June 22–28, 2026",
       "partial": false,
-      "lede": "The week's dominant question was who gets to prove they are, and to whom: the US government took a direct hand in who may use a frontier model, an age-verification wave spread across the web, and the model race reopened through cheap open weights.",
+      "lede": "",
       "regimes": {
         "tech_policy": {
           "state": "state-capture",
-          "headline": "Identity checks arrive at the door of the internet.",
-          "summary": "This week the loudest thread was identity as a gate. The US government took a direct hand in access to frontier AI: OpenAI's new model, GPT-5.6, codenamed Sol, was reviewed by the Commerce Department before launch and made available at first to only about twenty approved organizations. In parallel, an age-verification wave spread across US states, the European Union, and Australia, requiring face scans or identity documents to reach ordinary websites, while EU negotiators met behind closed doors over mandatory scanning of private messages. The connective tissue is proof of identity as the price of entry.",
-          "implication": "OpenAI launched GPT-5.6 on June 26 to roughly twenty organizations individually vetted by the US Commerce Department, the first time the federal government has decided in advance who may use a frontier model.",
+          "headline": "Proving who you are becomes the price of entry.",
+          "summary": "Identity became the gate this week. The US government reviewed OpenAI's new GPT-5.6 before launch and cleared it for only about twenty approved organizations. In parallel, an age-verification wave spread across US states, the European Union, and Australia, demanding face scans or ID to reach ordinary websites, while EU negotiators met privately over mandatory scanning of private messages.",
+          "implication": "OpenAI launched GPT-5.6 on June 26 to about twenty organizations vetted by the Commerce Department, the first time Washington has decided in advance who may use a frontier model.",
           "evidence": [
             "GPT-5.6 (Sol) launched June 26 to ~20 government-vetted organizations; the access limits were lifted July 8",
             "Commerce's Center for AI Standards and Innovation ran the review, citing coding, biology, and cybersecurity risks",
@@ -991,9 +991,9 @@
         },
         "ai_agents": {
           "state": "capability-race",
-          "headline": "The model race reopens, and it runs through open weights.",
-          "summary": "After a quiet stretch, the capability contest returned with force, and its sharpest edge came from open weights. A Chinese open-weights model, GLM 5.2 from Zhipu AI, beat Anthropic's Claude on a published security benchmark at a fraction of the cost. OpenAI unveiled its first custom inference chip, built with Broadcom, to cut the price of running models. And Anthropic told US officials that Alibaba had run the largest model-extraction campaign it has ever seen. The race is no longer only about who has the best model, but who can copy it, cheapen it, and gate it.",
-          "implication": "Anthropic told US officials that operators tied to Alibaba ran about 28.8 million exchanges through roughly 25,000 fraudulent accounts between April 22 and June 5 to extract its models, which it called the largest known distillation attack against it.",
+          "headline": "The model race reopens, led by open weights.",
+          "summary": "The capability contest returned, and its sharpest edge came from open weights. GLM 5.2, a Chinese open-weights model from Zhipu AI, beat Claude on a published security benchmark at a fraction of the cost. OpenAI unveiled its first custom inference chip, built with Broadcom, to make models cheaper to run. And Anthropic accused Alibaba of the largest model-extraction campaign it has seen.",
+          "implication": "Anthropic told US officials that Alibaba-tied operators ran about 28.8 million exchanges through roughly 25,000 fake accounts between April 22 and June 5 to extract its models.",
           "evidence": [
             "GLM 5.2 (Zhipu AI, MIT license) beat Claude on Semgrep's IDOR security benchmark, about 39% versus 28% F1, at roughly $0.17 per vulnerability found",
             "OpenAI unveiled 'Jalapeno,' its first custom inference chip, co-designed with Broadcom, on June 24",
@@ -1021,8 +1021,8 @@
         "geopolitics": {
           "state": "elevated",
           "headline": "The friction holds, loosely.",
-          "summary": "The week's conflicts simmered rather than broke. Ukraine launched one of its largest drone assaults of the war, striking a dozen Russian regions and occupied Crimea and pressing its campaign against Russian oil logistics. The US-Iran memorandum signed on June 17 frayed within days over nuclear inspections and the Strait of Hormuz, with the United Nations moving to evacuate some eleven thousand sailors stranded there even as tankers kept moving. In the Pacific, China's aircraft carrier returned home from a long deployment as Beijing signaled it would make maritime surveys near Taiwan routine.",
-          "implication": "Ukraine struck a dozen Russian regions and occupied Crimea in one of its largest drone assaults of the war around June 25-26, while the United Nations began evacuating roughly eleven thousand sailors stranded in the Strait of Hormuz.",
+          "summary": "Conflicts simmered rather than broke. Ukraine launched one of the war's largest drone assaults, hitting a dozen Russian regions and occupied Crimea and pressing its campaign on Russian oil logistics. The June 17 US-Iran memorandum frayed within days over inspections and the Strait of Hormuz, where the UN moved to evacuate some eleven thousand stranded sailors. In the Pacific, China signaled it would make surveys near Taiwan routine.",
+          "implication": "Ukraine hit a dozen Russian regions in one of the war's largest drone assaults around June 25-26, as the UN began evacuating some eleven thousand sailors stranded in the Strait of Hormuz.",
           "items": [
             {
               "title": "Ukraine launches one of its largest drone assaults of the war (NPR)",
@@ -1052,8 +1052,8 @@
             "dollar": "Firm (101.4)",
             "crypto": "RISK-OFF"
           },
-          "implication": "US stocks fell about two percent on the week while crude dropped nearly ten percent, silver more than ten percent, and Bitcoin about six percent, a rare stretch in which equities, commodities, and crypto declined together.",
-          "summary": "For the first time in weeks the tape turned down across the board. US stocks fell about two percent, expected volatility rose from a low base, and the assets that had led the spring retreated together: crude dropped nearly ten percent as the Iran fear premium drained, silver fell more than ten percent, and Bitcoin and Ether slid. The dollar firmed to a one-year high as money moved to safety. With the Federal Reserve still leaning toward a hike rather than a cut, a down week in stocks, commodities, and crypto at once is a clean risk-off reading. The signals below are directional only, not investment advice.",
+          "implication": "Stocks fell about two percent on the week while crude dropped nearly ten, silver more than ten, and Bitcoin about six, a rare stretch of equities, commodities, and crypto falling together.",
+          "summary": "For the first time in weeks the tape turned down across the board. Stocks fell about two percent, volatility rose from a low base, and the spring's leaders retreated together: crude dropped nearly ten percent as the Iran premium drained, silver more than ten, and Bitcoin and Ether slid. The dollar firmed to a one-year high. A down week in stocks, commodities, and crypto at once is a clean risk-off reading. The signals below are directional only, not investment advice.",
           "contrarian": "The de-risking was orderly rather than a panic. Volatility rose from a low base and credit spreads barely moved, so this reads as a pause in a strong tape rather than the start of a downturn."
         }
       },
@@ -1153,7 +1153,7 @@
       "undercurrent": {
         "label": "Undercurrent",
         "headline": "As the gates go up, developers reach for tools they can own.",
-        "summary": "Beneath the identity-and-access news ran a quiet migration toward software you hold rather than rent. Deno shipped a desktop runtime, the week's most-discussed AI question was whether a local model can replace a hosted one for daily work, and on-device projects from swipe keyboards to self-hosted apps kept climbing. As access to the frontier gets gated and metered, the counter-move is to run smaller, open tools locally, where no one can revoke the key.",
+        "summary": "Beneath the identity news ran a quiet migration toward software you hold rather than rent. Deno shipped a desktop runtime, the week's most-discussed AI question was whether a local model can replace a hosted one for daily work, and on-device and self-hosted projects kept climbing. As the frontier gets gated and metered, the counter-move is to run smaller, open tools locally.",
         "links": [
           {
             "points": "1122",
@@ -1369,13 +1369,13 @@
       "date": "2026-07-05",
       "date_label": "June 29 – July 5, 2026",
       "partial": false,
-      "lede": "A quieter week turned on a single reversal: the US lifted the export controls that had pulled two frontier models offline, even as the machinery of digital identity kept tightening underneath.",
+      "lede": "",
       "regimes": {
         "tech_policy": {
           "state": "consolidation",
           "headline": "The government reverses course on frontier-model access.",
-          "summary": "The week's pivot was a reversal. Eighteen days after ordering Anthropic to suspend foreign access to its most capable models, the Commerce Department lifted the export controls on Claude Fable 5 and Mythos 5, and the company began restoring access the next day. The retreat came after Anthropic agreed to detect and address security risks and redeployed the models with new safeguards. Underneath the headline, the slower machinery of digital identity kept advancing: Virginia banned the sale of precise location data, Spain moved to bar state firms from Palantir, and Europe's digital-ID wallets were shown to lean on Google and Apple.",
-          "implication": "The Commerce Department lifted its export controls on Claude Fable 5 and Mythos 5 after an eighteen-day freeze, and Anthropic said it would begin restoring access the following day.",
+          "summary": "The week turned on a reversal. Eighteen days after forcing Anthropic to suspend foreign access to its top models, the Commerce Department lifted its export controls on Claude Fable 5 and Mythos 5, and access returned the next day once Anthropic agreed to police security risks. Underneath, digital identity advanced: Virginia banned selling location data, Spain moved to bar state firms from Palantir, and Europe's ID wallets lean on Google and Apple.",
+          "implication": "The Commerce Department lifted its export controls on Claude Fable 5 and Mythos 5 after an eighteen-day freeze, and Anthropic began restoring access the next day.",
           "evidence": [
             "Commerce lifted the export controls on Claude Fable 5 and Mythos 5 (reported June 30) after an 18-day freeze",
             "The reversal followed Anthropic agreeing to proactively detect and address security risks",
@@ -1401,8 +1401,8 @@
         "ai_agents": {
           "state": "capability-race",
           "headline": "New models ship as trust in the tools gets scrutinized.",
-          "summary": "The releases kept coming while users looked harder at what the tools do quietly. Anthropic shipped Claude Sonnet 5 as its new default, priced below the frontier, and Alibaba's Qwen 3.6 27B drew attention as a capable model small enough to run locally. But the week's most-read story was a researcher's finding that Claude Code had been quietly altering a line in its own prompt to fingerprint requests from Chinese AI labs and proxies. Anthropic called it an experiment and shipped a version that removed it. The tools are getting better and cheaper, and also more closely watched.",
-          "implication": "Anthropic shipped Claude Sonnet 5 on June 30 at introductory pricing of two dollars per million input tokens and ten per million output, and separately removed code from Claude Code that a researcher showed was fingerprinting requests by timezone and proxy.",
+          "summary": "Releases kept coming while users scrutinized what the tools do quietly. Anthropic shipped Claude Sonnet 5 as its new default, priced below the frontier; Alibaba's Qwen 3.6 27B drew notice as a model small enough to run locally. But the week's most-read story found Claude Code altering its own prompt to fingerprint traffic from Chinese AI labs and proxies. Anthropic called it an experiment and removed it.",
+          "implication": "Anthropic shipped Claude Sonnet 5 on June 30 at two dollars per million input tokens, and separately removed code from Claude Code that fingerprinted requests by timezone and proxy.",
           "evidence": [
             "Claude Sonnet 5 launched June 30 as the default for free and paid tiers, at $2 / $10 per million tokens through August",
             "A researcher found Claude Code altered its prompt to fingerprint Chinese-AI-lab and proxy traffic; Anthropic called it an experiment and removed it",
@@ -1430,8 +1430,8 @@
         "geopolitics": {
           "state": "elevated",
           "headline": "Talks stall as the strikes continue.",
-          "summary": "Diplomacy stalled while the fighting did not. US-Iran talks in Doha went nowhere, with Tehran denying that technical meetings were even scheduled, leaving the June memorandum in limbo. Russia hit Kyiv with an eleven-hour barrage of drones and missiles that killed dozens and wounded more than a hundred, one of the heaviest attacks on the capital of the war. In Gaza, Israeli forces took more territory and killed more people in June than in any earlier month of the year. And in Brussels, Belgian police removed two accredited journalists at a US embassy event, a small sign of how far friction now reaches.",
-          "implication": "Russia struck Kyiv with roughly seventy-four missiles and nearly five hundred drones over about eleven hours overnight on July 2, killing at least thirty-one people and wounding more than a hundred.",
+          "summary": "Diplomacy stalled while the fighting did not. US-Iran talks in Doha went nowhere, Tehran denying meetings were even scheduled, leaving the June memorandum in limbo. Russia hit Kyiv with an eleven-hour barrage that killed dozens and wounded more than a hundred, one of the war's heaviest attacks on the capital. In Gaza, Israel took more territory and killed more people in June than any earlier month. In Brussels, police removed two accredited journalists at a US embassy event.",
+          "implication": "Russia struck Kyiv with about seventy-four missiles and nearly five hundred drones over eleven hours on July 2, killing at least thirty-one people and wounding more than a hundred.",
           "items": [
             {
               "title": "Russia hits Kyiv with an 11-hour drone and missile barrage (Al Jazeera)",
@@ -1461,8 +1461,8 @@
             "dollar": "Softer (100.9)",
             "crypto": "RISK-ON"
           },
-          "implication": "US stocks rose about two percent to a fresh record and expected volatility fell back toward its lows, while Ether jumped nearly thirteen percent and Bitcoin about five percent, reversing much of the prior week's decline.",
-          "summary": "The prior week's de-risking reversed almost as fast as it arrived. US stocks rose about two percent to a new record, expected volatility fell back toward its lows, and the assets that had led the sell-off led the bounce: Ether jumped nearly thirteen percent and Bitcoin about five percent. Oil steadied near sixty-nine dollars and the dollar eased. But the Federal Reserve is still leaning toward a hike, and one strong week after one weak week, with the yield curve steepening, leaves the read recovering rather than cleanly risk-on. The signals below are directional only, not investment advice.",
+          "implication": "Stocks rose about two percent to a fresh record and volatility fell back toward its lows, while Ether jumped nearly thirteen percent and Bitcoin about five, reversing much of the prior week's fall.",
+          "summary": "The prior week's de-risking reversed fast. Stocks rose about two percent to a new record, volatility fell toward its lows, and the sell-off's leaders led the bounce: Ether jumped nearly thirteen percent and Bitcoin about five. Oil steadied near sixty-nine dollars and the dollar eased. One strong week after one weak leaves the read recovering, not cleanly risk-on. The signals below are directional only, not investment advice.",
           "contrarian": "A one-week round trip in both directions is a sign of a market without conviction. If the Fed confirms a hike at the end of July, the rebound could stall as fast as it came."
         }
       },
@@ -1555,7 +1555,7 @@
       "undercurrent": {
         "label": "Undercurrent",
         "headline": "You do not own what you paid for.",
-        "summary": "A thread about digital ownership ran through the week's reading. Sony said it would pull five hundred and fifty-one purchased films from European PlayStation libraries in September, over an expired license and with no refunds, and confirmed it would end physical disc production for new PlayStation games in 2028. A proposed new top-level domain, dot-self, was pitched to make self-hosting easier. The common thread is that a purchase increasingly buys a revocable license rather than a durable thing, and the counter-move, again, is to hold your own copy.",
+        "summary": "A thread about digital ownership ran through the week. Sony said it would pull five hundred and fifty-one purchased films from European PlayStation libraries in September, over an expired license and with no refunds, and confirmed it would end physical discs for new games in 2028. A proposed top-level domain, dot-self, was pitched to ease self-hosting. A purchase increasingly buys a revocable license, not a durable thing.",
         "links": [
           {
             "points": "635",
@@ -1766,13 +1766,13 @@
       "date": "2026-07-10",
       "date_label": "July 6–12, 2026",
       "partial": false,
-      "lede": "Two forces pushed at once this week: a wave of new AI models priced to undercut the leaders, and a European surveillance law that survived the vote meant to kill it.",
+      "lede": "",
       "regimes": {
         "tech_policy": {
           "state": "state-capture",
           "headline": "Europe keeps the power to scan private messages.",
-          "summary": "The surveillance thread that ran under the spring came to a head in Brussels. The European Parliament failed to block an extension of the rule that lets platforms scan private messages for known child-abuse material: a July 9 motion to reject it drew 314 votes, a majority of those present but short of the 361 needed, so the measure survived and now runs to April 2028. The same week, a mandate took effect requiring every new car sold in the bloc to watch the driver's eyes. The counter-example was American: John Deere settled with regulators to give farmers a real right to repair their own equipment.",
-          "implication": "A European Parliament motion to reject the message-scanning extension drew 314 votes on July 9, short of the 361-vote absolute majority needed to stop it, so the interim scanning rule survived and now runs until April 3, 2028.",
+          "summary": "The surveillance thread came to a head in Brussels. The European Parliament failed to block the rule letting platforms scan private messages for known child-abuse material: a July 9 motion to reject drew 314 votes, short of the 361 needed, so it survives to April 2028. The same week, a mandate took effect requiring every new EU car to watch the driver's eyes. The counter-example was American: John Deere settled to give farmers a real right to repair.",
+          "implication": "A motion to reject the EU message-scanning extension drew 314 votes on July 9, short of the 361-vote majority needed to stop it, so the rule survives to April 3, 2028.",
           "evidence": [
             "The EU's message-scanning extension survived: 314 voted to reject on July 9, short of the 361 needed, so it runs to April 2028",
             "A July 7 mandate requires every new EU car to carry an eye-tracking driver-distraction warning system",
@@ -1797,8 +1797,8 @@
         "ai_agents": {
           "state": "capability-race",
           "headline": "A flood of models, priced to undercut the leaders.",
-          "summary": "The release valve opened all at once. OpenAI made GPT-5.6 public after its government review and shipped GPT-Live, a voice model that listens and speaks at the same time. xAI released Grok 4.5 at roughly two dollars per million input tokens, well under the frontier price, and the argument that cheap open-weights models will collapse the industry's fat margins went viral. Beneath the launches, a security researcher tricked GitHub's AI agent into leaking private code with nothing more than a public bug report. The models are multiplying and getting cheaper, and their new powers are opening new holes.",
-          "implication": "xAI released Grok 4.5 at about two dollars per million input tokens and six per million output, which reporting framed as roughly sixty percent below comparable models from Anthropic and OpenAI, days after OpenAI made GPT-5.6 public.",
+          "summary": "The release valve opened at once. OpenAI made GPT-5.6 public after its government review and shipped GPT-Live, a voice model that listens and speaks at once. xAI released Grok 4.5 at about two dollars per million input tokens, well under the frontier price, and the argument that cheap open weights will collapse the industry's margins went viral. Beneath the launches, a researcher tricked GitHub's AI agent into leaking private code with a single public bug report.",
+          "implication": "xAI released Grok 4.5 at about two dollars per million input tokens and six per million output, which reporting framed as roughly sixty percent below comparable frontier models.",
           "evidence": [
             "OpenAI released GPT-5.6 publicly on July 9 and shipped GPT-Live, a full-duplex voice model, on July 8",
             "xAI's Grok 4.5 (July 8) is priced at ~$2 / $6 per million tokens, about 60% below comparable frontier models",
@@ -1826,8 +1826,8 @@
         "geopolitics": {
           "state": "elevated",
           "headline": "Strikes intensify as the trade map is redrawn.",
-          "summary": "The war and the trade system both moved. Russia escalated its air campaign on the eve of a NATO summit, launching well over a hundred drones and missiles in a single night, while Ukraine, running low on interceptors, struck back at Russian refineries and shipping. On trade, the United States let its North American pact roll on without renewal, a new US-Europe deal capping most tariffs at fifteen percent took effect, and China signaled it would cut tariffs on US grain, easing one front even as others hardened. The pattern is less a single crisis than a steady rewiring of who fights and who trades with whom.",
-          "implication": "Russia launched roughly 169 drones plus ballistic and anti-radar missiles in a single overnight attack around July 8, while a new US-Europe trade deal capping most tariffs at fifteen percent took effect on July 1.",
+          "summary": "The war and the trade system both moved. Russia escalated its air campaign on the eve of a NATO summit, launching over a hundred drones and missiles in one night, while Ukraine, low on interceptors, hit Russian refineries and shipping. On trade, the US let its North American pact roll on unrenewed, a new US-Europe deal capped most tariffs at fifteen percent, and China signaled it would cut US grain tariffs.",
+          "implication": "Russia launched roughly 169 drones plus ballistic and anti-radar missiles in a single overnight attack around July 8, while a US-Europe deal capping most tariffs at fifteen percent took effect July 1.",
           "items": [
             {
               "title": "Russian attacks intensify on the eve of a NATO summit (Al Jazeera)",
@@ -1857,8 +1857,8 @@
             "dollar": "Flat (100.8)",
             "crypto": "RISK-ON"
           },
-          "implication": "US stocks edged to a fresh record with volatility near its lows, while crude rebounded more than four percent and grains rallied over four percent, a mild return of the inflation pressure the Federal Reserve is watching.",
-          "summary": "The tape kept grinding higher into a quiet, confident week. US stocks edged to another record, expected volatility sat near its lows, and Bitcoin firmed. The notable change was underneath: after weeks of falling prices, commodities turned broadly higher, with crude up more than four percent and grains rallying on Chinese buying and a European heatwave. A rising market with rising raw-material prices is constructive for now, but it revives the inflation question just as the Federal Reserve meets at the end of the month. The signals below are directional only, not investment advice.",
+          "implication": "Stocks edged to a fresh record with volatility near its lows, while crude rebounded more than four percent and grains rallied over four, a mild return of the inflation pressure the Fed is watching.",
+          "summary": "The tape kept grinding higher into a quiet week. Stocks edged to another record, volatility sat near its lows, and Bitcoin firmed. The change was underneath: after weeks of falling prices, commodities turned broadly higher, crude up more than four percent and grains rallying on Chinese buying and a European heatwave. Rising markets with rising raw-material prices revive the inflation question just as the Fed meets. The signals below are directional only, not investment advice.",
           "contrarian": "The return of the commodity bid is the risk to this calm. If crude and grains keep climbing into the Fed meeting, the hike the dot plot points to becomes easier to justify, and the grind higher could stall."
         }
       },
@@ -1976,7 +1976,7 @@
       "undercurrent": {
         "label": "Undercurrent",
         "headline": "The AI agent is the new insider threat.",
-        "summary": "As coding agents gain real access, they are becoming the softest way in. This week researchers showed that a single public bug report could steer GitHub's AI agent into leaking private repositories, the classic trap of an assistant with broad read access, untrusted input, and a way to send data out. It follows the prior week's discovery of hidden fingerprinting inside a popular coding tool. The more these agents can do on their own, the more their permissions become the attack surface.",
+        "summary": "As coding agents gain real access, they are becoming the softest way in. This week researchers showed a single public bug report could steer GitHub's AI agent into leaking private repositories, the classic trap of an assistant with broad read access, untrusted input, and a way out. It follows the prior week's hidden fingerprinting inside a popular coding tool. The more these agents can do, the more their permissions are the attack surface.",
         "links": [
           {
             "points": "534",
