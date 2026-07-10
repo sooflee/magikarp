@@ -182,10 +182,11 @@ Broad de-risking: SPX -2.0%, VIX +12% (to ~18), WTI -9.6%, silver -10.6%, BTC -5
 gold -3.4%; dollar firmed to a 1yr high (DXY 101.4). Commodities fell across the
 board; wheat gave back the drought spike (-4.5%). Data via yfinance (week-over-week).
 
-### Structural spotlights
-- Global monetary tightening: ECB hiked to 2.25% deposit (first since 2023); Fed held 3.50-3.75%, 2026 cut removed.
+### Structural spotlights (rotated for variety)
+- Critical-minerals leverage: China's MOFCOM lists 10 US firms (June 22), incl. MP Materials + USA Rare Earth; restricts procurement from mostly-defense US firms.
 - Compute power wall: FERC orders data-center interconnection fast-track (~90 days); PJM capacity advisory; Gartner sees DC power +26% to ~132 GW.
-- Labor/AI: AI the #1 stated US layoff reason (4th straight month); tech H1 cuts ~139k (+83% YoY); Oracle ~21k.
+- Inference moves to custom silicon: OpenAI's Jalapeno (June 24, w/ Broadcom, ~50% claimed cost cut).
+- Holding steady: Global monetary tightening (ECB 2.25% / Fed held), AI sovereignty, Labor/AI (Oracle ~21k), Dedollarization.
 
 ### Undercurrent: as the gates go up, developers reach for tools they can own
 Deno Desktop, local models, on-device/self-hosted tooling as a hedge against gated access.
@@ -229,11 +230,11 @@ Sharp rebound: SPX +1.8% to a record, VIX -12%, ETH +12.8%, BTC +5.1%; oil stead
 (~$69), dollar eased. A one-week round trip -> "recovering," not cleanly risk-on.
 Commodities quiet (min_change lowered to 2%): corn +3.0%, silver +2.4%, wheat +2.1%.
 
-### Structural spotlights
-- Compute cooling wall: AI racks >150 kW vs ~20 kW air-cooling ceiling -> liquid cooling.
-- AI sovereignty: the state blinked first (export controls lifted on conditions).
-- Monetary: Fed minutes flag upside inflation risk; markets lean to a July hold.
-- Energy: US wind/solar tax-credit begin-construction cliff passed July 4.
+### Structural spotlights (rotated for variety)
+- AI sovereignty: the state blinked first (export controls on Fable 5 / Mythos 5 lifted on conditions).
+- The energy-transition cliff: US wind/solar tax-credit begin-construction deadline July 4; Treasury Notice 2025-42 narrowed "begin construction."
+- Synthetic biology: U Minnesota (Adamala lab) preprint, a cell built from nonliving parts (~90k-bp genome) grew and divided. Caveat: NOT self-sustaining, NOT peer-reviewed.
+- Holding steady: Compute cooling wall (>150 kW racks), Monetary (July hold), Labor (MSFT ~4,800 / Nike ~1,400), Critical minerals.
 
 ### Undercurrent: you do not own what you paid for
 Sony deleted 551 purchased films; physical PlayStation discs ending Jan 2028; .self TLD for self-hosting.
@@ -278,11 +279,11 @@ underneath: a broad commodity bid returned — Brent +5.6%, WTI +4.2%, corn +5.6
 wheat +4.2% (Chinese buying + a European heatwave, French corn seen -~30%); natgas -6.7%.
 A mild inflationary tilt into the July 28-29 FOMC.
 
-### Structural spotlights
-- Compute power wall: US heatwave strains the grid; substation lead times 3-5 yrs -> "bring your own power" (gas).
-- Trade fragmentation: negotiated not headlong (US-EU 15% deal, USMCA rolls on, China grain thaw; Section 301 due July 20).
-- The AI margin question: Grok 4.5 ~60% below frontier prices; GLM 5.2 open-weights parity debate.
-- Labor/AI: Microsoft cut ~half of id Software (~136 roles), engine + VFX hit hardest.
+### Structural spotlights (rotated for variety)
+- The AI margin question: Grok 4.5 ~$2/$6 (well below frontier); GLM 5.2 open-weights parity debate.
+- Global rearmament: NATO Ankara summit (July 7-8) reaffirms 5% GDP by 2035; ~EUR 70B Ukraine aid 2026; US to license Patriot production; ties into the critical-minerals squeeze.
+- Digital ownership & right to repair: John Deere FTC settlement (July 8, 10yr, 5 states, $1M); Sony to pull 551 films (Europe/UK, Sept 1); PlayStation discs end 2028.
+- Holding steady: Trade fragmentation (US-EU 15% / USMCA rolls on / China grain), Compute power wall (heatwave), Monetary (July hold), Labor (id Software ~136).
 
 ### On GitHub this week
 AI meeting assistants + agent tooling: meetily, strix, alibaba/page-agent, openai/codex-plugin-cc.

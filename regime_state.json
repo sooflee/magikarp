@@ -1256,30 +1256,25 @@
       ],
       "structural_regimes": [
         {
-          "name": "Global monetary tightening",
-          "direction": "synchronized, the cutting cycle is over",
-          "read": "The turn toward tighter money hardened. The European Central Bank raised rates on June 17 for the first time since 2023, lifting its deposit rate to 2.25 percent, and the US Federal Reserve held at 3.50 to 3.75 percent while dropping the expectation of a cut this year. With the Bank of Japan already at its highest rate since the 1990s, the major central banks are leaning the same way, driven by the same sticky, energy-fed inflation.",
+          "name": "Critical-minerals leverage",
+          "direction": "China moves from threats to named targets",
+          "read": "China turned its grip on critical minerals into an active instrument. On June 22 its commerce ministry added ten US firms, including the rare-earth producers MP Materials and USA Rare Earth, to an export-control list that bars transfers of Chinese-origin dual-use goods, and it restricted government procurement from dozens of mostly-defense US companies. Because China processes the great majority of the world's rare earths, this converts a quiet supply chokepoint into open statecraft, and it feeds straight into Western defense and clean-energy costs.",
           "basket": [
             {
-              "metric": "ECB deposit rate",
-              "value": "2.25%, first hike since 2023 (June 17)",
-              "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html"
+              "metric": "China export-control additions (June 22)",
+              "value": "10 US firms listed, including MP Materials and USA Rare Earth",
+              "url": "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
             },
             {
-              "metric": "US Fed funds rate",
-              "value": "held at 3.50-3.75%, 2026 cut removed from the dots",
-              "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html"
-            },
-            {
-              "metric": "Bank of Japan policy rate",
-              "value": "1.00%, highest since 1995",
+              "metric": "Procurement restrictions",
+              "value": "dozens of mostly-defense US companies barred from Chinese government procurement",
               "url": ""
             }
           ],
           "spotlight": true
         },
         {
-          "name": "Compute hits the power and memory wall",
+          "name": "Compute hits the power wall",
           "direction": "constraint binding, regulators stepping in",
           "read": "The binding constraint on AI stayed electricity, not chips. US energy regulators ordered grid operators to fast-track how data centers connect, aiming to clear large requests within about ninety days, and the largest US grid operator added an advisory to warn when supply could tighten even without extreme weather. Analysts see global data-center power demand rising more than a quarter this year. Capacity is now rationed by the grid.",
           "basket": [
@@ -1302,32 +1297,35 @@
           "spotlight": true
         },
         {
-          "name": "Labor and AI displacement",
-          "direction": "AI now the top stated reason for cuts",
-          "read": "For a fourth straight month, AI was the single largest stated reason for US job cuts. Technology firms announced roughly 139,000 cuts in the first half of 2026, up more than eighty percent from a year earlier, and Oracle disclosed about twenty-one thousand cuts over the prior year. The headline labor market is still standing, so this remains a white-collar and tech-sector squeeze rather than an economy-wide downturn.",
+          "name": "Inference moves to custom silicon",
+          "direction": "chips go bespoke",
+          "read": "The cost of running models, not training them, is pushing the industry off general-purpose GPUs. On June 24 OpenAI unveiled Jalapeno, its first custom inference chip, co-designed with Broadcom and claimed to cut inference cost by roughly half. It fits a broader shift, with Broadcom and Marvell booking fast-growing custom-silicon orders, as the volume of everyday inference rather than headline training runs comes to dominate the chip bill.",
           "basket": [
             {
-              "metric": "AI as stated layoff reason",
-              "value": "top reason for US job cuts, fourth straight month",
-              "url": "https://www.techtimes.com/articles/319588/20260703/ai-leads-us-job-cuts-record-4th-month-tech-claims-31-h1-layoffs.htm"
-            },
-            {
-              "metric": "Tech layoffs, H1 2026",
-              "value": "~139,000 announced, up ~83% year over year",
-              "url": "https://www.hrdive.com/news/tech-layoffs-surge-83percent-h1-2026-challenger-ai-disruption/824320/"
-            },
-            {
-              "metric": "Oracle",
-              "value": "~21,000 cuts disclosed over 12 months (June 22 filing)",
-              "url": ""
+              "metric": "OpenAI Jalapeno (June 24)",
+              "value": "first custom inference chip, with Broadcom; ~50% claimed cost savings",
+              "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/"
             }
           ],
           "spotlight": true
         },
         {
+          "name": "Global monetary tightening",
+          "direction": "on hold after the turn",
+          "read": "The ECB's June 17 hike to a 2.25 percent deposit rate and the Fed's removal of a 2026 cut left the major central banks leaning toward tightening, now waiting on the late-July meeting.",
+          "basket": [
+            {
+              "metric": "US Fed funds rate",
+              "value": "held at 3.50-3.75%, 2026 cut removed",
+              "url": "https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html"
+            }
+          ],
+          "spotlight": false
+        },
+        {
           "name": "AI sovereignty",
           "direction": "contested (state vs. open)",
-          "read": "The government gated access to GPT-5.6 while a Chinese open-weights model beat the frontier labs on a benchmark; state control and the open-weights escape hatch keep intensifying together.",
+          "read": "The government gated access to GPT-5.6 while a Chinese open-weights model beat the frontier labs on a benchmark; control and its escape hatch keep intensifying together.",
           "basket": [
             {
               "metric": "Leading open-weights model",
@@ -1338,14 +1336,14 @@
           "spotlight": false
         },
         {
-          "name": "Energy majors retreat from the transition",
-          "direction": "back to hydrocarbons",
-          "read": "Western oil majors keep steering capital back to oil and gas, and a US tax-credit cliff for wind and solar at the start of July adds to the squeeze on Western clean-energy projects.",
+          "name": "Labor and AI displacement",
+          "direction": "AI the top stated reason for cuts",
+          "read": "AI was the single largest stated reason for US job cuts for a fourth straight month, and Oracle disclosed about twenty-one thousand cuts in a June 22 filing.",
           "basket": [
             {
-              "metric": "US wind and solar tax credits",
-              "value": "begin-construction cliff around July 4",
-              "url": ""
+              "metric": "AI as stated layoff reason",
+              "value": "top reason for US job cuts, fourth straight month",
+              "url": "https://www.techtimes.com/articles/319588/20260703/ai-leads-us-job-cuts-record-4th-month-tech-claims-31-h1-layoffs.htm"
             }
           ],
           "spotlight": false
@@ -1353,7 +1351,7 @@
         {
           "name": "Dedollarization",
           "direction": "strengthening, dollar bounce",
-          "read": "The dollar firmed to a one-year high this week as money moved to safety, a counter to the long reserve-diversification trend rather than a break in it.",
+          "read": "The dollar firmed to a one-year high as money moved to safety, a counter to the long reserve-diversification trend rather than a break in it.",
           "basket": [
             {
               "metric": "Dollar share of global FX reserves (IMF, end-2025)",
@@ -1557,16 +1555,21 @@
       "undercurrent": {
         "label": "Undercurrent",
         "headline": "You do not own what you paid for.",
-        "summary": "A thread about digital ownership ran through the week's reading. Sony deleted five hundred and fifty-one films that PlayStation owners had bought, Sony confirmed physical disc production for new PlayStation games would end in early 2028, and a proposed new top-level domain, dot-self, was pitched to make self-hosting easier. The common thread is that a purchase increasingly buys a revocable license rather than a durable thing, and the counter-move, again, is to hold your own copy.",
+        "summary": "A thread about digital ownership ran through the week's reading. Sony said it would pull five hundred and fifty-one purchased films from European PlayStation libraries in September, over an expired license and with no refunds, and confirmed it would end physical disc production for new PlayStation games in 2028. A proposed new top-level domain, dot-self, was pitched to make self-hosting easier. The common thread is that a purchase increasingly buys a revocable license rather than a durable thing, and the counter-move, again, is to hold your own copy.",
         "links": [
           {
+            "points": "635",
+            "title": "Sony to remove 551 purchased films from European PlayStation libraries (Cybernews)",
+            "url": "https://cybernews.com/tech/sony-playstation-store-551-movies-removed/"
+          },
+          {
             "points": "789",
-            "title": "Physical disc production ending in January 2028 for new PlayStation games",
+            "title": "Physical disc production ending in January 2028 for new PlayStation games (PlayStation.Blog)",
             "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
           },
           {
             "points": "676",
-            "title": ".self: a new top-level domain designed to support self-hosting",
+            "title": ".self: a new top-level domain designed to support self-hosting (GIGAZINE)",
             "url": "https://gigazine.net/gsc_news/en/20260702-self-tld"
           }
         ]
@@ -1660,27 +1663,9 @@
       ],
       "structural_regimes": [
         {
-          "name": "Compute hits the power and memory wall",
-          "direction": "constraint binding, moving to cooling",
-          "read": "The power wall extended into a heat wall. As AI training racks push past 150 kilowatts, far above the old norm, traditional air cooling hits a ceiling around twenty kilowatts, forcing a shift to liquid cooling and making humidity in tropical data-center hubs a real limit. The constraint on the buildout keeps moving down the stack, from chips to power to the physical problem of removing heat.",
-          "basket": [
-            {
-              "metric": "AI rack power",
-              "value": "now routinely >150 kW, some designs target 300 kW",
-              "url": "https://datacenternews.asia/story/beyond-air-rethinking-data-center-cooling-for-the-ai-era"
-            },
-            {
-              "metric": "Air-cooling ceiling",
-              "value": "~20 kW per rack, pushing the shift to liquid cooling",
-              "url": ""
-            }
-          ],
-          "spotlight": true
-        },
-        {
           "name": "AI sovereignty",
-          "direction": "contested, state blinks first",
-          "read": "The clearest move of the week was a retreat. The US Commerce Department lifted the export controls that had pulled two frontier models offline for eighteen days, choosing not to press the leverage it had established. Control still exists, but the state showed it would rather license access than block it, at least when the lab agrees to police itself.",
+          "direction": "the state blinks first",
+          "read": "The clearest structural move of the week was a retreat. The US Commerce Department lifted the export controls that had pulled two frontier models offline for eighteen days, choosing not to press the leverage it had established. Control still exists, but the state signaled it would rather license access on conditions than block it, at least when the lab agrees to police itself.",
           "basket": [
             {
               "metric": "Commerce export controls",
@@ -1691,22 +1676,61 @@
           "spotlight": true
         },
         {
+          "name": "The energy-transition cliff",
+          "direction": "credits expire, the build slows",
+          "read": "A hard deadline reshaped US clean energy. To keep the federal production and investment tax credits, wind and solar projects had to begin construction by July 4, and a Treasury rule tightened what beginning construction even means. Projects that missed the date must now be running by the end of 2027 to claim anything, and a rising share of their components must come from outside China. The effect is to pull Western build-out forward and squeeze whatever comes after.",
+          "basket": [
+            {
+              "metric": "Treasury Notice 2025-42",
+              "value": "narrowed the 'begin construction' test for wind and solar",
+              "url": "https://www.irs.gov/pub/irs-drop/n-25-42.pdf"
+            },
+            {
+              "metric": "Tax-credit cliff",
+              "value": "projects had to begin construction by July 4 to keep the 45Y/48E credits",
+              "url": ""
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Synthetic biology",
+          "direction": "building a cell from parts",
+          "read": "Biology edged toward assembling life from scratch. In a preprint that has not yet been peer reviewed, Kate Adamala's lab at the University of Minnesota reported a cell built from nonliving components, DNA, lipids, and a kit of enzymes, that copied its roughly ninety-thousand-base-pair genome and divided into daughter cells. It is not self-sustaining, since it still depends on an external supply of the machinery of life, and it awaits review, but outside scientists called it a watershed for the synthetic-cell field.",
+          "basket": [
+            {
+              "metric": "Synthetic cell (U Minnesota, preprint ~July 1)",
+              "value": "built from nonliving parts, ~90,000-bp genome, grew and divided; not self-sustaining, not yet peer reviewed",
+              "url": "https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Compute hits the power wall",
+          "direction": "constraint moving to cooling",
+          "read": "As AI racks push past 150 kilowatts, far above the old norm, air cooling hits a ceiling around twenty kilowatts, forcing a shift to liquid cooling; the constraint keeps moving down the stack from chips to power to heat.",
+          "basket": [
+            {
+              "metric": "AI rack power",
+              "value": "now routinely >150 kW vs a ~20 kW air-cooling ceiling",
+              "url": "https://datacenternews.asia/story/beyond-air-rethinking-data-center-cooling-for-the-ai-era"
+            }
+          ],
+          "spotlight": false
+        },
+        {
           "name": "Global monetary tightening",
-          "direction": "synchronized, on hold before the next move",
-          "read": "The central banks paused to watch. The Federal Reserve's June minutes flagged elevated upside inflation risk, and markets moved toward pricing a hold at the late-July meeting while the year-end path still points to at least one more hike. After the ECB's June increase, the tightening bias is intact even in a quiet week.",
+          "direction": "on hold before the next move",
+          "read": "Fed minutes flagged elevated upside inflation risk while markets leaned toward a hold at the late-July meeting, with the year-end path still pointing to at least one more hike.",
           "basket": [
             {
               "metric": "US Fed funds rate",
               "value": "3.50-3.75%; minutes cite upside inflation risk",
               "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm"
-            },
-            {
-              "metric": "Median 2026 dot",
-              "value": "~3.8%, implying at least one more hike",
-              "url": ""
             }
           ],
-          "spotlight": true
+          "spotlight": false
         },
         {
           "name": "Labor and AI displacement",
@@ -1722,27 +1746,14 @@
           "spotlight": false
         },
         {
-          "name": "Energy majors retreat from the transition",
-          "direction": "back to hydrocarbons",
-          "read": "The US wind and solar tax-credit cliff arrived on July 4, requiring projects to be under construction to keep the federal credits, tightening the squeeze on Western clean-energy developers.",
+          "name": "Critical-minerals leverage",
+          "direction": "a live pressure point",
+          "read": "China's late-June move to list US rare-earth firms and restrict strategic-mineral exports keeps the supply chain a running source of friction for defense and clean-energy makers.",
           "basket": [
             {
-              "metric": "US wind and solar tax credits",
-              "value": "begin-construction deadline passed July 4",
-              "url": "https://www.canarymedia.com/articles/solar/solar-wind-trump-obstacles-tax-credits"
-            }
-          ],
-          "spotlight": false
-        },
-        {
-          "name": "Dedollarization",
-          "direction": "steady, dollar eased",
-          "read": "The dollar gave back a little of its bounce as risk appetite returned, leaving the long reserve-diversification trend intact but quiet.",
-          "basket": [
-            {
-              "metric": "Dollar share of global FX reserves (IMF, end-2025)",
-              "value": "56.8%",
-              "url": "https://data.imf.org/en/datasets/IMF.STA:COFER"
+              "metric": "China export controls",
+              "value": "10 US firms listed (June 22), including MP Materials and USA Rare Earth",
+              "url": "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
             }
           ],
           "spotlight": false
@@ -2068,59 +2079,13 @@
       ],
       "structural_regimes": [
         {
-          "name": "Compute hits the power and memory wall",
-          "direction": "constraint binding, heat makes it worse",
-          "read": "A US heatwave in early July strained the grid and sharpened the question of how much new AI load it can absorb. With tens of gigawatts of AI data-center capacity planned and high-voltage substation lead times running three to five years, developers are increasingly bringing their own power, much of it natural gas. The bottleneck is no longer chips but the physical grid and the years it takes to expand it.",
-          "basket": [
-            {
-              "metric": "US heatwave",
-              "value": "early-July grid strain renewed scrutiny of AI data-center demand",
-              "url": "https://www.aljazeera.com/economy/2026/7/3/us-heatwave-raises-alarms-over-ai-data-centre-energy-demands"
-            },
-            {
-              "metric": "Substation lead times",
-              "value": "3-5 years, the binding bottleneck; driving 'bring your own power'",
-              "url": "https://www.helpnetsecurity.com/2026/07/07/ai-data-centers-demand-expansion/"
-            },
-            {
-              "metric": "Global data-center power demand",
-              "value": "seen up ~27% in 2026, to ~132 GW (Gartner)",
-              "url": "https://www.gartner.com/en/newsroom/press-releases/2026-06-10-gartner-says-data-center-electricity-demand-to-grow-26-percent-in-2026"
-            }
-          ],
-          "spotlight": true
-        },
-        {
-          "name": "Trade fragmentation",
-          "direction": "negotiated, not headlong",
-          "read": "The trade map was redrawn without a rupture. The United States let its North American pact roll on without renewal, a new US-Europe deal capping most tariffs at fifteen percent took effect on July 1, and China signaled it would cut tariffs on US grain. The fragmentation is real but managed, a web of deadlines and reviews rather than a clean break, with a Section 301 decision due July 20.",
-          "basket": [
-            {
-              "metric": "US-Europe trade deal",
-              "value": "15% ceiling on most EU goods, effective July 1",
-              "url": "https://www.bhfs.com/insight/trump-tariffs-upcoming-deadlines/"
-            },
-            {
-              "metric": "North American pact",
-              "value": "not renewed at the July 1 review; stays in force under annual reviews",
-              "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ambassador-greer-issues-statement-usmca-joint-review"
-            },
-            {
-              "metric": "China grain tariffs",
-              "value": "signaled cuts on US soybeans and grain",
-              "url": "https://blog.pricegroup.com/2026/07/09/grains-report-07-09-2026/"
-            }
-          ],
-          "spotlight": true
-        },
-        {
           "name": "The AI margin question",
           "direction": "opening up",
-          "read": "The economics of AI became the argument of the week. xAI shipped Grok 4.5 at roughly sixty percent below comparable frontier prices, and a viral thesis held that cheap open-weights models will collapse the fat gross margins of closed AI services. The rebuttal, that inference is quietly profitable even at low prices, is unproven either way. What is clear is that price, not just capability, is now the battleground.",
+          "read": "The economics of AI became the argument of the week. xAI shipped Grok 4.5 at roughly sixty percent below comparable frontier input prices, and a viral thesis held that cheap open-weights models will collapse the fat gross margins of closed AI services. The rebuttal, that inference is quietly profitable even at low prices, is unproven either way. What is clear is that price, not just capability, is now the battleground.",
           "basket": [
             {
               "metric": "Grok 4.5 pricing",
-              "value": "~$2 / $6 per million tokens, ~60% below comparable models",
+              "value": "~$2 / $6 per million tokens, well below comparable models",
               "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
             },
             {
@@ -2132,14 +2097,63 @@
           "spotlight": true
         },
         {
-          "name": "Labor and AI displacement",
-          "direction": "reaching creative and engineering teams",
-          "read": "Microsoft cut roughly half of id Software, the storied game studio, hitting its engine and visual-effects teams hardest as part of the largest restructure in Xbox's history.",
+          "name": "Global rearmament",
+          "direction": "spending ratchets up",
+          "read": "The West put money behind its security worries. At the NATO summit in Ankara on July 7 and 8, allies reaffirmed a target of five percent of GDP on defense by 2035 and committed about seventy billion euros in military aid to Ukraine for 2026, with the US offering a production license for Patriot interceptors. NATO says European members and Canada have added more than a hundred and thirty billion dollars of defense investment since last year. Rearmament is now a durable driver of budgets and industrial policy, and it runs straight into the critical-minerals squeeze.",
           "basket": [
             {
-              "metric": "id Software",
-              "value": "~136 roles cut (about half the studio), engine and VFX teams hit hardest",
-              "url": "https://www.gamedeveloper.com/business/report-around-half-of-the-id-software-team-have-been-laid-off"
+              "metric": "NATO defense target (Ankara, July 7-8)",
+              "value": "reaffirmed 5% of GDP by 2035; >$139B added since 2025",
+              "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
+            },
+            {
+              "metric": "Ukraine military aid for 2026",
+              "value": "~EUR 70 billion pledged; US to license Patriot production",
+              "url": "https://www.aljazeera.com/news/2026/7/8/nato-pledges-70-billion-euros-for-ukraine-as-trump-praises-peace-progress"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Digital ownership and the right to repair",
+          "direction": "contested in courts and regulators",
+          "read": "Who controls what you buy became a live legal question. The FTC and five states settled with John Deere on July 8, binding it for ten years to give farmers and independent repair shops the same tools and software it gives its dealers, a rare win for buyers. It cuts against the drift the other way, where a purchase increasingly buys a revocable license, as Sony's move to end physical discs for new games in 2028 underlined. Ownership is being renegotiated, sometimes toward the buyer and sometimes away.",
+          "basket": [
+            {
+              "metric": "John Deere / FTC settlement (July 8)",
+              "value": "10-year right-to-repair order; FTC plus 5 states; $1M to the states",
+              "url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-states-secure-settlement-deere-company-advancing-farmers-right-repair"
+            },
+            {
+              "metric": "Sony PlayStation",
+              "value": "physical-disc production for new games ends 2028",
+              "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "negotiated, not headlong",
+          "read": "The US let USMCA roll on without renewal at the July 1 review, a new US-Europe deal capped most tariffs at fifteen percent, and China signaled cuts to US grain tariffs; a Section 301 decision is due July 20.",
+          "basket": [
+            {
+              "metric": "US-Europe trade deal",
+              "value": "15% ceiling on most EU goods, effective July 1; USMCA not renewed",
+              "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ambassador-greer-issues-statement-usmca-joint-review"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Compute hits the power wall",
+          "direction": "heat makes it worse",
+          "read": "A US heatwave strained the grid, and multi-year substation lead times are pushing AI developers to bring their own power, much of it natural gas.",
+          "basket": [
+            {
+              "metric": "Substation lead times",
+              "value": "3-5 years, driving 'bring your own power'",
+              "url": "https://www.helpnetsecurity.com/2026/07/07/ai-data-centers-demand-expansion/"
             }
           ],
           "spotlight": false
@@ -2147,7 +2161,7 @@
         {
           "name": "Global monetary tightening",
           "direction": "on hold, hike still on the table",
-          "read": "Ahead of the late-July meeting, markets priced roughly a four-in-five chance the Fed holds, but the year-end dot still points to at least one more hike, and this week's commodity bid revived the inflation question.",
+          "read": "Markets priced roughly a four-in-five chance the Fed holds in late July, though this week's commodity bid revived the inflation question.",
           "basket": [
             {
               "metric": "July FOMC odds",
@@ -2158,14 +2172,14 @@
           "spotlight": false
         },
         {
-          "name": "AI sovereignty",
-          "direction": "contested, models ship outside the EU first",
-          "read": "Both GPT-5.6 and Grok 4.5 shipped outside the European Union first, a quiet sign that the bloc's rules now shape where frontier models appear.",
+          "name": "Labor and AI displacement",
+          "direction": "reaching creative and engineering teams",
+          "read": "Microsoft cut about half of the game studio id Software, roughly 136 roles, hitting its engine and visual-effects teams hardest as part of the largest restructure in Xbox's history.",
           "basket": [
             {
-              "metric": "EU availability",
-              "value": "Grok 4.5 not available in the EU at launch; GPT-5.6 rollout staged",
-              "url": "https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/"
+              "metric": "id Software",
+              "value": "~136 roles cut (about half the studio)",
+              "url": "https://www.gamedeveloper.com/business/report-around-half-of-the-id-software-team-have-been-laid-off"
             }
           ],
           "spotlight": false
