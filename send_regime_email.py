@@ -421,6 +421,12 @@ def build_html():
         body.append(_commodities_html(ISSUE["commodities"]))
     if "markets" in reg:
         body.append(_market_html(reg["markets"]))
+    if ISSUE.get("wildcard") and ISSUE["wildcard"].get("headline"):
+        w = ISSUE["wildcard"]
+        topic = w.get("topic", "")
+        label = f"The wildcard · {topic}" if topic else "The wildcard"
+        body.append(_section_html(label, w["headline"], w.get("summary", ""),
+                                  w.get("links"), w.get("items")))
     body.append(_radar_html(ISSUE))
 
     body.append(_watch_next_html(ISSUE))
@@ -535,6 +541,12 @@ def build_plain():
         out += [f"MARKETS: {m.get('headline','')}", "", m.get("summary", ""), "",
                 "  " + ", ".join(f"{lbl} {sig[k]}" for k, lbl in MKT_ORDER if k in sig),
                 "", MARKET_MEANS, ""]
+    if ISSUE.get("wildcard") and ISSUE["wildcard"].get("headline"):
+        w = ISSUE["wildcard"]
+        topic = w.get("topic", "")
+        head = f"THE WILDCARD ({topic}): " if topic else "THE WILDCARD: "
+        refs = _items_text(w.get("items")) or _links_text(w.get("links")).rstrip()
+        out += [f"{head}{w['headline']}", "", w.get("summary", ""), "", refs, ""]
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",

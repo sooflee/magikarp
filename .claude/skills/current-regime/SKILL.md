@@ -29,9 +29,11 @@ The issue is organized into two acts. Keep this order; the renderers follow it.
    - **Exponential trends to watch** (the forward watchlist)
    - **Undercurrent** (a quieter counter-theme, if present)
 4. **— The wider world —**
-   - **Geopolitics** (a 3–5 story digest, each tied to a regime)
+   - **Geopolitics** (a 4–6 story digest, each tied to a regime; the issue's
+     breadth beyond tech, sourced from world reporting, not HN)
    - **Commodities & energy** (big movers only)
    - **Markets** (the cards + plain-language explainer)
+   - **The wildcard** (one rotating theme outside the four lanes, if present)
    - **The structural picture** (the regime radar)
 5. **What to watch next week** — a short forward calendar.
 
@@ -41,8 +43,13 @@ Adaptive depth).
 
 ## Build pipeline
 
-1. **Pull sources.** `python3 sources.py` → top HN posts (Algolia, by points) and
-   GitHub trending. HN is the spine.
+1. **Pull sources.** `python3 sources.py` → HN (Algolia, by points), GitHub
+   trending, arXiv, **GDELT** (world-news events for geopolitics), **Al Jazeera**
+   (world reporting), **Techmeme** (curated tech), **Lobsters** (dev cross-check on
+   HN), and **Polymarket** (forward odds). HN is the spine for tech attention, but
+   do **not** name Geopolitics or the wildcard from HN alone — pull those from GDELT
+   / Al Jazeera / wider reporting so the issue is not just what HN upvoted. GDELT
+   rate-limits per IP; one call per run is fine, so do not retry in a loop.
 2. **Regime momentum.** Count the week's top HN stories per regime for **this week
    and last** (two Algolia `created_at_i` date-range queries, classified with the
    keyword rules in `classify.py`). Store as `momentum:{weeks:[a,b], series:{regime:[prev,cur]}}`.
@@ -83,9 +90,18 @@ Adaptive depth).
 
 ## Section conventions
 
-- **Geopolitics** — 3 to 5 of the week's biggest *world* stories (not just HN),
-  each with a one-line comment connecting it to a tracked regime. This is where the
-  issue earns breadth beyond tech.
+- **Geopolitics** — 4 to 6 of the week's biggest *world* stories, each with a
+  one-line comment connecting it to a tracked regime. This is where the issue earns
+  breadth beyond tech, so give it real weight: source it from **GDELT + Al Jazeera +
+  wider reporting**, not from whatever geopolitics happened to reach HN's front page.
+  Cover more than one theatre (conflict, trade, elections, sanctions) rather than
+  five angles on one story. Fewer only in a genuinely thin week.
+- **The wildcard** (`wildcard`) — one theme each week from *outside* the four
+  tracked lanes: science, energy, space, a specific company, a cultural shift. It is
+  deliberately rotating, so it is **not** part of the week-over-week momentum/diff
+  (those stay clean for the four lanes). Same shape as a regime section but no
+  `state`: `{topic, headline, summary, links, items?}`. Pick the one genuinely
+  interesting non-core story of the week; omit it in a week that has none.
 - **Commodities & energy** (`commodities`) — show **only big movers**: a
   `min_change` threshold (default 4%) filters the table, so small moves drop out.
   The summary leads with the big moves and ends with the larger forward call. Label
@@ -157,6 +173,7 @@ market_moves: [{market, dir(up|down|flat), detail, url}]
 commodities: { as_of, min_change, summary, items:[{name,level,change}] }
 undercurrent: { label, headline, summary, links:[...] }
 across_sources: { github_theme, github:[{title,url}] }
+wildcard: { topic, headline, summary, links:[...], items?:[{title,url}] }   # rotating, optional
 structural_regimes: [{name, direction, read, basket:[{metric,value,url}], spotlight}]
 watch_next: [{when, event, note}]
 ```
@@ -164,7 +181,8 @@ Global: `regime_defs` (state spaces) and `bsig_watch` (the watchlist).
 
 ## Files
 
-- `sources.py` — HN (Algolia) + GitHub trending fetchers.
+- `sources.py` — fetchers: HN (Algolia), GitHub trending, arXiv, GDELT
+  (geopolitics), Al Jazeera + Techmeme (RSS), Lobsters, Polymarket. All best-effort.
 - `classify.py` — keyword classifier → regime momentum counts.
 - `regime_state.json` — regime defs, every issue object, the watchlist.
 - `regime_engine.py` — week-over-week diff, momentum/trajectory, rendered blocks.

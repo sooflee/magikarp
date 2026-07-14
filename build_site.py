@@ -91,6 +91,8 @@ header.mast .kicker{{font-size:var(--fs-meta);color:var(--accent);font-style:ita
 .post h2 a{{color:var(--fg);text-decoration:none}}
 .post h2 a:hover{{color:var(--accent)}}
 .post .dek{{font-size:var(--fs-detail);color:var(--muted);margin:0}}
+.sec.wildcard{{border-left:2px solid var(--accent);padding-left:16px}}
+.sec.wildcard .sub{{letter-spacing:1px;text-transform:uppercase;font-size:var(--fs-meta)}}
 /* issue page sections */
 .lede{{font-size:var(--fs-body);line-height:1.6;margin:24px 0 0;color:var(--fg)}}
 .act{{text-align:center;margin:42px 0 0}}
@@ -379,6 +381,19 @@ def render_undercurrent(u: dict) -> str:
             f'<p>{esc(u.get("summary",""))}</p>{render_links(u.get("links"))}</div>')
 
 
+def render_wildcard(w: dict) -> str:
+    """The rotating wildcard: one theme each week outside the four tracked lanes.
+    Not part of the week-over-week momentum; renders only when present."""
+    if not w or not w.get("headline"):
+        return ""
+    topic = w.get("topic", "")
+    sub = f'The wildcard &middot; {esc(topic)}' if topic else 'The wildcard'
+    return (f'<div class="sec wildcard"><h2>{esc(w["headline"])}</h2>'
+            f'<p class="sub">{sub}</p>'
+            f'<p>{esc(w.get("summary",""))}</p>'
+            f'{render_items(w.get("items"))}{render_links(w.get("links"))}</div>')
+
+
 def render_across_inline(a: dict) -> str:
     gh = a.get("github", [])
     if not gh:
@@ -482,6 +497,8 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_commodities(iss["commodities"]))
     if "markets" in reg:
         secs.append(render_markets(reg["markets"]))
+    if iss.get("wildcard"):
+        secs.append(render_wildcard(iss["wildcard"]))
     secs.append(render_radar(iss))
     secs.append(render_watch_next(iss))
     inner = (

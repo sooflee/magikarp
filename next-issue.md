@@ -32,6 +32,17 @@ full July 6–12 week if regenerating it on the Monday run.
 - **Labor / AI.** Microsoft's id Software cuts (~136) were part of the largest Xbox
   restructure; AI remains the #1 stated US layoff reason. Watch the June Challenger print.
 
+## New this issue (structure changes landed 2026-07-14)
+- **Wider sourcing.** `sources.py` now also pulls GDELT (geopolitics), Al Jazeera,
+  Techmeme, Lobsters, and Polymarket. Do not name Geopolitics or the wildcard from
+  HN alone; pull those from GDELT / Al Jazeera / wider reporting.
+- **More geopolitics.** The Geopolitics digest is now 4–6 stories across more than
+  one theatre (conflict, trade, elections, sanctions), sourced from world reporting.
+- **Wildcard lane.** Add an optional `wildcard: {topic, headline, summary, links}`
+  block: one rotating non-core theme (science, energy, space, a company). It renders
+  after Markets, before the radar, and is kept out of the momentum/diff. Issue 04
+  demos it with the synthetic-cell story. Omit it in a week with no good candidate.
+
 ## Recurring refresh (every issue)
 - Re-run the momentum counts (two Algolia date-range queries, top 50 by points,
   classify.py). Issue 05's stored `cur` values are Issue 06's `prev`.

@@ -1578,6 +1578,17 @@
           }
         ]
       },
+      "wildcard": {
+        "topic": "Science",
+        "headline": "A cell built from scratch grows and divides.",
+        "summary": "A preprint reports a cell assembled from nonliving parts, carrying a roughly 90,000-base-pair synthetic genome, that grew and divided. It is not self-sustaining and has not been peer reviewed, so read it as a milestone claim rather than a settled result. The direction is what matters: the line between assembled chemistry and a living cell keeps thinning.",
+        "links": [
+          {
+            "title": "For the first time, a cell built from scratch grows and divides (Quanta)",
+            "url": "https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/"
+          }
+        ]
+      },
       "watch_next": [
         {
           "when": "July 7-9",
