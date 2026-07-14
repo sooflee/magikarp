@@ -248,6 +248,7 @@
         ]
       },
       "date_label": "June 8–14, 2026",
+      "index_title": "Commerce pulls Anthropic's Fable 5 and Mythos 5 from foreign users.",
       "commodities": {
         "as_of": "week ending June 14",
         "summary": "With oil moving through Hormuz again, crude tumbled roughly 8 percent and the conflict's fear premium is unwinding across the complex; gold, silver and natural gas fell with it, while coffee was the exception. With the strait reopening, analysts expect still more oil to reach the market, pointing to softer energy prices ahead.",
@@ -499,6 +500,7 @@
       "date": "2026-06-21",
       "partial": false,
       "date_label": "June 15–21, 2026",
+      "index_title": "SpaceX's record IPO debut and the Qualcomm-TSMC chip scramble.",
       "regimes": {
         "tech_policy": {
           "state": "consolidation",
@@ -959,6 +961,7 @@
       "week": "2026-06-22/2026-06-28",
       "date": "2026-06-28",
       "date_label": "June 22–28, 2026",
+      "index_title": "EU digital-ID wallets land as Play Integrity locks out GrapheneOS.",
       "partial": false,
       "lede": "",
       "regimes": {
@@ -1368,6 +1371,7 @@
       "week": "2026-06-29/2026-07-05",
       "date": "2026-07-05",
       "date_label": "June 29 – July 5, 2026",
+      "index_title": "Washington lifts the Fable 5 export ban; OpenAI ships its first Broadcom chip.",
       "partial": false,
       "lede": "",
       "regimes": {
@@ -1765,6 +1769,7 @@
       "week": "2026-07-06/2026-07-12",
       "date": "2026-07-10",
       "date_label": "July 6–12, 2026",
+      "index_title": "The EU keeps message-scanning to 2028; Grok 4.5 and GPT-5.6 undercut on price.",
       "partial": false,
       "lede": "",
       "regimes": {

@@ -91,7 +91,6 @@ header.mast .kicker{{font-size:var(--fs-meta);color:var(--accent);font-style:ita
 .post h2 a{{color:var(--fg);text-decoration:none}}
 .post h2 a:hover{{color:var(--accent)}}
 .post .dek{{font-size:var(--fs-detail);color:var(--muted);margin:0}}
-.post .tags{{font-size:var(--fs-meta);color:var(--faint);margin:6px 0 0}}
 /* issue page sections */
 .lede{{font-size:var(--fs-body);line-height:1.6;margin:24px 0 0;color:var(--fg)}}
 .act{{text-align:center;margin:42px 0 0}}
@@ -178,6 +177,8 @@ def badge(state: str) -> str:
 
 
 def lead_headline(iss: dict) -> str:
+    if iss.get("index_title"):
+        return iss["index_title"]
     reg = iss.get("regimes", {})
     for key, r in reg.items():
         if r.get("headline"):
@@ -500,7 +501,6 @@ def render_index(doc: dict, issues: list) -> str:
             f'<p class="date">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</p>'
             f'<h2><a href="issues/{esc(iss["id"])}.html">{esc(lead_headline(iss))}</a></h2>'
             f'<p class="dek">{esc(first_sentence(_lead_summary(iss)))}</p>'
-            f'<p class="tags">{esc(_tags(doc, iss))}</p>'
             f'</div>')
     inner = (
         '<header class="mast home"><h1>The Current Regime</h1></header>'
@@ -517,9 +517,6 @@ def _lead_summary(iss: dict) -> str:
     return ""
 
 
-def _tags(doc: dict, iss: dict) -> str:
-    defs = doc["regime_defs"]
-    return "  ·  ".join(defs.get(k, {}).get("label", k) for k in iss.get("regimes", {}))
 
 
 def build():
