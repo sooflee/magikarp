@@ -199,6 +199,10 @@ continuation, not a new lane. Archived defs kept for issues 01–05:
 
 ```
 id, week, date, date_label, partial
+index_title   # archive/index title: state the week's defining event AS a move in its
+              # larger trend ("Open weights become Chinese industrial policy as oil
+              # re-enters the inflation story."), never a bare event list ("X ships;
+              # Y lands."). Event anchor + trend meaning in one declarative sentence.
 regimes: { ai_compute|deep_dive|geopolitics|markets: {
    state, headline, summary, implication, evidence[],
    links:[{points,title,url}], items:[{title,url,comment}](geopolitics),

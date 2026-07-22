@@ -266,7 +266,7 @@
     ]
    },
    "date_label": "June 8–14, 2026",
-   "index_title": "Commerce pulls Anthropic's Fable 5 and Mythos 5 from foreign users.",
+   "index_title": "AI access becomes an instrument of state as Washington pulls Fable 5 offline.",
    "commodities": {
     "as_of": "week ending June 14",
     "summary": "With oil moving through Hormuz again, crude tumbled roughly 8 percent and the conflict's fear premium is unwinding across the complex; gold, silver and natural gas fell with it, while coffee was the exception. With the strait reopening, analysts expect still more oil to reach the market, pointing to softer energy prices ahead.",
@@ -518,7 +518,7 @@
    "date": "2026-06-21",
    "partial": false,
    "date_label": "June 15–21, 2026",
-   "index_title": "SpaceX's record IPO debut and the Qualcomm-TSMC chip scramble.",
+   "index_title": "The AI buildout turns to consolidation: a record IPO and chipmakers pairing off.",
    "regimes": {
     "tech_policy": {
      "state": "consolidation",
@@ -979,7 +979,7 @@
    "week": "2026-06-22/2026-06-28",
    "date": "2026-06-28",
    "date_label": "June 22–28, 2026",
-   "index_title": "EU digital-ID wallets land as Play Integrity locks out GrapheneOS.",
+   "index_title": "Identity becomes the internet's gate: EU wallets arrive and device attestation locks users out.",
    "partial": false,
    "lede": "",
    "regimes": {
@@ -1389,7 +1389,7 @@
    "week": "2026-06-29/2026-07-05",
    "date": "2026-07-05",
    "date_label": "June 29 – July 5, 2026",
-   "index_title": "Washington lifts the Fable 5 export ban; OpenAI ships its first Broadcom chip.",
+   "index_title": "The export ban lifts, proving state control of AI access turns both ways.",
    "partial": false,
    "lede": "",
    "regimes": {
@@ -1798,7 +1798,7 @@
    "week": "2026-07-06/2026-07-12",
    "date": "2026-07-10",
    "date_label": "July 6–12, 2026",
-   "index_title": "The EU keeps message-scanning to 2028; Grok 4.5 and GPT-5.6 undercut on price.",
+   "index_title": "Model prices fall toward commodity while Europe makes message-scanning permanent.",
    "partial": false,
    "lede": "",
    "regimes": {
@@ -2226,7 +2226,7 @@
    "date": "2026-07-19",
    "date_label": "July 13–19, 2026",
    "partial": false,
-   "index_title": "The open-model race reopens as a Gulf oil shock ends the record run.",
+   "index_title": "Open weights become Chinese industrial policy as oil re-enters the inflation story.",
    "lede": "",
    "regimes": {
     "ai_compute": {
