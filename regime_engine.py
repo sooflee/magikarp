@@ -24,6 +24,21 @@ SERIF = ("'Iowan Old Style','Palatino Linotype',Palatino,Georgia,"
 SANS = SERIF  # alias: every text element renders in the serif face
 
 
+# A renamed lane inherits its predecessor's history so week-over-week continuity
+# survives the rename. ai_compute (issue 06+) continues the former tech_policy lane;
+# both share the open-acceleration / consolidation / state-capture state space.
+LANE_ALIASES = {"ai_compute": "tech_policy"}
+
+
+def _regime_at(iss: dict, key: str):
+    """The regime dict for `key` in an issue, falling back to a predecessor lane."""
+    regs = iss.get("regimes", {})
+    if key in regs:
+        return regs[key]
+    alias = LANE_ALIASES.get(key)
+    return regs.get(alias) if alias else None
+
+
 def load() -> dict:
     return json.loads(STATE.read_text())
 
@@ -37,13 +52,13 @@ def momentum(state: dict):
 
 
 def weeks_in_state(state: dict, key: str) -> int:
-    issues = [i for i in state["issues"] if key in i.get("regimes", {})]
+    issues = [i for i in state["issues"] if _regime_at(i, key)]
     if not issues:
         return 0
-    cur = issues[-1]["regimes"][key].get("state")
+    cur = _regime_at(issues[-1], key).get("state")
     n = 0
     for iss in reversed(issues):
-        if iss["regimes"][key].get("state") == cur:
+        if _regime_at(iss, key).get("state") == cur:
             n += 1
         else:
             break
@@ -91,9 +106,13 @@ def diff(state: dict, prev_idx: int = -2, cur_idx: int = -1) -> dict:
     pr = (prev or {}).get("regimes", {})
     cr = (cur or {}).get("regimes", {})
     for key in defs:
-        pc, cc = pr.get(key), cr.get(key)
+        if key == "deep_dive":          # rotating domain lane: not comparable week to week
+            continue
+        cc = cr.get(key)
         if cc is None:
             continue
+        # a renamed lane inherits its predecessor's prior state (tech_policy -> ai_compute)
+        pc = pr.get(key) or (pr.get(LANE_ALIASES[key]) if key in LANE_ALIASES else None)
         label = defs[key]["label"]
         if pc is None:
             new.append((key, label, cc.get("state"), cc.get("headline", "")))

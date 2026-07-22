@@ -483,15 +483,20 @@ def render_issue_page(doc: dict, iss: dict) -> str:
     secs = [render_lede(iss), render_momentum(doc, iss)]
     # Act 1 — the tech world
     secs.append(render_act("The tech world"))
-    secs.append(_regime(doc, iss, "tech_policy"))
-    secs.append(_regime(doc, iss, "ai_agents"))
+    if "ai_compute" in reg:                       # issue 06+ : one merged AI lane
+        secs.append(_regime(doc, iss, "ai_compute"))
+    else:                                          # archive (01-05) : the old two lanes
+        secs.append(_regime(doc, iss, "tech_policy"))
+        secs.append(_regime(doc, iss, "ai_agents"))
     if iss.get("across_sources"):
-        secs.append(render_across_inline(iss["across_sources"]))   # GitHub note under agents
+        secs.append(render_across_inline(iss["across_sources"]))   # GitHub note under AI
     secs.append(render_watch(iss.get("bsig_watch") or doc.get("bsig_watch", [])))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     # Act 2 — the wider world
     secs.append(render_act("The wider world"))
+    if "deep_dive" in reg:                         # rotating non-tech lane, leads Act 2
+        secs.append(_regime(doc, iss, "deep_dive"))
     secs.append(_regime(doc, iss, "geopolitics"))
     if iss.get("commodities"):
         secs.append(render_commodities(iss["commodities"]))

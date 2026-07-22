@@ -206,6 +206,80 @@ def fetch_polymarket(limit: int = 15) -> list[dict]:
     return out
 
 
+# --- Rotating deep-dive lane (issue 06+) ----------------------------------
+# The second core lane rotates its domain each week so the issue stops being
+# all-tech. Domains cycle in this fixed order; pick with deep_dive_domain().
+DEEP_DIVE_ROTATION = [
+    "bio_health",        # GLP-1 second-order effects, longevity, AI drug discovery, synth-bio
+    "real_economy",      # housing, cost-of-living, demographics, the labor market
+    "china_industrial",  # EVs/BYD, domestic chips, overcapacity deflation
+    "energy_materials",  # solar/battery deflation, SMRs, the grid as its own story
+    "global_south",      # India, SE Asia, Africa, Latin America: growth, elections, capital
+    "science_frontier",  # fusion, quantum, the space economy beyond the launch business
+]
+
+# Each domain is a set of best-effort RSS/Atom feeds. Failures drop to [].
+DEEP_DIVE_FEEDS = {
+    "bio_health": [
+        ("STAT", "https://www.statnews.com/feed/"),
+        ("Nature", "https://www.nature.com/nature.rss"),
+    ],
+    "real_economy": [
+        ("Calculated Risk", "https://feeds.feedburner.com/CalculatedRisk"),
+        ("Wolf Street", "https://wolfstreet.com/feed/"),
+    ],
+    "china_industrial": [
+        ("SCMP Business", "https://www.scmp.com/rss/92/feed"),
+    ],
+    "energy_materials": [
+        ("CleanTechnica", "https://cleantechnica.com/feed/"),
+        ("OilPrice", "https://oilprice.com/rss/main"),
+    ],
+    "global_south": [
+        ("Al Jazeera", "https://www.aljazeera.com/xml/rss/all.xml"),
+    ],
+    "science_frontier": [
+        ("Quanta", "https://api.quantamagazine.org/feed/"),
+        ("Phys.org", "https://phys.org/rss-feed/"),
+    ],
+}
+
+# A GDELT query to widen the two domains that are thin on English RSS.
+DEEP_DIVE_GDELT = {
+    "china_industrial": "(China AND (EV OR chip OR semiconductor OR export OR "
+                        "overcapacity OR manufacturing)) sourcelang:english",
+    "global_south": "(India OR Indonesia OR Nigeria OR Brazil OR \"South Africa\" "
+                    "OR Vietnam) AND (economy OR election OR trade OR investment) "
+                    "sourcelang:english",
+}
+
+
+def deep_dive_domain(issue_num: int) -> str:
+    """The deep-dive domain for issue N, cycling through DEEP_DIVE_ROTATION.
+    Deterministic and auditable: issue 06 -> bio_health, 07 -> real_economy, ..."""
+    return DEEP_DIVE_ROTATION[(int(issue_num) - 6) % len(DEEP_DIVE_ROTATION)]
+
+
+def fetch_deep_dive(domain: str, limit: int = 15) -> list[dict]:
+    """Merged best-effort items for one rotating deep-dive domain."""
+    out: list[dict] = []
+    for name, url in DEEP_DIVE_FEEDS.get(domain, []):
+        try:
+            out += _rss_items(_get(url), f"deepdive:{domain}", limit)
+        except Exception as e:
+            print(f"[deepdive:{domain}] {name} failed: {e}", file=sys.stderr)
+    gq = DEEP_DIVE_GDELT.get(domain)
+    if gq:
+        out += [dict(it, source=f"deepdive:{domain}") for it in fetch_gdelt(gq, limit)]
+    seen, uniq = set(), []
+    for it in out:
+        if it["title"] in seen:
+            continue
+        seen.add(it["title"])
+        uniq.append(it)
+    return uniq[:limit]
+
+
 def fetch_all() -> dict[str, list[dict]]:
     return {
         "hn": fetch_hn(),
@@ -227,6 +301,14 @@ def _print(items: list[dict], n: int):
 
 
 def main() -> int:
+    # `python3 sources.py deepdive 06` previews just the rotating lane for an issue.
+    if len(sys.argv) >= 2 and sys.argv[1] == "deepdive":
+        n = sys.argv[2] if len(sys.argv) >= 3 else "6"
+        dom = deep_dive_domain(n)
+        items = fetch_deep_dive(dom)
+        print(f"=== Deep-dive for issue {n}: {dom} ({len(items)}) ===")
+        _print(items, 15)
+        return 0
     data = fetch_all()
     print(f"=== Hacker News (top {len(data['hn'])}) ===")
     _print(data["hn"], 12)

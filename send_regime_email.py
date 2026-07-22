@@ -404,10 +404,13 @@ def build_html():
 
     # Act 1 — the tech world
     body.append(_act_html("The tech world"))
-    body.append(_regime_section("tech_policy"))
-    body.append(_regime_section("ai_agents"))
+    if "ai_compute" in reg:                        # issue 06+ : one merged AI lane
+        body.append(_regime_section("ai_compute"))
+    else:                                           # archive (01-05) : the old two lanes
+        body.append(_regime_section("tech_policy"))
+        body.append(_regime_section("ai_agents"))
     if ISSUE.get("across_sources"):
-        body.append(_across_inline(ISSUE["across_sources"]))   # GitHub note folded under agents
+        body.append(_across_inline(ISSUE["across_sources"]))   # GitHub note folded under AI
     body.append(regime_engine.render_watch_html(STATE))
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
@@ -416,6 +419,8 @@ def build_html():
 
     # Act 2 — the wider world
     body.append(_act_html("The wider world"))
+    if "deep_dive" in reg:                          # rotating non-tech lane, leads Act 2
+        body.append(_regime_section("deep_dive"))
     body.append(_regime_section("geopolitics"))
     if ISSUE.get("commodities"):
         body.append(_commodities_html(ISSUE["commodities"]))
