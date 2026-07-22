@@ -543,6 +543,7 @@ def _lead_summary(iss: dict) -> str:
 
 def build():
     doc = json.loads(STATE.read_text())
+    regime_engine.lint_or_die(regime_engine.latest_issue(doc))
     issues = [i for i in doc.get("issues", []) if not i.get("partial")]
     issues.sort(key=lambda i: i["id"], reverse=True)
     (DOCS / "issues").mkdir(parents=True, exist_ok=True)

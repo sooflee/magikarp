@@ -47,6 +47,71 @@ def latest_issue(state: dict) -> dict:
     return [i for i in state["issues"] if not i.get("partial")][-1]
 
 
+# News-outlet hosts where a bare homepage link can only be a placeholder: a real
+# citation to these always has an article path.
+_NEWS_HOSTS = {
+    "www.aljazeera.com", "aljazeera.com", "www.statnews.com", "statnews.com",
+    "www.techmeme.com", "techmeme.com", "www.reuters.com", "reuters.com",
+    "www.bloomberg.com", "bloomberg.com", "www.cnbc.com", "cnbc.com",
+    "www.nytimes.com", "nytimes.com", "www.wsj.com", "wsj.com",
+    "www.ft.com", "ft.com", "polymarket.com", "www.polymarket.com",
+    "news.ycombinator.com", "www.theregister.com", "arstechnica.com",
+    "www.wired.com", "techcrunch.com", "www.engadget.com",
+}
+
+
+def lint_issue(iss: dict) -> list[str]:
+    """Catch placeholder links before an issue can render or send.
+
+    An unverified draft looks plausible but links wrong: invented round-numbered
+    HN item ids, bare news-outlet homepages, one URL reused for several stories.
+    """
+    import re
+    from urllib.parse import urlsplit
+
+    problems: list[str] = []
+    seen: dict[str, set[str]] = {}
+
+    def walk(node, title=""):
+        if isinstance(node, dict):
+            t = node.get("title") or node.get("metric") or title
+            for v in node.values():
+                walk(v, t)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v, title)
+        elif isinstance(node, str) and node.startswith("http"):
+            seen.setdefault(node, set()).add(title)
+            parts = urlsplit(node)
+            if parts.path in ("", "/") and not parts.query:
+                if parts.netloc in _NEWS_HOSTS:
+                    problems.append(f"placeholder homepage link: {node} ({title!r})")
+                else:
+                    print(f"[lint] warning: homepage-only link {node} ({title!r})",
+                          file=sys.stderr)
+            m = re.match(r"https?://news\.ycombinator\.com/item\?id=(\d+)$", node)
+            if m and int(m.group(1)) % 1000 == 0:
+                problems.append(f"suspicious round HN item id: {node} ({title!r})")
+
+    walk(iss)
+    for url, titles in seen.items():
+        if len(titles) > 1:
+            problems.append(
+                f"one URL cited for {len(titles)} different items: {url} {sorted(titles)}")
+    return problems
+
+
+def lint_or_die(iss: dict) -> None:
+    problems = lint_issue(iss)
+    if problems:
+        print(f"LINT: issue {iss.get('id')} has placeholder-style links; "
+              "replace them with URLs actually fetched during verification:",
+              file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        raise SystemExit(1)
+
+
 def momentum(state: dict):
     return latest_issue(state).get("momentum")
 

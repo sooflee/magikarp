@@ -36,7 +36,7 @@ python3 signups.py || log "signups step failed (continuing)"
 # --- generate this week's issue ---
 if [ "${GENERATE:-1}" = "1" ]; then
   log "generating issue via Claude (headless)"
-  claude -p "Produce this week's issue of The Current Regime by following .claude/skills/current-regime/SKILL.md exactly. Do every data step, verify each factual claim with web search, write the new issue object into regime_state.json, append the ledger the-current-regime.md, then run 'python3 build_site.py'. Commit and push. Do NOT send any email; delivery is handled by this script." \
+  claude -p "Produce this week's issue of The Current Regime by following .claude/skills/current-regime/SKILL.md exactly. Do every data step, verify each factual claim with web search, write the new issue object into regime_state.json, append the ledger the-current-regime.md, then run 'python3 build_site.py'. LINK RULE (hard): never write a URL you did not actually fetch this run from a source API or a web search result; no invented HN item ids, no homepage links standing in for articles. build_site.py and the email sender lint for placeholder links and will fail the run if you break this; if a claim has no real URL, drop the claim. Commit and push. Do NOT send any email; delivery is handled by this script." \
     --dangerously-skip-permissions --model claude-opus-4-8 2>&1 | tail -8 \
     || log "Claude generation failed (continuing with current state)"
 fi
@@ -44,7 +44,8 @@ fi
 # --- build + publish the archive ---
 log "building site"
 python3 build_site.py || log "build_site failed"
-git add -A && git commit -m "weekly run $(date '+%Y-%m-%d')" >/dev/null 2>&1 || true
+git add regime_state.json docs the-current-regime.md next-issue.md \
+  && git commit -m "weekly run $(date '+%Y-%m-%d')" >/dev/null 2>&1 || true
 if git push >/dev/null 2>&1; then log "pushed"; else log "push skipped/failed"; fi
 
 # --- deliver: PREVIEW TO OWNER ONLY (never the list) ---

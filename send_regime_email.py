@@ -591,6 +591,7 @@ def build_plain():
 
 
 def main() -> int:
+    regime_engine.lint_or_die(ISSUE)
     app_password = os.environ.get("GMAIL_APP_PASSWORD")
     if not app_password:
         print("ERROR: set GMAIL_APP_PASSWORD first.", file=sys.stderr)
