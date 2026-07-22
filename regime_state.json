@@ -2476,7 +2476,7 @@
       {
        "metric": "Top model releases on HN",
        "value": "Kimi K3 2,100 pts; Inkling 1,224 pts",
-       "url": "https://news.ycombinator.com/"
+       "url": "https://news.ycombinator.com/item?id=48935342"
       },
       {
        "metric": "Artificial Analysis index, US open-weights leader",
@@ -2512,7 +2512,7 @@
       {
        "metric": "Yield curve (10y-3m)",
        "value": "+89 bp (steep)",
-       "url": "https://fred.stlouisfed.org/"
+       "url": "https://fred.stlouisfed.org/series/T10Y3M"
       }
      ],
      "spotlight": false
