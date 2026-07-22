@@ -290,3 +290,58 @@ AI meeting assistants + agent tooling: meetily, strix, alibaba/page-agent, opena
 
 ### Undercurrent: the AI agent is the new insider threat
 GitLost (agent leaks private repos via a public issue) + last week's Claude Code fingerprinting: agent permissions are the new attack surface.
+
+## Issue 06 — Week of 2026-07-13 → 2026-07-19
+
+Lane overhaul debut: Tech & policy + AI agents merged into **AI & compute**; new rotating
+**Deep-dive of the week** (this week: bio & health); wildcard now mandatory.
+
+### AI & compute (open-acceleration): the open-model race reopens, and China is setting the pace
+
+Kimi K3 (July 16, 2.8T MoE, $3/$15 per M tokens, weights promised by July 27) topped HN at
+2,100 points; Thinking Machines' Inkling (July 15, Apache 2.0) became the leading US
+open-weights model (Artificial Analysis 41); Alibaba previewed Qwen 3.8 at WAIC, where Xi
+championed open-source AI and 29 countries founded the World AI Cooperation Organization.
+Z.AI reported annualizing ~$1B (Bloomberg). Apple's July 10 suit against OpenAI alleges
+400+ ex-Apple employees there. Diff: state-capture → open-acceleration.
+
+### Deep-dive: bio & health (accelerating): neural implants restore touch; Washington decides who pays for clinical AI
+
+Feinstein Institutes' double neural bypass restored touch/movement in quadriplegia
+(Nature Medicine cover; STAT July 16). CMS proposed a Software as a Medical Service
+payment category (CY2027 PFS rule, July 14); the Senate bid to end Medicare's WISeR AI
+prior-authorization pilot failed 46-50 (July 16). FDA approved Lipfendra, the first oral
+PCSK9 inhibitor (July 16).
+
+### Geopolitics (elevated): an oil shock out of the Gulf; lights out from Crimea to Chile
+
+Sentinel-2 images showed damage inside Bushehr (published July 17); US marines boarded a
+tanker in the Gulf of Oman (July 16); Brent settled $86.72 Friday, +~14% on the week; Iran
+called the June MoU suspended (July 18). Ukraine's Molochka campaign cut Crimea's power
+links (July 13). Kashmir: UN urged probes into 31+ deaths ahead of July 27 elections.
+Chile: storm outages peaked ~658k customers. HN momentum for geopolitics: 2 → 0; the week's
+biggest driver never cracked HN's top 50.
+
+### Markets (mixed) + commodities (week ending July 17)
+
+SPX -1.6% off its record, VIX +25% to ~19, but no flight to safety: gold -2.2%, silver
+-6.3%, BTC +0.9%. Brent +14.1%, WTI +14.0%, wheat +8.0%; cocoa -6.5%, coffee -4.2%.
+GDPNow 1.7%, curve +89bp, DXY flat. Diff: risk-on → mixed. Forward question: does the
+energy scare reach the July 28-29 FOMC (first hike under Chair Warsh?).
+
+### Wildcard (Deals): the largest LBO in history clears its European gate
+
+Saudi PIF + Affinity + Silver Lake set to win EU approval for the $55B EA take-private
+(Reuters, July 17); decisive review ran under the Foreign Subsidies Regulation, clearance
+expected by July 30; CFIUS open into late September.
+
+### Undercurrent: developers negotiate terms with the machine, in both directions
+
+Zig creator vs Anthropic's Bun-rewrite framing (1,550 pts); Ask HN flag for AI articles
+(1,097); Torvalds: "Linux is not one of those anti-AI projects" (July 14).
+
+Corrections applied in verification: draft's "two of top three HN stories" fixed (actual
+#1 was an ESP32 bowling-alley post, 2,908 pts); Apple suit was July 10 and alleges ~400
+(not 40) ex-employees; Ethiopia PM "open question" dropped (Abiy ~97% after June 1 win);
+Torvalds framing flipped (he rebuked anti-AI stances); corn +1.5% fell below the movers
+threshold; Kimi K3 weights promised, not yet released.

@@ -1,54 +1,69 @@
-# Seed notes for Issue 06 — week of July 13–19, 2026
+# Seed notes for Issue 07 — week of July 20–26, 2026
 
 A running stash for next week's issue: deferred threads, forward events that resolve
 next week, and recurring items to refresh. Verify everything against primary reporting
-before publishing (house rule). Issues 03, 04, and 05 were backfilled on 2026-07-10 to
-close the June 22 → July 10 gap; Issue 05 was built through July 10, so re-check the
-full July 6–12 week if regenerating it on the Monday run.
+before publishing (house rule). Issue 06 was finished and shipped on July 21 (the
+Friday cron draft had placeholder links and stale numbers; a full verification pass
+rewrote it), so re-check July 20-21 developments when building 07.
 
 ## Forward events that resolve / develop next week
-- **US Section 301 tariff decision (July 20).** Proposed duties near 12% on ~46
-  countries; the next step in the tariff campaign after the US-EU 15% deal and the
-  non-renewed USMCA both took effect July 1.
-- **July 28-29 FOMC.** With commodities firming (crude +4-5%, grains +4-6% this week)
-  and the year-end dot still pointing to a hike, watch for the first increase under
-  Chair Warsh. Markets priced ~78% hold / ~22% hike going in.
-- **US-Iran memorandum window (mid-August).** The 60-day clock on the June 17 MoU keeps
-  running without an implementing deal; the Strait of Hormuz stays the pressure point.
-- **GPT-5.6 and Grok 4.5 in the EU.** Both shipped outside the EU first; watch when and
-  how they clear the bloc's rules (an AI-sovereignty datapoint).
 
-## Threads carried from Issue 05 (verify for movement)
-- **AI margin question.** Grok 4.5 at ~$2/$6 per M tokens (~60% below frontier); the
-  "margin collapse" thesis (Alderson) vs the "inference is quietly profitable" rebuttal
-  (Goedecke). Watch for any frontier price cut or a real inference-margin disclosure.
-- **Agent security / lethal trifecta.** After GitLost (GitHub AI agent leaked private
-  repos via a public issue) and the prior Claude Code fingerprinting story, watch for
-  the next agent-permission exploit. Feeds the "agents are the new attack surface" thread.
-- **EU surveillance stack.** Chat Control interim rule now runs to April 2028; the
-  permanent CSA Regulation and the driver-monitoring mandate are the live follow-ons.
-- **Compute power wall.** US heatwave grid strain; substation lead times 3-5 yrs driving
-  "bring your own power" (gas). Watch FERC/PJM follow-through and any new gigawatt deals.
-- **Labor / AI.** Microsoft's id Software cuts (~136) were part of the largest Xbox
-  restructure; AI remains the #1 stated US layoff reason. Watch the June Challenger print.
+- **Section 301 tariffs (by July 24).** The July 20 deadline passed without an
+  announcement; USTR's Greer said duties near 12.5% on 46 countries could land before
+  the 10% Section 122 surcharge sunsets July 24. Whatever lands is the top trade story.
+- **EA buyout clearances (July 22 merger decision; July 30 FSR window).** The Saudi
+  PIF-led $55B take-private of Electronic Arts; CFIUS outside date September 28.
+- **Kimi K3 open weights (promised by July 27).** The test of whether the open flood
+  is real. Also watch for Qwen 3.8 weights/model card (preview shipped July 19).
+- **Elections in Pakistani-administered Kashmir (July 27)** after 31+ deaths in unrest
+  and a UN call for investigations.
+- **July 28-29 FOMC.** The oil spike revived the hike question just as GDPNow cooled
+  to ~1.7%; watch for the first increase under Chair Warsh. This resolves inside
+  issue 07's week if the issue runs through July 29; otherwise it leads issue 08.
 
-## New this issue (structure changes landed 2026-07-14)
-- **Wider sourcing.** `sources.py` now also pulls GDELT (geopolitics), Al Jazeera,
-  Techmeme, Lobsters, and Polymarket. Do not name Geopolitics or the wildcard from
-  HN alone; pull those from GDELT / Al Jazeera / wider reporting.
-- **More geopolitics.** The Geopolitics digest is now 4–6 stories across more than
-  one theatre (conflict, trade, elections, sanctions), sourced from world reporting.
-- **Wildcard lane.** Add an optional `wildcard: {topic, headline, summary, links}`
-  block: one rotating non-core theme (science, energy, space, a company). It renders
-  after Markets, before the radar, and is kept out of the momentum/diff. Issue 04
-  demos it with the synthetic-cell story. Omit it in a week with no good candidate.
+## Threads carried from Issue 06 (verify for movement)
+
+- **Gulf oil shock.** Brent settled $86.72 (+14% w/w) on Bushehr damage images and the
+  tanker boarding; Iran called the June MoU "suspended" July 18 (nominal clock to
+  mid-August). Does crude hold the gain, and does the safe-haven bid finally show up
+  (gold fell 2% during the escalation week)?
+- **Open-weights race.** Kimi K3 weights due; Inkling adoption (Apache 2.0, AA index
+  41); Z.AI ~$1B ARR (Bloomberg); WAICO's 29 founding members; any US policy response
+  to Xi's open-source posture.
+- **Apple v. OpenAI.** Filed July 10 (NDCal; Tang Tan, Chang Liu named; 400+ ex-Apple
+  employees alleged). Watch for OpenAI's response or a TRO motion.
+- **Crimea energy crisis.** Molochka campaign cut the peninsula's power/fuel links
+  July 13; watch Russian repair/retaliation.
+- **Medicare clinical AI.** SaMS payment category comments run to Sept 14; WISeR pilot
+  continues after the 46-50 Senate vote.
+- **Agent security.** The Claude memory-heist writeup (671 pts) extends the
+  GitLost/fingerprinting thread: agent memory is now part of the attack surface.
+
+## Deep-dive rotation
+
+Issue 07 = **the real economy** (rotation: bio&health → real economy → China
+industrial → energy&materials → Global South → science). Source with
+`python3 sources.py deepdive 07`, NOT from HN. Candidate threads: tariff pass-through
+to prices, freight/shipping under the Gulf escalation, housing under a steep curve,
+the June/July layoff and hiring prints, GLP-1 consumer-demand effects (deferred from
+the bio week).
+
+## Wildcard rotation
+
+Issue 06 used Deals (EA buyout). Pick a different lane for 07: fraud/scam economy,
+culture and the attention economy, education under AI, or a specific company.
 
 ## Recurring refresh (every issue)
-- Re-run the momentum counts (two Algolia date-range queries, top 50 by points,
-  classify.py). Issue 05's stored `cur` values are Issue 06's `prev`.
-- Reconstruct markets/commodities from yfinance historical closes for the week
-  (WTI, Brent, gold, silver, copper, natgas, corn/wheat/soy; SPX trend, VIX, 10y-3m
-  curve, DXY, BTC/ETH). Recompute the week-over-week % changes.
-- Recompute each structural basket week-over-week from Issue 05's stored values.
-- Check whether Markets tips again (crypto + the commodity bid are the swing factors);
-  whether the inflation question forces the Fed's hand at the July 28-29 meeting.
+
+- Momentum: two Algolia date-range queries (top 50 by points, classify.py). Issue 06's
+  stored cur values (ai_compute 12, geopolitics 0, markets 2) are Issue 07's prev.
+- Markets/commodities from yfinance weekly closes (Brent, WTI, gold, silver, copper,
+  natgas, corn/wheat/soy, cocoa/coffee/sugar; SPX, VIX, 10y-3m, DXY, BTC/ETH) plus the
+  ekans regime line (`cd ../ekans && .venv/bin/python pipeline/daily_check.py`).
+- Recompute structural baskets week-over-week from Issue 06's stored values.
+- Watchlist: resource-scarcity card is still `new: true` (wheat +8% two weeks running);
+  demote it once the grain bid fades. Device-attestation card was demoted to
+  "Still on watch" in 06.
+- Polymarket gamma API returned 403 from this IP on direct event queries (the
+  sources.py list endpoint works); market_moves stayed empty in 05 and 06. Try again
+  or find swing data elsewhere if a market clearly moved.
