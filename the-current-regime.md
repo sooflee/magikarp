@@ -413,3 +413,13 @@ figure was wrong); Polymarket Fed volume ~$97M not $3.4M; CXMT +472% debut was M
 27 (in-week story = the $8.6B IPO pricing); VIX Friday 18.58 (a 31.05 snippet was bogus);
 new-home sales rose m/m (fell y/y); import-price release was July 17 (prior week); FOMC
 chair confirmed Warsh (a calendar page still said Powell).
+
+### Post-publication addition (2026-07-27): Smaller stories section
+
+New optional `briefs` section (after the wildcard, all three renderers) fed by a
+date-filtered sweep of NBER, Apricitas, Bits About Money, Bellingcat, War on the
+Rocks, FTC, Retraction Watch, and Pew. Issue 07 carries four: Pew's AI-race survey
+(36% say China leads vs 12% US), the Celsius founders' $16.5M FTC order, Bellingcat's
+Shahed-type drones in Mali, and the undisclosed death in a Chinese gene-editing trial
+(Science). Also added: OpenRouter newest-models fetcher (usage rankings are not public
+API); ISW, Web3IGG, and Epoch AI feeds are blocked or nonexistent.

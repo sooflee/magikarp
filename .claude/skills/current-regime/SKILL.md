@@ -40,6 +40,7 @@ The issue is organized into two acts. Keep this order; the renderers follow it.
    - **Markets** (the cards + plain-language explainer)
    - **The wildcard** (one rotating theme, from a different rotation than the
      deep-dive; mandatory each week)
+   - **Smaller stories** (optional: 3-6 one-line briefs from the briefs sweep)
    - **The structural picture** (the regime radar)
 5. **What to watch next week** — a short forward calendar.
 
@@ -61,7 +62,10 @@ Adaptive depth).
    weeklies** (Interconnects, Import AI, Zvi, SemiAnalysis — what HN's front page
    missed), **cyber/fraud reporting** (404 Media, Risky Business, Krebs — wildcard
    fodder), **Wikipedia top pageviews** (neutral attention gauge), and **Hugging
-   Face trending** (the open-weights race in downloads). HN is the spine for tech
+   Face trending** (the open-weights race in downloads), the **briefs sweep**
+   (research/accountability outlets, date-filtered to the last 10 days — feeds
+   the Smaller-stories section), and **OpenRouter's newest routable models**.
+   HN is the spine for tech
    attention, but never name Geopolitics or the wildcard from HN alone.
    **Read the FEED HEALTH block at the end of the run and act on it**: a WARN for
    a dead feed or a single-source group means that lane's pull is suspect — widen
@@ -156,6 +160,13 @@ Adaptive depth).
 - **Exponential trends to watch** (`bsig_watch`) — each entry: a **one-sentence**
   why, a **concise** "what to watch," and a **one-line** "where it shows up." `new:
   true` gets a full card; the rest collapse under "Still on watch."
+- **Smaller stories** (`briefs`) — 3-6 one-line items from the date-filtered
+  briefs sweep (`fetch_briefs`: NBER, Apricitas, Bits About Money, Bellingcat,
+  War on the Rocks, FTC, Retraction Watch, Pew). Each item: `{title, url,
+  comment}`, source and date in the title, comment one bounded sentence. These
+  are deliberately small; a brief that needs a paragraph belongs in a lane.
+  Verify each URL resolves — feed links get truncated, and a guessed slug is
+  how fabricated URLs happen. Optional; omit in a thin week.
 - **Undercurrent** (`undercurrent`) — a single quieter counter-theme with a few links.
 - **On GitHub this week** (`across_sources`) — one inline line under AI agents
   naming what trending shows. (No arXiv; it was dropped as low-signal.)
@@ -230,6 +241,7 @@ commodities: { as_of, min_change, summary, items:[{name,level,change}] }
 undercurrent: { label, headline, summary, links:[...] }
 across_sources: { github_theme, github:[{title,url}] }
 wildcard: { topic, headline, summary, links:[...], items?:[{title,url}] }   # rotating, optional
+briefs: [{title, url, comment}]   # Smaller stories; optional, 3-6 one-liners
 structural_regimes: [{name, direction, read, basket:[{metric,value,url}], spotlight}]
 watch_next: [{when, event, note}]
 ```

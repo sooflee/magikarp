@@ -432,6 +432,9 @@ def build_html():
         label = f"The wildcard · {topic}" if topic else "The wildcard"
         body.append(_section_html(label, w["headline"], w.get("summary", ""),
                                   w.get("links"), w.get("items")))
+    if ISSUE.get("briefs"):
+        body.append(_section_html("short items from the week's edges",
+                                  "Smaller stories.", "", None, ISSUE["briefs"]))
     body.append(_radar_html(ISSUE))
 
     body.append(_watch_next_html(ISSUE))
@@ -552,6 +555,8 @@ def build_plain():
         head = f"THE WILDCARD ({topic}): " if topic else "THE WILDCARD: "
         refs = _items_text(w.get("items")) or _links_text(w.get("links")).rstrip()
         out += [f"{head}{w['headline']}", "", w.get("summary", ""), "", refs, ""]
+    if ISSUE.get("briefs"):
+        out += ["SMALLER STORIES:", "", _items_text(ISSUE["briefs"]), ""]
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",

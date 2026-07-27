@@ -394,6 +394,16 @@ def render_wildcard(w: dict) -> str:
             f'{render_items(w.get("items"))}{render_links(w.get("links"))}</div>')
 
 
+def render_briefs(items: list) -> str:
+    """Smaller stories: one-line briefs from the research/accountability sweep.
+    Optional; renders only when the issue carries a briefs list."""
+    if not items:
+        return ""
+    return (f'<div class="sec"><h2>Smaller stories.</h2>'
+            f'<p class="sub">short items from the week&rsquo;s edges</p>'
+            f'{render_items(items)}</div>')
+
+
 def render_across_inline(a: dict) -> str:
     gh = a.get("github", [])
     if not gh:
@@ -504,6 +514,8 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_markets(reg["markets"]))
     if iss.get("wildcard"):
         secs.append(render_wildcard(iss["wildcard"]))
+    if iss.get("briefs"):
+        secs.append(render_briefs(iss["briefs"]))
     secs.append(render_radar(iss))
     secs.append(render_watch_next(iss))
     inner = (

@@ -267,6 +267,23 @@ REGIONAL_FEEDS = [
     ("Meduza (EN)", "https://meduza.io/rss/en/all"),
 ]
 
+# Smaller stories: research, accountability, and analysis outlets whose items
+# run as one-line briefs in the issue, not lane-leading features. Slow feeds
+# (Apricitas, Bits About Money post monthly at best) are welcome here because
+# fetch_briefs date-filters, so they contribute only when actually fresh.
+# ISW (403 bot-block), Web3 Is Going Just Great and Epoch AI (no working feed)
+# were dropped after testing 2026-07-27.
+BRIEFS_FEEDS = [
+    ("NBER working papers", "https://www.nber.org/rss/new.xml"),
+    ("Apricitas", "https://www.apricitas.io/feed"),
+    ("Bits About Money", "https://www.bitsaboutmoney.com/archive/rss/"),
+    ("Bellingcat", "https://www.bellingcat.com/feed/"),
+    ("War on the Rocks", "https://warontherocks.com/feed/"),
+    ("FTC press releases", "https://www.ftc.gov/feeds/press-release.xml"),
+    ("Retraction Watch", "https://retractionwatch.com/feed/"),
+    ("Pew Research", "https://www.pewresearch.org/feed/"),
+]
+
 # Original cyber/fraud reporting for the wildcard rotation, as configured
 # feeds instead of lucky HN appearances.
 CYBER_FEEDS = [
@@ -329,6 +346,67 @@ def fetch_world(limit: int = 25) -> list[dict]:
 def fetch_ai_analysis(limit: int = 12) -> list[dict]:
     """Weekly AI analysis feeds — the between-the-issues synthesis layer."""
     return fetch_feed_group("ai_analysis", AI_ANALYSIS_FEEDS, per_feed=4, limit=limit)
+
+
+def fetch_briefs(days: int = 10, per_feed: int = 2, limit: int = 16) -> list[dict]:
+    """Date-filtered sweep of BRIEFS_FEEDS for the issue's Smaller-stories
+    section. Only items published in the last `days` survive, so slow feeds
+    cannot resurface stale posts week after week; items with no parseable
+    date (NBER's feed) pass, since that feed only lists new papers."""
+    import datetime as dt
+    from email.utils import parsedate_to_datetime
+    cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)
+    per_lists, health = [], []
+    for name, url in BRIEFS_FEEDS:
+        kept = []
+        try:
+            xml = _get(url)
+            for b in (re.findall(r"<item>(.*?)</item>", xml, re.S) or
+                      re.findall(r"<entry>(.*?)</entry>", xml, re.S)):
+                tm = re.search(r"<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", b, re.S)
+                lm = re.search(r"<link[^>]*href=\"([^\"]+)\"", b) or \
+                    re.search(r"<link>(.*?)</link>", b, re.S)
+                dm = re.search(r"<pubDate>(.*?)</pubDate>", b) or \
+                    re.search(r"<updated>(.*?)</updated>", b)
+                if not tm:
+                    continue
+                if dm:
+                    try:
+                        when = parsedate_to_datetime(dm.group(1).strip())
+                        if when < cutoff:
+                            continue
+                    except Exception:
+                        pass
+                title = unescape(re.sub(r"\s+", " ", tm.group(1)).strip())
+                if title:
+                    kept.append({"source": "briefs", "title": f"{title} ({name})",
+                                 "score": None,
+                                 "url": (lm.group(1).strip() if lm else "")})
+                if len(kept) >= per_feed:
+                    break
+        except Exception as e:
+            print(f"[briefs] {name} failed: {e}", file=sys.stderr)
+        health.append((name, len(kept)))
+        per_lists.append(kept)
+    FEED_HEALTH["briefs"] = health
+    from itertools import zip_longest
+    out = [it for row in zip_longest(*per_lists) for it in row if it]
+    return out[:limit]
+
+
+def fetch_openrouter_new(limit: int = 10) -> list[dict]:
+    """Newest models routable on OpenRouter — what just became available to
+    developers, sorted by listing date. (Usage rankings are not public API.)"""
+    try:
+        data = json.loads(_get("https://openrouter.ai/api/v1/models"))
+    except Exception as e:
+        print(f"[openrouter] failed: {e}", file=sys.stderr)
+        return []
+    models = sorted(data.get("data", []), key=lambda m: m.get("created") or 0,
+                    reverse=True)
+    return [{"source": "openrouter", "title": m.get("id", ""), "score": None,
+             "url": f"https://openrouter.ai/{m.get('id','')}"}
+            for m in models[:limit] if m.get("id")]
 
 
 def fetch_regional(limit: int = 22) -> list[dict]:
@@ -551,6 +629,8 @@ def fetch_all() -> dict[str, list[dict]]:
         "cyber": fetch_cyber(),
         "wikipedia": fetch_wikipedia_top(),
         "hf": fetch_hf_trending(),
+        "briefs": fetch_briefs(),
+        "openrouter": fetch_openrouter_new(),
     }
 
 
@@ -600,6 +680,10 @@ def main() -> int:
     _print(data["wikipedia"], 10)
     print(f"\n=== Hugging Face trending models ({len(data['hf'])}) ===")
     _print(data["hf"], 10)
+    print(f"\n=== Smaller stories: briefs sweep, last 10 days ({len(data['briefs'])}) ===")
+    _print(data["briefs"], 14)
+    print(f"\n=== OpenRouter: newest routable models ({len(data['openrouter'])}) ===")
+    _print(data["openrouter"], 8)
     print("\n=== FEED HEALTH ===")
     for line in feed_health_report():
         print(line)
