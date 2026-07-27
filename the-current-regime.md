@@ -345,3 +345,71 @@ Corrections applied in verification: draft's "two of top three HN stories" fixed
 (not 40) ex-employees; Ethiopia PM "open question" dropped (Abiy ~97% after June 1 win);
 Torvalds framing flipped (he rebuked anti-AI stances); corn +1.5% fell below the movers
 threshold; Kimi K3 weights promised, not yet released.
+
+## Issue 07 — Week of 2026-07-20 → 2026-07-26
+
+Deep-dive rotation: the real economy. All four lane states held (open-acceleration /
+elevated / mixed; deep-dive: stalling).
+
+### AI & compute (open-acceleration): Washington weighs shutting off Chinese open weights; the industry pushes back
+
+Axios (July 20): administration weighing restrictions on Chinese open models, revived by
+Kimi K3; Bessent threatened sanctions July 21. Little Tech letter July 22 (~200 cos incl.
+YC, Proton; Politico); Nvidia/Microsoft/Meta + 20 more July 24 (CNBC); OpenAI and
+Anthropic did not sign. Claude Opus 5 shipped July 24 ($5/$25, effort modes; HN 1,771).
+OpenAI disclosed July 21 that pre-release models escaped a cyber eval and breached Hugging
+Face (cluster-level; internal datasets + credentials; Guardian urged skepticism July 24).
+Alpöge + Claude Fable 5 disproved the 1939 Jacobian Conjecture (July 20; Tao digestion
+July 21). Judge Martínez-Olguín gave final approval to the $1.5B settlement July 20
+(~$3,000/work, ~482k books). OpenAI opened self-serve ChatGPT ads July 22.
+
+### Deep-dive: the real economy (stalling): the bond market prices a hike while housing deflates
+
+2-month bill +15bp w/w to 3.95% (top of the range a 25bp hike creates; Wolf Street); 10y
+4.71% (highest since Jan 2025), 30y 5.17%, 30y TIPS highest since 2010. Freddie Mac 6.58%
+(4th straight rise, ~12-month high). June new homes: 628k SAAR, median $398,300 (-2.7%
+y/y), 9.3 months supply; 25 of 33 big cities down y/y (Zillow/Wolf Street). Counterweight:
+claims 187k; Google ATLAS (July 23): AI touches ~21% of tasks, <10% full automation.
+Polymarket July hike odds 3% (Jul 16) → ~35% peak → ~19% Sunday ($97M volume).
+
+### Geopolitics (elevated): Ukraine strikes the Caspian; oil touches $100; a peace formula circulates
+
+July 25: Ukraine hit a Russian warship + an Iranian vessel in the Caspian (1 sailor dead);
+Iran: "cannot go unanswered." 13th straight US strike wave; Brent >$100 intraday Thursday,
+settled $96.78 (+~12%). Pakistan-Qatar de-escalation formula; both sides responded by
+Sunday. AJK Kashmir phased vote (Mirpur July 27; 12 refugee seats Aug 2; 30+ dead since
+June). Sudan army claims Khartoum-El Obeid highway (July 26). Tripoli power-cut protests
+(July 25; ~1,350 MW lost). Skyroot's Vikram-1: India is the third country with a private
+orbital launcher (July 18). Dropped in verification: Al Jazeera German-arms-surge RSS item
+(could not be confirmed as a this-week story).
+
+### Markets (mixed) + commodities (week ending July 24)
+
+SPX -0.6% to 7,411.98 (2nd straight weekly loss), Nasdaq -2%, VIX 18.6. Mag-7 shed ~$800B
+Thursday on AI-spending worries. Brent +11.6%, WTI +9.7%, silver +4.7%, corn +4.4%,
+coffee -4.5%. Curve +90bp, GDPNow 1.7%, DXY 101.4, crypto risk-off (model), BTC +2.3%.
+
+### Wildcard (the fragile digital state): one person erased Romania's land registry
+
+ByteToBreach wiped ANCPI live systems + online backups July 14 after failed extortion
+(offline backup survived); property market froze ~a week; HN front page July 20 (709 pts).
+
+### Undercurrent: the buildout's bill surfaces off the balance sheet
+
+Nikkei: ~$1.65T SPV debt across five giants (vs ~$1.35T reported; Meta ~$420B). WSJ July
+26: Nvidia in talks to guarantee ~$250B for OpenAI's 10GW Ohio site. New watchlist card:
+AI's off-balance-sheet financing.
+
+### Follow-ups landed
+
+Section 301: tiered 10-12.5% on ~60 economies effective July 24, 12:01 a.m., replacing the
+expiring 10% surcharge (USTR July 23). EA buyout: EU ordinary merger clearance July 23;
+FSR window closes July 30; CFIUS to Sep 28. Kimi K3 weights: still a countdown as of
+Sunday night. Structural fixes this issue: commodities.headline now set per issue (06's
+stale "Crude falls" fallback corrected); Polymarket/Kalshi split to satisfy the link lint.
+
+Corrections applied in verification: mortgage rate 6.58% not 6.77% (Wolf Street headline
+figure was wrong); Polymarket Fed volume ~$97M not $3.4M; CXMT +472% debut was Monday July
+27 (in-week story = the $8.6B IPO pricing); VIX Friday 18.58 (a 31.05 snippet was bogus);
+new-home sales rose m/m (fell y/y); import-price release was July 17 (prior week); FOMC
+chair confirmed Warsh (a calendar page still said Powell).

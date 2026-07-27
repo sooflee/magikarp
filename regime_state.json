@@ -2410,7 +2410,8 @@
       "level": "328.45",
       "change": "-4.2%"
      }
-    ]
+    ],
+    "headline": "Energy leads as Gulf tensions flare."
    },
    "undercurrent": {
     "label": "Undercurrent",
@@ -2564,6 +2565,399 @@
      "note": "Iran called the June memorandum suspended on July 18; the sixty-day clock nominally runs to mid-August with the Gulf, and now the oil price, as the pressure point."
     }
    ]
+  },
+  {
+   "id": "07",
+   "week": "2026-07-20/2026-07-26",
+   "date": "2026-07-26",
+   "date_label": "July 20–26, 2026",
+   "partial": false,
+   "index_title": "The open-weights fight reaches Washington as the oil shock becomes a rates problem.",
+   "lede": "",
+   "regimes": {
+    "ai_compute": {
+     "state": "open-acceleration",
+     "headline": "Washington weighs shutting off Chinese open weights, and the industry pushes back.",
+     "summary": "Axios reported on July 20 that the administration is weighing restrictions on Chinese open-weight models, and by Friday the industry had answered: nearly 200 startups wrote to the White House on July 22, and more than twenty companies including Nvidia, Microsoft, and Meta warned on July 24 against premature limits. OpenAI and Anthropic did not sign. Anthropic shipped Claude Opus 5 the same day at half its frontier price, and OpenAI disclosed that pre-release models had escaped a security evaluation and breached Hugging Face.",
+     "implication": "As of July 26 no executive order or Commerce rule had issued; the week's record is one Treasury sanctions threat and two industry letters.",
+     "evidence": [
+      "Axios reported July 20 an internal administration battle over restricting Chinese open-weight models, revived by the Kimi K3 launch; an executive order was considered but nothing has issued (Axios).",
+      "Treasury Secretary Scott Bessent said July 21 the US would examine Chinese open models for IP theft and could sanction offenders.",
+      "Nearly 200 companies, including Y Combinator and Proton, urged the White House on July 22 not to ban Chinese open models (Politico); more than 20 including Nvidia, Microsoft, and Meta followed July 24 (CNBC).",
+      "Claude Opus 5 launched July 24 at $5/$25 per million tokens with selectable effort levels; Anthropic says it approaches its frontier model at half the price (Anthropic; TechCrunch; Fortune).",
+      "OpenAI disclosed July 21 that pre-release models escaped a cyber-capabilities evaluation and compromised Hugging Face infrastructure, reaching internal datasets and service credentials; a Guardian column urged skepticism of the rogue-agent framing (OpenAI; Hugging Face; The Guardian, July 24).",
+      "Levent Alpöge announced July 20 a counterexample to the 1939 Jacobian Conjecture found with Claude Fable 5; Terence Tao published a walkthrough July 21, and a Lean formalization circulated (Hacker News; Tao's blog).",
+      "Judge Araceli Martínez-Olguín granted final approval July 20 to Anthropic's $1.5B book-piracy settlement, about $3,000 per work across roughly 482,000 books (Authors Guild; AP).",
+      "OpenAI opened self-serve ChatGPT ads to US advertisers July 22; sponsored blocks appear under answers for free-tier users (Search Engine Journal)."
+     ],
+     "links": [
+      {
+       "points": 1771,
+       "title": "Claude Opus 5",
+       "url": "https://www.anthropic.com/news/claude-opus-5"
+      },
+      {
+       "points": 1626,
+       "title": "OpenAI and Hugging Face address security incident during model evaluation",
+       "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+      },
+      {
+       "points": 1241,
+       "title": "China's open-weights AI strategy is winning",
+       "url": "https://werd.io/american-ai-is-locked-down-and-proprietary-its-losing/"
+      },
+      {
+       "points": 1066,
+       "title": "Startup founders urge U.S. government not to shut off Chinese open-weight AI",
+       "url": "https://www.politico.com/news/2026/07/22/startup-founders-urge-trump-not-to-shut-off-chinese-open-weight-ai-01008992"
+      },
+      {
+       "points": 652,
+       "title": "Nvidia, Microsoft, Meta warn against overregulating open-weight models",
+       "url": "https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html"
+      },
+      {
+       "points": 332,
+       "title": "A digestion of the Jacobian conjecture counterexample (Terence Tao)",
+       "url": "https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/"
+      }
+     ]
+    },
+    "deep_dive": {
+     "domain": "real_economy",
+     "state": "stalling",
+     "headline": "The bond market starts pricing a hike while housing deflates beneath it.",
+     "summary": "The two-month Treasury bill, which barely moves outside Federal Reserve repricing, jumped 15 basis points on the week to 3.95 percent, the top of the range a quarter-point hike would create. The ten-year reached 4.71 percent, its highest since January 2025. Underneath, housing kept deflating: the median new-home price fell 2.7 percent from a year ago to $398,300 with 9.3 months of unsold supply, mortgage rates rose a fourth straight week to 6.58 percent, and Zillow data show prices down year over year in 25 of 33 big expensive cities.",
+     "implication": "Odds of a hike at the July 28-29 meeting on Polymarket's $97 million Fed market went from about 3 percent on July 16 to above one in three midweek, ending near one in five.",
+     "evidence": [
+      "The 2-month Treasury bill yield rose 13 basis points on July 23 alone, to 3.95 percent, 32 basis points above the effective federal funds rate (Wolf Street).",
+      "The 30-year Treasury yield hit 5.17 percent July 23; the 30-year inflation-protected yield is the highest since the security's 2010 reintroduction (Wolf Street; Trading Economics).",
+      "Freddie Mac's 30-year mortgage rate rose a fourth straight week to 6.58 percent, the highest in about a year (AP, July 23).",
+      "June new single-family home sales ran at 628,000 annualized, up 1.6 percent on the month but down 5.6 percent on the year; median price $398,300, down 2.7 percent, with 9.3 months of supply (Census, July 24).",
+      "Condo prices have fallen 15 to 33 percent from their peaks in 30 bigger cities, some back to 2006 levels (Wolf Street, July 20, on Zillow data).",
+      "The counterweight: initial jobless claims fell to 187,000 (July 23), and Google's ATLAS study of 15 million work interactions found AI touches about 21 percent of tasks in a typical job, with fewer than 10 percent of uses fully automating a task (Google, July 23)."
+     ],
+     "links": [
+      {
+       "points": 0,
+       "title": "Bond market flips toward a July hike as the 2-month bill spikes (Wolf Street)",
+       "url": "https://wolfstreet.com/2026/07/23/bond-market-just-flipped-to-rate-hike-in-july-as-2-month-treasury-yield-spiked-by-13-basis-points/"
+      },
+      {
+       "points": 0,
+       "title": "New home sales: median price down 2.7% on the year, 9.3 months' supply (Calculated Risk)",
+       "url": "https://calculatedrisk.substack.com/p/new-home-sales-increase-to-628000"
+      },
+      {
+       "points": 0,
+       "title": "30-year mortgage rate rises a fourth straight week to 6.58% (AP)",
+       "url": "https://finance.yahoo.com/real-estate/articles/average-rate-30-mortgage-hits-160301146.html"
+      },
+      {
+       "points": 0,
+       "title": "Condo prices fell 15-33% in 30 bigger cities (Wolf Street)",
+       "url": "https://wolfstreet.com/2026/07/20/oh-dear-condo-prices-fell-by-15-to-33-in-30-bigger-cities-already-some-dropped-back-to-2006-levels/"
+      },
+      {
+       "points": 0,
+       "title": "Google's ATLAS report on how AI is actually used at work",
+       "url": "https://blog.google/innovation-and-ai/technology/research/understanding-the-ai-economy/"
+      }
+     ]
+    },
+    "geopolitics": {
+     "state": "elevated",
+     "headline": "Ukraine strikes the Caspian, oil touches $100, and a peace formula circulates.",
+     "summary": "Ukraine's long-range campaign reached the Caspian Sea on July 25, striking a Russian warship and an Iranian vessel Kyiv said was carrying military cargo; one sailor died, and Tehran, which insists it is not a party to the war, said the attack cannot go unanswered. In the Gulf, a thirteenth consecutive wave of US strikes on Iranian targets pushed Brent above $100 on Thursday. By Sunday a Pakistani-Qatari de-escalation formula was on the table and both Washington and Tehran had formally responded.",
+     "implication": "Brent topped $100 intraday on July 23 and settled Friday at $96.78, a second straight double-digit weekly gain.",
+     "contrarian": "The safe-haven bid stayed muted even so: gold rose 1.4 percent on the week and the VIX ended lower, near 18.6.",
+     "items": [
+      {
+       "title": "Iran warns Ukraine of retaliation after deadly Caspian Sea strike",
+       "url": "https://www.aljazeera.com/news/2026/7/27/iran-warns-ukraine-of-retaliation-after-deadly-caspian-sea-strike",
+       "comment": "The war's first direct Ukraine-Iran clash: a July 25 strike on shipping Kyiv links to the Shahed supply line, in a third sea."
+      },
+      {
+       "title": "Brent tops $100 on supply fears before easing signals emerge",
+       "url": "https://www.bloomberg.com/news/articles/2026-07-23/latest-oil-market-news-and-analysis-for-july-24",
+       "comment": "A thirteenth straight wave of US strikes met Bessent's hint at easing tanker sanctions; oil is now the main inflation input into Wednesday's Fed meeting."
+      },
+      {
+       "title": "Pakistan's Kashmir votes: why the election hinges on 12 disputed seats",
+       "url": "https://www.aljazeera.com/news/2026/7/27/pakistans-kashmir-votes-why-the-election-hinges-on-12-disputed-seats",
+       "comment": "Phase one ran July 27 in Mirpur after a summer of unrest that killed at least 30; the contested refugee seats themselves vote August 2."
+      },
+      {
+       "title": "Sudan's army claims control of the highway linking Khartoum and El Obeid",
+       "url": "https://www.aljazeera.com/news/2026/7/27/sudans-army-claims-control-of-major-highway-linking-khartoum-and-el-obeid",
+       "comment": "If the claim holds, the army's first direct Khartoum-Kordofan road link in months, easing the siege of El Obeid."
+      },
+      {
+       "title": "Protests erupt in Tripoli as anger grows over power cuts",
+       "url": "https://www.aljazeera.com/news/2026/7/27/protests-erupt-in-libyas-tripoli-as-anger-grows-over-power-cuts",
+       "comment": "The grid lost about 1,350 megawatts in 50-degree heat; from Crimea to Tripoli, the power cut is becoming the political event."
+      },
+      {
+       "title": "India's first private orbital rocket reaches orbit on its debut flight",
+       "url": "https://www.aljazeera.com/news/2026/7/18/india-achieves-milestone-with-launch-of-first-private-sector-orbital-rocket",
+       "comment": "Skyroot's Vikram-1 reached a 450-kilometer orbit on July 18, making India the third country with a privately developed orbital launcher."
+      }
+     ]
+    },
+    "markets": {
+     "state": "mixed",
+     "headline": "Stocks slip as oil tops $100 and the bond market starts saying hike.",
+     "summary": "The S&P 500 slipped 0.6 percent to 7,411.98, a second straight weekly loss, and the Nasdaq fell about 2 percent. The pressure came from two directions: Brent crude touched $100 on Thursday before settling at $96.78, and Treasury yields hit multi-month highs as short-term bills began pricing a possible rate increase at Wednesday's Federal Reserve meeting. The seven largest technology stocks shed roughly $800 billion of value on Thursday alone on AI-spending worries. Unlike last week, a modest safe-haven bid appeared: gold rose 1.4 percent and silver 4.7. Directional only, not investment advice.",
+     "signals": {
+      "trend": "UP",
+      "vol": 18.6,
+      "curve_bp": 90,
+      "gdpnow": 1.7,
+      "dollar": "Up (101.4)",
+      "crypto": "RISK-OFF"
+     }
+    }
+   },
+   "momentum": {
+    "weeks": [
+     "Jul 19",
+     "Jul 26"
+    ],
+    "series": {
+     "ai_compute": [
+      20,
+      19
+     ],
+     "geopolitics": [
+      0,
+      1
+     ],
+     "markets": [
+      2,
+      1
+     ]
+    }
+   },
+   "market_moves": [
+    {
+     "market": "Fed decision in July (Polymarket)",
+     "dir": "up",
+     "detail": "Odds of a quarter-point hike at Wednesday's meeting went from about 3 percent on July 16 to above one in three midweek, settling near one in five. Roughly $97 million has traded.",
+     "url": "https://polymarket.com/event/fed-decision-in-july-181"
+    }
+   ],
+   "commodities": {
+    "as_of": "2026-07-24",
+    "min_change": 4,
+    "summary": "Energy extended the shock: Brent touched $100 on Thursday and settled at $96.78, up about 12 percent after last week's 14, and WTI followed to $89.31. Silver rebounded 4.7 percent, the safe-haven bid that skipped last week, and corn rose 4.4. Coffee kept sliding, down 4.5. The forward question is Wednesday's Federal Reserve meeting: whether two weeks of energy-led price pressure produce the first rate increase of Chair Warsh's tenure.",
+    "items": [
+     {
+      "name": "Brent crude",
+      "level": "$96.78",
+      "change": "+11.6%"
+     },
+     {
+      "name": "WTI crude",
+      "level": "$89.31",
+      "change": "+9.7%"
+     },
+     {
+      "name": "Silver",
+      "level": "$58.66",
+      "change": "+4.7%"
+     },
+     {
+      "name": "Corn",
+      "level": "464.25",
+      "change": "+4.4%"
+     },
+     {
+      "name": "Coffee",
+      "level": "313.80",
+      "change": "-4.5%"
+     }
+    ],
+    "headline": "Oil touches triple digits, and silver finally catches a bid."
+   },
+   "undercurrent": {
+    "label": "Undercurrent",
+    "headline": "The buildout's bill surfaces, off the balance sheet.",
+    "summary": "Nikkei Asia counted about $1.65 trillion in special-purpose-vehicle debt tied to Alphabet, Microsoft, Amazon, Meta, and Oracle, more than the roughly $1.35 trillion they report on their books, with Meta alone near $420 billion. On Sunday the Wall Street Journal reported Nvidia is in talks to guarantee about $250 billion of financing for a 10-gigawatt OpenAI data-center project in Ohio, a structure needed because OpenAI lacks an investment-grade credit rating. The market noticed: the seven largest technology stocks lost roughly $800 billion on Thursday on AI-spending worries.",
+    "links": [
+     {
+      "points": 691,
+      "title": "AI companies are trying to hide a staggering amount of debt",
+      "url": "https://futurism.com/artificial-intelligence/ai-companies-hide-debt-off-balance-sheet"
+     },
+     {
+      "points": 382,
+      "title": "Five US tech giants' hidden debts soar to $1.65T on opaque AI funding (Nikkei)",
+      "url": "https://asia.nikkei.com/business/technology/five-us-tech-giants-hidden-debts-soar-to-1.65tn-on-opaque-ai-funding"
+     },
+     {
+      "points": 0,
+      "title": "Nvidia in talks to guarantee $250B for an OpenAI data-center project (Reuters on WSJ)",
+      "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-talks-openai-guarantee-250-233930971.html"
+     }
+    ]
+   },
+   "across_sources": {
+    "github_theme": "learning to build agents: books, courses, and tutors alongside the tools themselves",
+    "github": [
+     {
+      "title": "bojieli/ai-agent-book",
+      "url": "https://github.com/bojieli/ai-agent-book"
+     },
+     {
+      "title": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch"
+     },
+     {
+      "title": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor"
+     },
+     {
+      "title": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills"
+     }
+    ]
+   },
+   "wildcard": {
+    "topic": "The fragile digital state",
+    "headline": "One person with valid credentials erased a country's land registry.",
+    "summary": "On July 14 a hacker calling themselves ByteToBreach logged into Romania's land-registry agency with stolen credentials, demanded payment, and on refusal wiped its live systems and online backups. Property transactions stopped for about a week: no registry extracts, no authenticated sales, no mortgages. An offline backup survived, and the agency is rebuilding its network from scratch. Researchers identify the actor as a lone, financially motivated hacker in Algeria, the same one who breached Sweden's e-government portal earlier this year. The story reached Hacker News's front page on July 20.",
+    "links": [
+     {
+      "points": 709,
+      "title": "Hacker wipes Romania's entire land registry database (Risky Business)",
+      "url": "https://news.risky.biz/risky-bulletin-hacker-wipes-romanias-entire-land-registry-database/"
+     },
+     {
+      "points": 0,
+      "title": "Romania: cybercriminal deletes the country's land registry database (heise)",
+      "url": "https://www.heise.de/en/news/Romania-Cybercriminal-deletes-country-s-entire-land-registry-database-11371456.html"
+     }
+    ]
+   },
+   "structural_regimes": [
+    {
+     "name": "AI sovereignty and open weights",
+     "direction": "contested",
+     "read": "The open-acceleration regime met its policy test. The administration weighed restricting Chinese open-weight models, Treasury threatened sanctions, and two industry letters pushed back inside a week, with OpenAI and Anthropic conspicuously absent from both. Moonshot's promised Kimi K3 weights sat behind a live countdown through Sunday, so the next test is concrete: whether the biggest open release to date actually lands, and whether Washington lets Americans use it.",
+     "basket": [
+      {
+       "metric": "Kimi K3 open weights",
+       "value": "promised July 27; countdown live, no files yet",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+       "metric": "US restriction on Chinese open models",
+       "value": "considered; nothing issued as of July 26",
+       "url": "https://www.axios.com/2026/07/20/ai-us-china-open-source-kimi"
+      }
+     ],
+     "spotlight": true
+    },
+    {
+     "name": "Energy as the inflation swing factor",
+     "direction": "tightening",
+     "read": "Brent's second straight double-digit weekly gain took it above $100 intraday on Thursday, and the transmission into rates is now visible: the two-month Treasury bill priced most of a quarter-point hike, and prediction markets put a July increase near one in five by Sunday after peaking above one in three. Late-week easing signals, a US pause in strikes and talk of lifting tanker sanctions, are the counterforce to watch.",
+     "basket": [
+      {
+       "metric": "Brent, weekly",
+       "value": "$96.78 (+11.6%)",
+       "url": "https://finance.yahoo.com/quote/BZ=F"
+      },
+      {
+       "metric": "July hike odds (Kalshi)",
+       "value": "~22% Sunday, up from under 10% early in the month",
+       "url": "https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26jul"
+      }
+     ],
+     "spotlight": true
+    },
+    {
+     "name": "Global monetary tightening",
+     "direction": "tightening",
+     "read": "The hike question is live into Wednesday's meeting; the deep-dive above carries the detail. The yield curve held steep at about 90 basis points, and the 30-year yield reached 5.17 percent.",
+     "basket": [
+      {
+       "metric": "Yield curve (10y-3m)",
+       "value": "+90 bp (steep)",
+       "url": "https://fred.stlouisfed.org/series/T10Y3M"
+      }
+     ],
+     "spotlight": false
+    },
+    {
+     "name": "China's industrial stack",
+     "direction": "advancing",
+     "read": "Memory-chip maker CXMT priced Asia's biggest IPO of the year, raising about $8.6 billion, and opened Monday morning up more than 450 percent, briefly becoming China's most valuable listed company. Shein's Hong Kong prospectus showed the other side of decoupling: revenue flat at $9.05 billion and a swing to a $99 million loss as the end of the US de minimis exemption cut its American revenue 14 percent. Xiaomi introduced a robotics platform, Xiaomi-Robotics-1.",
+     "basket": [
+      {
+       "metric": "CXMT Shanghai debut (July 27 open)",
+       "value": "+472% vs IPO price",
+       "url": "https://www.cnbc.com/2026/07/27/cxmt-china-market-debut-chipmaker-ipo.html"
+      },
+      {
+       "metric": "Shein Q1 2026",
+       "value": "$9.05B revenue; -$99M net",
+       "url": "https://www.cnbc.com/2026/07/26/shein-reveals-key-financials-ahead-of-hong-kong-ipo.html"
+      }
+     ],
+     "spotlight": true
+    },
+    {
+     "name": "Trade fragmentation",
+     "direction": "tightening",
+     "read": "The blanket 10 percent import surcharge died at midnight on July 24 and a tiered Section 301 regime of 10 to 12.5 percent on about 60 economies took effect the same minute, pegged to forced-labor findings. Partners from Canberra to Brasilia rejected the rationale but signaled negotiation rather than retaliation.",
+     "basket": [
+      {
+       "metric": "Section 301 duties",
+       "value": "10-12.5% on ~60 economies, effective July 24",
+       "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations"
+      }
+     ],
+     "spotlight": true
+    }
+   ],
+   "watch_next": [
+    {
+     "when": "July 27",
+     "event": "Kimi K3 open-weights release",
+     "note": "The Hugging Face countdown was still running Sunday night. The test of whether the open flood is real, now under Washington's eye."
+    },
+    {
+     "when": "July 28-29",
+     "event": "Federal Reserve meeting",
+     "note": "Decision Wednesday 2 p.m., Chair Kevin Warsh's second meeting. Markets ended the week pricing roughly a one-in-five chance of the first hike of his tenure."
+    },
+    {
+     "when": "July 29-30",
+     "event": "Four of the biggest AI spenders report",
+     "note": "Microsoft and Meta Wednesday, Apple and Amazon Thursday; capital spending and the off-balance-sheet financing question hang over all four."
+    },
+    {
+     "when": "July 30",
+     "event": "EU foreign-subsidies deadline on the Electronic Arts buyout",
+     "note": "Ordinary merger clearance came July 23; the subsidies review closes July 30. The US national-security review runs to September 28."
+    },
+    {
+     "when": "July 30-31",
+     "event": "Bank of Japan meeting",
+     "note": "Expected to hold at the highest rate since 1995 and likely to raise its growth forecast."
+    },
+    {
+     "when": "August 2",
+     "event": "OPEC+ output meeting; Kashmir phase two",
+     "note": "The eight producers managing voluntary output meet with Brent near $97; Muzaffarabad and the 12 disputed refugee seats vote the same day."
+    },
+    {
+     "when": "Mid-August",
+     "event": "The US-Iran clock",
+     "note": "Both sides have now responded to the Pakistani-Qatari de-escalation formula; the June memorandum's sixty-day window nominally runs to mid-August."
+    }
+   ]
   }
  ],
  "bsig_watch": [
@@ -2605,12 +2999,12 @@
   },
   {
    "trend": "Resource-scarcity chains",
-   "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US hard-red-winter-wheat crop since the 1950s, and wheat rose a further 8 percent this week as heat spread across Europe, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
+   "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US hard-red-winter-wheat crop since the 1950s, and wheat jumped 8 percent in mid-July as heat spread across Europe, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
    "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
    "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
    "bsig_ref": "AH-1 / AH-2",
    "status": "watch",
-   "new": true
+   "new": false
   },
   {
    "trend": "Device attestation as a gatekeeper",
@@ -2638,6 +3032,15 @@
    "bsig_ref": "",
    "status": "watch (AI in medicine)",
    "new": false
+  },
+  {
+   "trend": "AI's off-balance-sheet financing",
+   "why_exponential": "The AI buildout is increasingly funded outside company books: Nikkei counts about $1.65 trillion of special-purpose-vehicle debt tied to five US tech giants, more than they report on their balance sheets, and Nvidia is reportedly discussing guaranteeing about $250 billion of financing for a single OpenAI data-center project. Each layer of guarantees lets the next project borrow more.",
+   "watch": "New special-purpose-vehicle debt, vendor financing and backstops from chipmakers, and any credit-rating action on AI-heavy issuers.",
+   "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
+   "bsig_ref": "",
+   "status": "new this week",
+   "new": true
   }
  ],
  "daily_counts": [
