@@ -329,7 +329,7 @@ def feed_health_report() -> list[str]:
         lines.append(f"  {group}: {total} items ({parts})")
         for name, n in health:
             if n == 0:
-                lines.append(f"    WARN: {name} returned 0 items (dead feed or bot block)")
+                lines.append(f"    WARN: {name} returned 0 items (dead, blocked, or nothing recent)")
         live = [name for name, n in health if n > 0]
         if len(health) > 1 and len(live) == 1:
             lines.append(f"    WARN: single-source group; everything came from {live[0]}")
