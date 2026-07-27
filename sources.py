@@ -248,6 +248,25 @@ AI_ANALYSIS_FEEDS = [
     ("SemiAnalysis", "https://semianalysis.com/feed/"),
 ]
 
+# Big regional stories from regional outlets — analysis and reporting by
+# journalists in the region, a layer beneath the wire-service world feeds.
+# Feeds geopolitics (theatre breadth), the global_south deep-dive, and the
+# wildcard. All verified fetchable 2026-07-27; Dawn, The Wire India, El Faro,
+# and Kyiv Independent candidates were bot-blocked or dead.
+REGIONAL_FEEDS = [
+    ("The Continent", "https://continent.substack.com/feed"),
+    ("African Arguments", "https://africanarguments.org/feed/"),
+    ("Himal Southasian", "https://www.himalmag.com/feed/"),
+    ("The Diplomat", "https://thediplomat.com/feed/"),
+    ("Fulcrum (SE Asia)", "https://fulcrum.sg/feed/"),
+    ("Americas Quarterly", "https://www.americasquarterly.org/feed/"),
+    ("Middle East Eye", "https://www.middleeasteye.net/rss"),
+    ("+972 Magazine", "https://www.972mag.com/feed/"),
+    ("Eurasianet", "https://eurasianet.org/rss"),
+    ("Balkan Insight", "https://balkaninsight.com/feed/"),
+    ("Meduza (EN)", "https://meduza.io/rss/en/all"),
+]
+
 # Original cyber/fraud reporting for the wildcard rotation, as configured
 # feeds instead of lucky HN appearances.
 CYBER_FEEDS = [
@@ -310,6 +329,11 @@ def fetch_world(limit: int = 25) -> list[dict]:
 def fetch_ai_analysis(limit: int = 12) -> list[dict]:
     """Weekly AI analysis feeds — the between-the-issues synthesis layer."""
     return fetch_feed_group("ai_analysis", AI_ANALYSIS_FEEDS, per_feed=4, limit=limit)
+
+
+def fetch_regional(limit: int = 22) -> list[dict]:
+    """Big regional stories from in-region outlets across REGIONAL_FEEDS."""
+    return fetch_feed_group("regional", REGIONAL_FEEDS, per_feed=3, limit=limit)
 
 
 def fetch_cyber(limit: int = 12) -> list[dict]:
@@ -519,6 +543,7 @@ def fetch_all() -> dict[str, list[dict]]:
         "arxiv": fetch_arxiv(),
         "gdelt": fetch_gdelt(),
         "world": fetch_world(),
+        "regional": fetch_regional(),
         "techmeme": fetch_techmeme(),
         "lobsters": fetch_lobsters(),
         "polymarket": fetch_polymarket(),
@@ -559,6 +584,8 @@ def main() -> int:
     _print(data["gdelt"], 12)
     print(f"\n=== World reporting, {len(WORLD_FEEDS)} feeds ({len(data['world'])}) ===")
     _print(data["world"], 16)
+    print(f"\n=== Big regional stories, {len(REGIONAL_FEEDS)} regional outlets ({len(data['regional'])}) ===")
+    _print(data["regional"], 16)
     print(f"\n=== Techmeme ({len(data['techmeme'])}) ===")
     _print(data["techmeme"], 12)
     print(f"\n=== Lobsters ({len(data['lobsters'])}) ===")

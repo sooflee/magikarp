@@ -52,7 +52,11 @@ Adaptive depth).
 1. **Pull sources.** `python3 sources.py` → HN (Algolia, by points), GitHub
    trending, arXiv, **GDELT** (world-news events; auto-retries once on a 429),
    **world reporting** (nine feeds: Al Jazeera, BBC World, DW, France24, AllAfrica,
-   El País English, MercoPress, The Hindu, Semafor), **Techmeme** (curated tech),
+   El País English, MercoPress, The Hindu, Semafor), **big regional stories**
+   (eleven in-region outlets: The Continent, African Arguments, Himal Southasian,
+   The Diplomat, Fulcrum, Americas Quarterly, Middle East Eye, +972, Eurasianet,
+   Balkan Insight, Meduza — the layer beneath the wires; mine it for the
+   geopolitics digest's non-Ukraine/Iran slots), **Techmeme** (curated tech),
    **Lobsters** (dev cross-check), **Polymarket** (forward odds), **AI analysis
    weeklies** (Interconnects, Import AI, Zvi, SemiAnalysis — what HN's front page
    missed), **cyber/fraud reporting** (404 Media, Risky Business, Krebs — wildcard
