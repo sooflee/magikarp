@@ -50,12 +50,21 @@ Adaptive depth).
 ## Build pipeline
 
 1. **Pull sources.** `python3 sources.py` → HN (Algolia, by points), GitHub
-   trending, arXiv, **GDELT** (world-news events for geopolitics), **Al Jazeera**
-   (world reporting), **Techmeme** (curated tech), **Lobsters** (dev cross-check on
-   HN), and **Polymarket** (forward odds). HN is the spine for tech attention, but
-   do **not** name Geopolitics or the wildcard from HN alone — pull those from GDELT
-   / Al Jazeera / wider reporting so the issue is not just what HN upvoted. GDELT
-   rate-limits per IP; one call per run is fine, so do not retry in a loop.
+   trending, arXiv, **GDELT** (world-news events; auto-retries once on a 429),
+   **world reporting** (nine feeds: Al Jazeera, BBC World, DW, France24, AllAfrica,
+   El País English, MercoPress, The Hindu, Semafor), **Techmeme** (curated tech),
+   **Lobsters** (dev cross-check), **Polymarket** (forward odds), **AI analysis
+   weeklies** (Interconnects, Import AI, Zvi, SemiAnalysis — what HN's front page
+   missed), **cyber/fraud reporting** (404 Media, Risky Business, Krebs — wildcard
+   fodder), **Wikipedia top pageviews** (neutral attention gauge), and **Hugging
+   Face trending** (the open-weights race in downloads). HN is the spine for tech
+   attention, but never name Geopolitics or the wildcard from HN alone.
+   **Read the FEED HEALTH block at the end of the run and act on it**: a WARN for
+   a dead feed or a single-source group means that lane's pull is suspect — widen
+   it with research agents before writing, and say so in the ledger. Targeted
+   helpers, not in the default run: `fetch_edgar('"query"')` for SEC filings
+   behind a story; `fetch_eia()` / `fetch_acled()` activate when EIA_API_KEY /
+   ACLED_KEY+ACLED_EMAIL are exported.
 2. **Regime momentum.** Count the week's top HN stories per regime for **this week
    and last** (two Algolia `created_at_i` date-range queries, classified with the
    keyword rules in `classify.py`). Store as `momentum:{weeks:[a,b], series:{regime:[prev,cur]}}`.
