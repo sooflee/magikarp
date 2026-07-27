@@ -102,6 +102,9 @@ Adaptive depth).
   IDs like AE-1). The market model and watchlist come from ekans; spell out what
   the reader sees.
 - Keep summaries tight (~40–90 words). Implications are bounded and verifiable.
+- **Run the `human-voice` skill's self-edit pass** over all reader-facing text
+  (headlines, summaries, comments, watchlist cards, ledger) before building or
+  sending; it is the machine-writing-tell checklist and includes grep sweeps.
 - **No theme-restatement openers.** Never open a summary (or the `lede`) with an
   abstract framing of the week: "The week turned on a reversal.", "Identity became
   the gate this week.", "This week the money moved toward scale." They sound

@@ -2680,7 +2680,7 @@
       {
        "title": "Brent tops $100 on supply fears before easing signals emerge",
        "url": "https://www.bloomberg.com/news/articles/2026-07-23/latest-oil-market-news-and-analysis-for-july-24",
-       "comment": "A thirteenth straight wave of US strikes met Bessent's hint at easing tanker sanctions; oil is now the main inflation input into Wednesday's Fed meeting."
+       "comment": "A thirteenth straight wave of US strikes met late-week easing signals; two weeks of oil gains are the biggest new inflation pressure before Wednesday's Fed decision."
       },
       {
        "title": "Pakistan's Kashmir votes: why the election hinges on 12 disputed seats",
@@ -2695,7 +2695,7 @@
       {
        "title": "Protests erupt in Tripoli as anger grows over power cuts",
        "url": "https://www.aljazeera.com/news/2026/7/27/protests-erupt-in-libyas-tripoli-as-anger-grows-over-power-cuts",
-       "comment": "The grid lost about 1,350 megawatts in 50-degree heat; from Crimea to Tripoli, the power cut is becoming the political event."
+       "comment": "The grid lost about 1,350 megawatts in 50-degree heat, and by Monday the road blockades had grown into a civil disobedience campaign."
       },
       {
        "title": "India's first private orbital rocket reaches orbit on its debut flight",
@@ -2707,7 +2707,7 @@
     "markets": {
      "state": "mixed",
      "headline": "Stocks slip as oil tops $100 and the bond market starts saying hike.",
-     "summary": "The S&P 500 slipped 0.6 percent to 7,411.98, a second straight weekly loss, and the Nasdaq fell about 2 percent. The pressure came from two directions: Brent crude touched $100 on Thursday before settling at $96.78, and Treasury yields hit multi-month highs as short-term bills began pricing a possible rate increase at Wednesday's Federal Reserve meeting. The seven largest technology stocks shed roughly $800 billion of value on Thursday alone on AI-spending worries. Unlike last week, a modest safe-haven bid appeared: gold rose 1.4 percent and silver 4.7. Directional only, not investment advice.",
+     "summary": "The S&P 500 slipped 0.6 percent to 7,411.98, a second straight weekly loss, and the Nasdaq fell about 2 percent, with Thursday the deepest day as AI-spending worries hit the largest technology stocks. Brent crude touched $100 on Thursday before settling at $96.78, and Treasury yields reached multi-month highs as short-term bills began pricing a possible rate increase at Wednesday's Federal Reserve meeting. Unlike last week, a modest safe-haven bid appeared: gold rose 1.4 percent and silver 4.7. Directional only, not investment advice.",
      "signals": {
       "trend": "UP",
       "vol": 18.6,
@@ -2782,7 +2782,7 @@
    "undercurrent": {
     "label": "Undercurrent",
     "headline": "The buildout's bill surfaces, off the balance sheet.",
-    "summary": "Nikkei Asia counted about $1.65 trillion in special-purpose-vehicle debt tied to Alphabet, Microsoft, Amazon, Meta, and Oracle, more than the roughly $1.35 trillion they report on their books, with Meta alone near $420 billion. On Sunday the Wall Street Journal reported Nvidia is in talks to guarantee about $250 billion of financing for a 10-gigawatt OpenAI data-center project in Ohio, a structure needed because OpenAI lacks an investment-grade credit rating. The market noticed: the seven largest technology stocks lost roughly $800 billion on Thursday on AI-spending worries.",
+    "summary": "Nikkei Asia counted about $1.65 trillion in special-purpose-vehicle debt tied to Alphabet, Microsoft, Amazon, Meta, and Oracle, more than the roughly $1.35 trillion they report on their books, with Meta alone near $420 billion. On Sunday the Wall Street Journal reported Nvidia is in talks to guarantee about $250 billion of financing for a 10-gigawatt OpenAI data-center project in Ohio, a structure needed because OpenAI lacks an investment-grade credit rating. On Thursday the seven largest technology stocks lost roughly $800 billion of market value on AI-spending worries.",
     "links": [
      {
       "points": 691,
@@ -2825,7 +2825,7 @@
    "wildcard": {
     "topic": "The fragile digital state",
     "headline": "One person with valid credentials erased a country's land registry.",
-    "summary": "On July 14 a hacker calling themselves ByteToBreach logged into Romania's land-registry agency with stolen credentials, demanded payment, and on refusal wiped its live systems and online backups. Property transactions stopped for about a week: no registry extracts, no authenticated sales, no mortgages. An offline backup survived, and the agency is rebuilding its network from scratch. Researchers identify the actor as a lone, financially motivated hacker in Algeria, the same one who breached Sweden's e-government portal earlier this year. The story reached Hacker News's front page on July 20.",
+    "summary": "On July 14 a hacker calling themselves ByteToBreach logged into Romania's land-registry agency with stolen credentials, demanded payment, and on refusal wiped its live systems and online backups. Property transactions stopped for about a week because notaries could not issue registry extracts, authenticate sales, or register mortgages. An offline backup survived, and the agency is rebuilding its network from scratch. Researchers identify the actor as a lone, financially motivated hacker in Algeria, the same one who breached Sweden's e-government portal earlier this year. The story reached Hacker News's front page on July 20.",
     "links": [
      {
       "points": 709,
@@ -2843,7 +2843,7 @@
     {
      "name": "AI sovereignty and open weights",
      "direction": "contested",
-     "read": "The open-acceleration regime met its policy test. The administration weighed restricting Chinese open-weight models, Treasury threatened sanctions, and two industry letters pushed back inside a week, with OpenAI and Anthropic conspicuously absent from both. Moonshot's promised Kimi K3 weights sat behind a live countdown through Sunday, so the next test is concrete: whether the biggest open release to date actually lands, and whether Washington lets Americans use it.",
+     "read": "The open-acceleration regime met its policy test. The administration weighed restricting Chinese open-weight models, Treasury threatened sanctions, and two industry letters pushed back inside a week. OpenAI and Anthropic signed neither. Moonshot's promised Kimi K3 weights sat behind a live countdown through Sunday, so the next test is concrete: whether the biggest open release to date actually lands, and whether Washington lets Americans use it.",
      "basket": [
       {
        "metric": "Kimi K3 open weights",
@@ -2910,7 +2910,7 @@
     {
      "name": "Trade fragmentation",
      "direction": "tightening",
-     "read": "The blanket 10 percent import surcharge died at midnight on July 24 and a tiered Section 301 regime of 10 to 12.5 percent on about 60 economies took effect the same minute, pegged to forced-labor findings. Partners from Canberra to Brasilia rejected the rationale but signaled negotiation rather than retaliation.",
+     "read": "The blanket 10 percent import surcharge died at midnight on July 24 and a tiered Section 301 regime of 10 to 12.5 percent on about 60 economies took effect the same minute, pegged to forced-labor findings. Partners from Canberra to Brasilia rejected the rationale but said they would keep negotiating; none had announced retaliation by Sunday.",
      "basket": [
       {
        "metric": "Section 301 duties",
