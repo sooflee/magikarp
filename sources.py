@@ -23,8 +23,22 @@ UA = {"User-Agent": "the-current-regime/1.0 (+newsletter)"}
 
 def _get(url: str, timeout: int = 20) -> str:
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode("utf-8", "replace")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read().decode("utf-8", "replace")
+    except Exception as e:
+        # One retry for transient network errors only (DNS blips, timeouts):
+        # a 2026-07-29 run lost three whole feed groups to a mid-run resolver
+        # failure. HTTP errors (403/404/429) are real answers; don't retry them.
+        msg = str(e)
+        transient = ("nodename" in msg or "timed out" in msg
+                     or "Connection reset" in msg or "Temporary failure" in msg)
+        if not transient:
+            raise
+        import time
+        time.sleep(2)
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read().decode("utf-8", "replace")
 
 
 def fetch_hn(days: int = 7, limit: int = 30) -> list[dict]:
