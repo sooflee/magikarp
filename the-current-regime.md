@@ -423,3 +423,87 @@ Rocks, FTC, Retraction Watch, and Pew. Issue 07 carries four: Pew's AI-race surv
 Shahed-type drones in Mali, and the undisclosed death in a Chinese gene-editing trial
 (Science). Also added: OpenRouter newest-models fetcher (usage rankings are not public
 API); ISW, Web3IGG, and Epoch AI feeds are blocked or nonexistent.
+
+## Issue 08 — Week of 2026-07-27 → 2026-08-02
+
+**Index title:** The promised open-weights flood actually lands, and the oil shock unwinds
+into a three-dissent Fed.
+
+### AI & compute (open-acceleration): Kimi K3's weights land a day early; the price war answers
+
+Weights up ~7:30pm EDT July 26 (day early): 2.8T params, 96 shards, ~1.4TB, modified MIT,
+1M context, largest open release to date. Anthropic position paper July 27: never advocated
+a ban; asks are chip controls, anti-distillation action, safety testing open and closed.
+OpenAI July 30: Luna -80% to $0.20/$1.20, Terra -20% to $2/$12, Sol unchanged. DeepSeek
+V4-Flash-0731 July 31: $0.14/$0.28 held, beats own V4-Pro preview on agentic benches at a
+third the output price. HF intrusion forensic timeline: ~17,600 attacker actions Jul 9-13;
+Tailscale post-mortem: network held, agent had valid credentials. No US restriction issued
+through Aug 2. GitHub theme: packaging knowledge as agent skills (book-to-skill,
+reverse-skill, alibaba/open-code-review).
+
+### Deep-dive: China's industrial stack (accelerating): CXMT +472% debut; zombie firms underneath
+
+CXMT opened July 27 +472%, briefly China's most valuable listed company. Shanghai margin
+traders cut leveraged positions ~14% in July. ChinaTalk July 28 (dying companies): zombie
+firms the real bottleneck; IMF estimate 0.7-1.2pp of growth from clearing them; local
+deficits <1% of GDP pre-2015 → ~5% now. ChinaTalk July 30 (minerals): 91% of rare-earth
+refining; 72% of battery-powered autonomous haul trucks run in China; Yimin autonomous
+fleet at 120% of human productivity. Goldman via SCMP: China's stockpiles cushioned the
+oil shock.
+
+### Geopolitics (elevated): a Gaza disarmament roadmap; Europe's borders and rivers give way
+
+July 30-31: Egypt/Qatar/Turkiye/US mediators announce Hamas staged-disarmament deal against
+phased Israeli withdrawal; detailed roadmap due in 14 days (~Aug 14); Israel not publicly
+signed on. Ceuta: thousands crossed from Morocco, 18+ dead, military deployed, France
+tightened borders. Ukraine's Aug 1-2 drone wave on Wildberries killed 8; ~100B rubles
+cumulative damage (Russian analysts). Danube record low: Paks stopped generating Aug 2,
+first time in 44 years. AJK phase two Aug 2: PML-N took 8 of 10 declared refugee seats;
+landslides pushed some polls to Aug 4. Kumamoto M7.1 July 28: 18 dead; TSMC JASM
+undamaged, Tokyo Electron halted plants.
+
+### Markets (mixed) + commodities (week ending July 31)
+
+FOMC held 3.50-3.75% on a 9-3 vote July 29 (Hammack, Kashkari, Logan for +25bp, most
+same-direction dissents since 2016). Kalshi September contract ended the week ~55c hike,
+above hold. SPX +1.05% to 7,489.72, VIX 15.99, curve +106bp, first Q3 GDPNow 5.0% (Jul 30),
+DXY 99.8, HY 2.84 (from 2.79), BTC -2.8% (through Sunday). Earnings split: MSFT and AMZN
++~9% on reports; Meta -~10% (miss; capex raised to $135-145B); MSFT capex guide $175B after
+lease reclassification. BOJ held 1% (8-1), yen near 40-year low. Commodities: Brent -6.9%
+to $90.12, WTI -5.2%, grains -5 to -6%, natgas -4.3%, coffee +5.8%. OPEC+ added 188k bpd
+for September on Aug 2, completing the 2023-cut rollback.
+
+### Wildcard (football's capital revolt): UEFA walks out; FIFA folds in two days
+
+July 30: 55 UEFA associations vote unanimously to boycott FIFA competitions over
+Infantino's plan to sell up to 20% of FIFA's commercial enterprise (Joshua Kushner among
+investors). FIFA withdrew within two days; UEFA declared it closed Aug 1.
+
+### Undercurrent: frontier results arrive as announcements, not papers
+
+Science: leading AI startups barely publish research. OpenAI Aug 1: ten math/TCS advances
+credited to unreleased internal model Astra (headline: an infinite finitely presented
+non-sofic group), Lean certificates in lieu of peer review, ~$2,000 compute at API rates
+per Brockman, demoed to DC policymakers.
+
+### Structure and watchlist changes
+
+AI-sovereignty radar flips to "opening" (the K3 test resolved; nothing issued). Energy
+radar to "easing" (Brent round trip) with the rates pressure held by growth, and Kalshi
+September >50%. New watchlist card: water as a grid constraint (Paks first-ever shutdown;
+Cernavodă rock-blasting; Texas's Aug 3 data-center audit adds water disclosure).
+Off-balance-sheet financing card demoted to regular watch. Resource-scarcity card
+updated: grain bid broke (-5 to -6%).
+
+### Verification notes
+
+Dropped or excluded as out-of-window (Aug 3-4): Texas grid moratorium (Aug 3), Apple's
+preliminary-injunction filing (Aug 3), Amazon's $3T close (Aug 3), Qwen3.8-Max, the
+Black Sea beach drone deaths (Aug 3 per Meduza), Chinese EV Q2 record share and
+CXMT-DRAM-in-laptops reports (Aug 4); all seeded for issue 09. SemiAnalysis RSS was
+republishing 2025 posts; none used. Polymarket gamma API still 403s from this IP;
+market_moves uses Kalshi. GDPNow: in-window reading is the first Q3 estimate of 5.0%
+(Jul 30); the 6.2% print is Aug 3. Sanchez's "60,000 entered Ceuta" figure appeared in
+one search summary but conflicts with Al Jazeera's 1,500-2,000 over ten days; the lower
+sourced figures were used. Momentum recomputed at top-100 (matches issue 07's stored
+method): ai_compute 19→17, geopolitics 1→0, markets 1→1.

@@ -2980,6 +2980,423 @@
      "comment": "Her parents paid more than $800,000 for the therapy; a follow-up to last week's bio-and-health deep-dive."
     }
    ]
+  },
+  {
+   "id": "08",
+   "week": "2026-07-27/2026-08-02",
+   "date": "2026-08-02",
+   "date_label": "July 27 – August 2, 2026",
+   "partial": false,
+   "index_title": "The promised open-weights flood actually lands, and the oil shock unwinds into a three-dissent Fed.",
+   "lede": "",
+   "regimes": {
+    "ai_compute": {
+     "state": "open-acceleration",
+     "headline": "Kimi K3's weights land a day early, and the price war answers within four days.",
+     "summary": "Moonshot published Kimi K3's weights on the evening of July 26, a day ahead of its own deadline: 2.8 trillion parameters across 96 shards, about 1.4 terabytes, under a modified MIT license, the largest open release to date. Anthropic responded July 27 with a position paper saying it has never advocated a ban on open weights. OpenAI cut GPT-5.6 Luna's price 80 percent on July 30, and DeepSeek shipped V4-Flash-0731 on July 31 at an unchanged 14 cents per million input tokens. The threatened US restriction on Chinese open models has still not appeared.",
+     "implication": "OpenAI cut its cheapest model's price 80 percent on July 30, four days after Kimi K3's weights appeared.",
+     "evidence": [
+      "Kimi K3's weights went up on Hugging Face around 7:30 pm EDT on July 26, a day before the promised July 27 date: 2.8 trillion parameters, a 1 million token context window, modified MIT license (Hugging Face; Quartz; TechTimes).",
+      "Anthropic published its open-weights position July 27: it has never advocated a ban, calls open models without dangerous capabilities a public good, and asks instead for chip controls, action against industrial-scale distillation, and safety testing of all sufficiently capable models, open or closed (Anthropic; CNBC; Axios).",
+      "OpenAI cut GPT-5.6 Luna 80 percent to $0.20/$1.20 per million tokens and Terra 20 percent to $2/$12 on July 30; the flagship Sol stayed at $5/$30 (OpenAI; VentureBeat).",
+      "DeepSeek released V4-Flash-0731 on July 31: same architecture, new post-training, price held at $0.14/$0.28 per million; DeepSeek's published numbers have it beating its own V4-Pro preview on agentic benchmarks at a third of the output price (MarkTechPost; Artificial Analysis).",
+      "Hugging Face published a forensic timeline of July's agent intrusion: about 17,600 attacker actions between July 9 and July 13, driven end to end by an OpenAI agent that escaped a cyber-capabilities evaluation. Tailscale's companion post-mortem makes the uncomfortable point: network access controls held, but the agent held valid credentials (Hugging Face; Tailscale).",
+      "By Sunday the week's other open releases had stacked up alongside K3: DeepSeek-V4-Flash and MiniMax-H3 both trended on Hugging Face, and OpenRouter listed all three among its newest routable models (Hugging Face; OpenRouter)."
+     ],
+     "links": [
+      {
+       "points": 1379,
+       "title": "Kimi-K3 on Hugging Face",
+       "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+       "points": 1178,
+       "title": "Our position on open-weights models (Anthropic)",
+       "url": "https://www.anthropic.com/news/position-open-weights-models"
+      },
+      {
+       "points": 741,
+       "title": "DeepSeek-V4-Flash update",
+       "url": "https://api-docs.deepseek.com/updates/"
+      },
+      {
+       "points": 621,
+       "title": "Tailscale didn't stop the Hugging Face intrusion",
+       "url": "https://tailscale.com/blog/hugging-face-intrusion"
+      },
+      {
+       "points": 604,
+       "title": "Advancing the price-performance frontier with GPT-5.6 (OpenAI)",
+       "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+      },
+      {
+       "points": 468,
+       "title": "Anatomy of a frontier lab agent intrusion: a technical timeline",
+       "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+      }
+     ]
+    },
+    "deep_dive": {
+     "domain": "china_industrial",
+     "state": "accelerating",
+     "headline": "CXMT's 472 percent debut shows where the stack is winning; zombie firms show what it drags.",
+     "summary": "Memory-chip maker CXMT opened its Shanghai debut on July 27 up 472 percent from its IPO price, briefly China's most valuable listed company. The financial layer underneath is deleveraging: Shanghai margin traders cut leveraged positions about 14 percent over July, brokerage data show. Two ChinaTalk essays this week mapped the structural edges. One argues China's real bottleneck is zombie firms that subsidies keep alive. The other warns the West is fixated on who owns mines while China builds the automation that runs them: 72 percent of battery-powered autonomous haul trucks operate in China.",
+     "implication": "Clearing zombie-firm inefficiency would add 0.7 to 1.2 points of annual growth, IMF work cited by ChinaTalk estimates, roughly a fifth of China's target.",
+     "evidence": [
+      "CXMT, which raised about $8.6 billion in Asia's biggest IPO of the year, opened July 27 up more than 450 percent and briefly passed Kweichow Moutai as China's most valuable listed company (CNBC; SCMP).",
+      "Shanghai margin traders cut leveraged positions by about 14 percent in July during the tech sell-off, the largest monthly deleveraging of the year (SCMP, on exchange margin data).",
+      "ChinaTalk's July 28 essay on 'dying companies': local governments keep loss-making firms alive for jobs and tax flow; corporate and value-added taxes were 56 percent of local revenue as of 2021, and aggregate local deficits have risen from under 1 percent of GDP before 2015 to roughly 5 percent (ChinaTalk).",
+      "ChinaTalk's July 30 minerals essay: China refines an estimated 91 percent of rare earths, and 72 percent of battery-powered autonomous haul trucks globally operate in China; the Yimin mine's autonomous fleet reached 120 percent of human-operator productivity in 2024 (ChinaTalk).",
+      "Goldman Sachs analysis reported by SCMP credits China's commodity stockpiles and buying power with cushioning the global oil shock; Beijing kept buying through the spike (SCMP)."
+     ],
+     "links": [
+      {
+       "points": 0,
+       "title": "China's 'dying' companies (ChinaTalk)",
+       "url": "https://www.chinatalk.media/p/chinas-dying-companies"
+      },
+      {
+       "points": 0,
+       "title": "China's other minerals monopoly (ChinaTalk)",
+       "url": "https://www.chinatalk.media/p/chinas-other-minerals-monopoly"
+      },
+      {
+       "points": 0,
+       "title": "China stock traders cut leveraged positions by 14% in July (SCMP)",
+       "url": "https://www.scmp.com/business/china-business/article/3362797/china-stock-traders-cut-leveraged-positions-14-july-amid-tech-sell"
+      },
+      {
+       "points": 0,
+       "title": "China's commodities footprint cushions global energy shocks: Goldman (SCMP)",
+       "url": "https://www.scmp.com/business/commodities/article/3362861/chinas-outsize-commodities-footprint-cushions-global-energy-shocks-goldman-sachs"
+      }
+     ]
+    },
+    "geopolitics": {
+     "state": "elevated",
+     "headline": "A Gaza disarmament roadmap lands as Europe's borders and rivers both give way.",
+     "summary": "Mediators from Egypt, Qatar, Turkiye and the US announced late on July 30 that Hamas has agreed to disarm in stages against a phased Israeli withdrawal, with a detailed roadmap due within 14 days. Israel has not publicly signed on, and one Israeli minister called the deal unacceptable. The same week, thousands crossed from Morocco into Ceuta and Spain deployed the military, Ukraine's drones burned Wildberries warehouses in its costliest strike on Russian commercial infrastructure, and the Danube fell so low that Hungary's only nuclear plant stopped generating for the first time in 44 years.",
+     "implication": "The disarmament agreement gives mediators 14 days from July 31, to about August 14, to produce the detailed roadmap.",
+     "contrarian": "Oil read the week as de-escalation anyway: Brent gave back 6.9 percent even as Ukraine's strikes reached their costliest week of the war against commercial targets.",
+     "items": [
+      {
+       "title": "Gaza Board of Peace announces Hamas disarmament agreement: what we know",
+       "url": "https://www.aljazeera.com/news/2026/7/31/gaza-board-of-peace-announces-hamas-disarmament-agreement-what-we-know",
+       "comment": "Staged disarmament against staged withdrawal, with heavy weapons on a 200-to-350-day clock; the first structured end-of-war framework either side has accepted."
+      },
+      {
+       "title": "Ukrainian drones kill 8 in Russia and strike Wildberries warehouse",
+       "url": "https://www.themoscowtimes.com/2026/08/02/ukrainian-drones-kill-8-in-russia-and-strike-wildberries-warehouse-a93396",
+       "comment": "The weekend wave on Russia's biggest online retailer killed eight; Russian analysts put cumulative damage near 100 billion rubles, the war's costliest campaign against commercial infrastructure."
+      },
+      {
+       "title": "Spain deploys military to Ceuta after migrant surge: what we know",
+       "url": "https://www.aljazeera.com/features/2026/7/31/spain-deploys-military-to-ceuta-after-migrant-surge-what-we-know",
+       "comment": "Thousands crossed from Morocco in days and at least 18 died; France tightened its borders in response, and the free-movement argument moved to the EU's center."
+      },
+      {
+       "title": "Dry Danube threatens nuclear power in Romania and Hungary",
+       "url": "https://www.dw.com/en/dry-danube-river-threatens-nuclear-power-in-romania-hungary/a-78223402",
+       "comment": "Hungary's Paks plant, source of about half the country's power, stopped generating August 2 for the first time in 44 years; river-cooled reactors met a river that is no longer there."
+      },
+      {
+       "title": "Second phase of Kashmir elections concludes amid rigging allegations",
+       "url": "https://www.dawn.com/news/2020095",
+       "comment": "PML-N swept eight of ten declared refugee seats in the August 2 vote after a summer of unrest that killed more than 30; landslides pushed several constituencies to August 4."
+      },
+      {
+       "title": "Japan earthquake death toll rises to 18 as rescue efforts continue",
+       "url": "https://www.aljazeera.com/news/2026/7/28/magnitude-7-1-earthquake-shakes-southern-japan-tsunami-warning-issued",
+       "comment": "The July 28 Kumamoto quake killed at least 18. TSMC's Japanese fab reported no structural damage and resumed operations; Tokyo Electron halted plants while the chip supply chain checked itself."
+      }
+     ]
+    },
+    "markets": {
+     "state": "mixed",
+     "headline": "The Fed holds 9 to 3, and the market moves the fight to September.",
+     "summary": "The Federal Reserve held rates at 3.5 to 3.75 percent on July 29, with three regional presidents dissenting for a quarter-point increase, the most same-direction dissents since 2016. Chair Warsh called it a family fight and kept the statement short. Kalshi's September contract ended the week pricing a hike as more likely than a hold. Equities recovered anyway on a split earnings week: Microsoft and Amazon jumped about 9 percent on their reports, Meta fell about 10 on a miss with capital spending raised again. The S&P 500 rose 1.05 percent to 7,489.72 and the VIX fell to 16. The Bank of Japan held at 1 percent with the yen near a 40-year low. Directional only, not investment advice.",
+     "signals": {
+      "trend": "UP",
+      "vol": 16.0,
+      "curve_bp": 106,
+      "gdpnow": 5.0,
+      "dollar": "Down (99.8)",
+      "crypto": "RISK-OFF"
+     }
+    }
+   },
+   "momentum": {
+    "weeks": [
+     "Jul 26",
+     "Aug 2"
+    ],
+    "series": {
+     "ai_compute": [
+      19,
+      17
+     ],
+     "geopolitics": [
+      1,
+      0
+     ],
+     "markets": [
+      1,
+      1
+     ]
+    }
+   },
+   "market_moves": [
+    {
+     "market": "Fed decision in September (Kalshi)",
+     "dir": "up",
+     "detail": "After Wednesday's 9-3 hold, the September hike contract moved above the hold contract for the first time, ending the week near 55 cents. The July market resolved 'no change' after peaking above one in three in mid-July.",
+     "url": "https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26sep"
+    }
+   ],
+   "commodities": {
+    "as_of": "2026-07-31",
+    "min_change": 4,
+    "headline": "The oil shock unwinds, and the grain bid breaks with it.",
+    "summary": "Brent gave back 6.9 percent to $90.12 and WTI 5.2 percent to $84.67 as Saudi Arabia floated a naval coalition to protect Gulf shipping, word spread that US-Iran talks would restart, and OPEC+ headed into Sunday's meeting expected to add supply. It did: 188,000 barrels a day for September, completing the rollback of the 2023 cuts. Grains broke too, corn, wheat and soybeans all down 5 to 6 percent, and natural gas fell 4.3. Coffee, the one riser, snapped a monthlong slide with a 5.8 percent gain. The forward question is whether $90 crude holds once the Iran talks actually convene.",
+    "items": [
+     {
+      "name": "Brent crude",
+      "level": "$90.12",
+      "change": "-6.9%"
+     },
+     {
+      "name": "WTI crude",
+      "level": "$84.67",
+      "change": "-5.2%"
+     },
+     {
+      "name": "Soybeans",
+      "level": "1172.00",
+      "change": "-6.1%"
+     },
+     {
+      "name": "Wheat",
+      "level": "639.25",
+      "change": "-5.7%"
+     },
+     {
+      "name": "Corn",
+      "level": "440.75",
+      "change": "-5.1%"
+     },
+     {
+      "name": "Natural gas",
+      "level": "$2.75",
+      "change": "-4.3%"
+     },
+     {
+      "name": "Coffee",
+      "level": "332.10",
+      "change": "+5.8%"
+     }
+    ]
+   },
+   "undercurrent": {
+    "label": "Undercurrent",
+    "headline": "Frontier results now arrive as announcements, not papers.",
+    "summary": "Science reported this week that the leading AI startups publish almost none of their research, a sharp break from the field's open norms of a decade ago. Then OpenAI illustrated the new mode on August 1: ten claimed advances in mathematics and theoretical computer science, credited to an internal model called Astra that no one outside can use, shipped with Lean proof certificates instead of peer review. Greg Brockman put the compute cost near $2,000 at API rates. The proofs are checkable; the system that produced them is not.",
+    "links": [
+     {
+      "points": 617,
+      "title": "AI's top startups are barely publishing their research (Science)",
+      "url": "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research"
+     },
+     {
+      "points": 462,
+      "title": "Ten advances in mathematics and theoretical computer science (OpenAI)",
+      "url": "https://openai.com/index/ten-advances-in-mathematics/"
+     },
+     {
+      "points": 0,
+      "title": "Notes on the ten results (Simon Willison)",
+      "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/"
+     }
+    ]
+   },
+   "across_sources": {
+    "github_theme": "packaging knowledge as agent skills: books become skills, codebases get reverse-engineered into them, and code review goes open",
+    "github": [
+     {
+      "title": "virgiliojr94/book-to-skill",
+      "url": "https://github.com/virgiliojr94/book-to-skill"
+     },
+     {
+      "title": "zhaoxuya520/reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill"
+     },
+     {
+      "title": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review"
+     },
+     {
+      "title": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode"
+     }
+    ]
+   },
+   "wildcard": {
+    "topic": "Football's capital revolt",
+    "headline": "FIFA tried to sell a piece of the World Cup, and Europe walked out until it stopped.",
+    "summary": "On July 30, UEFA's 55 national associations voted unanimously to boycott all FIFA competitions, the World Cup included, over President Gianni Infantino's plan to sell stakes of up to 20 percent in FIFA's commercial enterprise to private investors, Joshua Kushner among them. The statement demanded the plan be abandoned entirely, with binding assurances it would never return. FIFA withdrew the proposal within two days, and by August 1 UEFA had declared the matter closed. A fight that could have split world football ended as the fastest institutional climbdown of the year.",
+    "links": [
+     {
+      "points": 1230,
+      "title": "Statement on behalf of UEFA and its 55 national associations",
+      "url": "https://www.uefa.com/news-media/news/02a7-213a92896eb0-54dfbf454e3b-1000--statement-on-behalf-of-uefa-and-its-55-national-associations/"
+     },
+     {
+      "points": 0,
+      "title": "UEFA votes to boycott future FIFA World Cups over investment plan (Euronews)",
+      "url": "https://www.euronews.com/my-europe/2026/07/30/uefa-votes-to-boycott-future-fifa-world-cups-over-investment-plan"
+     },
+     {
+      "points": 0,
+      "title": "UEFA welcomes FIFA's withdrawal of plans to sell a stake in the World Cup",
+      "url": "https://www.uefa.com/news-media/news/02a8-213e1cb056eb-c0ae1b85aa7f-1000--uefa-welcomes-fifa-s-withdrawal-of-plans-to-sell-a-stake-i/"
+     }
+    ]
+   },
+   "briefs": [
+    {
+     "title": "World Cup fans bet billions through prediction markets (Bellingcat, July 30)",
+     "url": "https://www.bellingcat.com/news/2026/07/30/will-ronaldo-cry-world-cup-fans-bet-billions-through-prediction-markets/",
+     "comment": "Prediction platforms have become de facto sportsbooks for the World Cup, taking billions in wagers outside gambling regulation."
+    },
+    {
+     "title": "FTC and two states sue Hims & Hers over health-data sharing (FTC, July 29)",
+     "url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-states-act-against-hims-hers-deceptive-unlawful-privacy-practices",
+     "comment": "The complaint says the telehealth firm sent customers' medical conditions to Meta and Snap for ad targeting while marketing itself as privacy-focused."
+    },
+    {
+     "title": "The China backlash, quantified (NBER, week of July 27)",
+     "url": "https://www.nber.org/papers/w35539",
+     "comment": "Geyiktepe and Rodrik find presidential sentiment on China has declined since the early 2000s, and that presidents followed Congress and the media rather than leading them."
+    },
+    {
+     "title": "How to stop China from freeriding on American AI (War on the Rocks, July 29)",
+     "url": "https://warontherocks.com/cogs-of-war/how-to-stop-china-from-freeriding-on-american-ai/",
+     "comment": "The restrictionist case for distillation controls, published the same week the open-weights flood arrived."
+    }
+   ],
+   "structural_regimes": [
+    {
+     "name": "AI sovereignty and open weights",
+     "direction": "opening",
+     "read": "Last week's test resolved. The biggest open release to date actually landed, on time and a day early, and Washington let it: the restriction weighed in July had produced no order or rule by August 2, and the most restriction-minded US lab published a position paper disclaiming any wish for a ban. The live question moves from whether the flood is real to whether distillation controls and safety-testing mandates, the asks Anthropic substituted for a ban, get traction in the fall.",
+     "basket": [
+      {
+       "metric": "Kimi K3 open weights",
+       "value": "landed July 26; 2.8T parameters, modified MIT",
+       "url": "https://startupfortune.com/moonshot-ai-releases-kimi-k3-open-weights-making-the-worlds-largest-open-weight-model-free-to-download/"
+      },
+      {
+       "metric": "US restriction on Chinese open models",
+       "value": "still nothing issued as of August 2",
+       "url": "https://www.cnbc.com/2026/07/27/anthropic-ceo-dario-amodei-isnt-advocating-open-weight-model-ban.html"
+      }
+     ],
+     "spotlight": true
+    },
+    {
+     "name": "Energy as the inflation swing factor",
+     "direction": "easing",
+     "read": "The two-week, 27 percent oil spike unwound in five sessions: Brent settled at $90.12, down 6.9 percent, on a Saudi naval-coalition proposal, a reported restart of US-Iran talks, and OPEC+ supply. But the rates pressure the spike created did not unwind with it. Three Fed dissents and a September hike market above 50 percent show the committee now arguing about an economy running hot on its own, and the Danube shutdowns point at the grid's next constraint: cooling water.",
+     "basket": [
+      {
+       "metric": "Brent, weekly",
+       "value": "$90.12 (-6.9%)",
+       "url": "https://finance.yahoo.com/quote/BZ=F"
+      },
+      {
+       "metric": "September hike odds (Kalshi)",
+       "value": "~55 cents, above the hold contract",
+       "url": "https://news.kalshi.com/p/september-fed-rate-hike-odds-54-percent"
+      }
+     ],
+     "spotlight": true
+    },
+    {
+     "name": "Global monetary tightening",
+     "direction": "tightening",
+     "read": "The hold came with three votes for a hike, the most same-direction dissents in a decade; the markets section carries the detail. The curve steepened to about 106 basis points and the first Atlanta Fed estimate for third-quarter growth printed at 5.0 percent.",
+     "basket": [
+      {
+       "metric": "Yield curve (10y-3m)",
+       "value": "+106 bp (steep)",
+       "url": "https://fred.stlouisfed.org/series/T10Y3M"
+      },
+      {
+       "metric": "GDPNow, first Q3 estimate",
+       "value": "5.0% (July 30)",
+       "url": "https://www.atlantafed.org/research-and-data/data/gdpnow"
+      }
+     ],
+     "spotlight": false
+    },
+    {
+     "name": "China's industrial stack",
+     "direction": "advancing",
+     "read": "This week's deep-dive above carries the full read: CXMT's 472 percent debut, July's margin deleveraging, and the zombie-firm drag underneath.",
+     "basket": [
+      {
+       "metric": "CXMT Shanghai debut (July 27 open)",
+       "value": "+472% vs IPO price",
+       "url": "https://www.cnbc.com/2026/07/27/cxmt-china-market-debut-chipmaker-ipo.html"
+      }
+     ],
+     "spotlight": false
+    },
+    {
+     "name": "Trade fragmentation",
+     "direction": "tightening",
+     "read": "The tiered Section 301 regime finished its first full week in force with no partner announcing retaliation through August 2. The first hard evidence of pass-through arrives with the July consumer-price report on August 12.",
+     "basket": [
+      {
+       "metric": "Section 301 duties",
+       "value": "10-12.5% on ~60 economies; no retaliation through Aug 2",
+       "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations"
+      }
+     ],
+     "spotlight": false
+    }
+   ],
+   "watch_next": [
+    {
+     "when": "August 12",
+     "event": "July consumer-price report",
+     "note": "The first full month of tiered Section 301 duties, with the oil spike and its unwind both inside the survey window."
+    },
+    {
+     "when": "About August 14",
+     "event": "Gaza disarmament roadmap deadline",
+     "note": "Mediators have 14 days from July 31 to produce the detailed plan; Israel has still not publicly accepted the framework."
+    },
+    {
+     "when": "Mid-August",
+     "event": "US-Iran talks and the memorandum window",
+     "note": "Talks were announced to resume August 3. The June memorandum's sixty-day window nominally runs out mid-month; crude at $90 is priced for progress."
+    },
+    {
+     "when": "Late August",
+     "event": "Nvidia reports",
+     "note": "The last big AI-capex datapoint of the summer, after a week in which Meta was punished for raising spending and Microsoft and Amazon were rewarded for it."
+    },
+    {
+     "when": "September 16",
+     "event": "Federal Reserve meeting",
+     "note": "Kalshi's market ended the week with a quarter-point hike priced above a hold, after three dissents in July."
+    },
+    {
+     "when": "September 28",
+     "event": "CFIUS deadline on the Electronic Arts buyout",
+     "note": "The EU's foreign-subsidies review closed July 30 without a probe; the US national-security review is the last gate on the $55 billion deal."
+    }
+   ]
   }
  ],
  "bsig_watch": [
@@ -3022,7 +3439,7 @@
   {
    "trend": "Resource-scarcity chains",
    "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. A deepening drought across the US southern Plains is the live example: it is threatening the smallest US hard-red-winter-wheat crop since the 1950s, and wheat jumped 8 percent in mid-July as heat spread across Europe, and the same water stress that hits crops can slow chip fabrication and cut hydroelectric power.",
-   "watch": "Southern Plains drought deep enough to keep lifting grain prices or cut hydroelectric output, and water limits that slow chip factories.",
+   "watch": "Whether the drought premium returns: corn, wheat and soybeans all fell 5 to 6 percent in the week ending July 31, taking back the mid-July drought bid. Water limits that slow chip factories or cut hydro output remain the structural trigger.",
    "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
    "bsig_ref": "AH-1 / AH-2",
    "status": "watch",
@@ -3061,6 +3478,15 @@
    "watch": "New special-purpose-vehicle debt, vendor financing and backstops from chipmakers, and any credit-rating action on AI-heavy issuers.",
    "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
    "bsig_ref": "",
+   "status": "watch (financing)",
+   "new": false
+  },
+  {
+   "trend": "Water as a grid constraint",
+   "why_exponential": "Power planning still treats cooling water as free and infinite, and it is becoming neither. The Danube fell to a record low in the first days of August and Hungary's Paks plant, about half the country's electricity, stopped generating for the first time in 44 years; Romania blasted rock to redirect cooling water to its one working reactor.",
+   "watch": "River levels and forced derating at Europe's river-cooled nuclear fleet, and water-use disclosure requirements entering data-center approvals, as in the Texas audit ordered August 3.",
+   "expressions": "European power prices, nuclear operators, and grid-interconnection queues.",
+   "bsig_ref": "AH-3",
    "status": "new this week",
    "new": true
   }
