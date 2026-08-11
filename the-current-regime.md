@@ -507,3 +507,107 @@ market_moves uses Kalshi. GDPNow: in-window reading is the first Q3 estimate of 
 one search summary but conflicts with Al Jazeera's 1,500-2,000 over ten days; the lower
 sourced figures were used. Momentum recomputed at top-100 (matches issue 07's stored
 method): ai_compute 19→17, geopolitics 1→0, markets 1→1.
+
+## Issue 09 — Week of 2026-08-03 → 2026-08-09
+
+**Index title:** Washington joins the open-weights race instead of blocking it, and a
+jobs miss unwinds the hike trade.
+
+### AI & compute (open-acceleration): DOE starts publishing open weights; Alibaba takes the agentic top spot
+
+DOE launched the Genesis Open Models Initiative Aug 7 under the Genesis Mission (EO,
+Nov 2025; stated goal of doubling US science productivity within a decade). First model
+Genesis-Science-1, built with Arcee; contribution windows close Aug 14 (pretraining) and
+Aug 25 (fine-tuning). Qwen3.8-Max shipped Aug 3 (MoE, 2.4T total / 95B active) and
+Artificial Analysis ranked it #1 on the agentic index, 58 on the intelligence index,
+above every US model except Anthropic's and OpenAI's; verbose at ~150M eval tokens. AMD
+agreed Aug 6 to buy Taalas (Toronto, 2023, ex-Tenstorrent/AMD): HC1 encodes Llama 3.1 8B
+into a 53B-transistor mask-ROM fabric, ~17k tok/s/user at ~200W; two of ~100 metal layers
+customised, ~2 months per model at TSMC; terms undisclosed, close expected Q4. Google
+Aug 5: Hassabis CEO → chair of GDM and chief scientist of Alphabet, Kavukcuoglu CTO →
+SVP, Jeff Dean leaves after 27 years for a PBC with Ghemawat. Mistral Shieldstral Aug 4
+(3B open weights, multimodal moderation). 2027 DRAM capacity reportedly sold out (Aug 7).
+No US restriction on Chinese open weights issued through Aug 9. GitHub theme: agent
+skills as infrastructure (google/skills, TencentDB-Agent-Memory, swarm-forge).
+
+### Deep-dive: energy & materials (accelerating): $1.2B to stop building wind, and the money went to gas
+
+RWE settled with Interior Aug 6 for $1.2B, surrendering offshore leases off New York,
+California and Louisiana ("no realistic prospect of approval"); ~$900M redirected into a
+Louisiana LNG export terminal. Fifth such payment; running public total ~$4B. Uranium
+equities repriced without the metal: URA $44.91 (+15.0% w/w), Cameco $94.27 on Aug 5
+(+11.5%), BWXT +6.9% after results; U3O8 spot $86.36 end-July → $86.48 Aug 8. Behind it:
+DOE's conditional $17.5B commitment on Westinghouse AP1000 against a 91-reactor pipeline;
+long-term contract price mid-$90s, highest since 2008. Brent -7.3% to $83.55, WTI -7.7%
+to $78.18, Brent ~-14% from the Jul 24 close. Central Asia: Ukraine's refinery campaign →
+Russian export limits → Kazakh and Kyrgyz export bans (Kyrgyzstan >90% dependent on
+Russian gasoline; Kazakh road-export ban May 21 to Nov 21). SPR below 300M barrels,
+lowest since 1983 (Semafor, Aug 10). Contrast: Carbon Brief, on HN Aug 3, has German wind
+and solar at 225 TWh in 2025 against 217 TWh fossil, the first year ahead.
+
+### Geopolitics (elevated): Israel rejects the roadmap; Mecca pact signed
+
+Netanyahu Aug 9: Israel rejects the Board of Peace 15-point plan (published Jul 31, and
+accepted by Hamas), no withdrawal until Hamas actually disarms; mediators' ~Aug 14
+deadline now has nothing to land on. Mecca Joint Defence Agreement signed Aug 7 by MBS,
+Sharif and Erdogan: attack on one is an attack on all three, extending the Sept 2025
+Saudi-Pakistani pact to a NATO member; Pakistan calls it purely defensive and open to
+others. Colombia: de la Espriella sworn in Aug 7 in Cali, first inauguration outside
+Bogota, with Milei, Noboa and Kast present. Turkey: PKK reintegration draft unveiled
+Aug 5, passed Aug 10 with 468 votes of 600; ~3,500 detainees in a first phase, murder
+convictions excluded. Tigray (African Arguments): TPLF has reinstated the pre-war council
+and elected its own president against the federal interim administration. Contrarian:
+Brent fell 7.3% in the same week Israel walked away.
+
+### Markets (mixed) + commodities (week ending Aug 7)
+
+July payrolls Aug 7: -23,000 against forecasts near 80,000. Kalshi September flipped
+inside a session, from a hike above hold (~55c) to a hold at 65%. SPX +3.58% to 7,757.64
+(record close, strongest week since April), Nasdaq +5.19%, VIX 14.9, curve +95bp (ekans
+10y minus 13-week; FRED 10y-3m read 78bp on Aug 7 from 92 on Jul 31), GDPNow Q3 5.8%,
+DXY 99.6, HY 2.70 (from 2.85), crypto still risk-off in the model. Commodities: URA
++15.0%, sugar +12.2%, silver +10.0%, WTI -7.7%, palladium +7.7%, Brent -7.3%, gold +7.2%
+to $4,340.70, cocoa +7.1%, platinum +6.1%; grains all within 1.5%.
+
+### Wildcard (education under AI): Denmark makes 16-year-olds defend their homework
+
+Danish education ministry, Aug 6, effective immediately: oral defence of major written
+assignments prepared at home for upper-secondary students (~9,000 a year), plus computer
+monitoring during written exams, network filters, and a declaration of AI use. Teachers',
+leaders' and students' organisations all backed it and asked for something more durable.
+Paired with Oracle's OpenJDK policy (in force since April, picked up by The Register
+Aug 3) barring contributions written in whole or part by a language model, on
+review-burden and IP grounds.
+
+### Undercurrent: a state judge is now writing Meta's interface
+
+Judge Bryan Biedscheid, Aug 6: $567M into a New Mexico youth mental-health fund on top of
+$375M in March ($942M total; $420M of the new sum to treatment). Design remedies, not just
+money: Like counts hidden from under-18s absent parental approval, push notifications
+paused 10pm-7am, use capped at 90 hours a month. Endless scrolling, autoplay and
+recommendations found to be a public nuisance.
+
+### Structure and watchlist changes
+
+Monetary radar flips from "tightening" to "easing" on the payroll miss and the Kalshi
+reversal. AI-sovereignty radar stays "opening" with a new basis: the state is now a
+publisher, not a gatekeeper. Custom-silicon watchlist card promoted to new-this-week on
+the Taalas deal; sovereign-GPU card rewritten around DOE Genesis; datacenter-power card
+updated with the RWE cancellation and the uranium bid; water-as-grid-constraint demoted
+from new. Resource-scarcity card: grain bid still absent, second week.
+
+### Verification notes
+
+GDELT 429'd on both runs again; geopolitics sourced from world plus regional feeds and
+targeted search. MercoPress, Apricitas and Bits About Money returned 0 items (feed-health
+WARN). Deep-dive feed for energy_materials is only CleanTechnica plus OilPrice and ran
+thin, so the lane was built from search and market data instead; worth widening the feed
+list. Excluded as out-of-window (Aug 10-11) and seeded for issue 10: Anthropic IPO
+soundings and the 20-year $9.1B Riot compute deal, Sonnet 5 pricing made permanent, EU
+watermarking, Meta's Muse Glimmer 30B, the Colombia M7.4 earthquake, Turkey's actual PKK
+vote, the FTC Credit Glory action, Zuckerberg's superintelligence essay. The Bellingcat
+Kinahan investigation is Aug 1, inside issue 08's window, so it was not used here.
+Curve: the signals card stays on the ekans series (^TNX minus ^IRX) for continuity with
+issues 01-08; FRED's T10Y3M reads lower on a bond-equivalent basis and is not mixed in.
+Momentum recomputed at top-100 with the same method as 07 and 08: ai_compute 17→19,
+geopolitics 0→3, markets 1→0.
