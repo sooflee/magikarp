@@ -3410,11 +3410,12 @@
         "ai_compute": {
           "state": "open-acceleration",
           "headline": "The Energy Department starts publishing open weights, and the agentic crown goes to Alibaba.",
-          "summary": "The Department of Energy opened its Genesis Open Models Initiative on August 7, inviting universities, national laboratories and companies to contribute data, evaluations and research environments toward a family of open-weight models for science. The first is Genesis-Science-1, built with Arcee, and the window to join the pretraining effort closes August 14. Four days earlier Alibaba shipped Qwen3.8-Max, which Artificial Analysis then ranked first on its agentic index. The restriction on Chinese open models that Washington weighed in July still has not appeared, and the government is now a publisher itself.",
+          "summary": "The Department of Energy opened its Genesis Open Models Initiative on August 7, inviting universities, national laboratories and companies to contribute data, evaluations and research environments toward a family of open-weight models for science. The first is Genesis-Science-1, built with Arcee, and the window to join the pretraining effort closes August 14. Four days earlier Alibaba shipped Qwen3.8-Max, which Artificial Analysis then ranked first on its agentic index, and said it would be the first Qwen of that class released with open weights, due the week of August 10. Nothing had appeared by then, and the US restriction on Chinese open models weighed in July has still not appeared either.",
           "implication": "The first Genesis model is being built with Arcee, and applications to contribute to its pretraining close August 14, with the fine-tuning window closing August 25.",
           "evidence": [
             "The Department of Energy launched the Genesis Open Models Initiative on August 7 under the Genesis Mission, the AI-for-science programme created by executive order in November 2025 with a stated goal of doubling the productivity of American science within a decade. The portal asks universities, national laboratories, companies and nonprofits for data, evaluations and research environments (Department of Energy; HPCwire).",
-            "Qwen3.8-Max was released August 3: a mixture-of-experts model with 2.4 trillion total parameters and 95 billion active per token. Artificial Analysis put it first on its agentic index and scored it 58 on its intelligence index, above every US model except Anthropic's and OpenAI's, with the caveat that it is verbose, spending about 150 million tokens on the evaluation (Qwen; Artificial Analysis; OfficeChai).",
+            "Qwen3.8-Max was released August 3 and Artificial Analysis scores it 58 on its intelligence index, ninth of 185 models, above every US model except Anthropic's and OpenAI's. Artificial Analysis lists no parameter count and says Alibaba has not disclosed the model size; secondary write-ups put it at 2.4 trillion total parameters with 95 billion active, which Alibaba has not confirmed (Artificial Analysis; Qwen).",
+            "Alibaba said at launch that Qwen3.8-Max would be the first of its Max class to ship open weights, alongside a smaller Qwen3.8-27B, with the release due the week of August 10. No matching repository had appeared on the Qwen organisation page at Hugging Face as of August 10, and no licence text had been published (Qwen; Hugging Face).",
             "AMD said on August 6 it is acquiring Taalas, founded in Toronto in 2023 by former Tenstorrent and AMD architects, which burns model weights into chip wiring. Its HC1 encodes Llama 3.1 8B into a mask-ROM fabric of 53 billion transistors and is quoted near 17,000 tokens per second per user at roughly 200 watts; the flow customises two of about 100 metal layers and turns a model-specific chip at TSMC in about two months. Terms were not disclosed and the deal is expected to close in the fourth quarter (AMD; The Register; CNBC).",
             "Google said on August 5 that Demis Hassabis moves from chief executive of Google DeepMind to chair, and becomes chief scientist of Alphabet; Koray Kavukcuoglu steps up from chief technology officer to senior vice president over Gemini and frontier research. Jeff Dean is leaving after 27 years to start a public benefit corporation with Sanjay Ghemawat (Google).",
             "Mistral released Shieldstral on August 4, a 3-billion-parameter open-weights model for multimodal moderation, and DeepSeek's V4-Flash-0731 drew independent ARC Prize results during the week (Mistral; ARC Prize).",
@@ -3452,7 +3453,7 @@
               "url": "https://mistral.ai/news/shieldstral/"
             },
             {
-              "points": 354,
+              "points": 0,
               "title": "US Department of Energy launches the Genesis Open Models Initiative",
               "url": "https://www.energy.gov/undersecretaryforscience/articles/us-department-energy-launches-genesis-open-models-initiative"
             }
@@ -3462,15 +3463,16 @@
           "domain": "energy_materials",
           "state": "accelerating",
           "headline": "Washington paid a fifth company to stop building wind, and the money went to gas.",
-          "summary": "RWE said on August 6 it had settled with the Interior Department for $1.2 billion and will hand back its offshore leases off New York, California and Louisiana, having concluded there was no realistic prospect of approval. About $900 million of the payment goes into a Louisiana liquefied natural gas export terminal. It is the fifth time the administration has paid a company to abandon renewable work, taking the public bill to roughly $4 billion. Money moved toward the other source of firm power in the same week: uranium miners rose 15 percent while uranium itself sat still.",
-          "implication": "The URA uranium-mining fund rose 15.0 percent in the week to August 7 while uranium spot went from $86.36 at the end of July to $86.48 on August 8. The move was in the equities, not the metal.",
+          "summary": "RWE said on August 6 it had settled with the Interior Department for $1.2 billion and will hand back its offshore leases off New York, California and Louisiana, having concluded there was no realistic prospect of approval. About $900 million of the payment goes into a Louisiana liquefied natural gas export terminal. It is the fifth time the administration has paid a company to abandon renewable work, taking the public bill to roughly $4 billion. Money moved toward the other source of firm power in the same week: uranium miners rose almost 15 percent while uranium itself sat still.",
+          "implication": "The URA uranium-mining fund rose 14.9 percent in the week to August 7 while uranium spot went from $86.36 at the end of July to $86.48 on August 8. The move was in the equities, not the metal.",
           "evidence": [
             "RWE announced on August 6 a settlement with the Department of the Interior resolving its legal claims. It surrenders offshore leases off New York, California and Louisiana and will reinvest the compensation in gas, including about $900 million in a Louisiana LNG export project. It is the fifth payment to an energy company to walk away from renewable work, with the running total near $4 billion (BBC; Brussels Signal).",
+            "The payments are being contested. Seven northeastern states sued the Interior Department in June over the earlier TotalEnergies cancellation, arguing the Judgment Fund Act does not cover a settlement with no imminent lawsuit behind it, and that the department skipped the procedure the Outer Continental Shelf Lands Act requires to cancel a lease (Massachusetts Attorney General; Axios).",
             "Uranium equities repriced without the commodity: the URA mining fund closed August 7 at $44.91, up 15.0 percent on the week; Cameco closed August 5 at $94.27, up 11.5 percent over the prior week; BWX Technologies gained 6.9 percent on the week after its results. Uranium spot was $86.36 at end-July and $86.48 on August 8 (Yahoo Finance; 24/7 Wall St; Trading Economics).",
-            "Behind the bid: the Energy Department's conditional $17.5 billion commitment to accelerate Westinghouse AP1000 deployment sits against a pipeline of 91 reactors, and long-term uranium contract prices are in the mid-$90s, the highest since 2008 (Cameco second-quarter call, July 31; Nuclear Newswire).",
+            "Behind the bid, but not from this week: the Energy Department conditionally committed $17.5 billion on June 23 to finance long-lead equipment for up to ten Westinghouse AP1000 reactors across as many as five projects, with construction targeted to begin by 2030. The 91-reactor figure that circulates with it is Westinghouse's long-term global ambition for the design, not a pipeline the loan covers. Cameco put the long-term contract price in the mid-$90s a pound on its July 31 call (Department of Energy; Cameco; Nuclear Newswire).",
             "Crude kept giving back the war premium. Brent fell 7.3 percent to $83.55 and WTI 7.7 percent to $78.18 in the week to August 7, taking Brent down about 14 percent from its July 24 close (Yahoo Finance).",
             "Ukraine's campaign against Russian refineries is now a Central Asian fuel problem. Russia's export limits have pushed Kazakhstan and Kyrgyzstan to ban their own fuel exports to Eurasian Economic Union partners; Kyrgyzstan takes more than 90 percent of its gasoline from Russia, and Kazakhstan's road-export ban runs from May 21 to November 21 (Eurasianet; Carnegie Endowment; The Insider).",
-            "The US Strategic Petroleum Reserve fell below 300 million barrels, its lowest since 1983, after drawdowns through the Iran war (Semafor, August 10).",
+            "The Strategic Petroleum Reserve stood at 304.8 million barrels in the week ending July 31, the latest EIA figure released during the issue's window, on August 5. That is down from 415.4 million in February, about 110 million barrels in six months, and it has been falling by roughly 3 million a week. Semafor reported on August 10 that the reserve had dropped below 300 million, its lowest since 1983; EIA's August 12 release is the first that can show it (EIA; Semafor).",
             "For contrast, Carbon Brief's analysis, which reached Hacker News on August 3, found wind and solar generated 225 terawatt hours in Germany in 2025 against 217 from fossil fuels, the first year renewables finished ahead (Carbon Brief; bne IntelliNews)."
           ],
           "links": [
@@ -3478,6 +3480,11 @@
               "points": 907,
               "title": "US strikes $1.2B deal to pay German firm to halt offshore wind projects",
               "url": "https://www.bbc.com/news/articles/c1e1vg0gjl5o"
+            },
+            {
+              "points": 0,
+              "title": "RWE US Offshore reaches settlement agreement with the Department of the Interior",
+              "url": "https://www.rwe.com/en/press/rwe-americas/2026-08-06-rwe-us-offshore-reaches-settlement-with-doi-on-offshore-wind-leases/"
             },
             {
               "points": 378,
@@ -3581,12 +3588,12 @@
         "as_of": "2026-08-07",
         "min_change": 4,
         "headline": "Silver and uranium miners ran while crude kept giving back the war premium.",
-        "summary": "Brent fell 7.3 percent to $83.55 and WTI 7.7 percent to $78.18, a second week of unwind that has taken Brent about 14 percent below its July 24 close. The metals went the other way after Friday's jobs report: silver rose 10.0 percent, gold 7.2 percent to $4,340.70, palladium 7.7 and platinum 6.1. Uranium miners rose 15.0 percent while uranium itself held near $86 a pound. Sugar added 12.2 percent and cocoa 7.1. Grains stayed broken, with corn, wheat and soybeans all finishing within 1.5 percent of where they started. Whether the metals bid is a rate call or a currency call is the question the August 12 inflation report starts to answer.",
+        "summary": "Brent fell 7.3 percent to $83.55 and WTI 7.7 percent to $78.18, a second week of unwind that has taken Brent about 14 percent below its July 24 close. The metals went the other way after Friday's jobs report: silver rose 10.0 percent, gold 7.2 percent to $4,340.70, palladium 7.7 and platinum 6.1. Uranium miners rose 14.9 percent while uranium itself held near $86 a pound. Sugar added 12.2 percent and cocoa 7.1. Grains stayed broken, with corn, wheat and soybeans all finishing within 1.5 percent of where they started. Whether the metals bid is a rate call or a currency call is the question the August 12 inflation report starts to answer.",
         "items": [
           {
             "name": "Uranium miners (URA)",
             "level": "$44.91",
-            "change": "+15.0%"
+            "change": "+14.9%"
           },
           {
             "name": "Sugar",
@@ -3636,7 +3643,7 @@
         "summary": "Judge Bryan Biedscheid ordered Meta on August 6 to pay $567 million into a New Mexico fund for youth mental health treatment and prevention, on top of $375 million ordered in March, bringing the case to $942 million. The remedies go past money. Meta must hide Like counts from users under 18 unless a parent approves, stop push notifications to those accounts between 10 pm and 7 am, and hold their use to 90 hours a month. The court found that endless scrolling, autoplay and recommendation features amounted to a public nuisance.",
         "links": [
           {
-            "points": 806,
+            "points": 0,
             "title": "New Mexico court orders Meta to pay $567m over harms to children's mental health",
             "url": "https://www.aljazeera.com/news/2026/8/7/new-mexico-court-orders-meta-to-pay-567m-over-harm-to-youths"
           },
@@ -3684,7 +3691,7 @@
             "url": "https://www.seangoedecke.com/llms-reward-expertise/"
           },
           {
-            "points": 647,
+            "points": 0,
             "title": "Danish high schoolers will have to verbally defend written assignments",
             "url": "https://www.cnn.com/2026/08/07/europe/ai-cheating-measures-schools-denmark-intl-scli"
           },
@@ -3694,7 +3701,7 @@
             "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/"
           },
           {
-            "points": 535,
+            "points": 0,
             "title": "Oracle bans AI-generated code from OpenJDK",
             "url": "https://www.theregister.com/ai-and-ml/2026/08/03/as-larry-ellison-bets-the-farm-oracle-says-it-loves-ai-written-code-just-not-in-openjdk/5281851"
           },
@@ -3772,7 +3779,7 @@
         {
           "name": "Energy as the inflation swing factor",
           "direction": "easing",
-          "read": "Brent has now given back about 14 percent in two weeks, to $83.55, and the reserve that cushioned the war is nearly spent: the Strategic Petroleum Reserve fell below 300 million barrels, its lowest since 1983. The deep-dive above carries the rest, including the $1.2 billion the government paid to cancel offshore wind and the 15 percent bid in uranium miners that came with it.",
+          "read": "Brent has now given back 13.7 percent in two weeks, to $83.55, and the reserve that cushioned the war is running down: the Strategic Petroleum Reserve was at 304.8 million barrels in the week to July 31, from 415.4 million in February. The deep-dive above carries the rest, including the $1.22 billion the government paid to cancel offshore wind and the bid in uranium miners that came with it.",
           "basket": [
             {
               "metric": "Brent, weekly",
@@ -3781,7 +3788,7 @@
             },
             {
               "metric": "US Strategic Petroleum Reserve",
-              "value": "below 300M barrels, lowest since 1983",
+              "value": "304.8M barrels (week to July 31), from 415.4M in February",
               "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCSSTUS1&f=W"
             }
           ],
@@ -3790,7 +3797,7 @@
         {
           "name": "China's industrial stack",
           "direction": "advancing",
-          "read": "Alibaba took the top agentic ranking with Qwen3.8-Max on August 3, four days after CXMT's 472 percent Shanghai debut closed out July. The open-model tier and the memory tier of the stack are now both contested by Chinese firms in the same month.",
+          "read": "Alibaba took the top agentic ranking with Qwen3.8-Max on August 3, four days after CXMT's 472 percent Shanghai debut closed out July, and promised open weights for a Max-class model for the first time. The weights had not shipped by August 10.",
           "basket": [
             {
               "metric": "Qwen3.8-Max, Artificial Analysis",
@@ -3852,7 +3859,7 @@
     {
       "trend": "AI datacenter power demand",
       "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected. Policy is now actively reallocating supply toward it: the government paid RWE $1.2 billion on August 6 to abandon three offshore wind leases, the fifth such payment.",
-      "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers. Uranium miners rose 15 percent in the week to August 7 while uranium spot barely moved, so watch whether contracting catches up to the equity bid.",
+      "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers. Uranium miners rose 14.9 percent in the week to August 7 while uranium spot barely moved, so watch whether contracting catches up to the equity bid.",
       "expressions": "Constellation, Vistra, Cameco, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",

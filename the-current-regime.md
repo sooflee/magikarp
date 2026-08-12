@@ -611,3 +611,54 @@ Curve: the signals card stays on the ekans series (^TNX minus ^IRX) for continui
 issues 01-08; FRED's T10Y3M reads lower on a bond-equivalent basis and is not mixed in.
 Momentum recomputed at top-100 with the same method as 07 and 08: ai_compute 17→19,
 geopolitics 0→3, markets 1→0.
+
+### Issue 09 audit (2026-08-12) — corrections applied
+
+Post-publication audit against primary sources. Four factual corrections, two additions,
+one data-hygiene fix. Reader-visible impact was limited to the URA figure, because
+`evidence[]` is provenance only and non-spotlight radar entries render just their first
+basket row; the rest were errors in the verification record.
+
+- **URA weekly change was wrong.** Published +15.0%; the series is 39.07 → 44.91 =
+  +14.947%, so +14.9%. Corrected in the commodities table, the deep-dive implication and
+  summary, and the datacenter-power watchlist card. This one was on the page.
+- **SPR claim was contradicted by its own citation.** The evidence line and the radar
+  basket asserted "below 300 million barrels, lowest since 1983" and linked EIA
+  WCSSTUS1, which shows 304,809 thousand barrels for the week ending July 31 (released
+  Aug 5; next release Aug 12). Rewritten to EIA's published figure, with the 415.4M
+  February level and the ~3M/week run-rate, and Semafor's Aug 10 sub-300M claim
+  attributed as a forward claim the Aug 12 release is the first to be able to confirm.
+- **Westinghouse numbers were welded together.** The $17.5B DOE commitment (announced
+  June 23, not this week) finances long-lead equipment for up to ten AP1000s across up to
+  five projects; the 91-reactor figure is Westinghouse's long-term global ambition for the
+  design and is unrelated to the loan. Rewritten to say both, and to date the commitment.
+  The long-term uranium price also blended Cameco's "mid-$90s" call commentary with a
+  separate "$90, highest since 2008" figure; now attributed to Cameco's July 31 call only.
+- **Qwen3.8-Max parameter count stated as fact.** Artificial Analysis, cited in the same
+  sentence, says Alibaba has not disclosed the model size; the 2.4T/95B figures trace to
+  secondary write-ups. Now labelled as unconfirmed, with AA's index score (58, ninth of
+  185) as the sourced number.
+- **Added: Alibaba's open-weights promise.** Qwen3.8-Max was announced as the first
+  Max-class Qwen to get open weights, due the week of Aug 10 alongside a Qwen3.8-27B, and
+  nothing had appeared on Hugging Face by Aug 10. On-thesis for the lane and originally
+  missed; now in the AI & compute summary, evidence, and the China radar read.
+- **Added: the wind settlements are being litigated.** Seven northeastern states sued
+  Interior in June over the earlier TotalEnergies cancellation on Judgment Fund Act,
+  APA, NEPA and OCSLA grounds. Material qualifier on the deep-dive's central claim.
+  RWE's own press release added as the primary link; the precise figure is $1.22B.
+- **Link points metadata.** Four links carried HN scores against URLs that were not the
+  HN submission (Denmark → CNN not mezha.net, Meta → Al Jazeera not the Guardian,
+  Oracle → The Register not dealroom, DOE → energy.gov not the ANL portal). The better
+  source was kept and the scores zeroed. Not reader-visible; `points` is not rendered.
+
+Checked clean: all 43 URLs resolve (403s from intellinews, Eurasianet, France24 and the
+ANL portal are bot blocks, Kalshi a 429); email and site render 1:1 across 34 elements;
+no em-dashes; the two-week Brent move verified against the series at -13.7% from a
+$96.78 July 24 close; Aug 7 is a Friday and Aug 9 a Sunday as the copy implies.
+
+**Open, not fixed:** `contrarian` is dead data. `render_contrarian` in build_site.py and
+`_contrarian_html` in send_regime_email.py are both defined and never called, so the
+field renders in neither the email, the site, nor the plain text. This is pre-existing
+and also silently drops issue 08's contrarian line. Wiring it up is a one-line change in
+each renderer but would alter an already-published issue's output, so it is left for a
+decision.
