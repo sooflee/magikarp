@@ -73,6 +73,17 @@ Adaptive depth).
    helpers, not in the default run: `fetch_edgar('"query"')` for SEC filings
    behind a story; `fetch_eia()` / `fetch_acled()` activate when EIA_API_KEY /
    ACLED_KEY+ACLED_EMAIL are exported.
+   **Then run `python3 coverage.py` and act on it the same way.** It reads every
+   past issue and prints a COVERAGE DEBT block: WARN lines for any region or topic
+   that has not appeared in the last three issues, an "every issue" list (the
+   sameness signal), and a ranked wildcard shortlist for the next issue. A region
+   or topic WARN is an assignment: put it in the geopolitics digest, the briefs,
+   the wildcard or the undercurrent this week, or say in the ledger why not.
+   **Lane rules that follow from it:** no lane may open with the same lead actor
+   as the previous two issues (if the AI lane led with a Chinese lab's launch two
+   weeks running, lead with money, labor, security, users or policy this week); the
+   geopolitics lead may not be Iran or Ukraine three weeks running; the
+   undercurrent must be non-AI at least every other week.
 2. **Regime momentum.** Count the week's top HN stories per regime for **this week
    and last** (two Algolia `created_at_i` date-range queries, classified with the
    keyword rules in `classify.py`). Store as `momentum:{weeks:[a,b], series:{regime:[prev,cur]}}`.
@@ -94,9 +105,13 @@ Adaptive depth).
    to a regime.
    - **AI & compute** holds model launches/pricing, access politics, and agent
      security together. Do not split the same story across two cards.
-   - **Deep-dive of the week** rotates its domain by issue number, cycling
-     bio & health → the real economy → China's industrial stack → energy & materials
-     → the Global South → science & frontier (issue 06 is bio & health). Source it
+   - **Deep-dive of the week** rotates its domain by issue number through eleven
+     domains: bio & health → the real economy → China's industrial stack → energy &
+     materials → the Global South → science & frontier → labor & demographics → law &
+     courts → climate & disasters → culture & media → cities & housing (issue 06 is
+     bio & health; 12 is the first labor & demographics; `sources.deep_dive_domain(N)`
+     is the source of truth). Widened from six on 2026-08-18 after the coverage
+     review found the non-tech act cycling through the same few beats. Source it
      from that domain's feeds (`python3 sources.py deepdive <issue#>`), **not** HN.
      Its domain rotates, so it is deliberately **not** part of the momentum or the
      week-over-week diff. Use states `accelerating / steady / stalling`.
@@ -144,7 +159,10 @@ Adaptive depth).
 - **The wildcard** (`wildcard`) — one theme each week from *outside* the four core
   lanes, and from a **different rotation than the deep-dive** so the two do not
   collide: the fraud/scam economy, culture and the attention economy, education under
-  AI, a specific company, a cultural shift. It is **mandatory** each week (a quiet
+  AI, a specific company, a cultural shift. **Pick it from the top of
+  `coverage.py`'s wildcard shortlist** (most-indebted topic first, never the last
+  issue's topic, never the deep-dive's domain) unless the week hands you something
+  plainly better, and say which in the ledger. It is **mandatory** each week (a quiet
   week must still reach outside the tech box); only omit it if you genuinely cannot
   find one, and say why in the seed notes. It is deliberately rotating, so it is
   **not** part of the week-over-week momentum/diff. Same shape as a regime section
@@ -254,6 +272,8 @@ Global: `regime_defs` (state spaces) and `bsig_watch` (the watchlist).
   **deep-dive** feeds (`fetch_deep_dive` / `deep_dive_domain`, per-domain RSS +
   GDELT). All best-effort.
 - `classify.py` — keyword classifier → regime momentum counts.
+- `coverage.py` — coverage-debt ledger: region/topic tags per past issue, WARNs for
+  anything unseen in three issues, the sameness signal, next issue's wildcard shortlist.
 - `regime_state.json` — regime defs, every issue object, the watchlist.
 - `regime_engine.py` — week-over-week diff, momentum/trajectory, rendered blocks.
 - `send_regime_email.py` — renders + sends the HTML + plain-text issue (list-aware).

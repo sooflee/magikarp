@@ -70,10 +70,26 @@ stories were excluded as out-of-window and lead this list.
 - **Meta New Mexico appeal:** still no notice of appeal found through Aug 16.
 - **Illinois HB5511** copycats; London Underground LFR results.
 
+## Coverage debt (from `python3 coverage.py`, run 2026-08-18)
+
+- WARN region: **India/South Asia** last seen 07; **Central Asia/Caucasus** and **Oceania**
+  never at headline level. Assign at least one this week (India: Arunachal claim, Indus
+  Treaty red line, Maruti Suzuki protest; Central Asia: the Aug 14 blackout follow-up and
+  the fuel bans; Oceania: Australia's home-battery price effect, RBA hold).
+- WARN topic: **science/space** last seen 07 (the deep-dive covers it in 11).
+- Sameness signal (every issue in the window): US, Middle East, China, Africa; AI/compute,
+  markets, energy, conflict, elections. The AI lane has led with a Chinese lab's launch two
+  issues running (09 Qwen3.8-Max, 10 Qwen 2.4T/27B): lead 11 with a different lens (money,
+  labor, security, users or policy) even if another model ships.
+- Wildcard shortlist for 11, most-indebted first: companies/deals (last 08), trade/industrial
+  policy (08), education (09), climate/disasters/water (10), crypto/fintech (10). Not fraud.
+
 ## Deep-dive rotation
 
-Issue 11 = **science & frontier** (rotation: bio&health → real economy → China industrial →
-energy&materials → Global South → science; 10 was the Global South). Source with
+Issue 11 = **science & frontier** (rotation now eleven domains: bio&health → real economy →
+China industrial → energy&materials → Global South → science → labor&demographics → law&courts
+→ climate&disasters → culture&media → cities&housing; 12 is labor & demographics; 10 was the
+Global South). Source with
 `python3 sources.py deepdive 11`, NOT from HN. Candidates seen this week: Anthropic's Riemann
 zeta bound (41.6% → 67.2%, Aug 10/13) and Gowers' "what sort of maths are LLMs good at" (Aug 12)
 plus SciAm on OpenAI's math claims; Google homomorphic-encryption private AI (Aug 14); DRC Ebola

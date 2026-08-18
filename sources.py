@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from pathlib import Path
 import urllib.request
 import urllib.parse
 from html import unescape
@@ -559,6 +560,15 @@ DEEP_DIVE_ROTATION = [
     "energy_materials",  # solar/battery deflation, SMRs, the grid as its own story
     "global_south",      # India, SE Asia, Africa, Latin America: growth, elections, capital
     "science_frontier",  # fusion, quantum, the space economy beyond the launch business
+    # Widened from six to eleven domains after the issue-10 coverage review (2026-08-18):
+    # the six-week cycle kept the non-tech act inside the same few beats. The first
+    # six keep their order so issues 06-11 keep their assignments; 12+ pick up the
+    # new domains. Issue N -> DEEP_DIVE_ROTATION[(N - 6) % len(DEEP_DIVE_ROTATION)].
+    "labor_demographics",  # wages, strikes, unions, migration, births, ageing
+    "law_courts",          # courts, prosecutions, regulators at war, constitutional fights
+    "climate_disasters",   # weather as the story: El Nino, floods, quakes, heat, water
+    "culture_media",       # attention, media economics, music/film/games, sport as business
+    "cities_housing",      # rents, mortgages, zoning, transit, the urban ledger
 ]
 
 # Each domain is a set of best-effort RSS/Atom feeds. Failures drop to [].
@@ -591,6 +601,35 @@ DEEP_DIVE_FEEDS = {
         ("Quanta", "https://api.quantamagazine.org/feed/"),
         ("Phys.org", "https://phys.org/rss-feed/"),
     ],
+    # New domains (2026-08-18). Each feed was fetched live before being added;
+    # ILO, MPI, BLS, Lawfare, ReliefWeb, Climate.gov, Press Gazette, CityLab and
+    # Next City were tried and are dead or bot-blocked.
+    "labor_demographics": [
+        ("Labor Notes", "https://labornotes.org/feed"),
+        ("Economic Policy Institute", "https://www.epi.org/blog/feed/"),
+        ("Pew Research", "https://www.pewresearch.org/feed/"),
+    ],
+    "law_courts": [
+        ("SCOTUSblog", "https://www.scotusblog.com/feed/"),
+        ("Just Security", "https://www.justsecurity.org/feed/"),
+        ("Courthouse News", "https://www.courthousenews.com/feed/"),
+    ],
+    "climate_disasters": [
+        ("Carbon Brief", "https://www.carbonbrief.org/feed/"),
+        ("Yale e360", "https://e360.yale.edu/feed.xml"),
+        ("NASA Earth Observatory", "https://earthobservatory.nasa.gov/feeds/earth-observatory.rss"),
+    ],
+    "culture_media": [
+        ("Nieman Lab", "https://www.niemanlab.org/feed/"),
+        ("Variety", "https://variety.com/feed/"),
+        ("Digiday", "https://digiday.com/feed/"),
+        ("Music Business Worldwide", "https://www.musicbusinessworldwide.com/feed/"),
+    ],
+    "cities_housing": [
+        ("Strong Towns", "https://www.strongtowns.org/journal?format=rss"),
+        ("HousingWire", "https://www.housingwire.com/feed/"),
+        ("Planetizen", "https://www.planetizen.com/frontpage/feed"),
+    ],
 }
 
 # A GDELT query to widen the two domains that are thin on English RSS.
@@ -600,6 +639,13 @@ DEEP_DIVE_GDELT = {
     "global_south": "(India OR Indonesia OR Nigeria OR Brazil OR \"South Africa\" "
                     "OR Vietnam) AND (economy OR election OR trade OR investment) "
                     "sourcelang:english",
+    "labor_demographics": "(strike OR union OR wages OR layoffs OR migration OR "
+                          "\"birth rate\") sourcelang:english",
+    "law_courts": "(court OR ruling OR indictment OR \"supreme court\" OR lawsuit) "
+                  "sourcelang:english",
+    "climate_disasters": "(earthquake OR flood OR heatwave OR drought OR wildfire OR "
+                         "\"El Nino\" OR cyclone) sourcelang:english",
+    "cities_housing": "(housing OR rents OR mortgage OR zoning OR transit) sourcelang:english",
 }
 
 
@@ -701,6 +747,15 @@ def main() -> int:
     print("\n=== FEED HEALTH ===")
     for line in feed_health_report():
         print(line)
+    # Coverage debt (which regions/topics the past issues have starved) prints
+    # after feed health so both WARN blocks land together at the end of the run.
+    try:
+        import subprocess
+        print()
+        subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "coverage.py")],
+                       check=False)
+    except Exception as e:  # never let the ledger break the pull
+        print(f"[coverage] skipped: {e}")
     return 0
 
 

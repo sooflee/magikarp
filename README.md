@@ -92,6 +92,7 @@ python3 regime_engine.py      # the week-over-week diff + watchlist
 |---|---|
 | `sources.py` | HN + GitHub trending + arXiv fetchers |
 | `classify.py` | daily news to regime classifier |
+| `coverage.py` | coverage-debt ledger: which regions and topics past issues starved; WARNs and next wildcard shortlist |
 | `regime_state.json` | regime definitions, per-issue state, watchlist |
 | `regime_engine.py` | week-over-week diff + rendered blocks |
 | `send_regime_email.py` | assembles + sends the issue |
