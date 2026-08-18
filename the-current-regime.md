@@ -662,3 +662,155 @@ field renders in neither the email, the site, nor the plain text. This is pre-ex
 and also silently drops issue 08's contrarian line. Wiring it up is a one-line change in
 each renderer but would alter an already-published issue's output, so it is left for a
 decision.
+
+## Issue 10 — Week of 2026-08-10 → 2026-08-16
+
+**Index title:** Alibaba ships the first Max-class open weights and Meta comes back to open, as
+the Iran memorandum lapses and crude turns back up.
+
+### AI & compute (open-acceleration): Alibaba delivers the Max-class weights; Zhipu holds GLM-5.3 back for cyber safety
+
+Qwen3.8-2.4T-A95B weights on Hugging Face Aug 12 (2.4T total / 95B active, 512 experts, 262K
+native context, text-only, thinking-only; custom Qwen3.8-Max licence with revenue gates, NOT
+Apache 2.0 despite headlines); Qwen3.8-27B Aug 14 under Apache 2.0 (27B dense, image+video,
+415k downloads in a month, 2.7M of the GGUF; HN #2 at 1,419). Meta Muse Glimmer 30B Aug 10
+(Apache 2.0, ~29.6B incl. 1.8B ViT, 24GB build) plus Zuckerberg's essay ("restricting access to
+foreign open source models" is not "an effective solution"; "we will resume releasing some open
+source models soon"). GLM-5.3 Aug 14: CyberGym 84.5 vs Mythos 5 83.8, ExploitBench 54.4 vs 78.0,
+weights "two weeks after launch" after hardening, sensitive cyber functions gated. OpenAI Astra
+statement Aug 7 (context; CNBC Aug 10): "cannot rule out critical cyber capabilities". DeepSeek
+V4 Pro GA Aug 13 (1.6T/49B, MIT), peak/off-peak API pricing from Aug 16 ($1.32/$3.96 peak) up
+from ~$0.44/$0.87; DeepSeek Harness (MIT, TypeScript) open-sourced. Gemini 3.7 Flash Aug 13
+($0.75/$3.75 intro to Dec 31). Grok 4.6 Aug 12 ($2/$6, AA index 61). Anthropic: Riot 20-yr 191 MW
+Rockdale lease ~$9.1B (Riot 8-K Aug 10; tenant identified by Bloomberg); Sonnet 5 $2/$10 made
+permanent Aug 10; text watermark applied worldwide, explained Aug 14; WSJ Aug 11 IPO courting,
+Bloomberg Aug 14 Q2 revenue >$11.5B. Nvidia Aug 10: Apollo/BlackRock/Blackstone/Brookfield/GS/KKR
+platforms for >$500B third-party capital, up to 25% Nvidia support per deal; WSJ Aug 14: OpenAI
+Ohio guarantee cut from $250B to under half. Policy: no Chinese-open-weights restriction through
+Aug 16; Wired Aug 13: White House framework to expand to open models "in coming months"; Reuters
+Aug 14: 35 partners to pick "Pax Silica" or China's framework; Genesis pretraining window closed
+Aug 14, no contributor named. Stripe to buy OpenRouter for >$7B (Bloomberg Aug 16). Implication:
+HF summer report (Aug 14): Qwen 2,045M downloads in 2026, 151,448 derivatives vs Gemma 82,506,
+Llama 57,600; largest open model China 2.78T vs US 561B. GitHub theme: the harness as artifact
+(deepseek-harness, anthropics/skills, addyosmani/agent-skills, cactus needle, prime-agent).
+
+### Deep-dive: the Global South (steady): Zambia's model debt workout wins the vote on paper
+
+Vote Aug 13; 8,786,300 registered; 14 candidates; parliament 226 FPTP + 40 PR + up to 11
+appointed. Record: default Nov 2020 ($42.5M coupon; debt 103.5% GDP), Common Framework Feb 2021,
+$6.3B official deal June 2023, ~$13B restructured; IMF ECF $1.3B→$1.7B concluded Jan 2026,
+successor talks after the vote. Macro: kwacha ~+20% 2026 after +25% 2025 (Africa's best); local
+bonds +36% YTD in USD (Bloomberg Jul 22); reserves ~$6.5B; inflation 6.8% Apr from 16.7% Dec
+2024; copper 890,346 t 2025 record. Household: ~60% below poverty line, >70% under $3/day; 20+ hr
+load-shedding; ZESCO ~$50M/month imports. Count: turnout 56.4% (~70% in 2021); at 135/226 HH
+1,544,140 vs Mundubile 1,030,662; not declared by Aug 17. Disputes: polling agent Lovemore
+Chishima killed Aug 13 (9 arrests); ECZ suspended count ~6 hrs Aug 14; NRPUP alleges army raid on
+Mundubile's home night of Aug 15, MP wounded; police: six opposition figures arrested with
+military weapons; EU: "competitive but skewed", suspension "disproportionate"; Catholic bishops
+on army at tally centres. Also in the lane: Malawi contrast (44% devaluation Nov 2023, IMF ECF
+lapsed May 2025, June 2026 visit no programme, inflation 28.7% Sept 2025); Aug 14 four-country
+Central Asian blackout (Almaty, Bishkek, Dushanbe, Khujand, S. Uzbekistan; KEGOC blames two
+600 MW Toktogul units, Kyrgyz grid blames Kazakh line); Singapore MTI Aug 11 GDP forecast to
+4.5–5.5% on AI capex.
+
+### Geopolitics (elevated): the Iran memorandum runs out; eight states blame Israel
+
+Islamabad MoU 60-day window (from June 17) lapsed Aug 16, no round scheduled; Araghchi Aug 15
+"not yet made a decision to restart negotiations". Trump Aug 10 demands compensation from Iran
+(Brent +4–5% that day); Aug 11 CENTCOM MH-60 fires two Hellfires into Panama-flagged Vela Nova
+heading for an Iranian port; Aug 13 Bessent promises measures "never seen"; Aug 14 Trump
+"pretty soon I'll be declaring the Hormuz Strait a territory of the United States" (WH: joking);
+ADNOC vessels attacked Aug 13 and 15. USS Lincoln: 260+ days at sea since Nov 21, one port stop
+(Guam Dec 11–12); Navy Times/Stars and Stripes reports of sailors attempting to jump overboard;
+Trump Aug 14 "not nearly long enough"; USS George Washington rerouted from the Pacific; Adm.
+Cooper visited Aug 16. Gaza: eight FMs (Saudi, UAE, Qatar, Egypt, Jordan, Turkey, Pakistan,
+Indonesia) Aug 16: Israel "now bears responsibility for obstructing"; Kushner met al-Hayya in
+Egypt Aug 16 (then Netanyahu ~4 hrs Aug 17, two working groups; out of window). Colombia M7.4
+Aug 10 07:34 near San José del Palmar: 289 dead, 4,187 injured, 143 missing, 450 municipalities
+(MercoPress Aug 17); Cali 46 collapses, ~$3.2B reconstruction ask; economic emergency Aug 12;
+Cali SAR closed after 140 hrs. Indonesia M7.7 off Flores Aug 15, ≥54 dead, 9,290 displaced. US
+onto land: Hegseth in Panama Aug 12, Colombia 19th A3C member, $1B package, joint ops
+authorised; Arévalo denies Guatemala agreed; 66 strikes / 218 killed since Sept 2025. Turkey PKK
+law passed late Aug 10, 468–88–6 (Bianet 467), effective only after MGK certifies disarmament;
+no weapons surrendered yet; ~3,800–3,900 first-stage releases per DEM. DRC Ebola (Bundibugyo):
+OCHA Aug 14 2,184 dead / 4,660+ cases; passed 2018–20 toll (2,299) by Aug 17; WHO EC Aug 18.
+Implication: Polymarket blockade-end-by-Aug-31 15.5c on Aug 17 from 55.5c Jul 15 ($15.9M).
+
+### Markets (mixed) + commodities (week ending Aug 14)
+
+CPI July (Aug 12, via FRED/BLS): +0.1% m/m, 3.5% y/y from 3.7; core +0.2%, 2.8%; energy -1.5%,
+gasoline -2.9% (still +24.6% y/y); PPI final demand flat, 4.7% y/y; retail sales -0.7% m/m.
+Polymarket Sept Fed ($36.6M): hold 62.5c (Aug 10) → 70.5 (Aug 14) → 74.5 (Aug 15–17); hike 35.5
+→ 27.5 → 24.5. SPX +0.36% to 7,785.76, record 7,798.99 Aug 13; VIX 14.25; 10y 4.70 / 3m 3.70 =
++100bp (ekans); 2s10s 51bp; 30y auction 5.216% Aug 13 (highest since 2001), DGS30 5.25; DXY
+99.67; HY 2.71; BTC -2.9% to $62,976; GDPNow 4.3% from 5.8. Commodities: Brent +6.0% $88.52, WTI
++5.4% $82.40, wheat +5.5% 674.75, corn +4.6% 459.00; gold +0.9% $4,380.40; silver +2.6%; URA
++0.04%; palladium -3.8%. SPR 298.694M bbl week to Aug 7 (EIA Aug 12), first sub-300M reading
+since 1983 per Semafor's framing, -6.1M w/w, -117M since February. NOAA Aug 13: >90% very strong
+El Niño, 69% chance historic (>+2.5C) OND; Drought Monitor Aug 13: rapid deterioration
+Oklahoma/Texas Panhandle. Signals: trend UP, vol 14.3, curve +100bp, GDPNow 4.3, dollar flat
+(99.7), credit 2.71% (new card), crypto risk-off.
+
+### Wildcard (the fraud and scam economy): digital letters of marque
+
+Presidential memorandum Aug 12 "Expanding Capabilities to Combat Transnational Cyber-Enabled
+Crime": vetted companies may conduct surveillance and effects ops against foreign criminal orgs
+"without authorization from the owner or operator", DHS coordination centre, DOJ+DHS directors
+approve each op, ≥$1M bond, procedures in 60 days; Weaver: "digital letters of marque". FTC Aug 10:
+Credit Glory TRO (D. Ariz., 17 companies, 5 principals, ~$200M since 2016, Google ads aimed at
+people looking up debt collectors incl. servicemembers owing AAFES/USAA, impersonated
+collectors). 404 Media Aug 11: Research Gold ("100% human-written, never AI", from $1,900) had
+eight AI-generated reviewers and AI phones. tl;dv 181,874 meetings queryable (bobdahacker, HN
+Aug 10). Also noted, not used: France DGFiP breach 678k taxpayers (Bercy Aug 14; crisis meeting
+Aug 17); Binance gave Russian investigators a donor's passport data (Reuters Aug 17, out of
+window); Snowflake plea (Krebs Aug 6, prior week).
+
+### Undercurrent: Firefox is the last major browser that will run uBlock Origin
+
+Edge MV2 phase-out (Microsoft blog Aug 7; disabled by default for consumers this month, done by
+end-2026); PCWorld Aug 13 = HN #1 at 1,720; Mozilla on Bluesky: support "isn't going anywhere".
+uBO filter maintainers stop chasing Facebook ads (~Aug 10; quote secondary-sourced). Firefox iOS
+experimental network-level ad blocker, off by default. France opt-in telemarketing regime Aug 11
+(fines to €75k/€375k per call).
+
+### Structure and watchlist changes
+
+Radar: AI sovereignty stays "opening" (spotlight) with a new basket (HF 2.78T vs 561B; Qwen 2.4T
+weights; Genesis window closed). Monetary flips from "easing" to "on hold" (spotlight): CPI 3.5,
+hold 70.5c, GDPNow 4.3, 30y 5.216% auction. New "Dedollarization" entry (spotlight): Deutsche
+Bank appointed RMB clearing bank for Europe Aug 10 (first non-Chinese bank), SWIFT RMB 3.10%
+June, PBoC gold +640k oz July (21st month). Energy flips "easing" → "tightening" (Brent +6%, SPR
+<300M). China stack "advancing" (three releases in three days; TSMC July +44.7%). Trade
+"tightening" (Brazil reciprocity proceedings Aug 14; Moraes sanctions weighed). Watchlist:
+custom-silicon card demoted from new (Cerebras Ultrafast added); resource-scarcity card promoted
+to new on El Niño + Plains drought + grains bid; off-balance-sheet financing card promoted to new
+on the Nvidia $500B platform and the OpenAI guarantee cut; attestation card updated with Illinois
+HB5511 (signed Jul 31, effective Jan 1 2028) and London Underground LFR; robotaxi card: Waymo 18
+CA counties, Tesla Nevada 10-car cap; water card: Paks second turbine Aug 10, barges/stone sill
+Aug 15; sovereign-GPU card: Genesis window closed, Pax Silica, Singapore upgrade; datacenter power
+card: URA flat.
+
+### Verification notes
+
+Built Aug 18 (window Aug 10–16; Aug 17 publications used only where they report in-window
+events, e.g. MercoPress Colombia toll, Al Jazeera Zambia count, Al Jazeera Lincoln explainer).
+GDELT returned 15 items this run (first success in three issues); Wikipedia pageviews 404;
+MercoPress alive again (6 items); Apricitas, Bits About Money and Bellingcat 0 (WARN). Session
+web-search budget (200) was exhausted by the research agents mid-run, and two agents died on
+the account spend limit; their completed sub-dossiers were recovered from the subagent
+transcripts, and remaining gaps were filled by direct fetches: CPI/PPI/retail/yields from FRED
+(BLS blocks fetches), Fed odds from Polymarket's CLOB history, SPR from EIA's dnav page, Gaza
+from DW/BBC, Ukraine from DW/Kyiv Post (Wildberries campaign; Alaska one year on) but not used
+under the theatre rule. Not verified and therefore not used: Long March 7A failure, Libya Zawiya
+refinery, yen intervention details, US–Iran talks venue beyond "none scheduled". Known
+discrepancies carried as stated: Turkey vote 468 (Daily Sabah) vs 467 (Bianet); Colombia toll
+289 (MercoPress Aug 17) vs 294+ (Wikipedia); Indonesia toll 54 (BNPB Aug 17) vs 68 (Wikipedia,
+not used); Zambia HH tally 1,544,140 (News Diggers) vs 1,546,140 (Bloomberg relay); Qwen 2.4T
+licence is custom, not Apache (Techmeme/Decoder wrong); Anthropic watermark is global, not
+EU-only (seed note wrong); OpenAI's Aug 10 tender was at a flat $852B (seed's "new valuation"
+wrong); "54-hour" Riemann figure is WSJ's, Anthropic says a day and a half. Curve stays on the
+ekans ^TNX-^IRX series (+100bp); FRED T10Y3M read 82bp Aug 14. Momentum recomputed at top-100
+with the same method: ai_compute 19→18 (prev = issue 09's stored 19; a same-day recompute of
+the prior week gave 18 on drifted scores), geopolitics 3→3, markets 0→0. All 58 URLs checked:
+FT and Le Monde paywalled (403/402), digitalescapetools and TSMC bot-blocked, FRED timed out on
+HEAD but served CSV; email and site render 1:1 across 60 elements; zero em-dashes.
