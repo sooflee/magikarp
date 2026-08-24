@@ -454,7 +454,7 @@ def build_html():
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%;">
           <tr>
             <td style="text-align:center; padding-bottom:6px;">
-              <h1 style="margin:0; color:#1a1a1a; font-size:32px; font-weight:700; letter-spacing:-0.5px; font-family:{SERIF};">The Current Regime</h1>
+              <h1 style="margin:0; font-size:32px; font-weight:700; letter-spacing:-0.5px; font-family:{SERIF};"><a href="https://www.bwang.io/magikarp/" style="color:#1a1a1a; text-decoration:none;">The Current Regime</a></h1>
               <p style="margin:14px 0 0; color:#9a9a9a; font-size:13px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SERIF};">Issue {esc(ISSUE['id'])} &middot; {esc(DATE_LABEL)}</p>
             </td>
           </tr>
@@ -493,6 +493,7 @@ def _items_text(items):
 def build_plain():
     reg = ISSUE.get("regimes", {})
     out = ["THE CURRENT REGIME", f"Issue {ISSUE['id']} · {DATE_LABEL}",
+           "All issues: https://www.bwang.io/magikarp/",
            "Sourced from the week's top posts on Hacker News and wider reporting,",
            "claims verified against primary sources, with a market-regime read.", "",
            "-" * 74, ""]
