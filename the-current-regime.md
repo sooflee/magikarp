@@ -814,3 +814,127 @@ with the same method: ai_compute 19→18 (prev = issue 09's stored 19; a same-da
 the prior week gave 18 on drifted scores), geopolitics 3→3, markets 0→0. All 58 URLs checked:
 FT and Le Monde paywalled (403/402), digitalescapetools and TSMC bot-blocked, FRED timed out on
 HEAD but served CSV; email and site render 1:1 across 60 elements; zero em-dashes.
+
+## Issue 11 — Week of 2026-08-17 → 2026-08-23
+
+One-line: Stripe buys OpenRouter as the AI boom's money layer starts consolidating, and
+the Treasury doubles its bond buybacks as oil drags the inflation scare back.
+
+### AI & compute (consolidation, flipped from open-acceleration): Stripe pays a reported $7.5B for OpenRouter
+
+The state flip is the story: the week's dominant AI news was ownership of the access
+layer, not releases. Stripe agreed on August 19 to buy OpenRouter (Bloomberg $7B+ on
+August 16, WSJ/NYT $7.5B, against a ~$1.3B round earlier this year; 400+ models, 80+
+providers, ~9%/week token growth). Same-week gravity: Ramp launched a free router at
+Router.com, Nvidia discussed Perplexity at $30B+ (The Information), Hugging Face explored
+a sale near $13B (Business Insider), Poolside took a $6B non-exclusive Nvidia licence
+plus $1B at $12B pre-money, Anthropic plans an IPO filing by end of August (Bloomberg),
+and Nvidia notified customers of >15% AI-server price rises on memory costs (server DRAM
+doubled in Q1; ~25% of rack cost). Security thread: Responsible Statecraft's August 17
+investigation of the 'Hanover Institute', an Israeli Government Advertising Agency
+operation via Piro, Inc. ($900k) publishing 100+ AI-generated reports engineered for
+chatbot grounding; GPTZero flagged 12/12, Spamhaus blocked the domain. Open-weights
+counterpoint kept in evidence: Qwen3.8-27B at #1 trending (~2.4M + 6.7M GGUF downloads),
+GLM-5.3 weights held for safety hardening (~August 28), Genesis fine-tuning window closes
+August 25 with no contributors named. The GPT-5.6 Sol '50% cut' was written as what it
+is: an OpenRouter/Vercel promo through September 18, not an OpenAI price change. Lane
+lead rule kept: issues 09 and 10 led with open-weights launches (DOE, Alibaba); this week
+leads with money.
+
+### Deep-dive: Science & frontier (steady): Chang'e-7 scrubs on the pad; seven-year organoids keep time
+
+Domain from the rotation (sources.deep_dive_domain(11) = science_frontier), sourced from
+Quanta + Phys.org feeds plus verification. Lead: Chang'e-7 rolled out August 19, scrubbed
+August 23 ("does not meet launch conditions"; tropical storm Narra closed Wenchang through
+August 25 across a narrow trans-lunar window); slip "at least a month", backup windows
+late September into 2027; SpaceNews reads a possible slip to next year; Blue Moon Mk1
+targets the same south-pole region. Support: Arlotta lab's Nature paper (August 19),
+seven-year cortical organoids aging on the body's schedule across three epigenetic clocks;
+TU Wien's quantum-computer electron microscope (PRL accepted); Nature Astronomy August 18
+bottom-heavy IMF paper (nine early galaxies 3-4x more massive); Quanta's programmed-aging
+essay (Cao, Rockefeller). Pays the science/space coverage debt (last seen issue 07).
+
+### Geopolitics (elevated): 50 percent tariffs land on Canada
+
+Theatre spread deliberately wide; GDELT 429'd on both pulls this run, so the digest was
+built from the world/regional feeds plus a research pass against primary reporting.
+Six slots: US-Canada (talks collapse late August 21 over 'fine print'; 50% duties on ~$20B
+live August 22 under Section 338, energy/potash/critical-minerals carve-outs;
+dollar-for-dollar retaliation September 8; Trump's 51st-state line August 23), Ukraine
+(August 19-20 Kyiv barrage kills 17, 15 in one building; Zelenskyy rejects a wartime vote;
+Russian fuel at 28.1% of stations August 16, ~a third of refining offline), New Zealand
+(Luxon's under-16 Online Safety Bill, announced August 24 Wellington time, fines to 10% of
+global revenue; both coalition partners opposed), Uzbekistan (four J-10CE fighters per
+Eurasianet, deliveries unconfirmed by either government, of a reported 24), Zambia
+(post-election arrests; Türk's August 19 due-process call; follow-through from issue 10's
+deep-dive), Pakistan (Supreme Court ordered Khan to Shifa within two days August 18;
+government detoured him to PIMS August 20 and back to Adiala; PTI says the ordered cardiac
+scan never happened). Ukraine/Iran theatres hold one slot; Iran's escalation lives in
+commodities/markets where the price action is. Coverage debts paid: Oceania and Central
+Asia/Caucasus (both never covered before), India/South Asia (last seen 07).
+
+### Markets (mixed) + commodities (week ending Aug 21)
+
+The week's lever was the Treasury's August 19 buyback doubling ($2B → $4B+ per operation,
+10-30 year, from September 9) after 30-year yields touched post-2007 highs; 10-year fell
+6bp on the day, dollar -0.9% on the week, gold +5.6% to $4,624 (three-month high, ~17%
+under January's $5,589 record; explicitly NOT a record), bitcoin +24% to ~$78k in a
+squeeze ($1.44B shorts liquidated August 19; SEC proposed rulebook August 19; Trump pushed
+the CLARITY Act August 20), S&P -1.4% (first weekly loss since late July), flash services
+PMI 56.8, July minutes hawkish past the three dissenters. Jackson Hole is NEXT week
+(August 27-29, Warsh's first keynote August 28) — the research pass caught this before it
+became a false 'this week' claim, along with the Fed chair change itself (Warsh sworn in
+May 22). Signals: trend UP, vol 15.1, curve +103bp, GDPNow 4.0, dollar Down (98.8), credit
+Tight (2.75%), crypto RISK-ON. Commodities table (≥4%): silver +6.9, Brent +6.6 ($94.39),
+coffee/sugar +6.1, WTI +5.7, gold +5.6, corn +5.4, cocoa +4.5, soybeans +4.4, cotton
++4.2. Market moves: Polymarket BTC-$80k rung ~0.5c → 55c ($18.1M ladder); September hike
+24.5c → 31.5c ($48.8M).
+
+### Wildcard (companies and deals): Shein lists at a quarter of its 2022 price
+
+Taken from the top of coverage.py's shortlist (companies/deals, last seen 08; also touches
+trade/industrial policy, the #2 debt). September 1 Hong Kong target (Reuters, August 20),
+up to ~$1.8B at ≤$27B vs $98B in 2022; voluntary CFIUS filing on the closed $80M Everlane
+deal (Bloomberg, August 23); 2025 profit -38.7% to $2.06B on $41.85B revenue; US revenue
+-14.3% after de minimis ended, EU sub-€150 exemption gone July 2026.
+
+### Undercurrent: AI;DR
+
+Manelius's August 17 post (1,111 points, #1 on HN) plus dontpastetheai.com (1,044).
+AI-adjacent is allowed this week (issue 10's undercurrent was non-AI). Closes on the
+Hanover Institute contrast.
+
+### Structure and watchlist changes
+
+Momentum: ai_compute 18 → 18, geopolitics 3 → 3, markets 0 → 3 (weeks labeled Aug 16 /
+Aug 23; prev = fresh recompute at top-100, matching issue 10's stored current within
+sampling drift). Radar: monetary tilts hawkish (spotlight), energy tightening (spotlight),
+trade tightening (spotlight, Canada + Shein CFIUS); AI sovereignty, dedollarization and
+China stack hold as one-liners. Watchlist: crypto-leverage card promoted to new (the
+squeeze it watches for arrived), custom-silicon card promoted to new (Nvidia's >15%
+memory-driven price notices); resource-scarcity and off-balance-sheet cards demoted with
+refreshed watch lines (SoftBank's record $6.3B retail bond, Broadcom's $60B+ debt search).
+
+### Verification notes
+
+Built Aug 24 (window Aug 17-23; Aug 24-dated items used only where they report in-window
+events, flagged inline: NZ bill announced Aug 24 NZ time, Shein CFIUS scoop Aug 23 US
+time, Bessent sanctions land Aug 24 and sit in watch-next). GDELT 429'd after retry on
+both pulls (WARN acted on: geopolitics built from world/regional feeds plus four research
+agents against primary reporting). Feed WARNs: Middle East Eye 0, +972 0, Apricitas 0,
+Bits About Money 0. Corrections caught in research: Jackson Hole is Aug 27-29 (not this
+week); Warsh, not Powell, chairs; gold's $4,624 is a three-month high, not a record
+(January 28 record $5,589.38); the SemiAnalysis Colossus 2 gigawatt piece is September
+2025, not this week (dropped); 'GPT-5.6 Sol 50% cut' is a promo, not a price change;
+Genesis fine-tuning window closes (not opens) Aug 25; Argentina story dropped (could not
+verify the MercoPress framing; Bloomberg/AtlasIntel is a year-old finding and the
+'October midterms' premise was wrong). Not used because unverified: Eurasianet's
+J-10CE delivery beyond 'appears to' (neither government confirmed; kept hedged); Sudan
+RSF southeast counterattack (verified but cut for space, Africa held by Zambia); GLM-5.3
+licence terms (unconfirmed, not stated). Commodity levels are yfinance Friday Aug 21
+futures closes; HY spread FRED through Aug 20; DXY 98.80. All 49 issue URLs checked: 200
+except Bloomberg/Axios/Eurasianet/qz/mlq/nv.ua bot-walls (content verified via research
+fetches or syndication) and FRED page timeouts (series pages; data served). Email and
+site render 1:1 (97 elements; the 22 absent from both are evidence records, index_title
+and non-spotlight radar baskets, all by design). Zero em-dashes; human-voice sweeps clean
+(the one grep hit is 'futures leverage', the financial noun).
