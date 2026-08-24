@@ -882,7 +882,7 @@ under January's $5,589 record; explicitly NOT a record), bitcoin +24% to ~$78k i
 squeeze ($1.44B shorts liquidated August 19; SEC proposed rulebook August 19; Trump pushed
 the CLARITY Act August 20), S&P -1.4% (first weekly loss since late July), flash services
 PMI 56.8, July minutes hawkish past the three dissenters. Jackson Hole is NEXT week
-(August 27-29, Warsh's first keynote August 28) — the research pass caught this before it
+(August 27-29, Warsh's first keynote August 28). The research pass caught this before it
 became a false 'this week' claim, along with the Fed chair change itself (Warsh sworn in
 May 22). Signals: trend UP, vol 15.1, curve +103bp, GDPNow 4.0, dollar Down (98.8), credit
 Tight (2.75%), crypto RISK-ON. Commodities table (≥4%): silver +6.9, Brent +6.6 ($94.39),
@@ -896,7 +896,7 @@ Taken from the top of coverage.py's shortlist (companies/deals, last seen 08; al
 trade/industrial policy, the #2 debt). September 1 Hong Kong target (Reuters, August 20),
 up to ~$1.8B at ≤$27B vs $98B in 2022; voluntary CFIUS filing on the closed $80M Everlane
 deal (Bloomberg, August 23); 2025 profit -38.7% to $2.06B on $41.85B revenue; US revenue
--14.3% after de minimis ended, EU sub-€150 exemption gone July 2026.
+-14.3% in Q1 2026 after de minimis ended, EU sub-€150 exemption gone July 2026.
 
 ### Undercurrent: AI;DR
 
@@ -938,3 +938,80 @@ fetches or syndication) and FRED page timeouts (series pages; data served). Emai
 site render 1:1 (97 elements; the 22 absent from both are evidence records, index_title
 and non-spotlight radar baskets, all by design). Zero em-dashes; human-voice sweeps clean
 (the one grep hit is 'futures leverage', the financial noun).
+
+### Issue 11 audit (2026-08-24) — corrections applied
+
+Four adversarial verification passes (AI, geopolitics, markets, science/company) plus my own
+re-derivation of the market data. Twenty-eight corrections applied to the published issue.
+The two structural rules held: theatre spread (one Ukraine slot of six, none Iran) and the
+lane-lead rule (AI opened on money, not a Chinese lab, after two issues that opened on
+launches).
+
+Hard errors, corrected:
+- Kyiv barrage was overnight Aug 19-20 and outlets dateline it Aug 20; "15 of them in one
+  residential building" was wrong (15 of the 17 died in the city, most of those in one
+  nine-storey Solomianskyi block).
+- "OpenAI's own price unchanged" was false: OpenAI cut GPT-5.6 Sol's list price on Aug 21,
+  input $5 to $4 and output $30 to $20, inside the window; the promo price we printed
+  ($2.50/$15) was superseded to $2/$10 the same day.
+- "Fell apart over fine print" is Bloomberg's headline, not the envoy's words; Ambassador
+  Mark Wiseman actually said what was agreed "was quite different from what was showing up
+  in the documents". Quote dropped.
+- Carney's "at war" as we ran it was NPR's composite framing; he said "You're at war when
+  you get attacked. We got attacked." Now quoted directly.
+- Fed minutes: the "several participants" who wanted a hike INCLUDE the three dissenters;
+  we had written "several members beyond the three dissenters". Also dropped an unattributed
+  claim that two non-voters would have backed a hike (the minutes never name individuals).
+- Genesis: "no contributor yet named" contradicts DOE, which built Genesis-Science-1 with
+  Arcee; narrowed to no external contributor for either window.
+- Brief pulled: War on the Rocks "Betting on Autonomous Aircraft" published Aug 24, outside
+  the window. Replaced with the FTC's Aug 21 biologics amicus (Amgen/Enbrel, Fourth Circuit,
+  2-0), verified in-window.
+- Organoids: the published result is more than five years, not seven (the seven-year
+  organoids exist but are uncharacterised); three molecular clocks, not all epigenetic;
+  the chimera jump is two to three months, not four; "cultured since 2018" appears in no
+  primary source and was dropped.
+
+Numbers and attributions tightened: high-yield spread was 2.67% on Aug 14, not 2.70, so the
+week's move is +8bp not +5bp; the 10-year breakeven is 2.34% on FRED, not 2.355 (the third
+decimal was false precision), highest since June 10; bitcoin's squeeze was a reported record
+$2.7bn of crypto shorts in the 24 hours around Aug 19, not the $1.44bn one-day CoinGlass
+figure; "economic D-Day" is Trump's phrase first, not Bessent's; Goldman's $100+ Brent case
+is dated April and conditions on the strait being essentially closed, which it is not;
+$7.5bn for OpenRouter is the NYT's number, not the WSJ's (Axios and Stripe's investor letter
+point above $8bn); SoftBank's record is for retail bonds by a Japanese company, beating its
+own 2025 mark; Zambia was 61.4%, not "near 60"; Khan's hospital run was overnight Aug 20-21
+with a dawn return, and the board recorded anxiety, not "severe anxiety"; the FTC
+personalized-pricing release is Aug 19 (the Aug 21 timestamp I first read belonged to the
+biologics release on the same page); the GPS Air actual-malice ruling is from 2024, affirmed
+2025, not this week; Qwen3.8-27B's weights went up Aug 13, not 14, and its SWE-bench Pro row
+comes from Alibaba's own re-run while the model trails Opus on the other four rows; DRAM is
+TrendForce's ~90% Q1 rise and memory is near 30% of rack cost, not "about a quarter";
+Anthropic could publicly file "as soon as" end-August, having filed confidentially June 1;
+Ramp's Router.com is free at the routing layer only; Collison said tokens are "the central
+currency for companies building with AI"; buybacks run Sept 9 to Nov 4; Bellingcat's
+fewest-apprehensions figure is the Big Bend sector and the work was paused that week;
+Nature Astronomy's 3-4x applies to the oldest galaxies in the sample. Commodity levels are
+front-month futures closes and now say so, since they run above wire settlement quotes
+(gold $4,624 vs Reuters $4,645; Brent $94.39 vs $93.63).
+
+Checked and found correct, against my own doubt: "highest since 2007" for the 30-year (FRED
+DGS30 5.31 on Aug 17; last at that level 2007-06-12, and issue 10's "highest since 2001" was
+about auction stop-outs, a different measure); Fedorov as the sacked defence minister who
+broke the wartime-election taboo; the Uzbek J-10CE hedge; Warsh's 19 days; GDPNow 4.0.
+One audit finding was rejected on verification: OpenAI acquired TBPN (Coogan and Hays) in
+April 2026, not Senra's Founders, which Fortune reported in July had turned down every offer,
+so no ownership disclosure was added to the Altman item.
+
+Tooling fix: coverage.py credited neither Pakistan nor New Zealand despite each holding a
+full geopolitics slot, because min_distinct=2 is unreachable for a single-country story in a
+thin-keyword region (Oceania had three keywords). Enriched India/South Asia and Oceania with
+capitals, leaders and cities. The change is surgical: only issue 11's tagging moves, no past
+issue is retagged, and the two false WARNs clear. Also noted for later: "georgia" in
+Central Asia/Caucasus will false-positive on the US state.
+
+Re-verified after corrections: zero em-dashes in reader-facing text (one was removed from
+this ledger entry's prose; the "## Issue N —" heading keeps the house convention), all
+human-voice sweeps clean, 49 URLs checked with the same 10 bot-walls and FRED timeouts as at
+publication, email and site render 1:1 across 99 elements with identical by-design omissions.
+The July minutes basket now cites the Fed's own PDF rather than a secondary write-up.

@@ -47,7 +47,9 @@ REGIONS: "OrderedDict[str, list[str]]" = OrderedDict([
     ("China", ["china", "chinese", "beijing", "alibaba", "qwen", "deepseek", "zhipu", "glm-", "kimi",
                "moonshot", "huawei", "cxmt", "smic", "renminbi", "yuan", "pboc", "shanghai", "hong kong"]),
     ("India/South Asia", ["india", "indian", "delhi", "pakistan", "kashmir", "bangladesh", "sri lanka",
-                          "nepal", "himal", "islamabad", "modi"]),
+                          "nepal", "himal", "islamabad", "modi", "imran khan", "adiala", "rawalpindi",
+                          "lahore", "karachi", "mumbai", "bengaluru", "dhaka", "colombo", "kathmandu",
+                          "afghan", "kabul", "taliban", "bhutan", "maldives"]),
     ("East/SE Asia", ["japan", "japanese", "tokyo", "korea", "korean", "taiwan", "tsmc", "indonesia",
                       "singapore", "vietnam", "thailand", "thai", "myanmar", "philippines", "malaysia",
                       "asean", "flores"]),
@@ -59,7 +61,9 @@ REGIONS: "OrderedDict[str, list[str]]" = OrderedDict([
                        "ecuador", "guatemala", "honduras", "panama", "cartel", "uruguay", "de la espriella"]),
     ("Central Asia/Caucasus", ["kazakh", "kyrgyz", "uzbek", "tajik", "turkmen", "almaty", "bishkek",
                                "caucasus", "azerbaijan", "armenia", "georgia", "caspian"]),
-    ("Oceania", ["australia", "new zealand", "pacific islands"]),
+    ("Oceania", ["australia", "australian", "new zealand", "pacific islands", "canberra", "sydney",
+                 "melbourne", "auckland", "wellington", "luxon", "albanese", "maori", "fiji",
+                 "papua new guinea", "samoa", "tonga", "solomon islands", "vanuatu"]),
 ])
 
 # Topics. Kept coarse on purpose. "AI/compute", "markets/macro" and "conflict"

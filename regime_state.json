@@ -4397,12 +4397,12 @@
           "summary": "OpenRouter said on August 19 it is joining Stripe, at a price Bloomberg first put above $7 billion and the WSJ at $7.5 billion, months after a funding round valued it near $1.3 billion. The router meters more than 400 models from over 80 providers, so its acquirer now owns the layer where model usage becomes revenue. The rest of the week's money pointed the same way: Nvidia discussed a Perplexity round above $30 billion, Hugging Face explored a sale near $13 billion, and Nvidia told customers AI-server prices rise more than 15 percent on memory costs.",
           "implication": "OpenRouter's reported price is roughly six times its valuation from a funding round earlier this year; Stripe and OpenRouter say the name, product and model-agnostic routing stay, and the deal closes in the coming weeks.",
           "evidence": [
-            "The deal: OpenRouter published 'OpenRouter is joining Stripe' on August 19 and Stripe confirmed the agreement the same day. Bloomberg reported a price above $7 billion on August 16; the WSJ and NYT put it at $7.5 billion. OpenRouter routes more than 400 models from over 80 providers, token volume has compounded about 9 percent a week this year, and the announcement frames tokens as 'the central currency' of AI billing. The same week, the expense-management company Ramp launched Router.com, its own model router, free through 2026 (OpenRouter, August 19; Stripe; Bloomberg, August 16; CNBC; TechCrunch).",
-            "The 50 percent 'price cut' that hit Hacker News was a promotion, not a list-price change: OpenRouter and Vercel's AI Gateway are discounting OpenAI's flagship GPT-5.6 Sol to $2.50 per million input tokens and $15 output from August 17-18 through September 18, with bring-your-own-key traffic excluded and OpenAI's own price unchanged. The promo began two days before the Stripe announcement, and BigGo Finance wrote on August 19 that it will flatter OpenRouter's usage share in the weeks the deal closes (OpenRouter; daily.dev; BigGo Finance, August 19).",
+            "The deal: OpenRouter published 'OpenRouter is joining Stripe' on August 19 and Stripe confirmed the agreement the same day. Bloomberg reported a price above $7 billion on August 16 and the New York Times put it at $7.5 billion; Axios and Stripe's own letter to investors point above $8 billion, mostly in stock. OpenRouter routes more than 400 models from over 80 providers, and Stripe's letter says token consumption has compounded about 9 percent a week this year. Patrick Collison called tokens 'the central currency for companies building with AI'. The same week, the expense-management company Ramp launched Router.com, its own model router, with the routing layer free through 2026 (OpenRouter, August 19; Stripe; Bloomberg, August 16; New York Times via TechCrunch; Axios; TechCrunch, August 20).",
+            "The 50 percent 'price cut' that hit Hacker News began as a platform promotion. Vercel's AI Gateway from August 17 and OpenRouter from August 18 halved the cost of OpenAI's flagship GPT-5.6 Sol through September 18, with bring-your-own-key traffic excluded. Then OpenAI cut the list price itself on August 21, input from $5 to $4 per million tokens and output from $30 to $20, which pulled the discounted tier to $2 and $10. The promotion began two days before the Stripe announcement, and BigGo Finance wrote on August 19 that it will flatter OpenRouter's usage share in the weeks the deal closes (Vercel; OpenRouter; OpenAI developer docs; Business Standard, August 22; BigGo Finance).",
             "Grounding as a target: Responsible Statecraft reported on August 17 that the 'Hanover Institute for Public Policy', which appeared around August 6 and published more than 100 reports on Israel, Palestine and antisemitism in about a week, traces to the Israeli Government Advertising Agency through a contractor, Piro, Inc., paid $900,000. Piro markets 'AI Story Optimization', content engineered for how language models judge credibility. GPTZero flagged all twelve sampled articles as machine-written, Spamhaus blocked the domain, and researchers found chatbots already citing the reports (Responsible Statecraft, August 17; Cybernews).",
-            "The money kept concentrating: The Information reported on August 23 that Nvidia is discussing an investment in Perplexity at a valuation above $30 billion, on annualized revenue above $750 million; Business Insider reported the same day that Hugging Face is working with a bank on a possible sale near $13 billion, from $4.5 billion in 2023. Nvidia also agreed to license Poolside's technology for $6 billion, non-exclusively, with a $1 billion investment at a $12 billion pre-money valuation, and Bloomberg reported Anthropic plans to file for its IPO by the end of August (The Information via Reuters; Business Insider; Newcomer; Bloomberg).",
-            "The cost side: Nvidia notified customers on August 22 that AI-server prices rise more than 15 percent on systems shipping early next year, including Vera Rubin and Grace Blackwell racks. The stated reason is memory: server DRAM doubled in the first quarter and is now about a quarter of a high-end rack's cost, and Micron, SK Hynix and Samsung hold the pricing power. SoftBank, separately, planned a $6.3 billion retail bond sale, a record for a Japanese issuer and its third this year (Bloomberg, August 22; BigGo Finance; Bloomberg via Techmeme).",
-            "The open flood ran underneath: Qwen3.8-27B, Alibaba's Apache-licensed 27-billion-parameter model released August 14, spent the week at number one on Hugging Face trending, with about 2.4 million downloads of the main repository and 6.7 million of the community GGUF build; its model card claims 61.7 on SWE-bench Pro against a reported 53.4 for Claude Opus 4.6 Max. Zhipu's GLM-5.3 weights stayed unreleased pending safety hardening, promised around August 28, and the DOE's Genesis fine-tuning window closes August 25 with no contributor yet named (Hugging Face; mlq.ai; energy.gov).",
+            "The money kept concentrating: The Information reported on August 23 that Nvidia is discussing an investment in Perplexity at a valuation above $30 billion, on annualized revenue above $750 million; Business Insider reported the same day that Hugging Face is working with a bank on a possible sale near $13 billion, from $4.5 billion in 2023. Nvidia also agreed to license Poolside's Model Factory for $6 billion, non-exclusively, with a $1 billion investment at a $12 billion pre-money valuation and job offers to more than a hundred of its staff. Bloomberg reported on August 20 that Anthropic could publicly file its IPO paperwork as soon as the end of the month, having filed confidentially on June 1 (The Information via Reuters; Business Insider; Newcomer; Bloomberg).",
+            "The cost side: Nvidia notified customers on August 22 that AI-server prices rise more than 15 percent on systems shipping early next year, including Vera Rubin and Grace Blackwell racks. The stated reason is memory: server DRAM contract prices rose about 90 percent in the first quarter on TrendForce's count, and memory is now near 30 percent of a high-end rack's cost, with Micron, SK Hynix and Samsung holding the pricing power. SoftBank, separately, planned a $6.3 billion retail bond sale, the largest by a Japanese company and its third retail issue this year, beating its own 2025 record (Bloomberg, August 22; TrendForce; implicator.ai; Nikkei, August 19).",
+            "The open flood ran underneath: Qwen3.8-27B, Alibaba's Apache-licensed 27-billion-parameter model whose weights went up on August 13, spent the week at number one on Hugging Face trending, with about 2.4 million downloads of the main repository in the 30 days to August 24 and 6.7 million of the community GGUF build. Its model card claims 61.7 on SWE-bench Pro against a reported 53.4 for Claude Opus 4.6 Max, though that row comes from Alibaba's own re-run of the benchmark's tasks and the model trails Opus on the other four rows of the same table. Zhipu's GLM-5.3 weights stayed unreleased pending safety hardening, which Zhipu put at about two weeks from the August 14 launch, and the DOE's Genesis fine-tuning window closes August 25 with no external contributor named for either window, though DOE built the first model, Genesis-Science-1, with Arcee (Hugging Face; mlq.ai; energy.gov).",
             "Sam Altman told the Founders podcast, in coverage that circulated August 23, that AI could end up 'controlled by a few powerful players', in part because fear of rogue AI could push people to trade 'a lot of liberty for safety'; he said 'the right approach is for people to deeply control the future' (Business Insider; SiliconANGLE, August 23)."
           ],
           "links": [
@@ -4427,13 +4427,13 @@
           "domain": "Science & frontier",
           "state": "steady",
           "headline": "China scrubs its moon-water launch on the pad, and lab-grown brain tissue turns out to keep time.",
-          "summary": "China rolled Chang'e-7 to the pad at Wenchang on August 19 and announced on August 23 that the probe 'does not meet launch conditions' and cannot fly in the planned window this year, after a tropical storm closed the range across a narrow trans-lunar window. The mission is the flagship robotic hunt for water ice near the lunar south pole: an orbiter, lander, rover and a hopping probe aimed at the Shackleton crater region. The same week, Harvard reported cortical organoids alive since 2018 whose cells aged on the body's schedule, and TU Wien began building an electron microscope with a quantum computer inside it.",
-          "implication": "Officials told international partners the Chang'e-7 slip is at least a month, with backup windows from late September into 2027; SpaceNews read the official language as a possible slip to next year, and Blue Origin's Blue Moon Mk1 is aimed at the same south-pole region in the same period.",
+          "summary": "China rolled Chang'e-7 to the pad at Wenchang on August 19 and announced on August 23 that the probe 'does not meet launch conditions' and cannot fly in the planned window this year, after a tropical storm forced a scrub and the narrow trans-lunar window lapsed. The mission is the flagship robotic hunt for water ice near the lunar south pole: an orbiter, lander, rover and a hopping probe aimed at the Shackleton crater region. The same week, Harvard reported cortical organoids grown for more than five years whose cells aged on the body's schedule, and TU Wien began building an electron microscope with a quantum computer inside it.",
+          "implication": "Officials told international partners the Chang'e-7 slip is at least a month, with backup windows running from late September through April 2027; SpaceNews read the official 'this year' language as pointing to 2027. US landers are aimed at the same south-pole region on dates that have themselves slipped repeatedly.",
           "evidence": [
-            "Chang'e-7: the stack rolled out at Wenchang on a Long March 5 on August 19 for a launch no earlier than August 24. On August 23 officials said the launch 'cannot take place during the planned window this year', citing 'prudence, reliability and absolute mission success'; the proximate cause was tropical storm Narra closing the site through August 25, which consumed the trans-lunar window. The mission targets water ice near Shackleton crater at about 88.8 degrees south, with the orbiter surveying about 90 days before the landing (CGTN, August 23; SpaceNews; CNN; Space.com).",
-            "Seven-year organoids: Paola Arlotta's Harvard and Broad team published in Nature on August 19 that peppercorn-sized cortical organoids cultured since 2018, each with more than a million cells, kept developing for seven years, and three independent epigenetic clocks show they aged on the same schedule as brain cells in a body. In a chimera experiment, year-old cells mixed with two-week-old ones jumped ahead, producing neuron types that normally take about four months (Nature, August 19; Broad Institute; AFP).",
+            "Chang'e-7: the stack rolled out at Wenchang on a Long March 5 on August 19 for a launch no earlier than August 24. On August 23 officials said the launch 'cannot take place during the planned window this year', citing 'prudence, reliability and absolute mission success'; the proximate cause was tropical storm Narra over the Gulf of Tonkin, which forced the scrub and consumed the narrow trans-lunar window. The mission targets water ice near Shackleton crater at about 88.8 degrees south, with the orbiter surveying about 90 days before the landing (CGTN, August 23; SpaceNews; CNN; Space.com).",
+            "More than five years of organoid growth: Paola Arlotta's Harvard and Broad team published in Nature on August 19 that peppercorn-sized cortical organoids, each with more than a million cells, kept developing for over five years, well past the previous record of about two, and that three independent molecular clocks show them aging on the same schedule as brain cells in a body. In a chimera experiment, cells about a year old mixed with two-week-old ones jumped ahead, producing neuron types that normally take two to three months (Nature, August 19; Broad Institute; The Transmitter).",
             "A quantum computer inside a microscope: TU Wien, with Vienna, Linz and Innsbruck, is building an electron microscope whose beam couples to qubits, so each electron's quantum information is used rather than just counted. That raises signal per electron and cuts radiation dose for fragile samples such as biological specimens; the paper is accepted at Physical Review Letters and the instrument is under construction (TU Wien; Phys.org).",
-            "Hidden mass in early galaxies: a Nature Astronomy paper on August 18 reports that nine massive quiescent early galaxies carry far more small faint stars than the standard mass function assumes, making them three to four times more massive than previously estimated and sharpening the puzzle of how such galaxies assembled so early (Nature Astronomy via Space.com; Phys.org).",
+            "Hidden mass in massive galaxies: a Nature Astronomy paper on August 18 reports that nine massive quiescent galaxies carry far more small faint stars than the standard mass function assumes, and that the oldest of them are three to four times more massive than previously estimated, sharpening the puzzle of how such galaxies assembled so early (Nature Astronomy via Space.com; Phys.org).",
             "Aging as a program: Quanta's August 14 essay, built on Junyue Cao's whole-body single-cell atlases of aging mice at Rockefeller, circulated through the week. The atlases show aging proceeding in orderly steps, a programmed redistribution of the body's cell populations, in Cao's words 'programmed at a very early stage', closer to a tree shedding leaves than a machine wearing out (Quanta, August 14)."
           ],
           "links": [
@@ -4462,23 +4462,23 @@
         "geopolitics": {
           "state": "elevated",
           "headline": "Fifty percent tariffs land on Canada as the talks collapse over final terms.",
-          "summary": "Trade talks in Washington broke down late on August 21, and 50 percent tariffs on about $20 billion of Canadian goods took effect the next morning, with energy, potash and critical minerals carved out. Carney set dollar-for-dollar retaliation for September 8 and, in NPR's account, said Canada is economically 'at war' with the United States. In Kyiv, an overnight barrage of missiles and 168 drones on August 19 killed 17 people, 15 of them in one residential building, while fuel rationing spread across more than half of Russia's regions. New Zealand moved to ban under-16s from social media, Uzbekistan appeared to take delivery of Chinese fighter jets, and Pakistan's Supreme Court fought the government over a jailed former prime minister's heart exam.",
-          "implication": "The duties, invoked under Section 338 of the 1930 Tariff Act, cover roughly $20 billion of Canadian goods; Canada's matching tariffs take effect September 8, and a Canadian envoy said the deal 'fell apart over fine print'.",
+          "summary": "Trade talks in Washington broke down late on August 21, and 50 percent tariffs on about $20 billion of Canadian goods took effect at midnight, with energy, potash and critical minerals carved out. Carney set dollar-for-dollar retaliation for September 8 and said the next day that 'you're at war when you get attacked. We got attacked.'. In Kyiv, an overnight barrage of missiles and 168 drones on August 19 and 20 killed 17 people, 15 of them in the city itself and most of those in one nine-storey block, while fuel rationing spread across more than half of Russia's regions. New Zealand moved to ban under-16s from social media, Uzbekistan appeared to take delivery of Chinese fighter jets, and Pakistan's Supreme Court fought the government over a jailed former prime minister's heart exam.",
+          "implication": "The duties, invoked under Section 338 of the 1930 Tariff Act, a provision no president had used before, cover roughly $20 billion of Canadian goods; Canada's matching tariffs take effect September 8 on steel, dairy, appliances, farm equipment, pulp and paper and electronics.",
           "items": [
             {
               "title": "US-Canada talks collapse and 50 percent tariffs take effect (Bloomberg)",
               "url": "https://www.bloomberg.com/news/articles/2026-08-22/us-canada-trade-talks-collapse-triggering-trump-s-50-tariffs",
-              "comment": "Talks broke down late on August 21 after what a Canadian envoy called changes to the 'fine print'; the duties cover about $20 billion of goods including alcohol, dairy and cement, with energy, potash and critical minerals carved out. Trump wrote on August 23 that 'Canada wants the benefits of being a State, without being one'. The trade-fragmentation regime now runs through North America's most integrated border."
+              "comment": "Talks broke down late on August 21, and Canada's ambassador, Mark Wiseman, said what had been agreed 'was quite different from what was showing up in the documents'. The duties cover about $20 billion of goods including alcohol, dairy and cement, with energy, potash and critical minerals carved out. Trump wrote on August 23 that 'Canada wants the benefits of being a State, without being one'. The trade-fragmentation regime now runs through North America's most integrated border."
             },
             {
               "title": "Russian missiles and 168 drones kill 17 in Kyiv as air defences run low (Moscow Times)",
               "url": "https://www.themoscowtimes.com/2026/08/20/russian-missile-and-drone-attack-kills-17-in-kyiv-a93536",
-              "comment": "Fifteen of the dead were in one nine-story building; Zelenskyy said Patriot interceptors are 'needed every day', then rejected calls for a wartime election as a 'tsunami' that could split the country. On the other side, fuel was available at 28.1 percent of Russian stations on August 16, down from 41 a week earlier, and Putin threatened Ukraine's 'most sensitive economic sectors' in return. The war is now an energy war in both directions."
+              "comment": "Fifteen of the 17 died in the city itself, most in one nine-storey block in Solomianskyi; Zelenskyy said on August 20 that Patriot interceptors 'cannot yet be replaced, and we need them every day', then rejected calls for a wartime election as a 'tsunami' that could split the country. On the other side, Izvestia counted fuel available at 28.1 percent of Russian stations on August 16, down from 41 a week earlier, and Putin said Ukraine had opened a 'Pandora's box' and should expect a response aimed at its 'most sensitive economic sectors'. The war is now an energy war in both directions."
             },
             {
               "title": "New Zealand moves to ban under-16s from social media (Bloomberg)",
               "url": "https://www.bloomberg.com/news/articles/2026-08-24/new-zealand-plans-social-media-ban-for-under-16s",
-              "comment": "Luxon's Online Safety Bill, announced August 24 in Wellington, would fine 'high risk' platforms up to 10 percent of global revenue for failing to check ages by ID, facial estimation or account data; both coalition partners oppose it and a first reading this term looks unlikely. The checking machinery is the age-assurance infrastructure already on our watchlist."
+              "comment": "Luxon's Online Safety Bill, announced August 24 in Wellington, would fine 'high risk' platforms up to 10 percent of global revenue for failing to check ages by ID, facial estimation or account data; both coalition partners oppose it, and Luxon said it will not reach a first reading before Parliament rises for the November election. The checking machinery is the age-assurance infrastructure already on our watchlist."
             },
             {
               "title": "Uzbekistan appears to take delivery of Chinese J-10CE fighters (Eurasianet)",
@@ -4488,12 +4488,12 @@
             {
               "title": "UN rights chief tells Zambia to halt arbitrary arrests of opposition figures (UN News)",
               "url": "https://news.un.org/en/story/2026/08/1168169",
-              "comment": "Last week's deep-dive ended with the count suspended and the army at the tally centres. Hichilema was declared winner near 60 percent; police arrested 11 people including senior opposition figures on election night over an alleged insurrection plot, and Volker Turk called for due process on August 19. Mundubile calls the plot a fabrication and has moved to what his party calls a secure location."
+              "comment": "Last week's deep-dive ended with the count suspended and the army at the tally centres. Hichilema was declared winner on August 18 with 61.4 percent; police arrested 11 people including senior opposition figures on election night over an alleged insurrection plot, and Volker Turk called for due process on August 19. Mundubile calls the plot a fabrication and has moved to what his party calls a secure location."
             },
             {
               "title": "Pakistan's top court orders Imran Khan to hospital; the government sends him back to jail (Al Jazeera)",
               "url": "https://www.aljazeera.com/news/2026/8/18/pakistan-top-court-orders-imran-khans-hospital-transfer-amid-access-battle",
-              "comment": "The Supreme Court ordered the 73-year-old former prime minister moved to Shifa International within two days, after a jail cardiac board recorded fluctuating blood pressure and severe anxiety. The government instead took him briefly to a state hospital on August 20 and returned him to Adiala prison, and his party says the ordered heart scan was never performed. He has been imprisoned since 2023."
+              "comment": "The Supreme Court ordered the 73-year-old former prime minister moved to Shifa International within two days, after a jail cardiac board on August 10 recorded fluctuating blood pressure and anxiety tied to restricted family contact. The government instead took him overnight on August 20 and 21 to a state hospital and returned him to Adiala prison at dawn, and his party says the ordered heart scan was never performed. He has been imprisoned since August 2023."
             }
           ],
           "links": [
@@ -4512,7 +4512,7 @@
         "markets": {
           "state": "mixed",
           "headline": "The Treasury starts buying twice as many of its own long bonds, and gold and bitcoin rise while stocks fall.",
-          "summary": "The 30-year Treasury yield touched its highest since 2007 early in the week, and on August 19 the Treasury answered: buyback operations in 10- to 30-year debt roughly double, to $4 billion and more per operation, from September 9. Ten-year yields fell 6 basis points that day, the dollar ended the week down 0.9 percent, gold closed a third straight weekly gain at a three-month high, and bitcoin rose 24 percent in a squeeze that liquidated $1.44 billion of short positions after the SEC proposed its crypto rulebook and Trump pushed the CLARITY Act. Stocks did not join: the S&P 500 fell 1.4 percent, its first weekly loss since late July, with the flash services PMI hot at 56.8 and July's Fed minutes showing 'several' members beyond the three dissenters wanting a hike. Polymarket's September hike contract rose from 24.5 to 31.5 cents on $49 million traded. Kevin Warsh gives his first Jackson Hole speech as chair on August 28, nineteen days before the meeting. Directional only, not investment advice.",
+          "summary": "The 30-year Treasury yield touched its highest since 2007 early in the week, and on August 19 the Treasury answered: buyback operations in 10- to 30-year debt roughly double, to $4 billion and more per operation, from September 9 through November 4. Ten-year yields fell 6 basis points that day, the dollar ended the week down 0.9 percent, gold closed a third straight weekly gain at a three-month high, and bitcoin rose 24 percent in a squeeze that wiped out a record $2.7 billion of crypto short positions in the 24 hours around August 19, after the SEC proposed a crypto rulebook on August 18 and Trump pressed Congress for the CLARITY Act at a White House event the next day. Stocks did not join. The S&P 500 fell 1.4 percent, its first weekly loss since late July, on rising long-end yields and the oil-driven inflation scare, though Friday's flash services PMI ran hot at 56.8, a 20-month high. July's Fed minutes, released August 19, record that several participants favoured a quarter-point rise, a group that includes the three dissenters. Polymarket's September hike contract rose from 24.5 to 31.5 cents on $48.8 million traded. Kevin Warsh gives his first Jackson Hole speech as chair on August 28, nineteen days before the meeting. Directional only, not investment advice.",
           "signals": {
             "trend": "UP",
             "vol": 15.1,
@@ -4548,7 +4548,7 @@
         {
           "market": "Bitcoin reaches $80,000 in August (Polymarket)",
           "dir": "up",
-          "detail": "The $80,000 rung went from about half a cent to 55 cents in the week as bitcoin rose 24 percent to $78,000; the $62,500 dip rung, at 74 cents a week earlier, paid out on the way. $18.1 million has traded across the August ladder.",
+          "detail": "The $80,000 rung went from about half a cent to 55 cents over the week as bitcoin rose 24 percent to $78,000, while the contract on a dip back to $62,500, worth 76 cents a week earlier, fell under 2 cents. $18.1 million has traded across the August ladder.",
           "url": "https://polymarket.com/event/what-price-will-bitcoin-hit-in-august-2026"
         },
         {
@@ -4562,7 +4562,7 @@
         "as_of": "2026-08-21",
         "min_change": 4,
         "headline": "A second 6 percent week for crude, and silver, coffee and sugar rose more.",
-        "summary": "Brent rose 6.6 percent to $94.39 and WTI 5.7 percent to $87.06, a second straight week of gains near 6 percent, after Bessent said Washington would 'collapse' Iran economically and Tehran threatened shipping in the Strait of Hormuz; the sanctions package, which Bessent called 'economic D-Day', lands Monday. Gold added 5.6 percent to a three-month high of $4,624 and silver 6.9 percent to $69.47. Corn rose 5.4 percent and soybeans 4.4 as the Plains drought held, and coffee and sugar each gained 6.1. Goldman's standing scenario puts Brent above $100 through 2026 if Hormuz disruption runs another month.",
+        "summary": "Brent rose 6.6 percent to $94.39 and WTI 5.7 percent to $87.06, a second straight week of gains near 6 percent, after Bessent said Washington would 'collapse' Iran economically and Tehran threatened shipping in the Strait of Hormuz; the sanctions package, an 'economic D-Day' in Trump's phrase, lands Monday. Gold added 5.6 percent to a three-month high of $4,624 and silver 6.9 percent to $69.47. Corn rose 5.4 percent and soybeans 4.4 as the Plains drought held, and coffee and sugar each gained 6.1. Goldman's April scenario put Brent above $100 across 2026 if the strait stayed essentially closed another month; it is not closed, and the bank has since sketched $90 to $100 for intermittent restrictions. Levels are front-month futures closes, which run a little above the wire services' settlement quotes.",
         "items": [
           {
             "name": "Silver",
@@ -4681,17 +4681,17 @@
         {
           "title": "Satellite imagery documents new Border Patrol road construction in Big Bend National Park (Bellingcat, August 20)",
           "url": "https://www.bellingcat.com/news/us-canada/2026/08/20/satellite-imagery-documents-new-border-patrol-road-construction-in-big-bend-national-park/",
-          "comment": "Planet Labs imagery shows more than five miles of new road cut through riparian forest along the Rio Grande for a CBP 'Smart Wall', in the stretch of the southern border with the fewest apprehensions by CBP's own data."
+          "comment": "Planet Labs imagery shows more than five miles of new road cut through riparian forest along the Rio Grande for a CBP 'Smart Wall', in the Border Patrol sector with the fewest apprehensions on CBP's own data; work was paused earlier that week after local objections."
         },
         {
-          "title": "FTC seeks comment on a personalized-pricing enforcement policy (FTC, August 21)",
+          "title": "FTC seeks comment on a personalized-pricing enforcement policy (FTC, August 19)",
           "url": "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-seeks-comment-enforcement-policy-statement-regarding-personalized-pricing",
           "comment": "Ferguson's draft says the agency cannot ban pricing from personal data outright, but undisclosed use of it to set individual prices can violate the FTC Act; comments run 30 days from Federal Register publication."
         },
         {
           "title": "Defamation suit demanding Elsevier retract a paper heads to trial (Retraction Watch, August 21)",
           "url": "https://retractionwatch.com/2026/08/21/defamation-lawsuit-elsevier-retraction-gps-air/",
-          "comment": "GPS Air is suing Elsevier for $1 billion over a 2021 air-purifier study it says used manipulated data; a judge found the company 'plausibly alleged actual malice' and set trial for December 7."
+          "comment": "GPS Air is suing Elsevier alone for $1 billion over a 2021 air-purifier study it says used manipulated data; a 2024 ruling that the company had 'plausibly alleged actual malice' was affirmed last year, and trial is set for December 7."
         },
         {
           "title": "Instrument hacking (NBER working paper, Keane, Neal and Vu)",
@@ -4699,30 +4699,30 @@
           "comment": "Simulations show that trying candidate instruments until one 'works' biases instrumental-variable estimates back toward ordinary least squares, and the bias grows with each extra candidate tried."
         },
         {
-          "title": "Betting on autonomous aircraft (War on the Rocks)",
-          "url": "https://warontherocks.com/cogs-of-war/betting-on-autonomous-aircraft/",
-          "comment": "Shield AI's Brandon Tseng argues autonomy is underfunded relative to munitions production, and says typical operations surveil less than 10 percent of the significant terrain in a warzone."
+          "title": "FTC backs antitrust scrutiny of patent-application buyouts in biologics (FTC, August 21)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-files-amicus-brief-protect-competition-biologic-drug-markets",
+          "comment": "The agency told the Fourth Circuit that buying rights to a rival's pending patent applications is open to antitrust scrutiny, in CareFirst's Sherman Act suit alleging Amgen acquired and shaped applications covering Enbrel to extend its monopoly; the Commission voted 2-0."
         }
       ],
       "structural_regimes": [
         {
           "name": "AI sovereignty and open weights",
           "direction": "opening",
-          "read": "Qwen3.8-27B spent the week at number one on Hugging Face trending with millions of downloads, while the infrastructure that serves open models changed owners: Stripe bought OpenRouter and Hugging Face explored a sale near $13 billion. GLM-5.3's weights stayed back for safety hardening, and the Genesis fine-tuning window closes August 25 with no contributor named.",
+          "read": "Qwen3.8-27B spent the week at number one on Hugging Face trending with millions of downloads, while the infrastructure that serves open models changed owners: Stripe bought OpenRouter and Hugging Face explored a sale near $13 billion. GLM-5.3's weights stayed back for safety hardening, and the Genesis fine-tuning window closes August 25 with no external contributor named, though DOE built its first model with Arcee.",
           "basket": [
             {
-              "metric": "Qwen3.8-27B downloads (Hugging Face)",
+              "metric": "Qwen3.8-27B downloads (Hugging Face, 30 days to August 24)",
               "value": "about 2.4M on the main repository plus 6.7M community GGUF; #1 trending",
               "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
             },
             {
               "metric": "GLM-5.3 weights",
-              "value": "unreleased; promised about August 28 after safety hardening",
+              "value": "unreleased; Zhipu said about two weeks from the August 14 launch",
               "url": "https://mlq.ai/news/zhipu-releases-glm-53-through-its-coding-service-with-weights-still-two-weeks-away/"
             },
             {
               "metric": "DOE Genesis fine-tuning window",
-              "value": "closes August 25; no contributors named through two windows",
+              "value": "closes August 25; no external contributor named, though Genesis-Science-1 was built with Arcee",
               "url": "https://www.energy.gov/undersecretaryforscience/articles/us-department-energy-launches-genesis-open-models-initiative"
             }
           ],
@@ -4731,7 +4731,7 @@
         {
           "name": "Global monetary tightening",
           "direction": "on hold, tilting hawkish",
-          "read": "July's minutes, released August 19, showed hawkishness past the three dissenters: 'several' participants wanted a hike, and two non-voters said they would have backed one. The September hike contract rose from 24.5 to 31.5 cents over the week on $49 million traded, GDPNow eased to 4.0 percent from 4.3, and the high-yield spread widened 5 basis points to 2.75 percent. Warsh's first Jackson Hole speech as chair comes August 28.",
+          "read": "July's minutes, released August 19, record that 'several participants favored an increase of 25 basis points', a group that includes the three who dissented. The September hike contract rose from 24.5 to 31.5 cents over the week on $49 million traded, GDPNow eased to 4.0 percent from 4.3, and the high-yield spread widened 8 basis points to 2.75 percent. Warsh's first Jackson Hole speech as chair comes August 28.",
           "basket": [
             {
               "metric": "September hike odds (Polymarket, via DefiRate tracker)",
@@ -4740,8 +4740,8 @@
             },
             {
               "metric": "July FOMC minutes",
-              "value": "'several' wanted a hike beyond the three dissenters",
-              "url": "https://qz.com/fed-fomc-minutes-july-2026-rate-hike-dissent-081926"
+              "value": "'several participants favored an increase of 25 basis points', including the three dissenters",
+              "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260729.pdf"
             },
             {
               "metric": "GDPNow, Q3",
@@ -4750,7 +4750,7 @@
             },
             {
               "metric": "High-yield spread",
-              "value": "2.75% on August 20, from 2.70% on August 14",
+              "value": "2.75% on August 20, from 2.67% on August 14",
               "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
             }
           ],
@@ -4773,7 +4773,7 @@
             },
             {
               "metric": "Treasury buybacks",
-              "value": "roughly doubled to $4B+ per operation in 10-30 year debt, from September 9",
+              "value": "roughly doubled to $4B+ per operation in 10-30 year debt, September 9 to November 4",
               "url": "https://home.treasury.gov/news/press-releases/sb0607"
             }
           ],
@@ -4782,7 +4782,7 @@
         {
           "name": "Energy as the inflation swing factor",
           "direction": "tightening",
-          "read": "Brent's second straight week near 6 percent came from both wars at once: Bessent promised to 'collapse' Iran economically with a sanctions package landing Monday, Tehran threatened shipping in the Strait of Hormuz, and Ukraine's refinery campaign has about a third of Russian refining offline, with fuel available at 28.1 percent of Russian stations. The 10-year breakeven rate, the bond market's inflation forecast, reached 2.355 percent, its highest in over two months.",
+          "read": "Brent's second straight week near 6 percent came from both wars at once: Bessent promised to 'collapse' Iran economically with a sanctions package landing Monday, Tehran threatened shipping in the Strait of Hormuz, and Ukraine's refinery campaign has left fuel available at 28.1 percent of Russian stations, by an Izvestia count on August 16, against 41 percent a week earlier. The 10-year breakeven rate, the bond market's inflation forecast, reached 2.34 percent on August 20, its highest since June 10.",
           "basket": [
             {
               "metric": "Brent, weekly",
@@ -4791,12 +4791,12 @@
             },
             {
               "metric": "Russian fuel availability",
-              "value": "28.1% of stations on August 16, from 41% a week earlier; about a third of refining offline",
+              "value": "28.1% of stations on August 16, from 41% a week earlier (Izvestia)",
               "url": "https://english.nv.ua/business/russian-regions-reintroduce-fuel-rationing-as-ukraine-renews-refinery-strikes-50632821.html"
             },
             {
               "metric": "10-year breakeven inflation",
-              "value": "2.355%, highest in over two months",
+              "value": "2.34% on August 20, highest since June 10",
               "url": "https://fred.stlouisfed.org/series/T10YIE"
             }
           ],
@@ -4919,7 +4919,7 @@
     {
       "trend": "Crypto leverage & dry powder",
       "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
-      "watch": "Bitcoin ended the week up 24 percent at $78,000 after $1.44 billion of shorts liquidated on August 19, the kind of reversal this card exists to catch. Watch whether futures leverage and funding rates rebuild toward the extremes that preceded the spring drawdown, and whether the CLARITY Act contract, still at 16.5 cents, follows the price.",
+      "watch": "Bitcoin ended the week up 24 percent at $78,000 after a record $2.7 billion of crypto shorts was liquidated in the 24 hours around August 19, the kind of reversal this card exists to catch. Watch whether futures leverage and funding rates rebuild toward the extremes that preceded the spring drawdown, and whether the CLARITY Act contract, still at 16.5 cents, follows the price.",
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
       "status": "active (squeeze)",
@@ -4964,7 +4964,7 @@
     {
       "trend": "AI's off-balance-sheet financing",
       "why_exponential": "The AI buildout is increasingly funded outside company books. On August 10 Nvidia and Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR announced platforms to mobilise more than $500 billion of third-party capital through vehicles that issue debt and lease compute, with Nvidia providing up to 25 percent financing support per deal; Nikkei had already counted about $1.65 trillion of special-purpose-vehicle debt tied to five US tech giants. Each layer of guarantees lets the next project borrow more.",
-      "watch": "New special-purpose-vehicle debt, vendor financing and backstops from chipmakers, and any credit-rating action on AI-heavy issuers. This week: SoftBank planned a $6.3 billion retail bond, a record for a Japanese issuer and its third this year, and Broadcom is seeking more than $60 billion of debt to finance AI chips.",
+      "watch": "New special-purpose-vehicle debt, vendor financing and backstops from chipmakers, and any credit-rating action on AI-heavy issuers. This week: SoftBank planned a $6.3 billion retail bond, the largest by a Japanese company and its third retail issue this year, and Broadcom is seeking more than $60 billion of debt to finance AI chips.",
       "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
       "bsig_ref": "",
       "status": "watch (financing)",
