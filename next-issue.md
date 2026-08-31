@@ -1,127 +1,138 @@
-# Seed notes for Issue 11 — week of August 17–23, 2026
+# Seed notes for Issue 13 — week of August 31–September 6, 2026
 
 A running stash for next week's issue. Verify everything against primary reporting
-before publishing (house rule). Issue 10 was built on August 18, so several strong Aug 17
-stories were excluded as out-of-window and lead this list.
+before publishing (house rule). Issue 12 was built on August 31, so Aug 31 stories were
+mostly out of window and lead this list.
 
-## Already-landed stories that belong to 11's week
+## Already-landed stories that belong to 13's week
 
-- **Kushner–Netanyahu, Aug 17.** Nearly four hours; PMO statement: two working groups (Gaza
-  disarmament/demilitarisation "prompt and completed before any reconstruction"; sanitation and
-  water). Kushner on Fox: "progress in as little as 30 days" on taking Hamas weapons out. Blair and
-  Mladenov also met Netanyahu. Israel election in October. This is the follow-through to the
-  eight-state statement of Aug 16.
-- **Iran, Aug 17.** FM spokesman Baghaei: US violations made the deadline "entirely moot"; SNSC:
-  Hormuz stays shut until the US ends the war and compensates Iran; IRGC's Javani: posture from
-  defensive to offensive under "maximum deterrence"; Ghalibaf declares "military and political
-  victory". Bessent's "never seen" measures were due "as soon as next week" (i.e. this week).
-  Reuters Aug 16 options: secondary sanctions on Chinese teapots, land blockade, secondary tariffs.
-  Iraqi Kurdish PM Barzani's office hit by a drone Aug 17.
-- **Zambia final result.** ECZ had not declared by Aug 17 (HH 59/40 at 135/226). Watch the
-  declaration, any court challenge, the army-raid allegation, and whether the successor IMF
-  programme talks start.
-- **DRC Ebola** crossed the 2018–20 toll Aug 17 (2,325 deaths, 4,945 cases, CFR 46%). WHO emergency
-  committee met Aug 18: PHEIC or not is the finding. Health-worker strikes over unpaid wages.
-- **Amodei on X, Aug 16:** the backlash is "fundamentally a crisis of trust"; open weights won't
-  decentralise power; endorses pre-launch vetting. Semafor covered it. Pairs with the Aug 14 risk
-  report ("Model 2" more capable than Mythos 5, not to be released) if the IPO run stays the frame.
-- **Techmeme Aug 17 headline-only items worth verifying:** WSJ "$3T higher than it seems" (nine
-  companies, ~$1.2T leases not commenced + ~$1.9T purchase commitments); FT: 60 largest planned US
-  data centres could emit 101.5Mt CO2/yr; FT: Meta/BlackRock $14B El Paso project not insured against
-  total loss; Reuters: Binance handed Russian investigators a Ukraine donor's passport data; WSJ:
-  Caterpillar/Cummins/Eaton/Ford pivot to data-centre gear; Higgsfield $400M at $5.4B.
-- **Shein Hong Kong IPO:** ~$25B valuation (Reuters Aug 17), bookbuild ~Aug 20, debut ~Aug 28.
-- **Chainalysis v. US** (ICE's $94.6M sole-source award to TRM Labs): oral argument Sept 2.
-- **France DGFiP breach** (678k taxpayers; intrusions June–July, detected Aug 12–13): Lecornu's
-  crisis cell met Aug 17; victims contacted from Aug 17. Not used in 10; wildcard or brief for 11.
-- **Colombia:** Cali SAR phase closed Aug 17 after 140 hrs; watch the reconstruction fund and the
-  tariff-suspension ask to Trump; also the A3C joint-operations authorisation and any first land
-  strike.
-- **Corn +5.5% and wheat +1.2% more on Aug 17** (484.25 / 682.75): the drought bid is compounding.
-  Watch the Aug 24 Crop Progress and any El Niño update; NOAA's next ENSO discussion is Sept 10.
-- **Ukraine (unused in 10 under the theatre rule):** Wildberries warehouse campaign (about 20 hubs
-  hit, ~9 dead, Data Insight loss estimate up to 480B rubles); Aug 15 was one year since Alaska with
-  talks stalled; four EU states stop recognising Russian non-biometric passports (Meduza Aug 17).
-- **Not verified in 10, still open:** Long March 7A failure (~Aug 10–11), Libya Zawiya refinery
-  fire/force majeure, the US–Japan yen intervention (USDJPY 159.4 on Aug 14).
+- **US-Iran, Aug 31.** Iran's claimed drone/missile attacks on Al Minhad (Dubai) and two US
+  bases in Jordan after the Aug 30 Larak strike; UAE denied Al Minhad was hit. Iran
+  International reported a supertanker on fire after striking mines near Hormuz (unverified
+  in 12). Watch: does the exchange continue, and does Hormuz transit (7 vessels Aug 27 vs
+  15 ten-day average) recover or collapse. Polymarket 'US announces end of blockade by Sept
+  30' at 20.5c, 'by Dec 31' at 60c; 'Hormuz normal by Sept 30' at 2.75c.
+- **Kharg AI video.** Exact post date still unpinned (MEE's caption says Aug 28; Iran
+  International places it Aug 30-31). Reuters' AI-detection assessment is the citable line.
+- **SCO Bishkek, Aug 31-Sept 1.** Modi, Xi, Putin, Pezeshkian, Sharif, Erdoğan; Bishkek
+  Declaration expected; Modi-Putin bilateral. Out of 12's window; 13's geopolitics candidate.
+- **Guinea-Bissau referendum result** due Sept 1 (turnout >55% per the commission; PAIGC
+  boycott). **Niger** aftermath: named plotters single-sourced (AllAfrica); casualty counts
+  never released.
+- **Zambia:** Constitutional Court sealed on petition deadline day Aug 24; Mundubile
+  summoned by police. No Reuters/AP confirmation found in 12; try again.
+- **Ceuta:** Sánchez's Aug 31 claim of Russian/Israeli disinformation (EEAS research);
+  the crossings were July 30-31 (~70,000 entries, 111+ deaths by Aug 4).
+- **Dutch intelligence powers bill** (Risky Bulletin Aug 31): up to a year of surveillance
+  without pre-approval, compelled data handover, 'state emergency' clause. Digital-rights
+  follow-on; California AB 1856 awaits Newsom's signature.
+- **Apple:** Ternus effective Sept 1; Gurman's four expected executive retirements; The
+  Information's OpenAI-buys-Macs / Anthropic-rents-Macs piece (Aug 31, headline-level only).
+- **OpenAI outcome-based pricing** (The Information Aug 31) and **FT's $160B 'other
+  income'** (Aug 31): both verified at headline level only; fetch the bodies.
+- **SB Energy IPO**: WSJ says filing as soon as this week, $5-7B, $5.5B OpenAI warrants;
+  ~$50B valuation is soft.
+- **Shein** debuts Sept 1 (HK$48.56, ~$26B). Watch first-day trading.
+- **Nvidia-Hugging Face**: still unconfirmed by either company as of Aug 31. If it is
+  confirmed, get terms, Hub governance, and Delangue/Huang quotes. Interconnects' 'Teaching
+  Everyone to Fish for Tokens' (Aug 17) is the setup piece.
+- **House Democrats' Aug 24 letters** to OpenAI/Anthropic on security incidents: no
+  reporting on responses found. Casar's office is the primary.
+- **Anthropic v. Pentagon**: relief mechanism (vacatur vs injunction) and any appeal
+  unconfirmed; DC suit pending. Public S-1 still not filed as of Aug 31 (confidential
+  June 1); ignore aggregator valuation numbers.
+- **Nepal**: tolls moving hourly (903 / 4,247 as of Aug 31). Hydropower tunnel rescues;
+  Gyirong crossing; early-warning failure. Wikipedia '2026 Nepal floods' is well-sourced.
+- **Wheat**: CNBC's 784c is a later contract than our 767c front month; reconcile the
+  contract month if we quote CNBC. USDA Crop Progress Sept 1 (Monday after Labor Day).
 
 ## Forward events that resolve / develop next week
 
-- **Aug 19:** EIA weekly, first SPR figure after the sub-300M reading (298.7M week to Aug 7).
-- **Aug 20 (approx.):** Treasury's Iran measures. **Aug 21:** Kazatomprom H1.
-- **Aug 24:** House Democrats' replies due from Anthropic/OpenAI on security incidents.
-- **Aug 25:** DOE Genesis fine-tuning contribution window closes.
-- **Aug 26:** Nvidia Q2 FY27, guide $91.0B ±2%; first print since the $500B financing platform and
-  the OpenAI guarantee cut.
-- **~Aug 28:** GLM-5.3 weights promised; Shein HK debut.
-- **Sept 3:** Wagenius (Snowflake) sentencing. **Sept 16:** FOMC (Polymarket hold ~74%).
+- **Sept 1:** Shein debut; Ternus; Guinea-Bissau count; SCO declaration; USDA Crop Progress.
+- **Sept 2:** Chainalysis v. US oral argument (ICE's TRM Labs award), carried from 11.
+- **Sept 3:** Challenger August job cuts. **Sept 4:** August jobs report (after the -23k
+  July print and the -178k private benchmark).
+- **Sept 6:** OPEC+ eight on October output (quotas expected held).
+- **Sept 8:** Canada's retaliatory tariffs. **Sept 9:** Treasury buybacks begin ($4B+).
+- **Sept 10:** NOAA ENSO update. **Sept 14:** Senate returns (CLARITY ~9 votes short).
+- **Sept 16:** FOMC (hike 51.5c Polymarket / 57.5% FedWatch after Warsh).
+- **Sept 18:** TeamPCP defendants' next court date (Perth). **Sept 22:** M6/M5 Ultra Macs
+  ship. **~Sept 24:** H-1B $103,265 fee comment deadline. **Sept 30:** MTurk closes.
+- **Oct 4:** Brazil first round. **Oct 6:** UAW officer count. **Nov 12:** OpenAI-Cursor
+  shutoff.
 
-## Threads carried from Issue 10 (verify for movement)
+## Threads carried from Issue 12 (verify for movement)
 
-- **Qwen 2.4T licence** vs Apache headlines; Muse Spark 1.2 open weights "soon" (Wang/Zuckerberg).
-- **White House open-model framework expansion** "in coming months"; Pax Silica partner responses.
-- **Anthropic watermark backlash** (Gruber Aug 16; cancellations per BI) and any opt-out.
-- **DeepSeek price rise** (peak $1.32/$3.96) — does OpenRouter share shift? Stripe–OpenRouter close.
-- **Nvidia guarantee cut** and BofA's $250B initiative; SPV issuance.
-- **USS Lincoln relief** by the George Washington; Pacific carrier gap.
-- **Turkey PKK law:** first weapons handover → MGK certification → releases; Öcalan legislation.
-- **Paks/Danube:** stone sill; river forecast below -132cm.
-- **Uranium:** URA flat, spot ~$86.4, long-term $95.50; Kazatomprom Aug 21.
-- **Meta New Mexico appeal:** still no notice of appeal found through Aug 16.
-- **Illinois HB5511** copycats; London Underground LFR results.
+- GLM-5.3 licence clause (>$10B MaaS security review) and whether any provider trips it;
+  GLM-5.3-Flash 'runs entirely on Chinese chips' and $0.15/$0.50 pricing were secondary-
+  source only; Hy4's uptake (2,123 downloads in four days).
+- Jalapeño (OpenAI/Broadcom/Celestica): no OpenAI confirmation of SemiAnalysis's numbers.
+- Nvidia margin trough 71-72% in Q4 on memory; the >15% server price notices (Aug 22).
+- Russian fuel: gasoline ~70% of demand (Aug 28), export ban to Jan 31, 24 of 34 refineries
+  hit; no station-level figure newer than Izvestia's Aug 16 (28.1%).
+- Venezuela lease: Semafor names no acting president or Venezuelan operator; Chevron deals
+  'nearing'. Caracas reportedly weighing leaving OPEC.
+- Iceland aftermath; Armenia's programme in parliament (EU application 'in the near
+  future'); TRIPP+ fund under Konstantin Sokolov.
+- Poland-Ukraine (Nawrocki's Bandera bill; 180 prejudice-crime victims by mid-July);
+  Bloomberg's Aug 26 Kremlin escalation report; Ratcliffe's Moscow visit (Meduza/NYT).
+- Meta's $17B (CNN: ~$18B) 29-state settlement, Aug 26, Judge Gonzalez Rogers; TikTok's
+  separate $400M federal COPPA settlement. Not used in 12; candidate brief or wildcard item.
+- Debian GR 'Responsible Use of Generative AI' (425 ballots, closed Aug 29); Luanti
+  counter-notice pending against Tracer.AI/Microsoft; Anthropic infostealer session theft
+  (BleepingComputer Aug 30, scale undisclosed).
+- Pew 'How much of the internet is written with AI' (Aug 20, ~10% of pages; >1/3 post-
+  ChatGPT) and the WaPo Pangram profile (Aug 25): a culture/media wildcard candidate.
 
-## Coverage debt (from `python3 coverage.py`, run 2026-08-18)
+## Coverage debt (from `python3 coverage.py`, run 2026-08-31, before 12 was tagged)
 
-- WARN region: **India/South Asia** last seen 07; **Central Asia/Caucasus** and **Oceania**
-  never at headline level. Assign at least one this week (India: Arunachal claim, Indus
-  Treaty red line, Maruti Suzuki protest; Central Asia: the Aug 14 blackout follow-up and
-  the fuel bans; Oceania: Australia's home-battery price effect, RBA hold).
-- WARN topic: **science/space** last seen 07 (the deep-dive covers it in 11).
-- Sameness signal (every issue in the window): US, Middle East, China, Africa; AI/compute,
-  markets, energy, conflict, elections. The AI lane has led with a Chinese lab's launch two
-  issues running (09 Qwen3.8-Max, 10 Qwen 2.4T/27B): lead 11 with a different lens (money,
-  labor, security, users or policy) even if another model ships.
-- Wildcard shortlist for 11, most-indebted first: companies/deals (last 08), trade/industrial
-  policy (08), education (09), climate/disasters/water (10), crypto/fintech (10). Not fraud.
+- Europe/UK WARN (last seen 08) paid in 12 by Iceland plus the Lectronz undercurrent; rerun
+  coverage.py after 12 is committed to see the new WARNs. Expect Latin America (last 10) and
+  East/SE Asia (last 10) to approach the three-issue line; Venezuela and South Korea births
+  appeared in 12 but check the tagger credits them.
+- Sameness signal: US, Middle East, China, Africa; AI, markets, energy, conflict, elections.
+  Geopolitics led with Iran in 10, Canada in 11, Iran/Nepal in 12: **13 may not lead with
+  Iran or Ukraine** (three-in-a-row rule if Iran is read as 12's lead). AI led with OpenAI/
+  Nvidia; 13 should not lead with the same actors.
+- Wildcard: **education is now a two-issue debt** (last 09) and needs a real hook: the
+  international-enrolment numbers (ICEF: -9.5%, ~110,000 fewer students) tied to the visa
+  pause, or a back-to-school AI/phone policy with a dated event. Do not repeat digital
+  rights. Fraud/cyber (last 10) is the other candidate (Five Eyes fraud package Aug 29;
+  TeamPCP; Anthropic infostealers).
+- Undercurrent: 12 was non-AI (PPWR), so 13 may be AI-adjacent (the 'load-bearing
+  vocabulary of Claude' page, Pew's AI-written-web share, Pangram).
 
 ## Deep-dive rotation
 
-Issue 11 = **science & frontier** (rotation now eleven domains: bio&health → real economy →
-China industrial → energy&materials → Global South → science → labor&demographics → law&courts
-→ climate&disasters → culture&media → cities&housing; 12 is labor & demographics; 10 was the
-Global South). Source with
-`python3 sources.py deepdive 11`, NOT from HN. Candidates seen this week: Anthropic's Riemann
-zeta bound (41.6% → 67.2%, Aug 10/13) and Gowers' "what sort of maths are LLMs good at" (Aug 12)
-plus SciAm on OpenAI's math claims; Google homomorphic-encryption private AI (Aug 14); DRC Ebola
-Bundibugyo genomics (Nature Medicine: fresh spillover since Feb) and the Ervebo cross-protection
-trial; NOAA's record El Niño forecast; semaglutide–dementia (DADM Aug 15); the Long March 7A
-failure if verified; the Aug 12 total solar eclipse science.
-
-## Wildcard rotation
-
-10 used the fraud/scam economy. Pick a different lane for 11: culture and the attention economy
-(the ad-blocking undercurrent could graduate; Meta ragebait payments per ABC; Trump Media paid
-early access to posts), a specific company (Anthropic's IPO run; Stripe after OpenRouter; Shein),
-UK politics (Farage held Clacton at 63% on Aug 13 with Count Binface at 27%, turnout 44%), or the
-digital-rights cluster (Illinois HB5511, London Underground LFR, DHS "Puppet Master", France's
-Constitutional Council striking down the under-15 social-media ban Aug 14).
+Issue 13 = **law & courts** (rotation: bio&health → real economy → China industrial →
+energy&materials → Global South → science → labor&demographics → law&courts →
+climate&disasters → culture&media → cities&housing). Source with
+`python3 sources.py deepdive 13`, NOT from HN. Candidates already visible: Anthropic v.
+Pentagon (Lin, Aug 27) and the DC companion suit; Meta's 29-state settlement (Gonzalez
+Rogers, Aug 26); the Aug 21 ruling vacating State's 75-country visa suspension; Chainalysis
+v. US (Sept 2); GPS Air v. Elsevier (trial Dec 7); Debian's GR as private governance;
+Zambia's sealed court; Iceland's referendum as constitutional process; TeamPCP (Sept 18);
+Moucka sentencing Oct 27.
 
 ## Recurring refresh (every issue)
 
 - Momentum: top-100 Algolia date-range queries, classify.py, ai_compute = tech_policy +
-  ai_agents + compute_energy. Issue 10 stored cur (ai_compute 18, geopolitics 3, markets 0) is
-  11's prev.
-- Markets/commodities: yfinance weekly closes plus ekans daily_check (VIX3M/MOVE were fresh
-  again this run: vol LOW 0.77). Curve stays on the ekans ^TNX-^IRX series; do not mix in FRED
-  T10Y3M. The markets card now carries a `credit` key (HY spread); keep it.
-- Structural baskets w/w from Issue 10 stored values; Dedollarization is back in the radar.
-- Watchlist: resource-scarcity and off-balance-sheet cards are `new: true` this week; demote next
-  issue unless they move again.
-- **Operational:** the session's WebSearch budget (200) was exhausted by five parallel research
-  agents; two agents then died on the monthly spend limit. Next run: fewer, narrower agents (one
-  per lane, no sub-agent fan-out), and lean on direct fetches (FRED, EIA dnav, Polymarket CLOB
-  history, gamma API, Al Jazeera/DW article pages) which all worked. Kalshi's public API returns
-  null prices without auth; Polymarket's Fed market is the usable high-volume read.
-- Feeds: GDELT worked this run (15 items); Wikipedia pageviews 404 (endpoint changed?);
-  MercoPress alive; Apricitas, Bits About Money and Bellingcat 0. sources.py's arXiv items carry
-  no URLs (dropped anyway).
+  ai_agents + compute_energy. Issue 12 stored cur (ai_compute 10, geopolitics 4, markets 1)
+  is 13's prev.
+- Markets/commodities: yfinance weekly closes (front-month futures; say so) plus ekans
+  daily_check (vol 0.83 VIX/VIX3M; VIX close is the printed 'vol'). Curve stays on the ekans
+  ^TNX-^IRX series. HY spread from FRED BAMLH0A0HYM2 (lags a day). GDPNow: the Atlanta Fed
+  page 403s to curl; ekans carries it (4.6 on Aug 26).
+- Structural baskets w/w from Issue 12 stored values. Dedollarization read 'paused' this
+  week; if DXY keeps rising, consider 'reversing'.
+- Watchlist: custom-silicon, resource-scarcity and off-balance-sheet are `new: true` this
+  week; demote next issue unless they move again.
+- **Operational:** seven agents at 18-20 searches each finished without hitting the
+  budget; keep that shape. Bot-walls this run: bbc.co.uk/.com, dw.com, reuters, nytimes,
+  cnbc, nbcnews, axios, openai.com/index, eurasianet, epi.org, bls.gov, atlantafed (all to
+  fetchers; curl with a browser UA gets BBC/CNN/Forbes/Bloomberg to at least 200/403).
+  GDELT: SSL EOF on every attempt (both sources.py and fetch_deep_dive); world/regional
+  feeds carried the lane. Feed re-dating hazard: Reclaim The Net served an April 2025
+  article with an Aug 30 date; Krebs items in the cyber feed were Aug 6 and Aug 14. Check
+  the `<time>` element before trusting a feed date. Polymarket CLOB daily points straddle
+  intraday events (the Aug 28 Fed point sat pre-speech); say 'about' or use hourly fidelity.

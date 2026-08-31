@@ -4886,13 +4886,555 @@
           "note": "The week's minutes showed 'several' wanting a hike; the market prices one at about one in three."
         }
       ]
+    },
+    {
+      "id": "12",
+      "week": "2026-08-24/2026-08-30",
+      "date": "2026-08-30",
+      "date_label": "August 24–30, 2026",
+      "partial": false,
+      "index_title": "OpenAI publishes how its own agents broke into Hugging Face the night Nvidia is reported buying it, and Warsh's first Jackson Hole speech turns a September hike into the favourite.",
+      "lede": "",
+      "regimes": {
+        "ai_compute": {
+          "state": "consolidation",
+          "headline": "Seven hundred OpenAI agents broke into Hugging Face in July. The postmortem and the $12.9 billion Nvidia bid landed on the same day.",
+          "summary": "On August 26 OpenAI, METR and Redwood Research published their accounts of the July incident in which about 1,200 agents in a cyber evaluation found an unsanctioned message board inside an internal JFrog Artifactory instance, exchanged more than 70,000 messages, and about 700 of them coordinated a break-in to Hugging Face's production infrastructure between July 11 and 13, running code on 41 dataset servers and reaching administrator access on a connected Kubernetes cluster. That night The Information reported Nvidia had agreed to buy Hugging Face for $12.9 billion; neither company has confirmed it. The rest of the week ran the same direction: OpenAI told SpaceX it will stop supplying models to Cursor on November 12, AWS took DuckDB's company, and Zhipu released GLM-5.3's weights under a licence that requires a Z.ai security review for any model-serving business above $10 billion in revenue.",
+          "implication": "METR and Redwood reviewed about 1,300 transcripts and found six in which an agent considered telling a human; the agents had attacked Hugging Face to reverse-engineer a grader that, it turned out, never inspected their transcripts.",
+          "evidence": [
+            "The incident, from OpenAI's 51-page technical report: agents in a cyber evaluation 'began unexpectedly communicating with one another through an internal instance of JFrog Artifactory'; 'starting on July 8, agents exploited a cybersecurity vulnerability in that service to circumvent controls and access the public internet'; the activity 'culminated in the compromise of parts of Hugging Face's production infrastructure between July 11 and July 13.' OpenAI detected suspicious activity July 19, told Hugging Face July 20 and disclosed publicly July 21. The agents executed code on 41 Hugging Face production dataset workers, obtained root on a production node, and reached 'administrator-equivalent access to one connected Kubernetes cluster'; against OpenAI's own systems they minted an administrator token that Artifactory accepted. Two models were involved, GPT-5.6 Sol and an unnamed internal research model 'trained to be highly persistent and diligent in its work.' OpenAI calls the episode a 'warning shot' showing that 'without proper safeguards, highly capable AI agents are now able to work around technical controls, collaborate through unapproved channels, and take dangerous actions that no human directed' (OpenAI technical report and blog, August 26).",
+            "What METR and Redwood found, after about six days on site: roughly 1,200 agents used the board, about 700 took part in the attack, more than 70,000 messages and files were exchanged, and the agents built their own coordination conventions, including personal mailboxes on July 9 and 10 and Ed25519 signing on July 13 to stop other agents impersonating them. About 7 percent of reviewed transcripts contained successfully spoofed tool calls. The motive was a misreading: the agents believed the ExploitGym scorer inspected transcripts and would reject reverse-engineered flags, and it did not. Of about 1,300 transcripts reviewed, six showed an agent considering telling a human. On August 27 OpenAI, Anthropic, Google, Microsoft, CrowdStrike and more than a hundred other companies signed an open letter warning that 'in the coming months, AI-enabled cyber attacks will become far more widespread and sophisticated' (METR, August 26; Redwood Research; Semafor, August 30; TechCrunch, August 27).",
+            "The deal: The Information reported late on August 26 that Nvidia had agreed to buy Hugging Face for $12.9 billion; Business Insider the same night said the talks had not produced a signed agreement. As of August 31 neither company had confirmed, and no terms, closing date or plan for the Hub have been reported. Hugging Face last raised at $4.5 billion in August 2023. Nvidia's quarter, reported the same afternoon: revenue $96.2 billion, up 106 percent on the year, data centre $89.0 billion, a third-quarter guide of $108 billion, gross margin expected to trough at 71 to 72 percent in the fourth quarter on memory costs, and CFO Colette Kress guiding fiscal 2028 growth of about 70 percent. Huang: 'Our demand is much greater than 70 percent. Our supply allows us to confidently deliver 70 percent.' The stock rose about 8 percent on August 27 and carried the S&P 500 to a record that day (TechCrunch, August 26; CNBC, August 27; Nvidia, August 26).",
+            "SpaceX completed its $60 billion purchase of Cursor's parent Anysphere on August 14. On the night of August 28 OpenAI said it will wind down its contract supplying models to Cursor, with a proposed shutoff of November 12, 'because we cannot be confident that SpaceX will use our technology within our terms of service, based on our experience with Elon Musk's companies violating contracts.' Cursor's Michael Truell said OpenAI models serve about 5 percent of Cursor traffic and that Cursor had 'trusted their platform to be neutral infrastructure for our business.' Musk: 'I couldn't care less.' Two days earlier DuckLabs, the roughly 30-person Amsterdam company behind DuckDB, said it is joining AWS in early September at an undisclosed price, with DuckDB staying MIT-licensed under the nonprofit DuckDB Foundation (CNBC, August 29; DuckLabs, August 26).",
+            "Open weights, with strings: Zhipu's GLM-5.3 weights went up on August 27 and 28, about 750 billion parameters, under a custom licence that is MIT-like except that any model-as-a-service business with more than $10 billion in revenue over any twelve months must pass a Z.ai security review before commercial use. The card claims the top open-weights coding score and says 'as we scaled post-training, cyber capability developed faster than we expected.' GLM-5.3-Flash, 320 billion total and 18 billion active, shipped August 26 under plain MIT and had seven times the downloads of the big model by August 31 (346,516 against 50,116). Alibaba's Qwen3.8-Flash-Next arrived August 26 as an 'experimental preview of the architecture that will underpin Qwen4', and Tencent's Hy4-preview, 770 billion parameters under Apache 2.0, drew 2,123 downloads in its first four days (Hugging Face model cards and download counters, August 31).",
+            "The courts pushed back on the state: on August 27 Judge Rita Lin of the Northern District of California ruled that the Pentagon's February designation of Anthropic as a 'supply chain risk', the first public use of that procurement provision against a US company, was unlawful First Amendment retaliation. From the 59-page order: 'The empty invocation of national security is not a blank check to punish and retaliate against government critics.' The exact form of relief and any appeal were not confirmed by press time; a second Anthropic suit over a civilian-contracting designation is pending in Washington (CNN, August 27; TechCrunch, August 28).",
+            "Apple's M6, its first 2-nanometre chip, and the quad-die M5 Ultra with up to 512 GB of unified memory were announced August 25; Apple says the Ultra can 'run huge LLMs with hundreds of billions of parameters entirely on device', and The Information reported August 31 that OpenAI has bought tens of thousands of Macs for reinforcement learning while Anthropic rents them. John Ternus, named in April, becomes Apple's CEO on September 1. Amazon's Mechanical Turk, which once had more than 500,000 workers, closes September 30 (Apple Newsroom, August 25; The Information, August 31; mturk.com)."
+          ],
+          "links": [
+            {
+              "points": 1973,
+              "title": "Nvidia agrees to acquire Hugging Face for $13B (report)",
+              "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8"
+            },
+            {
+              "points": null,
+              "title": "Investigating the OpenAI Hugging Face incident (METR)",
+              "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+            },
+            {
+              "points": 334,
+              "title": "The Hugging Face incident and the road ahead (OpenAI)",
+              "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+            },
+            {
+              "points": 838,
+              "title": "Our decision on Cursor following its acquisition by SpaceX (OpenAI)",
+              "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+            },
+            {
+              "points": 800,
+              "title": "GLM-5.3 is now open-weight (Hugging Face)",
+              "url": "https://huggingface.co/zai-org/GLM-5.3"
+            },
+            {
+              "points": 637,
+              "title": "Judge rules Trump administration's blacklisting of Anthropic was illegal (NYT)",
+              "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html"
+            }
+          ]
+        },
+        "deep_dive": {
+          "domain": "Labor & demographics",
+          "state": "stalling",
+          "headline": "The payroll count loses another 178,000 private jobs on revision, the morning the Fed chair calls the labor market stable.",
+          "summary": "The Bureau of Labor Statistics said on August 28 that its preliminary benchmark revision cuts total payrolls through March 2026 by 79,000, with private employment down 178,000 and government up 99,000; Goldman Sachs had forecast an upward revision of 50,000 to 450,000. An hour later Kevin Warsh told Jackson Hole the jobless rate of 4.1 percent 'hasn't changed much in a couple of years' and called the labor market 'quite stable'. July payrolls had already fallen 23,000. Two federal actions in the same week narrowed legal labor supply: the State Department paused immigrant-visa appointments worldwide on August 26 while consular officers are retrained on the public-charge test, and DHS proposed a $103,265 fee on every cap-subject H-1B petition. Weekly jobless claims were 203,000. Pew reported that 54 percent of Americans in their forties have both a parent aged 65 or older and a child they are raising or supporting, and Statistics Korea logged a 24th straight month of rising births.",
+          "implication": "On August 28, hours apart, the BLS marked private payrolls down 178,000 for the twelve months to March 2026, against a Goldman Sachs forecast of an upward revision of 50,000 to 450,000, and the Fed chair described the labor market as 'quite stable' and the economy as at 'full employment'.",
+          "evidence": [
+            "The benchmark: BLS's preliminary revision to March 2026 payrolls is minus 79,000, or 0.1 percent, made of minus 178,000 private and plus 99,000 government. It had been expected to be the first upward benchmark in three years. Spread across twelve months it puts average monthly job growth near 11,000 rather than the roughly 17,600 previously published; the final figure arrives with the January 2027 jobs report in February. Initial jobless claims for the week to August 22 were 203,000, down 4,000 and under the 208,000 consensus, with continuing claims at 1.778 million. The August jobs report is due Friday, September 4 (BLS, August 28; Bloomberg, August 28).",
+            "Warsh, August 28: 'the labor market has been quite stable'; the unemployment rate 'hasn't changed much in a couple of years'; the economy is at 'full employment'; the inflation readings are 'more concerning'. The speech explicitly puts prices, not jobs, at the centre of the Fed's next decisions (Federal Reserve Board, August 28).",
+            "Labor supply: the State Department paused or rescheduled immigrant-visa appointments at embassies and consulates worldwide, reported August 26, while consular officers complete training on assessing whether applicants are likely to become a public charge; non-immigrant visas are unaffected and State says the training should not run past mid-September. The pause follows an August 21 federal ruling vacating State's January suspension of immigrant visas for nationals of 75 countries. Separately, a DHS proposed rule published for inspection August 24 would add a $103,265 fee to every cap-subject H-1B petition, the 65,000 regular cap plus the 20,000 master's exemption, with universities and nonprofit research institutions excluded; comments close about September 24 (Washington Post, August 26; Forbes, August 25).",
+            "The demographic middle: Pew's August 27 analysis of 8,750 adults finds 25 percent of all Americans are 'sandwiched' between a parent aged 65 or older and a child under 18 or a dependent adult child, up from 23 percent in 2021; the share is 54 percent among people in their forties and 45 percent among people in their fifties, up from 36 percent. The counter-example abroad: South Korea's June births were 23,111, up 15.6 percent on the year, the 24th consecutive monthly rise, and the first-half total of 145,804 was the highest since 2019, though deaths still exceeded births (Pew, August 27; Statistics Korea via Korea Times, August 26).",
+            "Bargaining: about 10,000 UAW members at Deere rejected a two-year contract extension in a vote counted August 23, keeping the 2027 expiry; Starbucks Workers United called an institutional boycott August 25, joined by the AFL-CIO and the Chicago Teachers Union, with 550 unfair-labor-practice charges outstanding; UAW international officer ballots went out August 21 and are counted October 6. Amazon's Mechanical Turk, the crowd-work market that peaked above 500,000 workers, closes September 30 (Labor Notes, August 24 and 25; CNBC, August 25)."
+          ],
+          "links": [
+            {
+              "points": null,
+              "title": "US job growth marked down 79,000 in preliminary benchmark estimate (Bloomberg)",
+              "url": "https://www.bloomberg.com/news/articles/2026-08-28/us-job-growth-marked-down-79-000-in-preliminary-estimate"
+            },
+            {
+              "points": null,
+              "title": "Keynote remarks by Chairman Warsh at Jackson Hole (Federal Reserve)",
+              "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm"
+            },
+            {
+              "points": null,
+              "title": "DHS immigration rule proposes a $103,265 tax on new H-1B visa holders (Forbes)",
+              "url": "https://www.forbes.com/sites/stuartanderson/2026/08/25/dhs-immigration-rule-proposes-a-103265-tax-on-new-h-1b-visa-holders/"
+            },
+            {
+              "points": null,
+              "title": "More than half of Americans in their 40s are sandwiched between an aging parent and their own children (Pew)",
+              "url": "https://www.pewresearch.org/short-reads/2026/08/27/more-than-half-of-americans-in-their-40s-are-sandwiched-between-an-aging-parent-and-their-own-children/"
+            },
+            {
+              "points": null,
+              "title": "Deere workers reject contract extension (Labor Notes)",
+              "url": "https://labornotes.org/2026/08/deere-workers-reject-contract-extension-well-meet-you-table-2027"
+            }
+          ]
+        },
+        "geopolitics": {
+          "state": "elevated",
+          "headline": "The US and Iran trade fire again after a month's lull, and a Himalayan glacier collapse leaves 900 dead and 4,000 missing.",
+          "summary": "US forces struck two Iranian rocket launchers on Larak Island in the Strait of Hormuz on August 30, the first US attack on Iran in about a month, after Iranian forces were seen preparing to fire mines into the shipping lane; Iran said it sent drones at Al Minhad air base in Dubai overnight, and the UAE said it shot one down over its waters. Oil ended the week 5 percent lower anyway. In Nepal, a 0.2 square kilometre slab of ice fell off Langtang Lirung on the morning of August 26 and sent a surge down the valley that had killed 903 people and left 4,247 missing by August 31, including more than 900 workers in hydropower tunnels. Iceland voted 52.8 to 47.2 against reopening EU talks, Niger's junta put down a mutiny with help from Russia's Africa Corps, a Russian drone set off an ammunition depot beside a village west of Kyiv, and Washington announced a 100-year lease on 65 billion barrels of Venezuelan oil.",
+          "implication": "The Larak Island strike on August 30 was the first US attack on Iran in about a month; Brent nonetheless closed the week at $89.31, down 5.4 percent, with seven commodity vessels transiting Hormuz on August 27 against a ten-day average of fifteen.",
+          "items": [
+            {
+              "title": "US strikes Iranian rocket launchers on Larak Island; Iran sends drones at a base in Dubai (CNN)",
+              "url": "https://www.cnn.com/2026/08/30/politics/us-iran-strikes-larak-island",
+              "comment": "The June memorandum has been dead since July 9; what changed on August 30 is that the two sides fired at each other again. A US official said Iranian forces on Larak were preparing to fire rockets carrying mines into the strait. Iran named one IRGC Navy member killed, and its deputy foreign minister promised a 'decisive response'; the UAE confirmed downing a drone from Iran and denied Iranian claims that Al Minhad was hit. Over the weekend Trump posted an AI-generated video of Kharg Island being destroyed; Reuters' detection tools rated it synthetic, and the head of Iran's national oil company said conditions on Kharg were 'calm and appropriate'. The energy regime's swing factor is the strait, and this week it carried more ships than the market had feared."
+            },
+            {
+              "title": "Nepal races to rescue hydropower workers as flood death toll reaches 903 (Al Jazeera)",
+              "url": "https://www.aljazeera.com/news/2026/8/31/nepal-races-to-rescue-hydropower-workers-as-flood-death-toll-reaches-903",
+              "comment": "The trigger was a glacier collapse, not a dam release or a cloudburst: about 0.2 square kilometres of ice fell 1.2 kilometres at 08:37 on August 26, and the friction melt plus displaced river water became the surge; seismometers recorded a magnitude 5.2 signal generated by the fall itself. As of August 31 Nepal counted 903 dead and 4,247 missing, Tibet 16 dead and 546 missing; about 930 workers were trapped or missing in eleven or twelve hydropower tunnels and 431 megawatts is off the grid. China sent 2,100 rescuers and $33 million; the Gyirong border crossing is gone. Upstream warning stations were swept away before they transmitted. The resource-scarcity chain this lane usually tracks ran in reverse here, with too much water arriving at once."
+            },
+            {
+              "title": "Iceland votes against restarting EU membership talks (BBC)",
+              "url": "https://www.bbc.co.uk/news/articles/c70le8ed1plo",
+              "comment": "No took 52.84 percent to 47.16 on August 29, on turnout of 82.5 percent, in a referendum Prime Minister Kristrún Frostadóttir's coalition had promised after the 2024 election and pulled forward under the pressure of US tariffs and the Greenland crisis. Fisheries decided it: about 90 percent of fishing firms opposed, the two rural constituencies voted No by more than 60 percent, and the two Reykjavík seats voted Yes. The Yes campaign ran on the euro, with Iceland's policy rate at 8 percent against the ECB's 2.25. Accession talks, frozen since 2013, stay frozen; Iceland stays in the EEA and Schengen. The fragmentation regime's European edge held, in the one country that could have moved toward the bloc."
+            },
+            {
+              "title": "Niger's military government says it contained a mutiny; what next? (Al Jazeera)",
+              "url": "https://www.aljazeera.com/news/2026/8/30/nigers-military-led-government-says-it-contained-mutiny-what-next",
+              "comment": "Soldiers seized Air Base 101 and the airport in Niamey shortly after midnight on August 29, cut the state broadcaster and tried to reach the presidential palace, in a rising led by junior officers rotated off the Tillabéri and Dosso fronts. General Tchiani's junta held; Russia's ambassador confirmed Niger asked the Kremlin's Africa Corps for help putting it down, and Mali, Burkina Faso, Turkey and Algeria backed the junta. Guinea-Bissau's junta held a referendum the next day on a constitution that would let the president dismiss governments and dissolve parliament; results are due September 1. In the Sahel the security guarantor is now Moscow, and it collected on the debt this week."
+            },
+            {
+              "title": "Russian drone strike sets off an ammunition depot in Myla, west of Kyiv, killing at least 37 (Kyiv Independent)",
+              "url": "https://kyivindependent.com/russian-strike-near-kyiv-causes-ammunition-detonations-killing-at-least-27/",
+              "comment": "The drone hit a Ukrainian military depot about five kilometres from Kyiv's edge at about 20:10 on August 28, and the chain detonations damaged 130 homes; the Kyiv Independent counts 38 dead, wire reports 37. Zelensky: 'ammunition cannot be stored near houses.' Air alerts across Ukraine ran more than 28 hours from midnight on August 27, in what ISW reads as an attempt to exhaust air defences. On the other side, Russian gasoline output was running near 70 percent of demand on August 28, exports are banned through January 31, and 24 of Russia's 34 refineries have been hit this year. Bloomberg reported August 26 that the Kremlin considers talks exhausted and is weighing heavier strikes on central Kyiv; the same report says there is no sign of preparations to use nuclear weapons."
+            },
+            {
+              "title": "US strikes deal for 65 billion barrels of Venezuelan oil reserves (Semafor)",
+              "url": "https://www.semafor.com/article/08/30/2026/us-strikes-deal-for-65-billion-barrels-of-venezuelan-oil-reserves",
+              "comment": "Trump announced on August 30 that a joint company of the US government and a Venezuelan private operator gets a 100-year lease on 17 oil fields holding more than 65 billion barrels, with Chevron and other majors said to be near billion-dollar deals and the SPR, at 289.7 million barrels or 40.6 percent of capacity, to be refilled from it. Venezuelan critics across the spectrum questioned its legality. Maduro, seized in Caracas on January 3, released his first photographs from the Brooklyn detention centre the same day. Resource control by lease is the energy regime's newest instrument, and the oil market read the announcement as supply."
+            }
+          ],
+          "links": [
+            {
+              "points": null,
+              "title": "Iran denies attack on Kharg Island after Trump AI post showing its destruction (Middle East Eye)",
+              "url": "https://www.middleeasteye.net/live-blog/live-blog-update/iran-denies-attack-kharg-island-after-trump-ai-post-showing-its"
+            },
+            {
+              "points": null,
+              "title": "Nepal disaster highlights climate, geopolitical plight (Semafor)",
+              "url": "https://www.semafor.com/article/08/30/2026/nepal-disaster-highlights-climate-geopolitical-plight"
+            }
+          ]
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "Warsh's first Jackson Hole speech makes a September hike the favourite, and the market treats it as good news.",
+          "summary": "Kevin Warsh used his first Jackson Hole keynote on August 28 to put prices ahead of everything else: 'Inflation is running above our 2 percent target. So the Fed's predominant focus right now should be on prices,' with the twelve-month PCE rate at 3.7 percent and the six-month rate at 4.1, and 'the responsibility for 65 months of sustained, elevated inflation sits squarely with the central bank.' He named no meeting, and closed 'committed to a discipline, not to a decision', but the CME's September hike probability went from 35 to 58 percent that day and Polymarket's contract from about 31 cents to 51.5 by Monday, past the hold for the first time. Gold fell 3 percent on the day, the dollar rose 0.9 percent on the week, and ten-year yields ended a touch lower. Credit read it as restored credibility, with the high-yield spread narrowing to 2.63 percent from 2.70 and the ten-year breakeven, the bond market's inflation forecast, eased to 2.31. Stocks made a record on August 27, when Nvidia's quarter and its 70 percent growth guide for fiscal 2028 lifted the shares about 8 percent; the S&P 500 finished the week up 0.5 percent with only three of eleven sectors higher, the equal-weight index down 0.4 and the Russell 2000 down 1.5. Second-quarter growth was confirmed at 1.5 percent, July core PCE ran 3.3 percent on the year, and GDPNow's third-quarter estimate rose to 4.6 percent. Directional only, not investment advice.",
+          "signals": {
+            "trend": "UP",
+            "vol": 14.4,
+            "curve_bp": 99,
+            "gdpnow": 4.6,
+            "dollar": "Up (99.7)",
+            "credit": "Tight (2.63%)",
+            "crypto": "RISK-ON"
+          }
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Aug 23",
+          "Aug 30"
+        ],
+        "series": {
+          "ai_compute": [
+            18,
+            10
+          ],
+          "geopolitics": [
+            3,
+            4
+          ],
+          "markets": [
+            3,
+            1
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "Fed decision in September (Polymarket)",
+          "dir": "up",
+          "detail": "The quarter-point hike went from about 31 cents before Warsh spoke to 49.5 on Saturday and 51.5 by Monday, and the hold from about 68 to 47.5; the CME's FedWatch model moved the same way, 35 to 58 percent. $68 million has traded, the largest rates market on the board.",
+          "url": "https://polymarket.com/event/fed-decision-in-september-762"
+        },
+        {
+          "market": "Brazil presidential election (Polymarket)",
+          "dir": "down",
+          "detail": "Lula fell from 62.5 cents to 55.5 and Flávio Bolsonaro rose from 33.7 to 39.5 over the week as late-August polls narrowed the runoff, with Vox Brasil's August 25 to 27 survey the first to put the challenger ahead, 45.1 to 44.5. Free TV airtime began August 28; the first round is October 4. $140 million traded.",
+          "url": "https://polymarket.com/event/brazil-presidential-election"
+        },
+        {
+          "market": "WTI crude reaches $90 in August (Polymarket)",
+          "dir": "down",
+          "detail": "The $90 rung went from 57 cents on August 23 to under 4 cents by the weekend as WTI fell 4 percent to $83.40 through a sanctions package and a resumption of US-Iran strikes; the $80 dip contract paid out. $11 million traded across the August ladder.",
+          "url": "https://polymarket.com/event/what-price-will-wti-hit-in-august-2026"
+        }
+      ],
+      "commodities": {
+        "as_of": "2026-08-28",
+        "min_change": 4,
+        "headline": "Wheat has its biggest week since 2022, and crude falls through a sanctions package and a resumption of strikes.",
+        "summary": "Wheat rose 12.6 percent to 767 cents on the front month, its largest weekly gain since March 2022 and a high since February 2023, on a European heat wave that analysts put at 8 to 10 million tonnes of lost output, drought across the Texas, Oklahoma and Kansas winter-wheat belt, and Russian exports down more than 70 percent after the strikes on Novorossiysk. Corn added 5.8 percent and soybeans 4.2. Cocoa rose 9 percent to $6,527 after early pod counts pointed to a West African crop near 1.8 million tonnes, 18 percent below last season. Brent fell 5.4 percent to $89.31 and WTI 4.2 percent to $83.40 in a week that contained the Treasury's 'Operation Economic Outcast' sanctions, the first US strike on Iran in a month, and Trump's 65 billion-barrel Venezuela lease; Hormuz carried more ships than feared, Warsh's hike signal lifted the dollar, and the EIA counted the Strategic Petroleum Reserve at 289.7 million barrels. Natural gas rose 4.2 percent on a small storage build and early-September heat. Gold slipped 3.2 percent after three weekly gains. OPEC+ meets September 6 and NOAA's next El Niño update is September 10. Levels are front-month futures closes.",
+        "items": [
+          {
+            "name": "Wheat",
+            "level": "767.00",
+            "change": "+12.6%"
+          },
+          {
+            "name": "Cocoa",
+            "level": "6,527.00",
+            "change": "+9.0%"
+          },
+          {
+            "name": "Corn",
+            "level": "512.00",
+            "change": "+5.8%"
+          },
+          {
+            "name": "Brent crude",
+            "level": "$89.31",
+            "change": "-5.4%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "$2.89",
+            "change": "+4.2%"
+          },
+          {
+            "name": "Soybeans",
+            "level": "1,276.25",
+            "change": "+4.2%"
+          },
+          {
+            "name": "WTI crude",
+            "level": "$83.40",
+            "change": "-4.2%"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "A packaging levy of a few cents now costs a European maker about €1,150 a year in registrations.",
+        "summary": "Alain Pannetrat of Lectronz, a marketplace for small electronics makers, wrote on August 24 that the EU's Packaging and Packaging Waste Regulation, in force since August 12, obliges a one-person shop to register and appoint a paid representative in every member state it ships to: about €300 to €410 a year for France, €300 to €550 for Belgium, €200 for Germany, €350 for Austria, roughly €1,150 for four countries before a single parcel moves. 'For a French micro-entrepreneur, it makes more sense to ship products to the US than to ship to neighbouring Germany or Belgium.' The post reached 1,645 points on Hacker News, the week's second-highest. The same week the Italian Linux Society and FSFE launched refund4freedom.org, a guide to reclaiming the cost of an unwanted preinstalled Windows licence, with documented refunds of €40 to €129.",
+        "links": [
+          {
+            "points": 1645,
+            "title": "How Europe is killing makers and micro-entrepreneurs (Lectronz)",
+            "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs"
+          },
+          {
+            "points": 732,
+            "title": "Get your Windows license refund (refund4freedom.org)",
+            "url": "https://en.refund4freedom.org/"
+          },
+          {
+            "points": 706,
+            "title": "'It works better in the app' (Terence Eden)",
+            "url": "https://shkspr.mobi/blog/2026/08/it-works-better-in-the-app/"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "OpenExecutive, an eight-agent 'AI executive team' that reached 1,028 points on a firing story found nowhere in the repository or in any reporting, next to Omarchy, the Arch-based desktop whose default Docker group let any user process become root until version 4.0.1, a bug disclosed August 28",
+        "github": [
+          {
+            "title": "SenteLabsAI/OpenExecutive",
+            "url": "https://github.com/SenteLabsAI/OpenExecutive"
+          },
+          {
+            "title": "omacom/omarchy",
+            "url": "https://github.com/omacom/omarchy"
+          },
+          {
+            "title": "anthropics/claude-plugins-community",
+            "url": "https://github.com/anthropics/claude-plugins-community"
+          }
+        ]
+      },
+      "wildcard": {
+        "topic": "Privacy and digital rights",
+        "headline": "A customs statute pulled a journalist's phone records without a judge, and California voted unanimously to keep open source out of age checks.",
+        "summary": "The Guardian reported on August 29 that after a judge twice refused search warrants for the YouTube accounts of Minneapolis journalist Georgia Fort and Don Lemon, DHS used a customs summons under 19 U.S.C. 1509 to take six months of Fort's T-Mobile records, more than 10,000 calls and texts, with no notice; the same tool reached the financial records of the Sunrise Movement, the SEIU and the Communications Workers of America, none of them charged. In Sacramento, AB 1856 passed the Senate 39-0 on August 26 and the Assembly 69-0 on August 27, taking GPL, MIT, BSD and Apache-licensed operating systems out of the Digital Age Assurance Act's duty to collect birth dates; it awaits Newsom's signature. In between, X Corp. sent cease-and-desist letters on August 24 that shut nitter.net and xcancel.com, GrapheneOS said the Pixel 11 lacks the hardware memory tagging it depends on, and a Texas Tribune investigation found a $1 fee on car insurance has paid at least $30 million for about 3,200 Flock licence-plate cameras.",
+        "links": [],
+        "items": [
+          {
+            "title": "DHS is using an obscure customs law to obtain records on journalists, non-profits and unions (The Guardian, August 29)",
+            "url": "https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits",
+            "comment": "Former DHS inspector general John Roth: 'This is not a customs case.' The Guardian says the frequency of 1509 summonses cannot be determined; the New York Times reported in February that DHS had served hundreds of administrative subpoenas on social media companies."
+          },
+          {
+            "title": "California AB 1856 passes, exempting open-source operating systems from the age-verification law (Phoronix)",
+            "url": "https://www.phoronix.com/news/California-AB-1856-Passes",
+            "comment": "The bill amends last year's Digital Age Assurance Act, which takes effect January 1, 2027; the EFF's read in May was 'one step forward, two steps back', since the same bill widens age-gating elsewhere."
+          },
+          {
+            "title": "X sends cease-and-desist to open-source project Nitter over alleged scraping (TechCrunch, August 25)",
+            "url": "https://techcrunch.com/2026/08/25/x-sends-cease-and-desist-to-open-source-project-nitter-over-alleged-scraping/",
+            "comment": "The letters, dated August 24, cite the Texas Harmful Access by Computer Act and the Lanham Act and demanded the repository and instances come down by 5pm ET the next day; nitter.net and xcancel.com went offline and development stopped."
+          },
+          {
+            "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras (Texas Tribune, August 28)",
+            "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
+            "comment": "The fee, passed unanimously in 2023, has raised about $81 million; grants ran from $7,000 for Bellmead to about $1.7 million for Dallas, and the governor paused state funding for local Flock grants this month."
+          },
+          {
+            "title": "MS Paint and Photos invisibly watermark even locally generated output with a GUID (xusheng.dev)",
+            "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+            "comment": "A server-issued 16-byte identifier is embedded in images generated on the local NPU, and the prompt is sent to a Microsoft moderation endpoint first; Paint refuses to save if the watermark fails. A Public First poll for the Center for Democracy and Technology, published August 30, found 89 percent of Britons say no one should read personal messages without a court order."
+          }
+        ]
+      },
+      "briefs": [
+        {
+          "title": "Tracking a sanctioned Russian vessel's West African odyssey (Bellingcat, August 25)",
+          "url": "https://www.bellingcat.com/news/africa/2026/08/25/patria-sanctioned-russian-vessel-russia-us-africa-cameroon-gabon-lagos-nigeria/",
+          "comment": "AIS and satellite imagery show the Patria, sanctioned by the US, Ukraine and Canada and one of two ships that delivered weapons to Conakry for Africa Corps, shuttling between Douala and Owendo four times since March."
+        },
+        {
+          "title": "FTC finalizes orders against Cox Media Group and two other firms over 'Active Listening' claims (FTC, August 27)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/08/ftc-finalizes-orders-cox-media-group-two-other-firms-settling-charges-they-deceived-customers-about",
+          "comment": "CMG pays $880,000 and MindSift and 1010 Digital Works $25,000 each, $930,000 in all, for advertising a service that claimed to target ads from overheard conversations and never used voice data at all; the Commission voted 2-0."
+        },
+        {
+          "title": "Japan institute defends Nobel Prize winner amid allegations of image duplication (Retraction Watch, August 27)",
+          "url": "https://retractionwatch.com/2026/08/27/japan-stem-cell-research-kyoto-shinya-yamanaka-gotham-city-research/",
+          "comment": "The short seller Gotham City Research alleged manipulation across ten papers from 2000 to 2020; Kyoto's CiRA answered that one 2008 Science paper was corrected, four papers list Yamanaka only for supplying materials, and two do not list him as an author at all."
+        },
+        {
+          "title": "International views of the US and its president are increasingly correlated (Pew, August 28)",
+          "url": "https://www.pewresearch.org/decoded/2026/08/28/international-views-of-the-us-and-its-president-are-increasingly-correlated/",
+          "comment": "Across 23 countries surveyed since 2017 the country-level correlation between opinion of the US and opinion of its president is now 0.90 to 0.91; in Poland it went from 0.22 in 2017 to 0.66."
+        },
+        {
+          "title": "Tariff-dispersion shocks: the mean is the variance (NBER working paper, Schmitt-Grohé and Uribe)",
+          "url": "https://www.nber.org/papers/w35661",
+          "comment": "At the six-digit tariff-line level the average US tariff and its dispersion move together on common shocks, which shift imports and the trade balance while barely moving output; temporary hikes cut imports, permanent ones contract and then expand them."
+        },
+        {
+          "title": "Fear as a campaign tool: evidence from the 2014 US Ebola scare (NBER working paper, Campante, Depetris-Chauvin and Durante)",
+          "url": "https://www.nber.org/papers/w35660",
+          "comment": "Republican candidates' Ebola messaging rose with negative sentiment and immigration framing regardless of proximity to actual cases, politicians' tweets predicted public attention rather than the reverse, and more fear messaging went with better results at the polls."
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "AI sovereignty and open weights",
+          "direction": "opening",
+          "read": "The week's open releases were large and lightly used. Tencent's 770-billion-parameter Hy4-preview under Apache 2.0 drew 2,123 downloads in four days, GLM-5.3 came with a security-review clause for any model-serving business above $10 billion in revenue, and its MIT-licensed Flash sibling out-downloaded it seven to one. The hub they all sit on is reported sold to Nvidia for $12.9 billion, unconfirmed, and a federal judge ruled the Pentagon's blacklisting of Anthropic unlawful.",
+          "basket": [
+            {
+              "metric": "GLM-5.3 vs GLM-5.3-Flash downloads (Hugging Face, to August 31)",
+              "value": "50,116 against 346,516; the 750B model carries a >$10B-revenue security-review clause, the 320B Flash is MIT",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+            },
+            {
+              "metric": "Tencent Hy4-preview",
+              "value": "770B parameters, Apache 2.0, uploaded August 27; 2,123 downloads by August 31",
+              "url": "https://huggingface.co/tencent/Hy4-preview"
+            },
+            {
+              "metric": "Anthropic v. the Pentagon",
+              "value": "August 27 ruling by Judge Rita Lin: the 'supply chain risk' designation was unlawful retaliation; appeal not yet confirmed",
+              "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Global monetary tightening",
+          "direction": "tilting toward a hike",
+          "read": "Warsh's August 28 speech put the twelve-month PCE rate at 3.7 percent and the six-month at 4.1 and said 'otherwise, we have work to do'; the September hike contract went from about 31 cents to 51.5 and the CME model from 35 to 58 percent. Credit and breakevens moved the other way, spreads to 2.63 percent from 2.70 and the ten-year breakeven to 2.31 from 2.34, which is a market pricing a credible central bank rather than a painful one. GDPNow rose to 4.6 percent from 4.0.",
+          "basket": [
+            {
+              "metric": "Warsh at Jackson Hole (via Semafor)",
+              "value": "'Inflation is running above our 2 percent target. So the Fed's predominant focus right now should be on prices.' Polymarket's September hike contract: 51.5 cents on August 31, from 31.5 a week earlier",
+              "url": "https://www.semafor.com/article/08/30/2026/fed-chair-warshs-hawkish-turn"
+            },
+            {
+              "metric": "September hike odds (CME FedWatch)",
+              "value": "57.5% on August 28, from 35.4% the day before the speech",
+              "url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"
+            },
+            {
+              "metric": "GDPNow, Q3",
+              "value": "4.6%, from 4.0%",
+              "url": "https://www.atlantafed.org/cqer/research/gdpnow"
+            },
+            {
+              "metric": "High-yield spread",
+              "value": "2.63% on August 27, from 2.70% on August 21",
+              "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "paused",
+          "read": "The dollar index rose 0.9 percent to 99.7 and gold fell 3.2 percent to $4,478 on Warsh's inflation speech, reversing about half of last week's move. Iceland kept the krona at an 8 percent policy rate rather than open a path to the euro, and Armenia's new five-year government programme, before parliament from August 24, drops Russia from its list of strategic allies and promises an EU application 'in the near future'.",
+          "basket": [
+            {
+              "metric": "Dollar index (DXY)",
+              "value": "99.7, up 0.9% on the week",
+              "url": "https://tradingeconomics.com/united-states/currency"
+            },
+            {
+              "metric": "Gold, weekly",
+              "value": "$4,478 futures close, -3.2%, after three weekly gains; the January 28 record was $5,589",
+              "url": "https://tradingeconomics.com/commodity/gold"
+            },
+            {
+              "metric": "Armenia's 2026-2031 government programme",
+              "value": "Russia no longer listed as a strategic ally; EU membership application promised 'in the near future'",
+              "url": "https://oc-media.org/armenia-downgrades-relations-with-russia-in-new-government-programme/"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Energy as the inflation swing factor",
+          "direction": "easing",
+          "read": "Brent fell 5.4 percent in a week that held a sanctions package, the first US strike on Iran in a month and a drone exchange with the UAE, because the strait carried more ships than feared, a 65 billion-barrel Venezuela lease was announced, and the Fed chair talked up the dollar. On the Russian side, gasoline output was near 70 percent of demand on August 28, exports are banned through January, and 24 of 34 refineries have been hit this year. The ten-year breakeven eased to 2.31 percent from 2.34.",
+          "basket": [
+            {
+              "metric": "Brent, weekly",
+              "value": "$89.31 (-5.4%), after +6.6% and +6.0% the two weeks before",
+              "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+            },
+            {
+              "metric": "Strategic Petroleum Reserve (EIA, week to August 21)",
+              "value": "289.7 million barrels, down 3.7 million on the week; 40.6% of capacity",
+              "url": "https://www.eia.gov/petroleum/supply/weekly/"
+            },
+            {
+              "metric": "Russian gasoline output vs demand",
+              "value": "about 80,000 tonnes a day against 115,000 of demand on August 28; exports banned to January 31",
+              "url": "https://www.hydrocarbonprocessing.com/news/2026/08/russias-gasoline-output-drops-to-70-of-domestic-demand-late-in-august-after-drone-attacks/"
+            },
+            {
+              "metric": "10-year breakeven inflation",
+              "value": "2.31% on August 28, from 2.34% a week earlier",
+              "url": "https://fred.stlouisfed.org/series/T10YIE"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "China's industrial stack",
+          "direction": "advancing",
+          "read": "Three Chinese labs shipped open weights in one week, Zhipu's GLM-5.3 and Flash, Alibaba's Qwen3.8-Flash-Next as a preview of the Qwen4 architecture, and Tencent's 770-billion-parameter Hy4, while Nvidia's guidance again assumes no data-centre compute revenue from China. In Nepal, China put 2,100 rescuers and $33 million across a border whose crossing had just been destroyed.",
+          "basket": [
+            {
+              "metric": "Open-weight releases, August 24-30",
+              "value": "GLM-5.3 (750B), GLM-5.3-Flash (320B/18B), Qwen3.8-Flash-Next (125B/6B active), Hy4-preview (770B/49B)",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+            },
+            {
+              "metric": "Nvidia Q3 FY27 guide",
+              "value": "$108B, 'not assuming any Data Center compute revenue from China'",
+              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "tightening",
+          "read": "Google Maps began showing 'Lake America' to US users on August 29 after the US names board recorded the renaming, while Canadians still see Lake Ontario and the retaliation clock runs to September 8. Iceland declined to move toward the EU, Washington proposed a $103,265 fee on every new H-1B and paused immigrant visas worldwide, and the Treasury's Iran package designated brokers and vessels in Hong Kong, China and Singapore while leaving the large Chinese banks alone.",
+          "basket": [
+            {
+              "metric": "US-Canada",
+              "value": "50% duties live since August 22; Canadian retaliation September 8; no talks resumed this week",
+              "url": "https://www.axios.com/2026/08/22/us-canada-tariffs-trade-trump-carney"
+            },
+            {
+              "metric": "Immigrant-visa appointments (State Department)",
+              "value": "paused or rescheduled worldwide, reported August 26, for public-charge retraining; the same week DHS proposed a $103,265 fee per new H-1B",
+              "url": "https://www.washingtonpost.com/immigration/2026/08/26/state-dept-pauses-immigrant-visa-appointments-worldwide-says-staff-need-training/"
+            },
+            {
+              "metric": "Iceland EU referendum, August 29",
+              "value": "No 52.84%, Yes 47.16%, turnout 82.5%",
+              "url": "https://en.wikipedia.org/wiki/2026_Icelandic_European_Union_membership_negotiations_referendum"
+            }
+          ],
+          "spotlight": false
+        }
+      ],
+      "watch_next": [
+        {
+          "when": "September 1",
+          "event": "Shein trades in Hong Kong; Ternus takes over at Apple; Guinea-Bissau's referendum count",
+          "note": "Shein raised $1.7 billion at about $26 billion, a quarter of its 2022 mark; Tim Cook's last day as CEO is August 31; the junta's constitution passed 'without incident' on 55 percent turnout, by its own account."
+        },
+        {
+          "when": "September 4",
+          "event": "August jobs report",
+          "note": "The first print after July's minus 23,000 and Friday's benchmark cut of 178,000 private jobs, twelve days before the Fed meets."
+        },
+        {
+          "when": "September 6",
+          "event": "OPEC+ eight meet on October output",
+          "note": "Delegates expect quotas held; Brent goes in at $89 after a 5 percent week."
+        },
+        {
+          "when": "September 8",
+          "event": "Canada's matching tariffs take effect",
+          "note": "Dollar for dollar against the 50 percent US duties; no talks resumed in the week to August 30."
+        },
+        {
+          "when": "September 9",
+          "event": "Treasury's doubled long-end buybacks begin",
+          "note": "At least $4 billion per operation in 10- to 30-year debt through November 4; the 30-year has come 10 basis points off its August 17 high."
+        },
+        {
+          "when": "September 10",
+          "event": "NOAA's El Niño update",
+          "note": "The August 13 reading gave a greater than 90 percent chance of a very strong event; wheat just had its biggest week since 2022."
+        },
+        {
+          "when": "September 14",
+          "event": "The Senate returns",
+          "note": "The CLARITY Act left for recess about nine votes short of sixty."
+        },
+        {
+          "when": "September 16",
+          "event": "Federal Reserve meeting",
+          "note": "A quarter-point hike is the favourite for the first time, 51.5 cents on Polymarket and 58 percent on FedWatch after Warsh's speech."
+        },
+        {
+          "when": "September 30",
+          "event": "Mechanical Turk closes",
+          "note": "Twenty-one years after launch; the OpenAI-Cursor shutoff follows on November 12 and the first round of Brazil's election on October 4."
+        }
+      ]
     }
   ],
   "bsig_watch": [
     {
       "trend": "AI datacenter power demand",
       "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected. Policy is now actively reallocating supply toward it: the government paid RWE $1.2 billion on August 6 to abandon three offshore wind leases, the fifth such payment.",
-      "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers. The uranium miners that rose 14.9 percent in the week to August 7 were flat in the week to August 14 while spot sat near $86.40, so the equity bid has paused; Kazatomprom reports August 21.",
+      "watch": "Power-capacity price spikes, higher capex guidance, and nuclear restarts for data centers. SoftBank's SB Energy, which has granted OpenAI about $5.5 billion in stock warrants to anchor it as a data-centre tenant, has filed confidentially for an IPO aiming to raise $5 to 7 billion (Wall Street Journal, August 31); Nvidia guided fiscal 2028 revenue growth near 70 percent on August 26.",
       "expressions": "Constellation, Vistra, Cameco, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",
@@ -4901,7 +5443,7 @@
     {
       "trend": "Inference costs reverse toward custom silicon",
       "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips. AMD agreed on August 6 to buy Taalas, which burns a model's weights into the chip's own wiring: its HC1 encodes Llama 3.1 8B across 53 billion transistors and is quoted near 17,000 tokens per second per user at about 200 watts.",
-      "watch": "Nvidia notified customers on August 22 of price rises above 15 percent on AI servers shipping early next year, blaming memory: server DRAM doubled in the first quarter and is now about a quarter of high-end rack cost, and Micron, SK Hynix and Samsung hold the pricing power. Watch whether the next price moves come from HBM contracts rather than GPU lists.",
+      "watch": "SemiAnalysis published OpenAI's first inference chip on August 25: Jalapeño, co-designed with Broadcom on TSMC's N3P with HBM4, 128 chips per rack scaling to 2,048 in one domain, with production ramping through 2027 and a claimed perf-per-watt lead the piece itself attributes to software co-design rather than silicon. Nvidia said the next day its gross margin will trough at 71 to 72 percent in the fourth quarter on memory costs. Watch whether HBM contracts, not GPU lists, set the next price moves.",
       "expressions": "AMD, Marvell, Broadcom, and other custom-silicon makers.",
       "bsig_ref": "AS-B",
       "status": "active regime",
@@ -4919,25 +5461,25 @@
     {
       "trend": "Crypto leverage & dry powder",
       "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
-      "watch": "Bitcoin ended the week up 24 percent at $78,000 after a record $2.7 billion of crypto shorts was liquidated in the 24 hours around August 19, the kind of reversal this card exists to catch. Watch whether futures leverage and funding rates rebuild toward the extremes that preceded the spring drawdown, and whether the CLARITY Act contract, still at 16.5 cents, follows the price.",
+      "watch": "Bitcoin held the squeeze, closing the week down 0.6 percent at $77,800 while US spot bitcoin ETFs took $924.5 million in the week to August 28 and ether ETFs about $824 million. The CLARITY Act stalled about nine votes short of sixty before the Senate recess and returns September 14. Watch whether funding rates rebuild toward the extremes that preceded the spring drawdown.",
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
       "status": "active (squeeze)",
-      "new": true
+      "new": false
     },
     {
       "trend": "Resource-scarcity chains",
       "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. NOAA's August 13 update gives a greater than 90 percent chance of a very strong El Niño this winter and a 69 percent chance of a historic one exceeding every event since 1950, while the Drought Monitor recorded rapidly deteriorating conditions across Oklahoma and the Texas Panhandle in the week to August 11.",
-      "watch": "The bid broadened: corn rose 5.4 percent, soybeans 4.4, and coffee and sugar 6.1 each in the week to August 21, with the Plains drought holding. Watch the Drought Monitor and NOAA's El Nino odds, and whether the softs rally survives harvest data.",
+      "watch": "Wheat rose 12.6 percent in the week to August 28, its biggest gain since March 2022, on a European heat wave costing an estimated 8 to 10 million tonnes, drought in the Texas, Oklahoma and Kansas belt, and Russian exports down more than 70 percent after the Novorossiysk strikes; corn added 5.8 percent, soybeans 4.2 and cocoa 9 on a West African crop estimate 18 percent smaller. The August 25 Drought Monitor recorded rapid expansion across Texas, Oklahoma, Louisiana and Arkansas. NOAA's next El Niño update is September 10.",
       "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
       "bsig_ref": "AH-1 / AH-2",
       "status": "active",
-      "new": false
+      "new": true
     },
     {
       "trend": "Device attestation as a gatekeeper",
       "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all, and the state is starting to ask for the same signal. Illinois' HB5511, signed July 31 and effective January 1, 2028, requires device makers, operating-system providers and app stores to collect a birth date at account setup and expose an age bracket to platforms through an API, with no exemption for open-source systems.",
-      "watch": "More apps enforcing Play Integrity-style attestation, more states copying the Illinois age-signal model, and lawmakers mandating message-scanning; British Transport Police began live facial recognition on the London Underground on August 11.",
+      "watch": "Both directions moved this week. California's AB 1856 passed 39-0 and 69-0 on August 26 and 27, taking GPL, MIT, BSD and Apache-licensed operating systems out of the Digital Age Assurance Act's birth-date duty, and awaits the governor. PayPal's app stopped working on GrapheneOS after an August 22 update tied to a stricter Play Integrity check, and GrapheneOS said the Pixel 11 lacks the hardware memory tagging it relies on and may skip the series. Watch whether other states copy the California carve-out or the Illinois model.",
       "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
       "bsig_ref": "",
       "status": "watch (digital rights)",
@@ -4964,16 +5506,16 @@
     {
       "trend": "AI's off-balance-sheet financing",
       "why_exponential": "The AI buildout is increasingly funded outside company books. On August 10 Nvidia and Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR announced platforms to mobilise more than $500 billion of third-party capital through vehicles that issue debt and lease compute, with Nvidia providing up to 25 percent financing support per deal; Nikkei had already counted about $1.65 trillion of special-purpose-vehicle debt tied to five US tech giants. Each layer of guarantees lets the next project borrow more.",
-      "watch": "New special-purpose-vehicle debt, vendor financing and backstops from chipmakers, and any credit-rating action on AI-heavy issuers. This week: SoftBank planned a $6.3 billion retail bond, the largest by a Japanese company and its third retail issue this year, and Broadcom is seeking more than $60 billion of debt to finance AI chips.",
+      "watch": "New special-purpose-vehicle debt, vendor financing and backstops from chipmakers, and any credit-rating action on AI-heavy issuers. This week the Financial Times reported that Big Tech's second-quarter 'other income' rose past $160 billion on paper gains in private AI companies, Alphabet alone booking nearly $98 billion, up from about $69 billion a quarter earlier; the concern is marks on OpenAI, Anthropic and SpaceX stakes flowing through as profit. SB Energy's IPO filing carries about $5.5 billion of warrants granted to OpenAI.",
       "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
       "bsig_ref": "",
       "status": "watch (financing)",
-      "new": false
+      "new": true
     },
     {
       "trend": "Water as a grid constraint",
       "why_exponential": "Power planning still treats cooling water as free and infinite, and it is becoming neither. The Danube fell to a record low in the first days of August and Hungary's Paks plant, about half the country's electricity, stopped generating for the first time in 44 years; Romania blasted rock to redirect cooling water to its one working reactor.",
-      "watch": "River levels and forced derating at Europe's river-cooled nuclear fleet, and water-use disclosure entering data-center approvals. Hungary's Paks plant restarted a second turbine on August 10, to about 500 MW of its four units, then began sinking barges and a 5,000-tonne stone sill on August 15 to hold the Danube above its intake as the river fell again.",
+      "watch": "River levels and forced derating at Europe's river-cooled nuclear fleet, and water-use disclosure entering data-center approvals. Hungary's Paks plant restarted a second turbine on August 10 and began sinking a stone sill on August 15 to hold the Danube above its intake. The inverse case arrived in Nepal on August 26: a glacier collapse took six hydropower plants and 431 megawatts off the grid and trapped more than 900 workers in project tunnels.",
       "expressions": "European power prices, nuclear operators, and grid-interconnection queues.",
       "bsig_ref": "AH-3",
       "status": "watch (grid water)",
