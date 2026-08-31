@@ -1169,3 +1169,90 @@ rendered plain text (ten edits: two colon-reveal openers, one broken across-sour
 sentence, Pew's sandwich definition made exact, the Al Minhad drone attributed to Iran's
 claim, Polymarket's pre-speech level written as 'about 31 cents' since the Aug 28 daily
 point straddles the speech).
+
+### Issue 12 audit (2026-08-31) — corrections applied
+
+Four adversarial verification passes (AI, geopolitics, markets/commodities, deep-dive/
+wildcard/briefs) plus my own re-pull of the market data. Forty-odd corrections applied to
+the published issue before any email went out. The structural rules held: theatre spread
+(Iran and Ukraine two of six), the lane-lead rule (AI opened on OpenAI/Nvidia after Alibaba
+and Stripe), the non-AI undercurrent, and the humanize/human-voice sweeps stay clean after
+the edits (96 elements 1:1 across email and site; zero em-dashes).
+
+Hard errors, corrected:
+- The S&P 500 did NOT close at a record on Aug 27 (7,730.99 against the Aug 13 high of
+  7,798.99; my own yfinance pull and two wraps agree). Nvidia was +8.7%, not "about 8". Gold
+  futures fell 2.0% on the day, not 3 (the 3% was a spot print). Fixed in the AI evidence,
+  the markets summary and the ledger's own market paragraph above (which still says
+  'record'; this entry supersedes it).
+- OpenAI's technical report is 38 pages, not 51. Huang's line is one concessive sentence
+  ("Even though our demand is much greater than 70%, our supply allows us to confidently
+  deliver 70%"), not two. The "no signed agreement" caveat is The Information's, not
+  Business Insider's, and the BI link is retitled to its own "in talks" headline.
+- "Six transcripts in which an agent considered telling a human" is Semafor's count, not
+  METR/Redwood's (they say "a handful, and none did"); now attributed. The "warning shot"
+  passage is from OpenAI's blog post, not the technical report; citation split.
+- Judge Lin ordered the designation removed and the Pentagon says it is appealing; we had
+  "not confirmed by press time". The $69B "other income" figure was the group's prior
+  quarter, not Alphabet's; the FT attribution could not be confirmed and was dropped.
+- Guinea-Bissau's result was asserted in watch-next before it existed, with a quote that
+  belongs to the electoral commission's Idrissa Djalo, not the junta; rewritten to
+  "turnout topped 55 percent, result due Sept 1".
+- Niger: Turkey called for restraint, it did not back the junta; the mutiny's leadership is
+  unclear (the "junior officers rotated off the Tillabéri and Dosso fronts" line was not in
+  the source; Reuters placed the soldiers from Ouallam, Téra and Dosso); Tchiani's
+  whereabouts were unconfirmed during the fighting, so "the junta held" became "the junta
+  says it contained the rising".
+- Iceland: three rural constituencies voted No above 60%, not two.
+- Russian refineries: "24 of 34 hit this year" had no source; replaced with the BBC's 21 of
+  38 large refineries since January 2025.
+- Venezuela was announced late Aug 28 (NPR), not Aug 30; the SPR-refill clause was cut as
+  unsourced. Myla's item title said 37 dead while its own body and link said 38.
+- The CLARITY Act never had a floor vote, so "nine votes short of sixty" was invented
+  precision; a cloture vote on the motion to proceed is set for Sept 15. Fixed in the
+  crypto card and watch-next.
+- Warsh's labor-market words were paraphrases inside quotation marks; now verbatim:
+  "Labor markets are quite stable", "has not changed much for a couple of years", "I
+  believe the labor markets are consistent with full employment", "the numbers are more
+  concerning". The benchmark release and the speech were both 10:00 ET, so "an hour later"
+  became "at the same hour".
+- Pew's US-president correlation is a median of 0.31 (2017) to 0.55 (2026), not 0.90-0.91.
+
+Numbers and attributions tightened: the Nepal item no longer claims a 0.2 km² slab
+(unsourced), describes the surge as the ice damming the river and the dam breaching, drops
+the swept-away warning stations, and separates "934 missing from about a dozen hydropower
+projects" from "more than a hundred believed trapped in tunnels"; the Iran item drops the
+unsupported "one IRGC Navy member named killed" (Tasnim's unofficial two), dates the Al
+Minhad claim and UAE denial to Monday, adds Iran's Aug 30 missiles at US sites in Jordan
+(eight intercepted), and says the ceasefire broke July 9 while the memorandum lapsed Aug 17;
+Zelensky's quote is now whole; "every new H-1B" is "every new cap-subject H-1B"; the visa
+pause's "not past mid-September" was unsourced and is now "no resumption date"; continuing
+claims are dated to their own week (Aug 15); the CTU joined the Starbucks boycott the day
+after the AFL-CIO; Pew's sandwich definition and September-2025 fieldwork are stated; PPWR
+"began to apply" on Aug 12 (it entered into force Feb 2025); xcancel.com received a letter
+rather than "went offline"; the PayPal/GrapheneOS Play Integrity cause is marked as users'
+suspicion; the NBER tariff-dispersion sentence now says permanent shocks contract output,
+not imports; Vox Brasil's 45.1-44.5 is a technical tie inside a 2.15-point margin; the two
+Polymarket baselines were unified (31.5c on Aug 23, ~31c before the speech); GDPNow's 4.6
+is dated Aug 26 with the month's 6.2 peak noted; the GLM licence clause is the licensee's
+aggregate revenue, not the business's; GLM-5.3-Flash and Qwen3.8-Flash-Next are "announced
+Aug 26" (repos created Aug 24-25); SB Energy is WSJ Aug 30; Jalapeño was unveiled by
+OpenAI at Hot Chips with SemiAnalysis publishing the teardown, initial deployment end-2026;
+Omarchy's 4.0.1 fix shipped Aug 25, the write-up Aug 28; Cook steps down Sept 1 (Apple's
+wording); MTurk is "almost" twenty-one years; the open-letter quote is completed; the
+undercurrent headline distinguishes the levy from the registration cost.
+
+Checked and kept, against the auditors' doubt: the commodities table stays on front-month
+futures as labeled (wheat 767/+12.6%, corn 512/+5.8%, soybeans 1,276.25/+4.2%, cocoa 6,527)
+with December wheat's 784/+12.1% now noted in the summary, since the "errors" were the
+more-traded contract months; the 431 MW Nepal figure (Al Jazeera, confirmed by the
+geopolitics auditor); Gharibabadi's "decisive response"; Reuters' AI assessment of the
+Kharg video and Bovard's quote; seven Hormuz transits on Aug 27 against a ten-day average
+of fifteen (Kpler); the $11M WTI ladder and $68M Fed market volumes (gamma API); bitcoin
+-0.6% at $77.8k (yfinance). Two wheat drivers I could not source were cut (the "8 to 10
+million tonnes" heat-wave loss and "Russian exports down more than 70 percent"). Still
+open and flagged: the exact date of Trump's Kharg post; the House Democrats' Aug 24 letter
+responses; whether the Larak retaliation in Jordan is separately confirmed beyond one
+outlet. Note for the tagger: coverage.py credits issue 12's wildcard as 'Privacy and
+digital rights' by name but its topic keywords did not fire on the 1509/AB 1856 items;
+worth a keyword pass before issue 13.
