@@ -260,7 +260,7 @@ def _radar_html(issue):
             <td style="padding:40px 0 0;">
               <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">The structural picture.</h2>
               <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through markets and hard data</p>
-              <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated, money-backed markets, not a single headline.</p>
+              <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated markets and hard data, not a single headline.</p>
               {''.join(blocks)}
             </td>
           </tr>

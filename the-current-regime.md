@@ -1388,3 +1388,90 @@ out of sandbox' (HN 1,268) is an Aug 8 satirical Mastodon post, not news. The Ch
 CVE-2026-85046 (HN 798) is in-sandbox code execution, not an escape; HN's title overstates
 it, so it was left out rather than repeated. Polymarket CLOB daily points sit at 00:00 UTC
 and straddle intraday events; the Fed figures say 'about'.
+
+### Issue 13 audit (2026-09-10) — corrections applied
+
+Four adversarial verification passes (AI, geopolitics, markets/commodities, deep-dive/
+wildcard/briefs) plus my own yfinance re-pull of the week's closes, run three days after
+the issue was written and before any email went out. About thirty corrections applied. The
+structural rules held: theatre spread (Iran and Ukraine two of six), the lane-lead rule (AI
+opened on the launch sequence after OpenAI/Nvidia and Stripe), the humanize/human-voice
+sweeps stay clean after the edits (125 content elements 1:1 across email and site; zero
+em-dashes). The lint caught one URL cited for two items after an edit; fixed.
+
+Hard errors, corrected:
+- Gold was written as "about 0.4 percent to around $4,460" in four places while the ledger
+  above says -1.1%. Front-month futures went 4,478.10 to 4,429.80, -1.1%. The card, the
+  markets evidence, the commodities summary and the dedollarization read now agree.
+- The Fed contract's dates were off by a day: the issue quoted Polymarket's 00:00 UTC prints
+  and labelled them with the following day. On UTC daily closes the quarter-point hike was
+  57.5c on Sept 1 (58.5 high), 55 on Sept 2, 42.5 on Sept 3 as Waller spoke, 49.5 on Sept 4
+  after payrolls and through the weekend. Fixed in the summary, implication, evidence, the
+  market-moves card, the monetary basket and watch-next. Same defect on the ceasefire
+  contract: the 27.5c print was midnight UTC Saturday; the contract had already spiked to
+  55c late Friday, before the envoys reached Moscow, and was 17.5 during the Kremlin meeting
+  (the ledger's "8.5c → 27.5c → 12.5c" above is superseded). The Israel-airspace card now
+  says the move began Friday afternoon ET (58.5 by Friday evening, above 70 by Saturday's
+  Gulf morning) rather than "39.5 on Saturday"; by Sept 10 it was at 96c and unresolved.
+- "Leisure and hospitality added 59,000" was food services and drinking places; the sector
+  as a whole added 62,000 (BLS Table B-1).
+- Import AI 471 never mentions Nvidia or a buyer; the quote is about the July attack ("My
+  worry is that AI systems are both better at coordinating than humans and also much, much
+  faster moving than us"). Rewritten and the subject corrected from "agents".
+
+Numbers and attributions tightened: OpenAI's Aug 31 reply to Congress does mention the
+period in a footnote ("earlier training and evaluation activities in May and June 2026")
+without describing or counting it, which Casar's Sept 2 letter called out, so "left out of"
+became "described in neither"; the NYT's Inspur figure is $5.6bn of "advanced technology"
+of which more than $3bn was Nvidia Blackwell servers, via Aivres, April 2024 to February
+2026 (evidence, radar and watchlist); Anthropic's $517bn is contracts signed in the eleven
+months since October 2025, mostly ten-year terms, not "over a decade"; the LSVP was
+"developed in partnership with the US government" and Mythos-class cyber access comes "in
+the near future"; "first OpenAI model rated Critical" is secondary-only, now "OpenAI says it
+'meets the Critical threshold'"; Hugging Face's download figures are the API's rolling
+thirty-day counts, now labelled as such everywhere; Trellner's three domains were registered
+between December 2023 and May 2024, not "run as one operation since December 2023"; Huang's
+quote is completed; the deal is "$12.93 billion" (the exact $12,930,300,000 is in neither
+the 8-K nor the blog). Geopolitics: Ushakov's adjectives are one translation and no source
+has him saying demands are "unchanged" (now Putin restating "root causes"); the strikes pause
+was Putin's 72-hour halt on Kyiv plus Zelensky's reciprocal pledge through Monday, with Putin
+saying Russia had not agreed to the wider front-line ceasefire; the IRGC's Sept 2 statement
+said two tankers caught fire after striking mines, without the "unauthorised route" wording
+(that belongs to its Sept 5 claim); the SCO's ten leaders signed the declaration and about
+two dozen documents on Sept 1, not "28 documents on Aug 31 and Sept 1"; the war is "in its
+seventh month", not seven months old; Kpler's 13-a-day average is to Sept 2 (Al Jazeera's
+Sept 6 piece repeats the Sept 3 numbers) with Reuters' ~15 on Sept 4 kept; Nepal's warning
+failure is now specific (the Syabrubesi gauge was built for gradual rises and was swept away;
+the alert went out 38 minutes after the collapse). Markets: HY spread updated to the Sept 4
+print, 2.68% (the card, summary, evidence, monetary read and basket); two-year 4.37 after
+touching 4.39; curve 102bp on the issue's own numbers; Hammack's line was a LinkedIn post,
+quoted whole; Atkins' Sept 2 remark was to Fox Business ("I anticipate and hope that it will
+be passed by the Senate and sent ultimately to the President's desk for a signature"), the
+"consonant" quote being his Aug 18 proposal statement; the weekly and three-week ETF totals
+were not in the cited article and were cut (Sept 3 and 4 flows kept, Farside via
+CryptoSlate); the CLARITY contract went 13.5c to 17.5c on Friday and 14.5 at the weekend;
+Shein's valuation is "roughly $27 billion" in the cited AP piece (the China-stack basket now
+cites RTE/Reuters' $26.3bn range instead of a Newsquawk pre-market note that carried none of
+the figures); the "SoftBank, September 2" citation is now the S-1 itself; wheat's Friday fall
+is attributed to peace-talk watching, not Labor Day squaring; the Brent "largest since July"
+claim is now on our own front-month series (last larger week: July 24, +9.85%). Courts: four
+election disputes in five filings (the Michigan proof-of-citizenship application was the
+fourth); Talwani's quote completed ("...of the Final Rule"); Mulholland's "the Court"; SCOTUSblog
+citation dates corrected to Sept 3, 5 and 6 and Aug 31; Nitter's HN item is 917 points (731
+was a different Nitter story); Missouri's watch-next item had the state as respondent when it
+was the applicant, and now records that Kavanaugh denied the application on Sept 8 and the
+state refiled Sept 9. Wildcard: UBS wants evidence hires "can use" AI (TNW/Decoder, not
+Techmeme, carry the 2027 and division details); "at least 38 states". Briefs: Aurora Store
+failures dated to the start of September, not Aug 31.
+
+Checked and kept, against the auditors' doubt: Shein's first-day close of HK$48.50 (AP, RTE
+and BSS agree; the -9/-10% figures are intraday, low HK$43.72), which also settles last
+week's seed-note question; the 1,380/5,500+ Nepal figures as Al Jazeera's count; the
+commodities table on front-month futures as labelled; Brent +7.8% on that series against
+Reuters' 7.6%; GDPNow 4.7 (FRED GDPNOW 4.7487); the "third trip on mail voting in under six
+weeks" (SCOTUSblog's own phrase). Still open: the Fed contract's "$101 million" volume was a
+Monday-morning read (now $110M); Atkins' Sept 2 date rests on Bitcoin Magazine; the Polymarket
+CLARITY contract is thin at $14.5M lifetime volume and stays out of market-moves. Note for the
+pipeline: quote Polymarket as UTC daily closes and say so; the 00:00 UTC print labelled with
+the next day's date is how the two date errors above happened. Hugging Face's "downloads"
+field is a thirty-day rolling count, never cumulative.

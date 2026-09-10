@@ -9,12 +9,12 @@ out of window and lead this list.
 - **Liquid Network, Sept 7.** About 4,000 BTC (~$320M, ~95% of the federation wallet)
   withdrawn via an Elements bug; on-chain 'We are whitehats' message; bridge nodes disabled,
   exchanges halting L-BTC (CoinDesk/Cointelegraph). Crypto card or a brief.
-- **Missouri map**: response was due noon Sept 7; state asked for a ruling by Sept 13;
-  ballots finalise Sept 8. **Mail ballots**: response due 4pm Sept 9 (Jackson). Both resolve
-  inside 14's window. Deep-dive 13 said the interim docket lifts lower-court relief; test it.
+- **Missouri map**: Kavanaugh denied the state's application Sept 8; Chief Judge Clark (E.D. Mo.)
+  then ordered the 2025 map used, and the 8th Circuit plus a second SCOTUS application
+  followed Sept 9 (ABC17). Which map is on the ballot is 14's law story.
 - **ICJ Nicaragua v. Germany** preliminary objections, Sept 7–10.
-- **Israel airspace Polymarket contract** at 78.5c on Sept 7 morning with no closure
-  reported; either a closure happens (find the primary: IAA notices page) or the contract
+- **Israel airspace Polymarket contract** at 78.5c on Sept 7 morning and 96c on Sept 10 with
+  no closure reported and the market unresolved; either a closure happens (find the primary: IAA notices page) or the contract
   collapses. Netanyahu Sept 3/6: 'end of the Iranian regime is near'. Iran's 'prohibited
   zone' outside Hormuz announced Sept 6 (JPost/ToI liveblogs); get the coordinates and the
   first ship sanctioned under it.
@@ -38,8 +38,8 @@ out of window and lead this list.
   Artificial Superintelligence Act' (introduced Sept 3, Wikipedia) got no coverage in 13.
 - **Nvidia–Hugging Face** close expected H1 2027 and a ~$1B retention pool: search-summary
   only. Import AI 471's coordination worry. HF governance changes.
-- **Shein**: AP said closed HK$48.50 near flat; CNBC/Quartz summaries said -9%. Reconcile
-  with HKEX data before quoting again.
+- **Shein**: resolved in the 13 audit. AP, RTE and BSS agree the close was HK$48.50; the
+  -9/-10% figures were intraday (low HK$43.72). Valuation $26.3-27bn depending on outlet.
 - **OPEC+**: the 'seven' (Saudi, Russia, Iraq, Kuwait, Kazakhstan, Algeria, Oman); The
   National says the UAE left the group in May. Verify that before repeating.
 - **Nepal**: 1,380 / 5,500+ (Al Jazeera Sept 7). Wikipedia's per-item figures (13 vs 12
@@ -115,9 +115,13 @@ should say something those cards do not.
   BAMLH0A0HYM2 (lags a day). GDPNow: atlantafed 403s; ekans carries it (4.7 on Sept 7).
   EIA dnav .xls files work for SPR (WCSSTUS1w) and commercial crude (WCRSTUS1w).
 - Polymarket: gamma `markets?slug=` then CLOB `prices-history?market=<token>&interval=max
-  &fidelity=1440` works; `interval=1w`/`2w` and startTs/endTs forms return 400. Daily
+  &fidelity=1440` works; **quote UTC daily closes (fidelity=60 and take the last hourly
+  print of each UTC day) and say so.** The 00:00 UTC point labelled with the next day's
+  date produced two date errors in 13 (Fed hike, ceasefire contract). `interval=1w`/`2w` and startTs/endTs forms return 400. Daily
   points sit at 00:00 UTC; say 'about'. IMF PortWatch's Hormuz series lags about a week.
-- Structural baskets w/w from Issue 13 stored values. Energy read 're-tightening'; if
+- Structural baskets w/w from Issue 13 stored values (post-audit: HY 2.68 on Sept 4, gold
+  4,429.80, curve 102bp, hike 49.5c). Hugging Face `downloads` is a rolling 30-day count,
+  not cumulative; label it that way. Energy read 're-tightening'; if
   Brent holds above $95 into the CPI, the monetary read should move too.
 - Watchlist: datacenter power and off-balance-sheet are `new: true` this week (SB Energy
   S-1); demote next issue unless SBE prices or a rating action lands.
