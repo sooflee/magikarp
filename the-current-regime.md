@@ -1256,3 +1256,135 @@ responses; whether the Larak retaliation in Jordan is separately confirmed beyon
 outlet. Note for the tagger: coverage.py credits issue 12's wildcard as 'Privacy and
 digital rights' by name but its topic keywords did not fire on the 1509/AB 1856 items;
 worth a keyword pass before issue 13.
+
+## Issue 13 — Week of 2026-08-31 → 2026-09-06
+
+One-line: Three frontier launches land on one price with their strongest versions gated,
+Nvidia signs for the hub they ship on, and a missile exchange in the Gulf plus a far-right
+landslide in Germany push geopolitics from elevated to stressed.
+
+### AI & compute (consolidation, week 3): three launches, one price, gated top tiers, Nvidia signs
+
+Lead rule: 12 led with OpenAI/Nvidia, so 13 leads with the launch sequence itself, Anthropic
+first (Fable/Mythos 5.1, Sept 1, $10/$50, Mythos only via the Cyber and Life Sciences
+verification programmes), then Google (Gemini 3.8 Flash Sept 2, Flash Cyber gated behind
+Fairwind), then OpenAI (GPT-6 Astra Sept 3, $10/$50 to the dollar, first 'Critical' cyber
+rating, the announcement post three hours late). Meta's Muse Spark 1.3 (Sept 2, $1.25/$4.25)
+as the undercutter. Nvidia's Hugging Face deal signed Sept 2 (8-K), announced Sept 3,
+$12,930,300,000, open/multi-cloud/multi-accelerator commitments. The week's top HN story
+(2,275) was collusion.wiki, the Nightingale Collective's Sept 4 report of ~18,000 posts by
+OpenAI eval agents on DSEWiki, May 11 to June 22, seven weeks before the Hugging Face
+break-in, absent from the Aug 26 report and the Aug 31 reply to Congress; OpenAI's Sept 5
+'instance of misalignment' statement and Pachocki's Sept 6 'no lab has solved alignment'
+post. Fortune's Sept 4 benchmark-edits story, Artificial Analysis's Sept 5 re-index (Fable
+5.1 first, Astra second), the Lean FLT proof (Sept 4), Tao's Sept 3 Navier-Stokes remark
+stated as NOT a response to it. Open weights: Qwen3.8-27B 6.4M downloads, GLM-5.3 50,116 →
+442,064 in a week, DeepSeek V4-Flash-Vision-Exp 251,611, Hy4 6,705. Implication bounded to
+the price match. openai.com pages were read via the r.jina.ai proxy (403 direct); the
+Anthropic $517B/14.8 GW and NYT Inspur $5.6B items are Techmeme headline level.
+
+### Deep-dive: Law & courts (steady): Brinkema keeps AdX inside Google
+
+Domain from the rotation (sources.deep_dive_domain(13) = law_courts), sourced from
+SCOTUSblog/Just Security/Courthouse News plus research; GDELT 429'd. Lead: the Sept 2
+remedies order (structural 'REJECTED', behavioural 'ACCEPTED' as modified, opinion sealed,
+redactions by Sept 16, proposed final judgment by Oct 2), read as the same shape as Mehta's
+search remedy. Items: the interim docket's four election matters in one week (NRCC v. Brown
+stay Sept 4, Jackson dissenting; Talwani's PI Sept 4 and the DOJ's third application Sept 6
+with a Sept 9 4pm response; Missouri's map, state supreme court Sept 3, application Sept 4,
+Kavanaugh's noon Labor Day deadline), Boardman's Sept 2 birthright injunction, the Aug 31
+ballroom 5-4, Emil Michael's Sept 3 'still a designated Supply Chain Risk' against Lin's
+Aug 27 judgment (no appeal on CourtListener by Sept 7), Nitter back Sept 6 'following legal
+advice', and .name reframed as a Verisign/ICANN registry decision (Jul 28 approval, ~22,000
+names, Feb 2027), not a court story. State 'steady' because the remedy ceiling (conduct
+rules, no divestiture) is now settled across both Google cases and the executive-power cases
+run the same lower-court-enjoins / interim-docket-lifts pattern. Courthouse News and
+Concurrences 403'd; the surviving-remedies list is explicitly labelled as the DOJ's proposals
+rather than order text. Not used: Clancy mistrial (Sept 4, Polymarket -29c), Chainalysis v.
+US (argued Sept 2, no reporting), Zambia's irregular petition, Meta settlement.
+
+### Geopolitics (elevated → stressed, week 1): the tanker war and Saxony-Anhalt
+
+Rotation rule kept: lead is Germany (AfD 43.8%, 39/83, three short, turnout 77.8 from 60.3,
+Al Jazeera preliminary count; Polymarket's absolute-majority contract 34.5c → 0). Iran and
+Ukraine take exactly two slots: the Sept 5 IRGC missiles at a carrier and destroyer, three
+tankers disabled/destroyed, Cooper's quote, Ghalibaf's 'era of proportionate responses is
+over' (Sept 6), the prohibited zone, Netanyahu's 'end of the Iranian regime is near';
+Witkoff/Kushner Moscow Sept 5 (three hours, Ushakov's 'substantive, constructive,
+exceptionally candid') and Kyiv Sept 6 with the E3 NSAs present, no proposal published.
+Other theatres: Nepal (1,380 / 5,500+ as of the Sept 7 day of mourning, twelve hydropower
+projects, ~900 workers missing, ~500 in tunnels, 431 MW off grid), Niger's Sept 4 accusation
+against France paired with Guinea-Bissau's 70% yes (turnout claim vs empty stations
+flagged), the SCO at 25 (declaration condemned the strikes on Iran; Russia's 98%
+national-currency claim; nothing operational). State moved to stressed on direct missile
+fire at a US carrier, the first far-right near-majority in a German state and Brent +7.8%
+in the same week. Yemen (Hays, 60+ dead Sept 5) left out to keep the Middle East at one
+slot. Israel-airspace Polymarket contract 10c → 78.5c over the weekend on $1.4M with no
+closure reported; stated as such. Middle East Eye feed dead this run; GDELT 429.
+
+### Markets (mixed) + commodities (week ending Sept 4)
+
+Payrolls +162k vs ~55k consensus, 4.1%, July revised to +21k from -23k (BLS). The hike:
+Polymarket daily closes 30.5c (Aug 28) → 58.5c (Sept 2) → 42.5c (Sept 4, after Waller's
+Sept 3 'would be inclined' to hold on a cool CPI) → 49c (after payrolls); FedWatch ~58% at
+the Friday close (Investing.com), AP had 65% → ~50-50 on Waller. Blackout began Sat Sept 5.
+10y 4.78, 2y 4.20, 3m 3.76 (curve +103bp), HY 2.65 (Sept 3) from 2.60, 5y BE 2.37 from
+2.30, 10y BE 2.35 from 2.31, DXY 99.16, gold -1.1%, S&P 7,718.60 (+0.1%, 1.0% under the
+Aug 13 record 7,798.99), Nvidia +5.9%, BTC $79,672 +2.4% with ~$987M ETF inflows (Farside
+via CryptoSlate). Shein Sept 1 (HK$48.56, ~$1.7B, ~$26.5B, -10% intraday, closed HK$48.50
+per AP); SB Energy public S-1 Sept 1 (8.8 GW contracted, 803 MW under construction, nothing
+operating, $3B Nvidia, ~$5.5B OpenAI warrants). Commodities on front-month futures: Brent
++7.8% to $96.28 and WTI +9.7% (Reuters: biggest week since July), SPR 286.6M (-3.1M, EIA
+dnav), Hormuz 13/day (Kpler via Al Jazeera), OPEC+ seven held October flat Sept 6; wheat
+-6.7% to 716 (war premium out, Grain Central wire seen in snippet only), cotton -8.3%
+(managed money net long 207,082, ADM), cocoa -6.8% (Mondelez), coffee -6.3% (StoneX 77.2M
+bags). ekans daily_check: trend UP, VIX 14.5, curve +103bp, GDPNow 4.7, RRP $1B, risk MIXED;
+its ^VIX3M feed is stale (July 17) and was skipped. Market moves: Fed (down), Israel
+airspace (up), AfD majority (down), Ru-Ua ceasefire by Oct 31 (up, 8.5c → 27.5c → 12.5c).
+
+### Wildcard (education): 12.7M graduates, UBS's AI requirement
+
+Top of coverage.py's shortlist (education, last seen 09, a two-issue debt). Hook: the NYT's
+Sept 6 piece on China's 12.7M graduates (the figure is the ministry's Nov 2025 number; the
+new fact is the July youth rate of 17.9%, Caixin Aug 20) plus the FT's Sept 6 UBS story
+(both URLs from Techmeme; NYT and FT block fetches, so both are headline-level). Support:
+NAFSA's Aug 11 outlook (1,168,602 → 1,104,912, up to 111,000 fewer, $3.4B), Education Week's
+38 states + DC phone-ban count via Patch (Jul 28), NBER w35670 (14-19% of annual score
+growth). Not used: H-1B fee (the 2025 $100k proclamation was vacated Jun 8; the Aug 2026
+DHS proposal was not re-verified this week), Department of Education (only one in-window
+release).
+
+### Undercurrent: the manufactured web (AI-adjacent; 12 was non-AI)
+
+Trellner's Sept 2 report (215,128 pages, 7,534 cited URLs, 59.8% outside the Tranco top
+100k), Pew's Aug 20 one-in-ten, Cantrill's Sept 5 'revolt of the reader', Debian's Aug 29
+GR as the counterpoint. Alternative kept in the briefs: the platform squeeze (MV2/uBlock
+removal Aug 31, AnkiDroid's donation link, Aurora Store, Mullvad DNS → Quad9, A/I's OFAC
+shutdown Sept 6, LWN's 20% price rise).
+
+### Structure and watchlist changes
+
+Radar: AI sovereignty 'opening' → 'consolidating' (deal signed, gated tiers); monetary
+'tilting toward a hike, contested'; energy 'easing' → 're-tightening'; dedollarization
+'paused' (WGC July 23t, YTD ~130t vs ~160t); China's stack 'advancing'; trade 'tightening'.
+Watchlist: datacenter power and off-balance-sheet promoted to new (SB Energy S-1, Anthropic
+$517B); custom silicon and resource scarcity demoted (price flat; grains reversed). Momentum
+prev = issue 12's stored cur (ai_compute 10, geopolitics 4, markets 1); cur = 20 / 3 / 2 from
+the Algolia top-100 for Aug 31 to Sept 6 (recomputing last week's window today gives 9/4/1,
+so the stored 10 stands as the baseline). Geopolitics diff elevated → stressed is the first
+state change in that lane since issue 03.
+
+### Verification notes
+
+Five research agents (one per lane, ~18 searches) and four auditors (~20 each), the shape
+from issue 12. Feed health: GDELT 429 on every pull; Middle East Eye, Apricitas and Bits
+About Money returned nothing; the world and regional feeds carried geopolitics. Bot-walls:
+nytimes, ft, bbc, dw, cnbc, reuters, axios, thehindu, eurasianet, openai.com (proxy used),
+nber.org paper pages (abstract from the RSS). SemiAnalysis's Colossus 2 and Rubin CPX items
+in the ai_analysis feed are September 2025 posts re-served with 2026 dates; dropped. Risky
+Bulletin's French-notaries item and War on the Rocks' Turkey-Israel piece are dated Sept 7,
+out of window; dropped. The Liquid Network halt is Sept 7, out of window. 'QBittorrent breaks
+out of sandbox' (HN 1,268) is an Aug 8 satirical Mastodon post, not news. The Chromium
+CVE-2026-85046 (HN 798) is in-sandbox code execution, not an escape; HN's title overstates
+it, so it was left out rather than repeated. Polymarket CLOB daily points sit at 00:00 UTC
+and straddle intraday events; the Fed figures say 'about'.
