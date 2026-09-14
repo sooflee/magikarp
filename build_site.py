@@ -161,7 +161,7 @@ a.subscribe:hover,button.subscribe:hover{{background:var(--accent);color:#fff}}
 # CSS size on any screen width). lint_media() enforces credit, licence and file presence.
 MEDIA_CSS = """
 .fig{margin:4px 0 14px}
-.fig img{display:block;width:100%;height:auto;border-radius:3px;background:#f2f2f2}
+.fig img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:3px;background:#f2f2f2}
 .fig figcaption{font-size:var(--fs-meta);color:var(--muted);line-height:1.5;margin-top:6px}
 .fig .credit,.fig .credit a{color:var(--faint)}
 .chart{margin:14px 0 16px}
@@ -198,6 +198,22 @@ MEDIA_CSS = """
 .chart details td{padding:2px 16px 2px 0;border-bottom:1px solid #f0f0f0}
 .chart .csrc{font-size:12px;color:var(--faint);margin:4px 0 0}
 .chart .csrc a{color:var(--faint)}
+.dek{font-size:var(--fs-body);line-height:1.5;margin:16px 0 0;color:var(--fg)}
+.brief{margin:22px 0 0;padding:14px 0 6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.brief .blbl{font-size:var(--fs-meta);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin:0 0 8px}
+.brief ul{margin:0;padding:0;list-style:none}
+.brief li{font-size:var(--fs-detail);line-height:1.5;margin:0 0 8px}
+.brief a.lane{font-weight:700;text-decoration:none;margin-right:4px}
+.kick{font-size:var(--fs-meta);font-weight:600;color:var(--accent);margin:0 0 4px}
+.kick .badge{margin-left:8px}
+.badge.neutral{background:#efefef;color:#555}
+.impl{border-left:2px solid var(--line);padding-left:12px;margin:4px 0 12px}
+.impl .lbl{display:block;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:2px}
+details.more{margin:6px 0 0}
+details.more summary{cursor:pointer;color:var(--muted);font-size:var(--fs-meta);margin:4px 0}
+.story .cmt{color:#4b5058}
+.sec h2{margin:0 0 10px}
+.impl{color:#333}
 """
 
 CHART_JS = """<script>
@@ -398,8 +414,10 @@ Market notes are directional only and are not investment advice.</footer>
 """
 
 
-def badge(state: str) -> str:
-    cls = "badge warn" if state in WARN_STATES else "badge"
+def badge(state: str, neutral: bool = False) -> str:
+    if not state:
+        return ""
+    cls = "badge neutral" if neutral else ("badge warn" if state in WARN_STATES else "badge")
     return f'<span class="{cls}">{esc(state)}</span>'
 
 
@@ -424,13 +442,39 @@ def week_label(iss: dict) -> str:
     return iss.get("week", "").replace("/", " to ")
 
 
-def render_links(links: list) -> str:
+def render_links(links: list, keep: int = 5) -> str:
+    """Show the first few sources; fold a long tail into a collapsible list."""
     if not links:
         return ""
-    rows = "".join(
-        f'<li><a href="{esc(l["url"])}">{esc(l["title"])}</a></li>'
-        for l in links)
-    return f'<ul class="links">{rows}</ul>'
+    li = [f'<li><a href="{esc(l["url"])}">{esc(l["title"])}</a></li>' for l in links]
+    if len(li) <= keep + 1:
+        return f'<ul class="links">{"".join(li)}</ul>'
+    return (f'<ul class="links">{"".join(li[:keep])}</ul>'
+            f'<details class="more"><summary>{len(li) - keep} more sources</summary>'
+            f'<ul class="links">{"".join(li[keep:])}</ul></details>')
+
+
+def render_impl(r: dict) -> str:
+    if not r.get("implication"):
+        return ""
+    return f'<p class="impl"><span class="lbl">Key fact</span>{esc(r["implication"])}</p>'
+
+
+def kick(label_html: str, state: str = "", neutral: bool = False) -> str:
+    return f'<p class="kick">{label_html}{badge(state, neutral)}</p>'
+
+
+def human_date(s: str) -> str:
+    import datetime as dt
+    try:
+        d = dt.date.fromisoformat(s)
+        return f"{d.strftime('%B')} {d.day}"
+    except Exception:
+        return s
+
+
+SECTION_IDS = {"ai_compute": "ai", "tech_policy": "tech-policy", "ai_agents": "ai-agents",
+               "deep_dive": "deep-dive", "geopolitics": "geopolitics", "markets": "markets"}
 
 
 def render_items(items: list) -> str:
@@ -442,14 +486,14 @@ def render_items(items: list) -> str:
         for it in items)
 
 
-def render_regime(label: str, r: dict, traj: str = None) -> str:
+def render_regime(label: str, r: dict, traj: str = None, sid: str = "", neutral: bool = False) -> str:
     body = r.get("summary") or " ".join(r.get("evidence", []))
-    impl = (f'<p class="impl">{esc(r["implication"])}</p>' if r.get("implication") else "")
     traj_html = f'<p class="traj">{esc(traj)}</p>' if traj else ""
-    return (f'<div class="sec"><h2>{esc(r.get("headline", label))}{badge(r.get("state",""))}</h2>'
-            f'<p class="sub">{esc(label)}</p>{traj_html}{render_figure(r.get("image"))}<p>{esc(body)}</p>'
-            f'{render_chart(r.get("chart"))}'
-            f'{render_items(r.get("items"))}{render_links(r.get("links"))}{impl}</div>')
+    idattr = f' id="{sid}"' if sid else ""
+    return (f'<div class="sec"{idattr}>{kick(esc(label), r.get("state", ""), neutral)}'
+            f'<h2>{esc(r.get("headline", label))}</h2>{traj_html}{render_figure(r.get("image"))}'
+            f'<p>{esc(body)}</p>{render_impl(r)}{render_chart(r.get("chart"))}'
+            f'{render_items(r.get("items"))}{render_links(r.get("links"))}</div>')
 
 
 def _abs_index(doc: dict, iss: dict) -> int:
@@ -507,8 +551,8 @@ def render_momentum(doc: dict, iss: dict) -> str:
             for lbl, one in chg)
         chg_html = ('<p style="margin-top:18px"><strong>What changed this week:</strong></p>'
                     f'<ul class="chg">{lis}</ul>')
-    return (f'<div class="sec"><h2>Where the week&rsquo;s attention went.</h2>'
-            f'<p class="sub">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>'
+    return (f'<div class="sec" id="attention">{kick("Regime momentum &middot; " + esc(weeks[0]) + " vs " + esc(weeks[-1]))}'
+            f'<h2>Where the week&rsquo;s attention went.</h2>'
             f'<p class="means">Number of the week&rsquo;s top Hacker News stories in '
             f'each regime we cover, this week against last.</p>'
             f'<table class="mkt">{"".join(rows)}</table>{chg_html}{render_moves(iss)}</div>')
@@ -532,8 +576,8 @@ def render_watch_next(iss: dict) -> str:
         f'<p class="wn"><span class="when">{esc(it.get("when",""))}</span> '
         f'<strong>{esc(it.get("event",""))}</strong><br>'
         f'<span class="cmt">{esc(it.get("note",""))}</span></p>' for it in wn)
-    return (f'<div class="sec"><h2>What to watch next week.</h2>'
-            f'<p class="sub">The calendar ahead</p>{rows}</div>')
+    return (f'<div class="sec" id="watch-next">{kick("The calendar ahead")}'
+            f'<h2>What to watch next week.</h2>{rows}</div>')
 
 
 def render_radar(iss: dict) -> str:
@@ -555,13 +599,17 @@ def render_radar(iss: dict) -> str:
     if steady:
         blocks.append('<p class="radar-steady">Holding steady</p>')
         for r in steady:
-            b0 = (r.get("basket") or [None])[0]
-            fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
+            if r.get("line"):
+                fact = f' {esc(r["line"])}'
+            else:
+                b0 = (r.get("basket") or [None])[0]
+                fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
             blocks.append(
                 f'<p class="rcompact"><strong>{esc(r["name"])}</strong> '
                 f'<span class="rdir">{esc(r.get("direction",""))}</span>.{fact}</p>')
-    return ('<div class="sec"><h2>The structural picture.</h2>'
-            '<p class="sub">Regime radar &middot; read through markets and hard data</p>'
+    return ('<div class="sec" id="radar">'
+            + kick("Regime radar &middot; read through markets and hard data")
+            + '<h2>The structural picture.</h2>'
             '<p class="means">The slow currents beneath the week. Each is read from a basket of '
             'dated markets and hard data, not a single headline.</p>'
             f'{"".join(blocks)}</div>')
@@ -582,8 +630,9 @@ def render_commodities(c: dict) -> str:
         f'<td class="v" style="font-weight:400;color:'
         f'{"#b1300f" if it.get("change","").startswith("-") else "#1a7f4b"}">{esc(it.get("change",""))}</td></tr>'
         for it in c.get("items", []) if _chg_mag(it.get("change", "")) >= floor)
-    return (f'<div class="sec"><h2>{esc(c.get("headline", "Crude falls as the fear premium unwinds."))}</h2>'
-            f'<p class="sub">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>'
+    return (f'<div class="sec" id="commodities">'
+            f'{kick("Commodities &amp; energy &middot; " + esc(human_date(c.get("as_of",""))))}'
+            f'<h2>{esc(c.get("headline", "Crude falls as the fear premium unwinds."))}</h2>'
             f'{render_figure(c.get("image"))}<p>{esc(c.get("summary",""))}</p>'
             f'{render_chart(c.get("chart"))}<table class="mkt">{rows}</table></div>')
 
@@ -602,8 +651,8 @@ def render_contrarian(doc: dict, iss: dict) -> str:
 
 
 def render_undercurrent(u: dict) -> str:
-    return (f'<div class="sec"><h2>{esc(u["headline"])}</h2>'
-            f'<p class="sub">{esc(u.get("label","Undercurrent"))}</p>{render_figure(u.get("image"))}'
+    return (f'<div class="sec" id="undercurrent">{kick(esc(u.get("label","Undercurrent")))}'
+            f'<h2>{esc(u["headline"])}</h2>{render_figure(u.get("image"))}'
             f'<p>{esc(u.get("summary",""))}</p>{render_links(u.get("links"))}</div>')
 
 
@@ -614,9 +663,8 @@ def render_wildcard(w: dict) -> str:
         return ""
     topic = w.get("topic", "")
     sub = f'The wildcard &middot; {esc(topic)}' if topic else 'The wildcard'
-    return (f'<div class="sec wildcard"><h2>{esc(w["headline"])}</h2>'
-            f'<p class="sub">{sub}</p>{render_figure(w.get("image"))}'
-            f'<p>{esc(w.get("summary",""))}</p>'
+    return (f'<div class="sec wildcard" id="wildcard">{kick(sub)}<h2>{esc(w["headline"])}</h2>'
+            f'{render_figure(w.get("image"))}<p>{esc(w.get("summary",""))}</p>'
             f'{render_items(w.get("items"))}{render_links(w.get("links"))}</div>')
 
 
@@ -625,9 +673,8 @@ def render_briefs(items: list) -> str:
     Optional; renders only when the issue carries a briefs list."""
     if not items:
         return ""
-    return (f'<div class="sec"><h2>Smaller stories.</h2>'
-            f'<p class="sub">short items from the week&rsquo;s edges</p>'
-            f'{render_items(items)}</div>')
+    return (f'<div class="sec" id="briefs">{kick("Short items from the week&rsquo;s edges")}'
+            f'<h2>Smaller stories.</h2>{render_items(items)}</div>')
 
 
 def render_across_inline(a: dict) -> str:
@@ -668,23 +715,24 @@ def render_markets(m: dict) -> str:
         for k, lbl in MKT_ORDER if k in sg)
     summary = f"<p>{esc(m['summary'])}</p>" if m.get("summary") else ""
     means = (
+        '<details class="more"><summary>What the readings mean</summary>'
         '<p class="means">Volatility measures how much the market is expected to '
         'move in the near term compared with the longer term, so a lower reading '
         'means less immediate stress. The yield curve is the gap between long-term '
         'and short-term government borrowing rates, and a steep curve usually points '
         'to expected growth rather than recession. When crypto is described as '
         'risk-off, investors are stepping back from the most speculative assets, '
-        'which often serves as an early note of caution beneath a calm market.</p>')
-    return (f'<div class="sec"><h2>{esc(m.get("headline","Markets"))}</h2>'
-            f'<p class="sub">Markets</p>{render_figure(m.get("image"))}{summary}{render_chart(m.get("chart"))}'
+        'which often serves as an early note of caution beneath a calm market.</p></details>')
+    return (f'<div class="sec" id="markets">{kick("Markets", m.get("state", ""))}'
+            f'<h2>{esc(m.get("headline","Markets"))}</h2>'
+            f'{render_figure(m.get("image"))}{summary}{render_impl(m)}{render_chart(m.get("chart"))}'
             f'<table class="mkt">{rows}</table>{means}</div>')
 
 
 def render_watch(watch: list) -> str:
     new = [w for w in watch if w.get("new")]
     old = [w for w in watch if not w.get("new")]
-    out = ['<div class="sec"><h2>Exponential trends to watch.</h2>'
-           '<p class="sub">Signals to watch</p>']
+    out = [f'<div class="sec" id="trends">{kick("Signals to watch")}<h2>Exponential trends to watch.</h2>']
     for w in new:
         out.append(
             f'<div class="watch"><div class="t">{esc(w["trend"])} '
@@ -693,10 +741,11 @@ def render_watch(watch: list) -> str:
             f'<div class="via"><strong>What to watch:</strong> {esc(w["watch"])} '
             f'<strong>Where it shows up:</strong> {esc(w["expressions"])}</div></div>')
     if old:
-        out.append('<div class="watch small" style="color:#b3b3b3;border:0;font-style:italic">Still on watch</div>')
+        out.append(f'<details class="more"><summary>Still on watch ({len(old)})</summary>')
         for w in old:
             out.append(f'<div class="watch small"><strong style="color:#666">{esc(w["trend"])}</strong> '
                        f'&middot; {esc(w["status"])} &middot; {esc(w["expressions"])}</div>')
+        out.append("</details>")
     out.append("</div>")
     return "".join(out)
 
@@ -705,18 +754,32 @@ def render_lede(iss: dict) -> str:
     return f'<p class="lede">{esc(iss["lede"])}</p>' if iss.get("lede") else ""
 
 
+def render_brief(iss: dict) -> str:
+    """The week in brief: one line per lane under the masthead, each linking to its section."""
+    items = iss.get("brief") or []
+    if not items:
+        return ""
+    lis = "".join(f'<li><a class="lane" href="#{esc(b["anchor"])}">{esc(b["lane"])}</a> {esc(b["line"])}</li>'
+                  for b in items)
+    return f'<div class="brief"><p class="blbl">The week in brief</p><ul>{lis}</ul></div>'
+
+
 def render_act(title: str) -> str:
     return f'<div class="act"><div class="actlabel">{esc(title)}</div><hr></div>'
 
 
 def _regime(doc, iss, key):
     r = iss.get("regimes", {}).get(key)
-    return render_regime(doc["regime_defs"].get(key, {}).get("label", key), r) if r else ""
+    if not r:
+        return ""
+    return render_regime(doc["regime_defs"].get(key, {}).get("label", key), r,
+                         sid=SECTION_IDS.get(key, ""), neutral=(key == "deep_dive"))
 
 
 def render_issue_page(doc: dict, iss: dict) -> str:
     reg = iss.get("regimes", {})
-    secs = [render_lede(iss), render_momentum(doc, iss)]
+    dek = f'<p class="dek">{esc(iss["index_title"])}</p>' if iss.get("brief") and iss.get("index_title") else ""
+    secs = [render_brief(iss), render_lede(iss)]
     # Act 1 — the tech world
     secs.append(render_act("The tech world"))
     if "ai_compute" in reg:                       # issue 06+ : one merged AI lane
@@ -726,7 +789,6 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(_regime(doc, iss, "ai_agents"))
     if iss.get("across_sources"):
         secs.append(render_across_inline(iss["across_sources"]))   # GitHub note under AI
-    secs.append(render_watch(iss.get("bsig_watch") or doc.get("bsig_watch", [])))
     if iss.get("undercurrent"):
         secs.append(render_undercurrent(iss["undercurrent"]))
     # Act 2 — the wider world
@@ -742,14 +804,19 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_wildcard(iss["wildcard"]))
     if iss.get("briefs"):
         secs.append(render_briefs(iss["briefs"]))
+    # Act 3 — the standing trackers, together
+    secs.append(render_act("Tracking the regimes"))
+    secs.append(render_momentum(doc, iss))
+    secs.append(render_watch(iss.get("bsig_watch") or doc.get("bsig_watch", [])))
     secs.append(render_radar(iss))
     secs.append(render_watch_next(iss))
     body = "".join(secs)
     if 'class="cbox"' in body:
         body += CHART_JS
+    label = iss.get("date_label") or week_label(iss)
     inner = (
         f'<header class="mast"><h1><a href="../">The Current Regime</a></h1>'
-        f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</div></header>'
+        f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(label)}</div>{dek}</header>'
         f'<p class="back" style="margin-top:14px"><a href="../">&larr; all issues</a></p>'
         + body
     )

@@ -1725,3 +1725,43 @@ state's application Sept 8; Judge Clark then ordered the 2025 map; on Sept 9 the
 Not Politicians, von Glahn) applied; on Sept 10 the Court stayed Clark's order, so the 2022 map stands.
 Issue 13's watch-next note and deep-dive evidence corrected; the 13 audit ledger's 'the state refiled
 Sept 9' is superseded.
+
+### Issue 14 restructure (2026-09-14) — formatting and organization
+
+The owner asked for a review of the issue's formatting and organization, then asked for all of it to
+be applied to 14. Rendered length fell from 5,173 words to about 3,650 visible (the rest sits in
+collapsible blocks). What changed:
+
+- Top of page: the index title is now a dek under the masthead, followed by "The week in brief", one
+  line per lane linking to its section. The Hacker News attention table no longer opens the issue.
+- Three acts: the tech world (AI with the GitHub note, the undercurrent), the wider world (deep-dive,
+  geopolitics, commodities, markets, wildcard, smaller stories) and a new closing "Tracking the regimes"
+  act that groups the standing trackers (attention and what changed, exponential trends, the radar,
+  watch next). Old archive pages take the same order; the brief and dek show only where an issue has
+  them.
+- Sections: the label and state badge sit above the headline; the implication renders as a labelled
+  Key fact directly under the summary (markets now shows its key fact too). Deep-dive badges are
+  neutral grey, since "accelerating" in a disaster lane is not good news. Commodities shows a human
+  date.
+- Collapsed on the site (shown in full in the email): link lists past six ("more sources"), the markets
+  explainer, "still on watch".
+- One home per story: geopolitics owns the events, commodities the prices, markets the rates, the radar
+  a one-sentence read. The pipeline, Fed odds and El Niño numbers now appear once each in the running
+  text, plus the brief. Headlines cut to 16–20 words; geopolitics comments to about 60 words; the
+  wildcard to four items (IDScan, the A/I timeline and the Flock item left; A/I's context moved to its
+  watch-next note); watch-next notes rewritten so they add rather than repeat.
+- Radar: energy, monetary and AI sovereignty spotlit with short reads; dedollarization, China's stack and
+  trade carry a one-sentence `line`, which the renderers now show instead of the first basket entry.
+  That makes the BRICS and Nvidia–Anthropic updates visible again.
+- Key facts that repeated their summaries were replaced: deep-dive now holds Copernicus's 1.65°C (moved
+  out of the summary); markets holds the two-year yield against the high-yield spread (moved out of the
+  summary).
+- Photos: the 2020 Bab al-Mandeb and 2012 LG stand photos were removed as decoration; the Borneo image
+  was re-fetched with the frame shifted east (107–121°E) to lose the black orbit gap; images are capped
+  at 340px tall.
+- No facts were added in the restructure; every sentence kept is from the verified amendment or the
+  audited issue, shortened.
+
+The skill now carries the new shape, the length budget, the one-home rule, the radar `line` field, the
+Key fact placement, the stricter photo rule, `media.py`, and the big-story sweep and audit as build
+steps.

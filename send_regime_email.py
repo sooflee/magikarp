@@ -107,22 +107,49 @@ def _items_html(items):
         for it in items)
 
 
+def _kick_html(label_html):
+    return (f'<p style="margin:0 0 4px; color:{ACCENT}; font-size:13px; font-weight:600; '
+            f'font-family:{SERIF};">{label_html}</p>')
+
+
+def _h2_html(title_html):
+    return (f'<h2 style="margin:0 0 12px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; '
+            f'letter-spacing:-0.3px; font-family:{SERIF};">{title_html}</h2>')
+
+
+def _impl_html(implication):
+    if not implication:
+        return ""
+    return (f'<p style="margin:10px 0 12px; padding-left:12px; border-left:2px solid #e5e5e5; color:#1a1a1a; '
+            f'font-size:15px; line-height:1.6; font-family:{SERIF};">'
+            f'<span style="display:block; color:#9a9a9a; font-size:11px; letter-spacing:1.2px; '
+            f'text-transform:uppercase; font-weight:700;">Key fact</span>{esc(implication)}</p>')
+
+
+def _human_date(s):
+    import datetime as dt
+    try:
+        d = dt.date.fromisoformat(s)
+        return f"{d.strftime('%B')} {d.day}"
+    except Exception:
+        return s
+
+
 def _section_html(label, title, paragraph, links=None, items=None, trajectory=None, implication=None):
     traj = (f'<p style="margin:0 0 12px; color:#9a9a9a; font-size:13px; font-style:italic; '
             f'font-family:{SERIF};">{esc(trajectory)}</p>' if trajectory else "")
-    sub_mb = "2px" if trajectory else "14px"
-    impl = (f'<p style="margin:12px 0 0; color:#666; font-size:14px; line-height:1.6; '
-            f'font-style:italic; font-family:{SERIF};">{esc(implication)}</p>' if implication else "")
+    para = (f'<p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">'
+            f'{esc(paragraph)}</p>' if paragraph else "")
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(title)}</h2>
-              <p style="margin:0 0 {sub_mb}; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">{esc(label)}</p>
+              {_kick_html(esc(label))}
+              {_h2_html(esc(title))}
               {traj}
-              <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(paragraph)}</p>
+              {para}
+              {_impl_html(implication)}
               {_items_html(items)}
               {_links_html(links)}
-              {impl}
             </td>
           </tr>
 """
@@ -159,8 +186,8 @@ def _momentum_html(state):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">Where the week&rsquo;s attention went.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Regime momentum &middot; {esc(weeks[0])} vs {esc(weeks[-1])}</p>
+              {_kick_html("Regime momentum &middot; " + esc(weeks[0]) + " vs " + esc(weeks[-1]))}
+              {_h2_html("Where the week&rsquo;s attention went.")}
               <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">Number of the week&rsquo;s top Hacker News stories in each regime we cover, this week against last.</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
               {_changed_block_html(state)}
@@ -214,8 +241,8 @@ def _watch_next_html(issue):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">What to watch next week.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">The calendar ahead</p>
+              {_kick_html("The calendar ahead")}
+              {_h2_html("What to watch next week.")}
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
             </td>
           </tr>
@@ -223,8 +250,11 @@ def _watch_next_html(issue):
 
 
 def _radar_compact(r):
-    b0 = (r.get("basket") or [None])[0]
-    fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
+    if r.get("line"):
+        fact = f' {esc(r["line"])}'
+    else:
+        b0 = (r.get("basket") or [None])[0]
+        fact = f' {esc(b0["metric"])}: {esc(b0["value"])}.' if b0 else ""
     return (f'<p style="margin:7px 0 0; font-family:{SERIF}; font-size:15px; line-height:1.55; color:#555;">'
             f'<strong style="color:#1a1a1a;">{esc(r["name"])}</strong> '
             f'<span style="color:{ACCENT}; font-style:italic;">{esc(r.get("direction",""))}</span>.'
@@ -258,8 +288,8 @@ def _radar_html(issue):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">The structural picture.</h2>
-              <p style="margin:0 0 8px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Regime radar &middot; read through markets and hard data</p>
+              {_kick_html("Regime radar &middot; read through markets and hard data")}
+              {_h2_html("The structural picture.")}
               <p style="margin:0 0 6px; color:#555; font-size:15px; line-height:1.6; font-family:{SERIF};">The slow currents beneath the week. Each is read from a basket of dated markets and hard data, not a single headline.</p>
               {''.join(blocks)}
             </td>
@@ -283,9 +313,10 @@ def _market_html(m):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(m.get("headline","Markets"))}</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Markets</p>
-              <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(m.get("summary",""))}</p>
+              {_kick_html("Markets")}
+              {_h2_html(esc(m.get("headline","Markets")))}
+              <p style="margin:0 0 4px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(m.get("summary",""))}</p>
+              {_impl_html(m.get("implication"))}
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
               <p style="margin:16px 0 0; color:#555; font-size:15px; line-height:1.8; font-family:{SERIF};">{esc(MARKET_MEANS)}</p>
             </td>
@@ -318,8 +349,8 @@ def _commodities_html(c):
     return f"""
           <tr>
             <td style="padding:40px 0 0;">
-              <h2 style="margin:0 0 2px; color:#1a1a1a; font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.3px; font-family:{SERIF};">{esc(c.get("headline", "Crude falls as the fear premium unwinds."))}</h2>
-              <p style="margin:0 0 14px; color:{ACCENT}; font-size:15px; font-weight:600; font-family:{SERIF};">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>
+              {_kick_html("Commodities &amp; energy &middot; " + esc(_human_date(c.get("as_of",""))))}
+              {_h2_html(esc(c.get("headline", "Crude falls as the fear premium unwinds.")))}
               <p style="margin:0 0 16px; color:#1a1a1a; font-size:17px; line-height:1.75; font-family:{SERIF};">{esc(c.get("summary",""))}</p>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{''.join(rows)}</table>
             </td>
@@ -389,6 +420,23 @@ def _lede_html():
 """
 
 
+def _brief_html():
+    items = ISSUE.get("brief") or []
+    if not items:
+        return ""
+    lis = "".join(
+        f'<tr><td style="padding:0 0 8px; font-family:{SERIF}; font-size:15px; line-height:1.5; color:#1a1a1a;">'
+        f'<strong style="color:{ACCENT};">{esc(b["lane"])}</strong> {esc(b["line"])}</td></tr>' for b in items)
+    return f"""
+          <tr>
+            <td style="padding:24px 0 0;">
+              <p style="margin:0 0 8px; color:#1a1a1a; font-size:13px; letter-spacing:2px; text-transform:uppercase; font-weight:700; font-family:{SERIF};">The week in brief</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">{lis}</table>
+            </td>
+          </tr>
+"""
+
+
 def _regime_section(key):
     r = ISSUE.get("regimes", {}).get(key)
     if not r:
@@ -400,7 +448,7 @@ def _regime_section(key):
 
 def build_html():
     reg = ISSUE.get("regimes", {})
-    body = [_lede_html(), _momentum_html(STATE)]
+    body = [_brief_html(), _lede_html()]
 
     # Act 1 — the tech world
     body.append(_act_html("The tech world"))
@@ -411,7 +459,6 @@ def build_html():
         body.append(_regime_section("ai_agents"))
     if ISSUE.get("across_sources"):
         body.append(_across_inline(ISSUE["across_sources"]))   # GitHub note folded under AI
-    body.append(regime_engine.render_watch_html(STATE))
     if ISSUE.get("undercurrent"):
         u = ISSUE["undercurrent"]
         body.append(_section_html(u.get("label", "Undercurrent"), u.get("headline", ""),
@@ -433,11 +480,20 @@ def build_html():
         body.append(_section_html(label, w["headline"], w.get("summary", ""),
                                   w.get("links"), w.get("items")))
     if ISSUE.get("briefs"):
-        body.append(_section_html("short items from the week's edges",
+        body.append(_section_html("Short items from the week's edges",
                                   "Smaller stories.", "", None, ISSUE["briefs"]))
-    body.append(_radar_html(ISSUE))
 
+    # Act 3 — the standing trackers, together
+    body.append(_act_html("Tracking the regimes"))
+    body.append(_momentum_html(STATE))
+    body.append(regime_engine.render_watch_html(STATE))
+    body.append(_radar_html(ISSUE))
     body.append(_watch_next_html(ISSUE))
+
+    dek = ""
+    if ISSUE.get("brief") and ISSUE.get("index_title"):
+        dek = (f'<p style="margin:16px 0 0; color:#1a1a1a; font-size:17px; line-height:1.5; '
+               f'font-family:{SERIF};">{esc(ISSUE["index_title"])}</p>')
 
     return f"""\
 <!DOCTYPE html>
@@ -456,6 +512,7 @@ def build_html():
             <td style="text-align:center; padding-bottom:6px;">
               <h1 style="margin:0; font-size:32px; font-weight:700; letter-spacing:-0.5px; font-family:{SERIF};"><a href="https://www.bwang.io/magikarp/" style="color:#1a1a1a; text-decoration:none;">The Current Regime</a></h1>
               <p style="margin:14px 0 0; color:#9a9a9a; font-size:13px; letter-spacing:2.5px; text-transform:uppercase; font-family:{SERIF};">Issue {esc(ISSUE['id'])} &middot; {esc(DATE_LABEL)}</p>
+              {dek}
             </td>
           </tr>
           <tr><td style="padding:26px 0 0;"><div style="border-top:1px solid #1a1a1a; font-size:0; line-height:0;">&nbsp;</div></td></tr>
@@ -497,8 +554,66 @@ def build_plain():
            "Sourced from the week's top posts on Hacker News and wider reporting,",
            "claims verified against primary sources, with a market-regime read.", "",
            "-" * 74, ""]
+    if ISSUE.get("brief"):
+        if ISSUE.get("index_title"):
+            out += [ISSUE["index_title"], ""]
+        out += ["THE WEEK IN BRIEF", ""]
+        out += [f"  {b['lane']}: {b['line']}" for b in ISSUE["brief"]]
+        out += ["", "-" * 74, ""]
     if ISSUE.get("lede"):
         out += [ISSUE["lede"], "", "-" * 74, ""]
+
+    def lane(label, r):
+        refs = _items_text(r.get("items")) or _links_text(r.get("links")).rstrip()
+        block = [f"{label.upper()}: {r.get('headline','')}", "", r.get("summary", ""), ""]
+        if r.get("implication"):
+            block += [f"Key fact: {r['implication']}", ""]
+        return block + [refs, ""]
+
+    out += ["THE TECH WORLD", ""]
+    for key in ("ai_compute", "tech_policy", "ai_agents"):
+        if key in reg:
+            out += lane(DEFS.get(key, {}).get("label", key), reg[key])
+    if ISSUE.get("across_sources"):
+        a = ISSUE["across_sources"]
+        if a.get("github"):
+            out += [f"On GitHub this week, trending is mostly {a.get('github_theme','')}: "
+                    + ", ".join(r["title"] for r in a["github"][:5]), ""]
+    if ISSUE.get("undercurrent"):
+        u = ISSUE["undercurrent"]
+        out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",
+                _links_text(u.get("links")).rstrip(), ""]
+
+    out += ["THE WIDER WORLD", ""]
+    for key in ("deep_dive", "geopolitics"):
+        if key in reg:
+            out += lane(DEFS.get(key, {}).get("label", key), reg[key])
+    if ISSUE.get("commodities"):
+        c = ISSUE["commodities"]
+        out += [f"COMMODITIES & ENERGY ({_human_date(c.get('as_of',''))})", "", c.get("summary", ""), ""]
+        for it in c["items"]:
+            if _chg_mag(it.get("change", "")) < c.get("min_change", 0):
+                continue
+            out.append(f"  {it['name']}: {it.get('level','')} ({it.get('change','')})")
+        out.append("")
+    if "markets" in reg:
+        m = reg["markets"]
+        sig = m.get("signals", {})
+        out += [f"MARKETS: {m.get('headline','')}", "", m.get("summary", ""), ""]
+        if m.get("implication"):
+            out += [f"Key fact: {m['implication']}", ""]
+        out += ["  " + ", ".join(f"{lbl} {sig[k]}" for k, lbl in MKT_ORDER if k in sig),
+                "", MARKET_MEANS, ""]
+    if ISSUE.get("wildcard") and ISSUE["wildcard"].get("headline"):
+        w = ISSUE["wildcard"]
+        topic = w.get("topic", "")
+        head = f"THE WILDCARD ({topic}): " if topic else "THE WILDCARD: "
+        refs = _items_text(w.get("items")) or _links_text(w.get("links")).rstrip()
+        out += [f"{head}{w['headline']}", "", w.get("summary", ""), "", refs, ""]
+    if ISSUE.get("briefs"):
+        out += ["SMALLER STORIES:", "", _items_text(ISSUE["briefs"]), ""]
+
+    out += ["TRACKING THE REGIMES", ""]
     m = ISSUE.get("momentum")
     if m:
         ser = m["series"]
@@ -528,40 +643,7 @@ def build_plain():
                 dd = {"up": "up", "down": "down"}.get(mv.get("dir"), "flat")
                 out.append(f"    - {mv['market']} ({dd}): {mv.get('detail','')}  {mv['url']}")
             out.append("")
-    for key, r in reg.items():
-        if key == "markets":
-            continue
-        label = DEFS.get(key, {}).get("label", key).upper()
-        refs = _items_text(r.get("items")) or _links_text(r.get("links")).rstrip()
-        out += [f"{label}: {r.get('headline','')}", "", r.get("summary", ""), "", refs, ""]
-        if r.get("implication"):
-            out += [r["implication"], ""]
-    if ISSUE.get("commodities"):
-        c = ISSUE["commodities"]
-        out += [f"COMMODITIES & ENERGY ({c.get('as_of','')})", "", c.get("summary", ""), ""]
-        for it in c["items"]:
-            if _chg_mag(it.get("change", "")) < c.get("min_change", 0):
-                continue
-            out.append(f"  {it['name']}: {it.get('level','')} ({it.get('change','')})")
-        out.append("")
-    if "markets" in reg:
-        m = reg["markets"]
-        sig = m.get("signals", {})
-        out += [f"MARKETS: {m.get('headline','')}", "", m.get("summary", ""), "",
-                "  " + ", ".join(f"{lbl} {sig[k]}" for k, lbl in MKT_ORDER if k in sig),
-                "", MARKET_MEANS, ""]
-    if ISSUE.get("wildcard") and ISSUE["wildcard"].get("headline"):
-        w = ISSUE["wildcard"]
-        topic = w.get("topic", "")
-        head = f"THE WILDCARD ({topic}): " if topic else "THE WILDCARD: "
-        refs = _items_text(w.get("items")) or _links_text(w.get("links")).rstrip()
-        out += [f"{head}{w['headline']}", "", w.get("summary", ""), "", refs, ""]
-    if ISSUE.get("briefs"):
-        out += ["SMALLER STORIES:", "", _items_text(ISSUE["briefs"]), ""]
-    if ISSUE.get("undercurrent"):
-        u = ISSUE["undercurrent"]
-        out += [f"UNDERCURRENT: {u.get('headline','')}", "", u.get("summary", ""), "",
-                _links_text(u.get("links")).rstrip(), ""]
+    out += [regime_engine.render_text(STATE), ""]
     if ISSUE.get("structural_regimes"):
         regs = ISSUE["structural_regimes"]
         out += ["THE STRUCTURAL PICTURE (regime radar, read through markets and hard data):", ""]
@@ -576,8 +658,11 @@ def build_plain():
         if steady:
             out.append("  Holding steady:")
             for r in steady:
-                b0 = (r.get("basket") or [None])[0]
-                fact = f" {b0['metric']}: {b0['value']}." if b0 else ""
+                if r.get("line"):
+                    fact = f" {r['line']}"
+                else:
+                    b0 = (r.get("basket") or [None])[0]
+                    fact = f" {b0['metric']}: {b0['value']}." if b0 else ""
                 out.append(f"    - {r['name']} ({r.get('direction','')}).{fact}")
             out.append("")
     if ISSUE.get("watch_next"):
@@ -585,13 +670,6 @@ def build_plain():
         for it in ISSUE["watch_next"]:
             out.append(f"  {it.get('when','')} - {it.get('event','')}: {it.get('note','')}")
         out.append("")
-    out += [regime_engine.render_text(STATE), ""]
-    if ISSUE.get("across_sources"):
-        a = ISSUE["across_sources"]
-        if a.get("github"):
-            out += ["ACROSS THE SOURCES", "",
-                    f"GitHub trending shows {a.get('github_theme','')}: "
-                    + ", ".join(r["title"] for r in a["github"][:5]), ""]
     out += ["-" * 74, "Regimes change. Understanding the world within a changing context."]
     return "\n".join(out)
 

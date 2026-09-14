@@ -16,37 +16,39 @@ render from it. They must stay 1:1. Never hand-edit the rendered output.
 
 ## The shape of an issue (sections, in order)
 
-The issue is organized into two acts. Keep this order; the renderers follow it.
+The issue opens with a summary and then runs in three acts. Keep this order; both renderers
+(site and email) follow it, and the plain-text email mirrors it.
 
-1. **Where the week's attention went** — regime momentum (HN story counts per
-   covered regime, this week vs last, with each regime's "week N in <state>"),
-   then **Markets that swung this week** (high-volume, big-swing prediction markets).
-2. **What changed** — the week-over-week regime diff. Suppressed automatically when
-   the previous issue is the partial baseline (issue 01 has none; it begins at 02).
-3. **— The tech world —**
+0. **Masthead and the week in brief** — the issue's `index_title` as a one-sentence dek under
+   the masthead, then `brief`: one line per lane (AI & compute, the deep-dive, geopolitics,
+   markets, the wildcard), each under 30 words, each linking to its section on the site.
+1. **— The tech world —**
    - **AI & compute** regime — the whole AI industry in one lane: model launches
-     and pricing, who controls access, and agent security. (This merges the former
-     Tech & policy + AI agents lanes so the same model story is not told twice.)
-     Carries the inline "On GitHub this week" note folded under it.
-   - **Exponential trends to watch** (the forward watchlist)
+     and pricing, who controls access, agent security and the money. Carries the inline
+     "On GitHub this week" note folded under it.
    - **Undercurrent** (a quieter counter-theme, if present)
-4. **— The wider world —**
+2. **— The wider world —**
    - **Deep-dive of the week** — the rotating non-tech core lane; it leads this act.
-     Its domain changes every week (see the rotation below), so the issue is not
-     all-tech.
+     Its domain changes every week (see the rotation below), so the issue is not all-tech.
    - **Geopolitics** (a 4–6 story digest across more than one theatre, each tied to
      a regime; the issue's breadth beyond tech, sourced from world reporting, not HN)
    - **Commodities & energy** (big movers only)
-   - **Markets** (the cards + plain-language explainer)
+   - **Markets** (the cards + a collapsible plain-language explainer)
    - **The wildcard** (one rotating theme, from a different rotation than the
      deep-dive; mandatory each week)
    - **Smaller stories** (optional: 3-6 one-line briefs from the briefs sweep)
+3. **— Tracking the regimes —** the standing trackers, together at the end:
+   - **Where the week's attention went** — regime momentum (HN story counts per covered
+     regime, this week vs last), **What changed** (the week-over-week diff; suppressed when
+     the previous issue is the partial baseline) and **Markets that swung this week**.
+   - **Exponential trends to watch** (the forward watchlist; "still on watch" collapses)
    - **The structural picture** (the regime radar)
-5. **What to watch next week** — a short forward calendar.
+   - **What to watch next week** — a short forward calendar.
 
-Every editorial section is a **direct declarative headline + a small subtitle**
-(the category) + a short didactic paragraph. Length scales with the week (see
-Adaptive depth).
+Every editorial section is a **small label (with the state badge) above a direct declarative
+headline**, then a short didactic paragraph, then the **Key fact** (the `implication`), then any
+chart, items and sources. Length scales with the week (see Adaptive depth) inside the length
+budget in House style.
 
 ## Build pipeline
 
@@ -73,6 +75,8 @@ Adaptive depth).
    helpers, not in the default run: `fetch_edgar('"query"')` for SEC filings
    behind a story; `fetch_eia()` / `fetch_acled()` activate when EIA_API_KEY /
    ACLED_KEY+ACLED_EMAIL are exported.
+   **Then run the big-story sweep** (section below) so no week-defining story is left to
+   whichever lane happened to look for it.
    **Then run `python3 coverage.py` and act on it the same way.** It reads every
    past issue and prints a COVERAGE DEBT block: WARN lines for any region or topic
    that has not appeared in the last three issues, an "every issue" list (the
@@ -98,7 +102,7 @@ Adaptive depth).
 4. **Write the four core lanes.** The four lanes are fixed: **AI & compute**
    (`ai_compute`), the **Deep-dive of the week** (`deep_dive`), **Geopolitics**
    (`geopolitics`), and **Markets** (`markets`). For each: a `state` (from its state
-   space), a direct `headline`, a didactic `summary` (~40–90 words), an `implication`
+   space), a direct `headline`, a didactic `summary` (90–130 words at most), an `implication`
    that is **one bounded, verifiable statement** (a reported fact, a count, an
    observation — never a sweeping claim), `evidence`, and the article `links`.
    Geopolitics uses `items:[{title,url,comment}]` where each comment ties the story
@@ -116,10 +120,17 @@ Adaptive depth).
      Its domain rotates, so it is deliberately **not** part of the momentum or the
      week-over-week diff. Use states `accelerating / steady / stalling`.
 5. **Verify before publishing.** Web-search every factual claim against primary
-   reporting; cite outlets. Soften or drop anything unverified.
+   reporting; cite outlets. Soften or drop anything unverified. Then run the **audit**: four
+   adversarial verifier agents, one per lane group (AI; geopolitics and trade; markets and
+   commodities; deep-dive, wildcard, briefs), about 20 searches each, reporting exact
+   old/new text; apply fixes as exact-match replacements that fail loudly. Run the big-story
+   sweep again before the audit. Budget searches: the session cap is about 200, so keep lane
+   researchers near 18 each. Run the `human-voice` and `humanize` passes over all reader text.
 6. **Update state + ledger.** Append the issue object to `regime_state.json -> issues`;
    append a human-readable entry to `the-current-regime.md`.
-7. **Build + check.** `python3 build_site.py`; confirm email and site stay 1:1.
+7. **Build + check.** `python3 build_site.py` (link lint and `lint_media` run inside); confirm
+   email and site stay 1:1 for text; check the length budget; screenshot the page at desktop
+   width and inside a 375px iframe and look at it before sending.
 8. **Deliver.** `send_regime_email.py` (Gmail SMTP, password from `GMAIL_APP_PASSWORD`).
    Default is a preview to the owner (`--test`); sending to the subscriber list
    (`subscribers.txt`) is a deliberate manual step after review.
@@ -133,7 +144,15 @@ Adaptive depth).
 - **No internal jargon or code names** in reader-facing text (no "bsig", no signal
   IDs like AE-1). The market model and watchlist come from ekans; spell out what
   the reader sees.
-- Keep summaries tight (~40–90 words). Implications are bounded and verifiable.
+- **Length budget.** Aim for about 3,000 rendered words. Headlines at most about 20 words
+  (the label and badge sit above them). Summaries 90–130 words at most. Geopolitics, wildcard
+  and brief comments two sentences, about 60 words. The wildcard carries at most four items.
+  More than six links collapse behind "more sources" on the site, so order links by importance.
+- **One home per story.** Geopolitics owns events, commodities owns prices, markets owns
+  rates, the radar owns the slow read in one sentence. A fact already told is referred to, not
+  retold; issue 14 first shipped with the pipeline in four sections and the Fed odds in four.
+- Implications are bounded and verifiable, render as the **Key fact** under the summary, and
+  must not repeat a number from their own summary.
 - **Run the `human-voice` skill's self-edit pass** over all reader-facing text
   (headlines, summaries, comments, watchlist cards, ledger) before building or
   sending; it is the machine-writing-tell checklist and includes grep sweeps.
@@ -234,8 +253,10 @@ a missing credit, licence, alt, caption, dimensions or file.
   what the picture shows, where and when ("The Bab al-Mandeb strait ... photographed
   from the ISS in February 2020"). An archive photo must carry its own date so it is
   never mistaken for this week. Claim nothing you cannot see in the frame.
-- **One or two photos a week, where a real picture exists.** A satellite image of the
-  event beats a stock shot; a lane with nothing licensed and relevant gets no photo.
+- **Only photos that show something about this week**, such as a satellite image of the
+  event. No stock, trade-fair or archive shots: issue 14's 2012 LG stand and 2020 strait photo
+  were removed as decoration. A lane with nothing like that gets no photo, and most weeks that
+  means one photo or none.
 - **Charts: one dated series each** (`chart:{title, subtitle, series:[{name, points:
   [[YYYY-MM-DD, value]]}], prefix|suffix, decimals, y_min?, y_max?, ref?:{value,label},
   highlight_from, highlight_label, source, source_url?}`). Two or more series need a
@@ -254,7 +275,10 @@ regimes (Dedollarization, Monetary policy, Fragmentation, the AI buildout, AI
 sovereignty). A regime is a structural current, not an event ("Iran ceasefire
 holds" is an event). Read each from the **drift of a basket** of dated markets and
 hard data, not one headline. Store as
-`structural_regimes:[{name, direction, read, basket:[{metric,value,url}], spotlight}]`.
+`structural_regimes:[{name, direction, read, line?, basket:[{metric,value,url}], spotlight}]`.
+Spotlight every regime that moved this week. Give every other regime a one-sentence `line`;
+the Holding-steady list renders it, and without it only the first basket entry shows, which
+is how issue 14's BRICS and Nvidia–Anthropic updates first went invisible.
 Subtitle the section "read through markets and hard data" (most baskets are data +
 Metaculus forecasts, not swinging money markets).
 
@@ -293,11 +317,14 @@ index_title   # archive/index title: state the week's defining event AS a move i
               # larger trend ("Open weights become Chinese industrial policy as oil
               # re-enters the inflation story."), never a bare event list ("X ships;
               # Y lands."). Event anchor + trend meaning in one declarative sentence.
+brief         # [{lane, anchor, line}] the week in brief; anchors: ai, deep-dive, geopolitics,
+              # markets, wildcard (section ids on the site)
 regimes: { ai_compute|deep_dive|geopolitics|markets: {
    state, headline, summary, implication, evidence[],
    links:[{points,title,url}], items:[{title,url,comment}](geopolitics),
    signals:{...}(markets only) } }
    # deep_dive also carries {domain} naming the week's rotating topic.
+   # any lane, commodities, wildcard or undercurrent may carry image{...} / chart{...} (site only)
 momentum: { weeks:[a,b], series:{regime:[prev,cur]} }   # ai_compute/geopolitics/markets only; never deep_dive
 market_moves: [{market, dir(up|down|flat), detail, url}]
 commodities: { as_of, min_change, summary, items:[{name,level,change}] }
@@ -305,7 +332,7 @@ undercurrent: { label, headline, summary, links:[...] }
 across_sources: { github_theme, github:[{title,url}] }
 wildcard: { topic, headline, summary, links:[...], items?:[{title,url}] }   # rotating, optional
 briefs: [{title, url, comment}]   # Smaller stories; optional, 3-6 one-liners
-structural_regimes: [{name, direction, read, basket:[{metric,value,url}], spotlight}]
+structural_regimes: [{name, direction, read, line?, basket:[{metric,value,url}], spotlight}]
 watch_next: [{when, event, note}]
 ```
 Global: `regime_defs` (state spaces) and `bsig_watch` (the watchlist).
@@ -319,6 +346,9 @@ Global: `regime_defs` (state spaces) and `bsig_watch` (the watchlist).
 - `classify.py` — keyword classifier → regime momentum counts.
 - `coverage.py` — coverage-debt ledger: region/topic tags per past issue, WARNs for
   anything unseen in three issues, the sameness signal, next issue's wildcard shortlist.
+- `media.py` — site images and chart series: Wikimedia Commons and NASA Worldview photos with
+  licence metadata, Polymarket UTC daily closes (match must hit exactly one market), yfinance
+  closes via the ekans venv.
 - `regime_state.json` — regime defs, every issue object, the watchlist.
 - `regime_engine.py` — week-over-week diff, momentum/trajectory, rendered blocks.
 - `send_regime_email.py` — renders + sends the HTML + plain-text issue (list-aware).
