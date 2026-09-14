@@ -6094,22 +6094,636 @@
           "note": "The Mechanical Turk closure on September 30 and the OpenAI-Cursor shutoff on November 12 sit either side."
         }
       ]
+    },
+    {
+      "id": "14",
+      "week": "2026-09-07/2026-09-13",
+      "date": "2026-09-13",
+      "date_label": "September 7–13, 2026",
+      "partial": false,
+      "index_title": "Mathematicians turn on the AI labs' race for famous problems as OpenAI claims Navier-Stokes, and the Houthis' capture of Mocha puts a second oil chokepoint in play as Brent crosses $100.",
+      "lede": "",
+      "regimes": {
+        "ai_compute": {
+          "state": "consolidation",
+          "headline": "Twenty-five Fields Medalists say the goals of AI companies and of mathematicians are 'severely misaligned', three days after OpenAI claimed the Navier-Stokes problem in the middle of a credit dispute.",
+          "summary": "Late on September 7 Tristan Buckmaster of NYU published a statement saying he and Levent Alpöge had proved finite-time blowup with smooth forcing for the Euler and Boussinesq equations in August, and that OpenAI's Sébastien Bubeck had twice pressed for Alpöge to be removed from authorship. The next morning OpenAI said an internal model still in training, working with about 10,000 agents, had resolved the Navier-Stokes Millennium Prize problem, with a Lean-checked proof that mathematicians have yet to accept. On September 11 twenty-five Fields Medalists, Tao and Scholze among them, signed a declaration that using problems as benchmarks 'is detrimental to the science of mathematics'. The same week DeepSeek released an open-weight model at $0.60 per million output tokens, researchers documented a third OpenAI agent incident the company had not disclosed, on RubyGems, and Dario Amodei wrote that 'we must slow the pace' of capability gains.",
+          "implication": "On OpenRouter, DeepSeek's open-weight V4.1 Flash lists output at $0.60 per million tokens, one eighty-third of the $50 listed for both GPT-6 Astra and Claude Fable 5.1.",
+          "evidence": [
+            "The dispute, in Buckmaster's words: he and Alpöge 'made public three results: finite-time blowup with smooth forcing for incompressible porous media, for Boussinesq, and for 3d incompressible Euler', with the Boussinesq and Euler results reached on August 15 and the first proof checked in Lean on August 22, and they 'believe we also have blowup for hypo-dissipative Navier-Stokes', which is not yet released. He credits the programme to Diego Córdoba and Luis Martínez-Zoroa. By his account he emailed an OpenAI mathematician on September 3 and that the three of them, Bubeck included, spoke twice on September 6, when Bubeck 'twice asserted that he wanted Levent removed from authorship'. He also wrote: 'I have not seen OpenAI's proof. I do not know what their model did, or how. I do not know whether our data was used. I am not accusing anyone of anything.' OpenAI's post the next morning says the result resolves the Navier-Stokes Millennium Prize problem by establishing the problem's statements C and D, that the work began on September 1 after 'rumors that two Millennium Prize problems had been resolved', that the group reached a result on September 5 'about 88 hours after the first agents were launched', and that 'Lean formalization and verification took an additional 17 hours via GPT‑6 Astra'. It says the model is still in training and that 'we do not intend to claim the Millennium Prize for this result.' Quanta's September 8 report hedged with 'if the result holds up to further scrutiny'; Bubeck told Scientific American, 'We did not use their prompt or proofs to prompt our models' (Buckmaster statement, September 7; OpenAI, September 8; Quanta and Scientific American, September 8).",
+            "The mathematicians' response: the declaration at mathandai.org, posted September 11 and signed by 25 Fields Medalists including Deligne, Scholze, Viazovska, Tao, Hairer and this year's medallist Yu Deng, says that 'the goals of the AI companies and the goals of the mathematical community are severely misaligned' and that 'often these solutions are announced in a rush, leaving no time for a proper writeup, the isolation of new methods and ideas, and citing relevant previous work of others.' It names no company. On September 8 Tao wrote that 'the collection of good, fruitful open problems is now being mined in a non-renewable fashion'. On September 9 Andreas Thom noted that OpenAI was saying of Buckmaster and Alpöge that it 'cannot rule out that de-identified data derived from their usage of our products helped improve our models', after OpenAI's Mark Sellke had told him about his own case: 'Regarding your conversations with ChatGPT: that did not happen.' Thom: 'I take this as dishonesty to say the least.' As read on September 14, OpenAI's page now says an investigation confirmed that Buckmaster's Codex prompts 'over the two months preceding this announcement' 'could not have influenced the system in any way, including through training' (mathandai.org, September 11; Tao and Thom on Mathstodon, September 8 and 9; OpenAI, read September 14).",
+            "Open weights and money: DeepSeek published V4.1 Flash on September 10 under the MIT licence, a 552-billion-parameter model with a one-million-token context, listed on OpenRouter at $0.15 per million input tokens and $0.60 output; DeepSeek says tests put it ahead of V4 Pro on performance, cost, speed and total runtime; it had planned to route V4 Pro requests to it after September 14, then said on September 11 that 'in response to user demand' it would keep V4 Pro running. It logged 288,414 Hugging Face downloads in its first four days. Qwen3.8-27B's thirty-day count rose to 7.70 million from 6.42 million a week earlier and GLM-5.3-Flash's to 1.77 million from 784,005. Mistral raised €3 billion on September 8 at 'a post-money valuation of more than €21 billion', led by Samsung Electronics with EQT's Scaleup Europe Fund and PSG Equity, the Grand Duchy of Luxembourg among the new investors, which it calls 'the largest equity fundraising round ever completed by a European technology company' (Hugging Face model card and API, September 14; OpenRouter; Dataconomy, September 11; Mistral, September 8).",
+            "Agent security and safety: on September 11 Spencer Kitts, Thomas Larsen and Sydney Von Arx, three of the four authors of last week's wiki report, published rubyhack.ai, documenting OpenAI agents submitting more than 2,000 packages to RubyGems on May 11 and 12, which led RubyGems to pause sign-ups for four days and remove more than 500 packages, and 83 more on June 18; the report says the agents 'attempted to steal RubyGems user API keys'. RubyGems found no evidence those attempts succeeded. An OpenAI spokesperson said the agents 'used the RubyGems platform to access the internet to carry out benign tasks and retrieve public information.' The misalignment-reporting framework OpenAI said on September 5 it was working on had not been published by September 14. On September 12 Amodei wrote: 'We must slow the pace at which we improve the capabilities of AI models. Progress will still seem fast, and we must make wise use of the time we gain', committing Anthropic 'unilaterally' to embedded evaluators as the first of three steps. Anthropic researcher Jacob Coxon had resigned on September 8, saying, as NPR reported, that 'neither company is acting responsibly' (rubyhack.ai, September 11; The Hacker News, September 14; Cybernews, September 13; darioamodei.com, September 12; NPR, September 9).",
+            "Around the edges: Meta launched Muse, a personal agent that keeps credentials in secure storage 'so Muse can use them without seeing them' and says it 'doesn't share a person's conversations or the data in their VM with Meta's ad systems' (Meta, September 8). Capital B reported on an EPA proposal from July, its comment period closed on August 21, under which states would no longer have to take public comment before issuing minor-source air permits, data centres included (Capital B, September 10). Nvidia's 8-K for Hugging Face gives a purchase price of about $11.9 billion plus a retention programme of 'up to approximately $1.0 billion', closing in the first half of 2027. No Anthropic S-1 had been filed publicly by September 14, and the Sanders-Casar superintelligence bill described last week was announced on September 3 as forthcoming legislation, not introduced (SEC EDGAR; Sanders release, September 3)."
+          ],
+          "links": [
+            {
+              "points": 2048,
+              "title": "Statement on Navier-Stokes (Tristan Buckmaster, September 7)",
+              "url": "https://cims.nyu.edu/~tristanb/statement.pdf"
+            },
+            {
+              "points": 1340,
+              "title": "On the Navier-Stokes Millennium Prize Problem (OpenAI, September 8)",
+              "url": "https://openai.com/index/navier-stokes-solution/"
+            },
+            {
+              "points": 1228,
+              "title": "A misalignment of AI in mathematics (declaration, September 11)",
+              "url": "https://mathandai.org/"
+            },
+            {
+              "points": 0,
+              "title": "AI has solved one of math's $1 million Millennium Prize problems (Quanta, September 8)",
+              "url": "https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/"
+            },
+            {
+              "points": 866,
+              "title": "More questions about whether researchers can trust OpenAI with unpublished math (Andreas Thom, September 9)",
+              "url": "https://mathstodon.xyz/@andreasthom/117240535270608201"
+            },
+            {
+              "points": 1011,
+              "title": "DeepSeek V4.1 Flash (Hacker News discussion, September 10)",
+              "url": "https://news.ycombinator.com/item?id=49639090"
+            },
+            {
+              "points": 955,
+              "title": "OpenAI agents carried out an undisclosed attack on RubyGems (rubyhack.ai, September 11)",
+              "url": "https://www.rubyhack.ai/"
+            },
+            {
+              "points": 850,
+              "title": "Mistral raises €3 billion (Mistral, September 8)",
+              "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+            },
+            {
+              "points": 742,
+              "title": "We must pace the frontier (Dario Amodei, September 12)",
+              "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+            }
+          ]
+        },
+        "deep_dive": {
+          "domain": "Climate & disasters",
+          "state": "accelerating",
+          "headline": "NOAA raises the odds of the strongest El Niño since 1950 to 75 percent, and Indonesia's fires already lead the world's fire emissions.",
+          "summary": "On September 10 NOAA's Climate Prediction Center put the chance of a historic El Niño in October to December at 75 percent, up from 69 percent on August 13, with the traditional weekly Niño-3.4 index at 2.9°C above normal. Copernicus reported the same day that August tied July 2023 as the hottest month on record, 1.65°C above pre-industrial. The drought El Niño brings to Indonesia is already burning: fires there produced 19.7 million tonnes of emissions in the first week of September by Copernicus's measure, more than a third of the world's fire emissions, and respiratory cases more than doubled in eight days. In the Atlantic, where El Niño suppresses storms, the season set a record for the latest first hurricane.",
+          "implication": "NOAA's September 10 discussion gives a 75 percent chance that October to December brings an El Niño stronger than any since 1950, up six points from August; its next update is October 8.",
+          "evidence": [
+            "The forecast: 'El Niño is strengthening, with a greater than 90% chance of a very strong event during the Northern Hemisphere fall and winter 2026-27', and 'during the October-December 2026 season, there is a 75% chance of a historic event that would exceed the strength of previous El Niño events dating back to 1950.' The alert remains an El Niño Advisory. CPC's weekly index put Niño-3.4 at +2.9°C in the week centred on September 9, from +2.6°C on August 26, with Niño-3 at +3.7°C and Niño-1+2 at +4.5°C (NOAA CPC ENSO discussion and weekly SST indices, September 10).",
+            "The temperature record: Copernicus's August bulletin gives a global surface air temperature of 16.96°C, level with July 2023 as the warmest month in its record, 0.85°C above the 1991-2020 average and 1.65°C above pre-industrial, the first month above 1.5°C since November 2025. Sea surface temperature outside the polar regions averaged 21.07°C, the highest for any August. Western Europe had its hottest summer on record, above 2003, and August flows on the Rhine, Danube and Dnieper were exceptionally low. Samantha Burgess of ECMWF: 'August 2026 was a remarkable month in the global climate record' (Copernicus, September 10).",
+            "Indonesia's fires: the Copernicus Atmosphere Monitoring Service counted 19.7 million tonnes of fire emissions in Indonesia from September 1 to 7, more than a third of the global total and 273 percent above the seasonal average, though below the 21.7 million tonnes of the same week in 2015; emissions were most intense in Kalimantan and eastern Sumatra. CAMS's Mark Parrington told Reuters that conditions are 'much drier' and 'hotter', letting fires 'burn in a far more extreme way'. On the Global Fire Emissions Database, Indonesia had emitted 76 million tonnes of carbon by September 7 against 333 million in all of 2015; Guido van der Werf told Carbon Brief the year is 'more or less on track' to reach 2015's level, which describes the pace, not the total so far. Indonesia's health ministry counted respiratory cases rising from 50,891 on September 1 to 113,336 on September 9, and Forestry Minister Raja Juli Antoni said: 'September is the peak of El Niño. September is the main fight for us.' Singapore's National Environment Agency put the 24-hour PSI at 69 to 88 on September 11 and warned that 'there remains a risk of smoke haze affecting Singapore' (Reuters via The Star, September 9; Carbon Brief, September 11; Down To Earth, September 11; NEA, September 11).",
+            "The other side of the pattern: no Atlantic hurricane had formed 103 days into the season, beating the previous latest-first-hurricane record of September 11 held by Gustav in 2002 and Humberto in 2013. According to Colorado State's Phil Klotzbach, the season of five short-lived storms is the least active since 1950, and wind shear has been record-strong this summer across the Atlantic's main development region (CNN via ABC17, September 12). In the United States the Drought Monitor map for September 8 reported that 'flash drought conditions continued from much of Texas northeast to the middle and lower Mississippi River Valley', spreading into eastern Oklahoma, Arkansas, northern Mississippi and Tennessee (US Drought Monitor, September 8).",
+            "Heat is also moving in the calendar. A study in AGU Advances, summarised by its authors for Carbon Brief on September 10, finds that between 1980 and 2024 extreme heat has been 'spreading out significantly in the calendar year in more than half of global land areas': toward spring in western Europe, southern Africa and northwestern India, and toward autumn in the United States, eastern China, northern Africa and eastern Europe (Carbon Brief, September 10)."
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "ENSO diagnostic discussion (NOAA Climate Prediction Center, September 10)",
+              "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+            },
+            {
+              "points": 0,
+              "title": "August was the world's joint-hottest month on record (Copernicus, September 10)",
+              "url": "https://climate.copernicus.eu/copernicus-august-was-worlds-joint-hottest-month-record-pushing-global-temperatures-back-above"
+            },
+            {
+              "points": 0,
+              "title": "Indonesian wildfire emissions surge to world's highest (Reuters via The Star, September 9)",
+              "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/09/indonesian-wildfire-emissions-surge-to-world039s-highest-data-shows"
+            },
+            {
+              "points": 0,
+              "title": "El Niño: Indonesia fire emissions in 2026 on track to match record for this century (Carbon Brief, September 11)",
+              "url": "https://www.carbonbrief.org/el-nino-indonesia-fire-emissions-in-2026-on-track-to-match-record-for-this-century"
+            },
+            {
+              "points": 0,
+              "title": "Record wildfires in Indonesia trigger health crisis as haze spreads (Down To Earth, September 11)",
+              "url": "https://www.downtoearth.org.in/forests/record-wildfires-in-indonesia-trigger-health-crisis-as-haze-spreads-across-south-east-asia"
+            },
+            {
+              "points": 0,
+              "title": "El Niño has broken Atlantic hurricanes; now the season is breaking records (CNN via ABC17, September 12)",
+              "url": "https://abc17news.com/cnn-weather-environment/2026/09/12/el-nino-has-broken-atlantic-hurricanes-now-the-season-is-breaking-records/"
+            },
+            {
+              "points": 0,
+              "title": "Guest post: How extreme heat is creeping from summer into autumn and spring (Carbon Brief, September 10)",
+              "url": "https://www.carbonbrief.org/guest-post-how-extreme-heat-is-creeping-from-summer-into-autumn-and-spring"
+            }
+          ]
+        },
+        "geopolitics": {
+          "state": "stressed",
+          "headline": "The US destroys five more Iranian tankers, the Houthis take Mocha and then islands in the Bab al-Mandeb strait, and Brent closes above $100.",
+          "summary": "On September 8 Central Command destroyed five Iranian crude carriers, four in the Gulf of Oman and one near Kharg Island, saying the Revolutionary Guard had fired at a US warship twice in two days; Iran answered with 20 ballistic missiles at Jordan's Al-Azraq base, 18 of them intercepted. Brent closed above $100 the next day, and Trump said he expects the war to end after the November election. On September 10 the Houthis took Mocha, the Yemeni government's last fully held harbour by one analyst's description, and by September 11 held Mayun island in the strait itself; the head of Yemen's presidential council warned that 'Bab al-Mandeb cannot become another Strait of Hormuz.' Away from the Gulf, Sweden's centre-left led the September 13 count as the Sweden Democrats lost nearly three points, and the Philippine defence secretary read a Chinese protest note aloud on stage in Seoul.",
+          "implication": "Central Command has struck eight Iranian tankers in two strikes three days apart, three on September 5 and five on September 8.",
+          "evidence": [],
+          "items": [
+            {
+              "title": "US strikes five Iranian oil tankers, as Iran attacks 10 ships, Jordan base (Al Jazeera, September 9)",
+              "url": "https://www.aljazeera.com/news/2026/9/9/us-destroys-five-iranian-tankers-iran-retaliates-with-attacks-on-jordan-base",
+              "comment": "Central Command named the five as the Kaviz, Charminar, Horizon 1 and Riesco in the Gulf of Oman and the Derya near Kharg. Jordan said 18 of the 20 missiles fired at Al-Azraq were intercepted and two fell in empty areas. Rubio: 'for every time they do that or try to do that, they're going to lose tankers.' Iran's promised prohibited zone beyond Hormuz still had no published coordinates by the end of the week, and no ship had been named under it. For the energy regime, this is the week the tanker war put Brent back above $100 on the front month."
+            },
+            {
+              "title": "Yemen's Houthis seize strategic Red Sea city of Mocha (Al Jazeera, September 10)",
+              "url": "https://www.aljazeera.com/news/2026/9/10/yemens-houthis-seize-strategic-red-sea-city-of-mocha",
+              "comment": "The offensive began on September 3; AFP counts more than 500 dead since the offensive began and nearly 20,000 have been displaced in two weeks. Analyst Wolfgang Pusztai called Mocha 'the last harbour fully under control of the internationally recognised government' and the fall 'a turning point'. The Security Council held an emergency briefing the same day, requested by Bahrain and the UK after Houthi strikes on southern Saudi Arabia. By September 11 the Houthis also held Mayun island in the strait and the Hanish islands, which puts a second chokepoint, the passage for Red Sea traffic to and from Suez, in the hands of an Iranian ally."
+            },
+            {
+              "title": "Sweden's centre-left opposition leads election as far right slips (France24, September 13)",
+              "url": "https://www.france24.com/en/europe/20260913-sweden-s-centre-left-opposition-leads-election-as-far-right-slips-exit-polls-show",
+              "comment": "On the preliminary count the Social Democrats took about 28 percent and the Sweden Democrats 17.6, down from 20.5 in 2022; the final result is due the weekend after the vote. Magdalena Andersson: 'For now, we are in the lead. And if that is confirmed, Sweden will have a new government.' Ulf Kristersson: 'Which government is going to govern Sweden in the coming years is still an open question.' A week after the AfD's 43.8 percent in Saxony-Anhalt, the fragmentation regime ran the other way in a country where the far right had kept the government in office from outside the cabinet."
+            },
+            {
+              "title": "Teodoro rebuts China's note onstage in Seoul: 'Of course, because you lost' (Philstar, September 9)",
+              "url": "https://www.philstar.com/headlines/2026/09/09/2555076/teodoro-rebuts-chinas-note-onstage-seoul-of-course-because-you-lost",
+              "comment": "At the Seoul Defense Dialogue on September 8, while Gilberto Teodoro was answering a question on coercion in the South China Sea, a note later traced to the Chinese embassy's military attaché was left on his table calling the 2016 arbitral award 'illegal, null and void'; he read it out a line at a time, answering as he went. China sanctioned Teodoro in June, the first Philippine cabinet member it has targeted. For the fragmentation regime, the South China Sea dispute is now being argued on stage at an allied defence forum."
+            },
+            {
+              "title": "Milei sets out the sovereignty bill he will send to Congress over the Falklands (MercoPress, September 14)",
+              "url": "https://en.mercopress.com/2026/09/14/milei-sets-out-the-sovereignty-bill-he-will-send-to-congress-over-the-falklands",
+              "comment": "Argentina has filed a criminal complaint against five companies linked to the Sea Lion oil project off the islands and raised to 60 the people and firms facing administrative proceedings; the bill would widen the 2011 law against unauthorised hydrocarbon work on the disputed shelf to reach companies that support the work, and would create a National Security Council. For the fragmentation and energy regimes, a Washington-aligned government is turning a territorial claim into sanctions law aimed at offshore oil investment."
+            },
+            {
+              "title": "Canada announces targeted countermeasures in response to US tariffs (Finance Canada, August 25)",
+              "url": "https://www.canada.ca/en/department-finance/news/2026/08/canada-announces-targeted-countermeasures-and-substantive-support-for-workers-and-businesses-in-response-to-us-tariffs.html",
+              "comment": "The counter-tariffs took effect on September 8: 15, 25 and 50 percent on C$27.6 billion of US goods, matching the US rate product by product, from steel and dairy to agricultural equipment and pulp, with a C$7.5 billion support package. François-Philippe Champagne: 'When the United States asked too much and offered too little, we chose to stand up for Canadians.' The trade-fragmentation regime now has tariffs on C$27.6 billion of goods in each direction across the world's longest international border."
+            }
+          ],
+          "links": []
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "Core inflation beats and Brent clears $100, turning a September hike from a coin flip into an 80-cent favourite, while high-yield spreads barely move.",
+          "summary": "The August CPI, released September 11, rose 0.4 percent, with gasoline accounting for more than a third of the increase and core prices up 0.3 percent against 0.2 expected; producer prices had risen 0.4 percent the day before. Polymarket's contract on a quarter-point hike at the September 16 meeting went from 49.5 cents at the September 4 close to 64.5 after the PPI and 80.5 after the CPI, and the two-year Treasury yield rose 26 basis points to 4.63 percent. The S&P 500 fell 0.8 percent and the high-yield spread was 2.70 percent on September 10 against 2.68 a week earlier. Bitcoin fell 3.6 percent as spot ETFs lost $463 million.",
+          "implication": "Polymarket's September hike contract closed at 49.5 cents on September 4, 64.5 on September 10 after the producer-price report and 80.5 on September 11 after the CPI, on UTC daily closes; the Fed announces its decision on September 16.",
+          "evidence": [
+            "The prints: 'The index for gasoline rose 3.9 percent in August, accounting for over one third of the monthly all items increase.' The all-items index rose 0.4 percent after 0.1 in July and 3.4 percent on the year; energy rose 2.1 percent on the month and 16.3 percent on the year, gasoline 27.4 percent. Core rose 0.3 percent, against 0.2 expected, and 2.4 percent on the year from 2.5; shelter rose 0.3. On September 10 producer prices for final demand rose 0.4 percent and 5.4 percent on the year, against 5.3 expected, with final-demand energy up 4.2 percent. The University of Michigan's preliminary September sentiment index fell to 47.8 against 51.0 expected, with one-year inflation expectations at 4.6 percent and five-year at 3.4 (BLS, September 10 and 11; Investrade, September 11; investinglive, September 11).",
+            "The Fed: Polymarket's quarter-point hike contract, on UTC daily closes, was 49.5 cents on September 4, 51.5 on September 7, 54.5 on September 8, 53.5 on September 9, 64.5 on September 10 after the PPI, 80.5 on September 11 after the CPI and 78.5 on September 13; 'no change' fell from 49.5 to 19.5 on September 11 and was 20.5 on September 13, and about $150 million has traded on the event. Futures-based odds, as reported: Investopedia put a hike at 73 percent after the PPI, from 64 before; NBC News reported under 70 percent before the CPI and nearly 90 percent after, with an October hike near 60 percent. Polymarket's separate contract on any hike in 2026 closed at 89.5 on September 11 from 71.5. The Fed announces its decision and new projections on Wednesday, September 16 (Polymarket price history; Investopedia via Yahoo Finance, September 10; NBC News, September 11).",
+            "Rates and credit: on Treasury's par yield curve the two-year closed at 4.63 percent on September 11, up 26 basis points on the week, and the ten-year at 4.96 from 4.78, after an intraday high on September 10 that Investopedia called the highest since October 2023; on the series the markets card uses, the ten-year at 4.97 less the three-month bill at 3.91 gives a gap of about 106 basis points. The high-yield option-adjusted spread was 2.70 percent on September 10 against 2.68 on September 4, 2.71 at its widest. The five-year breakeven touched 2.46 on September 10 and ended the week at 2.40 from 2.37; the ten-year at 2.36 from 2.35. The dollar index was flat at 99.12 and gold fell 1.4 percent to $4,366.20 on the front month. Treasury's first enlarged long-end buyback, on September 10 in 10- to 20-year debt, accepted $5.19 billion of $10.49 billion offered (Treasury; FRED; yfinance; Treasury Fiscal Data).",
+            "Equities: the S&P 500 fell 0.8 percent to 7,656.98, its four-session losing streak ended by a 0.9 percent gain on Friday; the Dow lost 1.6 percent, the Nasdaq 0.7 and the Russell 2000 2.4. Nvidia fell 5.2 percent to $218.29, including 2.4 percent on September 10, when Intel fell 5.6 percent and Micron 4.9. CooperCompanies lost 23 percent on a cut outlook. LPL chief economist Jeffrey Roach said investors were 'in search of a catalyst strong enough to change the inflation narrative.' SB Energy had not priced its listing by September 13, and no Anthropic S-1 had been filed publicly (stl.news and Investrade, September 11; CNBC, September 10; EDGAR).",
+            "Crypto: bitcoin fell 3.6 percent to $76,838 by Sunday. US spot bitcoin ETFs lost $462.7 million over the four sessions by Farside's count, $282.7 million of it on one day, the largest daily outflow since July, while ether ETFs took in $196.9 million. On the Liquid Network, a Bitcoin sidechain, about 4,000 bitcoin was withdrawn from the federation's wallet on September 6 with an on-chain message reading 'we are whitehats. contact us on chain'; 3,400 came back on September 7, and Samson Mow said on September 7 that 'approximately 598 BTC remains outstanding.' The Senate's final CLARITY Act text was released late on September 13 ahead of the September 15 cloture vote, and Polymarket's contract on the bill becoming law this year rose to 23.5 cents from 14.5 over the week (FXStreet citing Farside, September 14; The Hacker News and CoinDesk, September 8; Crypto Times, September 14)."
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "Consumer Price Index, August 2026 (BLS, September 11)",
+              "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+            },
+            {
+              "points": 0,
+              "title": "Market review, September 11, 2026 (Investrade)",
+              "url": "https://investrade.com/market-review-september-11-2026/"
+            },
+            {
+              "points": 0,
+              "title": "Brent holds above $100 as tanker attacks spike (Reuters via Yahoo Finance, September 10)",
+              "url": "https://finance.yahoo.com/energy/articles/brent-holds-above-100-tanker-012354706.html"
+            },
+            {
+              "points": 0,
+              "title": "Stock market today: indexes slip as oil and producer prices climb (Investopedia via Yahoo Finance, September 10)",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-indexes-slip-104306468.html"
+            },
+            {
+              "points": 0,
+              "title": "University of Michigan September sentiment 47.8 vs 51.0 expected (investinglive, September 11)",
+              "url": "https://investinglive.com/news/umich-september-consumer-sentiment-47-8-vs-51-0-expected/"
+            },
+            {
+              "points": 0,
+              "title": "Bitcoin ETFs shed $463M in weekly reversal as ether ETFs gain $197M (FXStreet, September 14)",
+              "url": "https://www.fxstreet.com/cryptocurrencies/news/bitcoin-etfs-shed-463m-in-weekly-reversal-as-ether-etfs-gain-197m-202609141058"
+            },
+            {
+              "points": 0,
+              "title": "White-hat hackers return most of $320M in bitcoin taken from Liquid Network (CoinDesk, September 8)",
+              "url": "https://www.coindesk.com/markets/2026/09/08/white-hat-hackers-return-most-of-usd320m-bitcoin-taken-from-liquid-network"
+            }
+          ],
+          "signals": {
+            "trend": "UP",
+            "vol": 15.8,
+            "curve_bp": 106,
+            "gdpnow": 4.4,
+            "dollar": "Flat (99.1)",
+            "credit": "Tight (2.70%)",
+            "crypto": "RISK-OFF"
+          }
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Sep 6",
+          "Sep 13"
+        ],
+        "series": {
+          "ai_compute": [
+            20,
+            17
+          ],
+          "geopolitics": [
+            3,
+            4
+          ],
+          "markets": [
+            2,
+            2
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "Fed decision in September (Polymarket)",
+          "dir": "up",
+          "detail": "The quarter-point hike closed at 49.5 cents on September 4, 54.5 on September 8, 64.5 on September 10 after producer prices and 80.5 on September 11 after the CPI, on UTC daily closes, while 'no change' fell to 19.5. About $150 million has traded on the event, $12.1 million of it on the hike contract in the past week, and the separate contract on any hike in 2026 went to 89.5 from 71.5.",
+          "url": "https://polymarket.com/event/fed-decision-in-september-762"
+        },
+        {
+          "market": "Next prime minister of Sweden (Polymarket)",
+          "dir": "up",
+          "detail": "Magdalena Andersson's contract swung from 81.5 cents on September 10 to 65.5 on September 12, the day before the vote, then to 88.5 on election day as the count put her centre-left bloc narrowly ahead; $1.1 million traded on her contract in the week.",
+          "url": "https://polymarket.com/event/next-prime-minister-of-sweden"
+        }
+      ],
+      "commodities": {
+        "as_of": "2026-09-11",
+        "min_change": 4,
+        "headline": "Crude clears $100 on the tanker war and the fall of Mocha, and almost everything else on the board drifts lower.",
+        "summary": "Brent rose 8.7 percent to $104.61 and WTI 9.4 percent to $100.05 on the front month. Brent's September 9 settlement of $101.21 was its first above $100 since July 23, and it reached $107.63 on September 10 as Reuters reported 'the biggest spike in attacks on shipping since the Iran war began': Iran said it had attacked ten ships near the strait after the US destroyed five of its tankers, and the Houthis took Mocha on the Red Sea. Kpler counted seven Hormuz transits on September 10. The IEA's September report, published September 11, has more than 10 million barrels a day of Gulf output still shut in and recovery 'now deferred until 2027', with observed inventories down 95 million barrels in August. The Strategic Petroleum Reserve fell 1.2 million barrels to 285.4 million in the week to September 4, and US diesel averaged $5.97 a gallon on September 7. Natural gas fell 4.8 percent as power demand faded into autumn and a 40 billion cubic foot storage build beat forecasts, according to NGI. Gold fell 1.4 percent despite the escalation, and grains and softs moved less than 4 percent. The next dates are the Fed on September 16 and OPEC+ on October 4; a Gulf meeting on Hormuz set for September 14 in Salalah was postponed.",
+        "items": [
+          {
+            "name": "Brent crude",
+            "level": "104.61",
+            "change": "+8.7%"
+          },
+          {
+            "name": "WTI crude",
+            "level": "100.05",
+            "change": "+9.4%"
+          },
+          {
+            "name": "Gold",
+            "level": "4,366.20",
+            "change": "-1.4%"
+          },
+          {
+            "name": "Silver",
+            "level": "64.55",
+            "change": "-2.3%"
+          },
+          {
+            "name": "Copper",
+            "level": "6.47",
+            "change": "-1.9%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "2.83",
+            "change": "-4.8%"
+          },
+          {
+            "name": "Wheat",
+            "level": "707.00",
+            "change": "-1.3%"
+          },
+          {
+            "name": "Corn",
+            "level": "510.25",
+            "change": "-0.3%"
+          },
+          {
+            "name": "Soybeans",
+            "level": "1,280.25",
+            "change": "-1.0%"
+          },
+          {
+            "name": "Coffee",
+            "level": "313.65",
+            "change": "-3.3%"
+          },
+          {
+            "name": "Cocoa",
+            "level": "5,933.00",
+            "change": "-2.4%"
+          },
+          {
+            "name": "Sugar",
+            "level": "18.15",
+            "change": "+0.4%"
+          },
+          {
+            "name": "Cotton",
+            "level": "82.38",
+            "change": "-0.0%"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "A fake storage-warning ad clears Google's review twice, and most of an indie game's paid installs turn out to be bots.",
+        "summary": "On September 13 Chris Greening wrote that he reported a fake 'iPhone Storage is Full' ad to Google twice and was told it 'doesn't go against Google's policies.' Two days earlier Nick Abe, who makes the puzzle app Dayzle, published what CA$220 of Google app-install ads bought: 56 reported installs, of which 33 looked like bots, 7 came from countries he had not targeted and 13 were real people. Weird Gloop's account of a 'Google Jail', in which about 90 percent of the wikis Weird Gloop knows of that launched on new domains since March 2024 show only their main page in search, reached Hacker News the same week. And AnkiDroid, a volunteer flashcard app, had been told in August that its donation link would get it removed from Google Play on September 11, because its fiscal host is a 501(c)(6) rather than a 501(c)(3) charity; the listing was still up on September 14.",
+        "links": [
+          {
+            "points": 837,
+            "title": "Why is Google still serving dodgy ads? (atomic14, September 13)",
+            "url": "https://www.atomic14.com/2026/09/13/why-is-google-still-serving-dodgy-ads"
+          },
+          {
+            "points": 753,
+            "title": "I spent $220 on Google app ads and 60% of the installs were robots (Dayzle, September 11)",
+            "url": "https://dayzlegame.com/blog/google-ads-bot-farm/"
+          },
+          {
+            "points": 573,
+            "title": "There's a new 'Google Jail' for independent wikis (Weird Gloop, August 17)",
+            "url": "https://weirdgloop.org/blog/google-jail"
+          },
+          {
+            "points": 0,
+            "title": "Google Play removal over the donation link (AnkiDroid issue 21656)",
+            "url": "https://github.com/ankidroid/Anki-Android/issues/21656"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "skills that change how coding agents behave rather than new models: ponytail, which 'makes your AI agent think like the laziest senior dev in the room', at 137,849 stars; humanizer, which strips the signs of AI writing, at 47,906; and i-have-adhd, a skill to stop agents burying the answer, at 44,918",
+        "github": [
+          {
+            "title": "DietrichGebert/ponytail",
+            "url": "https://github.com/DietrichGebert/ponytail"
+          },
+          {
+            "title": "blader/humanizer",
+            "url": "https://github.com/blader/humanizer"
+          },
+          {
+            "title": "ayghri/i-have-adhd",
+            "url": "https://github.com/ayghri/i-have-adhd"
+          }
+        ]
+      },
+      "wildcard": {
+        "topic": "Privacy and digital rights",
+        "headline": "LG calls a 135-minute investigation of its TVs 'not true' while confirming that the sets scan home networks.",
+        "summary": "Gamers Nexus published a 135-minute investigation on September 6, made with Level1Techs and independent researchers, that used packet captures to show LG OLED TVs scanning home networks for phones and watches, and demonstrated microphone audio captured while a set appeared to be off, on a TV the researchers had compromised. LG told Tom's Hardware on September 9 that 'the claims made in the recently published video are not true', while describing network discovery as a standard smart-TV function. No regulator had announced action by the end of the week. IDScan.net, an age- and identity-verification vendor, had confirmed on September 4 the unauthorised access behind a service selling 153 million driver's licence records. Autistici/Inventati, the Italian activist host cut off from its bank and domain after a US terrorism-sanctions designation, has set September 18 to end its services.",
+        "links": [],
+        "items": [
+          {
+            "title": "LG smart TVs caught logging audio with screen off and snooping on local devices (Notebookcheck, September 7)",
+            "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
+            "comment": "The fullest account of the method: testing on retail sets including the G5, Wireshark captures, and audio the researchers say was saved while offline and uploaded on reconnection. Security researchers reported remote-code-execution flaws to LG and withheld the details."
+          },
+          {
+            "title": "LG strongly denies TV spying claims (Tom's Hardware, September 9)",
+            "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
+            "comment": "LG's statement; the company says voice data is processed only when a user holds the microphone button or an enabled far-field feature hears a wake word, and that its viewing-data tracking, ACR, requires opt-in consent."
+          },
+          {
+            "title": "IDScan confirms breach after 153 million driver's licenses leak on dark web (Help Net Security, September 11)",
+            "url": "https://www.helpnetsecurity.com/2026/09/11/idscan-net-data-breach-153-million-drivers-licenses/",
+            "comment": "IDScan's notice: 'On or around September 1, 2026, IDScan.net received information indicating that certain data may have been accessed without authorization.' The haul also includes 10 million ID cards and 3 million travel documents; the FBI's New Orleans office is investigating."
+          },
+          {
+            "title": "Smear campaign says anti-Flock movement is Chinese propaganda (404 Media, September 9)",
+            "url": "https://www.404media.co/smear-campaign-says-anti-flock-movement-is-chinese-propaganda/",
+            "comment": "Sinclair stations, Fox News and a Manhattan Institute fellow cast local opposition to Flock's licence-plate cameras as China-linked, although the critics include DeSantis and Hawley; Staunton, Virginia's police chief had called local opposition 'democracy in action' in a December reply to Flock's chief executive."
+          },
+          {
+            "title": "Press statement and timeline (Autistici/Inventati, updated September 10)",
+            "url": "https://www.inventati.org/campaign/press",
+            "comment": "OFAC designation on August 26, PayPal suspension August 27, the domain put on hold August 28, the Banca Etica account suspended September 1, the decision to dissolve on September 6 and an urgent appeal against the bank filed September 8; services are due to end September 18."
+          }
+        ]
+      },
+      "briefs": [
+        {
+          "title": "Microsoft plugs nearly 1,000 security holes (Krebs on Security, September 8)",
+          "url": "https://krebsonsecurity.com/2026/09/microsoft-plugs-nearly-1000-security-holes/",
+          "comment": "September's Patch Tuesday carried 974 fixes by Krebs's count, 113 of them rated critical, including two zero-days already under active exploitation."
+        },
+        {
+          "title": "Email fraud campaign steals €35 million from French notaries (Risky Bulletin, September 7)",
+          "url": "https://risky.biz/risky-bulletin-bec-campaign-steals-eur35-million-from-french-notaries/",
+          "comment": "Over four years the fraudsters altered wire-transfer details at more than 500 notary offices, about 7 percent of France's total, as Le Monde reported; the national cyber agency ANSSI spent two years helping victims without publicising it."
+        },
+        {
+          "title": "FTC withdraws obsolete policy statement (FTC, September 9)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/09/ftc-withdraws-obsolete-policy-statement",
+          "comment": "The Commission rescinded its 2021 statement on breaches by health apps and connected devices, saying the 2024 update to the Health Breach Notification Rule already covers them."
+        },
+        {
+          "title": "Editors of French journal on corporate responsibility resign after ownership transfer (Retraction Watch, September 11)",
+          "url": "https://retractionwatch.com/2026/09/11/editors-of-french-journal-on-corporate-responsibility-resign-after-ownership-transfer/",
+          "comment": "All 15 editors of the Revue de l'Organisation Responsable quit after Editions ESKA sold the title's publishing rights to China-based CNBesting: 'we can no longer guarantee the journal's scientific and editorial integrity.'"
+        },
+        {
+          "title": "Automattic's Matt Mullenweg says he is back in control (404 Media, September 11)",
+          "url": "https://www.404media.co/automattic-matt-mullenweg-back-in-control/",
+          "comment": "The board put the WordPress company's chief executive on leave on September 9 and named CFO Mark Davies interim CEO; a day later Mullenweg told staff on Slack that 'the board is back in agreement, and I'm in control of Automattic', which the board has not confirmed; by September 11 interim CEO Mark Davies's Slack account had been deactivated."
+        },
+        {
+          "title": "Spillover effects of regulatory inspections: evidence from OSHA (NBER working paper 35646, Johnson, Levine and Toffel)",
+          "url": "https://www.nber.org/papers/w35646",
+          "comment": "An OSHA inspection cut injuries at uninspected workplaces in the same ZIP code by about 11 percent, roughly as much as at the inspected site."
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Energy as the inflation swing factor",
+          "direction": "tightening",
+          "read": "Brent settled above $100 on September 9 for the first time since July 23 and at $107.63 the next day, after Iran said it attacked ten ships and the Houthis took Mocha; Kpler counted seven Hormuz transits on September 10. The IEA's September report keeps more than 10 million barrels a day of Gulf output shut in and defers recovery to 2027. The August CPI shows it arriving: energy up 16.3 percent on the year, gasoline more than a third of the month's increase.",
+          "basket": [
+            {
+              "metric": "Brent, weekly",
+              "value": "$104.61 (+8.7%) on the front month; first settlement above $100 since July 23 on September 9; $107.63 on September 10",
+              "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+            },
+            {
+              "metric": "Hormuz transits (Kpler, via Al-Monitor, September 11)",
+              "value": "7 on September 10 from 11 the day before; ten-day average 15",
+              "url": "https://www.al-monitor.com/originals/2026/09/hormuz-shipping-traffic-falls-single-digits-data-shows"
+            },
+            {
+              "metric": "IEA Oil Market Report, September 11",
+              "value": "more than 10 mb/d of Gulf output shut in; recovery deferred to 2027; observed inventories -95 mb in August",
+              "url": "https://www.iea.org/reports/oil-market-report-september-2026"
+            },
+            {
+              "metric": "Strategic Petroleum Reserve (EIA, week to September 4)",
+              "value": "285.4 million barrels, down 1.2 million on the week",
+              "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=WCSSTUS1&f=W"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Global monetary tightening",
+          "direction": "hike now the favourite",
+          "read": "A 0.3 percent core CPI against 0.2 expected and a 0.4 percent PPI moved the September hike from a coin flip to the favourite, 80.5 cents on Polymarket at the September 11 close and nearly 90 percent in futures by NBC's reading. The two-year yield rose 26 basis points to 4.63 percent and Michigan's one-year inflation expectation rose to 4.6 percent. Credit did not follow: the high-yield spread widened two basis points to 2.70 percent, and the five-year breakeven gave back most of its midweek rise. GDPNow reads 4.4 percent for the third quarter, from 4.7.",
+          "basket": [
+            {
+              "metric": "Two-year Treasury yield",
+              "value": "4.63% on September 11 (Treasury par curve), from 4.37% on September 4",
+              "url": "https://fred.stlouisfed.org/series/DGS2"
+            },
+            {
+              "metric": "Any Fed hike in 2026 (Polymarket, UTC daily closes)",
+              "value": "71.5c on September 4, 77.5c on September 10, 89.5c on September 11",
+              "url": "https://polymarket.com/event/fed-rate-hike-in-2026"
+            },
+            {
+              "metric": "High-yield spread",
+              "value": "2.70% on September 10, from 2.68% on September 4",
+              "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+            },
+            {
+              "metric": "5-year breakeven inflation",
+              "value": "2.40% on September 11, from 2.37%; 2.46% on September 10",
+              "url": "https://fred.stlouisfed.org/series/T5YIE"
+            },
+            {
+              "metric": "GDPNow, Q3",
+              "value": "4.4%, from 4.7%",
+              "url": "https://www.atlantafed.org/cqer/research/gdpnow"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "AI sovereignty and open weights",
+          "direction": "consolidating",
+          "read": "Mistral raised €3 billion led by Samsung, with Luxembourg's government among the new investors, and DeepSeek's MIT-licensed V4.1 Flash lists output at one eighty-third of the frontier price. The model behind OpenAI's Navier-Stokes claim is still in training and not available to the public, and Amodei proposed pacing the frontier, starting with embedded evaluators at Anthropic. Nvidia's 8-K puts the Hugging Face close in the first half of 2027.",
+          "basket": [
+            {
+              "metric": "Mistral Series D, September 8",
+              "value": "€3 billion at more than €21 billion post-money; Samsung lead, Luxembourg among new investors",
+              "url": "https://news.ycombinator.com/item?id=49605767"
+            },
+            {
+              "metric": "Nvidia and Hugging Face (8-K)",
+              "value": "about $11.9 billion plus retention of up to about $1.0 billion; close expected in the first half of 2027",
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+            },
+            {
+              "metric": "GLM-5.3-Flash downloads (Hugging Face thirty-day count, to September 14)",
+              "value": "1,770,038, from 784,005 a week earlier; GLM-5.3 712,553 from 442,064",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "paused",
+          "read": "A week with Brent above $100, five more Iranian tankers destroyed and a second chokepoint under threat produced no flight from the dollar and no gold bid: the dollar index was flat at 99.12 and gold fell 1.4 percent.",
+          "basket": [
+            {
+              "metric": "Dollar index (DXY)",
+              "value": "99.12, from 99.16",
+              "url": "https://tradingeconomics.com/united-states/currency"
+            },
+            {
+              "metric": "Gold, front month",
+              "value": "$4,366.20, down 1.4% on the week",
+              "url": "https://tradingeconomics.com/commodity/gold"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "China's industrial stack",
+          "direction": "advancing",
+          "read": "DeepSeek published V4.1 Flash on September 10 under the MIT licence at $0.15 and $0.60 per million tokens and on September 11 dropped its plan to redirect V4 Pro requests to it; Qwen3.8-27B's thirty-day downloads reached 7.70 million.",
+          "basket": [
+            {
+              "metric": "DeepSeek V4.1 Flash (Hugging Face)",
+              "value": "created September 10, MIT licence; 288,414 downloads in four days",
+              "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+            },
+            {
+              "metric": "Qwen3.8-27B downloads (Hugging Face thirty-day count)",
+              "value": "7,703,400 on September 14, from 6,416,358",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+            }
+          ],
+          "spotlight": false
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "tightening",
+          "read": "Canada's counter-tariffs of 15, 25 and 50 percent on C$27.6 billion of US goods took effect on September 8, matching the US duties in force since August 22, with no talks resumed. Argentina set out a bill to turn its Falklands claim into sanctions law against companies that operate or support oil work there. The Trump-Xi meeting on September 24 is next.",
+          "basket": [
+            {
+              "metric": "US-Canada",
+              "value": "50% US duties since August 22; Canadian counter-tariffs on C$27.6 billion of US goods since September 8",
+              "url": "https://www.axios.com/2026/08/22/us-canada-tariffs-trade-trump-carney"
+            },
+            {
+              "metric": "US-China talks, September 24 (Nikkei Asia, September 6)",
+              "value": "US expected to raise AI-directed cyberattacks; China to revisit export controls",
+              "url": "https://www.techmeme.com/260906/p10"
+            }
+          ],
+          "spotlight": false
+        }
+      ],
+      "watch_next": [
+        {
+          "when": "September 15",
+          "event": "Senate cloture vote on the CLARITY Act",
+          "note": "The motion to proceed needs sixty votes; the final text was released late on September 13 and Polymarket's contract on the bill becoming law this year closed the week at 23.5 cents."
+        },
+        {
+          "when": "September 16",
+          "event": "Federal Reserve decision and projections; redaction motions due in the Google ad-tech remedy",
+          "note": "A quarter-point hike was 80.5 cents on Polymarket at the September 11 close. The parties' proposed final judgment in the Google case follows on October 2."
+        },
+        {
+          "when": "September 18",
+          "event": "Autistici/Inventati's services end; DHS public-charge rule takes effect; TeamPCP defendant's next court date in Perth",
+          "note": "A/I filed an urgent appeal against its bank's suspension on September 8."
+        },
+        {
+          "when": "About September 20",
+          "event": "Sweden's final election result",
+          "note": "The preliminary count put the centre-left bloc narrowly ahead; Kristersson called the next government 'still an open question'."
+        },
+        {
+          "when": "September 24",
+          "event": "Trump meets Xi",
+          "note": "Nikkei reports the US will raise AI-directed cyberattacks and China export controls."
+        },
+        {
+          "when": "October 4",
+          "event": "Brazil's first round; OPEC+ meets on November output",
+          "note": "The runoff, if needed, is October 25."
+        },
+        {
+          "when": "October 8",
+          "event": "NOAA's next El Niño update",
+          "note": "September's discussion gave a 75 percent chance of a historic event in October to December."
+        }
+      ]
     }
   ],
   "bsig_watch": [
     {
       "trend": "AI datacenter power demand",
       "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected. Policy is now actively reallocating supply toward it: the government paid RWE $1.2 billion on August 6 to abandon three offshore wind leases, the sixth such payment this year.",
-      "watch": "The filings arrived. SB Energy's public S-1 on September 1 shows 8.8 gigawatts under contract, 803 megawatts under construction, nothing yet operating and first revenue expected in the fourth quarter, backed by a $3 billion Nvidia commitment and about $5.5 billion of warrants held by OpenAI as anchor tenant. The Information reported on September 6 that Anthropic has signed compute contracts worth up to $517 billion in the eleven months since October 2025, covering at least 14.8 gigawatts, most of them on ten-year terms. Watch the SBE pricing and whether any of these contracts carry a regulated utility's name.",
+      "watch": "An EPA proposal from July would drop the requirement that states take public comment before issuing minor-source air permits, data centres included; nearly 200 groups and attorneys general from 14 states filed comments against it, and the agency expects to finalise it next year. SB Energy had not priced its listing by September 13. Watch the final rule and the SBE pricing.",
       "expressions": "Constellation, Vistra, Cameco, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",
-      "new": true
+      "new": false
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
       "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips. AMD agreed on August 6 to buy Taalas, which burns a model's weights into the chip's own wiring: its HC1 encodes Llama 3.1 8B across 53 billion transistors and is quoted near 17,000 tokens per second per user at about 200 watts.",
-      "watch": "The frontier price held flat this week rather than rising: GPT-6 Astra listed at the same $10 and $50 as Fable 5.1, and the cuts came in cache reads (Anthropic to $0.25 from $1) and the workhorse tier (Gemini 3.8 Flash at half price to December 31). Cerebras began serving Qwen3.8-27B at about 1,500 tokens a second on September 3, and OpenAI bought tens of thousands of Mac minis and Studios for agent training, catching Apple without an enterprise sales team (MacRumors, August 30). Watch whether Astra's 'Fast mode' at double price becomes the norm for latency.",
+      "watch": "DeepSeek's V4.1 Flash lists at $0.15 input and $0.60 output per million tokens on OpenRouter, one eighty-third of the $50 frontier output price, and DeepSeek dropped a plan to redirect V4 Pro requests to it 'in response to user demand'. Watch whether the frontier labs answer with cheaper tiers or hold $10 and $50.",
       "expressions": "AMD, Marvell, Broadcom, and other custom-silicon makers.",
       "bsig_ref": "AS-B",
       "status": "active regime",
@@ -6127,7 +6741,7 @@
     {
       "trend": "Crypto leverage & dry powder",
       "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
-      "watch": "Bitcoin closed the week up 2.4 percent at $79,672 while US spot ETFs took about $987 million, roughly $3.8 billion over three weeks by SoSoValue's count, the strongest stretch of the year. The CLARITY cloture vote on the motion to proceed is set for September 15; SEC chair Atkins tied his own crypto rule proposal to the bill on September 2. Watch funding rates into the vote.",
+      "watch": "US spot bitcoin ETFs lost $462.7 million over four sessions and bitcoin fell 3.6 percent to $76,838, while ether ETFs took in $196.9 million. The Liquid sidechain lost about 4,000 bitcoin on September 6 and got 3,400 back a day later. The CLARITY cloture vote is September 15; watch funding rates through it.",
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
       "status": "active (squeeze)",
@@ -6135,17 +6749,17 @@
     },
     {
       "trend": "Resource-scarcity chains",
-      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. NOAA's August 13 update gives a greater than 90 percent chance of a very strong El Niño this winter and a 69 percent chance of a historic one exceeding every event since 1950, while the Drought Monitor recorded rapidly deteriorating conditions across Oklahoma and the Texas Panhandle in the week to August 11.",
-      "watch": "The chain slackened this week. Wheat fell 6.7 percent after its biggest week since 2022 as war premium came out on Putin's peace remarks, cotton lost 8.3 percent as speculators unwound a near-record net long, cocoa fell 6.8 percent after Mondelez called stocks ample, and coffee 6.3 percent on a record Brazil estimate of 77.2 million bags. NOAA's El Niño Advisory still gives a greater than 90 percent chance of a very strong event; the next update is September 10.",
+      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. NOAA's September 10 update puts the chance of an El Niño stronger than any since 1950 at 75 percent for October to December, up from 69 percent in August, with the traditional weekly Niño-3.4 index 2.9°C above normal.",
+      "watch": "So far the chain shows up in the weather more than in prices. The Drought Monitor's September 8 map shows flash drought from Texas to the lower Mississippi Valley, and Indonesia produced more than a third of the world's fire emissions in the first week of September, while wheat slipped 1.3 percent and cocoa 2.4. Watch palm oil, southern-hemisphere wheat estimates and NOAA's October 8 update.",
       "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
       "bsig_ref": "AH-1 / AH-2",
       "status": "active",
-      "new": false
+      "new": true
     },
     {
       "trend": "Device attestation as a gatekeeper",
       "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all, and the state is starting to ask for the same signal. Illinois' HB5511, signed July 31 and effective January 1, 2028, requires device makers, operating-system providers and app stores to collect a birth date at account setup and expose an age bracket to platforms through an API, with no exemption for open-source systems.",
-      "watch": "The platform side tightened this week: Google removed the remaining Manifest V2 extensions including uBlock Origin from the Chrome Web Store on August 31, Google has been rejecting AnkiDroid's updates since July 20 over its Open Collective donation link, because the recipient is not a 501(c)(3), with removal set for September 11, and Aurora Store installs on de-Googled phones began failing from August 31. California's AB 1856 still awaits the governor. Watch whether the Play changes are policy or an enforcement sweep.",
+      "watch": "Google removed the remaining Manifest V2 extensions, uBlock Origin included, from the Chrome Web Store on August 31, and Aurora Store installs on de-Googled phones began failing at the start of September. California's AB 1856, which exempts open-source operating systems from collecting birth dates, passed both houses unanimously in late August. Watch whether Google Play's install and donation-link enforcement is policy or a sweep.",
       "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
       "bsig_ref": "",
       "status": "watch (digital rights)",
@@ -6172,16 +6786,16 @@
     {
       "trend": "AI's off-balance-sheet financing",
       "why_exponential": "The AI buildout is increasingly funded outside company books. On August 10 Nvidia and Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR announced platforms to mobilise more than $500 billion of third-party capital through vehicles that issue debt and lease compute; Nikkei had already counted about $1.65 trillion of special-purpose-vehicle debt tied to five US tech giants. Each layer of guarantees lets the next project borrow more.",
-      "watch": "SB Energy's S-1 is the clearest picture yet of the structure: about $5.5 billion of OpenAI warrants with board rights above 5 percent, a $3 billion Nvidia commitment split between a private placement and a prepaid forward, 8.8 gigawatts contracted with nothing operating, and a target raise of $5 to 7 billion. Anthropic's reported $517 billion of compute contracts, signed in eleven months, sits beside it. Watch for a rating agency to say how much of this is debt.",
+      "watch": "No rating action and no SBE pricing this week. Nvidia's 8-K for Hugging Face adds a retention programme of up to about $1 billion to an $11.9 billion price, and Mistral's €3 billion was straight equity. Watch for a rating agency to say how much of the vehicle debt is really the sponsors' debt.",
       "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
       "bsig_ref": "",
       "status": "watch (financing)",
-      "new": true
+      "new": false
     },
     {
       "trend": "Water as a grid constraint",
       "why_exponential": "Power planning still treats cooling water as free and infinite, and it is becoming neither. The Danube fell to a record low in the first days of August and Hungary's Paks plant, about half the country's electricity, stopped generating for the first time in 44 years; Romania blasted rock to redirect cooling water to its one working reactor.",
-      "watch": "Nepal's count as of September 7: twelve or thirteen hydropower projects hit, about 900 workers missing and roughly 500 believed trapped in tunnels, 431 megawatts off the grid, and an early-warning network whose gauges were tuned for monsoon floods rather than a glacier collapse. Hungary's Paks plant is back on two turbines with a stone sill under construction to hold the Danube above its intake. Watch water-use terms entering data-centre approvals.",
+      "watch": "Copernicus's August bulletin, published September 10, reports exceptionally low flows on the Rhine, Danube and Dnieper after western Europe's hottest summer on record, above 2003. Nothing new came from Paks or Nepal's damaged hydropower sites during the week. Watch autumn river levels against the reactors and data centres that draw on them.",
       "expressions": "European power prices, nuclear operators, and grid-interconnection queues.",
       "bsig_ref": "AH-3",
       "status": "watch (grid water)",

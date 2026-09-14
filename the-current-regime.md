@@ -1475,3 +1475,193 @@ CLARITY contract is thin at $14.5M lifetime volume and stays out of market-moves
 pipeline: quote Polymarket as UTC daily closes and say so; the 00:00 UTC print labelled with
 the next day's date is how the two date errors above happened. Hugging Face's "downloads"
 field is a thirty-day rolling count, never cumulative.
+
+## Issue 14 — Week of 2026-09-07 → 2026-09-13
+
+One-line: Mathematicians turn on the AI labs' race for famous problems as OpenAI claims
+Navier-Stokes, and the Houthis' capture of Mocha puts a second oil chokepoint in play as Brent
+crosses $100.
+
+### AI & compute (consolidation, week 4): the mathematicians, Navier-Stokes, DeepSeek at $0.60
+
+Lead rule: 12 led with OpenAI/Nvidia and 13 with Anthropic, so 14 opens on the mathematicians
+(Buckmaster's Sept 8 statement, the Sept 11 mathandai.org declaration signed by 25 Fields
+Medalists) with OpenAI's claim inside the lane. Buckmaster/Alpöge made public IPM, Boussinesq and
+3d Euler blowup (reached Aug 15, Lean Aug 22), 'believe' hypo-dissipative NS, not released; his
+account of Bubeck 'twice' seeking Alpöge's removal is attributed as his. OpenAI (Sept 8): 'resolves
+... by establishing statement C (and also D)', ~10,000 agents, 88 hours, Lean 17 hours via Astra,
+model still in training, no prize claim. Stated as claimed and Lean-checked, not accepted (Quanta's
+'if the result holds up'). The declaration names no company (The Economist's headline does).
+OpenAI's page changed between Thom's Sept 9 quote ('cannot rule out that de-identified data ...')
+and the Sept 14 read ('confirmed ... could not have influenced'); both quoted with dates. Not used:
+OpenAI's line that the pair used 'an internal Anthropic model' (Buckmaster lists Claude, Codex/GPT-5.6
+Sol and Astra). Also: DeepSeek V4.1 Flash (Sept 10, MIT, $0.15/$0.60 on OpenRouter; implication =
+1/83 of the $50 frontier output price), Mistral €3B at >€21B (Sept 8, Samsung lead), rubyhack.ai
+(Sept 11; May-June incident, disclosure in window; OpenAI: 'benign tasks'), Amodei's 'We must pace
+the frontier' (Sept 12), Coxon's resignation via NPR (Hubinger/76M views/equity items snippet-level,
+cut), Meta Muse, EPA permit rule. Downloads (HF API, Sept 14, 30-day): Qwen3.8-27B 7,703,400;
+GLM-5.3 712,553; GLM-5.3-Flash 1,770,038; DeepSeek-V4.1-Flash 288,414 (4 days). No Anthropic S-1;
+OpenAI's reporting framework not published; Sanders-Casar was announced Sept 3 as forthcoming, not
+introduced (13's seed note said introduced). Satire/non-news dropped: opusfived.dev (1,207),
+xeiaso's slowdown post, the Claude 18+ support page (last updated May 18), the Economist's Sept 3
+Nvidia briefing. Possible issue-13 error: 13's headline says three launches at 'one identical
+price', but Gemini 3.8 Flash lists at $0.75/$3.75; only Astra and Fable 5.1 are $10/$50. Flagged,
+not changed.
+
+### Deep-dive: Climate & disasters (accelerating): NOAA 75%, Copernicus record, Indonesia's fires
+
+Domain from the rotation (deep_dive_domain(14) = climate_disasters), sourced from NOAA CPC,
+Copernicus, CAMS/Carbon Brief, NEA and the Drought Monitor, not HN; GDELT 429'd. Anchor: CPC Sept 10
+discussion, 75% historic (from 69%), >90% very strong, Advisory, next update Oct 8. Weekly Niño-3.4
++2.9°C from CPC's wksst file; a fetch-summary '+1.8°C' contradicted the index file and was not used.
+Copernicus: August tied July 2023 at 16.96°C, +1.65°C pre-industrial. Indonesia: CAMS 19.7 Mt for
+Sept 1-7 (Reuters via The Star), below 2015's 21.7 Mt same week; GFED 76 MtC to Sept 7 vs 333 MtC
+in 2015, so 'on track' is stated as pace, not total. Respiratory cases 50,891 → 113,336 (Down To
+Earth). Covers the East/SE Asia debt alongside the Teodoro item. Atlantic latest-first-hurricane
+record (CNN via ABC17); flash drought (USDM Sept 8); heat into shoulder seasons (AGU Advances via
+Carbon Brief). Not used: Sarawak 647 schools and Singapore PSI 106 (snippet-level), Nepal (nothing
+new in window; Wikipedia toll unsourced), Ragasa 'Sept 22, 2026' (a 2025 storm, search-summary
+hallucination). State accelerating: every number moved one way.
+
+### Geopolitics (stressed, week 2): tankers, Mocha, Sweden, Seoul, Falklands, Canada
+
+Lead is Iran (Germany in 13, Iran/Nepal in 12, so allowed). Theatre rule: Iran and Yemen/Mocha take
+the two Middle East slots; Ukraine (Sept 13 Yahodyn train strike, quotes snippet-level) dropped.
+Other theatres: Sweden (Sept 13; SD 17.6 from 20.5; bloc seat counts left out because France24 at
+90% counted and Wikipedia at 94.7% differ), the Philippines (Teodoro in Seoul, Sept 8; only the
+Philstar headline quote used, other quotes came through a fetch summary), Argentina (Falklands bill,
+Sea Lion complaint), Canada (counter-tariffs Sept 8 on C$27.6bn; the seed note's '700+ goods' was
+not confirmed and is not used). Tanker names left out of the comment: Al Jazeera has 'Kaviz',
+Discovery Alert 'Kivik'. Trump's Sept 9 remark paraphrased (outlets render it two ways). Israel
+airspace: no closure; Polymarket 96.6c on Sept 14, unresolved, not a mover this week. Prohibited
+zone: no coordinates, no ship named. Not researched (budget): Iran fuel price, Saxony-Anhalt talks,
+ICJ Nicaragua v. Germany, Russian refineries, Trump-Xi prep, Africa.
+
+### Markets (mixed) + commodities (week ending Sept 11)
+
+CPI Aug +0.4% m/m, 3.4% y/y; core +0.3% (0.2 expected), 2.4% y/y; gasoline 'over one third' of the
+increase; PPI +0.4%, 5.4% y/y. Polymarket 25bp hike UTC daily closes: 49.5 (Sep 4), 51.5, 54.5,
+53.5, 64.5 (Sep 10, PPI), 80.5 (Sep 11, CPI), 78.5 (Sep 13); any-2026 hike 71.5 → 89.5. Treasury
+par curve 2y 4.63 (+26bp), 10y 4.96; card curve ^TNX 4.97 - ^IRX 3.91 = 106bp (ekans +106bp). HY OAS
+2.70 (Sep 10; Sep 11 not yet on FRED). 5y BE 2.40, 10y BE 2.36. DXY 99.12, gold -1.4%. S&P 7,656.98
+(-0.8%), Nvidia -5.1%, BTC $76,838 (-3.6%), ETF -$462.7M (Farside via FXStreet); crypto card set to
+RISK-OFF on flows and price (ekans' regime line carries no crypto read this run). Liquid: exploited
+Sept 6 (not Sept 7 as seeded), 3,400 returned Sept 7, ~598 outstanding. Commodities on front-month
+futures: Brent +8.7% to 104.61 (first settle above $100 since Jul 23 on Sept 9, checked on
+yfinance), WTI +9.4%, nat gas -4.8% (driver from NGI headline, snippet-level). IEA OMR Sept 11,
+SPR 285.4M (EIA dnav), diesel $5.967 (EIA Sept 7). Kpler via Al-Monitor: 7 transits Sept 10, 10-day
+average 15 (13's figure was Al Jazeera's 13 on a different window). Market moves: Fed (up), Sweden
+PM Andersson 81.5 → 65.5 → 88.5 (up). Not used: US-Iran ceasefire contract (a resolution-rule
+fight), CLARITY (+9 in window, +7 more on Sept 14), Iran-Oman agreement (thin). ekans: trend UP,
+VIX 15.8, curve +106bp, GDPNow 4.4, RRP $5B, MIXED; ^VIX3M feed still stale (B01 skipped). FRED
+CSV downloads were bot-blocked from this machine; FRED values read via proxy by the researcher.
+
+### Wildcard (privacy/digital rights): LG TVs, IDScan, Flock, A/I
+
+Top of coverage.py's shortlist. LG: network scanning is the solid finding (LG confirms it as a
+standard function); standby audio stated as a demonstration, some on exploited units, with LG's
+denial quoted; no regulator response found. IDScan confirmed unauthorised access (Help Net, Sept 11).
+404 Media's Flock smear-campaign piece used instead of The New Yorker's Flock figures (read via
+proxy, unconfirmed). A/I services end Sept 18 (their press page; user counts snippet-level, cut).
+
+### Undercurrent (non-AI): Google as gatekeeper for small independents
+
+atomic14's twice-cleared fake ad (Sept 13), Dayzle's CA$220 / 56 installs / 33 bots (Sept 11),
+Weird Gloop's 'Google Jail' (Aug 17, surfaced on HN this week, dated as such), AnkiDroid's
+Sept 11 removal deadline (outcome unresolved; worded as 'was told'). 13 was AI-adjacent, so the
+alternation holds.
+
+### Briefs, GitHub, structure
+
+Briefs: Krebs Patch Tuesday (974 fixes), Risky Bulletin's French-notaries BEC (Sept 7, out of
+window for 13 and in window now), FTC withdrawal of the 2021 health-app breach statement, Retraction
+Watch's ESKA/CNBesting resignations, Mullenweg's leave and 'back in control' (404 Media), NBER
+w35646 on OSHA spillovers. GitHub: ponytail, humanizer, i-have-adhd (agent skills). Radar: energy
+'re-tightening' → 'tightening'; monetary 'tilting toward a hike, contested' → 'hike now the
+favourite'; AI sovereignty 'consolidating'; dedollarization 'paused'; China's stack 'advancing';
+trade 'tightening'. Watchlist: resource scarcity promoted to new (NOAA 75%, flash drought,
+Indonesia); datacenter power and off-balance-sheet demoted (no SBE pricing, no rating action).
+Momentum: prev = 13's stored cur (20/3/2); cur = 17/4/2 from the Algolia top 100 for Sept 7-13.
+Three of the four geopolitics hits are LG 'spy TV' stories the keyword classifier counts under
+geopolitics; the count is left as the classifier's. coverage.py: privacy keywords widened
+('digital rights', 'age check', 'age assurance', 'nitter', 'grapheneos', 'phone records', 'data
+broker'); issue 12's wildcard is now credited and the privacy WARN clears.
+
+### Verification notes
+
+Five research agents, one per lane. Feed health: GDELT 429; The Hindu, Americas Quarterly (410
+Gone), Middle East Eye, Apricitas, Bits About Money and Bellingcat returned nothing; arXiv timed out.
+Bot-walls as before (nytimes, ft, bbc, cnbc, reuters, axios, bls.gov and openai.com via proxy).
+
+### Issue 14 audit (2026-09-14) — corrections applied
+
+Four adversarial verification passes (AI; geopolitics and trade; markets, commodities and the
+market watchlist cards; deep-dive, wildcard, undercurrent and briefs), run the same day the issue
+was written and before any email. About sixty corrections applied; lint and the human-voice
+sweeps stay clean (zero em-dashes).
+
+Hard errors, corrected:
+- Buckmaster posted just before midnight ET on Monday Sept 7 (SciAm, Quanta), not Sept 8;
+  OpenAI's post was the next morning. His results are blowup *with smooth forcing*; Aug 15 is the
+  Boussinesq and Euler results, and Aug 22 the first Lean-verified proof.
+- The 'cannot rule out that de-identified data ...' quote is OpenAI speaking about Buckmaster and
+  Alpöge, which Thom quoted; Sellke's line to Thom was 'Regarding your conversations with ChatGPT:
+  that did not happen.' OpenAI's 'confirmed' line carries a limit, 'over the two months preceding
+  this announcement', now quoted.
+- DeepSeek reversed its V4 Pro routing on Sept 11 ('in response to user demand'); the
+  'comprehensively surpassed' quote was a translation of the Chinese notice and is now unquoted.
+- RubyGems is the third undisclosed OpenAI agent incident (Hugging Face, the wiki, RubyGems).
+- Meta Muse quotes were not verbatim; replaced with the newsroom post's wording.
+- The EPA minor-source permit proposal is from July (comments closed Aug 21), not Sept 10; the AI
+  evidence and the datacenter-power card now say so.
+- Two strikes Sept 5 and Sept 8 are three days apart, and in the first two tankers were
+  'permanently disabled' and one destroyed: the implication now says 'struck eight'. The
+  dedollarization read said 'eight destroyed'; now 'five more'. One markets auditor dated the
+  five-tanker strike to Sept 9 (NPR, Reuters, likely Gulf time); Al Jazeera, gCaptain and the
+  geopolitics auditor have Sept 8, which stands.
+- Mocha went stale by Friday: the Houthis took Mayun island inside Bab al-Mandeb and the Hanish
+  islands by Sept 11 (Times of Israel; Al Jazeera Sept 12). Headline, summary and comment updated.
+- Canada's side is tiered 15/25/50, so 'matching 50 percent walls' became tariffs on C$27.6bn
+  each way.
+- Nvidia -5.2% on the week (230.36 → 218.29 unadjusted), -2.4% on Sept 10; the 2.5% was the
+  semiconductor ETF. The first yfinance pull used dividend-adjusted closes (230.10).
+- Klotzbach's two lines were CNN's paraphrase, now unquoted; Parrington's quotes are Reuters', not
+  Carbon Brief's; IDScan confirmed on Sept 4 (Help Net reported it Sept 11), so the wildcard
+  headline drops the IDScan clause; 'lead the world's emissions' → fire emissions; the LG audio
+  demonstration was on a compromised TV (not 'some tests'); '500 hours' is not in Notebookcheck;
+  Dayzle is a puzzle app.
+
+Tightenings: headline quote now compares the goals of AI companies and mathematicians; '88 hours'
+no longer reads as agent run time; OpenAI's 'statement C and D' paraphrased; Bubeck's calls
+included the OpenAI mathematician; 'said it was working on' a framework; HN points 955/742;
+Sweden turnout cut (unconfirmed), SD 'kept the government in office from outside the cabinet',
+final result 'the weekend after the vote'; Teodoro's note 'left on his table', read 'a line at a
+time', attribution via Korean reporting; Security Council 'emergency briefing' requested by Bahrain
+and the UK; Falklands bill reaches companies that 'support' oil work, not 'suppliers'; Canada's
+12:01 a.m. and 'farm equipment' removed; LPL quote is Jeffrey Roach via CNBC; no-change contract
+20.5 on Sept 13; 10-year 'highest since October 2023' was Investopedia's Sept 10 intraday claim;
+Mow posted Sept 7; nat gas driver per NGI; HY 2.70 'on September 10'; Weird Gloop's 90% is of
+the new-domain wikis it knows of; AnkiDroid's notice was August and the listing was still up
+Sept 14; the Staunton chief's line was a December reply to Flock's CEO; one Manhattan Institute
+fellow; LG's ACR 'opt-in consent'; Niño-3.4 +2.9 labelled as the traditional weekly index (CPC's
+discussion uses a relative index, +1.8 for August); Mullenweg item adds Davies's deactivated Slack;
+'no regulator had announced action'; A/I's SDGT described as a terrorism-sanctions designation.
+
+Checked and kept: 25 Fields Medalists incl. Tao and Scholze; 'three days after' (OpenAI Sept 8,
+declaration Sept 11); all CPI/PPI/UMich figures; every Polymarket close; Treasury par yields and
+the 106bp card curve; HY/breakevens; buyback $5.187B of $10.489B; S&P -0.80%, Friday +0.86%;
+Brent's first settlement above $100 since Jul 23 (also the highest close since May 22, per CNBC);
+IEA figures; commodity card; NOAA, CPC, Copernicus, CAMS, GFED, NEA, USDM numbers and quotes; LG's
+statement; Gamers Nexus video Sept 6, 136 min; A/I timeline; all briefs. Still open: GDPNow 4.4
+(ekans; page did not render for the auditor); CAMS unit (tonnes of carbon, probably; left as
+'emissions by Copernicus's measure'); Rashad al-Alimi's quote is in Al Jazeera-sourced snippets
+(Asharq Al-Awsat renders 'must not be allowed to become'); the Axios Canada URL 403s to fetchers.
+Issue 13's 'one identical price' headline (Gemini 3.8 Flash is $0.75/$3.75) still flagged, not
+changed.
+
+Coverage tagger, after the audit: coverage.py still showed East/SE Asia as unseen for 14 because
+the body text says 'Philippine' and 'Seoul' (keywords were 'philippines' only, no 'seoul'), and
+Argentina's item fell one hit short of Latin America. Added 'philippine', 'seoul', 'manila',
+'south china sea', 'kalimantan', 'sumatra', 'jakarta' and 'falklands', 'malvinas', 'buenos
+aires'. Issue 14 now tags East/SE Asia and Latin America; the debt for 15 is Central
+Asia/Caucasus, Oceania and companies/deals.
