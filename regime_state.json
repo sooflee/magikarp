@@ -7221,6 +7221,158 @@
           "anchor": "wildcard",
           "line": "LG denies a TV-spying investigation, Apple announces watch features that listen by design, and California restricts feeds and chatbots for minors."
         }
+      ],
+      "annotations": [
+        {
+          "terms": [
+            "Tristan Buckmaster"
+          ],
+          "note": "An NYU mathematician who, with Levent Alpöge, announced blowup results for the Euler and Boussinesq equations and says OpenAI pressed to remove Alpöge from authorship."
+        },
+        {
+          "terms": [
+            "Sébastien Bubeck"
+          ],
+          "note": "An OpenAI researcher who spoke for the company on the Navier-Stokes result and told Scientific American it did not use Buckmaster and Alpöge's prompts or proofs."
+        },
+        {
+          "terms": [
+            "Navier-Stokes"
+          ],
+          "note": "The equations for how fluids such as air and water move. Whether smooth solutions can blow up in finite time is a Millennium Prize problem."
+        },
+        {
+          "terms": [
+            "blowup results"
+          ],
+          "note": "A blowup result shows that a solution to an equation develops an infinity in finite time, starting from smooth data."
+        },
+        {
+          "terms": [
+            "RubyGems"
+          ],
+          "note": "The package registry for the Ruby programming language, from which developers install libraries."
+        },
+        {
+          "terms": [
+            "Amodei"
+          ],
+          "note": "Dario Amodei, Anthropic's chief executive, who on September 12 argued in an essay that frontier labs 'must slow the pace' of capability gains."
+        },
+        {
+          "terms": [
+            "East-West pipeline"
+          ],
+          "note": "Saudi Arabia's crude line of about 1,200 kilometres from its eastern oil fields to Yanbu on the Red Sea, built to move oil without passing Hormuz."
+        },
+        {
+          "terms": [
+            "Al-Azraq"
+          ],
+          "note": "The air base at Al-Azraq in eastern Jordan, which hosts US aircraft."
+        },
+        {
+          "terms": [
+            "Mocha"
+          ],
+          "note": "A Red Sea port city in Yemen's Taiz province, about 75 kilometres north of the Bab al-Mandeb strait."
+        },
+        {
+          "terms": [
+            "Mayun"
+          ],
+          "note": "Mayun, also called Perim, is a small island in the Bab al-Mandeb strait off Yemen's southwestern tip."
+        },
+        {
+          "terms": [
+            "Sweden Democrats"
+          ],
+          "note": "A nationalist party founded in 1988 that backed Ulf Kristersson's government from outside the cabinet after the 2022 election."
+        },
+        {
+          "terms": [
+            "Saxony-Anhalt"
+          ],
+          "note": "The eastern German state where the far-right AfD won 43.8 percent on September 6, three seats short of a majority."
+        },
+        {
+          "terms": [
+            "Teodoro"
+          ],
+          "note": "Gilberto Teodoro, the Philippine secretary of national defence since 2023, whom China sanctioned in June."
+        },
+        {
+          "terms": [
+            "Mark Carney"
+          ],
+          "note": "Canada's prime minister since March 2025."
+        },
+        {
+          "terms": [
+            "Gamers Nexus"
+          ],
+          "note": "A PC-hardware testing channel and site run by Steve Burke; its LG investigation was made with Level1Techs and independent researchers."
+        },
+        {
+          "terms": [
+            "Live Rewind"
+          ],
+          "note": "An Apple Watch feature that shows the last 15 seconds of speech as text when the Digital Crown is double-pressed, processed on the watch."
+        },
+        {
+          "terms": [
+            "Siri Recap"
+          ],
+          "note": "An Apple Watch feature that takes notes on conversations through the day and summarises them using Apple's Private Cloud Compute."
+        },
+        {
+          "terms": [
+            "AB 1709"
+          ],
+          "note": "Signed September 10, it requires platforms to stop offering 'addictive' features such as infinite scroll and autoplay to users under 16, or keep them off."
+        },
+        {
+          "terms": [
+            "SB 1119"
+          ],
+          "note": "California's 'Adam's Law', signed September 10, sets safety requirements for chatbots used by minors, including crisis protocols and parental controls."
+        },
+        {
+          "terms": [
+            "AB 1856"
+          ],
+          "note": "Signed September 10, it exempts open-source operating systems from California's age-bracket requirement, by the Electronic Frontier Foundation's reading."
+        },
+        {
+          "terms": [
+            "Weird Gloop"
+          ],
+          "note": "The company that hosts the official wikis for games such as RuneScape."
+        },
+        {
+          "terms": [
+            "AnkiDroid"
+          ],
+          "note": "The free, volunteer-built Android version of the Anki flashcard app."
+        },
+        {
+          "terms": [
+            "DeepSeek"
+          ],
+          "note": "A Chinese AI lab owned by the hedge fund High-Flyer that releases open-weight models."
+        },
+        {
+          "terms": [
+            "Autistici/Inventati"
+          ],
+          "note": "An Italian volunteer collective that has provided free email and web hosting to activists since 2001."
+        },
+        {
+          "terms": [
+            "Kristersson"
+          ],
+          "note": "Ulf Kristersson, Sweden's prime minister since 2022 and leader of the Moderates."
+        }
       ]
     }
   ],
@@ -7369,6 +7521,246 @@
           "Pokémon Go Scans Trained the Navigation Tech for Military Drones"
         ]
       }
+    }
+  ],
+  "glossary": [
+    {
+      "terms": [
+        "basis points",
+        "basis point"
+      ],
+      "note": "A basis point is one hundredth of a percentage point, so 26 basis points is 0.26 percentage points."
+    },
+    {
+      "terms": [
+        "high-yield spread"
+      ],
+      "note": "The extra yield investors demand to hold riskier 'junk' corporate bonds instead of Treasuries. It widens when lenders get nervous, so a spread that barely moves means credit markets are calm."
+    },
+    {
+      "terms": [
+        "five-year breakeven",
+        "breakeven"
+      ],
+      "note": "The gap between ordinary and inflation-protected Treasury yields, read as the market's expected average inflation over that period."
+    },
+    {
+      "terms": [
+        "front month"
+      ],
+      "note": "The futures contract closest to expiry, the usual stand-in for a commodity's current price."
+    },
+    {
+      "terms": [
+        "Polymarket"
+      ],
+      "note": "A prediction market whose contracts pay $1 if an event happens. A price of 80 cents means traders put the chance at roughly 80 percent."
+    },
+    {
+      "terms": [
+        "UTC daily closes"
+      ],
+      "note": "The last price recorded before midnight Coordinated Universal Time each day, so every day is measured at the same moment."
+    },
+    {
+      "terms": [
+        "core prices",
+        "core CPI",
+        "core inflation",
+        "Core inflation"
+      ],
+      "note": "Consumer prices excluding food and energy, which swing the most. Central banks treat it as the steadier read on underlying inflation."
+    },
+    {
+      "terms": [
+        "producer prices",
+        "producer-price",
+        "PPI"
+      ],
+      "note": "The producer price index measures what businesses receive for goods and services, often an early signal for consumer prices."
+    },
+    {
+      "terms": [
+        "GDPNow"
+      ],
+      "note": "The Atlanta Fed's running estimate of the current quarter's GDP growth, updated as new data arrives."
+    },
+    {
+      "terms": [
+        "two-year Treasury yield",
+        "two-year yield"
+      ],
+      "note": "The interest rate on two-year US government debt. It moves closely with what markets expect the Fed to do."
+    },
+    {
+      "terms": [
+        "spot ETFs"
+      ],
+      "note": "Exchange-traded funds that hold actual bitcoin, giving investors exposure through an ordinary brokerage account."
+    },
+    {
+      "terms": [
+        "ECB",
+        "European Central Bank"
+      ],
+      "note": "The European Central Bank, which sets interest rates for the countries that use the euro."
+    },
+    {
+      "terms": [
+        "deposit rate"
+      ],
+      "note": "The rate the ECB pays banks on overnight deposits, its main policy rate."
+    },
+    {
+      "terms": [
+        "cloture vote"
+      ],
+      "note": "A Senate vote to end debate and move ahead. It needs 60 votes, which is how a filibuster is overcome."
+    },
+    {
+      "terms": [
+        "Hormuz"
+      ],
+      "note": "The Strait of Hormuz, between Iran and Oman. Before the war about a fifth of the world's oil passed through it, by the US Energy Information Administration's count."
+    },
+    {
+      "terms": [
+        "Bab al-Mandeb"
+      ],
+      "note": "The strait between Yemen and Djibouti at the southern end of the Red Sea, on the shipping route between the Suez Canal and the Indian Ocean."
+    },
+    {
+      "terms": [
+        "Houthis"
+      ],
+      "note": "The Iran-aligned movement that controls northern Yemen, including the capital Sanaa, and has fought a Saudi-led coalition since 2015."
+    },
+    {
+      "terms": [
+        "OPEC+"
+      ],
+      "note": "OPEC plus allied producers such as Russia, which coordinate oil output targets."
+    },
+    {
+      "terms": [
+        "IEA"
+      ],
+      "note": "The International Energy Agency, a Paris-based body that publishes a monthly Oil Market Report."
+    },
+    {
+      "terms": [
+        "Kpler"
+      ],
+      "note": "A commodity-data firm that tracks tankers using satellite and ship-transponder data."
+    },
+    {
+      "terms": [
+        "Central Command"
+      ],
+      "note": "US Central Command, the military command responsible for the Middle East."
+    },
+    {
+      "terms": [
+        "El Niño"
+      ],
+      "note": "A periodic warming of the tropical Pacific that shifts weather worldwide, typically bringing drought to Indonesia and Australia and suppressing Atlantic hurricanes."
+    },
+    {
+      "terms": [
+        "Niño-3.4"
+      ],
+      "note": "A patch of the central equatorial Pacific whose sea-surface temperature anomaly is the standard gauge of El Niño strength."
+    },
+    {
+      "terms": [
+        "Copernicus"
+      ],
+      "note": "The EU's Earth-observation programme, whose climate service publishes a monthly global temperature bulletin."
+    },
+    {
+      "terms": [
+        "Drought Monitor"
+      ],
+      "note": "The weekly US Drought Monitor map, produced by the University of Nebraska-Lincoln with NOAA and the US Department of Agriculture."
+    },
+    {
+      "terms": [
+        "open weights",
+        "open-weight"
+      ],
+      "note": "Models whose trained parameters are published for anyone to download and run, even if the training data and code are not."
+    },
+    {
+      "terms": [
+        "output tokens"
+      ],
+      "note": "Tokens are the word pieces a model reads and writes. Providers charge separately for input and for the output a model generates."
+    },
+    {
+      "terms": [
+        "OpenRouter"
+      ],
+      "note": "A service that routes requests to many AI models through one API and lists each model's price per million tokens."
+    },
+    {
+      "terms": [
+        "Hugging Face"
+      ],
+      "note": "The main hub where AI models and datasets are published and downloaded."
+    },
+    {
+      "terms": [
+        "Millennium Prize"
+      ],
+      "note": "Seven problems named by the Clay Mathematics Institute in 2000, each carrying a $1 million prize. Only the Poincaré conjecture has been confirmed solved."
+    },
+    {
+      "terms": [
+        "Fields Medalists"
+      ],
+      "note": "Winners of the Fields Medal, awarded every four years to up to four mathematicians under 40 and often called mathematics' highest honour."
+    },
+    {
+      "terms": [
+        "Lean-checked"
+      ],
+      "note": "Lean is a language for writing proofs that a computer checks step by step, so a Lean-checked proof is verified by machine. People still have to confirm the formal statement matches the problem."
+    },
+    {
+      "terms": [
+        "ACR"
+      ],
+      "note": "Automatic content recognition: software in smart TVs that identifies what is on screen to build viewing profiles for advertising."
+    },
+    {
+      "terms": [
+        "Private Cloud Compute"
+      ],
+      "note": "Apple's server system for AI requests too large for the device, which Apple says processes data without keeping it."
+    },
+    {
+      "terms": [
+        "national security law"
+      ],
+      "note": "The law Beijing imposed on Hong Kong in 2020, criminalising secession, subversion, terrorism and collusion with foreign forces."
+    },
+    {
+      "terms": [
+        "2016 arbitral award"
+      ],
+      "note": "The 2016 ruling by a tribunal under the UN Convention on the Law of the Sea that rejected most of China's South China Sea claims. China does not recognise it."
+    },
+    {
+      "terms": [
+        "CLARITY Act"
+      ],
+      "note": "A US bill setting rules for crypto markets, including how oversight divides between the SEC and the CFTC."
+    },
+    {
+      "terms": [
+        "Hacker News"
+      ],
+      "note": "A technology news site run by Y Combinator where readers vote stories up. This issue counts the week's top 100 stories."
     }
   ]
 }

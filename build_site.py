@@ -214,7 +214,129 @@ details.more summary{cursor:pointer;color:var(--muted);font-size:var(--fs-meta);
 .story .cmt{color:#4b5058}
 .sec h2{margin:0 0 10px}
 .impl{color:#333}
+.gl{position:relative;border-bottom:1px dotted #8a9099;cursor:help;outline:none}
+.gl:focus-visible{background:var(--accent-bg);border-radius:2px}
+.gl-tip{display:none;position:absolute;left:0;top:100%;margin-top:6px;z-index:30;width:max-content;
+  max-width:min(300px,82vw);background:#fff;color:var(--fg);border:1px solid var(--line);border-radius:6px;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);padding:8px 11px;font-size:14px;line-height:1.45;font-weight:400;
+  font-style:normal;text-align:left;white-space:normal;letter-spacing:0;text-transform:none}
+.gl-tip::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px}
+.gl:hover .gl-tip,.gl:focus-within .gl-tip,.gl.open .gl-tip{display:block}
+.gl-tip a{color:var(--accent);font-size:12px;margin-left:5px}
 """
+
+GL_JS = """<script>
+(function(){
+  function place(g){
+    var tip=g.querySelector('.gl-tip'); if(!tip) return;
+    tip.style.left='0px';
+    requestAnimationFrame(function(){
+      var r=tip.getBoundingClientRect(), vw=document.documentElement.clientWidth, dx=0;
+      if(r.width===0) return;
+      if(r.right>vw-8) dx=vw-8-r.right;
+      if(r.left+dx<8) dx=8-r.left;
+      tip.style.left=dx+'px';
+    });
+  }
+  function closeAll(except){
+    document.querySelectorAll('.gl.open').forEach(function(o){ if(o!==except) o.classList.remove('open'); });
+  }
+  document.querySelectorAll('.gl').forEach(function(g){
+    g.addEventListener('mouseenter',function(){ place(g); });
+    g.addEventListener('focus',function(){ place(g); });
+    g.addEventListener('click',function(e){
+      if(e.target.closest('a')) return;
+      var was=g.classList.contains('open'); closeAll(g);
+      g.classList.toggle('open',!was); if(!was) place(g);
+      e.stopPropagation();
+    });
+  });
+  document.addEventListener('click',function(){ closeAll(null); });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ closeAll(null); var a=document.activeElement; if(a&&a.classList.contains('gl')) a.blur(); }
+  });
+})();
+</script>"""
+
+NOTE_SKIP_TAGS = {"a", "h1", "h2", "script", "style", "summary", "title", "svg", "button", "figcaption"}
+
+
+def page_notes(doc: dict, iss: dict) -> list:
+    """Issue annotations first (they win on a shared term), then the shared glossary."""
+    return list(iss.get("annotations") or []) + list(doc.get("glossary") or [])
+
+
+def annotate_html(body: str, notes: list) -> tuple:
+    """Mark the first occurrence of each note's terms on the page (the brief counts separately).
+    Skips links, headings, captions, chart markup and anything inside tags. Returns
+    (html, set of note indexes that matched at least once)."""
+    import re
+    if not notes:
+        return body, set()
+    term_idx = {}
+    for i, n in enumerate(notes):
+        for t in n.get("terms", []):
+            term_idx.setdefault(esc(t), i)
+    if not term_idx:
+        return body, set()
+    alts = "|".join(re.escape(t) for t in sorted(term_idx, key=len, reverse=True))
+    rx = re.compile(rf"(?<![A-Za-z0-9])({alts})(?![A-Za-z0-9])")
+    page_used, brief_used = set(), set()
+    out, used, hits, skip, counter = [], page_used, set(), 0, [0]
+
+    def mark(m):
+        i = term_idx[m.group(1)]
+        if i in used:
+            return m.group(0)
+        used.add(i)
+        hits.add(i)
+        counter[0] += 1
+        n = notes[i]
+        src_link = f' <a href="{esc(n["url"])}">source</a>' if n.get("url") else ""
+        nid = f"gl-{counter[0]}"
+        return (f'<span class="gl" tabindex="0" aria-describedby="{nid}">{m.group(1)}'
+                f'<span class="gl-tip" role="tooltip" id="{nid}">{esc(n["note"])}{src_link}</span></span>')
+
+    for part in re.split(r"(<[^>]+>)", body):
+        if part.startswith("<"):
+            m = re.match(r"<(/?)([a-zA-Z0-9]+)", part)
+            if m:
+                closing, name = m.group(1) == "/", m.group(2).lower()
+                if name in NOTE_SKIP_TAGS and not part.endswith("/>"):
+                    skip += -1 if closing else 1
+                if not closing and name == "div":
+                    cm = re.search(r'class="(sec|brief)', part)
+                    if cm:   # once per page for the sections; the brief keeps its own set
+                        used = brief_used if cm.group(1) == "brief" else page_used
+            out.append(part)
+        elif skip > 0 or not part.strip():
+            out.append(part)
+        else:
+            out.append(rx.sub(mark, part))
+    return "".join(out), hits
+
+
+def lint_notes(doc: dict) -> None:
+    problems = []
+    groups = [("glossary", doc.get("glossary") or [])]
+    groups += [(f"issue {i['id']} annotations", i.get("annotations") or []) for i in doc.get("issues", [])]
+    for where, notes in groups:
+        for n in notes:
+            terms, note = n.get("terms") or [], n.get("note", "")
+            if not terms or not note:
+                problems.append(f"{where}: note needs terms and note text: {n}")
+                continue
+            if len(note.split()) > 45:
+                problems.append(f"{where}: note over 45 words for {terms[0]!r}")
+            if "\u2014" in note:
+                problems.append(f"{where}: em-dash in note for {terms[0]!r}")
+    if problems:
+        print("NOTES LINT:", file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        raise SystemExit(1)
+
+
 
 CHART_JS = """<script>
 document.querySelectorAll('.cbox').forEach(function(box){
@@ -811,8 +933,17 @@ def render_issue_page(doc: dict, iss: dict) -> str:
     secs.append(render_radar(iss))
     secs.append(render_watch_next(iss))
     body = "".join(secs)
+    notes = page_notes(doc, iss)
+    body, hits = annotate_html(body, notes)
+    n_issue = len(iss.get("annotations") or [])
+    missed = [notes[i]["terms"][0] for i in range(n_issue) if i not in hits]
+    if missed:
+        print(f"NOTES LINT: issue {iss['id']} annotations never matched the page: {missed}", file=sys.stderr)
+        raise SystemExit(1)
     if 'class="cbox"' in body:
         body += CHART_JS
+    if 'class="gl"' in body:
+        body += GL_JS
     label = iss.get("date_label") or week_label(iss)
     inner = (
         f'<header class="mast"><h1><a href="../">The Current Regime</a></h1>'
@@ -853,6 +984,7 @@ def build():
     doc = json.loads(STATE.read_text())
     regime_engine.lint_or_die(regime_engine.latest_issue(doc))
     lint_media(doc)
+    lint_notes(doc)
     issues = [i for i in doc.get("issues", []) if not i.get("partial")]
     issues.sort(key=lambda i: i["id"], reverse=True)
     (DOCS / "issues").mkdir(parents=True, exist_ok=True)

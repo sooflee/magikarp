@@ -235,6 +235,24 @@ gets a one-line reason in the ledger for leaving it out. Run it with web-search 
 spare: the gap check for issue 14 ran after the session's search cap and had to verify by
 page fetches alone.
 
+## Hover notes (archive site only)
+
+The site marks the first appearance of a term in each section with a dotted underline and a note
+that opens on hover, keyboard focus or tap. The email shows the text without notes.
+
+- **Shared glossary** (`glossary`, top level of `regime_state.json`): plain-language definitions
+  that stay true every week (basis points, high-yield spread, front month, Polymarket prices, El
+  Niño, Lean). It applies to every archive page, so add a term once and it works everywhere.
+- **Issue notes** (`annotations` on the issue): who a person is, where a place is, what a bill
+  does. Use only facts already verified for that issue or settled general knowledge; a note is
+  reader-facing text and gets the same verification, house style and audit as the lanes.
+- Shape: `{terms:[...], note, url?}`. `terms` are exact, case-sensitive spellings as they appear
+  in the text (list variants). Notes run 45 words at most, one or two sentences, no em-dashes, no
+  opinion. The build fails on an issue note that never matches the page, so a renamed person or a
+  cut sentence cannot leave a dead note behind.
+- Aim for the terms a curious non-specialist would stop at: jargon, acronyms, people and places the
+  issue names without introducing. Ten to twenty-five issue notes is plenty.
+
 ## Images and charts (archive site only)
 
 The site renders an optional `image` and/or `chart` on any lane (`regimes.*`),

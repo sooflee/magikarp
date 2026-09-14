@@ -1765,3 +1765,16 @@ collapsible blocks). What changed:
 The skill now carries the new shape, the length budget, the one-home rule, the radar `line` field, the
 Key fact placement, the stricter photo rule, `media.py`, and the big-story sweep and audit as build
 steps.
+
+### Hover notes (2026-09-14)
+
+The owner asked for hover-overs that explain terms or add context. The site now marks a term's first
+appearance on each page with a dotted underline; the note opens on hover, keyboard focus or tap, and a
+small script keeps it inside the screen edge on phones. The email is unchanged. Two layers: a shared
+`glossary` at the top of `regime_state.json` (38 plain-language definitions such as basis points, the
+high-yield spread, front month, Polymarket prices, El Niño, Lean-checked proofs, the 2016 arbitral award)
+that applies to every archive page, and 25 `annotations` on issue 14 for people, places and bills
+(Buckmaster, Bubeck, the East-West pipeline, Mayun, AB 1709, SB 1119, AB 1856, Live Rewind, Siri Recap
+and others), written only from facts already verified for the issue or settled general knowledge. Issue
+14 carries 67 notes; the brief keeps its own set so its terms do not use up the sections' notes. The build
+fails on a note over 45 words, an em-dash in a note, or an issue note that never matches the page.
