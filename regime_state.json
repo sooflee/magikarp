@@ -6213,7 +6213,17 @@
               "title": "Guest post: How extreme heat is creeping from summer into autumn and spring (Carbon Brief, September 10)",
               "url": "https://www.carbonbrief.org/guest-post-how-extreme-heat-is-creeping-from-summer-into-autumn-and-spring"
             }
-          ]
+          ],
+          "image": {
+            "src": "img/14/deep_dive.jpg",
+            "width": 1280,
+            "height": 823,
+            "alt": "Satellite image of grey smoke haze and scattered cloud over the west coast of Borneo and the sea beside it.",
+            "caption": "Smoke haze over western Borneo and the Karimata Strait on September 8, 2026, in a true-colour image from NASA's Terra satellite.",
+            "credit": "NASA Worldview, MODIS on Terra",
+            "license": "Public domain",
+            "source_url": "https://worldview.earthdata.nasa.gov/?v=105,-5,119,4&l=MODIS_Terra_CorrectedReflectance_TrueColor,Coastlines_15m&t=2026-09-08"
+          }
         },
         "geopolitics": {
           "state": "stressed",
@@ -6253,7 +6263,17 @@
               "comment": "The counter-tariffs took effect on September 8: 15, 25 and 50 percent on C$27.6 billion of US goods, matching the US rate product by product, from steel and dairy to agricultural equipment and pulp, with a C$7.5 billion support package. François-Philippe Champagne: 'When the United States asked too much and offered too little, we chose to stand up for Canadians.' The trade-fragmentation regime now has tariffs on C$27.6 billion of goods in each direction across the world's longest international border."
             }
           ],
-          "links": []
+          "links": [],
+          "image": {
+            "src": "img/14/geopolitics.jpg",
+            "width": 1280,
+            "height": 951,
+            "alt": "Photograph from orbit of a narrow blue strait between two brown desert coastlines, with small islands in the channel.",
+            "caption": "The Bab al-Mandeb strait between Arabia and the Horn of Africa, photographed from the International Space Station in February 2020.",
+            "credit": "NASA Johnson Space Center, ISS Expedition 62",
+            "license": "Public domain",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bab-el-Mandeb,_outer_space.jpg"
+          }
         },
         "markets": {
           "state": "mixed",
@@ -6312,6 +6332,129 @@
             "dollar": "Flat (99.1)",
             "credit": "Tight (2.70%)",
             "crypto": "RISK-OFF"
+          },
+          "chart": {
+            "title": "Odds of a quarter-point Fed hike in September",
+            "subtitle": "Polymarket contract price in cents, UTC daily closes, August 20 to September 13",
+            "suffix": "¢",
+            "decimals": 1,
+            "tick_decimals": 0,
+            "y_min": 0,
+            "y_max": 100,
+            "ref": {
+              "value": 50,
+              "label": "coin flip"
+            },
+            "highlight_from": "2026-09-07",
+            "highlight_label": "this issue's week",
+            "series": [
+              {
+                "name": "25 bp hike",
+                "points": [
+                  [
+                    "2026-08-20",
+                    27.5
+                  ],
+                  [
+                    "2026-08-21",
+                    30.5
+                  ],
+                  [
+                    "2026-08-22",
+                    30.5
+                  ],
+                  [
+                    "2026-08-23",
+                    31.5
+                  ],
+                  [
+                    "2026-08-24",
+                    34.5
+                  ],
+                  [
+                    "2026-08-25",
+                    32.5
+                  ],
+                  [
+                    "2026-08-26",
+                    32.5
+                  ],
+                  [
+                    "2026-08-27",
+                    30.5
+                  ],
+                  [
+                    "2026-08-28",
+                    50.5
+                  ],
+                  [
+                    "2026-08-29",
+                    44.5
+                  ],
+                  [
+                    "2026-08-30",
+                    52.5
+                  ],
+                  [
+                    "2026-08-31",
+                    54.5
+                  ],
+                  [
+                    "2026-09-01",
+                    57.5
+                  ],
+                  [
+                    "2026-09-02",
+                    53.5
+                  ],
+                  [
+                    "2026-09-03",
+                    42.5
+                  ],
+                  [
+                    "2026-09-04",
+                    49.5
+                  ],
+                  [
+                    "2026-09-05",
+                    49.5
+                  ],
+                  [
+                    "2026-09-06",
+                    49.5
+                  ],
+                  [
+                    "2026-09-07",
+                    51.5
+                  ],
+                  [
+                    "2026-09-08",
+                    54.5
+                  ],
+                  [
+                    "2026-09-09",
+                    53.5
+                  ],
+                  [
+                    "2026-09-10",
+                    64.5
+                  ],
+                  [
+                    "2026-09-11",
+                    80.5
+                  ],
+                  [
+                    "2026-09-12",
+                    79.5
+                  ],
+                  [
+                    "2026-09-13",
+                    78.5
+                  ]
+                ]
+              }
+            ],
+            "source": "Polymarket, 'Fed decision in September?' price history"
           }
         }
       },
@@ -6420,7 +6563,317 @@
             "level": "82.38",
             "change": "-0.0%"
           }
-        ]
+        ],
+        "chart": {
+          "title": "Brent crude, front-month futures",
+          "subtitle": "Daily settlement in dollars a barrel, June 1 to September 11",
+          "prefix": "$",
+          "decimals": 2,
+          "tick_decimals": 0,
+          "ref": {
+            "value": 100,
+            "label": "$100"
+          },
+          "highlight_from": "2026-09-07",
+          "highlight_label": "this issue's week",
+          "series": [
+            {
+              "name": "Brent",
+              "points": [
+                [
+                  "2026-06-01",
+                  94.98
+                ],
+                [
+                  "2026-06-02",
+                  96.0
+                ],
+                [
+                  "2026-06-03",
+                  97.81
+                ],
+                [
+                  "2026-06-04",
+                  95.03
+                ],
+                [
+                  "2026-06-05",
+                  93.09
+                ],
+                [
+                  "2026-06-08",
+                  94.25
+                ],
+                [
+                  "2026-06-09",
+                  91.45
+                ],
+                [
+                  "2026-06-10",
+                  93.1
+                ],
+                [
+                  "2026-06-11",
+                  90.38
+                ],
+                [
+                  "2026-06-12",
+                  87.33
+                ],
+                [
+                  "2026-06-15",
+                  83.17
+                ],
+                [
+                  "2026-06-16",
+                  78.96
+                ],
+                [
+                  "2026-06-17",
+                  79.55
+                ],
+                [
+                  "2026-06-18",
+                  79.85
+                ],
+                [
+                  "2026-06-22",
+                  77.9
+                ],
+                [
+                  "2026-06-23",
+                  77.08
+                ],
+                [
+                  "2026-06-24",
+                  73.74
+                ],
+                [
+                  "2026-06-25",
+                  75.26
+                ],
+                [
+                  "2026-06-26",
+                  71.99
+                ],
+                [
+                  "2026-06-29",
+                  73.15
+                ],
+                [
+                  "2026-06-30",
+                  72.92
+                ],
+                [
+                  "2026-07-01",
+                  71.57
+                ],
+                [
+                  "2026-07-02",
+                  71.8
+                ],
+                [
+                  "2026-07-06",
+                  71.99
+                ],
+                [
+                  "2026-07-07",
+                  74.16
+                ],
+                [
+                  "2026-07-08",
+                  78.02
+                ],
+                [
+                  "2026-07-09",
+                  76.3
+                ],
+                [
+                  "2026-07-10",
+                  76.01
+                ],
+                [
+                  "2026-07-13",
+                  83.3
+                ],
+                [
+                  "2026-07-14",
+                  84.73
+                ],
+                [
+                  "2026-07-15",
+                  84.95
+                ],
+                [
+                  "2026-07-16",
+                  84.23
+                ],
+                [
+                  "2026-07-17",
+                  88.1
+                ],
+                [
+                  "2026-07-20",
+                  89.22
+                ],
+                [
+                  "2026-07-21",
+                  91.01
+                ],
+                [
+                  "2026-07-22",
+                  94.07
+                ],
+                [
+                  "2026-07-23",
+                  100.69
+                ],
+                [
+                  "2026-07-24",
+                  96.78
+                ],
+                [
+                  "2026-07-27",
+                  88.36
+                ],
+                [
+                  "2026-07-28",
+                  84.09
+                ],
+                [
+                  "2026-07-29",
+                  90.74
+                ],
+                [
+                  "2026-07-30",
+                  89.03
+                ],
+                [
+                  "2026-07-31",
+                  90.12
+                ],
+                [
+                  "2026-08-03",
+                  83.77
+                ],
+                [
+                  "2026-08-04",
+                  79.36
+                ],
+                [
+                  "2026-08-05",
+                  79.45
+                ],
+                [
+                  "2026-08-06",
+                  82.49
+                ],
+                [
+                  "2026-08-07",
+                  83.55
+                ],
+                [
+                  "2026-08-10",
+                  87.72
+                ],
+                [
+                  "2026-08-11",
+                  88.91
+                ],
+                [
+                  "2026-08-12",
+                  88.98
+                ],
+                [
+                  "2026-08-13",
+                  87.07
+                ],
+                [
+                  "2026-08-14",
+                  88.52
+                ],
+                [
+                  "2026-08-17",
+                  90.87
+                ],
+                [
+                  "2026-08-18",
+                  91.02
+                ],
+                [
+                  "2026-08-19",
+                  91.62
+                ],
+                [
+                  "2026-08-20",
+                  93.78
+                ],
+                [
+                  "2026-08-21",
+                  94.39
+                ],
+                [
+                  "2026-08-24",
+                  92.17
+                ],
+                [
+                  "2026-08-25",
+                  88.58
+                ],
+                [
+                  "2026-08-26",
+                  87.84
+                ],
+                [
+                  "2026-08-27",
+                  89.7
+                ],
+                [
+                  "2026-08-28",
+                  89.31
+                ],
+                [
+                  "2026-08-31",
+                  90.49
+                ],
+                [
+                  "2026-09-01",
+                  94.65
+                ],
+                [
+                  "2026-09-02",
+                  95.63
+                ],
+                [
+                  "2026-09-03",
+                  95.52
+                ],
+                [
+                  "2026-09-04",
+                  96.28
+                ],
+                [
+                  "2026-09-08",
+                  97.92
+                ],
+                [
+                  "2026-09-09",
+                  101.21
+                ],
+                [
+                  "2026-09-10",
+                  107.63
+                ],
+                [
+                  "2026-09-11",
+                  104.61
+                ]
+              ]
+            }
+          ],
+          "source": "ICE Brent front-month futures via Yahoo Finance",
+          "source_url": "https://finance.yahoo.com/quote/BZ%3DF/history/"
+        }
       },
       "undercurrent": {
         "label": "Undercurrent",
@@ -6497,7 +6950,18 @@
             "url": "https://www.inventati.org/campaign/press",
             "comment": "OFAC designation on August 26, PayPal suspension August 27, the domain put on hold August 28, the Banca Etica account suspended September 1, the decision to dissolve on September 6 and an urgent appeal against the bank filed September 8; services are due to end September 18."
           }
-        ]
+        ],
+        "image": {
+          "src": "img/14/wildcard.jpg",
+          "width": 1280,
+          "height": 785,
+          "alt": "Overhead view of a crowded trade-fair stand with a central display of LG OLED televisions.",
+          "caption": "LG's OLED TV stand at the IFA electronics fair in Berlin, 2012.",
+          "credit": "LG Electronics",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:IFA_2012_LG%EC%A0%84%EC%9E%90_OLED_TV_(1).jpg"
+        }
       },
       "briefs": [
         {

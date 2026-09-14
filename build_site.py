@@ -11,6 +11,7 @@ Usage:
 
 from __future__ import annotations
 
+import sys
 import html
 import json
 from pathlib import Path
@@ -154,6 +155,230 @@ a.subscribe:hover,button.subscribe:hover{{background:var(--accent);color:#fff}}
 """
 
 
+# ---------- images & charts (site only; the email renderer ignores these keys) ----------
+# A section may carry `image` (an open-licence photo stored under docs/img/<issue>/) and/or
+# `chart` (one dated series, drawn as HTML + a stretched SVG line so the text stays at
+# CSS size on any screen width). lint_media() enforces credit, licence and file presence.
+MEDIA_CSS = """
+.fig{margin:4px 0 14px}
+.fig img{display:block;width:100%;height:auto;border-radius:3px;background:#f2f2f2}
+.fig figcaption{font-size:var(--fs-meta);color:var(--muted);line-height:1.5;margin-top:6px}
+.fig .credit,.fig .credit a{color:var(--faint)}
+.chart{margin:14px 0 16px}
+.chart .ctitle{font-size:var(--fs-detail);font-weight:700;margin:0;line-height:1.35}
+.chart .csub{font-size:var(--fs-meta);color:var(--muted);margin:0 0 8px;line-height:1.4}
+.cbox{position:relative;height:220px;outline:none}
+.cbox:focus-visible{box-shadow:0 0 0 2px var(--accent-bg);border-radius:3px}
+.plot{position:absolute;left:44px;right:62px;top:10px;bottom:26px;touch-action:pan-y}
+.plot svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
+.plot .g{position:absolute;left:0;right:0;border-top:1px solid #ededed}
+.plot .yl{position:absolute;left:-44px;width:36px;text-align:right;transform:translateY(-50%);
+  font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;line-height:1}
+.plot .xl{position:absolute;top:100%;margin-top:8px;transform:translateX(-50%);font-size:12px;
+  color:var(--faint);white-space:nowrap;line-height:1}
+.plot .band{position:absolute;top:0;bottom:0;right:0;background:var(--accent-bg)}
+.plot .bandl{position:absolute;bottom:4px;right:0;padding-right:5px;font-size:11px;color:var(--accent);
+  white-space:nowrap;line-height:1}
+.plot .ref{position:absolute;left:0;right:0;border-top:1px solid var(--faint)}
+.plot .refl{position:absolute;left:4px;transform:translateY(-130%);font-size:11px;color:var(--muted);
+  line-height:1;white-space:nowrap}
+.plot .dot,.plot .hdot{position:absolute;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;
+  background:var(--accent);box-shadow:0 0 0 2px #fff}
+.plot .endl{position:absolute;left:100%;margin-left:9px;transform:translateY(-50%);font-size:13px;
+  font-weight:700;color:var(--fg);white-space:nowrap;line-height:1}
+.plot .xh{position:absolute;top:0;bottom:0;border-left:1px solid var(--muted);display:none}
+.plot .hdot{display:none}
+.plot .tip{position:absolute;top:0;display:none;pointer-events:none;background:#fff;
+  border:1px solid var(--line);border-radius:4px;padding:5px 8px;font-size:12px;line-height:1.35;
+  color:var(--muted);white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.08);z-index:2}
+.plot .tip b{display:block;font-size:14px;color:var(--fg)}
+.chart details{font-size:var(--fs-meta);color:var(--muted);margin-top:8px}
+.chart details summary{cursor:pointer}
+.chart details table{border-collapse:collapse;margin-top:6px;font-variant-numeric:tabular-nums}
+.chart details td{padding:2px 16px 2px 0;border-bottom:1px solid #f0f0f0}
+.chart .csrc{font-size:12px;color:var(--faint);margin:4px 0 0}
+.chart .csrc a{color:var(--faint)}
+"""
+
+CHART_JS = """<script>
+document.querySelectorAll('.cbox').forEach(function(box){
+  var plot=box.querySelector('.plot'), pts=JSON.parse(box.getAttribute('data-pts'));
+  var xh=plot.querySelector('.xh'), hd=plot.querySelector('.hdot'), tip=plot.querySelector('.tip');
+  var tv=tip.querySelector('b'), tl=tip.querySelector('span'), cur=-1;
+  function show(i){
+    cur=i; var p=pts[i];
+    xh.style.left=p[0]+'%'; hd.style.left=p[0]+'%'; hd.style.top=p[1]+'%';
+    tv.textContent=p[3]; tl.textContent=p[2];
+    xh.style.display=hd.style.display=tip.style.display='block';
+    var w=plot.clientWidth, x=p[0]/100*w, tw=tip.offsetWidth;
+    var left=(x+12+tw>w)?x-12-tw:x+12;
+    tip.style.left=Math.max(0,Math.min(w-tw,left))+'px';
+  }
+  function hide(){xh.style.display=hd.style.display=tip.style.display='none';}
+  function nearest(cx){
+    var r=plot.getBoundingClientRect(), f=(cx-r.left)/r.width*100, b=0;
+    for(var i=1;i<pts.length;i++){if(Math.abs(pts[i][0]-f)<Math.abs(pts[b][0]-f))b=i;}
+    return b;
+  }
+  box.addEventListener('pointermove',function(e){show(nearest(e.clientX));});
+  box.addEventListener('pointerleave',hide);
+  box.addEventListener('focus',function(){show(cur<0?pts.length-1:cur);});
+  box.addEventListener('blur',hide);
+  box.addEventListener('keydown',function(e){
+    var i=cur<0?pts.length-1:cur;
+    if(e.key==='ArrowLeft'){show(Math.max(0,i-1));e.preventDefault();}
+    if(e.key==='ArrowRight'){show(Math.min(pts.length-1,i+1));e.preventDefault();}
+  });
+});
+</script>"""
+
+LICENSE_OK = ("Public domain", "CC0", "CC BY ", "CC BY-SA ")
+
+
+def render_figure(img) -> str:
+    if not img:
+        return ""
+    lic = esc(img["license"])
+    if img.get("license_url"):
+        lic = f'<a href="{esc(img["license_url"])}">{lic}</a>'
+    return (f'<figure class="fig"><img src="../{esc(img["src"])}" alt="{esc(img["alt"])}" '
+            f'width="{int(img["width"])}" height="{int(img["height"])}" loading="lazy" decoding="async">'
+            f'<figcaption>{esc(img["caption"])} <span class="credit">{esc(img["credit"])} &middot; '
+            f'{lic} &middot; <a href="{esc(img["source_url"])}">source</a></span></figcaption></figure>')
+
+
+def _nice_step(span: float, n: int = 4) -> float:
+    import math
+    raw = span / n
+    mag = 10 ** math.floor(math.log10(raw))
+    for m in (1, 2, 2.5, 5, 10):
+        if raw <= m * mag:
+            return m * mag
+    return 10 * mag
+
+
+def _fmt_val(ch: dict, v: float, decimals=None) -> str:
+    d = ch.get("decimals", 0) if decimals is None else decimals
+    return f'{ch.get("prefix", "")}{v:,.{d}f}{ch.get("suffix", "")}'
+
+
+def _day(d) -> str:
+    return f'{d.strftime("%B")} {d.day}'
+
+
+def render_chart(ch) -> str:
+    """One dated series as a line: hairline grid, 2px line, end dot + end label, optional
+    reference line and shaded issue week, crosshair tooltip, and a table view."""
+    if not ch:
+        return ""
+    import datetime as dt
+    import json as _json
+    import math
+    pts = ch["series"][0]["points"]
+    days = [dt.date.fromisoformat(d) for d, _ in pts]
+    vals = [float(v) for _, v in pts]
+    t0, t1 = days[0], days[-1]
+    span_d = max(1, (t1 - t0).days)
+    extra = [ch["ref"]["value"]] if ch.get("ref") else []
+    lo, hi = min(vals + extra), max(vals + extra)
+    step = _nice_step((ch.get("y_max", hi) - ch.get("y_min", lo)) or 1)
+    ylo = ch.get("y_min", math.floor(lo / step) * step)
+    yhi = ch.get("y_max", math.ceil(hi / step) * step)
+    X = lambda d: (d - t0).days / span_d * 100
+    Y = lambda v: (yhi - v) / (yhi - ylo) * 100
+    grid = []
+    for i in range(int(round((yhi - ylo) / step)) + 1):
+        v = ylo + i * step
+        grid.append(f'<div class="g" style="top:{Y(v):.2f}%"></div>'
+                    f'<div class="yl" style="top:{Y(v):.2f}%">'
+                    f'{esc(_fmt_val(ch, v, ch.get("tick_decimals", 0)))}</div>')
+    ticks = []
+    if span_d > 45:                                    # month starts
+        d = dt.date(t0.year, t0.month, 1)
+        while d <= t1:
+            if d >= t0:
+                ticks.append((d, d.strftime("%b")))
+            d = dt.date(d.year + (d.month == 12), d.month % 12 + 1, 1)
+    else:                                              # weekly from the first date
+        d = t0
+        while d <= t1:
+            ticks.append((d, f'{d.strftime("%b")} {d.day}'))
+            d += dt.timedelta(days=7)
+    xl = "".join(f'<div class="xl" style="left:{X(d):.2f}%">{esc(t)}</div>' for d, t in ticks)
+    band = ""
+    if ch.get("highlight_from"):
+        bx = X(max(dt.date.fromisoformat(ch["highlight_from"]), t0))
+        band = (f'<div class="band" style="left:{bx:.2f}%"></div>'
+                f'<div class="bandl">{esc(ch.get("highlight_label", "this week"))}</div>')
+    ref = ""
+    if ch.get("ref"):
+        ry = Y(ch["ref"]["value"])
+        ref = (f'<div class="ref" style="top:{ry:.2f}%"></div>'
+               f'<div class="refl" style="top:{ry:.2f}%">{esc(ch["ref"]["label"])}</div>')
+    poly = " ".join(f"{X(d) * 10:.1f},{Y(v) * 10:.1f}" for d, v in zip(days, vals))
+    svg = (f'<svg viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">'
+           f'<polyline points="{poly}" fill="none" stroke="{ACCENT}" stroke-width="2" '
+           f'stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>')
+    ex, ey = X(days[-1]), Y(vals[-1])
+    end = (f'<span class="dot" style="left:{ex:.2f}%;top:{ey:.2f}%"></span>'
+           f'<span class="endl" style="top:{ey:.2f}%">{esc(_fmt_val(ch, vals[-1]))}</span>')
+    jpts = [[round(X(d), 3), round(Y(v), 3), _day(d), _fmt_val(ch, v)] for d, v in zip(days, vals)]
+    rows = "".join(f'<tr><td>{_day(d)}</td><td>{esc(_fmt_val(ch, v))}</td></tr>'
+                   for d, v in zip(days, vals))
+    src = esc(ch["source"])
+    if ch.get("source_url"):
+        src = f'<a href="{esc(ch["source_url"])}">{src}</a>'
+    aria = (f'{ch["title"]}: {_fmt_val(ch, vals[0])} on {_day(days[0])}, '
+            f'{_fmt_val(ch, vals[-1])} on {_day(days[-1])}')
+    sub = f'<p class="csub">{esc(ch["subtitle"])}</p>' if ch.get("subtitle") else ""
+    return (f'<div class="chart"><p class="ctitle">{esc(ch["title"])}</p>{sub}'
+            f'<div class="cbox" tabindex="0" role="img" aria-label="{esc(aria)}" '
+            f'data-pts="{esc(_json.dumps(jpts))}"><div class="plot">'
+            f'{"".join(grid)}{band}{ref}{svg}{end}'
+            '<div class="xh"></div><span class="hdot"></span><div class="tip"><b></b><span></span></div>'
+            f'{xl}</div></div>'
+            f'<details><summary>Show the numbers</summary><table>{rows}</table></details>'
+            f'<p class="csrc">Source: {src}</p></div>')
+
+
+def lint_media(doc: dict) -> None:
+    problems = []
+    for iss in doc.get("issues", []):
+        secs = [(f"regimes.{k}", v) for k, v in (iss.get("regimes") or {}).items()]
+        secs += [(k, iss.get(k)) for k in ("commodities", "wildcard", "undercurrent")]
+        for name, sec in secs:
+            if not isinstance(sec, dict):
+                continue
+            where = f"issue {iss['id']} {name}"
+            img = sec.get("image")
+            if img:
+                for key in ("src", "alt", "caption", "credit", "license", "source_url", "width", "height"):
+                    if not img.get(key):
+                        problems.append(f"{where}.image is missing {key}")
+                if img.get("src") and not (DOCS / img["src"]).is_file():
+                    problems.append(f"{where}.image file not found: docs/{img['src']}")
+                if img.get("license") and not str(img["license"]).startswith(LICENSE_OK):
+                    problems.append(f"{where}.image licence not open: {img['license']!r}")
+            ch = sec.get("chart")
+            if ch:
+                series = ch.get("series") or []
+                if len(series) != 1:
+                    problems.append(f"{where}.chart needs exactly one series "
+                                    "(two or more need a legend and a validated palette)")
+                else:
+                    dates = [p[0] for p in series[0].get("points", [])]
+                    if len(dates) < 2 or dates != sorted(dates):
+                        problems.append(f"{where}.chart points must be 2+ ISO dates in order")
+                for key in ("title", "source"):
+                    if not ch.get(key):
+                        problems.append(f"{where}.chart is missing {key}")
+    if problems:
+        print("MEDIA LINT:", file=sys.stderr)
+        for p in problems:
+            print(f"  - {p}", file=sys.stderr)
+        raise SystemExit(1)
+
+
 def esc(s) -> str:
     return html.escape(str(s))
 
@@ -164,7 +389,7 @@ def page(title: str, inner: str) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
-<style>{CSS}</style>
+<style>{CSS}{MEDIA_CSS}</style>
 </head><body><div class="wrap">
 {inner}
 <footer><a href="https://github.com/sooflee/magikarp">source on GitHub</a><br>
@@ -222,7 +447,8 @@ def render_regime(label: str, r: dict, traj: str = None) -> str:
     impl = (f'<p class="impl">{esc(r["implication"])}</p>' if r.get("implication") else "")
     traj_html = f'<p class="traj">{esc(traj)}</p>' if traj else ""
     return (f'<div class="sec"><h2>{esc(r.get("headline", label))}{badge(r.get("state",""))}</h2>'
-            f'<p class="sub">{esc(label)}</p>{traj_html}<p>{esc(body)}</p>'
+            f'<p class="sub">{esc(label)}</p>{traj_html}{render_figure(r.get("image"))}<p>{esc(body)}</p>'
+            f'{render_chart(r.get("chart"))}'
             f'{render_items(r.get("items"))}{render_links(r.get("links"))}{impl}</div>')
 
 
@@ -358,8 +584,8 @@ def render_commodities(c: dict) -> str:
         for it in c.get("items", []) if _chg_mag(it.get("change", "")) >= floor)
     return (f'<div class="sec"><h2>{esc(c.get("headline", "Crude falls as the fear premium unwinds."))}</h2>'
             f'<p class="sub">Commodities &amp; energy &middot; {esc(c.get("as_of",""))}</p>'
-            f'<p>{esc(c.get("summary",""))}</p>'
-            f'<table class="mkt">{rows}</table></div>')
+            f'{render_figure(c.get("image"))}<p>{esc(c.get("summary",""))}</p>'
+            f'{render_chart(c.get("chart"))}<table class="mkt">{rows}</table></div>')
 
 
 def render_contrarian(doc: dict, iss: dict) -> str:
@@ -377,7 +603,7 @@ def render_contrarian(doc: dict, iss: dict) -> str:
 
 def render_undercurrent(u: dict) -> str:
     return (f'<div class="sec"><h2>{esc(u["headline"])}</h2>'
-            f'<p class="sub">{esc(u.get("label","Undercurrent"))}</p>'
+            f'<p class="sub">{esc(u.get("label","Undercurrent"))}</p>{render_figure(u.get("image"))}'
             f'<p>{esc(u.get("summary",""))}</p>{render_links(u.get("links"))}</div>')
 
 
@@ -389,7 +615,7 @@ def render_wildcard(w: dict) -> str:
     topic = w.get("topic", "")
     sub = f'The wildcard &middot; {esc(topic)}' if topic else 'The wildcard'
     return (f'<div class="sec wildcard"><h2>{esc(w["headline"])}</h2>'
-            f'<p class="sub">{sub}</p>'
+            f'<p class="sub">{sub}</p>{render_figure(w.get("image"))}'
             f'<p>{esc(w.get("summary",""))}</p>'
             f'{render_items(w.get("items"))}{render_links(w.get("links"))}</div>')
 
@@ -450,7 +676,7 @@ def render_markets(m: dict) -> str:
         'risk-off, investors are stepping back from the most speculative assets, '
         'which often serves as an early note of caution beneath a calm market.</p>')
     return (f'<div class="sec"><h2>{esc(m.get("headline","Markets"))}</h2>'
-            f'<p class="sub">Markets</p>{summary}'
+            f'<p class="sub">Markets</p>{render_figure(m.get("image"))}{summary}{render_chart(m.get("chart"))}'
             f'<table class="mkt">{rows}</table>{means}</div>')
 
 
@@ -518,11 +744,14 @@ def render_issue_page(doc: dict, iss: dict) -> str:
         secs.append(render_briefs(iss["briefs"]))
     secs.append(render_radar(iss))
     secs.append(render_watch_next(iss))
+    body = "".join(secs)
+    if 'class="cbox"' in body:
+        body += CHART_JS
     inner = (
         f'<header class="mast"><h1><a href="../">The Current Regime</a></h1>'
         f'<div class="kicker">Issue {esc(iss["id"])} &middot; {esc(week_label(iss))}</div></header>'
         f'<p class="back" style="margin-top:14px"><a href="../">&larr; all issues</a></p>'
-        + "".join(secs)
+        + body
     )
     return page(f"The Current Regime · Issue {iss['id']}", inner)
 
@@ -556,6 +785,7 @@ def _lead_summary(iss: dict) -> str:
 def build():
     doc = json.loads(STATE.read_text())
     regime_engine.lint_or_die(regime_engine.latest_issue(doc))
+    lint_media(doc)
     issues = [i for i in doc.get("issues", []) if not i.get("partial")]
     issues.sort(key=lambda i: i["id"], reverse=True)
     (DOCS / "issues").mkdir(parents=True, exist_ok=True)

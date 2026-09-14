@@ -202,6 +202,37 @@ week runs short. The renderers degrade to zero items, so a short issue is a feat
 - **Geopolitics**: 4–6 stories under the theatre rule; fewer only in a thin week.
 - **Watchlist** (`new`): full cards only for what is elevated this week.
 
+## Images and charts (archive site only)
+
+The site renders an optional `image` and/or `chart` on any lane (`regimes.*`),
+`commodities`, `wildcard` or `undercurrent`. The email ignores both, so the
+email/site 1:1 rule applies to text only. `build_site.lint_media` fails the build on
+a missing credit, licence, alt, caption, dimensions or file.
+
+- **Photos: open licence only, stored locally.** Public domain (NASA, NOAA, other US
+  federal agencies), CC0, CC BY or CC BY-SA. Never use news-agency or outlet photos
+  from the linked articles, and never hotlink. Fetch with `python3 media.py commons
+  "File:Name.jpg" docs/img/<issue>/<section>.jpg` (Wikimedia Commons, licence and
+  author read from the file page) or `python3 media.py worldview <date> <S,W,N,E>
+  docs/img/<issue>/<section>.jpg` (a NASA satellite image of that day, public domain).
+  Both resize to 1280px and print the JSON block.
+- **Look at every image before writing its `alt` and `caption`.** The caption states
+  what the picture shows, where and when ("The Bab al-Mandeb strait ... photographed
+  from the ISS in February 2020"). An archive photo must carry its own date so it is
+  never mistaken for this week. Claim nothing you cannot see in the frame.
+- **One or two photos a week, where a real picture exists.** A satellite image of the
+  event beats a stock shot; a lane with nothing licensed and relevant gets no photo.
+- **Charts: one dated series each** (`chart:{title, subtitle, series:[{name, points:
+  [[YYYY-MM-DD, value]]}], prefix|suffix, decimals, y_min?, y_max?, ref?:{value,label},
+  highlight_from, highlight_label, source, source_url?}`). Two or more series need a
+  legend and a validated palette, which the renderer does not do yet, so the lint
+  rejects them. Pull series with `media.py polymarket <slug> "<question match>" <start>
+  <end>` (UTC daily closes, in cents) or `media.py yf <ticker> <start> <end>`; never
+  type values by hand. The chart must agree with the numbers the text quotes.
+  `source_url` must not repeat a URL cited elsewhere in the issue (link lint).
+- Good chart candidates: the week's biggest market move (a Fed or election contract),
+  Brent when energy leads, a download or price series the AI lane argues from.
+
 ## The structural picture (regime radar)
 
 Beyond the weekly regimes, each issue carries a radar of slow, **structural**
