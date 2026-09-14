@@ -1259,11 +1259,12 @@ worth a keyword pass before issue 13.
 
 ## Issue 13 — Week of 2026-08-31 → 2026-09-06
 
-One-line: Three frontier launches land on one price with their strongest versions gated,
+One-line: Three frontier launches gate their strongest versions and OpenAI matches Anthropic's
+price to the dollar,
 Nvidia signs for the hub they ship on, and a missile exchange in the Gulf plus a far-right
 landslide in Germany push geopolitics from elevated to stressed.
 
-### AI & compute (consolidation, week 3): three launches, one price, gated top tiers, Nvidia signs
+### AI & compute (consolidation, week 3): three launches, gated top tiers, Astra matches Fable's price, Nvidia signs
 
 Lead rule: 12 led with OpenAI/Nvidia, so 13 leads with the launch sequence itself, Anthropic
 first (Fable/Mythos 5.1, Sept 1, $10/$50, Mythos only via the Cyber and Life Sciences
@@ -1656,8 +1657,10 @@ statement; Gamers Nexus video Sept 6, 136 min; A/I timeline; all briefs. Still o
 (ekans; page did not render for the auditor); CAMS unit (tonnes of carbon, probably; left as
 'emissions by Copernicus's measure'); Rashad al-Alimi's quote is in Al Jazeera-sourced snippets
 (Asharq Al-Awsat renders 'must not be allowed to become'); the Axios Canada URL 403s to fetchers.
-Issue 13's 'one identical price' headline (Gemini 3.8 Flash is $0.75/$3.75) still flagged, not
-changed.
+Issue 13's 'one identical price' claim (Gemini 3.8 Flash is $0.75/$3.75) corrected on the owner's
+request the same day: index title and AI headline now say the three launches gated their top
+tiers and OpenAI matched Anthropic's $10/$50; summary and implication already compared only Astra
+and Fable and were unchanged.
 
 Coverage tagger, after the audit: coverage.py still showed East/SE Asia as unseen for 14 because
 the body text says 'Philippine' and 'Seoul' (keywords were 'philippines' only, no 'seoul'), and

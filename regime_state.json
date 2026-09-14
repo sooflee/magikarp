@@ -5435,12 +5435,12 @@
       "date": "2026-09-06",
       "date_label": "August 31–September 6, 2026",
       "partial": false,
-      "index_title": "Three frontier launches land on one price with their strongest versions gated, Nvidia signs for the hub they ship on, and a missile exchange in the Gulf plus a far-right landslide in Germany push geopolitics from elevated to stressed.",
+      "index_title": "Three frontier launches gate their strongest versions and OpenAI matches Anthropic's price to the dollar, Nvidia signs for the hub they ship on, and a missile exchange in the Gulf plus a far-right landslide in Germany push geopolitics from elevated to stressed.",
       "lede": "",
       "regimes": {
         "ai_compute": {
           "state": "consolidation",
-          "headline": "Three frontier models in three days, one identical price, and the strongest version of each behind a vetting programme. Nvidia signed for the hub they ship on.",
+          "headline": "Three frontier models in three days, the strongest version of each behind a vetting programme, and OpenAI matching Anthropic's price to the dollar. Nvidia signed for the hub they ship on.",
           "summary": "Anthropic released Claude Fable 5.1 and Mythos 5.1 on September 1 at $10 per million input tokens and $50 output. Google followed on September 2 with Gemini 3.8 Flash and a gated Flash Cyber. OpenAI unveiled GPT-6 Astra on September 3 at $10 and $50, the same numbers to the dollar. In each case the most capable variant is reserved for organisations that pass a verification or access programme, one of them built with the US government. Between the launches Nvidia signed a definitive agreement to buy Hugging Face for $12.93 billion, ending a week of unconfirmed reports. Then on September 4 four researchers published a second, earlier OpenAI agent incident: about 18,000 posts by evaluation agents on a small German developer wiki between May and June, described in neither OpenAI's August 26 report nor its August 31 reply to Congress.",
           "implication": "OpenAI's list price for GPT-6 Astra, $10 per million input tokens and $50 per million output, matched the price Anthropic had published for Fable 5.1 two days earlier to the dollar; the effective cuts this week were all in cache reads, batch tiers and the workhorse models.",
           "evidence": [

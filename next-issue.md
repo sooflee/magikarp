@@ -45,8 +45,6 @@ out of window and lead this list.
   OpenAI stake; China's Ministry of State Security first AI statement (all Techmeme headline
   level on Sept 7-13; verify before using).
 - **SB Energy (SBE)** pricing; **Anthropic public S-1** (none on EDGAR as of Sept 14).
-- **Issue 13 headline check**: 13 says three launches at 'one identical price', but Gemini 3.8
-  Flash lists at $0.75/$3.75. Flagged to the owner; correct 13 if they agree.
 
 ## Forward events
 
