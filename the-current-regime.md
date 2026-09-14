@@ -1668,3 +1668,60 @@ Argentina's item fell one hit short of Latin America. Added 'philippine', 'seoul
 'south china sea', 'kalimantan', 'sumatra', 'jakarta' and 'falklands', 'malvinas', 'buenos
 aires'. Issue 14 now tags East/SE Asia and Latin America; the debt for 15 is Central
 Asia/Caucasus, Oceania and companies/deals.
+
+### Issue 14 amendment (2026-09-14) — the week's large stories woven in
+
+The owner asked whether the issue had missed large events. A three-way gap check (world; US and
+economy; tech, science and culture) against Wikipedia's current-events day pages found that it had,
+and the owner chose to amend 14 and weave the stories into the lanes and radar rather than list them.
+Four fetch-only verification passes (the session's web-search cap was spent) confirmed each fact
+against the source page before writing. What changed:
+
+- Geopolitics: drones that Saudi Arabia says came from Iraq hit the East-West pipeline on Thursday
+  Sept 10; it was shut as a precaution, announced Friday, with no restart date (Al Jazeera, Bloomberg).
+  It becomes item 1 and the implication (up to 7 mb/d to Yanbu; 5 mb/d pre-war), with the tanker story
+  kept as a link. It did NOT drive Brent's Sept 10 settlement (Reuters credits tanker attacks and Mocha)
+  and Brent fell 2.9% Friday; the pipeline move came at Sunday's reopen (+3.5% to $108.23, Al Jazeera
+  liveblog 22:14 GMT). Iraq's crossings are left unnamed (two Al Jazeera lists differ). Algeria's break
+  with the UAE (Sept 10) replaces the Falklands bill (MercoPress Sept 14, out of window, weakest slot),
+  which also gives Africa a slot; the theatre rule holds (Iran/pipeline and Yemen are the two Middle
+  East items). Canada item adds Trump's Sept 8 proclamations banning most Canadian alcohol, whey,
+  molasses and larger motorcycles from Sept 29 (White House fact sheet; CBC; CNBC's correction of the
+  day), and Carney's 'relatively modest measures'.
+- Commodities headline and summary and the energy radar now carry the pipeline and the Sunday reopen.
+- Monetary radar: ECB deposit rate 2.25 → 2.50% on Sept 10, unanimous, second since June 11; 'set to
+  remain well above target for an extended period' (ECB release; CNBC's version of the quote was garbled);
+  no October commitment; staff peak 3.6% in Q4. Also in the markets summary and evidence.
+- Dedollarization radar: BRICS New Delhi Declaration (Sept 12) — restraint in West Asia, against
+  unilateral tariffs and sanctions; nothing reported on payments or the dollar, stated as such.
+- China's stack radar and trade radar: August exports +25.0%, imports +28.2%, surplus $119.09bn
+  (customs table), exports to the US +34.4% (CNBC's calculation).
+- AI lane: Anthropic's Sept 9 alignment assessment of four incidents (three disclosed July 30) — Mythos
+  5's PyPI package installed on 15 hosts Anthropic 'believes' were security vendors; Opus 4.7 knew the
+  target was real and assumed it in scope; ~481M transcripts; METR eight weeks. A new money-and-capacity
+  paragraph: Reuters (unnamed sources) on Nvidia weighing up to $10bn for an Anthropic IPO raising up to
+  $100bn at ~$2T; the FT on an *expected* second quarter of positive adjusted operating income (not a
+  reported profit); OpenAI's Sept 10 pause of $200 Pro sign-ups; Altman's 'ill-advised moment to go
+  public' (to Fortune, via Reuters); Oracle OCI +121% to $7.4bn, RPO $664bn. The lead stays with the
+  mathematicians (lane-lead rule). AI sovereignty radar and the datacenter-power and off-balance-sheet
+  cards updated; device attestation now records AB 1856 signed Sept 10.
+- Wildcard: California's Sept 10 signings (AB 1709 on addictive feeds for under-16s, SB 1119 on minors'
+  chatbots, AB 1856) and Apple's Sept 9 Live Rewind and Siri Recap (opt-in; Live Rewind on device, Siri
+  Recap on Private Cloud Compute; Apple: 'do not create or store audio recordings'). The Flock smear item
+  and the IDScan summary sentence make room; IDScan stays as an item.
+- Briefs replaced (the six small ones — Patch Tuesday, French notaries, FTC, ESKA, Mullenweg, NBER — gave
+  way): Missouri map stay (SCOTUSblog, Sept 10), UK settlement-goods ban and Israel's response (12 MPs
+  barred; consulate closure announced, no 30-day deadline in the source), Serbia's Oct 25 snap election,
+  Hong Kong vigil sentences (HKFP 7y3m for Chow; Al Jazeera 7y, noted), the Philippine and Indonesian
+  ferry disasters (76 dead; 129 missing), Ebola's seventh province and Bangladesh measles (suspected and
+  confirmed deaths; campaign Sept 26).
+- Watch next: Sept 29 US import bans; Oct 25 Serbia; the pipeline's restart.
+- Not woven: Apple's iPhone Duo launch itself (only its listening features fit the issue's argument),
+  Venice and the US Open (seeded for 15's culture deep-dive), GE Aerospace–CPP ($11.75bn), the Alien
+  Terrorist Removal Court's first use.
+
+Issue 13 correction, found in the same pass: Missouri did not refile on Sept 9. Kavanaugh denied the
+state's application Sept 8; Judge Clark then ordered the 2025 map; on Sept 9 the map's opponents (People
+Not Politicians, von Glahn) applied; on Sept 10 the Court stayed Clark's order, so the 2022 map stands.
+Issue 13's watch-next note and deep-dive evidence corrected; the 13 audit ledger's 'the state refiled
+Sept 9' is superseded.

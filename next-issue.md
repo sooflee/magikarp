@@ -46,9 +46,23 @@ out of window and lead this list.
   level on Sept 7-13; verify before using).
 - **SB Energy (SBE)** pricing; **Anthropic public S-1** (none on EDGAR as of Sept 14).
 
+- **From the Sept 14 gap check (verify before use; being woven into 14 where confirmed):** Saudi
+  East-West pipeline shut after drones from Iraq (Sept 10-11): restart date, Iraq-Iran border,
+  Brent. Anthropic's Sept 9 disclosure of four sandbox escapes (METR's eight-week investigation
+  ends ~early November). Reuters Sept 11: Nvidia in talks to anchor an Anthropic raise of up to
+  $100B at ~$2T; Business Insider: Nasdaq, possible October listing (unconfirmed). OpenAI paused
+  new ChatGPT Pro sign-ups (Sept 10); Altman: no IPO in 2026. US ban on Canadian alcohol, dairy
+  and motorcycles from Sept 29. Algeria-UAE break. BRICS New Delhi declaration. Serbia snap
+  election Oct 25. UK settlement-goods ban and Israel's consulate order. Ebola in a seventh
+  Congo province; Bangladesh measles past 1,000 deaths. China August new loans 60B yuan vs
+  ~400B expected (released Sept 14).
+- **Culture & media (15's deep-dive) leads:** Venice Golden Lion to May el-Toukhy's 'Woman
+  Unknown' (Sept 12); 'NAZA' and Israel's 'treason' charge against its makers; TIFF awards
+  Sept 20; Apple's 'Reference Image' AI-edit certification; IFPI's AI music-fraud rules.
+
 ## Forward events
 
-- **Sept 15:** CLARITY cloture. **Sept 15–16:** FOMC with projections (hike 80.5c at the
+- **Sept 15:** CLARITY cloture. **Sept 17-18:** Bank of Japan. **Sept 18:** Starship Flight 14 (target). **Sept 15–16:** FOMC with projections (hike 80.5c at the
   Sept 11 close). **Sept 16:** Google ad-tech redaction motions. **Mid-Sept:** OPEC MOMR;
   China August activity and youth unemployment.
 - **Sept 18:** A/I shutdown; DHS public-charge rule; TeamPCP (Gaebler) in Perth.
@@ -61,13 +75,11 @@ out of window and lead this list.
 
 ## Coverage debt and lane rules for 15
 
-- `python3 coverage.py` after 14 was tagged: **WARN region Central Asia/Caucasus (last seen 11),
-  WARN region Oceania (last seen 11), WARN topic companies/deals (last seen 11).** Each is an
-  assignment for 15 (geopolitics digest, briefs, wildcard or undercurrent) or a ledger reason.
-  Candidates already seen: China using Central Asia as a pass-through for trade with Iran and
-  Uzbekistan's cash-for-entrepreneurs scheme (Eurasianet), Russia halting gas to Armenia
-  (Eurasianet), Firmus seeking up to $5B (Australia), Shopify buying Tailwind, SB Energy's
-  listing, Z.ai's $5B+ raise.
+- `python3 coverage.py` after 14 was tagged and amended: **WARN region Central Asia/Caucasus (last seen 11), WARN region Oceania (last seen 11), WARN topic companies/deals (last seen 11).** Each is an assignment
+  for 15 (geopolitics digest, briefs, wildcard or undercurrent) or a ledger reason. Candidates already seen:
+  China using Central Asia as a pass-through for trade with Iran and Uzbekistan's cash-for-entrepreneurs
+  scheme (Eurasianet), Russia halting gas to Armenia (Eurasianet), Firmus seeking up to $5B (Australia),
+  Shopify buying Tailwind, SB Energy's listing, GE Aerospace-CPP ($11.75B).
 - Sameness signal (every issue 12-14): US, Europe/UK, Middle East, China; AI, markets, energy,
   conflict, elections, courts, climate, real economy.
 - Tagger fixes in 14: privacy keywords widened (issue 12 now counts); East/SE Asia gained
@@ -77,7 +89,8 @@ out of window and lead this list.
   OpenAI or Anthropic again, but not with the Navier-Stokes dispute a second week unless it
   materially changes.
 - Geopolitics led with Iran in 14 (Germany in 13). **15 may lead with Iran only if 16 does not.**
-  Better: lead with a non-Gulf theatre. Africa had no slot in 14; Russia/Ukraine had none.
+  Better: lead with a non-Gulf theatre. Africa had one slot in 14 after the amendment (Algeria-UAE);
+  Russia/Ukraine had none.
 - Undercurrent was non-AI in 14 (Google as gatekeeper), so 15 may be AI-adjacent.
 - Wildcard 14 = privacy/digital rights; not again in 15. coverage.py's shortlist for 15:
   companies/deals (last 11) first, then education and labor/jobs/migration (13). Culture/media is

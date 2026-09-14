@@ -202,6 +202,20 @@ week runs short. The renderers degrade to zero items, so a short issue is a feat
 - **Geopolitics**: 4–6 stories under the theatre rule; fewer only in a thin week.
 - **Watchlist** (`new`): full cards only for what is elevated this week.
 
+## Big-story sweep (before writing, and again before the audit)
+
+Lane researchers find what their lane looks for, and issue 14 shipped without the week's
+largest oil event (drones from Iraq shutting Saudi Arabia's East-West pipeline), an ECB
+hike, Anthropic's own sandbox-escape disclosure and Apple's September event. So once per
+issue, run one cross-lane sweep: read Wikipedia's current-events day pages for the week
+(`https://en.wikipedia.org/wiki/Portal:Current_events/<YYYY>_<Month>_<D>`), the Al Jazeera,
+AP and Guardian world front pages, Techmeme's daily archive and the other central banks'
+calendars, and list every story that would lead a major front page or move a tracked regime.
+Each one either goes into the lane or radar whose argument it changes, becomes a brief, or
+gets a one-line reason in the ledger for leaving it out. Run it with web-search budget to
+spare: the gap check for issue 14 ran after the session's search cap and had to verify by
+page fetches alone.
+
 ## Images and charts (archive site only)
 
 The site renders an optional `image` and/or `chart` on any lane (`regimes.*`),
