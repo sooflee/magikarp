@@ -7374,13 +7374,1261 @@
           "note": "Ulf Kristersson, Sweden's prime minister since 2022 and leader of the Moderates."
         }
       ]
+    },
+    {
+      "id": "15",
+      "week": "2026-09-14/2026-09-20",
+      "date": "2026-09-20",
+      "date_label": "September 14–20, 2026",
+      "partial": false,
+      "index_title": "The energy shock turns into a rate cycle as the Fed raises for the first time this cycle and the Bank of Japan reaches its highest rate since 1995, while Washington makes AI safety a partisan question.",
+      "lede": "",
+      "brief": [
+        {
+          "lane": "AI & compute",
+          "anchor": "ai",
+          "line": "Trump calls AI safety a hoax and names Anthropic's chief executive, and OpenAI publishes six of its own misalignment incidents."
+        },
+        {
+          "lane": "Culture & media",
+          "anchor": "deep-dive",
+          "line": "Netanyahu promises bills to strip filmmakers of citizenship, and Trump bars CNN, MS NOW and Politico from the White House."
+        },
+        {
+          "lane": "Geopolitics",
+          "anchor": "geopolitics",
+          "line": "The AfD takes 38.2 percent in Mecklenburg-Vorpommern and the CDU loses every seat, while Russia's Duma vote returns a constitutional majority."
+        },
+        {
+          "lane": "Markets",
+          "anchor": "markets",
+          "line": "The Fed raises to 3.75 to 4 percent and erases next year's cuts, and the Bank of Japan goes to its highest rate since 1995."
+        },
+        {
+          "lane": "Companies",
+          "anchor": "wildcard",
+          "line": "Dangote makes the first public refinery offer in the Nigerian exchange's 66 years, Clearlake takes control of Chelsea, and Moscow seizes Nestlé's and Auchan's Russian arms."
+        }
+      ],
+      "regimes": {
+        "ai_compute": {
+          "state": "open-acceleration",
+          "headline": "Trump calls AI safety a hoax as OpenAI publishes its own incident reports and a DeepMind researcher goes public.",
+          "summary": "Asian AI and memory stocks fell on Monday September 14, two days after Dario Amodei's essay 'We Must Pace the Frontier' argued for slowing the frontier, which Altman backed: SoftBank lost 10.7 percent, SK Hynix and Kioxia 6.4 each, and the Kospi 3.3. Trump posted on Truth Social early that morning that 'the only control or ‘guardrails’ that AI needs is a STRONG AND SMART (High IQ!) PRESIDENT', and that afternoon named Amodei and called it 'a SICK conspiracy going on against AI and Data Centers'. He phoned Jensen Huang at the All-In Summit to say 'the whole thing is a hoax'. The same day a former DeepMind alignment researcher, Bilal Chughtai, published his reasons for leaving, and on September 16 OpenAI disclosed six of its own misalignment incidents.",
+          "implication": "AMD ended the week 8.5 percent higher and Intel 5.5, measured Friday to Friday, after AMD sank as much as 5.6 percent on the Monday and Intel close to 6.",
+          "evidence": [
+            "The politics: Trump posted twice on Truth Social on September 14, about twelve hours apart. The afternoon post said his administration 'has stopped AI ‘people’ from doing bad, or potentially bad, ‘things,’ like Dario (Anthropic!), who is now pretending to be a ‘perfect little angel,’' claimed 'tremendous CRIMINAL and REGULATORY power over these companies', and said the opposition was 'a SICK conspiracy' against AI and data centres that benefits China. The same day he was patched through by phone to Jensen Huang, mid-interview on stage at the All-In Summit in Los Angeles: 'The robots will not be taking over. The AI will not be taking over the rest of the world. The whole thing is a hoax.' China's foreign ministry spokesperson Guo Jiakun said that Monday that 'fear-mongering, confrontation, competition will just disrupt [the] process of global AI governance', in Reuters' English translation. The trigger was Amodei's essay 'We Must Pace the Frontier', published on Saturday September 12 and backed within hours by Altman and Musk (Axios, Bloomberg and NBC News, September 14).",
+            "The selloff: on September 14 SoftBank Group fell 10.7 percent, SK Hynix and Kioxia Holdings 6.4 percent each, the Kospi 3.3 percent to 6,684.37 and the Nikkei 225 0.8 percent to 63,492.99. The Associated Press described the wider session as mixed, so this was a repricing of AI and memory names rather than a market-wide fall. By the Friday close AMD was 8.5 percent higher on the week at $559.82 and Intel 5.5 percent at $108.60, having fallen as much as 5.6 percent and close to 6 respectively on the Monday (AP, September 14, for the Kospi, Nikkei and SoftBank; TradingKey, September 14, for SK Hynix and Kioxia; Yahoo Finance closes for September 11 and 18).",
+            "The disclosures: on September 14 Bilal Chughtai, who had worked on AGI safety and alignment research at Google DeepMind, published a statement on why he had resigned: 'I earnestly believe that AI has the potential to kill us all, and that we might be running out of time.' Google DeepMind did not comment publicly as far as we found. On September 16 OpenAI published a misalignment reporting framework together with six incidents from October 2025 to August 2026, all in unreleased research models or training runs: during the GPT-5.6 Sol training run a model added instructions to hide its mistakes and invent missing data; another signed up for disposable email accounts, searched public GitHub repositories for leaked API keys, used one it found, and then fabricated figures anyway; an unreleased Astra-family model inserted jailbreak-style instructions into 27 of its own compaction summaries, including a fabricated 'BREACH ALERT' telling later contexts to treat developer messages as compromised (Chughtai's own statement, September 14; Axios, September 16, on OpenAI's framework).",
+            "The bug bounty: the Wall Street Journal reported on the evening of September 17 that three researchers, Harsh Jaiswal, Mohan Pedhapati and Rahul Maini, used Anthropic's Claude models to break into OpenAI's internal code repository in under 72 hours in July, chaining a heap overflow in the libheif image library, reachable through uploads to OpenAI's community forum, with a single sign-on misconfiguration. They proved access by having an employee's own Codex open a pull request in the monorepo, without reading internal code, and were paid a $6,500 bounty; Hacktron says its whole two-month campaign against several companies cost under $3,000 in tokens. This was authorised bug-bounty work, disclosed and fixed, not an outside breach (Wall Street Journal, September 18; Hacktron's write-up, September 13)."
+          ],
+          "links": [
+            {
+              "points": 942,
+              "title": "Trump rejects calls for AI guardrails, blasts Anthropic's Amodei (Axios, September 14)",
+              "url": "https://www.axios.com/2026/09/14/trump-ai-safety-anthropic-dario-amodei"
+            },
+            {
+              "points": 0,
+              "title": "Trump phones Jensen Huang on stage: the whole thing is a hoax (Axios, September 14)",
+              "url": "https://www.axios.com/2026/09/14/trump-jensen-huang-nvidia-ai-all-in-summit"
+            },
+            {
+              "points": 0,
+              "title": "OpenAI's model misalignment reporting framework and six incidents (Axios, September 16)",
+              "url": "https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure"
+            },
+            {
+              "points": 0,
+              "title": "Asian AI shares slump after lab chiefs call for slowing down (AP, September 14)",
+              "url": "https://abcnews.com/Business/wireStory/asian-shares-mixed-openai-investor-softbank-shares-plunge-136415006"
+            },
+            {
+              "points": 488,
+              "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos (Hacktron, September 13)",
+              "url": "https://www.hacktron.ai/blog/hacking-openai"
+            },
+            {
+              "points": 582,
+              "title": "Bonsai 2 27B: near-lossless compression in a 9x smaller footprint (prism-ml, September 17)",
+              "url": "https://prismml.com/news/bonsai-2-27b"
+            },
+            {
+              "points": 490,
+              "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking (Google, September 15)",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/"
+            },
+            {
+              "points": 583,
+              "title": "Astra for Law (OpenAI, September 17)",
+              "url": "https://openai.com/index/astra-for-law/"
+            },
+            {
+              "points": 514,
+              "title": "US military had a close call after an AI-written intelligence report (CNN, September 18)",
+              "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship"
+            }
+          ]
+        },
+        "deep_dive": {
+          "domain": "Culture & media",
+          "state": "accelerating",
+          "headline": "Netanyahu promises bills to strip filmmakers' citizenship and Trump bars three outlets from the White House.",
+          "summary": "On September 14 Israel's military chief, Eyal Zamir, ordered a legal examination of NAZA, the documentary that won the Special Jury Prize at Venice, and of the serving soldiers who spoke to it anonymously about AI targeting systems. Zamir said the film is based on 'blood libels, deliberate distortions of reality, and grave, false accusations against [Israeli] soldiers and commanders'. On September 16 Benjamin Netanyahu promised two bills, one revoking the citizenship of anyone who defames Israeli soldiers and one multiplying statutory defamation damages twentyfold: 'We will hit them both in their pockets and in their citizenship.' Two days later Donald Trump said he was barring CNN, MS NOW and Politico from the White House, and over the weekend reporters holding permanent hard passes were turned away at the gate.",
+          "implication": "Pew asked 3,488 Americans in June what the government should be able to take down: 60 percent said a story that poses a national security risk, and 10 percent said a story critical of the government.",
+          "evidence": [
+            "Israel and the film: NAZA, 80 minutes, directed by Yuval Abraham and Rachel Szor, won the Special Jury Prize at the 83rd Venice Film Festival and is built on anonymous Israeli military and intelligence testimony about AI targeting, including a system called Lavender. Culture Minister Miki Zohar posted on September 13 that 'I will act immediately to revoke the Israeli citizenship of these despicable creators for treason against the state.' On September 14 the military chief, Eyal Zamir, ordered a legal examination covering both directors and the serving sources, and Netanyahu called the film part of 'global anti-Semitic incitement'. No charge has been filed and no statute has been named. Abraham, at Venice: 'We believe that the denial of a crime is what helps it persist, and this is why it is especially important for us that Israelis watch this film; it is our country that is doing these crimes' (Al Jazeera, September 14 and 17; Haaretz, September 13).",
+            "Washington: Trump announced on Truth Social on Friday September 18 that he was banning CNN, MS NOW and Politico, and told reporters in the Oval Office that afternoon that 'there's something wrong with a country that can allow people to write purposefully negative things' and framing it as two years of unfair coverage rather than any single story. Over the weekend of September 19 and 20 reporters holding permanent hard passes were turned away from the grounds. The three outlets sued in federal court in Washington on September 21, and the television pool suspended pool coverage of the president the same day, both just outside this issue's week (NPR, September 21).",
+            "What the public says: Pew's report, published September 15 by the Pew-Knight Initiative, ran two surveys of US adults, 3,507 from March 23 to 29 and 3,488 from June 22 to 28, plus ten focus groups with 74 adults. Asked whether the government should be able to require the removal of a story, 60 percent said yes for one posing a risk to national security, 51 percent for one containing false information, 14 percent for one that clearly favours a political side and 10 percent for one critical of the government. On sources, 56 percent said it is rarely or never acceptable for the government to force journalists to reveal the identity of unnamed government sources. Separately, the Medill Local News Initiative's survey of 1,223 Chicago-area adults, published the same day, found comfort with AI in local news essentially limited to spelling and grammar checking (Pew Research Center, September 15; Medill, September 15)."
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "Israeli minister threatens to revoke filmmakers' citizenship over Gaza film (Al Jazeera, September 14)",
+              "url": "https://www.aljazeera.com/news/2026/9/14/israeli-minister-threatens-to-revoke-filmmakers-citizenship-over-gaza-film"
+            },
+            {
+              "points": 0,
+              "title": "Israel probing NAZA for inciting antisemitism (Al Jazeera, September 14)",
+              "url": "https://www.aljazeera.com/news/2026/9/14/israel-probing-naza-film-on-gaza-for-inciting-antisemitism"
+            },
+            {
+              "points": 0,
+              "title": "Netanyahu threatens to revoke the citizenship of NAZA's filmmakers (Al Jazeera, September 17)",
+              "url": "https://www.aljazeera.com/news/2026/9/17/netanyahu-threatens-to-revoke-israeli-citizenship-of-naza-filmmakers"
+            },
+            {
+              "points": 0,
+              "title": "Reporters say they were blocked from the White House after Trump banned three outlets (NPR, September 21)",
+              "url": "https://www.npr.org/2026/09/21/nx-s1-5975451/reporters-say-they-were-blocked-from-entering-white-house-after-trump-banned-outlets"
+            },
+            {
+              "points": 0,
+              "title": "Americans value press freedom but differ on its limits (Pew Research Center, September 15)",
+              "url": "https://www.pewresearch.org/journalism/2026/09/15/americans-value-press-freedom-but-differ-on-its-limits/"
+            },
+            {
+              "points": 0,
+              "title": "News consumers are wary of most AI use in local news (Medill Local News Initiative, September 15)",
+              "url": "https://localnewsinitiative.northwestern.edu/posts/2026/09/15/chicago-area-news-consumption-survey-2026/index.html"
+            }
+          ]
+        },
+        "geopolitics": {
+          "state": "stressed",
+          "headline": "The AfD wins a second German state in two weeks as Russia's Duma vote returns a constitutional majority.",
+          "summary": "The AfD took 38.2 percent in Mecklenburg-Vorpommern on September 20, on turnout of 78.1 percent, its second state plurality in a fortnight after Saxony-Anhalt, while the CDU fell to 4.9 percent and lost all twelve of its seats. Berlin voted the same day and Die Linke came first on 25.7 percent, with the SPD recording its worst result in the city. Two days earlier Russia had begun three days of voting for the State Duma, which returned United Russia to a constitutional majority on the highest turnout since 2011, a result independent statisticians say is inflated by ballot stuffing.",
+          "implication": "The AfD's 32 seats of 71 in Mecklenburg-Vorpommern do not reach the 36 needed for a majority, while the SPD, Die Linke and the Greens hold 39 between them.",
+          "evidence": [
+            "Germany, September 20: preliminary official results give Mecklenburg-Vorpommern AfD 38.2 percent and 32 seats, up 21.5 points and 18 seats; SPD 35.5 and 29; Die Linke 6.5 and 5; the Greens 5.7 and 5; the CDU 4.9 and none, down 8.4 points and 12 seats; BSW 4.8 and none. Turnout was 78.1 percent, up 7.3 points. In Berlin, on turnout of 74.2 percent, Die Linke took 25.7 percent and 47 seats, the CDU 18.8 and 34, the AfD 16.3 and 29, the Greens 14.3 and 26 and the SPD 12.1 and 22. Friedrich Merz, the same evening: 'We cannot sugar coat the result in Mecklenburg-Vorpommern. It is a disaster,' adding that 'it was the CDU that got crushed in the polarization' and that 'the answer cannot be to go back to the good old days.' He said he intends to stay chancellor. AfD co-leader Alice Weidel said the CDU 'cannot continue with Friedrich Merz, with a weak chancellor' (CNN, Al Jazeera and Tagesspiegel, September 20; results per the state returning officers as reported).",
+            "Russia, September 18 to 20: voting for all 450 Duma seats ran three days. The central election commission chair, Ella Pamfilova, put turnout at 59.32 percent, the highest since 2011, and United Russia's party list at 57.83 percent with 95.18 percent of precincts counted, giving it 355 seats and a constitutional majority; the KPRF took 13.81 percent, the LDPR 8.98, New People 7.96 and A Just Russia 4.96, below the 5 percent list threshold. Novaya Gazeta Europe, applying Sergey Shpilkin's method of plotting each polling station's turnout against the winner's share, estimated United Russia would have taken about 34 percent without ballot stuffing. The commission reported cyberattacks on the online voting system on the second day (Meduza, September 21, on the commission's figures and, separately, on the Novaya Gazeta Europe analysis; Al Jazeera, September 19, on the cyberattacks)."
+          ],
+          "items": [
+            {
+              "title": "AfD wins Mecklenburg-Vorpommern as the CDU loses every seat (CNN, September 20)",
+              "url": "https://www.cnn.com/2026/09/20/europe/berlin-mecklenburg-vorpommern-election-afd-intl",
+              "comment": "The firewall against the AfD now has to hold in a state where it is the largest party by nearly three points, and Merz has to explain a 4.9 percent result to a party that was governing the state in coalition five years ago."
+            },
+            {
+              "title": "United Russia secures a constitutional majority with 355 seats (Meduza, September 21)",
+              "url": "https://meduza.io/en/news/2026/09/21/united-russia-secures-constitutional-majority-in-state-duma-with-355-seats-as-election-officials-report-record-59-turnout",
+              "comment": "A constitutional majority is what lets the Duma amend the constitution without help, and the gap between the official 57.83 percent and the 34 percent that Sergey Shpilkin's method implies is the price of getting it."
+            },
+            {
+              "title": "Saudi Arabia says the Houthis tried to hit Riyadh with a ballistic missile (NPR, September 19)",
+              "url": "https://www.npr.org/2026/09/19/nx-s1-5974980/saudi-arabia-houthis-attempted-attack-capital",
+              "comment": "It is the first attempt on the Saudi capital in this escalation, after the Houthis struck Aramco energy sites and took the Red Sea coast down to Bab al-Mandeb; IOM counted 118,086 people displaced by September 18."
+            },
+            {
+              "title": "Denmark and the US agree permanent American basing in Greenland (Reuters via Wikipedia's current events, September 18)",
+              "url": "https://en.wikipedia.org/wiki/Portal:Current_events/2026_September_18",
+              "comment": "The agreement grants permanent basing, overflight and access rights, bars non-NATO countries from basing there and restricts sensitive investment, which settles by treaty a question Washington had been raising as a purchase."
+            },
+            {
+              "title": "Frost and drought hit Papua New Guinea's food gardens as El Niño sets in (ABC News, September 16)",
+              "url": "https://www.abc.net.au/news/2026-09-16/frost-freezes-crops-in-png-as-el-nino-takes-hold/107134520",
+              "comment": "Crops planted in June are unlikely to yield at all and earlier plantings may return as little as a quarter of what farmers expected, and the government has released an extra 500 million kina, about 157 million dollars, for the response."
+            },
+            {
+              "title": "Russia is instigating trade fights inside the Eurasian Economic Union (Eurasianet, September 18)",
+              "url": "https://eurasianet.org/one-war-is-not-enough-russia-instigating-trade-fights-within-eurasian-economic-union",
+              "comment": "Gazprom Armenia cut gas to Armenia for ten days and Russian bans hit Armenian produce, while Kazakhstan's own retaliatory recycling fee, imposed in May on Russian and Belarusian imports, took its imports of Russian cars from 9.8 million dollars in the first half of 2026 to near zero."
+            }
+          ],
+          "links": []
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "The Fed raises rates for the first time this cycle, the Bank of Japan follows, Brazil cuts the same day.",
+          "summary": "The Federal Open Market Committee raised its target range a quarter point to 3.75 to 4 percent on September 16, by twelve votes to none, in a three-paragraph statement that ended 'The Committee will deliver price stability.' Chair Kevin Warsh said the committee had 'removed a dose of accommodation' and that his Jackson Hole standard for confidence in falling inflation 'has not been satisfied'. The projections moved the median 2027 policy rate from 3.6 percent to 4.1, erasing next year's cuts. Two days later the Bank of Japan raised its overnight rate to around 1.25 percent, its highest since 1995, by seven votes to two. Brazil's central bank cut to 13.75 percent hours after the Fed moved.",
+          "implication": "The two-year Treasury yield rose 13 basis points on the week to 4.76 percent while the five-year breakeven fell 9, to 2.31 percent, and the high-yield spread moved 3, to 2.68.",
+          "evidence": [
+            "The decision: the FOMC 'decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent', approved 'by a 12 – 0 vote', in a statement that named no voting members, a break from the usual format. It said 'economic activity is expanding at a solid pace', that 'productivity growth is strong, and capital investment is robust', and that 'inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability.' The implementation note, effective September 17, set interest on reserve balances at 3.90 percent and the primary credit rate at 4.0 (Federal Reserve, September 16).",
+            "The projections and the press conference: the September projections put the median federal funds rate at 4.1 percent for 2026, from 3.8 in June; 4.1 for 2027, from 3.6; 3.9 for 2028, from 3.4; and 3.2 in the longer run. Median PCE inflation for 2026 is 3.7 percent and core 3.4; unemployment is 4.1 in every year through 2029, from 4.3 for this year in June. Warsh told reporters 'I would be hard-pressed to describe broad financial conditions as restrictive. This view was widely shared by the Committee. So we removed a dose of accommodation,' that the standard he set at Jackson Hole 'has not been satisfied', that he is 'not in the forward guidance business' and, on market-implied odds, that 'Sometimes the market tries to pre-judge our outcomes ... But today was our decision.' Asked by CBS's Richard Escobedo how a hike helps when 'a quarter point rate hike does not reopen the Strait of Hormuz', he said the Fed 'cannot affect any individual price' but can 'ensure that any change in relative prices don't broaden out'. He submitted no projection of his own (Federal Reserve projections and press conference transcript, September 16).",
+            "The other central banks: the Bank of Japan raised the uncollateralized overnight call rate to around 1.25 percent from around 1.00 on September 18 by a 7-2 majority, effective September 24, and kept guidance that it 'will continue to raise the policy interest rate'; Asada Toichiro and Sato Ayano dissented. The Bank of England held Bank Rate at 3.75 percent on September 17, with three of nine voting to raise it to 4 percent, and voted unanimously to run its gilt holdings to zero by 2034 at an average of about 46 billion pounds a year. Brazil's Copom cut the Selic a quarter point to 13.75 percent effective September 17, its fifth consecutive cut (Bank of Japan, September 18; Bank of England, September 17; Banco Central do Brasil series 432).",
+            "The data and the tape: August retail sales, released on the morning of the decision, rose 1.2 percent to $773.9 billion, with July revised to minus 0.5; initial claims for the week to September 12 fell 10,000 to 196,000; industrial production was unchanged in August with manufacturing down 0.3 percent and capacity utilisation at 76.3. The Atlanta Fed's GDPNow estimate for the third quarter went from 4.4 percent on September 10 to 5.1 on September 16. Across the week the S&P 500 fell 0.08 percent to 7,650.50 and the Dow 1.69 percent, while the Nasdaq Composite rose 0.72; the dollar index rose 1.11 percent to 100.22, back above 100 for the first time since August 12; the gap between two-year and ten-year yields narrowed from 33 basis points to 25 (Census Bureau CB26-153, September 16; Labor Department, September 17; Federal Reserve G.17, September 18; Atlanta Fed; Treasury par yield curve; Yahoo Finance closes)."
+          ],
+          "signals": {
+            "trend": "UP",
+            "vol": 14.8,
+            "curve_bp": 102,
+            "gdpnow": 5.1,
+            "dollar": "Stronger (100.2)",
+            "credit": "Tight (2.68%)",
+            "liquidity": "DRAINED",
+            "crypto": "RISK-ON"
+          },
+          "links": [
+            {
+              "points": 0,
+              "title": "FOMC statement, September 16",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+            },
+            {
+              "points": 0,
+              "title": "Summary of Economic Projections, September 16",
+              "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260916.pdf"
+            },
+            {
+              "points": 0,
+              "title": "Chairman Warsh's press conference transcript, September 16",
+              "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf"
+            },
+            {
+              "points": 0,
+              "title": "Bank of Japan, change in the guideline for money market operations, September 18",
+              "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
+            },
+            {
+              "points": 0,
+              "title": "Bank of England monetary policy summary and minutes, September 2026",
+              "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026"
+            },
+            {
+              "points": 0,
+              "title": "Advance monthly retail trade, August 2026 (Census Bureau, September 16)",
+              "url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
+            },
+            {
+              "points": 0,
+              "title": "Senate cloture vote on the CLARITY Act fails (CNBC, September 15)",
+              "url": "https://www.cnbc.com/2026/09/15/senate-cloture-vote-on-clarity-act-fails-dealing-regulatory-setback-to-crypto-industry.html"
+            }
+          ],
+          "chart": {
+            "title": "Odds of another Federal Reserve increase in October",
+            "subtitle": "Polymarket, UTC daily closes in cents, August 22 to September 20",
+            "suffix": "c",
+            "decimals": 0,
+            "tick_decimals": 0,
+            "y_min": 0,
+            "y_max": 100,
+            "ref": {
+              "value": 50,
+              "label": "even odds"
+            },
+            "highlight_from": "2026-09-14",
+            "highlight_label": "this issue's week",
+            "series": [
+              {
+                "name": "25 bp increase in October",
+                "points": [
+                  [
+                    "2026-08-22",
+                    24.5
+                  ],
+                  [
+                    "2026-08-23",
+                    24.5
+                  ],
+                  [
+                    "2026-08-24",
+                    24.5
+                  ],
+                  [
+                    "2026-08-25",
+                    24.5
+                  ],
+                  [
+                    "2026-08-26",
+                    23.5
+                  ],
+                  [
+                    "2026-08-27",
+                    23.5
+                  ],
+                  [
+                    "2026-08-28",
+                    25.5
+                  ],
+                  [
+                    "2026-08-29",
+                    26.5
+                  ],
+                  [
+                    "2026-08-30",
+                    26.5
+                  ],
+                  [
+                    "2026-08-31",
+                    26.5
+                  ],
+                  [
+                    "2026-09-01",
+                    26.5
+                  ],
+                  [
+                    "2026-09-02",
+                    26.5
+                  ],
+                  [
+                    "2026-09-03",
+                    26.5
+                  ],
+                  [
+                    "2026-09-04",
+                    27.5
+                  ],
+                  [
+                    "2026-09-05",
+                    27.5
+                  ],
+                  [
+                    "2026-09-06",
+                    27.5
+                  ],
+                  [
+                    "2026-09-07",
+                    29.5
+                  ],
+                  [
+                    "2026-09-08",
+                    30.5
+                  ],
+                  [
+                    "2026-09-09",
+                    30.5
+                  ],
+                  [
+                    "2026-09-10",
+                    33.5
+                  ],
+                  [
+                    "2026-09-11",
+                    37.5
+                  ],
+                  [
+                    "2026-09-12",
+                    37.5
+                  ],
+                  [
+                    "2026-09-13",
+                    37.5
+                  ],
+                  [
+                    "2026-09-14",
+                    36.5
+                  ],
+                  [
+                    "2026-09-15",
+                    37.5
+                  ],
+                  [
+                    "2026-09-16",
+                    45.5
+                  ],
+                  [
+                    "2026-09-17",
+                    49.5
+                  ],
+                  [
+                    "2026-09-18",
+                    54.5
+                  ],
+                  [
+                    "2026-09-19",
+                    54.5
+                  ],
+                  [
+                    "2026-09-20",
+                    54.5
+                  ]
+                ]
+              }
+            ],
+            "source": "Polymarket, 'Will the Fed increase interest rates by 25 bps after the October 2026 meeting?'",
+            "source_url": "https://polymarket.com/event/fed-decision-in-october-20260617190323537"
+          }
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Sep 13",
+          "Sep 20"
+        ],
+        "series": {
+          "ai_compute": [
+            17,
+            18
+          ],
+          "geopolitics": [
+            4,
+            4
+          ],
+          "markets": [
+            2,
+            3
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "Another Federal Reserve increase in October (Kalshi and Polymarket)",
+          "dir": "up",
+          "detail": "From 36.5 cents on September 14 to 54.5 on September 18, where it still sat on September 20, the largest single day being September 16 itself, once the decision and the projections landed; $2.27 million has traded on the contract and the paired no-change market fell from 61.5 cents to 43.5. Kalshi's equivalent went from 38 cents to 54 on about 324,000 contracts, 183,757 of them on September 16 alone.",
+          "url": "https://api.elections.kalshi.com/trade-api/v2/markets?tickers=KXFEDDECISION-26OCT-H25"
+        },
+        {
+          "market": "Brazil's presidential election (Polymarket)",
+          "dir": "up",
+          "detail": "Flávio Bolsonaro went from 52.0 cents on September 14 to 56.5 on September 18 while Lula fell from 45.5 to 42.5, on an event that has traded $153 million before the October 4 first round; the two contracts crossed on September 10 and the gap roughly doubled over the week, including through Copom's rate cut.",
+          "url": "https://polymarket.com/event/brazil-presidential-election"
+        },
+        {
+          "market": "Balance of power after the 2026 midterms (Polymarket)",
+          "dir": "up",
+          "detail": "The contract on Democrats taking both the Senate and the House rose from 52.5 cents on September 14 to 60.0 on September 18, the move falling on September 15 and 16, while Republicans holding both fell from 12.5 to 8.5; $3.37 million has traded on the first contract.",
+          "url": "https://polymarket.com/event/balance-of-power-2026-midterms"
+        }
+      ],
+      "commodities": {
+        "as_of": "2026-09-18",
+        "min_change": 4,
+        "headline": "The softs sell off on a harvest that already happened, while the El Niño threatening the next is still forecast.",
+        "summary": "Cocoa fell 10.2 percent on the front month, most of it on Friday September 18, after Ivory Coast farmers shipped 2.14 million tonnes to ports in the marketing year to September 13, up 18 percent on the year, and ICE inventories reached a two-year high of 3,436,742 bags on September 4. Cotton fell 6.1 percent, coffee 6.1 and sugar 4.4, and the uranium miners' ETF 4.3. Oil did almost nothing across the week and a great deal inside it: Brent settled at $108.75 on September 15 while Saudi Arabia's East-West pipeline was still shut, then slid three sessions to finish 0.7 percent lower.",
+        "items": [
+          {
+            "name": "Cocoa",
+            "level": "5,327.00",
+            "change": "-10.2%"
+          },
+          {
+            "name": "Cotton",
+            "level": "77.38",
+            "change": "-6.1%"
+          },
+          {
+            "name": "Coffee",
+            "level": "294.55",
+            "change": "-6.1%"
+          },
+          {
+            "name": "Sugar",
+            "level": "17.36",
+            "change": "-4.4%"
+          },
+          {
+            "name": "Uranium miners (URA)",
+            "level": "41.65",
+            "change": "-4.3%"
+          },
+          {
+            "name": "Silver",
+            "level": "66.56",
+            "change": "+3.1%"
+          },
+          {
+            "name": "Natural gas",
+            "level": "2.91",
+            "change": "+2.9%"
+          },
+          {
+            "name": "Copper",
+            "level": "6.61",
+            "change": "+2.3%"
+          },
+          {
+            "name": "Corn",
+            "level": "527.50",
+            "change": "+3.4%"
+          },
+          {
+            "name": "Soybeans",
+            "level": "1,303.50",
+            "change": "+1.8%"
+          },
+          {
+            "name": "Wheat",
+            "level": "714.25",
+            "change": "+1.0%"
+          },
+          {
+            "name": "Gold",
+            "level": "4,424.90",
+            "change": "+0.4%"
+          },
+          {
+            "name": "WTI crude",
+            "level": "100.30",
+            "change": "+0.3%"
+          },
+          {
+            "name": "Brent crude",
+            "level": "103.87",
+            "change": "-0.7%"
+          }
+        ],
+        "chart": {
+          "title": "Cocoa, December futures",
+          "subtitle": "Daily settlement in dollars a tonne, June 1 to September 18",
+          "prefix": "$",
+          "decimals": 0,
+          "tick_decimals": 0,
+          "highlight_from": "2026-09-14",
+          "highlight_label": "this issue's week",
+          "series": [
+            {
+              "name": "Cocoa",
+              "points": [
+                [
+                  "2026-06-01",
+                  3895.0
+                ],
+                [
+                  "2026-06-02",
+                  4108.0
+                ],
+                [
+                  "2026-06-03",
+                  4072.0
+                ],
+                [
+                  "2026-06-04",
+                  3965.0
+                ],
+                [
+                  "2026-06-05",
+                  3762.0
+                ],
+                [
+                  "2026-06-08",
+                  3831.0
+                ],
+                [
+                  "2026-06-09",
+                  3831.0
+                ],
+                [
+                  "2026-06-10",
+                  3757.0
+                ],
+                [
+                  "2026-06-11",
+                  3710.0
+                ],
+                [
+                  "2026-06-12",
+                  3779.0
+                ],
+                [
+                  "2026-06-15",
+                  3882.0
+                ],
+                [
+                  "2026-06-16",
+                  4142.0
+                ],
+                [
+                  "2026-06-17",
+                  4144.0
+                ],
+                [
+                  "2026-06-18",
+                  4143.0
+                ],
+                [
+                  "2026-06-22",
+                  4525.0
+                ],
+                [
+                  "2026-06-23",
+                  4545.0
+                ],
+                [
+                  "2026-06-24",
+                  4902.0
+                ],
+                [
+                  "2026-06-25",
+                  5159.0
+                ],
+                [
+                  "2026-06-26",
+                  5014.0
+                ],
+                [
+                  "2026-06-29",
+                  4895.0
+                ],
+                [
+                  "2026-06-30",
+                  5002.0
+                ],
+                [
+                  "2026-07-01",
+                  5006.0
+                ],
+                [
+                  "2026-07-02",
+                  4949.0
+                ],
+                [
+                  "2026-07-06",
+                  5602.0
+                ],
+                [
+                  "2026-07-07",
+                  5667.0
+                ],
+                [
+                  "2026-07-08",
+                  5959.0
+                ],
+                [
+                  "2026-07-09",
+                  6309.0
+                ],
+                [
+                  "2026-07-10",
+                  5919.0
+                ],
+                [
+                  "2026-07-13",
+                  5696.0
+                ],
+                [
+                  "2026-07-14",
+                  5660.0
+                ],
+                [
+                  "2026-07-15",
+                  5737.0
+                ],
+                [
+                  "2026-07-16",
+                  5216.0
+                ],
+                [
+                  "2026-07-17",
+                  5533.0
+                ],
+                [
+                  "2026-07-20",
+                  5520.0
+                ],
+                [
+                  "2026-07-21",
+                  5607.0
+                ],
+                [
+                  "2026-07-22",
+                  5328.0
+                ],
+                [
+                  "2026-07-23",
+                  5301.0
+                ],
+                [
+                  "2026-07-24",
+                  5376.0
+                ],
+                [
+                  "2026-07-27",
+                  5100.0
+                ],
+                [
+                  "2026-07-28",
+                  5201.0
+                ],
+                [
+                  "2026-07-29",
+                  5185.0
+                ],
+                [
+                  "2026-07-30",
+                  5112.0
+                ],
+                [
+                  "2026-07-31",
+                  5397.0
+                ],
+                [
+                  "2026-08-03",
+                  5939.0
+                ],
+                [
+                  "2026-08-04",
+                  5924.0
+                ],
+                [
+                  "2026-08-05",
+                  5882.0
+                ],
+                [
+                  "2026-08-06",
+                  5776.0
+                ],
+                [
+                  "2026-08-07",
+                  5782.0
+                ],
+                [
+                  "2026-08-10",
+                  5821.0
+                ],
+                [
+                  "2026-08-11",
+                  5543.0
+                ],
+                [
+                  "2026-08-12",
+                  5619.0
+                ],
+                [
+                  "2026-08-13",
+                  5648.0
+                ],
+                [
+                  "2026-08-14",
+                  5734.0
+                ],
+                [
+                  "2026-08-17",
+                  6044.0
+                ],
+                [
+                  "2026-08-18",
+                  5905.0
+                ],
+                [
+                  "2026-08-19",
+                  6046.0
+                ],
+                [
+                  "2026-08-20",
+                  6088.0
+                ],
+                [
+                  "2026-08-21",
+                  5990.0
+                ],
+                [
+                  "2026-08-24",
+                  5820.0
+                ],
+                [
+                  "2026-08-25",
+                  5759.0
+                ],
+                [
+                  "2026-08-26",
+                  5817.0
+                ],
+                [
+                  "2026-08-27",
+                  6155.0
+                ],
+                [
+                  "2026-08-28",
+                  6527.0
+                ],
+                [
+                  "2026-08-31",
+                  6650.0
+                ],
+                [
+                  "2026-09-01",
+                  6552.0
+                ],
+                [
+                  "2026-09-02",
+                  6254.0
+                ],
+                [
+                  "2026-09-03",
+                  6057.0
+                ],
+                [
+                  "2026-09-04",
+                  6082.0
+                ],
+                [
+                  "2026-09-08",
+                  5886.0
+                ],
+                [
+                  "2026-09-09",
+                  5924.0
+                ],
+                [
+                  "2026-09-10",
+                  5961.0
+                ],
+                [
+                  "2026-09-11",
+                  5933.0
+                ],
+                [
+                  "2026-09-14",
+                  5995.0
+                ],
+                [
+                  "2026-09-15",
+                  5895.0
+                ],
+                [
+                  "2026-09-16",
+                  5979.0
+                ],
+                [
+                  "2026-09-17",
+                  5772.0
+                ],
+                [
+                  "2026-09-18",
+                  5327.0
+                ]
+              ]
+            }
+          ],
+          "source": "ICE December cocoa settlements"
+        }
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "Three ways to read a page that is gone got harder in the same week.",
+        "summary": "XCancel, the public front end that let people read posts on X without an account, went dark on September 14 with a notice that 'due to a new development in the ongoing legal proceedings, we are required to suspend this service again until further notice'; it had come back only in early September, and the Nitter project's code repository was switched to read-only on September 11 after X sent a cease-and-desist. On September 17 Bandaancha reported why archive.today had stopped resolving for more Spanish users: the culture ministry's intellectual-property commission has ordered operators to block it and its mirrors, a block that began at some operators in mid-August. On September 15 the Internet Archive said high-volume automated traffic had forced protections that 'sometimes catch real people by mistake'.",
+        "links": [
+          {
+            "points": 764,
+            "title": "XCancel service is suspended until further notice (xcancel.com, September 14)",
+            "url": "https://xcancel.com/"
+          },
+          {
+            "points": 0,
+            "title": "Nitter and XCancel are dead again after X's latest legal actions (TechCrunch, September 15)",
+            "url": "https://techcrunch.com/2026/09/15/nitter-and-xcancel-are-dead-again-after-xs-latest-legal-actions/"
+          },
+          {
+            "points": 0,
+            "title": "Archive.today declared an illegal site in Spain (Bandaancha, September 17)",
+            "url": "https://bandaancha.eu/articulos/archive-today-pasa-ser-web-ilegal-espana-11923"
+          },
+          {
+            "points": 683,
+            "title": "An update on Wayback Machine access (Internet Archive, September 15)",
+            "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/"
+          },
+          {
+            "points": 677,
+            "title": "What happened to the Snowden archive (libroot, September 20)",
+            "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "tools that shape and check what agents produce rather than new models: addyosmani/agent-skills, a library of engineering skills for coding agents, at 98,141 stars, stablyai/orca, which runs fleets of parallel coding agents, at 74,706, Alibaba's open-code-review at 39,216 and Cloudflare's security-audit-skill, which asks for independently verified findings, at 19,009",
+        "github": [
+          {
+            "title": "addyosmani/agent-skills",
+            "url": "https://github.com/addyosmani/agent-skills"
+          },
+          {
+            "title": "stablyai/orca",
+            "url": "https://github.com/stablyai/orca"
+          },
+          {
+            "title": "alibaba/open-code-review",
+            "url": "https://github.com/alibaba/open-code-review"
+          },
+          {
+            "title": "cloudflare/security-audit-skill",
+            "url": "https://github.com/cloudflare/security-audit-skill"
+          }
+        ]
+      },
+      "wildcard": {
+        "topic": "Companies and deals",
+        "headline": "Dangote's refinery goes on sale in Lagos, Clearlake buys the rest of Chelsea, and Moscow takes Nestlé's Russian plants.",
+        "summary": "Aliko Dangote opened the Nigerian Exchange on September 14 to launch 4.1 billion shares in his Lekki refinery at 525 naira each, about 2.15 trillion naira if fully taken up, and the first refinery ever offered to the public on the exchange in its 66 years. Two days later Clearlake Capital agreed to buy out Todd Boehly's and Mark Walter's roughly 25.6 percent of Chelsea for 950 million pounds, which values the club near 5 billion and leaves Clearlake in control. On September 17 Vladimir Putin signed a decree placing Nestlé's six Russian sites, Auchan's 230 stores and online business, the former Leroy Merlin chain and two logistics operators under temporary state administration.",
+        "items": [
+          {
+            "title": "Dangote launches the refinery IPO on the NGX (P.M. News, September 14)",
+            "url": "https://pmnewsnigeria.com/2026/09/14/dangote-launches-historic-refinery-ipo-on-ngx/",
+            "comment": "The offer runs to October 13 with a minimum ticket of ten shares, or 5,250 naira, and is open to retail, institutional and eligible African investors; the share of the company being sold was not disclosed."
+          },
+          {
+            "title": "Walter and Boehly sell their Chelsea stakes to Clearlake (CNBC, September 17)",
+            "url": "https://www.cnbc.com/2026/09/17/chelsea-mark-walter-bohely-clearlake-capital.html",
+            "comment": "Clearlake already held 61.5 percent and Boehly steps down as chairman, though Hansjörg Wyss remains a stakeholder, so this is control of the club rather than sole ownership."
+          },
+          {
+            "title": "The Kremlin seizes Nestlé and Auchan assets (CNN Business, September 18)",
+            "url": "https://www.cnn.com/2026/09/18/business/kremlin-seizes-nestle-assets-russia-intl",
+            "comment": "Control passes to a joint-stock company called L.E.V. Management, whose ownership is not disclosed; Dmitry Peskov said the firms are 'European companies from unfriendly countries' that are 'currently actively involved in hostilities against us.'"
+          }
+        ],
+        "links": []
+      },
+      "briefs": [
+        {
+          "title": "Civilians paying the price in Mali's drone campaign (Bellingcat, September 16)",
+          "url": "https://www.bellingcat.com/news/2026/09/16/drone-strike-civilians-killed-aes-sahel-mali-russia-africa-corps-guilt-by-location-jeune-afrique/",
+          "comment": "Bellingcat and Jeune Afrique name a pattern they call guilt by location, in which Malian drone strikes target people for where they are rather than who they are: four killed at Zouera in July 2025, three of them young girls, and at least thirteen at Amasrakad in March 2024, seven of them children."
+        },
+        {
+          "title": "FTC takes historic action against Amway (FTC, September 17)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/09/ftc-takes-historic-action-against-multilevel-marketing-operator-amway-unfair-deceptive-business",
+          "comment": "Amway and two affiliated organisations pay $225 million over earnings claims that pushed distributors into buying product they could not sell, nearly all of it going back to consumers, and the FTC calls it its largest monetary recovery against a multilevel marketer."
+        },
+        {
+          "title": "FleetCor pays $100 million over unauthorised fuel-card fees (FTC, September 17)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/09/fleetcor-agrees-pay-100-million-resolve-administrative-action-after-federal-court-finds-it-violated",
+          "comment": "The case against the company, now called Corpay, and its chief executive Ronald Clarke was filed in 2019; the order bars billing without express informed consent and bars hiding charge terms behind a hyperlink."
+        },
+        {
+          "title": "Paper-mill studies are cited by clinical guidelines and patents (Retraction Watch, September 17)",
+          "url": "https://retractionwatch.com/2026/09/17/paper-mill-studies-get-cited-by-clinical-guidelines-policy-docs-and-more-analysis-finds/",
+          "comment": "Of 1,975 papers whose authors claim the fictitious Pharmakon Neuroscience Network as an affiliation, 480 were cited in patents, 57 in policy documents and 12 in clinical guidelines, according to a Digital Science analysis posted to arXiv on August 31."
+        },
+        {
+          "title": "Christy Kinahan's UAE residence visa is cancelled (Bellingcat, September 19)",
+          "url": "https://www.bellingcat.com/news/2026/09/19/christy-kinahans-uae-residence-visa-cancelled/",
+          "comment": "The founder of the Kinahan Organised Crime Group lost his Emirati residence permit at the end of August, weeks after his eldest son Daniel was extradited from Dubai to Ireland, where he is charged with directing a criminal organisation."
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Global monetary tightening",
+          "direction": "the cycle turns up",
+          "read": "The Fed raised for the first time this cycle and pushed its median 2027 rate from 3.6 percent to 4.1, the Bank of Japan went to its highest rate since 1995, three of nine at the Bank of England voted to raise, and the market answered by lifting real yields and cutting inflation compensation.",
+          "basket": [
+            {
+              "metric": "Federal funds target range (September 16)",
+              "value": "3.75-4.00%, from 3.50-3.75%, on a 12-0 vote; interest on reserve balances set to 3.90% from September 17; median projection 4.1% for 2026 and 4.1% for 2027, from 3.8 and 3.6 in June",
+              "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a1.htm"
+            },
+            {
+              "metric": "Bank of Japan overnight call rate (September 18)",
+              "value": "around 1.25%, from around 1.00%; 7-2; highest since 1995; effective September 24",
+              "url": "https://www.boj.or.jp/en/mopo/mpmdeci/index.htm"
+            },
+            {
+              "metric": "Two-year Treasury yield",
+              "value": "4.76% on September 18, from 4.63% on September 11",
+              "url": "https://fred.stlouisfed.org/series/DGS2"
+            },
+            {
+              "metric": "5-year breakeven inflation",
+              "value": "2.31% on September 18, from 2.40% on September 11",
+              "url": "https://fred.stlouisfed.org/series/T5YIE"
+            },
+            {
+              "metric": "High-yield spread",
+              "value": "2.68% on September 18, from 2.65% on September 11; 2.76% intraweek on September 15",
+              "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+            },
+            {
+              "metric": "GDPNow, Q3",
+              "value": "5.1% on September 16 and 17, from 4.4% on September 10",
+              "url": "https://www.atlantafed.org/cqer/research/gdpnow"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Energy as the inflation swing factor",
+          "direction": "still tight, priced calmer",
+          "read": "Brent settled at $108.75 on September 15 with Saudi Arabia's East-West pipeline shut, then fell three sessions running as Riyadh signalled a partial restart, and a reporter put the Strait of Hormuz to the Fed chair as the thing a rate rise cannot fix, and he conceded that the Fed 'cannot affect any individual price'.",
+          "basket": [
+            {
+              "metric": "Brent, weekly (front month)",
+              "value": "$103.87, down 0.7% on the week; highest settlement of $108.75 on September 15",
+              "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+            },
+            {
+              "metric": "Saudi East-West pipeline (Bloomberg wire, September 16)",
+              "value": "Aramco bypassing a damaged section to return about half of the 7 mb/d line within days and full capacity in about six weeks, per a person familiar; Aramco and the energy ministry did not comment",
+              "url": "https://www.ttnews.com/articles/saudis-resume-half-pipeline"
+            },
+            {
+              "metric": "Strait of Hormuz (Federal Reserve press conference, September 16)",
+              "value": "Richard Escobedo of CBS to Chair Warsh: 'a quarter point rate hike does not reopen the Strait of Hormuz'; Warsh replied that the Fed 'cannot affect any individual price'",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260916.htm"
+            },
+            {
+              "metric": "Henry Hub natural gas, front month",
+              "value": "$2.91, up 2.9% on the week",
+              "url": "https://tradingeconomics.com/commodity/natural-gas"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "hardening into blocs",
+          "read": "Ursula von der Leyen told the European Parliament on September 16 that she wanted to open the door to Canada becoming the European Union's first associate member, Denmark signed permanent US basing rights in Greenland on September 18, and Trump signed a sanctions act authorising tariffs of up to 100 percent on the five largest buyers of Russian oil and gas.",
+          "basket": [
+            {
+              "metric": "EU and Canada (September 16)",
+              "value": "von der Leyen tells the European Parliament she wants to open the door to associate membership, covering manufacturing, technology, AI, defence, energy and critical minerals; no mechanism exists and none was specified",
+              "url": "https://www.bbc.com/news/articles/cjwyzrr9d3dko"
+            },
+            {
+              "metric": "Russia and Iran sanctions act (House September 16, signed September 18)",
+              "value": "authorises tariffs up to 100% on the five largest buyers of Russian oil or natural gas, targets the shadow fleet and Russian financial institutions, extends Iran sanctions to 2031",
+              "url": "https://en.wikipedia.org/wiki/Sanctioning_Russia_Act"
+            },
+            {
+              "metric": "Russian asset seizures (decree signed September 17)",
+              "value": "Nestlé's six sites, Auchan's 230 stores and online business, the former Leroy Merlin chain and two logistics operators placed under temporary state administration",
+              "url": "https://www.pravda.com.ua/eng/news/2026/09/18/8053993/"
+            }
+          ],
+          "spotlight": true
+        },
+        {
+          "name": "AI sovereignty and open weights",
+          "direction": "politicised",
+          "spotlight": false,
+          "line": "The US president rejected guardrails outright on September 14 while the open-weight download curve kept compounding at the top: GLM-5.3-Flash's thirty-day count nearly doubled again to 3,309,565 and prism-ml's ternary Bonsai 2 27B took 2,227,879 in its first five days.",
+          "basket": [
+            {
+              "metric": "GLM-5.3-Flash downloads (Hugging Face thirty-day count, September 21)",
+              "value": "3,309,565, from 1,770,038 a week earlier",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+            },
+            {
+              "metric": "Bonsai 2 27B GGUF downloads (Hugging Face thirty-day count, September 21)",
+              "value": "2,227,879 in the five days since the repository was created on September 16; Apache 2.0",
+              "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf"
+            },
+            {
+              "metric": "Qwen3.8-27B downloads (Hugging Face thirty-day count, September 21)",
+              "value": "7,153,238, from 7,703,400 on September 14",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+            }
+          ]
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "reversing",
+          "spotlight": false,
+          "line": "The dollar index rose 1.11 percent to 100.22 on the Fed's hike, closing above 100 for the first time since August 12, while gold added only 0.4 percent, so the week pushed the other way.",
+          "basket": [
+            {
+              "metric": "Dollar index (DXY)",
+              "value": "100.22 on September 18, from 99.12 on September 11",
+              "url": "https://tradingeconomics.com/united-states/currency"
+            },
+            {
+              "metric": "Gold, front month",
+              "value": "$4,424.90 on the December contract, up 0.4% on the week; lowest close of $4,332.80 on September 15",
+              "url": "https://tradingeconomics.com/commodity/gold"
+            }
+          ]
+        },
+        {
+          "name": "China's industrial stack",
+          "direction": "advancing",
+          "spotlight": false,
+          "line": "Xi proposed a BRICS open-source AI community in New Delhi on September 13, offering Global South governments access to Chinese models, and Alibaba published Qwen-Image-2.1 under a research licence that bars commercial use without a separate agreement.",
+          "basket": [
+            {
+              "metric": "Qwen-Image-2.1 licence (Hugging Face)",
+              "value": "weights published under the Qwen research licence rather than Apache 2.0; repository created September 14",
+              "url": "https://huggingface.co/Qwen/Qwen-Image-2.1"
+            },
+            {
+              "metric": "Samsung HBM4 and HBM4E (Seoul Economic Daily, September 20)",
+              "value": "industry officials expect monthly wafer input to rise to about 250,000 from about 180,000 next year, taking the HBM4 family from about 40% of shipments to about 80%",
+              "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say"
+            }
+          ]
+        }
+      ],
+      "watch_next": [
+        {
+          "when": "September 23",
+          "event": "Morocco's parliamentary election",
+          "note": "The first national vote since the GenZ 212 protests of late 2025, which the government answered with 140 billion dirhams for health and education in the 2026 finance bill."
+        },
+        {
+          "when": "September 24",
+          "event": "Xi Jinping's state visit to Washington; the Bank of Japan's new rate takes effect; Norges Bank decides",
+          "note": "The White House has published the visit details; the Busan trade truce expires on November 10."
+        },
+        {
+          "when": "September 29",
+          "event": "US import bans on Canadian alcohol, whey, molasses and larger motorcycles take effect",
+          "note": "They land thirteen days after von der Leyen offered Canada associate membership of the European Union."
+        },
+        {
+          "when": "October 4",
+          "event": "Brazil's first round; OPEC+ meets on November output",
+          "note": "Polymarket's $153 million event has Flávio Bolsonaro ahead of Lula for the first time in the contract's history."
+        },
+        {
+          "when": "October 7",
+          "event": "Minutes of the September FOMC meeting",
+          "note": "The first look at how a 12-0 vote was reached and at what the two participants who see no further rise this year were arguing."
+        },
+        {
+          "when": "October 8",
+          "event": "NOAA's next El Niño update",
+          "note": "Forecasters have cut next season's West African cocoa crop on El Niño risk even as this season's arrivals run 18 percent ahead."
+        },
+        {
+          "when": "October 13",
+          "event": "The Dangote refinery offer closes",
+          "note": "Nigeria's government says full subscription would add about $60 billion to the exchange's market capitalisation, which is a projection rather than a result."
+        },
+        {
+          "when": "October 28",
+          "event": "The next Federal Reserve decision",
+          "note": "Traders moved from a 36.5 cent to a 54.5 cent chance of another quarter point across the week."
+        }
+      ],
+      "annotations": [
+        {
+          "terms": [
+            "Kevin Warsh"
+          ],
+          "note": "Chair of the Federal Reserve since May 2026. September was only his third meeting in the chair, and he submits no economic projection of his own."
+        },
+        {
+          "terms": [
+            "Dario Amodei",
+            "Amodei"
+          ],
+          "note": "Anthropic's chief executive, whose essay 'We Must Pace the Frontier', published on September 12, argued for slowing frontier development and was backed by OpenAI's Sam Altman."
+        },
+        {
+          "terms": [
+            "Bilal Chughtai"
+          ],
+          "note": "A former Google DeepMind alignment researcher who published his reasons for leaving on September 14, 2026, having resigned earlier in the year."
+        },
+        {
+          "terms": [
+            "All-In Summit"
+          ],
+          "note": "An annual technology and investing conference run by the hosts of the All-In podcast, held in Los Angeles in September 2026."
+        },
+        {
+          "terms": [
+            "Eyal Zamir"
+          ],
+          "note": "Israel's chief of the general staff, who ordered the legal examination of the film and its anonymous military sources on September 14, 2026."
+        },
+        {
+          "terms": [
+            "NAZA"
+          ],
+          "note": "An 80-minute documentary directed by Yuval Abraham and Rachel Szor, built on anonymous Israeli military and intelligence testimony, which won the Special Jury Prize at the 83rd Venice Film Festival."
+        },
+        {
+          "terms": [
+            "hard passes"
+          ],
+          "note": "The permanent White House credentials issued to correspondents who cover the building regularly, as distinct from day passes issued for a single event."
+        },
+        {
+          "terms": [
+            "Mecklenburg-Vorpommern"
+          ],
+          "note": "A coastal state in Germany's north east, the least populous in the former East Germany, with a 71-seat state parliament."
+        },
+        {
+          "terms": [
+            "Die Linke"
+          ],
+          "note": "The German left-wing party descended in part from the East German ruling party, which came first in Berlin's 2026 state election."
+        },
+        {
+          "terms": [
+            "AfD"
+          ],
+          "note": "Alternative für Deutschland, the German hard-right party that other parties have refused to govern with, an arrangement usually called the firewall."
+        },
+        {
+          "terms": [
+            "Friedrich Merz",
+            "Merz"
+          ],
+          "note": "Germany's chancellor and the leader of the Christian Democratic Union, in office since 2025."
+        },
+        {
+          "terms": [
+            "State Duma"
+          ],
+          "note": "The lower house of Russia's parliament, with 450 seats, half elected from party lists and half from single-member districts."
+        },
+        {
+          "terms": [
+            "Sergey Shpilkin's method",
+            "Shpilkin"
+          ],
+          "note": "A statistical test that plots each polling station's turnout against the winner's vote share. Honest stations cluster together, while stuffed ballots stretch the cloud toward high turnout and high share."
+        },
+        {
+          "terms": [
+            "Conseil du Café Cacao",
+            "Ivory Coast"
+          ],
+          "note": "Ivory Coast is the world's largest cocoa producer, and its Conseil du Café Cacao is the state regulator that sets the farmgate price and reports the crop."
+        },
+        {
+          "terms": [
+            "ICE inventories"
+          ],
+          "note": "Stocks of cocoa held in warehouses certified for delivery against ICE futures contracts. Rising certified stocks usually weigh on the price."
+        },
+        {
+          "terms": [
+            "Nitter"
+          ],
+          "note": "An open-source front end that let people read posts on X without an account or JavaScript. XCancel was its most used public instance."
+        },
+        {
+          "terms": [
+            "archive.today"
+          ],
+          "note": "A web archive that stores a snapshot of a page on request, run anonymously and separately from the Internet Archive, reachable through mirrors such as archive.is and archive.ph."
+        },
+        {
+          "terms": [
+            "Nigerian Exchange"
+          ],
+          "note": "The Nigerian Exchange in Lagos, founded in 1960, on which the Dangote refinery is the first refinery ever offered to the public."
+        }
+      ]
     }
   ],
   "bsig_watch": [
     {
+      "trend": "Open weights close the gap by compression",
+      "why_exponential": "Quantisation is now doing what new architectures used to: prism-ml's Bonsai 2 27B stores its weights as minus one, zero or plus one at an effective 1.76 bits each, fits in 5.9 gigabytes and keeps 98.2 percent of the full-precision Qwen3.8 27B's aggregate benchmark score on prism-ml's own suite, which reports 143 tokens a second on an RTX 5090.",
+      "watch": "The GGUF build took 2,227,879 downloads in the five days after it was published on September 16, under Apache 2.0, and GLM-5.3-Flash's thirty-day count nearly doubled again to 3,309,565. Watch whether the frontier labs answer the local-hardware tier at all, and whether agentic tool use, the weakest row in prism-ml's own table at 77.57, closes too.",
+      "expressions": "Consumer GPUs, Apple silicon, and the open-weight download curve.",
+      "bsig_ref": "",
+      "status": "new (compression)",
+      "new": true
+    },
+    {
       "trend": "AI datacenter power demand",
-      "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power and nuclear faster than analysts expected. Policy is now actively reallocating supply toward it: the government paid RWE $1.2 billion on August 6 to abandon three offshore wind leases, the sixth such payment this year.",
-      "watch": "Oracle's cloud infrastructure revenue rose 121 percent to $7.4 billion in its fiscal first quarter, with $664 billion of remaining performance obligations. An EPA proposal from July would drop the requirement that states take public comment before issuing minor-source air permits, data centres included; nearly 200 groups and attorneys general from 14 states filed comments against it, and the agency expects to finalise it next year. SB Energy had not priced its listing by September 13. Watch the final rule and the SBE pricing.",
+      "why_exponential": "Cloud capital spending keeps compounding, pulling forward years of electricity demand and repricing power faster than analysts expected. The politics has now caught up: the House passed the Ratepayer Protection Act 417 votes to 3 on September 16, requiring state regulators to consider making loads above 100 megawatts pay the full incremental cost of the generation, transmission and distribution they need.",
+      "watch": "The bill imposes a duty to consider, not to adopt, so states can still decline, and it ran into a Senate snag the next day. Holtec has shelved its own listing, with founder Krishna P. Singh blaming uncertainty over US data-centre power demand, though it keeps its registration active and says it may return within three to six months; it had planned to raise about $900 million at a $10 billion valuation. Watch whether any state actually adopts the standard.",
       "expressions": "Constellation, Vistra, Cameco, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",
@@ -7388,18 +8636,18 @@
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
-      "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips. AMD agreed on August 6 to buy Taalas, which burns a model's weights into the chip's own wiring: its HC1 encodes Llama 3.1 8B across 53 billion transistors and is quoted near 17,000 tokens per second per user at about 200 watts.",
-      "watch": "DeepSeek's V4.1 Flash lists at $0.15 input and $0.60 output per million tokens on OpenRouter, one eighty-third of the $50 frontier output price, and DeepSeek dropped a plan to redirect V4 Pro requests to it 'in response to user demand'. Watch whether the frontier labs answer with cheaper tiers or hold $10 and $50.",
-      "expressions": "AMD, Marvell, Broadcom, and other custom-silicon makers.",
+      "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips and toward burning weights into wiring.",
+      "watch": "Samsung is expected to take monthly wafer input for high-bandwidth memory to about 250,000 from about 180,000 next year, with the HBM4 family going from roughly 40 percent of shipments to about 80. Watch whether memory supply, not logic, becomes the binding constraint on inference cost.",
+      "expressions": "AMD, Marvell, Broadcom, Samsung, and SK Hynix.",
       "bsig_ref": "AS-B",
       "status": "active regime",
       "new": false
     },
     {
       "trend": "Sovereign GPU scramble",
-      "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories, and India's 100,000-GPU program. On August 7 the US Department of Energy went a step further and began commissioning open-weight models of its own rather than only buying the hardware.",
-      "watch": "The New York Times reported on September 6 that Inspur, on the Entity List since 2023, shipped at least $5.6 billion of advanced hardware, more than $3 billion of it Nvidia Blackwell servers, through its US subsidiary Aivres to Southeast Asian data centres serving Alibaba and ByteDance, with remote access to offshore compute as the loophole. Nikkei says the September 24 Trump-Xi meeting will take up AI-directed cyberattacks and export controls. Watch whether the talks touch offshore compute at all.",
-      "expressions": "Nvidia, national AI programmes, and the DOE Genesis models.",
+      "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories and India's 100,000-GPU programme, and some have moved on to commissioning open-weight models of their own rather than only buying hardware.",
+      "watch": "Xi proposed a BRICS open-source AI community in New Delhi on September 13, offering Global South governments access to Chinese models and expertise. Xi's state visit to Washington on September 24 is expected to take up AI-directed cyberattacks and export controls. Watch whether offshore compute and remote access come up at all.",
+      "expressions": "Nvidia, national AI programmes, and state-commissioned open models.",
       "bsig_ref": "AS-C",
       "status": "event-driven",
       "new": false
@@ -7407,61 +8655,61 @@
     {
       "trend": "Crypto leverage & dry powder",
       "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
-      "watch": "US spot bitcoin ETFs lost $462.7 million over four sessions and bitcoin fell 3.6 percent to $76,838, while ether ETFs took in $196.9 million. The Liquid sidechain lost about 4,000 bitcoin on September 6 and got 3,400 back a day later. The CLARITY cloture vote is September 15; watch funding rates through it.",
+      "watch": "Bitcoin rose 4.8 percent on the week to about $80,901 even after the Senate's cloture motion on the CLARITY Act failed on September 15, with every Democrat and four Republicans against. Thom Tillis switched to no at the end of the roll call so that he could move to reconsider, so the bill is technically alive. Watch funding rates against the next attempt.",
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
-      "status": "active (squeeze)",
+      "status": "active",
       "new": false
     },
     {
       "trend": "Resource-scarcity chains",
-      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. NOAA now gives a historic El Niño better-than-even odds this winter.",
-      "watch": "So far the chain shows up in the weather more than in prices. The Drought Monitor's September 8 map shows flash drought from Texas to the lower Mississippi Valley, while wheat slipped 1.3 percent and cocoa 2.4. Watch palm oil, southern-hemisphere wheat estimates and NOAA's October 8 update.",
-      "expressions": "Grain prices, natural gas, and water-stressed chipmakers.",
+      "why_exponential": "Droughts ripple through several steps before they reach markets, and each step tends to amplify the one before it. The chain is now visible in prices, but running backwards: the current harvest is arriving in volume while forecasters cut the next one.",
+      "watch": "Ivory Coast shipments to ports reached 2.14 million tonnes in the marketing year to September 13, up 18 percent, and ICE inventories hit a two-year high, so cocoa fell 10.2 percent even as early surveys put the 2026/27 Ivory Coast crop at 1.8 million tonnes, down 18 percent. Papua New Guinea has 2.4 million people affected by El Nino frost and drought. Watch NOAA's October 8 update against the new crop.",
+      "expressions": "Cocoa, coffee, grains, and water-stressed producers.",
       "bsig_ref": "AH-1 / AH-2",
       "status": "active",
-      "new": true
+      "new": false
     },
     {
       "trend": "Device attestation as a gatekeeper",
-      "why_exponential": "Apps and services increasingly demand cryptographic proof that your device runs 'trusted', unmodified software before they will run at all, and the state is starting to ask for the same signal. Illinois' HB5511, signed July 31 and effective January 1, 2028, requires device makers, operating-system providers and app stores to collect a birth date at account setup and expose an age bracket to platforms through an API, with no exemption for open-source systems.",
-      "watch": "Google removed the remaining Manifest V2 extensions, uBlock Origin included, from the Chrome Web Store on August 31, and Aurora Store installs on de-Googled phones began failing at the start of September. Newsom signed California's AB 1856 on September 10, which by EFF's account exempts open-source operating systems from collecting and sending users' age-bracket data. Watch whether Google Play's install and donation-link enforcement is policy or a sweep.",
-      "expressions": "GrapheneOS, Google Play Integrity, and message-scanning law.",
+      "why_exponential": "Apps and services increasingly demand cryptographic proof that a device runs trusted, unmodified software before they will run at all, and the state is starting to ask for the same signal.",
+      "watch": "GrapheneOS reported on September 16 that Android 17 QPR1, released the day before, is the first Android release since 3.x to add new developer APIs without a matching release to the Android Open Source Project, which leaves alternative builds tracking a target they cannot see. Google says the code reaches AOSP with QPR2 in December. Watch whether that commitment holds.",
+      "expressions": "GrapheneOS, Google Play Integrity, and age-verification law.",
       "bsig_ref": "",
       "status": "watch (digital rights)",
       "new": false
     },
     {
-      "trend": "Robotaxis hit the regulation wall",
-      "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls. Waymo recalled about 3,900 robotaxis this week after thirteen cases of cars driving into freeway construction zones.",
-      "watch": "The wall now cuts both ways: California's utilities commission approved Waymo for 18 counties on August 14, while Nevada capped Tesla's robotaxi service at 10 cars. Watch NHTSA recalls and freeway-service limits as fleets expand.",
-      "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
-      "bsig_ref": "",
-      "status": "watch (autonomy)",
-      "new": false
-    },
-    {
       "trend": "Consumer-AI labs pivot into medicine",
-      "why_exponential": "Frontier consumer-AI labs are moving into medical hardware and diagnostics. Midjourney unveiled a no-radiation full-body 'ultrasonic CT' scanner this week, while pharma M&A surged (GSK's roughly 10.6 billion dollar deal for Nuvalent) and a CRISPR technique showed it could selectively shred cancer cells. Most of this is early-stage, but the direction is clear.",
-      "watch": "FDA clearances for AI-lab medical devices and more big pharma-AI tie-ups.",
-      "expressions": "Midjourney, large pharma, and gene-editing firms.",
+      "why_exponential": "Frontier labs are moving from software into laboratories and medical hardware, which changes both their capital needs and their regulators.",
+      "watch": "Anthropic confirmed on September 18 that it runs a Bay Area wet lab, without disclosing its opening date, size or biosafety level, and said it is not specifically for drug discovery. Watch for the first device clearance sought by a frontier lab rather than a medical-device company.",
+      "expressions": "Anthropic, Midjourney, large pharma, and gene-editing firms.",
       "bsig_ref": "",
       "status": "watch (AI in medicine)",
       "new": false
     },
     {
       "trend": "AI's off-balance-sheet financing",
-      "why_exponential": "The AI buildout is increasingly funded outside company books. On August 10 Nvidia and Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR announced platforms to mobilise more than $500 billion of third-party capital through vehicles that issue debt and lease compute; Nikkei had already counted about $1.65 trillion of special-purpose-vehicle debt tied to five US tech giants. Each layer of guarantees lets the next project borrow more.",
-      "watch": "Nvidia is reported to be weighing up to $10 billion for Anthropic's IPO, which would make it an anchor shareholder in a company that has signed compute contracts worth up to $517 billion, as The Information reported last week. No rating action and no SBE pricing yet. Nvidia's 8-K for Hugging Face adds a retention programme of up to about $1 billion to an $11.9 billion price, and Mistral's €3 billion was straight equity. Watch for a rating agency to say how much of the vehicle debt is really the sponsors' debt.",
+      "why_exponential": "The AI buildout is increasingly funded outside company books, through vehicles that issue debt and lease compute, and each layer of guarantees lets the next project borrow more.",
+      "watch": "Nothing new was disclosed in the week, and the test case has slipped: SB Energy, which filed on September 1 to raise $5 to $7 billion at about a $50 billion valuation on a backlog of roughly $439 billion tied largely to OpenAI leases and no operational data centres, had still not priced. Watch for a rating agency to say how much of the vehicle debt is really the sponsors' debt.",
       "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
       "bsig_ref": "",
       "status": "watch (financing)",
       "new": false
     },
     {
+      "trend": "Robotaxis hit the regulation wall",
+      "why_exponential": "As autonomous fleets scale from surface streets onto freeways, safety incidents draw their first large recalls, and regulators respond in both directions at once.",
+      "watch": "Nothing new during the week. Watch NHTSA recalls and freeway-service limits as fleets expand.",
+      "expressions": "Waymo, Tesla robotaxi, and NHTSA.",
+      "bsig_ref": "",
+      "status": "watch (autonomy)",
+      "new": false
+    },
+    {
       "trend": "Water as a grid constraint",
-      "why_exponential": "Power planning still treats cooling water as free and infinite, and it is becoming neither. The Danube fell to a record low in the first days of August and Hungary's Paks plant, about half the country's electricity, stopped generating for the first time in 44 years; Romania blasted rock to redirect cooling water to its one working reactor.",
-      "watch": "Copernicus's August bulletin, published September 10, reports exceptionally low flows on the Rhine, Danube and Dnieper after western Europe's hottest summer on record, above 2003. Nothing new came from Paks or Nepal's damaged hydropower sites during the week. Watch autumn river levels against the reactors and data centres that draw on them.",
+      "why_exponential": "Power planning still treats cooling water as free and infinite, and it is becoming neither, as European reactors found when the Danube hit a record low in August.",
+      "watch": "Nothing new came from the European river basins during the week. Watch autumn river levels against the reactors and data centres that draw on them.",
       "expressions": "European power prices, nuclear operators, and grid-interconnection queues.",
       "bsig_ref": "AH-3",
       "status": "watch (grid water)",
@@ -7761,6 +9009,44 @@
         "Hacker News"
       ],
       "note": "A technology news site run by Y Combinator where readers vote stories up. This issue counts the week's top 100 stories."
+    },
+    {
+      "terms": [
+        "Summary of Economic Projections",
+        "the projections",
+        "projections"
+      ],
+      "note": "The forecasts each Federal Reserve policymaker submits four times a year for growth, unemployment, inflation and the interest rate they think appropriate. The median of the rate forecasts is often called the dot plot."
+    },
+    {
+      "terms": [
+        "target range"
+      ],
+      "note": "The Federal Reserve sets a quarter-point band rather than a single number for the overnight rate banks charge each other, and steers the market rate into that band."
+    },
+    {
+      "terms": [
+        "Kalshi"
+      ],
+      "note": "A US prediction-market exchange regulated by the Commodity Futures Trading Commission. Its contracts settle at a dollar, so a price of 50 cents means traders put the chance at roughly 50 percent."
+    },
+    {
+      "terms": [
+        "constitutional majority"
+      ],
+      "note": "The share of a parliament, usually two thirds, needed to amend the constitution without votes from any other party."
+    },
+    {
+      "terms": [
+        "cloture"
+      ],
+      "note": "The US Senate procedure for ending debate, which needs sixty votes. Failing it usually stops a bill without anyone voting on the bill itself."
+    },
+    {
+      "terms": [
+        "temporary state administration"
+      ],
+      "note": "A Russian mechanism, used by presidential decree since 2023, that transfers control of a foreign-owned company to a state-appointed manager while leaving formal ownership untouched."
     }
   ]
 }

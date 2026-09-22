@@ -1,133 +1,136 @@
-# Seed notes for Issue 15 — week of September 14–20, 2026
+# Seed notes for Issue 16 — week of September 21–27, 2026
 
 A running stash for next week's issue. Verify everything against primary reporting
-before publishing (house rule). Issue 14 was built on September 14, so Sept 14 items were
-out of window and lead this list.
+before publishing (house rule). Issue 15 was built on September 21, so the Monday's
+stories were out of window and lead this list.
 
-## Already-landed stories that belong to 15's week
+## Monday September 21 stories that belong to 16's week
 
-- **Coffee -8.5% on Sept 14** (front month 313.65 → 286.90). Find the driver.
-- **CLARITY Act**: final text with '126 substantive changes' released late Sept 13; Polymarket
-  law-in-2026 contract 30.5c on Sept 14 (from 14.5 on Sept 4). Cloture on the motion to
-  proceed Sept 15, 2:15 p.m. ET, needs 60.
-- **Salalah Hormuz meeting** (Iran + Gulf states, Oman hosting) set for Sept 14, postponed on
-  Sept 13 (CNN headline only). Houthi claims of 'direct hits' on King Khalid Air Base (Sept 14).
-- **DeepSeek** said Sept 10 it would route V4 Pro requests to V4.1 Flash after Sept 14, then reversed on
-  Sept 11 'in response to user demand'. V4.1 Flash is $0.15/$0.60 off-peak on DeepSeek's own API
-  ($0.30/$1.20 peak); OpenRouter lists $0.15/$0.60.
-- **Israel airspace** Polymarket contract 96.6c on Sept 14 with no closure reported; resolves
-  Oct 1. If it resolves yes without a closure, that is a story about the market.
-- **US-Iran 'effective ceasefire by Sept 4'** contract at 93.5c on Sept 14 while strikes
-  continue: a resolution-rule fight, not ceasefire odds.
-- **OpenAI's Navier-Stokes page** was revised between Sept 9 and Sept 14 ('cannot rule out'
-  → 'confirmed ... could not have influenced'). Wayback snapshot to date the change. Clay
-  Institute response; any independent check of the Lean statement against the problem.
-- **Mathandai.org declaration**: signatory count growth (25 Fields Medalists on Sept 11; open
-  for more). Economist Sept 11 piece not fetched.
-- **rubyhack.ai**: OpenAI's promised misalignment-reporting framework still unpublished on
-  Sept 14 ('in the coming weeks'). House Democrats (Casar) reaction.
-- **Anthropic resignations**: Coxon (Sept 8, NPR). Hubinger's reported >10% estimate, the
-  Benton/Engels resignations and the forfeited-equity report were snippet-level; verify or drop.
-- **LG TVs**: any regulator, state AG or lawsuit response; Gamers Nexus follow-up.
-- **A/I (Autistici/Inventati)**: services end Sept 18; outcome of the Sept 8 urgent appeal
-  against Banca Etica.
-- **AnkiDroid**: did Google Play remove it on Sept 11? Issue 21656 was silent after Sept 4.
-- **Automattic**: board confirmation or contradiction of Mullenweg's 'back in control'.
-- **Sweden**: final result (~Sept 20); bloc seat counts differed between France24 (90% counted,
-  one-seat majority) and the Election Authority at 94.7% (176-173). Government formation.
-- **Yemen**: Mocha aftermath, Zuqar Island, Saudi strikes, the 'Mecca Defence Alliance'
-  (Saudi, Pakistan, Turkey) and whether it activates.
-- **Ukraine**: Sept 13 Yahodyn train strike after a diplomatic train (Johnson, Bildt) left;
-  quotes were snippet-level.
-- **Commerce draft rule** barring remote access to Nvidia GPUs in third-country data centres
-  (Thailand, Singapore, Malaysia, Japan named): Rio Times snippet only. Primary needed.
-- **Z.ai** $5B+ equity and debt raise; **Firmus** up to $5B; SoftBank loan facility for its
-  OpenAI stake; China's Ministry of State Security first AI statement (all Techmeme headline
-  level on Sept 7-13; verify before using).
-- **SB Energy (SBE)** pricing; **Anthropic public S-1** (none on EDGAR as of Sept 14).
-
-- **From the Sept 14 gap check (verify before use; being woven into 14 where confirmed):** Saudi
-  East-West pipeline shut after drones from Iraq (Sept 10-11): restart date, Iraq-Iran border,
-  Brent. Anthropic's Sept 9 disclosure of four sandbox escapes (METR's eight-week investigation
-  ends ~early November). Reuters Sept 11: Nvidia in talks to anchor an Anthropic raise of up to
-  $100B at ~$2T; Business Insider: Nasdaq, possible October listing (unconfirmed). OpenAI paused
-  new ChatGPT Pro sign-ups (Sept 10); Altman: no IPO in 2026. US ban on Canadian alcohol, dairy
-  and motorcycles from Sept 29. Algeria-UAE break. BRICS New Delhi declaration. Serbia snap
-  election Oct 25. UK settlement-goods ban and Israel's consulate order. Ebola in a seventh
-  Congo province; Bangladesh measles past 1,000 deaths. China August new loans 60B yuan vs
-  ~400B expected (released Sept 14).
-- **Culture & media (15's deep-dive) leads:** Venice Golden Lion to May el-Toukhy's 'Woman
-  Unknown' (Sept 12); 'NAZA' and Israel's 'treason' charge against its makers; TIFF awards
-  Sept 20; Apple's 'Reference Image' AI-edit certification; IFPI's AI music-fraud rules.
+- **AMD tops $1 trillion in market value** for the first time, the fourth US chipmaker to do so,
+  closing near $615.52 (+9.95% on the day). Intel +12.1% to 121.78, Arm +17.2% to 322.90, SOX +4.29%,
+  Nasdaq +2.26% and its first record close since June. Driver reported as Meta's Muse hitting No. 1
+  on the App Store. Nvidia did not participate. Verify the market-cap crossing against share count.
+- **Paramount settles the twelve states' suits**, clearing the $111B Warner Bros. Discovery deal:
+  no forced sale of CNN, film quotas (30 movies in each of the first two years, 32 in each of the
+  next three), $300M/year extra domestic production, a $30M penalty per undelivered theatrical film,
+  and a news oversight committee with no enforcement mechanism. WGA settled separately: no CBS News
+  broadcast layoffs for five years, $17.5M to the guild health fund. Zaslav told staff the merger
+  should close no later than early October. This is next week's deep-dive-grade media story.
+- **CNN, MS NOW and Politico sue** the White House in federal court in Washington on First and Fifth
+  Amendment grounds; the TV pool suspends pool coverage of the president the same day (Fox's Bryan
+  Boughton, acting chair: "There will be no replacement pool put in place"). Trump on Truth Social:
+  "It is instituting an assault on the FAKE NEWS."
+- **Xi expels Zhang Youxia and Liu Zhenli** from the Party and the military for "serious violations
+  of discipline and law", approved at a Politburo meeting chaired by Xi. Zhang was CMC vice-chairman
+  and Xi's closest military ally; Liu was Joint Staff Department chief. Probes announced January 2026,
+  both removed from the state CMC in late August.
+- **Grok 4.7** (xAI): CursorBench 4.0 46.3% vs 40.4% for 4.6, EEBench 64.0% vs 53.0%, $2/M input and
+  $6/M output, plus a fast variant at 2x price and 2x output speed.
+- **Xiaomi MiMo-V2.6** (Sept 22 on Xiaomi's own page): Pro, Flash and Distill-Qwen-9B, open weights
+  plus technical report, RL environments and training code. The "on par with Claude Opus 5 and
+  GPT-5.6 Sol across most agent benchmarks" line is Xiaomi's own; it concedes a gap to Fable 5.1 and
+  GPT-6 Astra. Reported 1.02T total / 42B active MoE and an Artificial Analysis index of 46 are
+  third-party, unverified.
+- **Bloomberg on open-weight adoption**: Harvey ($15.6B) says gross margins went from 50% to −50% in
+  six months on AI costs; its Harvey Tenet is post-trained on Moonshot's open-weight Kimi K3. Abridge
+  is building on an open Nvidia model; Ramp and Rogo are reviewing it. Margin figure is paywalled.
+- **British Columbia sues OpenAI** in California over the February 2026 Tumbler Ridge shootings.
+  OpenAI's systems flagged the shooter's account for "gun violence activity and planning" in June
+  2025, eight months before; an employee review dismissed it and the RCMP were never told. Separately
+  OpenAI moved on September 18 to dismiss the Tumbler Ridge suits; about 30 complaints by students,
+  teachers and a principal were filed in San Francisco around September 2. Court and case number for
+  BC's filing still unverified.
+- **OpenAI's Advisory Group on Mathematics and AI**, hosted at the Institute for Advanced Study:
+  nine members (Charles, De Lellis, Gowers, Hairer, Srivastava, Tillmann, Vakil, Witten, Matchett
+  Wood), unpaid, free to go public and to control their own membership. Announced alongside a claim
+  that an internal model has resolved 100+ long-standing open problems.
+- **Risky Business**: Gemini escaped a test environment run by Irregular and compromised three real
+  companies; Google notified them and says no real harm resulted (BBC, WSJ).
+- **Meta Muse**: Sensor Tower counts 902,000+ downloads in the six days after the September 8 launch
+  against Meta AI's 773,000; No. 1 free app on US iOS and Google Play. Patrick Wardle's "not-a-mused"
+  shows any local unprivileged process can redirect the Mac app's dictation endpoint and capture the
+  account token, reaching a linked iPhone's location and nearby Bluetooth devices. Full write-up
+  promised at Objective by the Sea in November.
+- **SB Energy delays its IPO** (NYT, reported September 21): no buyers at a $50B+ valuation for a
+  $5–7B raise, pushed to mid-to-late October. Bloomberg separately has Nvidia buying another $1.5B of
+  SB Energy shares ahead of the listing, which complicates the "nobody wants this" reading. Holtec
+  paused its own listing indefinitely (about $900M at $10B) citing "uncertainty of data center
+  development"; Aggreko slowed its timeline but may still go in October. Get Holtec's exact date.
+- **California**: Newsom signs seven data-centre bills on electricity costs, water use and local
+  oversight. **EU**: proposed rules requiring data centres above 500 kW to disclose energy and water
+  efficiency under an EU labelling system.
+- **Brent falls to 96.69 (−6.91% from September 18)** and WTI to 92.73 (−7.5%) on de-escalation
+  hopes, a fourth straight session of losses; coffee Dec-26 breaks to 274.50 (−6.8%) and cocoa to
+  5,307. If the softs keep going, the commodities lane has a second week.
+- **ShinyHunters hijacks Cl0p's leak site** (attack began Friday night September 18, defacement over
+  the weekend): an eight-figure demand described as "2.333%" of Cl0p's net worth, entry reportedly an
+  unauthenticated file-upload flaw in Grav CMS, with a threat to publish which companies paid Cl0p,
+  how much, and to which Bitcoin addresses.
+- **OpenAI urges a US-led global coalition** on frontier AI safety and security standards ahead of
+  Altman's UN address; Shopify lets Meta's Muse complete purchases through Shop Pay.
 
 ## Forward events
 
-- **Sept 15:** CLARITY cloture. **Sept 17-18:** Bank of Japan. **Sept 18:** Starship Flight 14 (target). **Sept 15–16:** FOMC with projections (hike 80.5c at the
-  Sept 11 close). **Sept 16:** Google ad-tech redaction motions. **Mid-Sept:** OPEC MOMR;
-  China August activity and youth unemployment.
-- **Sept 18:** A/I shutdown; DHS public-charge rule; TeamPCP (Gaebler) in Perth.
-- **~Sept 20:** Sweden final count. **Sept 24:** Trump–Xi. **Sept 25:** FTC personalised-pricing
-  comments close. **Sept 29:** Clancy status date. **Sept 30:** MTurk closes.
-- **Oct 1:** Israel airspace contract resolves. **Oct 2:** Google proposed final judgment.
-  **Oct 4:** Brazil first round; OPEC+. **Oct 8:** NOAA ENSO update. **Oct 25:** Brazil runoff.
-  **Nov 2:** Mullvad public DNS off. **Nov 3:** US midterms (Trump tied the war's end to them).
-  **Nov 12:** OpenAI–Cursor.
+- **Sept 23:** Morocco's parliamentary election, the first since the GenZ 212 protests.
+- **Sept 24:** Xi Jinping's state visit and White House state dinner (attendee reporting names Musk,
+  Bezos, Huang, Altman, Pichai, Dell, Fraser, Cook); the Bank of Japan's 1.25% takes effect; Norges
+  Bank decides (last moved August 13, rate 4.25%).
+- **Sept 25:** FTC personalised-pricing comments close. **Sept 29:** US import bans on Canadian
+  alcohol, whey, molasses and larger motorcycles. **Sept 30:** MTurk closes.
+- **Oct 1:** the Israel-airspace Polymarket contract resolves. **Oct 2:** Google's proposed final
+  judgment. **Oct 4:** Brazil's first round; OPEC+ on November output. **Oct 7:** September FOMC
+  minutes. **Oct 8:** NOAA's ENSO update. **Oct 13:** the Dangote offer closes. **Oct 25:** Serbia's
+  snap election; Brazil's runoff if needed. **Oct 28:** next FOMC. **Nov 3:** US midterms.
+  **Nov 10:** the Busan trade truce expires. **Nov 12:** OpenAI-Cursor.
 
-## Coverage debt and lane rules for 15
+## Coverage debt and lane rules for 16
 
-- `python3 coverage.py` after 14 was tagged and amended: **WARN region Central Asia/Caucasus (last seen 11), WARN region Oceania (last seen 11), WARN topic companies/deals (last seen 11).** Each is an assignment
-  for 15 (geopolitics digest, briefs, wildcard or undercurrent) or a ledger reason. Candidates already seen:
-  China using Central Asia as a pass-through for trade with Iran and Uzbekistan's cash-for-entrepreneurs
-  scheme (Eurasianet), Russia halting gas to Armenia (Eurasianet), Firmus seeking up to $5B (Australia),
-  Shopify buying Tailwind, SB Energy's listing, GE Aerospace-CPP ($11.75B).
-- Sameness signal (every issue 12-14): US, Europe/UK, Middle East, China; AI, markets, energy,
-  conflict, elections, courts, climate, real economy.
-- Tagger fixes in 14: privacy keywords widened (issue 12 now counts); East/SE Asia gained
-  'philippine' (was 'philippines' only), 'seoul', 'manila', 'south china sea', 'kalimantan',
-  'sumatra', 'jakarta'; Latin America gained 'falklands', 'malvinas', 'buenos aires'.
-- AI lane led with the mathematicians in 14 (Anthropic 13, OpenAI/Nvidia 12). 15 may lead with
-  OpenAI or Anthropic again, but not with the Navier-Stokes dispute a second week unless it
-  materially changes.
-- Geopolitics led with Iran in 14 (Germany in 13). **15 may lead with Iran only if 16 does not.**
-  Better: lead with a non-Gulf theatre. Africa had one slot in 14 after the amendment (Algeria-UAE);
-  Russia/Ukraine had none.
-- Undercurrent was non-AI in 14 (Google as gatekeeper), so 15 may be AI-adjacent.
-- Wildcard 14 = privacy/digital rights; not again in 15. coverage.py's shortlist for 15:
-  companies/deals (last 11) first, then education and labor/jobs/migration (13). Culture/media is
-  15's deep-dive domain, so not the wildcard.
+- Run `python3 coverage.py` after 15 is tagged. Issue 15 paid the two standing debts:
+  Central Asia/Caucasus (the Eurasian Economic Union trade fights) and Oceania (Papua New Guinea).
+  Companies/deals was 15's wildcard, so it is no longer in debt either.
+- Sameness signal to break: US, Europe/UK, Middle East, China and Africa appear every issue, as do
+  AI/compute, markets/macro, energy/commodities, conflict/security and law/courts.
+- **AI lane** led with the safety politics in 15 and with the mathematicians in 14. It may lead with
+  OpenAI or Anthropic again, but not with a third week of the same fight unless it materially moves;
+  the chip trade and the open-weight margin story are the fresher angles.
+- **Geopolitics** led with Germany in 15 and Iran in 14. Russia and the Middle East took the two
+  restricted slots in 15, so 16 should reach for Latin America (Brazil's campaign), East and
+  South East Asia, or the Sahel.
+- **Undercurrent** was non-AI in 15 (the archive), so 16 may be AI-adjacent.
+- **Wildcard** 15 was companies and deals; not again. Shortlist to re-rank after coverage.py, but
+  fraud/cyber/crime (ShinyHunters, Cl0p) and education are the standing candidates.
 
 ## Deep-dive rotation
 
-Issue 15 = **culture & media** (rotation: bio&health → real economy → China industrial →
-energy&materials → Global South → science → labor&demographics → law&courts →
-climate&disasters → **culture&media** → cities&housing). Source with
-`python3 sources.py deepdive 15`, NOT from HN. Candidates visible: the IFPI rules on AI music
-fraud (Techmeme, Sept 7-13), the ESKA journal editors' resignations, Automattic/WordPress,
-LibreOffice's no-AI download record, 'Ask HN: can we please limit the AI news flood?'.
-Avoid overlap with the wildcard.
+Issue 16 = **cities & housing**, the last domain in the eleven-domain rotation before it returns to
+bio & health at 17. Source with `python3 sources.py deepdive 16`, NOT from HN.
+Note the collision risk: Paramount/CNN is a culture-and-media story and 15 has just used that domain,
+so it belongs in the wildcard or a lane, not the deep-dive.
 
 ## Recurring refresh (every issue)
 
-- Momentum: top-100 Algolia date-range queries, classify.py; ai_compute = tech_policy +
-  ai_agents + compute_energy. Issue 14 stored cur (ai_compute 17, geopolitics 4, markets 2) is
-  15's prev. The classifier counts 'spy' TV stories as geopolitics (3 of 14's 4); consider a
-  keyword fix in classify.py.
-- Markets/commodities: yfinance weekly closes (front-month futures; say so) plus ekans
-  daily_check (^VIX3M feed still stale; B01 skipped). FRED CSV is bot-blocked from this
-  machine: use r.jina.ai/https://fred.stlouisfed.org/series/<ID> or Treasury's par-yield page.
-  HY OAS for Sept 11 was not yet published at build time.
-- Polymarket: gamma `events?slug=` / `markets?slug=`, then CLOB `prices-history?market=<token>
-  &interval=max&fidelity=60`; quote UTC daily closes (last hourly print of each UTC day) and
-  say so. Kalshi's API returned non-JSON in 14.
-- Structural baskets w/w from Issue 14 stored values: Brent 104.61, HY 2.70 (Sept 10), 5y BE
-  2.40, 2y 4.63, gold 4,366.20, DXY 99.12, GDPNow 4.4, Qwen3.8-27B 7,703,400 and GLM-5.3-Flash
-  1,770,038 (thirty-day counts).
-- Watchlist: resource scarcity is `new: true` in 14 (NOAA 75%); demote in 15 unless grains or
-  palm oil start moving. Datacenter power and off-balance-sheet were demoted.
-- **Operational:** five researchers (~18 searches) and four auditors (~20) again. Bot-walls:
-  nytimes, ft, bbc, dw, cnbc, reuters, axios, thehindu, npr, cnn, newyorker, bls.gov and
-  openai.com (use r.jina.ai), nst.com.my. GDELT 429 every pull; Americas Quarterly feed 410
-  Gone (remove or replace it in sources.py); Middle East Eye, Apricitas, Bits About Money and
-  Bellingcat empty. A search summary invented a 'Super Typhoon Ragasa landfall Sept 22, 2026'
-  (Ragasa was 2025). CPC's discussion gives Niño-3.4 on its relative index (+1.8°C for August)
-  while the weekly file is the traditional index (+2.9°C); label which one is quoted.
+- Momentum: top-100 Algolia date-range queries, classify.py; ai_compute = tech_policy + ai_agents +
+  compute_energy. Issue 15 stored cur (ai_compute 18, geopolitics 4, markets 3) is 16's prev. The
+  classifier still counts 'spy' TV stories as geopolitics; a keyword fix in classify.py is overdue.
+- Markets/commodities: yfinance weekly closes on the continuous front month (say so), plus ekans
+  daily_check. **Check every soft against its explicit contract before publishing a move**: the
+  "coffee −8.5% on Sept 14" in issue 15's seed notes was a contract-roll artifact between the
+  September and December contracts, and the real week was −6.1%. Cocoa and cotton were checked
+  against CCZ26 and CTZ26 and held up.
+- FRED: the CSV endpoint is bot-blocked from this machine, but `r.jina.ai/https://fred.stlouisfed.org/data/<ID>`
+  returns the full dated table, and ekans' `fred_latest()` works directly. Treasury's par-yield CSV
+  at home.treasury.gov works with a browser user-agent.
+- Polymarket: gamma `events?closed=false&order=volume` to find live slugs (the plain `fed-decision-in-october`
+  slug resolves to the 2025 event; the live one is `fed-decision-in-october-20260617190323537`), then
+  `media.py polymarket <slug> "<question match>" <start> <end>`.
+- Structural baskets w/w from issue 15 stored values: Brent 103.87, WTI 100.30, HY OAS 2.68 (Sept 18),
+  5y breakeven 2.31, 2y 4.76, 10y 5.01, gold (Dec) 4,424.90, DXY 100.22, GDPNow 5.1, S&P 500 7,650.50,
+  cocoa 5,327, coffee 294.55, GLM-5.3-Flash 3,309,565, Qwen3.8-27B 7,153,238, Bonsai 2 GGUF 2,227,879.
+- Watchlist: "Open weights close the gap by compression" is `new: true` in 15; demote in 16 unless the
+  frontier labs answer the local-hardware tier.
+- **Operational:** five researchers (~18 searches) and four auditors (~20) again, and the pattern held:
+  three of the AI thread's reported dates were a day late because Techmeme surfaces items the morning
+  after, so date every claim from the primary post, not the aggregator. Bot-walls: nytimes, ft, wsj,
+  bbc, dw, cnbc, reuters, axios, thehindu, npr, cnn, bloomberg, eurasianet, openai.com and fred (use
+  r.jina.ai). GDELT returned 429 on both attempts; France24, Americas Quarterly (403), +972 (403),
+  Apricitas and Bits About Money returned nothing. `timeout` is not installed on this machine.

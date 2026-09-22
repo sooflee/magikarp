@@ -1778,3 +1778,108 @@ that applies to every archive page, and 25 `annotations` on issue 14 for people,
 and others), written only from facts already verified for the issue or settled general knowledge. Issue
 14 carries 67 notes; the brief keeps its own set so its terms do not use up the sections' notes. The build
 fails on a note over 45 words, an em-dash in a note, or an issue note that never matches the page.
+
+## Issue 15 — Week of 2026-09-14 → 2026-09-20
+
+Built 2026-09-21. Title: "The energy shock turns into a rate cycle as the Fed raises for the first
+time this cycle and the Bank of Japan reaches its highest rate since 1995, while Washington makes AI
+safety a partisan question."
+
+States: ai_compute **open-acceleration** (from consolidation), deep_dive (culture & media)
+accelerating, geopolitics stressed, markets mixed. Momentum: ai_compute 17 → 18, geopolitics 4 → 4,
+markets 2 → 3.
+
+The week's two spines. First, central banks: the Fed raised its target range a quarter point to
+3.75-4.00 percent on September 16 on a 12-0 vote, in a three-paragraph statement that named no voting
+members and ended "The Committee will deliver price stability", and moved the median 2027 policy rate
+from 3.6 to 4.1, erasing next year's cuts. The Bank of Japan followed on September 18 to 1.25 percent,
+its highest since 1995; the Bank of England held at 3.75 with three of nine voting to raise; Brazil cut
+to 13.75 hours after the Fed moved. The market read the hike as credible: the two-year rose 13 basis
+points while the five-year breakeven fell 9 and credit did not move. Second, AI safety became a US
+partisan question, with Trump's two Truth Social posts of September 14 and his phone call to Jensen
+Huang at the All-In Summit, against OpenAI's own disclosure of six misalignment incidents on the 16th.
+
+Lane assignment worth recording: the unsealed New York Times v. OpenAI filings were the week's loudest
+AI story on Hacker News, but they are a publisher-economics story and the deep-dive domain was culture
+and media, so the dive went to press freedom instead (Israel's NAZA investigation, the White House ban,
+Pew and Medill) and the filings were left out rather than told twice. The Paramount settlement, the
+press-pool lawsuit and the pool walkout all landed on Monday September 21 and were held for issue 16.
+
+Coverage debt: both standing WARNs were paid, Central Asia/Caucasus with Eurasianet's account of
+Russia's trade fights inside the Eurasian Economic Union and Oceania with Papua New Guinea's El Niño
+frost and drought. Companies and deals, the third debt, became the wildcard. The geopolitics theatre
+rule held at two of six slots for Russia and the Middle East combined.
+
+Media: no photographs, because nothing open-licensed showed this week. Two charts, both single-series
+and pulled with media.py: the Polymarket October Fed contract (August 22 to September 20) and cocoa's
+December futures (June 1 to September 18).
+
+### Issue 15 audit (2026-09-21) — corrections applied
+
+Four adversarial passes (AI and the undercurrent; geopolitics and trade; markets, commodities and the
+market cards; deep-dive, wildcard, briefs, calendar and hover notes), run before any email. About
+fifty corrections applied; lint and the human-voice sweeps are clean, zero em-dashes.
+
+Fabrication caught, the worst of the pass:
+- The Guo Jiakun quotation was not verbatim. A research summary had rendered it as "fearmongering,
+  confrontation and malicious competition will only disrupt the process of global AI governance and
+  serve no one's interests"; Reuters' translation is "fear-mongering, confrontation, competition will
+  just disrupt [the] process of global AI governance". The added word, the substituted word and the
+  invented closing clause are all now gone, and the setting ("the regular briefing") went with them
+  because no source states it.
+
+Misattributions:
+- "A quarter point rate hike does not reopen the Strait of Hormuz" is CBS's Richard Escobedo putting a
+  question, not Warsh speaking. It appeared three times as Warsh's line. All three now carry the
+  question and his actual answer, that the Fed "cannot affect any individual price".
+- Alice Weidel, not Tino Chrupalla, said the CDU "cannot continue with Friedrich Merz, with a weak
+  chancellor".
+- The "$3,000 of API spend" is Hacktron's figure for a two-month campaign against several companies,
+  not the Journal's figure for the OpenAI job, and it is an upper bound.
+
+Wrong dates, all in the same direction: Techmeme surfaces items the morning after, and three of the AI
+thread's dates were a day late.
+- Amodei's essay is "We Must Pace the Frontier", published September 12, not "Pacing the Frontier" over
+  "the preceding weekend".
+- Bilal Chughtai published his reasons for leaving on September 14, not the 15th, and he had resigned
+  earlier in the year, so "resigned in public" was wrong twice over.
+- Netanyahu's two-bill pledge was September 16, which also broke the summary's "the next day".
+- The Bank of England announced on September 17; GrapheneOS posted on September 16 about Android 17
+  QPR1, not Android 17; the Wall Street Journal filed on the evening of September 17.
+- Trump announced the press ban on Truth Social and then took the reporters' question in the Oval
+  Office; the draft had the announcement made to reporters.
+
+Numbers corrected:
+- Papua New Guinea's "2.4 million affected" is the PNG government's figure for the **2015-16** El Niño,
+  carried forward in FAO material; the cited ABC piece gives no such number. Cut. Its "500 million kina"
+  is $157 million, not the $120 million the draft had.
+- Yemen displacement was 118,086 as of September 18 (IOM); "past 130,000" is a September 21 headline
+  rounding 129,438.
+- The Polymarket October Fed contract closed at 54.5 on September 18, not 50.5, and the largest day was
+  September 16 itself, not the 17th; the Kalshi spike of 183,757 contracts was September 16 too. The
+  draft's own chart already held the right series, so the text had been contradicting its own figure.
+- Brazil: Flávio Bolsonaro 52.0 → 56.5 and Lula 45.5 → 42.5, crossing on September 10. Midterms:
+  52.5 → 60.0, with Republicans 12.5 → 8.5.
+- Brent fell three sessions after September 15, not four. The dollar index went back above 100 for the
+  first time since August 12, not for the first time. Bitcoin's Friday-to-Friday week is +4.8 percent to
+  $80,901; the +5.3 percent figure reached to a Saturday. The FOMC statement has three paragraphs.
+- Samsung's 40 to 80 percent is shipment mix, not output. Holtec shelved its listing but keeps its
+  registration and says it may return in three to six months, so "indefinitely" was wrong.
+
+Overclaims softened: von der Leyen said she wants to open the door to Canada rather than offering it a
+place; the sanctions act's 100 percent tariff authority is capped at the five largest buyers; Bonsai 2's
+benchmark figures are prism-ml's own; the Spanish block of archive.today began in mid-August and was
+only noticed in the week; the Internet Archive changed an error message rather than a policy; Anthropic
+confirmed a wet lab exists without giving an opening date; the Dangote offer is open until October 13,
+so nothing is listed yet.
+
+Cut for want of a source: "Google Play's review queue is also now regularly running over a week."
+
+Two sourcing fixes: the Moscow Times piece covers only Nestlé and Auchan, so the decree's full list now
+cites Ukrainska Pravda; the September 16 current-events portal page does not cover the signing, the
+shadow fleet or the Iran extension, so that basket entry now cites the act's own article.
+
+Process note for next time: the seed notes' "coffee fell 8.5 percent on September 14" was a
+contract-roll artifact, comparing the September contract's Monday close with December's Friday close.
+The real week was 6.1 percent on the continuous front month. Cocoa and cotton were re-checked against
+CCZ26 and CTZ26 and held. Check every soft against its explicit contract before publishing a move.
