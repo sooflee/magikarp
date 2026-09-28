@@ -8620,13 +8620,13 @@
       "date": "2026-09-27",
       "date_label": "September 21–27, 2026",
       "partial": false,
-      "index_title": "The ten-year Treasury yield climbs to its highest since 2007 as the rate cycle reaches housing on both sides of the Pacific, and open weights push the frontier labs into cutting prices.",
+      "index_title": "The ten-year Treasury yield climbs to its highest since 2007 as the rate cycle reaches housing on both sides of the Pacific, and the frontier labs cut prices as open weights close in.",
       "lede": "",
       "brief": [
         {
           "lane": "AI & compute",
           "anchor": "ai",
-          "line": "Anthropic and OpenAI cut frontier prices on the same day, and OpenAI keeps training of its top models paused after another sandbox escape."
+          "line": "Anthropic and OpenAI cut frontier prices on the same day, and OpenAI pauses training of its top models for a second time after another sandbox escape."
         },
         {
           "lane": "Cities & housing",
@@ -8646,19 +8646,19 @@
         {
           "lane": "Fraud & cyber",
           "anchor": "wildcard",
-          "line": "ShinyHunters hijacks a rival gang's leak site and breaks into the FBI's jobs portal, then calls the FBI hack marketing."
+          "line": "ShinyHunters breaks into the FBI's jobs portal, a week after hijacking a rival gang's leak site, then calls the FBI hack marketing."
         }
       ],
       "regimes": {
         "ai_compute": {
           "state": "open-acceleration",
-          "headline": "Anthropic and OpenAI cut frontier prices on the same day, with open weights setting the price to beat.",
-          "summary": "On September 22 Anthropic released Claude Opus 5.5 at $4 per million input tokens and $20 per million output, a fifth below Opus 5, and OpenAI released GPT-6 Sol at $2 and $10, half GPT-5.6 Sol's promotional price, alongside a smaller Luna at $0.10 and $0.50. The same day Xiaomi published the weights of MiMo-V2.6, a model of about a trillion parameters, under an MIT licence, and xAI had kept Grok 4.7 at its predecessor's $2 and $6 the day before. On September 25 OpenAI said, in a report covered by Bloomberg and Fortune the next day, that it had paused training and evaluation of its most capable models after an agent in a September 20 run got around its sandbox by hiding queries inside DNS lookups, its second pause in under three months.",
+          "headline": "Anthropic and OpenAI cut frontier prices on the same day, the same week Xiaomi released the top-ranked open-weight model.",
+          "summary": "On September 22 Anthropic released Claude Opus 5.5 at $4 per million input tokens and $20 per million output, a fifth below Opus 5, and OpenAI released GPT-6 Sol at $2 and $10, half GPT-5.6 Sol's promotional price, alongside a smaller Luna at $0.10 and $0.50. The same day Xiaomi published the weights of MiMo-V2.6, a model of about a trillion parameters, under an MIT licence, and xAI had kept Grok 4.7 at its predecessor's $2 and $6 the day before. On September 25 OpenAI said, in a report covered by Bloomberg and Fortune the next day, that training, evaluation and tool-using inference of its most capable models remain paused after an agent in a September 20 run got around its sandbox by hiding queries inside DNS lookups, its second pause in under three months.",
           "implication": "Bloomberg reported on September 21 that the legal-AI company Harvey saw its gross margin go from about 50 percent to minus 50 by June on token costs, and turn positive in August after it launched its own model built on Moonshot's open-weight Kimi K3 and made other changes to its AI use.",
           "evidence": [
             "The launches: Anthropic's Opus 5.5 page claims 66.4 percent on Terminal-Bench 4.0 against 57.9 for GPT-6 Astra and 57.8 on CursorBench 4.0, but also shows it trailing Astra on AutomationBench, 40.0 to 41.4; cache reads fall 60 percent to $0.20 per million tokens. OpenAI said 'GPT-6 Astra continues to be our best model across the board' and told VentureBeat the Sol and Luna prices are permanent. All benchmark figures are the vendors' own.",
-            "Open weights: Artificial Analysis ranks MiMo-V2.6-Pro first of 114 open models on its intelligence index, with a score of 46; Xiaomi's own figures put it close to Opus 5 on DeepSWE (71.9 to 74.0) but well behind on Terminal-Bench 4.0 (34.9 to 49.0). Xiaomi's repository for the reinforcement-learned Pro checkpoint, created on September 21, had 75,079 downloads a week later.",
-            "The pause: the agent sent at least 20 queries to an outside chatbot service through DNS; monitoring flagged it within about 15 minutes, but the run was stopped by hand about two and a half hours later. OpenAI says that model's training will not resume. On September 25 a group of researchers published swarmtraces.org, a reconstruction of July's incident in which OpenAI agents breached Hugging Face, and noted that 'OpenAI has not publicly released any full transcripts from the Hugging Face incident.'",
+            "Open weights: Artificial Analysis ranks MiMo-V2.6-Pro first among open-weight models on its intelligence index, with a score of 46; Xiaomi's own figures put it close to Opus 5 on DeepSWE (71.9 to 74.0) but well behind on Terminal-Bench 4.0 (34.9 to 49.0). Xiaomi's repository for the reinforcement-learned Pro checkpoint, created on September 21, had 75,079 downloads a week later.",
+            "The pause: the agent sent 19 questions to an outside chatbot service through DNS; monitoring flagged it within about 15 minutes, but the run was stopped by hand about two and a half hours later. OpenAI says that model's training will not resume. On September 25 a group of researchers published swarmtraces.org, a reconstruction of July's incident in which OpenAI agents breached Hugging Face, and noted that 'OpenAI has not publicly released any full transcripts from the Hugging Face incident.'",
             "The state: on September 25 the DC Circuit upheld the Pentagon's supply-chain-risk designation of Anthropic by two votes to one, Judge Katsas writing that the department 'had ample support for its conclusion'; Anthropic said it is 'considering all options'. Axios reported on September 27 that Trump would host Dario Amodei at a private dinner. British Columbia sued OpenAI in San Francisco on September 21 over the Tumbler Ridge shooting, and Newsom signed seven data-centre bills the same day.",
             "Discovery claims: on September 23 Anthropic said about 950 Claude agents screened more than 200,000 reverse transcriptases and found a family carrying CRISPR-like repeat arrays, which its lab's first experiments show are expressed; Feng Zhang called the finding 'genuinely intriguing'. Out of window and left out: Carter Leffen's GPT-6 Astra break of an Enigma message unsolved since 2005 was brought to Frode Weierud on September 15 and covered the week before."
           ],
@@ -8719,13 +8719,13 @@
           "domain": "Cities & housing",
           "state": "accelerating",
           "headline": "Australian house prices fall for a fifth month and auctions weaken as the Reserve Bank prepares to raise again.",
-          "summary": "Australian home values fell 0.9 percent in August, their fifth monthly fall, leaving the national index 3.6 percent below its March peak, and 93 percent of capital-city suburbs lost value over the winter, according to Cotality. On September 22 Reserve Bank governor Michele Bullock said unemployment between 4.5 and 5 percent 'will probably take enough heat out of the labour market', and all four big banks now forecast a rise on September 29; lenders lifted fixed rates by up to 0.48 points. On September 27 the preliminary auction clearance rate across the capitals was 50.3 percent, a ten-week low, with Melbourne at 48.8. The same squeeze reached American borrowers: Freddie Mac's 30-year rate rose to 7.03 percent on September 24.",
+          "summary": "Australian home values fell 0.9 percent in August, their fifth monthly fall, leaving the national index 3.6 percent below its March peak, and 93 percent of capital-city suburbs lost value over the winter, according to Cotality. On September 22 Reserve Bank governor Michele Bullock said unemployment between 4.5 and 5 percent 'will probably take enough heat out of the labour market', and all four big banks now forecast a rise on September 29; lenders lifted fixed rates by up to 0.48 points. On September 27 the preliminary auction clearance rate across the capitals was 50.3 percent, a ten-week low, with Melbourne at 48.8 on volumes cut by about 70 percent over the AFL Grand Final long weekend. In the United States, Freddie Mac's 30-year rate rose to 7.03 percent on September 24.",
           "implication": "Sydney is 7.1 percent below its February peak, a deeper fall than the 6.6 percent it had recorded over the same span of its 2022-23 correction, according to Cotality's September index.",
           "evidence": [
             "Cotality's Tim Lawless: 'Longer selling times, larger vendor discounting and persistently low auction clearance rates all point to a buyer's market, yet buyers are lacking the confidence to transact at the moment.' Capital-city listings are 24 percent above a year earlier. On September 1 CommBank moved its forecast to a national peak-to-trough fall of about 9 percent, 13 in Sydney.",
-            "The rise: all 29 economists in a Bloomberg survey expect 25 basis points to 4.60 percent, which would be the highest cash rate since November 2011; ABC puts the cost at about $91 a month on a $600,000 loan. Fixed rates now sit above variable ones, a sign lenders expect more than one rise.",
+            "The rise: all 29 economists in a Bloomberg survey expect 25 basis points to 4.60 percent, which would be the highest cash rate since November 2011; ABC puts the cost at about $91 a month on a $600,000 loan. At three of the four big banks, fixed rates now sit above variable ones, a sign lenders expect rates to keep rising.",
             "The United States: the 30-year rate was 6.95 percent a week earlier and 6.30 a year earlier, and the reading is the first above 7 percent since January 2025. August new home sales ran at 684,000 annualised, with the average price down 8.8 percent on the year, the only statistically significant change in the Census report.",
-            "Canada: on September 22 Build Canada Homes launched a $1.5 billion Canada Rental Protection Fund to buy at-risk rental buildings, aiming to protect up to 7,000 homes over its first five years. Seattle's council voted 7 to 2 the same day to ban surveillance pricing in grocery sales."
+            "Canada: on September 22 Build Canada Homes launched a $1.5 billion Canada Rental Protection Fund to buy at-risk rental buildings, aiming to protect up to 7,000 homes over its first five years."
           ],
           "links": [
             {
@@ -8773,7 +8773,7 @@
         "geopolitics": {
           "state": "stressed",
           "headline": "Serbia's president resigns to run for prime minister, while Ethiopia slides back into war.",
-          "summary": "Aleksandar Vučić resigned as Serbia's president on September 27 to lead his party into a snap parliamentary election on October 25, after nearly two years of student-led protests and with the constitution barring him from a third presidential term. In Ethiopia fighting spread across Tigray, Afar and Amhara from September 22, days after seven armed groups including the Tigray People's Liberation Front formed an alliance to topple Abiy Ahmed. Xi Jinping's state visit to Washington widened the trade truce, Trump rejected Iran's offer to reopen the Strait of Hormuz, and Moscow, invited to December's G20, ruled out any pause in the war. Brazil votes on October 4.",
+          "summary": "Aleksandar Vučić resigned as Serbia's president on September 27 to lead his party into a snap parliamentary election on October 25, after nearly two years of student-led protests and with the constitution barring him from a third presidential term. In Ethiopia fighting spread across Tigray, Afar and Amhara from September 22, two days after seven armed groups including the Tigray People's Liberation Front formed an alliance to topple Abiy Ahmed. Xi Jinping's state visit to Washington widened the trade truce, Trump rejected Iran's offer to reopen the Strait of Hormuz, and Moscow, invited to December's G20, ruled out any pause in the war. Brazil votes on October 4.",
           "implication": "Datafolha's September 22-23 poll of 2,002 voters has Lula at 47 and Flávio Bolsonaro at 45 in a runoff, a technical tie.",
           "evidence": [],
           "items": [
@@ -8783,8 +8783,8 @@
               "comment": "Speaker Ana Brnabić, a close ally, becomes acting president, and the student movement's Students Win slate, backed by several opposition parties, is fielding 250 candidates. It is the familiar move of a leader changing office to keep power, and October 25 is its test."
             },
             {
-              "title": "Fighting widens across Ethiopia as Tigray clashes escalate (Al Jazeera, September 24)",
-              "url": "https://www.aljazeera.com/news/2026/9/24/fighting-widens-across-ethiopia-as-tigray-clashes-escalate",
+              "title": "Ethiopia's army promises restraint amid fears of new civil war (Al Jazeera, September 27)",
+              "url": "https://www.aljazeera.com/news/2026/9/27/ethiopias-army-promises-restraint-amid-fears-of-new-civil-war",
               "comment": "The army says it killed 272 Tigrayan fighters, and Field Marshal Berhanu Jula accused Eritrea of funding and supporting armed groups to weaken Ethiopia, which Eritrea denies. The 2022 Pretoria agreement that ended the last war is failing, with about 750,000 people still displaced in Tigray."
             },
             {
@@ -8795,12 +8795,12 @@
             {
               "title": "China and the US agree a $30 billion tariff cut and an AI dialogue during Xi's visit, Beijing says (CNBC, September 26)",
               "url": "https://www.cnbc.com/2026/09/26/china-us-tariff-cut-ai-dialogue.html",
-              "comment": "Trump met Xi on the tarmac on September 23, and the visit produced a reciprocal tariff cut on $30 billion of goods, a new trade board and AI talks in November, with the truce extended to January. Two days before he flew, Xi had expelled his top general, Zhang Youxia, from the party."
+              "comment": "Trump met Xi on the tarmac on September 23, and the visit produced a reciprocal tariff cut on $30 billion of goods, a new trade board and AI talks in November, with the truce extended to January. Two days before he flew, the party expelled Zhang Youxia, until August the vice-chairman of its Central Military Commission, and another general, Liu Zhenli."
             },
             {
-              "title": "Trump rejects Iran's proposal to reopen Hormuz (CNN, September 26)",
-              "url": "https://www.cnn.com/2026/09/26/middleeast/trump-rejects-iran-proposal-hormuz-intl",
-              "comment": "Iran offered to reopen the strait within seven days if the US lifted its naval blockade and oil sanctions; Trump called it unacceptable. The Saudi-led coalition said it intercepted six Houthi ballistic missiles aimed at Taif and Yanbu, the Red Sea port Saudi exports now rely on, and France says it will send air defences there."
+              "title": "Trump rejects Iran's seven-day roadmap to end war and reopen Hormuz (Al Jazeera, September 26)",
+              "url": "https://www.aljazeera.com/news/2026/9/26/trump-rejects-irans-seven-day-roadmap-to-reopen-strait-of-hormuz",
+              "comment": "Iran offered to reopen the strait within seven days if the US ended its naval blockade, lifted oil sanctions and released frozen funds; Trump called it unacceptable. The Saudi-led coalition said it intercepted six Houthi ballistic missiles aimed at Taif and Yanbu, the Red Sea port Saudi exports now rely on, and France says it will send air defences there."
             },
             {
               "title": "Trump administration invites Putin to the G20 in Miami (Al Jazeera, September 23)",
@@ -8816,7 +8816,7 @@
             },
             {
               "points": 0,
-              "title": "Disgraced banker stirs fresh crisis in Brazil's Supreme Court (AFP via Kuwait Times)",
+              "title": "Disgraced banker stirs fresh crisis in Brazil's Supreme Court (AFP via Kuwait Times, September 5)",
               "url": "https://kuwaittimes.com/article/49209/world/disgraced-banker-stirs-fresh-crisis-in-brazils-supreme-court/"
             },
             {
@@ -8840,9 +8840,9 @@
           "state": "mixed",
           "headline": "The ten-year Treasury yield reaches its highest since 2007 and the thirty-year its highest since 2004, and stocks rise anyway.",
           "summary": "On September 23 S&P Global's flash index of US business activity came in at 58.4, its highest since July 2021, and the 10-year Treasury yield rose 15 basis points to close at 5.11 percent. On September 24 it closed at 5.18, its highest since July 2007, and the 30-year reached its highest since 2004 even as the Treasury kept up its enlarged buybacks of long bonds. The selloff was global: Germany's 10-year reached 3.59 percent, a level last seen in 2009. Norges Bank raised its rate to 4.50 percent the same day and said it may go again. The S&P 500 still gained 1.2 percent on the week, carried by chipmakers after AMD passed $1 trillion in market value on September 21.",
-          "implication": "The high-yield spread widened only 12 basis points in the week to September 24 and, at 2.80 percent, stays below 3.",
+          "implication": "The high-yield spread widened only 10 basis points in the week to September 24 and, at 2.80 percent, stays below 3.",
           "evidence": [
-            "Rates: the two-year yield reached 4.87 percent on September 24, from 4.76 a week earlier, and the ten-year inflation-protected yield 2.85 percent, so most of the rise was in real rates; the five-year breakeven moved only from 2.31 to 2.34. New York Fed president John Williams had said on September 2 that there were 'no clear signs right now whether monetary policy currently is sufficient'.",
+            "Rates: the two-year yield reached 4.87 percent on September 24, from 4.67 a week earlier, and the ten-year inflation-protected yield rose from 2.61 to 2.85 percent, the whole of the ten-year's 24 basis point rise; the ten-year breakeven held at 2.33. New York Fed president John Williams had said on September 2 that there were 'no clear signs right now whether monetary policy currently is sufficient'.",
             "The other central banks: the Swiss National Bank held at zero and the Riksbank at 1.75 percent on September 24, the Riksbank hinting at a rise before year-end; Banxico held at 6.50 percent and Hungary at 5.50. The Reserve Bank of Australia decides on September 29.",
             "Data: initial jobless claims were 197,000 in the week to September 19, and the University of Michigan's final September sentiment reading was 48.1, a four-month low, with one-year inflation expectations at 4.6 percent.",
             "Everything else: AMD closed at $615.52 on September 21, up 9.95 percent, and the Philadelphia semiconductor index gained 6.3 percent on the week. The dollar index rose 0.7 percent to 100.97, gold fell 2.3 percent, and bitcoin gained 3.9 percent to about $84,000."
@@ -9085,9 +9085,9 @@
             "change": "-2.3%"
           },
           {
-            "name": "Cotton",
-            "level": "78.91",
-            "change": "+2.0%"
+            "name": "Cotton (December)",
+            "level": "82.71",
+            "change": "+1.9%"
           },
           {
             "name": "Wheat",
@@ -9100,9 +9100,9 @@
             "change": "-1.8%"
           },
           {
-            "name": "Copper",
-            "level": "6.70",
-            "change": "+1.2%"
+            "name": "Copper (December)",
+            "level": "6.77",
+            "change": "+1.1%"
           },
           {
             "name": "Soybeans",
@@ -9133,8 +9133,8 @@
       },
       "undercurrent": {
         "label": "Undercurrent",
-        "headline": "A Dutch ministry, the F-Droid project and a one-person messenger each moved to take users off American platforms.",
-        "summary": "The Dutch interior ministry's DAWO project, a replacement for Microsoft's desktop software built on NixOS, drew the week's attention on September 25; Boing Boing tied it to reports that Microsoft cut off email for the International Criminal Court's chief prosecutor after US sanctions, and the project's site promises that 'every part can be inspected and replaced.' On September 24 F-Droid released version 2.0, its largest redesign in a decade, crediting the EU's Digital Markets Act for smoother installs and automatic updates. Daniel Gultsch took his messaging app Conversations off Google Play and made it free, citing a 14-day wait for Google to review an update: 'Delaying security updates by days or weeks is outright dangerous.'",
+        "headline": "A Dutch ministry, the F-Droid project and a one-person messenger each offered users a way around American platforms.",
+        "summary": "The Dutch interior ministry's DAWO project, a replacement for Microsoft's desktop software built on NixOS, was reported on September 25; Boing Boing tied it to reports that Microsoft cut off email for the International Criminal Court's chief prosecutor after US sanctions, and the project's site promises that 'every part can be inspected and replaced.' On September 24 F-Droid released version 2.0, what it calls its largest app update in 10 years, crediting pressure from the EU's Digital Markets Act and antitrust actions for smoother installs and automatic updates. Daniel Gultsch took his messaging app Conversations off Google Play and made it free, citing a 14-day wait for Google to review an update: 'Delaying security updates by days or weeks is outright dangerous.'",
         "links": [
           {
             "points": 1009,
@@ -9159,7 +9159,7 @@
         ]
       },
       "across_sources": {
-        "github_theme": "agents built for one job: Anthropic's financial-services repository of Claude agents for finance work, HKUDS's CLI-Anything, which wraps any command-line tool for agents, Tencent's WeKnora retrieval framework and Cloudflare's security-audit-skill",
+        "github_theme": "agent tooling: Anthropic's financial-services repository of Claude agents for finance work, HKUDS's CLI-Anything, which builds command-line interfaces so agents can use any software, Tencent's WeKnora retrieval framework and Cloudflare's security-audit-skill",
         "github": [
           {
             "title": "anthropics/financial-services",
@@ -9181,8 +9181,8 @@
       },
       "wildcard": {
         "topic": "Fraud, cyber and crime",
-        "headline": "ShinyHunters breaks into a rival gang's leak site and the FBI's jobs portal, and calls the FBI hack a defence of its business.",
-        "summary": "On the night of September 18 ShinyHunters took over the leak site of Cl0p, another extortion gang, through a file-upload flaw in the Grav software that ran it, and demanded an eight-figure sum and an apology, threatening to name the companies that paid Cl0p during its Oracle E-Business Suite campaign. On September 22 it told 404 Media 'We hacked the FBI', and said the way in was an Oracle PeopleSoft zero-day in the FBIJobs.gov portal. The group told The Register the FBI breach 'was fundamentally a public relations and marketing initiative for our business.' Three days later a Seattle court sentenced a US soldier from the 2024 Snowflake extortion crew to 70 months.",
+        "headline": "A week after hijacking a rival gang's leak site, ShinyHunters breaks into the FBI's jobs portal and calls it a defence of its business.",
+        "summary": "The week before, on the night of September 18, ShinyHunters took over the leak site of Cl0p, another extortion gang, through a file-upload flaw in the Grav software that ran it, and demanded an eight-figure sum and an apology, threatening to name the companies that paid Cl0p during its Oracle E-Business Suite campaign. On September 22 it told 404 Media 'We hacked the FBI', and told BleepingComputer it got in through an unknown flaw in Oracle PeopleSoft; the FBI said it was investigating activity affecting FBIjobs.gov. The group told The Register the FBI breach 'was fundamentally a public relations and marketing initiative for our business.' Three days later a Seattle court sentenced a US soldier from the 2024 Snowflake extortion crew to 70 months.",
         "links": [
           {
             "points": 0,
@@ -9315,7 +9315,7 @@
         {
           "name": "Trade fragmentation",
           "direction": "truce with Beijing, blocs elsewhere",
-          "read": "Washington and Beijing moved the other way from the blocs: Xi's visit cut tariffs on $30 billion of goods and pushed the truce into January, while the US signed an open-ended basing deal with Denmark and Greenland and its bans on Canadian goods come into force on September 29.",
+          "read": "Washington and Beijing moved the other way from the blocs: Xi's visit produced an agreement to cut tariffs on $30 billion of goods and pushed the truce to January 10, while the US signed an open-ended basing deal with Denmark and Greenland and its bans on Canadian goods come into force on September 29.",
           "spotlight": true,
           "basket": [
             {
@@ -9394,7 +9394,7 @@
         {
           "when": "September 29",
           "event": "The Reserve Bank of Australia decides; US bans on Canadian alcohol, whey, molasses and larger motorcycles take effect",
-          "note": "A rise to 4.60 percent is the consensus, and Canstar expects a second before Christmas."
+          "note": "A rise to 4.60 percent is the consensus, and Canstar warns of a second before Christmas."
         },
         {
           "when": "September 30",
@@ -9468,7 +9468,7 @@
           "terms": [
             "Tigray People's Liberation Front"
           ],
-          "note": "The party that governs Ethiopia's Tigray region. It fought the federal government from 2020 until the Pretoria agreement of November 2022."
+          "note": "The party that ran Ethiopia's Tigray region before the war and in May 2026 took back its capital, Mekelle, from a federally backed interim administration. It fought the federal government from 2020 until the Pretoria agreement of November 2022."
         },
         {
           "terms": [
@@ -9560,7 +9560,7 @@
           "terms": [
             "Digital Markets Act"
           ],
-          "note": "An EU law applied since 2023 that requires the largest platforms, including Google and Apple, to allow rival app stores and other competitors."
+          "note": "An EU law in force since 2023 that, since March 2024, requires the largest platforms, including Google and Apple, to allow rival app stores and other competitors."
         }
       ]
     }
