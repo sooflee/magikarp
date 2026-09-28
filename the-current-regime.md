@@ -1883,3 +1883,60 @@ Process note for next time: the seed notes' "coffee fell 8.5 percent on Septembe
 contract-roll artifact, comparing the September contract's Monday close with December's Friday close.
 The real week was 6.1 percent on the continuous front month. Cocoa and cotton were re-checked against
 CCZ26 and CTZ26 and held. Check every soft against its explicit contract before publishing a move.
+
+## Issue 16 — Week of 2026-09-21 → 2026-09-27
+
+Built 2026-09-28. Title: "The ten-year Treasury yield climbs to its highest since 2007 as the rate cycle
+reaches housing on both sides of the Pacific, and open weights push the frontier labs into cutting prices."
+
+States: ai_compute **open-acceleration** (held), deep_dive (cities & housing) accelerating, geopolitics
+stressed (held), markets mixed (held). Momentum: ai_compute 18 → 18, geopolitics 4 → 3, markets 3 → 0
+(the classifier found no market-titled story in the top 100 this week).
+
+The week's spine was the long end of the curve. The flash composite PMI of 58.4 on September 23 took the
+ten-year up 15 basis points in a day, and it closed at 5.18 percent on September 24, the highest since July
+2007; the thirty-year reached its highest since 2004 and Germany's ten-year a level last seen in 2009. The
+rise was almost all real yield (ten-year TIPS 2.68 → 2.85) and the Polymarket October hike contract went
+from 52.5 to 64.5 on the same day. The deep-dive followed the same squeeze into housing: Australia's fifth
+monthly fall and a ten-week-low clearance rate ahead of the RBA on September 29, with the US 30-year
+mortgage rate back above 7 percent.
+
+Lane choices worth recording:
+- AI led with price, not safety politics (issue 15's lead): Opus 5.5 and GPT-6 Sol/Luna were both cut on
+  September 22, against MiMo-V2.6's open weights and Bloomberg's Harvey margin story. OpenAI's own
+  September 25 misalignment report on the DNS sandbox escape and training pause went in the same summary.
+  The DC Circuit ruling, the Amodei dinner, BC's suit and the enzyme claim sit in links and evidence only.
+- Geopolitics led with Serbia (not Iran or Ukraine, per the lane rule). Theatre rule held: Iran/Hormuz and
+  Russia/G20 took the two restricted slots; Serbia, Ethiopia, Brazil and US-China the rest. Latin America
+  coverage debt paid by Brazil (and Colombia in the energy radar); Oceania by the Australian deep-dive.
+- Wildcard: fraud/cyber/crime, the top of coverage.py's shortlist (ShinyHunters, Cl0p, the FBI, Wagenius,
+  Citrix). Undercurrent: exits from US platforms (DAWO, F-Droid 2.0, Conversations), non-AI.
+- Left out, with reasons: Morocco's election result (PAM 97 of 395; slots full), the US-Denmark-Greenland
+  deal (radar basket instead), Israel's disqualification of Arab parties (market_moves and calendar), the
+  Enigma break (a September 15 story covered the week before), Italy's nuclear vote (a brief), Bitget's
+  $387 million theft (unverified in time), Afghanistan-Pakistan strikes and Hurricane Polo (no slot).
+- Watchlist: compression demoted; datacenter power promoted on Oracle's Project Jupiter force majeure.
+
+Media: no photo. One chart, the ten-year par yield from the Treasury's CSV (August 17 to September 25).
+
+### Issue 16 audit (2026-09-28) — corrections applied
+
+Four adversarial passes, about fifty corrections, applied as exact-match replacements that fail loudly.
+- Invented causation: "after the Treasury bought back fewer bonds than expected" had no source; the
+  reporting says long yields rose despite enlarged buybacks.
+- Paraphrase in quote marks, twice: Berhanu Jula's accusation of Eritrea and Meta's reason for blocking
+  Lula's ad account are reported speech. CISA's "actively exploited globally" was not its wording either.
+- Stale quote: John Williams's "no clear signs" line was from September 2, now dated.
+- Out-of-window: the Enigma break (September 15) was dropped; the Brazilian Report piece is dated
+  September 25, not 23 (the block itself was the 23rd).
+- Overclaims softened: Brent did not "hold" above $100 (it settled at 99.25 on September 22); "calls both
+  a defence of its business" applied only to the FBI hack (Cl0p was revenge); GPT-5.6 Sol's $4/$20 was a
+  promotional price; Harvey's margin recovery is credited to a Kimi K3-based model "plus other tweaks";
+  Vučić resigned to run for prime minister, not to "stay in power"; Students Win is the student movement's
+  slate; DAWO targets a 2027 release so it did not "ship".
+- Numbers: cocoa's 5.5 percent was a price change, not a share of the prior fall (it recovered about half);
+  bitcoin +3.9 percent Friday to Friday, not 4.3 (a Saturday close); the Iran ceasefire-through-October
+  contract was about 50 cents on September 27, not 53; the Bonsai 2 card was 1.75 bits, 5.95 GB, about 130
+  tokens a second, and its weakest rows are knowledge and vision, not agentic tool use.
+- Process: WTI's continuous contract showed −7.9 percent and coffee −5.4 on the week; both were roll
+  artifacts. The November WTI contract fell 3.8 percent and December coffee 0.7. Always use explicit contracts.
