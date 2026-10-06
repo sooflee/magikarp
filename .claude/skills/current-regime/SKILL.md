@@ -14,6 +14,12 @@ green `#1a7f4b`). Repo: github.com/sooflee/magikarp. Archive: www.bwang.io/magik
 `send_regime_email.py` (HTML + plain text) and `build_site.py` (the archive) both
 render from it. They must stay 1:1. Never hand-edit the rendered output.
 
+**Start here if you are building an issue:** `PLAYBOOK.md` in this folder is the step-by-step
+runbook (commands, decision checklist, wrong/right sentence table from past audits, failure modes).
+`research-brief.md` and `audit-brief.md` are the prompt templates for the lane and audit agents.
+`python3 validate_issue.py` lints the house rules below and must pass with zero errors before the build;
+`python3 apply_fixes.py fixes.json` applies audit corrections as exact-match replacements that fail loudly.
+
 ## The shape of an issue (sections, in order)
 
 The issue opens with a summary and then runs in three acts. Keep this order; both renderers
@@ -88,10 +94,10 @@ budget in House style.
    weeks running, lead with money, labor, security, users or policy this week); the
    geopolitics lead may not be Iran or Ukraine three weeks running; the
    undercurrent must be non-AI at least every other week.
-2. **Regime momentum.** Count the week's top HN stories per regime for **this week
-   and last** (two Algolia `created_at_i` date-range queries, classified with the
-   keyword rules in `classify.py`). Store as `momentum:{weeks:[a,b], series:{regime:[prev,cur]}}`.
-   Only chart regimes you actually cover this issue.
+2. **Regime momentum.** `python3 momentum.py <monday> <sunday>` classifies the week's Algolia
+   top 100 with `classify.py`'s keyword rules (ai_compute = tech_policy + ai_agents +
+   compute_energy) and prints the `momentum` block; prev is the last issue's stored current
+   value, never a recompute. Only chart regimes you actually cover this issue.
 3. **Refresh markets + commodities** (needs the sibling `../ekans` repo and its venv):
    - Market regime: `.venv/bin/python pipeline/daily_check.py` → one line of
      trend / volatility / curve / growth / liquidity / crypto.
@@ -119,11 +125,12 @@ budget in House style.
      from that domain's feeds (`python3 sources.py deepdive <issue#>`), **not** HN.
      Its domain rotates, so it is deliberately **not** part of the momentum or the
      week-over-week diff. Use states `accelerating / steady / stalling`.
-5. **Verify before publishing.** Web-search every factual claim against primary
+5. **Verify before publishing.** Run `python3 validate_issue.py` (and `--quotes` for the list of
+   quoted phrases the auditors must check). Web-search every factual claim against primary
    reporting; cite outlets. Soften or drop anything unverified. Then run the **audit**: four
    adversarial verifier agents, one per lane group (AI; geopolitics and trade; markets and
    commodities; deep-dive, wildcard, briefs), about 20 searches each, reporting exact
-   old/new text; apply fixes as exact-match replacements that fail loudly. Run the big-story
+   old/new text (template: `audit-brief.md`); apply fixes with `apply_fixes.py`, which fails loudly. Run the big-story
    sweep again before the audit. Budget searches: the session cap is about 200, so keep lane
    researchers near 18 each. Run the `human-voice` and `humanize` passes over all reader text.
 6. **Update state + ledger.** Append the issue object to `regime_state.json -> issues`;
@@ -362,6 +369,10 @@ Global: `regime_defs` (state spaces) and `bsig_watch` (the watchlist).
   **deep-dive** feeds (`fetch_deep_dive` / `deep_dive_domain`, per-domain RSS +
   GDELT). All best-effort.
 - `classify.py` — keyword classifier → regime momentum counts.
+- `momentum.py` — the issue's momentum block from the week's HN top 100.
+- `validate_issue.py` — editorial lint: schema, length budget, em-dashes and tells, theatre rule,
+  implications repeating summary numbers, out-of-window dates, recycled links, wildcard repeats.
+- `apply_fixes.py` — applies `[{old,new}]` corrections to one issue; writes nothing if any `old` is missing.
 - `coverage.py` — coverage-debt ledger: region/topic tags per past issue, WARNs for
   anything unseen in three issues, the sameness signal, next issue's wildcard shortlist.
 - `media.py` — site images and chart series: Wikimedia Commons and NASA Worldview photos with
