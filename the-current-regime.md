@@ -2014,3 +2014,14 @@ about 45 corrections, applied with `apply_fixes.py` before any email.
 - Checked and kept: Brazil's shares, margin and abstention; the Williams quote and the Polymarket closes;
   5.29 as the highest ten-year close since May 2002; every commodity level on explicit contracts; the G7
   release facts (The National); the GLOBE scope; the Flock ruling quotes against the court PDF.
+
+### Issue 17 gap check (2026-10-05)
+
+The user asked whether big stories were missing; five were, all found by the sweep but left in
+non-rendering `evidence` or cut. Added as Smaller stories (now seven): the last US troops leaving Iraq (AP,
+September 30; the end of a 12-year anti-IS mission, not a "23-year presence" as the sweep had it), Trump's
+"Super Intelligence" order and voluntary White House accord (until now only in AI evidence, which never
+renders), Micron's sold-out 2027 memory, the Visa/Mastercard/Stripe/Coinbase OUSD stablecoin (the in-window
+crypto/fintech hook the wildcard search missed) and the Thailand-Myanmar floods. Dropped to make room: the
+Lens.com suit, the Retraction Watch brief and the Pew Australia survey. Lesson for the playbook: anything
+readers must see cannot live only in `evidence`.
