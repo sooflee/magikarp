@@ -54,7 +54,8 @@ for the whole session, and the audit needs 80 of them).
 
 Each writes `$S/dossier_<lane>.md`. When the sweep comes back, check every story on its
 list against the dossiers: each one goes into a lane, becomes a brief, or gets a one-line
-reason for leaving it out in the ledger. Past issues missed a Saudi pipeline shutdown, an ECB
+reason for leaving it out in the ledger. `evidence` does not render, so a story parked only there
+is still missing (issue 17 hid the White House AI accord that way). Past issues missed a Saudi pipeline shutdown, an ECB
 hike and a lab's own safety disclosure because no lane was looking.
 
 ## 3. Decide before you write
