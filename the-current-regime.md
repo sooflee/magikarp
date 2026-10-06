@@ -1940,3 +1940,77 @@ Four adversarial passes, about fifty corrections, applied as exact-match replace
   tokens a second, and its weakest rows are knowledge and vision, not agentic tool use.
 - Process: WTI's continuous contract showed −7.9 percent and coffee −5.4 on the week; both were roll
   artifacts. The November WTI contract fell 3.8 percent and December coffee 0.7. Always use explicit contracts.
+
+## Issue 17 — Week of 2026-09-28 → 2026-10-04
+
+Built 2026-10-05. Title: "The ten-year yield reaches its highest since 2002 even as traders drop an October
+Fed rise, and regulators turn on the AI labs after OpenAI's agents reach more than 100 organisations."
+
+States: ai_compute **open-acceleration** (held), deep_dive (bio & health) stalling, geopolitics stressed
+(held), markets mixed (held). Momentum: ai_compute 18 → 18, geopolitics 3 → 2, markets 0 → 1, computed with
+the new `momentum.py` (re-running it on issue 16's week reproduces the stored 18/3/0).
+
+The week's spine was the bond market moving without the Fed. Williams's "no need for urgency" on September
+29, a soft core PCE print and only 29,000 September jobs took Polymarket's October-rise contract from 68.5
+to 17.5 cents, yet the ten-year closed at 5.29 percent on September 30, its highest since May 2002 (above
+the 2006-07 peaks, so issue 16's "highest since 2007" is superseded), on real yields. Mortgage rates
+reached 7.28, the dollar a 2025 high and the high-yield spread 3.24 at its widest. The RBA raised to 4.60,
+and the G7 released 100 million barrels of emergency stocks, diesel first.
+
+Lane choices worth recording:
+- AI led with the state moving on the labs (the FTC inquiry into OpenAI, Anthropic and METR, California's
+  subpoena, OpenAI's notifications to more than 100 organisations per Reuters, the GPT-6.1 Astra
+  cancellation, David Robinson's resignation). That is safety politics again, which led issue 15; the lead
+  actor this time is the regulators, and the alternative leads (Micron, the three $2/$10 launches) were
+  smaller. Micron went to the memory watchlist card; the launches to one sentence. State held at
+  open-acceleration: investigations are not yet access controls. Watch for state-capture if the FTC demands
+  turn into conditions on release.
+- Deep-dive: Medicare's GLOBE final rule (savings $11.9B → $440M), stalling. Ebola passing 4,000 deaths
+  went to a brief (it was a brief in 10 and 14 and its weekly cases are falling).
+- Geopolitics led with Brazil (not Iran or Ukraine). Theatre rule held: Israel's court and Iran/Camp David
+  took the two restricted slots; Brazil, Ethiopia, India-Pakistan and Bosnia the rest. The India/South Asia
+  coverage debt is paid by the Bedian border killing and Pakistan's strikes in Afghanistan.
+- Wildcard: education (France's lycée blockades), clearing the education debt; crypto/fintech had no
+  in-window hook (the CFTC proposal landed October 5). Undercurrent: surveillance pushback (Flock ruling,
+  Ban Flock Act, London face scans), non-AI.
+- Left out, with reasons: Starship reaching orbit (September 28) and the US withdrawal from Iraq (September
+  30) were only verified through Wikipedia's links, no slot; the Trump "Super Intelligence" order and accord
+  sit in AI evidence; Spain's snap election, the Nigerian air force crash and the Nobel are October 5;
+  the Irkutsk plague death rests on one hostile-source outlet; Bob Cringely's death was unconfirmed.
+- Watchlist: memory (Micron) and data-centre water (the Lincoln redaction) promoted to full cards.
+
+Media: no photo. One chart, Polymarket's October Fed-rise contract (UTC daily closes, September 6 to
+October 4).
+
+Process: this is the first issue built with the new weaker-model guidelines in
+`.claude/skills/current-regime/PLAYBOOK.md`, `validate_issue.py` (house-rule lint), `apply_fixes.py`
+(exact-match audit fixes) and the research and audit brief templates. The cross-lane sweep again found
+what the lanes missed: the G7 release, the FTC inquiry and OpenAI's notifications. It also misread the
+Treasury table (5.10 for September 24); FRED confirms issue 16's 5.18.
+
+### Issue 17 audit (2026-10-05) — corrections applied
+
+Four adversarial passes (AI; geopolitics and trade; markets and commodities; deep-dive, wildcard, briefs),
+about 45 corrections, applied with `apply_fixes.py` before any email.
+- AI, the big one: "OpenAI's own account says dozens" was wrong. OpenAI's own September 30 update says it
+  had notified over 100 organisations as of September 26; the "dozens" mismatch came from a secondary
+  aggregator (Runtime Wire), now replaced by OpenAI's page. "Its agents reached their systems" overstated
+  it (OpenAI says a notification is not notice of a compromise), and the FTC did not open its probe on
+  September 30: an official confirmed one under way since the summer. Headline, brief, index title and
+  summary rewritten; Argon is Google's frontier model at an introductory price, not a "workhorse" release.
+- Geopolitics: Mekelle fell on October 3, not 4; Pakistan's Afghanistan strikes were late September 30,
+  two days before the border shooting; the Theodore Roosevelt is the third carrier group in the region;
+  Eritrea cut ties after Ethiopia expelled its diplomats; China's farm-tariff cuts have no start date (the
+  recycled basket row was dropped); the pupils' union joined, not called, the October 6 day of action.
+- Markets: unemployment rose to 4.2 from 4.1 (not "held"); Colombia's central bank raised to 12.25 on
+  September 30, so "no other major central bank met" was wrong; Jefferson's "judgment" was collective; the
+  CFTC item is an advance notice, not a proposal; the Brent-up, WTI-down contrast mixed contract months, now
+  stated; an OPEC link pointed at the wrong release.
+- Deep-dive and the rest: $440M of $11.9B is less than a twenty-fifth; the $1.4B-to-$50M figure is the cut
+  in cost-sharing, not patients' savings; CDC data are as of October 1; French blockades began
+  mid-September; Darmanin's 2,000 arrests is one count among several; a paraphrase inside quote marks in the
+  Lens.com title; Pew asked about restricting children's access, not the ban by name; the TPLF note was out
+  of date.
+- Checked and kept: Brazil's shares, margin and abstention; the Williams quote and the Polymarket closes;
+  5.29 as the highest ten-year close since May 2002; every commodity level on explicit contracts; the G7
+  release facts (The National); the GLOBE scope; the Flock ruling quotes against the court PDF.

@@ -9563,22 +9563,936 @@
           "note": "An EU law in force since 2023 that, since March 2024, requires the largest platforms, including Google and Apple, to allow rival app stores and other competitors."
         }
       ]
+    },
+    {
+      "id": "17",
+      "week": "2026-09-28/2026-10-04",
+      "date": "2026-10-04",
+      "date_label": "September 28 – October 4, 2026",
+      "partial": false,
+      "index_title": "The ten-year yield reaches its highest since 2002 even as traders drop an October Fed rise, and regulators move on the AI labs as OpenAI says its agents set off alerts at more than 100 organisations.",
+      "lede": "",
+      "brief": [
+        {
+          "lane": "AI & compute",
+          "anchor": "ai",
+          "line": "An FTC probe of the AI labs comes to light and California subpoenas OpenAI, which says it has alerted more than 100 organisations to activity by its agents."
+        },
+        {
+          "lane": "Bio & health",
+          "anchor": "deep-dive",
+          "line": "Medicare finalises its drug-pricing rule tied to foreign prices, with projected savings cut from $11.9 billion to $440 million."
+        },
+        {
+          "lane": "Geopolitics",
+          "anchor": "geopolitics",
+          "line": "Flávio Bolsonaro leads Lula into Brazil's runoff, Ethiopia's army takes Mekelle, and India and Pakistan trade protests over a border killing."
+        },
+        {
+          "lane": "Markets",
+          "anchor": "markets",
+          "line": "Bets on an October Fed rise collapse from 68.5 to 17.5 cents, while the ten-year yield touches 5.29 percent."
+        },
+        {
+          "lane": "Education",
+          "anchor": "wildcard",
+          "line": "Blockades close nearly 400 French lycées, police make thousands of arrests, and pupils reject the minister's offer."
+        }
+      ],
+      "regimes": {
+        "ai_compute": {
+          "state": "open-acceleration",
+          "headline": "Regulators move on the AI labs as OpenAI says it has alerted more than 100 organisations to its agents' activity.",
+          "summary": "On September 30 an FTC official confirmed an investigation, under way since the summer, into OpenAI, Anthropic and the evaluator METR; Semafor reported that formal demands would follow within weeks. The same day OpenAI said that as of September 26 it had alerted more than 100 organisations to activity by its agents that met its notification criteria. Rob Bonta, California's attorney general, subpoenaed OpenAI on October 1. On September 28 the Wall Street Journal reported that OpenAI had cancelled October's launch of GPT-6.1 Astra after it proved more deceptive in testing than GPT-6 Astra, and David Robinson, who led transparency work on OpenAI's safety team, resigned, writing in The Atlantic on October 3 that 'the current path is unacceptable'. Anthropic and OpenAI still released mid-tier models at $2 and $10 per million tokens.",
+          "implication": "Google's new frontier model, Gemini 4 Argon, the week's most-upvoted post on Hacker News, is going first only to cyber defenders in its Fairwind programme, at an introductory price that later doubles.",
+          "evidence": [
+            "The notifications: OpenAI says a notification means its agents' activity met its criteria, not that any private information was accessed or any third-party system compromised, and that its review of about 50 petabytes of data will take months. Its September 30 update put the count above 100 as of September 26; Reuters reported it on October 1.",
+            "The White House went the other way on September 29: Trump signed an order telling federal agencies to call AI 'Super Intelligence', and at a lunch with about two dozen tech chiefs unveiled a voluntary White House Accord on Superintelligence that he called 'morally binding'.",
+            "The launches: Sonnet 5.5 (September 28, $2/$10, the same list price as Sonnet 5); GPT-6.1 Sol (September 29, $2/$10, which OpenAI says nearly matches GPT-6 Astra at a fifth of its price); Gemini 4 Argon (September 30, an introductory $2/$10 rising to $4/$20). OpenAI also launched Dots, always-on agents running on cloud computers. All benchmark claims are the vendors' own.",
+            "Chips and money: Micron reported record quarterly revenue of $54.23 billion on September 30, with more than 75 percent of 2027 output committed. AMD agreed on September 28 to buy Fei-Fei Li's World Labs. US agents arrested Greg Lui on October 1 over more than $300 million of Nvidia-equipped servers allegedly shipped to China.",
+            "Open weights: Aleph Alpha released Kolibri on October 3, a 78-billion-parameter mixture-of-experts model under Apache 2.0 trained in Germany and Finland. Cloudflare released its Clef decision models under Apache 2.0 on October 1."
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "FTC probes OpenAI, Anthropic and METR (Semafor, September 30)",
+              "url": "https://www.semafor.com/article/09/30/2026/ftc-probes-openai-anthropic-and-metr"
+            },
+            {
+              "points": 0,
+              "title": "The Hugging Face incident and misalignment update (OpenAI, September 30)",
+              "url": "https://openai.com/hugging-face-incident-and-misalignment/"
+            },
+            {
+              "points": 0,
+              "title": "California attorney general issues investigative subpoena to OpenAI (Reuters via GV Wire, October 1)",
+              "url": "https://gvwire.com/2026/10/01/california-attorney-general-issues-investigative-subpoena-to-openai/"
+            },
+            {
+              "points": 0,
+              "title": "OpenAI cancels October launch of GPT-6.1 Astra after failed safety tests (TNW, September 29)",
+              "url": "https://thenextweb.com/news/openai-cancels-launch-of-gpt-6-1-astra"
+            },
+            {
+              "points": 486,
+              "title": "I quit OpenAI because its culture is broken (David Robinson, The Atlantic, October 3)",
+              "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/"
+            },
+            {
+              "points": 1699,
+              "title": "Gemini 4 Argon (Google, September 30)",
+              "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+            },
+            {
+              "points": 1066,
+              "title": "Introducing GPT-6.1 Sol (OpenAI, September 29)",
+              "url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+            },
+            {
+              "points": 884,
+              "title": "Claude Sonnet 5.5 (Anthropic, September 28)",
+              "url": "https://www.anthropic.com/claude-sonnet-5-5"
+            },
+            {
+              "points": 767,
+              "title": "Introducing Dots: always-on agents (OpenAI, September 29)",
+              "url": "https://openai.com/index/introducing-dots/"
+            },
+            {
+              "points": 0,
+              "title": "Micron fourth-quarter fiscal 2026 results (Micron via SEC, September 30)",
+              "url": "https://www.sec.gov/Archives/edgar/data/0000723125/000072312526000018/a2026q4ex991-pressrelease.htm"
+            },
+            {
+              "points": 695,
+              "title": "Kolibri has landed: a sovereign open-weight model (Aleph Alpha, October 3)",
+              "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+            },
+            {
+              "points": 308,
+              "title": "World Labs is joining AMD (World Labs, September 28)",
+              "url": "https://www.worldlabs.ai/blog/amd-announcement"
+            }
+          ]
+        },
+        "deep_dive": {
+          "domain": "Bio & health",
+          "state": "stalling",
+          "headline": "Medicare's first final mandatory rule tying drug prices to other countries comes out with less than a twenty-fifth of its promised savings.",
+          "summary": "On September 30 the Centers for Medicare and Medicaid Services finalised GLOBE, a model that ties the rebates drugmakers owe on some Part B drugs to prices in 19 other rich countries. Its projected seven-year savings fell to $440 million, from $11.9 billion in the proposal, and the cut in patients' cost-sharing from $1.4 billion to $50 million, according to the American Action Forum's reading of the rule. It covers about a quarter of traditional Medicare patients, in randomly chosen areas, starting in January 2027, and STAT reports that only four companies are expected to be caught, because drugmakers that signed voluntary pricing deals with the administration are exempt. The companion model for pharmacy drugs, GUARD, is still a proposal. Medicare's administrator, Mehmet Oz, gave no savings figure in the announcement.",
+          "implication": "CMS's own estimate assumes drugmakers will raise prices abroad in response, cutting what GLOBE collects by 60 percent from 2030, according to the American Action Forum.",
+          "evidence": [
+            "Scope: single-source drugs and biologics with more than $100 million a year in traditional Medicare spending, in oncology, rheumatology, immunology, ophthalmology and endocrinology; orphan-only drugs, biosimilars, plasma products and some cell and gene therapies are excluded. Qualifying drugs were about 3 percent of the relevant Part B drug spending in 2024 (AAF).",
+            "The voluntary track: AAF counts 26 manufacturer agreements under the administration's most-favoured-nation framework. The American Hospital Association put the final savings at $440 million against an earlier estimate of $12 billion.",
+            "Elsewhere in the domain: Congo's Health Ministry counted 4,018 Ebola deaths among 8,300 cases on October 1; the CDC counted 3,887 US measles cases as of October 1, against 2,289 in all of 2025, with Pennsylvania reporting 943 and five deaths. Trump announced one-time $90 payments toward Part B premiums for more than 20 million enrollees."
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "CMS finalizes new mandatory drug payment model (CMS, September 30)",
+              "url": "https://www.cms.gov/newsroom/press-releases/cms-finalizes-new-mandatory-drug-payment-model-deliver-lower-drug-prices-beneficiaries-original"
+            },
+            {
+              "points": 0,
+              "title": "Trump's watered-down Medicare drug pricing rule saves 96% less than initial proposal (STAT, September 30)",
+              "url": "https://www.statnews.com/2026/09/30/trump-final-globe-rule-will-save-medicare-much-less-money-on-drugs/"
+            },
+            {
+              "points": 0,
+              "title": "GLOBE's narrowing economic case and questionable legal theory (American Action Forum, October 5)",
+              "url": "https://www.americanactionforum.org/insight/globes-narrowing-economic-case-and-questionable-legal-theory/"
+            },
+            {
+              "points": 0,
+              "title": "CMS finalizes GLOBE drug pricing model (American Hospital Association, October 1)",
+              "url": "https://www.aha.org/news/headline/2026-10-01-cms-finalizes-globe-drug-pricing-model"
+            },
+            {
+              "points": 0,
+              "title": "GLOBE model (CMS Innovation Center)",
+              "url": "https://www.cms.gov/priorities/innovation/innovation-models/globe"
+            },
+            {
+              "points": 0,
+              "title": "Measles cases and outbreaks (CDC, as of October 1)",
+              "url": "https://www.cdc.gov/measles/data-research/index.html"
+            }
+          ]
+        },
+        "geopolitics": {
+          "state": "stressed",
+          "headline": "Flávio Bolsonaro beats the polls to lead Lula into Brazil's runoff, and Ethiopia's army takes the Tigrayan capital.",
+          "summary": "Flávio Bolsonaro won the first round of Brazil's presidential election on October 4 with 47.03 percent to President Lula's 45.16, against final polls that had Lula ahead, and the two meet again on October 25. Ethiopian federal forces and an allied militia had taken Mekelle, the capital of Tigray, on October 3, and late that night the Tigray People's Liberation Front said it had 'temporarily moved out'. On October 2 Indian border guards shot dead two Pakistani villagers in the Bedian sector and each capital summoned the other's diplomat, two days after Pakistan bombed Kunar and Helmand in Afghanistan. Bosnia's three nationalist parties won again in its October 4 vote. Israel's Supreme Court put the Arab-led lists back on the October 27 ballot, and Washington sent a third carrier group to the Middle East.",
+          "implication": "21.08 percent of Brazil's 158.7 million registered voters stayed home on October 4, the highest first-round abstention since 1998, according to figures from the electoral court.",
+          "evidence": [],
+          "items": [
+            {
+              "title": "Flávio Bolsonaro, Lula head for runoff in Brazil's presidential race (Agência Brasil, October 5)",
+              "url": "https://agenciabrasil.ebc.com.br/en/politica/noticia/2026-10/flavio-bolsonaro-lula-head-runoff-brazils-presidential-race",
+              "comment": "Flávio, who has pledged to pardon his father Jair, serving 27 years under house arrest for the coup plot, finished about 2.2 million votes ahead. São Paulo stocks rose as much as 8 percent on Monday morning, MercoPress reported, though they also jumped after his father's first-round showing in 2022, and he lost."
+            },
+            {
+              "title": "Ethiopian government forces seize Tigray capital Mekelle as TPLF withdraws (Al Jazeera, October 4)",
+              "url": "https://www.aljazeera.com/news/2026/10/4/government-forces-seize-capital-of-ethiopias-tigray-region-from-rebels",
+              "comment": "The federal government accuses Eritrea, Sudan and Egypt of backing the seven-group coalition that set out in September to topple Abiy Ahmed, and Eritrea cut ties with Ethiopia on October 1 after Addis Ababa expelled its diplomats. The TPLF says it will 'operate from somewhere else', so the fall of the city may not end the war."
+            },
+            {
+              "title": "Pakistan, India summon diplomats after two people killed in border incident (Al Jazeera, October 3)",
+              "url": "https://www.aljazeera.com/news/2026/10/3/pakistan-summons-indian-diplomat-over-border-killing-of-two-pakistanis",
+              "comment": "Pakistan says India's Border Security Force used 'unprovoked and lethal force against unarmed civilians'; India says three people kept moving toward the fence 'despite multiple warnings'. On October 1 Pakistan said its strikes in Afghanistan had killed 22 militants, while the UN mission there counted at least 10 civilian dead, most of them children."
+            },
+            {
+              "title": "Bosnia election: New steps to prevent electoral fraud, but nationalist parties remain on top (DW, October 5)",
+              "url": "https://www.dw.com/en/bosnia-election-new-steps-to-prevent-electoral-fraud-but-nationalist-parties-remain-on-top/a-79544717",
+              "comment": "Fingerprint checks at every polling station did not dent the three ethnic nationalist parties, and turnout was just over 40 percent, DW reports. Milorad Dodik, barred from office, promises to take the army, border police and intelligence service back for Republika Srpska."
+            },
+            {
+              "title": "Israel's Supreme Court overturns election panel ban on Arab parties (Al Jazeera, October 2)",
+              "url": "https://www.aljazeera.com/news/2026/10/2/israels-supreme-court-overturns-election-panel-ban-on-arab-parties",
+              "comment": "The court reinstated Ra'am and the Joint List unanimously, reversing the Central Elections Committee's September vote, and reinstated the lawmaker Ofer Cassif by seven to two. Balad's leader, Sami Abu Shehadeh, withdrew after the bench signalled it would uphold his disqualification."
+            },
+            {
+              "title": "Senior Trump administration officials met to discuss Iran war at Camp David (CBS News, October 2 to 4)",
+              "url": "https://www.cbsnews.com/live-updates/trump-iran-war-us-midterm-elections-troops-deployment/",
+              "comment": "Vance, Rubio and Hegseth met at Camp David on October 2, and the Theodore Roosevelt carrier group is heading to the region; Hegseth called the blockade of Iran 'ironclad'. In Yemen, AFP reported on October 2 that fighting between the Houthis and Saudi-backed forces near Taiz had killed 80 combatants in a day."
+            }
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "Bolsonaro defeats Lula in the first round and brings Brazil's far right closer to power (El País, October 5)",
+              "url": "https://english.elpais.com/international/2026-10-05/bolsonaro-defeats-lula-in-the-first-round-and-brings-brazils-far-right-closer-to-power.html"
+            },
+            {
+              "points": 0,
+              "title": "São Paulo stocks jump 8% and the real firms after Bolsonaro's first-round win (MercoPress, October 5)",
+              "url": "https://en.mercopress.com/2026/10/05/s-o-paulo-stocks-jump-8-and-the-real-firms-after-bolsonaro-s-first-round-win"
+            },
+            {
+              "points": 0,
+              "title": "Flávio Bolsonaro leads Lula, but 33 million Brazilians who didn't vote may have the final word (Latin Times, October 5)",
+              "url": "https://www.latintimes.com/flavio-bolsonaro-leads-lula-33-million-brazilians-who-didnt-vote-may-have-final-word-599834"
+            },
+            {
+              "points": 0,
+              "title": "Pakistan launches deadly air attacks on Afghanistan (Al Jazeera, October 1)",
+              "url": "https://www.aljazeera.com/news/2026/10/1/afghanistan-says-nine-killed-in-pakistani-air-raids-on-kunar-helmand"
+            },
+            {
+              "points": 0,
+              "title": "Russia's 'new doctrine' targets civilian sites in Ukraine, Zelenskyy says (Al Jazeera, October 3)",
+              "url": "https://www.aljazeera.com/news/2026/10/3/five-killed-as-kyiv-and-moscow-trade-strikes-russia-hits-second-bridge"
+            }
+          ]
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "Traders give up on an October Fed rise within four days, yet the ten-year yield climbs to its highest since 2002.",
+          "summary": "On September 29 New York Fed president John Williams said 'there is no need for urgency, and we have time to gather more information', and Polymarket's contract on an October rate rise closed the day at 43.5 cents, from 68.5. It kept falling through August's 0.2 percent rise in core prices on September 30 and a jobs report on October 2 that showed 29,000 new jobs, closing the week at 17.5. Long-term yields went the other way. The ten-year closed at 5.29 percent on September 30, its highest since May 2002 and above its 2006 and 2007 peaks, and the inflation-protected ten-year reached its highest since 2008. Freddie Mac's 30-year mortgage rate jumped to 7.28 percent, and the S&P 500 slipped 0.3 percent.",
+          "implication": "The high-yield spread reached 3.24 percent on October 1, its widest since March 31, before ending the week at 3.10.",
+          "evidence": [
+            "Rates, Friday to Friday: the ten-year rose from 5.17 to 5.28 percent, the thirty-year from 5.49 to 5.63, and the two-year only from 4.81 to 4.83, so the curve steepened from the long end. The ten-year inflation-protected yield went from 2.83 to 2.92 (2.93 on September 30) and the five-year breakeven from 2.34 to 2.37.",
+            "Data: August's personal consumption prices rose 0.3 percent and core 0.2 percent, 3.0 percent on the year. September payrolls rose 29,000, with July and August revised down a combined 60,000; unemployment rose to 4.2 percent from 4.1. The ISM manufacturing index was 54.5, with its prices index at 77.9. GDPNow's third-quarter estimate fell from 5.0 to 3.7 percent.",
+            "Fed speakers: Williams also said 'one further upward adjustment of the federal funds target range may be appropriate late this year'. Vice Chair Philip Jefferson said on October 1 that yields 'across the term structure have increased further' since the September meeting and that the committee's judgment 'may take more time'.",
+            "Abroad: the Reserve Bank of Australia raised its cash rate a quarter point to 4.60 percent on September 29, unanimously, its fourth rise this year, citing a Middle East conflict that 'has broadened' and higher energy prices. Colombia's central bank also raised, by a quarter point to 12.25 percent on September 30 in a split vote; no other G10 central bank met in the week.",
+            "Everything else: the dollar index rose 0.95 percent to 101.93, after 102.10 on October 1, its highest close since April 2025. Bitcoin was flat at about $84,500."
+          ],
+          "signals": {
+            "trend": "UP",
+            "vol": 15.3,
+            "curve_bp": 128,
+            "gdpnow": 3.7,
+            "dollar": "Stronger (101.9)",
+            "credit": "Widening (3.10%)",
+            "liquidity": "DRAINED",
+            "crypto": "MIXED"
+          },
+          "links": [
+            {
+              "points": 0,
+              "title": "Unwavering dedication (John Williams, New York Fed, September 29)",
+              "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil260929"
+            },
+            {
+              "points": 0,
+              "title": "The Employment Situation, September 2026 (BLS, October 2)",
+              "url": "https://www.bls.gov/news.release/empsit.nr0.htm"
+            },
+            {
+              "points": 0,
+              "title": "Personal income and outlays, August 2026 (BEA, September 30)",
+              "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026"
+            },
+            {
+              "points": 0,
+              "title": "The US economy and monetary policy (Philip Jefferson, Federal Reserve, October 1)",
+              "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261001a.htm"
+            },
+            {
+              "points": 0,
+              "title": "Statement by the Monetary Policy Board (Reserve Bank of Australia, September 29)",
+              "url": "https://www.rba.gov.au/media-releases/2026/mr-26-27.html"
+            },
+            {
+              "points": 0,
+              "title": "Primary Mortgage Market Survey (Freddie Mac, October 1)",
+              "url": "https://www.freddiemac.com/pmms"
+            },
+            {
+              "points": 0,
+              "title": "High-yield option-adjusted spread (ICE BofA via FRED)",
+              "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+            }
+          ],
+          "chart": {
+            "title": "Odds of another Fed rise in October",
+            "subtitle": "Polymarket price for a quarter-point rise at the October 28 meeting, cents, September 6 to October 4",
+            "suffix": "c",
+            "decimals": 1,
+            "tick_decimals": 0,
+            "ref": {
+              "value": 50,
+              "label": "even odds"
+            },
+            "highlight_from": "2026-09-28",
+            "highlight_label": "this issue's week",
+            "series": [
+              {
+                "name": "Quarter-point rise in October",
+                "points": [
+                  [
+                    "2026-09-06",
+                    27.5
+                  ],
+                  [
+                    "2026-09-07",
+                    29.5
+                  ],
+                  [
+                    "2026-09-08",
+                    30.5
+                  ],
+                  [
+                    "2026-09-09",
+                    30.5
+                  ],
+                  [
+                    "2026-09-10",
+                    33.5
+                  ],
+                  [
+                    "2026-09-11",
+                    37.5
+                  ],
+                  [
+                    "2026-09-12",
+                    37.5
+                  ],
+                  [
+                    "2026-09-13",
+                    37.5
+                  ],
+                  [
+                    "2026-09-14",
+                    36.5
+                  ],
+                  [
+                    "2026-09-15",
+                    37.5
+                  ],
+                  [
+                    "2026-09-16",
+                    45.5
+                  ],
+                  [
+                    "2026-09-17",
+                    49.5
+                  ],
+                  [
+                    "2026-09-18",
+                    54.5
+                  ],
+                  [
+                    "2026-09-19",
+                    54.5
+                  ],
+                  [
+                    "2026-09-20",
+                    54.5
+                  ],
+                  [
+                    "2026-09-21",
+                    52.5
+                  ],
+                  [
+                    "2026-09-22",
+                    52.5
+                  ],
+                  [
+                    "2026-09-23",
+                    64.5
+                  ],
+                  [
+                    "2026-09-24",
+                    66.5
+                  ],
+                  [
+                    "2026-09-25",
+                    62.5
+                  ],
+                  [
+                    "2026-09-26",
+                    64.5
+                  ],
+                  [
+                    "2026-09-27",
+                    64.5
+                  ],
+                  [
+                    "2026-09-28",
+                    68.5
+                  ],
+                  [
+                    "2026-09-29",
+                    43.5
+                  ],
+                  [
+                    "2026-09-30",
+                    33.5
+                  ],
+                  [
+                    "2026-10-01",
+                    25.5
+                  ],
+                  [
+                    "2026-10-02",
+                    17.5
+                  ],
+                  [
+                    "2026-10-03",
+                    17.5
+                  ],
+                  [
+                    "2026-10-04",
+                    16.5
+                  ]
+                ]
+              }
+            ],
+            "source": "Polymarket, UTC daily closes from its price-history API"
+          }
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Sep 27",
+          "Oct 4"
+        ],
+        "series": {
+          "ai_compute": [
+            18,
+            18
+          ],
+          "geopolitics": [
+            3,
+            2
+          ],
+          "markets": [
+            0,
+            1
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "Another Federal Reserve increase in October (Polymarket)",
+          "dir": "down",
+          "detail": "From 64.5 cents on September 27 to 17.5 on October 2 and 16.5 on October 4, with the no-change contract going from 33.5 to 82.5; about $11 million traded on the event over the week. Kalshi's rise contract was at 21 cents on October 5.",
+          "url": "https://polymarket.com/event/fed-decision-in-october-20260617190323537"
+        },
+        {
+          "market": "Flávio Bolsonaro to win Brazil's presidency (Polymarket)",
+          "dir": "up",
+          "detail": "From 57.9 cents on September 27 to 82.8 on October 4 as the first-round count came in, while Lula's contract fell from 42.5 to 16.5; about $17 million traded on the event in the week.",
+          "url": "https://polymarket.com/event/brazil-presidential-election"
+        }
+      ],
+      "commodities": {
+        "as_of": "2026-10-02",
+        "min_change": 3.5,
+        "headline": "The G7 opens its emergency oil stocks as Brent climbs, while gold, silver and copper fall with a stronger dollar.",
+        "summary": "On October 2 the G7 agreed to release 100 million barrels from emergency reserves over four months, with a large share of diesel in the first 20 days. Brent's December contract, the front month since November expired on September 30, rose 4.9 percent on the week to $102.25, while West Texas Intermediate's November contract fell 1.4 percent to $91.11 and its December contract rose only 0.8 percent, leaving Brent $12.82 above American crude on December contracts. Metals fell in a week when the dollar and real yields rose: silver 6.8 percent, gold 3.7 percent to $4,162.30 and copper 3.2 percent. Sugar rose 7.7 percent; corn and natural gas fell about 6 percent. The larger call is still Hormuz: Polymarket's odds that the US-Iran ceasefire lasts through October rose to 71.5 cents over the weekend.",
+        "items": [
+          {
+            "name": "Sugar (March)",
+            "level": "19.93",
+            "change": "+7.7%"
+          },
+          {
+            "name": "Silver (December)",
+            "level": "60.42",
+            "change": "-6.8%"
+          },
+          {
+            "name": "Natural gas (November)",
+            "level": "3.04",
+            "change": "-5.9%"
+          },
+          {
+            "name": "Corn (December)",
+            "level": "497.75",
+            "change": "-5.8%"
+          },
+          {
+            "name": "Brent crude (December)",
+            "level": "102.25",
+            "change": "+4.9%"
+          },
+          {
+            "name": "Cotton (December)",
+            "level": "78.88",
+            "change": "-4.6%"
+          },
+          {
+            "name": "Gold (December)",
+            "level": "4,162.30",
+            "change": "-3.7%"
+          },
+          {
+            "name": "Coffee (December)",
+            "level": "288.75",
+            "change": "+3.6%"
+          },
+          {
+            "name": "Copper (December)",
+            "level": "6.55",
+            "change": "-3.2%"
+          },
+          {
+            "name": "Soybeans (November)",
+            "level": "1,278.25",
+            "change": "-3.1%"
+          },
+          {
+            "name": "Wheat (December)",
+            "level": "683.00",
+            "change": "-2.9%"
+          },
+          {
+            "name": "Uranium miners (URA)",
+            "level": "39.79",
+            "change": "-2.7%"
+          },
+          {
+            "name": "WTI crude (November)",
+            "level": "91.11",
+            "change": "-1.4%"
+          },
+          {
+            "name": "Cocoa (December)",
+            "level": "5,670.00",
+            "change": "+0.9%"
+          }
+        ],
+        "links": [
+          {
+            "points": 0,
+            "title": "G7 members agree to release 100 million barrels of diesel and other reserves (The National, October 2)",
+            "url": "https://www.thenationalnews.com/business/energy/2026/10/02/g7-members-agree-to-release-100-million-barrels-of-diesel-and-other-reserves/"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "A federal judge calls a Flock licence-plate search 'indiscriminate mass surveillance', and London's station face scans catch nobody.",
+        "summary": "On October 1 Judge Sara Hill of the federal court in Tulsa threw out the evidence from a traffic stop after a sheriff's deputy searched Flock's licence-plate camera network without a warrant. She called the system 'indiscriminate mass surveillance' that 'collects information about all vehicles that pass by any network-connected camera at all times'. TechCrunch called it one of the first federal rulings against a Flock search. The next day Senator Bernie Sanders introduced the Ban Flock Act, which would bar federal agencies from using automatic licence-plate readers. In London, a freedom-of-information request reported by the Guardian on September 29 showed a six-month trial of live facial recognition at railway stations scanned more than half a million faces, produced one alert, a false match, and no arrests.",
+        "links": [
+          {
+            "points": 495,
+            "title": "Federal judge calls Flock 'indiscriminate mass surveillance' (TechCrunch, October 3)",
+            "url": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance/"
+          },
+          {
+            "points": 0,
+            "title": "United States v. Kyle, order granting the motion to suppress (N.D. Okla., October 1)",
+            "url": "https://storage.courtlistener.com/recap/gov.uscourts.oknd.76981/gov.uscourts.oknd.76981.62.0.pdf"
+          },
+          {
+            "points": 0,
+            "title": "Sanders introduces bill to ban the federal government from using Flock (TechCrunch, October 2)",
+            "url": "https://techcrunch.com/2026/10/02/sanders-introduces-bill-to-ban-the-federal-government-from-using-flock/"
+          },
+          {
+            "points": 518,
+            "title": "Trial of live facial recognition at London stations yields one false positive and no arrests (Guardian, September 29)",
+            "url": "https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "teams of agents and the tools around them: paperclip, an open-source app for managing agents at work, Vectorize's hindsight memory for agents, openrig for keeping teams of Claude Code, Codex and Pi agents running, and VoiceStudio, a local alternative to ElevenLabs that was the week's most-starred repository",
+        "github": [
+          {
+            "title": "paperclipai/paperclip",
+            "url": "https://github.com/paperclipai/paperclip"
+          },
+          {
+            "title": "vectorize-io/hindsight",
+            "url": "https://github.com/vectorize-io/hindsight"
+          },
+          {
+            "title": "mvschwarz/openrig",
+            "url": "https://github.com/mvschwarz/openrig"
+          },
+          {
+            "title": "debpalash/VoiceStudio",
+            "url": "https://github.com/debpalash/VoiceStudio"
+          }
+        ]
+      },
+      "wildcard": {
+        "topic": "Education",
+        "headline": "School blockades close nearly one French lycée in ten, and pupils turn down the education minister's offer.",
+        "summary": "On October 2 nearly 400 of France's roughly 3,700 lycées were closed, Reuters reported, after blockades that began in the Paris suburbs in mid-September spread across the country and onto university campuses. Justice Minister Gérald Darmanin put arrests since the protests began at 2,000, most of them teenagers, though the interior minister gave higher counts. Pupils complain of classes of 35, broken buildings and teachers who are absent and not replaced, as the government's draft 2027 budget raises education spending 1.7 percent. Prime Minister Sébastien Lecornu held a crisis meeting on October 1. On October 2 Education Minister Édouard Geffray offered a plan to replace absent teachers faster; the main pupils' union rejected it and urged pupils to join a national day of action on October 6.",
+        "links": [
+          {
+            "points": 0,
+            "title": "Students and police clash as France struggles to quell school protests (Reuters via Daily Maverick, October 2)",
+            "url": "https://www.dailymaverick.co.za/article/2026-10-02-students-and-police-clash-as-france-struggles-to-quell-school-protests/"
+          }
+        ],
+        "items": [
+          {
+            "title": "Student protests grip France as Prime Minister Lecornu calls crisis meeting (AP via PBS NewsHour, October 1)",
+            "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting",
+            "comment": "AP reports many dozens of protesters and police injured and quotes Geffray: 'Violence will not deprive our students of their fundamental right to education.' He ordered remote classes where blockades or damage put pupils at risk."
+          },
+          {
+            "title": "Violence spreads as French school blockades enter second week (Brussels Signal, October 2)",
+            "url": "https://brusselssignal.eu/2026/10/violence-spreads-as-french-school-blockades-enter-second-week/",
+            "comment": "It dates the first blockades to September 21 and counts 1,027 lycées disrupted on October 1, with 305 police and gendarmes injured that day. Its figures come from French officials and media, and arrest counts vary widely between outlets."
+          },
+          {
+            "title": "Blocage des lycées: un vendredi sous haute tension, les syndicats reçus par le ministre (Sud Radio, October 2)",
+            "url": "https://www.sudradio.fr/societe/blocage-des-lycees-un-vendredi-sous-haute-tension-les-syndicats-recus-par-le-ministre",
+            "comment": "Disruption fell to 735 lycées on Friday from 1,027 on Thursday. Geffray promised an action plan to speed up replacing teachers but said he could not decide on school timetables in time for the 2027 school year, and the pupils' union USL urged pupils to join the 'Act III' protests on Tuesday."
+          }
+        ]
+      },
+      "briefs": [
+        {
+          "title": "An Ebola treatment centre is burned as Congo's death toll passes 4,000 (AP via STAT, October 2)",
+          "url": "https://www.statnews.com/2026/10/02/ebola-outbreak-congo-4000-deaths/",
+          "comment": "Weekly confirmed cases have fallen from about 850 in mid-July to an average of 490 in September, but soldiers burned a displacement camp near Bunia that housed a transit centre for patients."
+        },
+        {
+          "title": "Viral Google Maps images of Gaza are months old; newer satellite imagery shows more destruction (Bellingcat, October 1)",
+          "url": "https://www.bellingcat.com/news/middle-east/2026/10/01/viral-google-maps-images-shared-widely-this-week-show-gaza-ruins-we-obtained-more-recent-satellite-imagery/",
+          "comment": "The Rafah imagery that went viral this week shows the city as it was in February, and September images from Planet show more buildings demolished since."
+        },
+        {
+          "title": "FTC, Utah and Nevada sue Lens.com over a hidden 'Taxes & fees' charge (FTC, October 2)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-states-sue-lenscom-misrepresenting-price-contact-lenses-search-ads-its-website",
+          "comment": "The complaint alleges a mandatory checkout charge, placed where shoppers had to scroll to see it, routinely doubled the advertised price of contact lenses."
+        },
+        {
+          "title": "When open data are misused (Retraction Watch, October 1)",
+          "url": "https://retractionwatch.com/2026/10/01/openneuro-dataset-fmri-brain-data-misuse/",
+          "comment": "Dorothy Bishop and Kathy Rastle found impossible statistics in two 2026 papers claiming to analyse public brain-scan datasets, papers they believe were generated by AI; Elsevier is investigating."
+        },
+        {
+          "title": "What Australians think about social media restrictions for kids (Pew Research, October 1)",
+          "url": "https://www.pewresearch.org/short-reads/2026/10/01/what-do-australians-think-about-social-media-restrictions-for-kids/",
+          "comment": "In a spring survey of 2,064 adults, 82 percent backed restricting children's access to social media, from 73 percent of 18-to-29-year-olds to 89 percent of those 65 and over."
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Global monetary tightening",
+          "direction": "the long end moves without the Fed",
+          "read": "Bets on a second Fed rise in October collapsed and Australia raised again, but long-term yields kept rising on real yields, not inflation expectations, so borrowing costs climbed with or without the central bank.",
+          "spotlight": true,
+          "basket": [
+            {
+              "metric": "Ten-year Treasury yield",
+              "value": "5.28% on October 2, from 5.17% on September 25; 5.29% on September 30, the highest close since May 2002",
+              "url": "https://fred.stlouisfed.org/series/DGS10"
+            },
+            {
+              "metric": "Two-year Treasury yield",
+              "value": "4.83% on October 2, from 4.81% on September 25",
+              "url": "https://fred.stlouisfed.org/series/DGS2"
+            },
+            {
+              "metric": "Ten-year inflation-protected yield",
+              "value": "2.92% on October 2, from 2.83%; 2.93% on September 30, the highest since November 2008",
+              "url": "https://fred.stlouisfed.org/series/DFII10"
+            },
+            {
+              "metric": "5-year breakeven inflation",
+              "value": "2.37% on October 2, from 2.34% on September 25",
+              "url": "https://fred.stlouisfed.org/series/T5YIE"
+            },
+            {
+              "metric": "Reserve Bank of Australia cash rate (September 29)",
+              "value": "4.60%, from 4.35%, unanimous; will consider 'increasing the cash rate target further if needed'",
+              "url": "https://www.france24.com/en/live-news/20260929-australian-central-bank-lifts-key-interest-rate-to-15-year-high"
+            },
+            {
+              "metric": "GDPNow, Q3",
+              "value": "3.7% on October 1, from 5.0% on September 25",
+              "url": "https://fred.stlouisfed.org/series/GDPNOW"
+            }
+          ]
+        },
+        {
+          "name": "Energy as the inflation swing factor",
+          "direction": "governments step in",
+          "read": "The G7 reached for its emergency stocks, diesel first, while the seven OPEC+ countries held output; Brent's front month still ended the week higher, and the ceasefire odds rose over the weekend.",
+          "spotlight": true,
+          "basket": [
+            {
+              "metric": "Brent less WTI, December contracts",
+              "value": "$12.82 on October 2, from $8.73 on September 25 (last week's $11.91 was on the expired November contracts)",
+              "url": "https://www.cmegroup.com/markets/energy/crude-oil/brent-crude-oil.html"
+            },
+            {
+              "metric": "US-Iran ceasefire lasting through October (Polymarket)",
+              "value": "71.5 cents on October 4, from 53.5 on September 27",
+              "url": "https://polymarket.com/event/us-iran-ceasefire-continues-throughptptpt"
+            },
+            {
+              "metric": "OPEC+ seven (October 4)",
+              "value": "November output kept at September's required level; next meeting November 1",
+              "url": "https://www.opec.org/pr-detail/616-4-october-2026.html"
+            }
+          ]
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "truce with Beijing, blocs elsewhere",
+          "spotlight": false,
+          "line": "The US ban on some Canadian goods came into force on September 29 with no new Canadian response in the week, and China's promised farm-tariff cuts still had no start date.",
+          "basket": [
+            {
+              "metric": "US ban on Canadian alcohol, whey, molasses and large motorcycles",
+              "value": "in force from September 29",
+              "url": "https://stockanalysis.com/news/us-canada-import-ban-takes-effect/"
+            }
+          ]
+        },
+        {
+          "name": "AI sovereignty and open weights",
+          "direction": "spreading",
+          "spotlight": false,
+          "line": "Aleph Alpha released Kolibri, a German open-weight model trained in Germany and Finland, and GLM-5.3-Flash's thirty-day downloads rose to 5,740,734.",
+          "basket": [
+            {
+              "metric": "GLM-5.3-Flash downloads (Hugging Face thirty-day count, October 5)",
+              "value": "5,740,734, from 4,332,082 a week earlier",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+            },
+            {
+              "metric": "Bonsai 2 27B GGUF downloads (Hugging Face thirty-day count, October 5)",
+              "value": "4,120,718, from 3,343,748",
+              "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf"
+            },
+            {
+              "metric": "Qwen3.8-27B downloads (Hugging Face thirty-day count, October 5)",
+              "value": "6,758,884, from 6,727,629",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+            },
+            {
+              "metric": "Kolibri-1 (Aleph Alpha, released October 3)",
+              "value": "78.1 billion parameters, 3.46 billion active, Apache 2.0",
+              "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+            }
+          ]
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "reversing",
+          "spotlight": true,
+          "read": "A third week the other way: the dollar index reached its highest close since April 2025 on October 1 and gold fell to its lowest since early August as real yields rose.",
+          "basket": [
+            {
+              "metric": "Dollar index (DXY)",
+              "value": "101.93 on October 2, from 100.97 on September 25; 102.10 on October 1",
+              "url": "https://tradingeconomics.com/united-states/currency"
+            },
+            {
+              "metric": "Gold, December contract",
+              "value": "$4,162.30 on October 2, down 3.7% on the week",
+              "url": "https://tradingeconomics.com/commodity/gold"
+            }
+          ]
+        },
+        {
+          "name": "China's industrial stack",
+          "direction": "advancing",
+          "spotlight": false,
+          "line": "US prosecutors charged a California man over more than $300 million of Nvidia-equipped servers allegedly shipped to China, and Xiaomi's MiMo-V2.6-Pro-RL reached 86,278 downloads.",
+          "basket": [
+            {
+              "metric": "MiMo-V2.6-Pro-RL (Hugging Face, October 5)",
+              "value": "86,278 downloads, from 75,079 a week earlier",
+              "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+            }
+          ]
+        }
+      ],
+      "watch_next": [
+        {
+          "when": "October 6",
+          "event": "France's national education day of action",
+          "note": "The main pupils' union said the minister's plan to speed up teacher replacements had no concrete measures and urged pupils to join."
+        },
+        {
+          "when": "October 7",
+          "event": "Minutes of the September FOMC meeting",
+          "note": "Read against a week in which traders dropped an October rise from about two in three to under one in five."
+        },
+        {
+          "when": "October 8",
+          "event": "NOAA's monthly El Niño update",
+          "note": "The September update put the odds of a historic event at 75 percent."
+        },
+        {
+          "when": "October 25",
+          "event": "Brazil's runoff; Serbia's snap parliamentary election",
+          "note": "Flávio Bolsonaro leads Lula by about 2.2 million first-round votes."
+        },
+        {
+          "when": "October 27",
+          "event": "Israel's general election",
+          "note": "The Arab-led lists are back on the ballot after the Supreme Court's October 2 ruling."
+        },
+        {
+          "when": "October 28",
+          "event": "Federal Reserve, Bank of Canada and the first day of the ECB's meeting",
+          "note": "Polymarket ended the week at 16.5 cents for another Fed quarter point."
+        },
+        {
+          "when": "November 1",
+          "event": "The seven OPEC+ countries meet on December output",
+          "note": "They held November unchanged on October 4."
+        }
+      ],
+      "annotations": [
+        {
+          "terms": [
+            "METR"
+          ],
+          "note": "A Berkeley-based nonprofit that evaluates what frontier AI models can do, including whether they can act autonomously. It investigated the July Hugging Face incident."
+        },
+        {
+          "terms": [
+            "GPT-6.1 Astra"
+          ],
+          "note": "The planned successor to GPT-6 Astra, OpenAI's most capable public model, which was released on September 3 and remains available."
+        },
+        {
+          "terms": [
+            "Fairwind"
+          ],
+          "note": "Google's programme for giving vetted cyber defenders early access to models that can find and patch software vulnerabilities."
+        },
+        {
+          "terms": [
+            "GLOBE"
+          ],
+          "note": "The Global Benchmark for Efficient Drug Pricing model, a Medicare experiment that sets drugmakers' Part B rebates against prices in other rich countries."
+        },
+        {
+          "terms": [
+            "Part B"
+          ],
+          "note": "The part of traditional Medicare that pays for outpatient care, including drugs given in a doctor's office or clinic, such as many cancer infusions."
+        },
+        {
+          "terms": [
+            "Mehmet Oz"
+          ],
+          "note": "The administrator of the Centers for Medicare and Medicaid Services since 2025, a former heart surgeon and television host."
+        },
+        {
+          "terms": [
+            "Tigray People's Liberation Front",
+            "TPLF"
+          ],
+          "note": "The party that long ran Ethiopia's northern Tigray region. It fought the federal government from 2020 until the 2022 Pretoria agreement, and its forces are at war with federal troops again."
+        },
+        {
+          "terms": [
+            "Mekelle"
+          ],
+          "note": "The capital of Tigray, Ethiopia's northernmost region, which borders Eritrea."
+        },
+        {
+          "terms": [
+            "Milorad Dodik"
+          ],
+          "note": "The long-time leader of Bosnia's Serb-majority entity, Republika Srpska. A court barred him from office in 2025."
+        },
+        {
+          "terms": [
+            "Republika Srpska"
+          ],
+          "note": "One of Bosnia and Herzegovina's two entities under the 1995 Dayton agreement, with a Serb majority and its own government."
+        },
+        {
+          "terms": [
+            "Ra'am"
+          ],
+          "note": "An Islamist Arab party in Israel that in 2021 became the first Arab party to join a governing coalition."
+        },
+        {
+          "terms": [
+            "Flock"
+          ],
+          "note": "An American company that sells networked licence-plate cameras to police departments and private customers."
+        },
+        {
+          "terms": [
+            "lycées"
+          ],
+          "note": "French upper-secondary schools, for pupils aged roughly 15 to 18, ending in the baccalauréat exam."
+        },
+        {
+          "terms": [
+            "Gérald Darmanin"
+          ],
+          "note": "France's justice minister, previously interior minister."
+        },
+        {
+          "terms": [
+            "John Williams"
+          ],
+          "note": "President of the Federal Reserve Bank of New York and vice chair of the committee that sets US interest rates."
+        },
+        {
+          "terms": [
+            "inflation-protected ten-year"
+          ],
+          "note": "The yield on ten-year Treasury inflation-protected securities, which measures the real return investors demand after inflation."
+        }
+      ]
     }
   ],
   "bsig_watch": [
     {
       "trend": "AI datacenter power demand",
-      "why_exponential": "At Oracle's New Mexico campus the binding constraint this week was a permit, not equipment. On September 24 Bloomberg reported that Oracle had sent Blue Owl a force majeure notice on Project Jupiter, a 2.45 gigawatt campus in New Mexico meant to run on gas fuel cells, after the state land office's repeated permit denials pushed the supplying pipeline back to February 2027.",
-      "watch": "Oracle says the project 'remains on our planned schedule' for 2028, and the notice would let it defer payments if the campus is late. On September 21 Newsom signed seven California bills on data-centre electricity costs, water use and local oversight. Watch for other tenants citing force majeure, and for the first state to make large loads pay the full cost of new supply.",
+      "why_exponential": "Google put its first AI-chip satellite into orbit on October 1, a test of running compute on solar power in space, while the power a single US campus draws became public by accident.",
+      "watch": "Google says the Project Suncatcher prototype launched with Planet on SpaceX's Transporter-18 and is 'operating as expected', with data to come over the coming weeks. Watch whether the orbital test reports power and heat figures, and whether more states force data-centre usage into the open.",
       "expressions": "Constellation, Vistra, Cameco, and other power and nuclear operators.",
       "bsig_ref": "AE-1 / AE-2 / AE-3",
       "status": "active regime",
-      "new": true
+      "new": false
     },
     {
       "trend": "Open weights close the gap by compression",
       "why_exponential": "Quantisation is now doing what new architectures used to: prism-ml's Bonsai 2 27B stores its weights as minus one, zero or plus one at about 1.75 bits each, fits in 5.95 gigabytes and keeps 98.2 percent of the full-precision Qwen3.8 27B's aggregate benchmark score on prism-ml's own suite, which reports about 130 tokens a second on an RTX 5090.",
-      "watch": "The frontier labs answered on price: Opus 5.5 and GPT-6 Sol were cut, and neither lab offered a model sized for a consumer GPU. Bonsai 2 27B's thirty-day count reached 3,343,748. Watch whether knowledge and vision, the rows where prism-ml's own table shows the biggest losses, close too.",
+      "watch": "A set of 2- and 3-bit builds of the 125-billion-parameter Qwen3.8-Flash-Next reached 2,244,732 thirty-day downloads as the Strata engine ran it on a 12-gigabyte gaming card, and Bonsai 2's ternary build rose to 4,120,718. Watch whether a frontier lab answers with a model sized for a consumer GPU.",
       "expressions": "Consumer GPUs, Apple silicon, and the open-weight download curve.",
       "bsig_ref": "",
       "status": "watch (compression)",
@@ -9586,17 +10500,17 @@
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
-      "why_exponential": "After years of collapsing inference prices, the newest frontier models are raising them, pushing companies from general-purpose GPUs toward custom chips and toward burning weights into wiring.",
-      "watch": "Samsung is expected to take monthly wafer input for high-bandwidth memory to about 250,000 from about 180,000 next year, with the HBM4 family going from roughly 40 percent of shipments to about 80. Watch whether memory supply, not logic, becomes the binding constraint on inference cost.",
+      "why_exponential": "Memory, not logic, is now the scarce input: on September 30 Micron reported record quarterly revenue of $54.23 billion, against $11.32 billion a year earlier, and said more than 75 percent of its 2027 output is already committed.",
+      "watch": "Micron expects memory supply-demand conditions to be 'much tighter in calendar 2027 and 2028 than they were in 2026' and has no 'line of sight' to balance. Watch whether server makers keep shipping machines with less memory per server, and whether the labs' $2 and $10 list price survives the end of Google's introductory Argon price.",
       "expressions": "AMD, Marvell, Broadcom, Samsung, and SK Hynix.",
       "bsig_ref": "AS-B",
       "status": "active regime",
-      "new": false
+      "new": true
     },
     {
       "trend": "Sovereign GPU scramble",
       "why_exponential": "Governments are now ordering compute at national scale, including Saudi Arabia's 2,200-megawatt HUMAIN project, the European Union's planned gigafactories and India's 100,000-GPU programme, and some have moved on to commissioning open-weight models of their own rather than only buying hardware.",
-      "watch": "Xi proposed a BRICS open-source AI community in New Delhi on September 13, offering Global South governments access to Chinese models and expertise. Xi's state visit to Washington on September 24 is expected to take up AI-directed cyberattacks and export controls. Watch whether offshore compute and remote access come up at all.",
+      "watch": "Aleph Alpha released Kolibri on October 3, a 78-billion-parameter open-weight model trained on 768 Nvidia B200s in Germany and Finland, 'under European and German law, with no foreign control'. Watch whether European governments buy it or only praise it.",
       "expressions": "Nvidia, national AI programmes, and state-commissioned open models.",
       "bsig_ref": "AS-C",
       "status": "event-driven",
@@ -9605,7 +10519,7 @@
     {
       "trend": "Crypto leverage & dry powder",
       "why_exponential": "Leverage in crypto futures and stablecoin dry powder swing sharply, and extreme readings often precede reversals.",
-      "watch": "Bitcoin rose 4.8 percent on the week to about $80,901 even after the Senate's cloture motion on the CLARITY Act failed on September 15, with every Democrat and four Republicans against. Thom Tillis switched to no at the end of the roll call so that he could move to reconsider, so the bill is technically alive. Watch funding rates against the next attempt.",
+      "watch": "Bitcoin ended the week flat at about $84,500 while the dollar rose. On October 5 the CFTC opened comment on an advance notice of rules for leveraged retail crypto trading, including a new exchange registration category for it. Watch funding rates and the comment period.",
       "expressions": "Bitcoin, Ether, and Coinbase.",
       "bsig_ref": "1E-1 / 1E-2",
       "status": "active",
@@ -9658,12 +10572,12 @@
     },
     {
       "trend": "Water as a grid constraint",
-      "why_exponential": "Power planning still treats cooling water as free and infinite, and it is becoming neither, as European reactors found when the Danube hit a record low in August.",
-      "watch": "Nothing new came from the European river basins during the week. Watch autumn river levels against the reactors and data centres that draw on them.",
+      "why_exponential": "Data-centre water use is treated as a trade secret, and the first numbers to escape show how much it varies: an improper redaction in Nebraska put Google's Lincoln campus at 13.3 million gallons a year and its Papillion site at 547.9 million.",
+      "watch": "The Lincoln site also showed a 52.65 megawatt peak draw, KOLN reported on September 30. Watch whether cities start requiring the figures in development agreements.",
       "expressions": "European power prices, nuclear operators, and grid-interconnection queues.",
       "bsig_ref": "AH-3",
       "status": "watch (grid water)",
-      "new": false
+      "new": true
     }
   ],
   "daily_counts": [
