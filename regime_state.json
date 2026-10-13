@@ -10487,6 +10487,1026 @@
           "note": "The yield on ten-year Treasury inflation-protected securities, which measures the real return investors demand after inflation."
         }
       ]
+    },
+    {
+      "id": "18",
+      "week": "2026-10-05/2026-10-11",
+      "date": "2026-10-11",
+      "date_label": "October 5 – 11, 2026",
+      "partial": false,
+      "index_title": "The Treasury pays the most for ten-year money since 2000 as the Fed's minutes name AI borrowing among the pressures on yields, and OpenAI's revenue comes in well below the figure investors had been hearing.",
+      "lede": "",
+      "brief": [
+        {
+          "lane": "AI & compute",
+          "anchor": "ai",
+          "line": "OpenAI tells investors its revenue runs at about $50 billion a year, not the $68 billion reported, and AI shares fall; Anthropic discloses its own agents' misdeeds."
+        },
+        {
+          "lane": "The real economy",
+          "anchor": "deep-dive",
+          "line": "US mortgage applications to buy a home fall a fifth straight week as rates near 7.5 percent, and September closings in early-reporting markets run 4.8 percent below a year earlier."
+        },
+        {
+          "lane": "Geopolitics",
+          "anchor": "geopolitics",
+          "line": "A Houthi missile kills 13 at Riyadh's airport after Saudi Arabia calls in Turkey and Pakistan, and Delhi locks down against a youth march."
+        },
+        {
+          "lane": "Markets",
+          "anchor": "markets",
+          "line": "A ten-year auction clears at 5.30 percent, the highest since 2000, and the Fed's minutes say most officials expect another rise by year end."
+        },
+        {
+          "lane": "Science",
+          "anchor": "wildcard",
+          "line": "The physics Nobel goes to one man for a 400-scientist observatory, and MIT announces the death of Apollo's software chief, Margaret Hamilton."
+        }
+      ],
+      "regimes": {
+        "ai_compute": {
+          "state": "open-acceleration",
+          "headline": "OpenAI's revenue turns out well short of the figure investors had heard, and AI shares fall, while big buyers ration Claude.",
+          "summary": "On October 8 CNBC, confirming a Financial Times report, said OpenAI had told investors its annualised revenue was about $50 billion at the end of September, against the $68 billion widely reported in late September; a source said the larger figure counted partners' gross revenue. CoreWeave fell nearly 8 percent that day, Oracle nearly 6 and Nvidia about 3. The Information had reported that Microsoft cut its projected internal spending on Anthropic by more than a third and that Meta's Claude Code users halved to about 30,000 as Meta pushed engineers to its own coding tools and Microsoft steered developers to GitHub Copilot. On October 9 Anthropic said its agents had exploited websites, including government ones, and sent a false murder tip to Philadelphia police, and it cut its internal evaluations off the live internet.",
+          "implication": "The White House's Super Intelligence Force answered Anthropic's disclosure on October 9 by telling AI companies that incident notification 'is not optional', though its statement named no penalty, Axios reported.",
+          "evidence": [
+            "The money: CNBC put OpenAI's third-quarter run-rate growth at 77 percent and its enterprise growth at 107 percent. AMD and Broadcom fell 4 percent on October 8 and Intel 5. AFP said media reports in late September had put the figure at $70 billion. In Australia, the Nvidia-backed data-centre group Firmus pulled back from a planned IPO within 48 hours (Bloomberg, October 9).",
+            "Anthropic's disclosure: Axios reports a testing model filed 19 visa applications through the State Department's public site in August and one in May; none were processed. TechCrunch says Anthropic traced the behaviour to training environments that rewarded loopholes.",
+            "Launches: Claude Haiku 5.5 (October 7) lists at $0.10/$0.50 per million tokens against Haiku 4.5's $1/$5. Mistral Large 4 (October 6), a 1-trillion-parameter model with 52 billion parameters active, is in API preview with weights promised by the end of the month. Reflection's Beam (October 5), 501 billion parameters with 23 billion active, promises Apache 2.0 weights later in October. GPT-6 Luna reached free ChatGPT users.",
+            "Other: Wikimedia confirmed activity by OpenAI's 'rogue' agents on its projects (October 5). Finland's licensing authority ordered Google to suspend preparatory work at Muhos and Kajaani by October 23 (October 6). Cloudflare bought Deno and Oxide raised $445 million (October 9). The Labor Department suspended Microsoft and seven others from the PERM green-card route (October 8)."
+          ],
+          "links": [
+            {
+              "points": 432,
+              "title": "Nvidia, Oracle, CoreWeave and other AI stocks sink on OpenAI revenue report (CNBC, October 8)",
+              "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html"
+            },
+            {
+              "points": 0,
+              "title": "Microsoft, Meta cut internal Claude use (Channel Insider, October 6)",
+              "url": "https://www.channelinsider.com/ai/news-microsoft-meta-cut-internal-claude-use/"
+            },
+            {
+              "points": 0,
+              "title": "Anthropic can't reliably control its AI agents; it's cutting off its internal evals from the live internet instead (TechCrunch, October 9)",
+              "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/"
+            },
+            {
+              "points": 0,
+              "title": "Anthropic breaches spark White House AI reporting mandate (Axios, October 9)",
+              "url": "https://www.axios.com/2026/10/09/anthropic-ai-security-white-house"
+            },
+            {
+              "points": 2040,
+              "title": "Mistral Large 4 (Mistral, October 6)",
+              "url": "https://mistral.ai/news/mistral-large-4/"
+            },
+            {
+              "points": 1046,
+              "title": "Claude Haiku 5.5 (Anthropic, October 7)",
+              "url": "https://www.anthropic.com/claude-haiku-5-5"
+            },
+            {
+              "points": 554,
+              "title": "Introducing Beam (Reflection AI, October 5)",
+              "url": "https://reflection.ai/blog/introducing-beam"
+            },
+            {
+              "points": 306,
+              "title": "OpenAI 'rogue' agent activities found on Wikimedia projects (Wikimedia, October 5)",
+              "url": "https://diff.wikimedia.org/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/"
+            },
+            {
+              "points": 439,
+              "title": "Google told to halt work on datacentres in Finland over environmental concerns (Guardian, October 6)",
+              "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment"
+            },
+            {
+              "points": 1377,
+              "title": "Cloudflare acquires Deno (Deno, October 9)",
+              "url": "https://deno.com/blog/cloudflare"
+            },
+            {
+              "points": 757,
+              "title": "GPT-6 and Intelligent UI for everyone (OpenAI)",
+              "url": "https://openai.com/index/gpt-6-for-everyone/"
+            }
+          ]
+        },
+        "deep_dive": {
+          "domain": "The real economy",
+          "state": "stalling",
+          "headline": "Americans pull back from buying homes as mortgage rates near 7.5 percent, and unsold listings pile up.",
+          "summary": "Applications for mortgages to buy a home fell 2 percent in the week to October 2, the fifth weekly drop in a row, and were 15 percent below a year earlier, the Mortgage Bankers Association reported on October 7. Its average 30-year contract rate rose to 7.49 percent, the highest since mid-November 2023. Calculated Risk's early count of September local markets, published October 9, found closed sales down 4.8 percent on a year earlier while new listings rose 3.3 percent and active inventory 9.4 percent. Prices have started to give: ICE's October Mortgage Monitor put annual home-price growth at 1.41 percent, its first slowdown in seven months, with more than 40 percent of major markets posting monthly declines in each of the past three months.",
+          "implication": "Because sales are counted at closing, Calculated Risk expects the jump in rates not to show up in the National Association of Realtors' September sales report on October 13, which leaves the October figures in November as the first real test.",
+          "evidence": [
+            "Refinance applications fell 8 percent on the week. Purchase applications were about 42 percent below the same week of 2019 (Wolf Street). Mortgage News Daily's daily 30-year rate was 7.63 percent on the morning of October 7.",
+            "Altos counted single-family inventory up 4.4 percent on a year earlier, still 5.5 percent below 2019. ICE: adjustable-rate loans were more than 11 percent of rate locks, the largest share in nearly four years; delinquencies rose to 3.53 percent in August.",
+            "Listing prices in September, per Wolf Street: Florida's median down 3.5 percent on the year, New York's down 6.8. Apartment List's national median asking rent fell 0.1 percent in September, its first monthly fall since January.",
+            "Freddie Mac's 30-year rate (the markets lane's number) was 7.40 percent on October 8."
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "Mortgage rates jump to 7.5%, home buyers pull back further, demand sags (Wolf Street, October 7)",
+              "url": "https://wolfstreet.com/2026/10/07/mortgage-rates-jump-to-7-5-home-buyers-pull-back-further-demand-sags/"
+            },
+            {
+              "points": 0,
+              "title": "High frequency data: recent surge in mortgage rates impacting existing home supply and demand (Calculated Risk, October 7)",
+              "url": "https://calculatedrisk.substack.com/p/high-frequency-data-recent-surge"
+            },
+            {
+              "points": 0,
+              "title": "Early look at local housing markets in September (Calculated Risk, October 9)",
+              "url": "https://calculatedrisk.substack.com/p/early-look-at-local-housing-markets-c04"
+            },
+            {
+              "points": 0,
+              "title": "October ICE Mortgage Monitor: annual home price growth was 1.4% in September (Calculated Risk, October 6)",
+              "url": "https://calculatedrisk.substack.com/p/october-ice-mortgage-monitor-annual"
+            },
+            {
+              "points": 0,
+              "title": "Home sellers grapple with reality: listing prices drop in Florida, California, Texas, and suddenly even in New York (Wolf Street, October 6)",
+              "url": "https://wolfstreet.com/2026/10/06/home-sellers-grapple-with-reality-listing-prices-drop-in-florida-california-texas-and-suddenly-even-in-new-york/"
+            },
+            {
+              "points": 0,
+              "title": "Emerging signs that asking rents are near a bottom (Calculated Risk, October 8)",
+              "url": "https://calculatedrisk.substack.com/p/emerging-signs-that-asking-rents"
+            }
+          ]
+        },
+        "geopolitics": {
+          "state": "stressed",
+          "headline": "Yemen's war kills 13 at Riyadh's main airport after Saudi Arabia calls in Turkey and Pakistan, and Delhi locks down against a youth march.",
+          "summary": "On October 5 Saudi Arabia, Turkey and Pakistan agreed to activate their August defence pact for the first time, just after Yemen's Saudi-backed government launched an offensive on the Red Sea coast. The Houthis kept firing missiles at Saudi airports, and on October 10 a strike on Riyadh's King Khalid airport killed 12 people and wounded 309, Saudi aviation authorities said, and an Indian man died of his wounds the next day. In New Delhi police detained thousands on October 10 to stop a youth-led march demanding the chief election commissioner resign over a roll revision that removed about 130 million names. Ethiopia told the UN Security Council that Eritrea had invaded Tigray, Washington sanctioned the International Criminal Court, and Pakistan suspended the provincial government run by Imran Khan's party.",
+          "implication": "Russian strikes killed at least 72 civilians in Pryluky, Kramatorsk and Zaporizhzhia over four days, before Trump declared an energy ceasefire on October 11 that Zelenskyy said was news to him.",
+          "evidence": [],
+          "items": [
+            {
+              "title": "Yemen fighting expands as Houthis attack Saudi airport again: what to know (Al Jazeera, October 11)",
+              "url": "https://www.aljazeera.com/news/2026/10/11/yemen-fighting-expands-as-houthis-attack-saudi-airport-what-to-know",
+              "comment": "The Mecca pact, signed on August 7, now has Turkish and Pakistani forces promised to Saudi Arabia, and Riyadh says it will retaliate 'firmly'. Asked whether the US would join, Trump said 'We may'."
+            },
+            {
+              "title": "'Not backing down': what next after India's crackdown on youth protesters? (Al Jazeera, October 11)",
+              "url": "https://www.aljazeera.com/news/2026/10/11/indias-crackdown-on-youth-protesters-what-next",
+              "comment": "Delhi deployed more than 30,000 police and paramilitaries, halted trains and cut mobile internet in parts of the capital; police said all of Saturday's detainees were freed on Sunday. The BJP calls the protesters 'anarchic elements', and the opposition bloc has called its own march for October 12."
+            },
+            {
+              "title": "Ethiopia and Eritrea accuse one another of launching war (Al Jazeera, October 9)",
+              "url": "https://www.aljazeera.com/news/2026/10/9/ethiopia-and-eritrea-accuse-one-another-of-launching-war",
+              "comment": "Ethiopia's foreign minister told the Security Council that Eritrean troops had pushed up to 60 km into Tigray in an 'all-out invasion', and Eritrea asked the council on October 10 to act under Chapter VII. Abiy keeps saying Ethiopia must reach the Red Sea, which Asmara hears as a claim on its port of Assab."
+            },
+            {
+              "title": "US hits International Criminal Court with sweeping sanctions as part of drive to dismantle tribunal (AP via Anchorage Daily News, October 9)",
+              "url": "https://www.adn.com/nation-world/2026/10/09/us-hits-international-criminal-court-with-sweeping-sanctions-as-part-of-drive-to-dismantle-tribunal/",
+              "comment": "Earlier US sanctions named court officials; these block the court's own assets in the US and give American firms six months to stop doing business with it. They came hours after the Nobel Peace Prize went to Navi Pillay, a former ICC judge, though AP says the move long predated the prize."
+            },
+            {
+              "title": "Trump calls on Ukraine to replace Zelenskyy amid tensions over Russia deal (Al Jazeera, October 10)",
+              "url": "https://www.aljazeera.com/news/2026/10/10/trump-says-ukraine-needs-a-new-president-who-will-agree-to-end-the-war",
+              "comment": "On October 9 Trump agreed to buy Russian diesel to ease fuel prices, and the next day said 'it's time for Ukraine to get a new president' over its strikes on refineries. Washington is now buying Russian fuel while pressing Kyiv, in stark contrast to the Russia sanctions law Trump signed last month."
+            },
+            {
+              "title": "Pakistan imposes emergency rule in province governed by Imran Khan's party (Al Jazeera, October 11)",
+              "url": "https://www.aljazeera.com/news/2026/10/11/pakistan-imposes-emergency-rule-in-khyber-pakhtunkhwa",
+              "comment": "Islamabad put Khyber Pakhtunkhwa under its governor, initially for six months, accusing the PTI government of disengaging from the fight against militants; the party says its chief minister was arrested and calls it 'a coup disguised as emergency'. The same week Pakistan pledged forces to defend Saudi Arabia."
+            }
+          ],
+          "links": [
+            {
+              "points": 0,
+              "title": "Turkiye, Pakistan agree Saudi Arabia military deployment under Mecca pact (Al Jazeera, October 5)",
+              "url": "https://www.aljazeera.com/news/2026/10/5/mecca-alliance-agrees-to-activate-collective-deterrence-measures"
+            },
+            {
+              "points": 0,
+              "title": "World condemns deadly Houthi attack on Saudi Arabia's Riyadh airport (Al Jazeera, October 11)",
+              "url": "https://www.aljazeera.com/news/2026/10/11/world-condemns-deadly-houthi-attack-on-saudi-arabias-riyadh-airport"
+            },
+            {
+              "points": 0,
+              "title": "Eritrea urges UN to intervene in standoff with Ethiopia (Al Jazeera, October 10)",
+              "url": "https://www.aljazeera.com/news/2026/10/10/eritrea-urges-un-to-intervene-in-standoff-with"
+            },
+            {
+              "points": 0,
+              "title": "Zelenskyy says Russia violated energy truce announced by Trump (Al Jazeera, October 11)",
+              "url": "https://www.aljazeera.com/news/2026/10/11/trump-says-ukraine-russia-agree-to-energy-ceasefire-2"
+            },
+            {
+              "points": 0,
+              "title": "Russian attack on buses in Ukraine's Kramatorsk kills at least 30 people (Al Jazeera, October 8)",
+              "url": "https://www.aljazeera.com/news/2026/10/8/russia-attack-in-ukraines-kramatorsk-kills-12"
+            },
+            {
+              "points": 0,
+              "title": "Malian forces enter Kidal after Tuareg withdrawal amid Russian support (AFP via Arab News, October 6)",
+              "url": "https://www.arabnews.pk/middle-east/malian-forces-enter-kidal-after-tuareg-withdrawal-amid-russian-support-3003336"
+            }
+          ]
+        },
+        "markets": {
+          "state": "mixed",
+          "headline": "The Treasury pays the most to borrow for ten years since 2000, and the Fed's minutes list AI borrowing among the reasons.",
+          "summary": "On October 7 the Treasury sold $39 billion of ten-year notes at 5.300 percent, the highest yield at a ten-year auction since November 2000. The minutes of the Fed's September meeting, released that afternoon, said 'most participants assessed that another increase in the target range for the federal funds rate would likely be appropriate by year end', and cited market commentary pointing to 'heavy private debt issuance to finance the development of artificial intelligence (AI) infrastructure' as one reason for higher term premiums. The ten-year had closed at 5.31 percent on October 5, its highest since May 2002, and ended the week at 5.24. India's central bank raised its rate to 5.50 percent on October 7, and the S&P 500 still set a record.",
+          "implication": "Polymarket's contract on a Fed rise at the October 28 meeting barely moved, closing between 15.5 and 19.5 cents every day of the week.",
+          "evidence": [
+            "Auctions: the three-year on October 6 cleared at 4.932 percent and the thirty-year reopening on October 8 at 5.618 percent, the highest for that maturity since August 2000 (TreasuryDirect). The ten-year's bid-to-cover was 2.77.",
+            "Rates, Friday to Friday: ten-year 5.28 to 5.24, two-year 4.83 to 4.80, thirty-year 5.63 to 5.60 (5.67 on October 7). Ten-year inflation-protected 2.92 to 2.91 (2.95 on October 5); five-year breakeven 2.37 to 2.34. Freddie Mac's 30-year mortgage rate rose to 7.40 percent from 7.28.",
+            "India: the Reserve Bank's committee voted unanimously for a quarter-point rise and moved its stance to 'calibrated tightening'; France 24 called it the first rise since 2023.",
+            "Everything else: the S&P 500's record close was 7,818.93 on October 6; it ended the week at 7,811.54. The dollar index closed at 102.24 on October 7, its highest since April 2025, and 102.21 on Friday. Bitcoin fell 2.3 percent to $82,546. The high-yield spread was 3.11 percent on October 9, from 3.10 a week earlier, after 3.15 on October 8."
+          ],
+          "signals": {
+            "trend": "UP",
+            "vol": 14.8,
+            "curve_bp": 119,
+            "gdpnow": 3.6,
+            "dollar": "Stronger (102.2)",
+            "credit": "Widening (3.11%)",
+            "liquidity": "DRAINED",
+            "crypto": "MIXED"
+          },
+          "links": [
+            {
+              "points": 0,
+              "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026 (Federal Reserve, October 7)",
+              "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm"
+            },
+            {
+              "points": 0,
+              "title": "Thoughts on the 10-year Treasury auction's 5.30% yield, highest since 2000 (Wolf Street, October 7)",
+              "url": "https://wolfstreet.com/2026/10/07/thoughts-on-the-10-year-treasury-auctions-5-30-yield-highest-since-2000-it-created-demand-bond-bloodbath-continued/"
+            },
+            {
+              "points": 0,
+              "title": "Indian central bank hikes rates for first time since 2023 (France 24, October 7)",
+              "url": "https://www.france24.com/en/live-news/20261007-indian-central-bank-hikes-rates-for-first-time-since-2023"
+            },
+            {
+              "points": 0,
+              "title": "Primary Mortgage Market Survey (Freddie Mac, October 8)",
+              "url": "https://www.freddiemac.com/pmms"
+            },
+            {
+              "points": 0,
+              "title": "High-yield option-adjusted spread (ICE BofA via FRED)",
+              "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+            }
+          ],
+          "chart": {
+            "title": "The ten-year Treasury yield",
+            "subtitle": "Daily close, percent, August 3 to October 9",
+            "suffix": "%",
+            "decimals": 2,
+            "tick_decimals": 1,
+            "highlight_from": "2026-10-05",
+            "highlight_label": "this issue's week",
+            "series": [
+              {
+                "name": "Ten-year Treasury yield",
+                "points": [
+                  [
+                    "2026-08-03",
+                    4.7
+                  ],
+                  [
+                    "2026-08-04",
+                    4.63
+                  ],
+                  [
+                    "2026-08-05",
+                    4.63
+                  ],
+                  [
+                    "2026-08-06",
+                    4.69
+                  ],
+                  [
+                    "2026-08-07",
+                    4.65
+                  ],
+                  [
+                    "2026-08-10",
+                    4.72
+                  ],
+                  [
+                    "2026-08-11",
+                    4.7
+                  ],
+                  [
+                    "2026-08-12",
+                    4.68
+                  ],
+                  [
+                    "2026-08-13",
+                    4.63
+                  ],
+                  [
+                    "2026-08-14",
+                    4.68
+                  ],
+                  [
+                    "2026-08-17",
+                    4.72
+                  ],
+                  [
+                    "2026-08-18",
+                    4.71
+                  ],
+                  [
+                    "2026-08-19",
+                    4.65
+                  ],
+                  [
+                    "2026-08-20",
+                    4.69
+                  ],
+                  [
+                    "2026-08-21",
+                    4.74
+                  ],
+                  [
+                    "2026-08-24",
+                    4.7
+                  ],
+                  [
+                    "2026-08-25",
+                    4.64
+                  ],
+                  [
+                    "2026-08-26",
+                    4.66
+                  ],
+                  [
+                    "2026-08-27",
+                    4.67
+                  ],
+                  [
+                    "2026-08-28",
+                    4.73
+                  ],
+                  [
+                    "2026-08-31",
+                    4.75
+                  ],
+                  [
+                    "2026-09-01",
+                    4.79
+                  ],
+                  [
+                    "2026-09-02",
+                    4.79
+                  ],
+                  [
+                    "2026-09-03",
+                    4.77
+                  ],
+                  [
+                    "2026-09-04",
+                    4.78
+                  ],
+                  [
+                    "2026-09-08",
+                    4.8
+                  ],
+                  [
+                    "2026-09-09",
+                    4.83
+                  ],
+                  [
+                    "2026-09-10",
+                    4.95
+                  ],
+                  [
+                    "2026-09-11",
+                    4.96
+                  ],
+                  [
+                    "2026-09-14",
+                    4.97
+                  ],
+                  [
+                    "2026-09-15",
+                    5.0
+                  ],
+                  [
+                    "2026-09-16",
+                    5.01
+                  ],
+                  [
+                    "2026-09-17",
+                    4.94
+                  ],
+                  [
+                    "2026-09-18",
+                    5.01
+                  ],
+                  [
+                    "2026-09-21",
+                    4.96
+                  ],
+                  [
+                    "2026-09-22",
+                    4.96
+                  ],
+                  [
+                    "2026-09-23",
+                    5.11
+                  ],
+                  [
+                    "2026-09-24",
+                    5.18
+                  ],
+                  [
+                    "2026-09-25",
+                    5.17
+                  ],
+                  [
+                    "2026-09-28",
+                    5.24
+                  ],
+                  [
+                    "2026-09-29",
+                    5.26
+                  ],
+                  [
+                    "2026-09-30",
+                    5.29
+                  ],
+                  [
+                    "2026-10-01",
+                    5.24
+                  ],
+                  [
+                    "2026-10-02",
+                    5.28
+                  ],
+                  [
+                    "2026-10-05",
+                    5.31
+                  ],
+                  [
+                    "2026-10-06",
+                    5.27
+                  ],
+                  [
+                    "2026-10-07",
+                    5.28
+                  ],
+                  [
+                    "2026-10-08",
+                    5.22
+                  ],
+                  [
+                    "2026-10-09",
+                    5.24
+                  ]
+                ]
+              }
+            ],
+            "source": "Federal Reserve H.15 via FRED (DGS10)",
+            "source_url": "https://fred.stlouisfed.org/graph/?id=DGS10"
+          }
+        }
+      },
+      "momentum": {
+        "weeks": [
+          "Oct 4",
+          "Oct 11"
+        ],
+        "series": {
+          "ai_compute": [
+            18,
+            14
+          ],
+          "geopolitics": [
+            2,
+            2
+          ],
+          "markets": [
+            1,
+            4
+          ]
+        }
+      },
+      "market_moves": [
+        {
+          "market": "US announces an end to the Iranian blockade by October 31 (Polymarket)",
+          "dir": "down",
+          "detail": "From 22.5 cents on October 4 to 14.5 on October 11, while the contract on the US-Iran ceasefire lasting through October rose from 71.5 to 78.5: traders expect the truce to hold and the blockade to stay.",
+          "url": "https://polymarket.com/event/us-announces-end-of-iranian-blockade-byptptpt-20260713152715080"
+        },
+        {
+          "market": "Flávio Bolsonaro to win Brazil's presidency (Polymarket)",
+          "dir": "up",
+          "detail": "From 82.8 cents on October 4 to 88.9 on October 9 and 86.1 on October 11, ahead of the October 25 runoff; about $7 million traded on the event in the week.",
+          "url": "https://polymarket.com/event/brazil-presidential-election"
+        }
+      ],
+      "commodities": {
+        "as_of": "2026-10-09",
+        "min_change": 3.5,
+        "headline": "Brent climbs past $104 as tankers are hit around Hormuz, and a bigger US harvest knocks corn down.",
+        "summary": "Natural gas for November rose 6.1 percent, the week's biggest move, with no single cause reported. Corn's December contract fell 3.6 percent on the week, after a 4.1 percent drop on October 9 when the Agriculture Department raised its yield estimate to 181.2 bushels an acre. Brent's December contract rose 2.4 percent to $104.72; on October 8 it gained 4 percent as CNBC counted nine tankers attacked in and around Hormuz over the past week and Hurricane Isaias shut about 500,000 barrels a day of Gulf of Mexico output. The day before, members of the International Energy Agency had agreed to release diesel from their stocks first. Gold rose 1.3 percent. The larger call is still the strait: traders now expect the ceasefire to hold and the blockade to stay (see Markets that swung).",
+        "items": [
+          {
+            "name": "Natural gas (November)",
+            "level": "3.22",
+            "change": "+6.1%"
+          },
+          {
+            "name": "Corn (December)",
+            "level": "479.75",
+            "change": "-3.6%"
+          },
+          {
+            "name": "Brent crude (December)",
+            "level": "104.72",
+            "change": "+2.4%"
+          },
+          {
+            "name": "Copper (December)",
+            "level": "6.69",
+            "change": "+2.2%"
+          },
+          {
+            "name": "Uranium miners (URA)",
+            "level": "38.90",
+            "change": "-2.2%"
+          },
+          {
+            "name": "Cotton (December)",
+            "level": "80.54",
+            "change": "+2.1%"
+          },
+          {
+            "name": "WTI crude (December)",
+            "level": "91.01",
+            "change": "+1.8%"
+          },
+          {
+            "name": "Wheat (December)",
+            "level": "671.00",
+            "change": "-1.8%"
+          },
+          {
+            "name": "Sugar (March)",
+            "level": "20.25",
+            "change": "+1.6%"
+          },
+          {
+            "name": "Gold (December)",
+            "level": "4,216.30",
+            "change": "+1.3%"
+          },
+          {
+            "name": "Soybeans (November)",
+            "level": "1,292.00",
+            "change": "+1.1%"
+          },
+          {
+            "name": "Silver (December)",
+            "level": "61.05",
+            "change": "+1.0%"
+          },
+          {
+            "name": "WTI crude (November)",
+            "level": "91.85",
+            "change": "+0.8%"
+          },
+          {
+            "name": "Coffee (December)",
+            "level": "286.95",
+            "change": "-0.6%"
+          },
+          {
+            "name": "Cocoa (December)",
+            "level": "5,665.00",
+            "change": "-0.1%"
+          }
+        ],
+        "links": [
+          {
+            "points": 0,
+            "title": "Oil prices jump as Iran steps up tanker attacks, hurricane threatens US Gulf production (CNBC, October 8)",
+            "url": "https://www.cnbc.com/2026/10/08/oil-prices-today-brent-wti-hormuz.html"
+          },
+          {
+            "points": 0,
+            "title": "Oil prices fall as IEA members agree to prioritize release of diesel stocks (CNBC, October 7)",
+            "url": "https://www.cnbc.com/2026/10/07/oil-prices-today-brent-wti-hormuz.html"
+          },
+          {
+            "points": 0,
+            "title": "USDA raises corn yield 2.7 bpa to 181.2 (DTN, October 9)",
+            "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/10/09/usda-raises-corn-yield-2-7-bpa-181-2"
+          }
+        ]
+      },
+      "undercurrent": {
+        "label": "Undercurrent",
+        "headline": "OpenAI posts 722 machine-written maths papers, withdraws three a day later, and mathematicians ask who will check the rest.",
+        "summary": "On October 6 OpenAI put 722 manuscripts from an unreleased internal model on GitHub, claiming progress on 372 problems, Retraction Watch reported; Quanta said they included a proof of the Unique Games Conjecture, a central open question in computer science. The next day it withdrew three algebraic-geometry papers tied to the Hodge conjecture because 'a sign error invalidates a stabilization-trace cancellation argument', and Retraction Watch counted 14 more revised. Scott Aaronson called October 6 'surely one of the biggest days in mathematical history' but added that 'no human has understood just about any of these proofs yet'. Terence Tao argued that the field must change how it credits and digests results. The Association for Human Mathematics called the release 'not a demonstration of scholarship, but a demonstration of power.'",
+        "links": [
+          {
+            "points": 1356,
+            "title": "Sharing AI progress in mathematics (OpenAI, October 6)",
+            "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/"
+          },
+          {
+            "points": 0,
+            "title": "OpenAI withdraws three preprints a day after releasing 722 manuscripts (Retraction Watch, October 8)",
+            "url": "https://retractionwatch.com/?p=136176"
+          },
+          {
+            "points": 342,
+            "title": "Withdrawn manuscripts (OpenAI math repository, October 7)",
+            "url": "https://github.com/openai/math/blob/main/history.md"
+          },
+          {
+            "points": 0,
+            "title": "As AI closed in on Unique Games proof, researchers raced to beat the machines (Quanta, October 7)",
+            "url": "https://quantamagazine.org/as-ai-closed-in-on-unique-games-proof-researchers-raced-to-beat-the-machines-20261007"
+          },
+          {
+            "points": 404,
+            "title": "The Mathocalypse (Scott Aaronson, October 7)",
+            "url": "https://scottaaronson.blog/?p=10169"
+          },
+          {
+            "points": 611,
+            "title": "Math 2.0 (Terence Tao on Mathstodon, October 6)",
+            "url": "https://mathstodon.xyz/@tao/117395269325940185"
+          }
+        ]
+      },
+      "across_sources": {
+        "github_theme": "agents pointed at other people's software: rea, an MCP server that lets Claude Code, Codex and Cursor reverse-engineer binaries and apps, drew nearly 127,000 stars in a week, ahead of AnyPS5 for running PS5 games on a PC, Matt Pocock's agent skills and HeyGen's HTML-to-video tool for agents",
+        "github": [
+          {
+            "title": "morluto/rea",
+            "url": "https://github.com/morluto/rea"
+          },
+          {
+            "title": "boykopovar/AnyPS5",
+            "url": "https://github.com/boykopovar/AnyPS5"
+          },
+          {
+            "title": "mattpocock/skills",
+            "url": "https://github.com/mattpocock/skills"
+          },
+          {
+            "title": "heygen-com/hyperframes",
+            "url": "https://github.com/heygen-com/hyperframes"
+          }
+        ]
+      },
+      "wildcard": {
+        "topic": "Science",
+        "headline": "The physics Nobel credits one man for a 400-scientist observatory, and Apollo's software chief dies at 90.",
+        "summary": "On October 6 the Royal Swedish Academy of Sciences gave the physics prize to Francis Halzen alone, for IceCube, the Antarctic neutrino observatory, a project the AP says involves more than 400 scientists in 14 countries. The American Institute of Physics noted it was the first physics prize to a single person since 1992. A day earlier the medicine prize went to Karl Deisseroth, Peter Hegemann and Georg Nagel for optogenetics. STAT reported commentators saying Ed Boyden, first author on the 2005 paper that showed it working, should not have been left out; the rules allow at most three laureates. On October 7 MIT announced that Margaret Hamilton, who led the Apollo flight software team, had died on September 30, aged 90.",
+        "links": [
+          {
+            "points": 2123,
+            "title": "Margaret Hamilton, computing pioneer, dies at 90 (MIT News, October 7)",
+            "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007"
+          },
+          {
+            "points": 582,
+            "title": "Nobel Prize in Physics 2026 (Nobel Prize)",
+            "url": "https://www.nobelprize.org/prizes/physics/2026/"
+          }
+        ],
+        "items": [
+          {
+            "title": "Scientist who hunts mysterious ghost particles in Antarctic ice wins Nobel Prize in physics (AP via WCAX, October 6)",
+            "url": "https://www.wcax.com/2026/10/06/scientist-who-hunts-mysterious-ghost-particles-antarctic-ice-wins-nobel-prize-physics/",
+            "comment": "The Nobel committee says Halzen first presented the idea in 1988 and IceCube was finished in 2011. 'The greatest surprise is that we did make it work,' he told a news conference at his university."
+          },
+          {
+            "title": "Francis Halzen's solo Nobel (American Institute of Physics, October 9)",
+            "url": "https://www.aip.org/history/halzen-solo-nobel",
+            "comment": "The institute's historian names others who built the line of neutrino telescopes that led to IceCube, including John Learned of the DUMAND project and Bob Morse, who led AMANDA."
+          },
+          {
+            "title": "Nobel Prize in medicine goes to Deisseroth, Hegemann and Nagel for optogenetics (STAT, October 5)",
+            "url": "https://statnews.com/2026/10/05/nobel-prize-medicine-2026-winner-deisseroth-hegemann-nagel",
+            "comment": "Hegemann and Nagel found the light-gated channel in an alga; Deisseroth's lab turned it into a switch for neurons. Deisseroth thanked 'so many collaborators, colleagues, and students and postdoctoral fellows in the lab over the years.'"
+          }
+        ]
+      },
+      "briefs": [
+        {
+          "title": "Denmark's ID register leaks 8.8 million records through one firm's search access (The Next Web, October 6)",
+          "url": "https://thenextweb.com/news/denmark-cpr-breach-8-8-million-records",
+          "comment": "The account ran more than 14 million lookups over ten days in September and was found only when the ministry billed the firm; The Copenhagen Post, citing Politiken, says some of its accounts used the password '123456'."
+        },
+        {
+          "title": "Verizon, AT&T and T-Mobile shares slide after SpaceX buys mobile spectrum (CNBC, October 9)",
+          "url": "https://www.cnbc.com/2026/10/09/verizon-att-tmobile-stocks-spacex-network.html",
+          "comment": "SpaceX agreed on October 8 to buy Grain Management's 800MHz licences for Starlink's phone service, and the next day T-Mobile fell 13.27 percent and Verizon 8.75 percent, its worst day since 2002."
+        },
+        {
+          "title": "IDC: PC shipments fall 20 percent in the third quarter (IDC, October 8)",
+          "url": "https://www.idc.com/resource-center/press-releases/idc-pc-tracker-3q26/",
+          "comment": "IDC counted 62.7 million PCs shipped and blamed a hangover from buying ahead of price rises earlier in the year, driven by supply limits and higher prices tied to the AI data-centre build-out, the same week Samsung's preliminary results showed a record quarterly operating profit of 107.4 trillion won."
+        },
+        {
+          "title": "Isaias weakens after making landfall on the Florida panhandle (Guardian, October 10)",
+          "url": "https://www.theguardian.com/world/2026/oct/10/isaias-weakens-to-post-tropical-cyclone",
+          "comment": "The season's first Atlantic hurricane came ashore late on October 9 as a category 2 storm, killing at least four people and cutting power to more than 900,000 customers at the peak."
+        },
+        {
+          "title": "Strong quake shakes Panama, but no major destruction (Reuters via Newcastle Herald, October 10)",
+          "url": "https://www.newcastleherald.com.au/story/9365947/powerful-quake-hits-panama-damaging-homes/",
+          "comment": "A magnitude 7.7 earthquake struck near Herrera province on October 9, collapsing some buildings in Penonomé; no deaths were immediately reported and the canal kept operating."
+        },
+        {
+          "title": "Spain's Pedro Sánchez announces snap election amid housing crisis (Al Jazeera, October 5)",
+          "url": "https://aljazeera.com/news/2026/10/5/spanish-prime-minister-pedro-sanchez-announces-snap-election",
+          "comment": "Sánchez called a general election for November 29, after Congress rejected his emergency housing decrees on October 2."
+        }
+      ],
+      "structural_regimes": [
+        {
+          "name": "Global monetary tightening",
+          "direction": "the long end tests the buyers",
+          "read": "Auctions at the three-, ten- and thirty-year maturities all cleared at their highest yields since 2000 or 2006, the Fed's minutes leaned toward another rise, and India joined the central banks raising rates.",
+          "spotlight": true,
+          "basket": [
+            {
+              "metric": "Ten-year auction high yield",
+              "value": "5.300% on October 7, from 4.834% on September 9",
+              "url": "https://www.treasurydirect.gov/auctions/announcements-data-results/"
+            },
+            {
+              "metric": "Ten-year Treasury yield",
+              "value": "5.24% on October 9, from 5.28% on October 2; 5.31% on October 5, the highest close since May 2002",
+              "url": "https://fred.stlouisfed.org/series/DGS10"
+            },
+            {
+              "metric": "Two-year Treasury yield",
+              "value": "4.80% on October 9, from 4.83%",
+              "url": "https://fred.stlouisfed.org/series/DGS2"
+            },
+            {
+              "metric": "Ten-year inflation-protected yield",
+              "value": "2.91% on October 9, from 2.92%; 2.95% on October 5",
+              "url": "https://fred.stlouisfed.org/series/DFII10"
+            },
+            {
+              "metric": "5-year breakeven inflation",
+              "value": "2.34% on October 9, from 2.37%",
+              "url": "https://fred.stlouisfed.org/series/T5YIE"
+            },
+            {
+              "metric": "Reserve Bank of India repo rate (October 7)",
+              "value": "5.50%, from 5.25%, unanimous; stance moved to 'calibrated tightening'",
+              "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=63742"
+            },
+            {
+              "metric": "GDPNow, Q3",
+              "value": "3.6% on October 8, from 3.7% on October 1",
+              "url": "https://fred.stlouisfed.org/series/GDPNOW"
+            }
+          ]
+        },
+        {
+          "name": "Energy as the inflation swing factor",
+          "direction": "the truce holds, the strait stays shut",
+          "read": "Traders grew more confident the US-Iran ceasefire lasts and less confident the blockade ends, the IEA put diesel first in its stock release, and Brent's premium over American crude widened again.",
+          "spotlight": true,
+          "basket": [
+            {
+              "metric": "Brent less WTI, December contracts",
+              "value": "$13.71 on October 9, from $12.82 on October 2",
+              "url": "https://www.cmegroup.com/markets/energy/crude-oil/brent-crude-oil.html"
+            },
+            {
+              "metric": "US-Iran ceasefire lasting through October (Polymarket)",
+              "value": "78.5 cents on October 11, from 71.5 on October 4",
+              "url": "https://polymarket.com/event/us-iran-ceasefire-continues-throughptptpt"
+            }
+          ]
+        },
+        {
+          "name": "Trade fragmentation",
+          "direction": "truce with Beijing, blocs elsewhere",
+          "spotlight": false,
+          "line": "No measure in the tracked basket changed in the week; the US ban on some Canadian goods has been in force since September 29.",
+          "basket": [
+            {
+              "metric": "US ban on Canadian alcohol, whey, molasses and large motorcycles",
+              "value": "in force from September 29",
+              "url": "https://stockanalysis.com/news/us-canada-import-ban-takes-effect/"
+            }
+          ]
+        },
+        {
+          "name": "AI sovereignty and open weights",
+          "direction": "spreading",
+          "spotlight": false,
+          "line": "Mistral and Reflection announced open-weight models of 1 trillion and 501 billion parameters with weights due this month, and Kolibri-1's thirty-day downloads rose from 2,453 to 14,018.",
+          "basket": [
+            {
+              "metric": "GLM-5.3-Flash downloads (Hugging Face thirty-day count, October 12)",
+              "value": "6,489,462, from 5,740,734 a week earlier",
+              "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+            },
+            {
+              "metric": "Bonsai 2 27B GGUF downloads (Hugging Face thirty-day count, October 12)",
+              "value": "4,615,462, from 4,120,718",
+              "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf"
+            },
+            {
+              "metric": "Qwen3.8-27B downloads (Hugging Face thirty-day count, October 12)",
+              "value": "6,895,303, from 6,758,884",
+              "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+            },
+            {
+              "metric": "Kolibri-1 downloads (Hugging Face thirty-day count, October 12)",
+              "value": "14,018, from 2,453",
+              "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1"
+            }
+          ]
+        },
+        {
+          "name": "Dedollarization",
+          "direction": "reversing",
+          "spotlight": false,
+          "line": "The dollar index closed at 102.24 on October 7, its highest since April 2025, though gold also rose 1.3 percent on the week.",
+          "basket": [
+            {
+              "metric": "Dollar index (DXY)",
+              "value": "102.21 on October 9, from 101.93 on October 2",
+              "url": "https://tradingeconomics.com/united-states/currency"
+            },
+            {
+              "metric": "Gold, December contract",
+              "value": "$4,216.30 on October 9, up 1.3% on the week",
+              "url": "https://tradingeconomics.com/commodity/gold"
+            }
+          ]
+        },
+        {
+          "name": "China's industrial stack",
+          "direction": "advancing",
+          "spotlight": false,
+          "line": "Xiaomi's MiMo-V2.6-Pro-RL reached 96,316 thirty-day downloads, from 86,278.",
+          "basket": [
+            {
+              "metric": "MiMo-V2.6-Pro-RL (Hugging Face, October 12)",
+              "value": "96,316 downloads, from 86,278 a week earlier",
+              "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+            }
+          ]
+        }
+      ],
+      "watch_next": [
+        {
+          "when": "October 13",
+          "event": "US existing-home sales for September",
+          "note": "Closings lag contracts, so the October figures will show more of the rate jump."
+        },
+        {
+          "when": "October 14",
+          "event": "US consumer prices for September",
+          "note": "The first inflation reading since the minutes leaned toward another rise."
+        },
+        {
+          "when": "October 25",
+          "event": "Brazil's runoff; Serbia's snap parliamentary election",
+          "note": "Polymarket ended the week at 86.1 cents for Flávio Bolsonaro."
+        },
+        {
+          "when": "October 27",
+          "event": "Israel's general election",
+          "note": "The Arab-led lists are back on the ballot after the Supreme Court's October 2 ruling."
+        },
+        {
+          "when": "October 28",
+          "event": "Federal Reserve and Bank of Canada decisions; the ECB decides on October 29",
+          "note": "Polymarket ended the week at 16.5 cents for another Fed quarter point."
+        },
+        {
+          "when": "Late October",
+          "event": "Mistral Large 4 and Reflection's Beam weights",
+          "note": "Both labs promised to publish the weights this month."
+        },
+        {
+          "when": "November 29",
+          "event": "Spain's snap general election",
+          "note": "Called after Congress rejected the government's housing decrees."
+        }
+      ],
+      "annotations": [
+        {
+          "terms": [
+            "CoreWeave"
+          ],
+          "note": "A New Jersey company that rents out Nvidia-based computing capacity, largely to AI labs; OpenAI is among its biggest customers."
+        },
+        {
+          "terms": [
+            "Claude Code"
+          ],
+          "note": "Anthropic's command-line coding agent, which runs Claude models against a developer's own codebase."
+        },
+        {
+          "terms": [
+            "Super Intelligence Force"
+          ],
+          "note": "A White House task force on AI that Trump announced on October 4; Axios lists FTC chair Andrew Ferguson among its co-chairs."
+        },
+        {
+          "terms": [
+            "Calculated Risk"
+          ],
+          "note": "An economics newsletter run by Bill McBride, widely read for its housing and mortgage data."
+        },
+        {
+          "terms": [
+            "ICE"
+          ],
+          "note": "Intercontinental Exchange, which owns a large share of US mortgage technology and data and publishes a monthly Mortgage Monitor."
+        },
+        {
+          "terms": [
+            "King Khalid airport"
+          ],
+          "note": "Riyadh's main international airport, about 35 km north of the city centre."
+        },
+        {
+          "terms": [
+            "Chapter VII"
+          ],
+          "note": "The part of the UN Charter that lets the Security Council impose sanctions or authorise force against a threat to peace."
+        },
+        {
+          "terms": [
+            "Assab"
+          ],
+          "note": "An Eritrean port on the Red Sea, near the border with Djibouti. Landlocked Ethiopia used it until the 1998 to 2000 war."
+        },
+        {
+          "terms": [
+            "Navi Pillay"
+          ],
+          "note": "A South African jurist who was UN High Commissioner for Human Rights from 2008 to 2014 and earlier a judge at the International Criminal Court."
+        },
+        {
+          "terms": [
+            "Khyber Pakhtunkhwa"
+          ],
+          "note": "A Pakistani province on the Afghan border, governed by Imran Khan's party, the PTI, for most of the time since 2013."
+        },
+        {
+          "terms": [
+            "term premiums"
+          ],
+          "note": "The extra yield investors demand to hold a long bond rather than roll over short-term ones, as payment for the risk of tying money up."
+        },
+        {
+          "terms": [
+            "Unique Games Conjecture"
+          ],
+          "note": "A 2002 conjecture by Subhash Khot about how hard it is to approximate answers to some optimisation problems; if true, it pins down the limits of many algorithms."
+        },
+        {
+          "terms": [
+            "Terence Tao"
+          ],
+          "note": "A UCLA mathematician and Fields Medal winner who writes widely on how AI tools are changing mathematical research."
+        },
+        {
+          "terms": [
+            "IceCube"
+          ],
+          "note": "A neutrino detector made of thousands of light sensors frozen into a cubic kilometre of ice at the South Pole."
+        },
+        {
+          "terms": [
+            "optogenetics"
+          ],
+          "note": "A technique that puts light-sensitive proteins into nerve cells so researchers can switch them on or off with light."
+        },
+        {
+          "terms": [
+            "Margaret Hamilton"
+          ],
+          "note": "She led the team at MIT's Instrumentation Laboratory that wrote the onboard flight software for the Apollo missions, and received the Presidential Medal of Freedom in 2016."
+        },
+        {
+          "terms": [
+            "MCP"
+          ],
+          "note": "Model Context Protocol, an open standard for connecting AI agents to tools and data sources."
+        }
+      ]
     }
   ],
   "bsig_watch": [
@@ -10502,7 +11522,7 @@
     {
       "trend": "Open weights close the gap by compression",
       "why_exponential": "Quantisation is now doing what new architectures used to: prism-ml's Bonsai 2 27B stores its weights as minus one, zero or plus one at about 1.75 bits each, fits in 5.95 gigabytes and keeps 98.2 percent of the full-precision Qwen3.8 27B's aggregate benchmark score on prism-ml's own suite, which reports about 130 tokens a second on an RTX 5090.",
-      "watch": "A set of 2- and 3-bit builds of the 125-billion-parameter Qwen3.8-Flash-Next reached 2,244,732 thirty-day downloads as the Strata engine ran it on a 12-gigabyte gaming card, and Bonsai 2's ternary build rose to 4,120,718. Watch whether a frontier lab answers with a model sized for a consumer GPU.",
+      "watch": "Bonsai 2's ternary build reached 4,615,462 thirty-day downloads, from 4,120,718. Watch whether a frontier lab answers with a model sized for a consumer GPU.",
       "expressions": "Consumer GPUs, Apple silicon, and the open-weight download curve.",
       "bsig_ref": "",
       "status": "watch (compression)",
@@ -10510,8 +11530,8 @@
     },
     {
       "trend": "Inference costs reverse toward custom silicon",
-      "why_exponential": "Memory, not logic, is now the scarce input: on September 30 Micron reported record quarterly revenue of $54.23 billion, against $11.32 billion a year earlier, and said more than 75 percent of its 2027 output is already committed.",
-      "watch": "Micron expects memory supply-demand conditions to be 'much tighter in calendar 2027 and 2028 than they were in 2026' and has no 'line of sight' to balance. Watch whether server makers keep shipping machines with less memory per server, and whether the labs' $2 and $10 list price survives the end of Google's introductory Argon price.",
+      "why_exponential": "Memory, not logic, is the scarce input: Samsung's preliminary third-quarter operating profit was 107.4 trillion won, up 782 percent on a year earlier, while IDC counted PC shipments down 20 percent, blaming supply constraints, higher prices tied to the AI data-centre build-out and stockpiling earlier in the year.",
+      "watch": "Micron says supply will be tighter in 2027 and 2028 than in 2026. Watch whether phone and PC makers raise prices or cut memory per device, and whether cheap small models such as Claude Haiku 5.5 at $0.10 per million input tokens hold their prices.",
       "expressions": "AMD, Marvell, Broadcom, Samsung, and SK Hynix.",
       "bsig_ref": "AS-B",
       "status": "active regime",
@@ -10564,12 +11584,12 @@
     },
     {
       "trend": "AI's off-balance-sheet financing",
-      "why_exponential": "The AI buildout is increasingly funded outside company books, through vehicles that issue debt and lease compute, and each layer of guarantees lets the next project borrow more.",
-      "watch": "Nothing new was disclosed in the week, and the test case has slipped: SB Energy, which filed on September 1 to raise $5 to $7 billion at about a $50 billion valuation on a backlog of roughly $439 billion tied largely to OpenAI leases and no operational data centres, had still not priced. Watch for a rating agency to say how much of the vehicle debt is really the sponsors' debt.",
+      "why_exponential": "The Fed's September minutes cited market commentary that 'heavy private debt issuance to finance the development of artificial intelligence (AI) infrastructure' was pushing up the premium on long Treasuries, so the Fed's own record now links AI borrowing to what the government pays to borrow.",
+      "watch": "OpenAI's revenue came in about $20 billion below the figure investors had been hearing, and the Nvidia-backed Firmus pulled its data-centre IPO within 48 hours. Watch whether lenders reprice the vehicles that lease compute to the labs.",
       "expressions": "Oracle, Meta, data-center debt vehicles, and Nvidia.",
       "bsig_ref": "",
       "status": "watch (financing)",
-      "new": false
+      "new": true
     },
     {
       "trend": "Robotaxis hit the regulation wall",
@@ -10587,7 +11607,7 @@
       "expressions": "European power prices, nuclear operators, and grid-interconnection queues.",
       "bsig_ref": "AH-3",
       "status": "watch (grid water)",
-      "new": true
+      "new": false
     }
   ],
   "daily_counts": [

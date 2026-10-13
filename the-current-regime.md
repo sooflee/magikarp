@@ -2025,3 +2025,65 @@ renders), Micron's sold-out 2027 memory, the Visa/Mastercard/Stripe/Coinbase OUS
 crypto/fintech hook the wildcard search missed) and the Thailand-Myanmar floods. Dropped to make room: the
 Lens.com suit, the Retraction Watch brief and the Pew Australia survey. Lesson for the playbook: anything
 readers must see cannot live only in `evidence`.
+
+## Issue 18 — Week of 2026-10-05 → 2026-10-11
+
+Built 2026-10-12/13. Title: "The Treasury pays the most for ten-year money since 2000 as the Fed's minutes
+name AI borrowing among the pressures on yields, and OpenAI's revenue comes in well below the figure
+investors had been hearing."
+
+States: ai_compute **open-acceleration** (held, third week), deep_dive (the real economy) stalling,
+geopolitics stressed (held), markets mixed (held). Momentum: ai_compute 18 → 14, geopolitics 2 → 2,
+markets 1 → 4 (`momentum.py 2026-10-05 2026-10-11`).
+
+The week's spine was the cost of money for AI and everyone else. The ten-year auction cleared at 5.300% on
+October 7, the highest since November 2000, the same afternoon the September minutes said most officials
+saw another rise by year end and cited commentary naming AI debt issuance among the causes of higher term
+premiums. A day later OpenAI's annualised revenue was reported at about $50B against the $68B in
+circulation and AI shares fell. Mortgage purchase applications fell a fifth straight week at a 7.49% MBA
+rate. Fed odds for October did not move (15.5-19.5c all week).
+
+Lane choices worth recording:
+- AI led with the money (OpenAI revenue, the AI-stock fall, Microsoft and Meta rationing Claude), not
+  regulators (17) or pricing (16). Anthropic's October 9 disclosure of its own agents' incidents and the SI
+  Force's "not optional" reply went into the summary and key fact; state held because the White House
+  named no penalty. Watch for state-capture if the disclosure demand gets enforcement. OpenAI's 722 maths
+  manuscripts (the biggest HN cluster, ~3,500 points) became the undercurrent (AI-adjacent was allowed).
+- Deep-dive: US housing turnover (MBA, Calculated Risk, ICE), stalling. Rates stayed with markets.
+- Geopolitics led with Yemen/Saudi (Mecca pact invoked; Riyadh airport strike, 13 dead), the world's top
+  story; lead rule respected (17 Brazil, 16 Serbia). Theatre rule: Yemen and Ukraine took the two
+  restricted slots; India, Ethiopia-Eritrea, the ICC sanctions and Pakistan the rest.
+- Wildcard: science (the Nobels' credit question, Margaret Hamilton), paying the science/space debt.
+- Briefs: Denmark CPR breach, SpaceX spectrum and the telecom selloff, IDC PCs -20% with Samsung's record
+  quarter, Hurricane Isaias, the Panama quake, Spain's snap election.
+- Left out, with reasons: Quebec's PQ minority (no slot; Americas region covered by Panama), Mali's Kidal
+  (link only), Glucksmann's primary (October 12 result), Muse Wonder, Maia 300, Typesafe (all October 12,
+  issue 19), the Anthropic diary arrest and Vals' semiconductor post (before the window), Super
+  Intelligence Force creation (October 4, context in a hover note), Djibouti shipwreck (no slot), the
+  Firmus IPO (AI evidence and the financing card).
+- Watchlist: memory/custom silicon (Samsung, IDC) and AI's off-balance-sheet financing (the minutes,
+  OpenAI's revenue, Firmus) promoted to full cards; water demoted.
+
+Media: no photo. One chart, the ten-year Treasury yield (FRED DGS10, August 3 to October 9).
+
+Process: six researchers, then four auditors. The first audit launch died on an API authentication error
+with no output; the relaunch completed.
+
+### Issue 18 audit (2026-10-13) — corrections applied
+
+Four adversarial passes, about 30 corrections plus humanize edits, applied with `apply_fixes.py`.
+- AI: 722/372 were Retraction Watch's figures, not Quanta's; the $68B was reported in late September, not
+  "days earlier"; the gap is "about $20 billion" in every source (not our $18B); Microsoft steered staff to
+  GitHub Copilot, not an in-house tool; IDC's main cause is pre-buying ahead of price rises; Mistral never
+  says mixture-of-experts; Finland ordered a suspension by October 23, not a halt; only one withdrawn paper
+  is on the Hodge conjecture; Axios link title corrected; the headline's "as" implied a cause.
+- Geopolitics: the war did not first "reach" Riyadh's airport (earlier strikes); the toll rose to 13 on
+  October 11; the Houthis did not "answer" the pact; 30,000 included paramilitaries; Sunday detentions
+  continued; "in stark contrast to", not "the reverse of", the sanctions law; KP rule is initially six
+  months; the pact's signing place is unsourced.
+- Markets: corn's 4.1% day was larger than its 3.6% week; credit signal now Friday's 3.11%; FRED posted
+  October 9 so the chart note was simplified.
+- Deep-dive and the rest: Panama story is Reuters with a changed headline and "near Herrera"; Nobel dates
+  come from the press release; the Boyden sentence no longer implies the three-laureate rule caused the
+  omission; "stop buying" overstated; closings are early-reporting markets year on year; KP note
+  corrected for the 2023-24 caretaker.
