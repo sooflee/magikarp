@@ -20021,7 +20021,17 @@
               "title": "Gemini 4 Argon (Google DeepMind, October 13)",
               "url": "https://deepmind.google/models/gemini/"
             }
-          ]
+          ],
+          "image": {
+            "src": "img/19/meta_spark.jpg",
+            "alt": "A graphic reading Muse Spark Open Weights above flowing blue lines.",
+            "caption": "Meta's Muse Spark Open announcement graphic, published on October 15, 2026.",
+            "credit": "Meta",
+            "license": "Editorial use only",
+            "source_url": "https://research.meta.ai/blog/muse-spark-open#open-weights",
+            "width": 1280,
+            "height": 672
+          }
         },
         "deep_dive": {
           "domain": "China's industrial stack",
@@ -20130,6 +20140,16 @@
             ],
             "source": "China Customs via Xinhua/gov.cn",
             "source_url": "https://english.www.gov.cn/archive/statistics/202610/14/content_WS6acf1570c6d00ca5f9a0dabb.html"
+          },
+          "image": {
+            "src": "img/19/china_exports.jpg",
+            "alt": "Rows of shipping containers and red gantry cranes at a Chinese port, with a bulk carrier on the water behind.",
+            "caption": "Containers stacked at a port in China in September 2026.",
+            "credit": "Reuters via Al Jazeera",
+            "license": "Editorial use only",
+            "source_url": "https://www.aljazeera.com/economy/2026/10/14/chinas-exports-sugrge",
+            "width": 1280,
+            "height": 720
           }
         },
         "geopolitics": {
@@ -20236,7 +20256,17 @@
               "title": "At least 5 killed in Houthi attack on Yemen's presidential palace in Aden (Al Jazeera, October 15)",
               "url": "https://www.aljazeera.com/news/2026/10/15/houthis-target-yemens-presidential-palace-in-aden-with-missiles"
             }
-          ]
+          ],
+          "image": {
+            "src": "img/19/france.jpg",
+            "alt": "Fire engulfing the 19th-century Limoges town hall at night as firefighters spray water from ladders.",
+            "caption": "The town hall in Limoges, France, burns on the night of October 17, 2026.",
+            "credit": "Getty Images via CNN",
+            "license": "Editorial use only",
+            "source_url": "https://www.cnn.com/2026/10/17/europe/half-million-protesters-sweep-france-in-youth-unrest-latam-intl",
+            "width": 1280,
+            "height": 720
+          }
         },
         "markets": {
           "state": "risk-off",
@@ -20393,6 +20423,16 @@
               }
             ],
             "source": "Polymarket"
+          },
+          "image": {
+            "src": "img/19/warsh.jpg",
+            "alt": "Kevin Warsh in a dark suit and blue tie, speaking with both hands raised against a blue backdrop.",
+            "caption": "Federal Reserve Chair Kevin Warsh speaks in Bangkok on October 16, 2026.",
+            "credit": "Getty Images via CNBC",
+            "license": "Editorial use only",
+            "source_url": "https://www.cnbc.com/2026/10/16/feds-warsh-says-ai-development-path-will-be-very-bumpy-.html#main-content",
+            "width": 1280,
+            "height": 720
           }
         }
       },
