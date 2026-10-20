@@ -2126,3 +2126,8 @@ Coverage debt paid: Central Asia/Caucasus (last seen 15) with the Tashkent/Samar
 Coverage debt remaining: Oceania (last seen 16). Topics not seen in the last three issues (17, 18, 19): crypto/fintech, education, fraud/cyber/crime, privacy/digital rights. Issue 20's wildcard shortlist is therefore crypto/fintech, education, fraud/cyber, privacy. The deep-dive rotates to energy & materials.
 
 Big-story sweep check: the issue carries the Gulf war's Saudi turn, the CPI/PPI/Fed repricing and AI-credit selloff, France's 17 October, Taiwan/China chip controls, the open-weight releases, India's CJP standoff, Kenya's Ebola cluster, the BofA fine and Character.AI's bankruptcy. Deliberate omissions are listed above; the main residual risks for issue 20 are the eight-state OpenAI suits, the Starshield slowdown and the ECB/UniCredit decision, none of which had a rendered home here.
+
+
+### Visual backfill (2026-10-20)
+
+Every editorial issue from 01 to 19 now carries at least three visuals. Added 45 charts in three groups: a markets series chosen to match the issue's tape (VIX in 01, the S&P 500 through the spring and summer, the ten-year in the rate-led weeks, the thirty-year in 10), a commodity series matching the week's biggest or best-documented mover (Brent, WTI, silver, corn, wheat, natural gas, sugar or URA), and the semiconductor ETF (SMH) in the AI lane. Issue 14 already had three, issue 15 gained the AI chart, and 16-18 gained the commodity and AI charts. Issue 19 was left at four. Issue 00 is the partial pre-launch baseline with only market signals, so it was not given editorial sections it never had.
