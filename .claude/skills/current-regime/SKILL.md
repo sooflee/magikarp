@@ -267,6 +267,9 @@ The site renders an optional `image` and/or `chart` on any lane (`regimes.*`),
 email/site 1:1 rule applies to text only. `build_site.lint_media` fails the build on
 a missing credit, licence, alt, caption, dimensions or file.
 
+- **At least three visuals per issue.** Charts count. Spread them across the issue
+  (for example, the deep-dive, markets and commodities), and use an event photo
+  when one exists. Never use stock or archive images just to reach the number.
 - **Photos: open licence only, stored locally.** Public domain (NASA, NOAA, other US
   federal agencies), CC0, CC BY or CC BY-SA. Never use news-agency or outlet photos
   from the linked articles, and never hotlink. Fetch with `python3 media.py commons
@@ -280,8 +283,8 @@ a missing credit, licence, alt, caption, dimensions or file.
   never mistaken for this week. Claim nothing you cannot see in the frame.
 - **Only photos that show something about this week**, such as a satellite image of the
   event. No stock, trade-fair or archive shots: issue 14's 2012 LG stand and 2020 strait photo
-  were removed as decoration. A lane with nothing like that gets no photo, and most weeks that
-  means one photo or none.
+  were removed as decoration. A lane with nothing like that gets no photo; the
+  three-visual minimum is met with charts.
 - **Charts: one dated series each** (`chart:{title, subtitle, series:[{name, points:
   [[YYYY-MM-DD, value]]}], prefix|suffix, decimals, y_min?, y_max?, ref?:{value,label},
   highlight_from, highlight_label, source, source_url?}`). Two or more series need a

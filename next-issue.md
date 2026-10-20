@@ -32,3 +32,6 @@ Oct 19 China Q3 GDP and September activity data · Oct 20 Netflix Q3 earnings ·
 
 ## Big-story sweep notes for 20
 Do not lose: China Q3 GDP (Oct 19), France's post-riot curfews and Macron's review, the Hormuz offer and Saudi air-defence failure, AI credit stress (CoreWeave, Oracle, Nebius, Nscale), the eight-state OpenAI suits and FTC CIDs, Character.AI's Chapter 11, Taiwan/China chip controls, Nvidia's HBM base-die re-cut with Samsung/SK Hynix/Micron on TSMC 3nm, Apple above $5T, the IMF's 3.1% forecast, ECB approval of UniCredit's Commerzbank stake, the Starshield slowdown, the CS conference submission caps and California's billionaire-tax estimate.
+
+## Visuals
+Issue 19 carried four visuals (three charts and one NASA satellite image of the Strait of Hormuz). Every issue needs at least three; find them while researching, not after the draft.

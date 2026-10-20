@@ -2106,7 +2106,7 @@ Lane choices worth recording:
 - Left out, with reasons: eight states suing OpenAI and the FTC CIDs (regulators; AI lane rule and space), the Starshield slowdown (Ukraine slot went to the Graham Act waiver), ECB approval of UniCredit's Commerzbank stake (markets space), Apple above $5T (brief cluster), the IMF's 3.1 percent forecast (brief cluster), Spain's floods (climate was issue 18; reporting landed after the window), Sudan's Nyala strike (Africa already carried by Ethiopia), the CS conference caps and California billionaire tax (brief space), Kenya's Shakahola verdict and Alberta's referendum (outside the window), and Beijing's 23-tech list in a brief (it is in the deep-dive summary and evidence).
 - Watchlist: open weights, AI's off-balance-sheet financing and agent security promoted to full cards; Maia, Osaka, Waymo and crypto watch lines refreshed.
 
-Media: no photo. One chart, Brent December (BZZ26.NYM, August 3 to October 16, 54 machine-generated points). The chart agrees with the text: 104.72 on October 9, 109.86 on October 16, +4.9 percent.
+Media: four visuals. One photo, NASA's Terra satellite image of the Strait of Hormuz on October 14; three charts, China's goods-trade growth (Q1-Q3), Brent December (BZZ26.NYM, August 3 to October 16, 54 machine-generated points) and Polymarket's October Fed-increase contract (October 1-18). The Brent chart agrees with the text: 104.72 on October 9, 109.86 on October 16, +4.9 percent. Also fixed the volatility card label at VIX 20: it now reads Elevated and red, not Calm and green.
 
 ### Issue 19 audit (2026-10-19) — corrections applied
 

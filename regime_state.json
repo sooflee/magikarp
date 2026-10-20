@@ -11694,7 +11694,37 @@
               "title": "China proposes export controls on AI models, chips and agents (Bloomberg, October 16)",
               "url": "https://www.bloomberg.com/news/articles/2026-10-16/china-proposes-export-controls-on-ai-models-chips-and-agents"
             }
-          ]
+          ],
+          "chart": {
+            "title": "China's goods-trade growth",
+            "subtitle": "Year on year, percent, Q1 to Q3 2026",
+            "suffix": "%",
+            "decimals": 1,
+            "tick_decimals": 0,
+            "highlight_from": "2026-07-01",
+            "highlight_label": "third quarter",
+            "series": [
+              {
+                "name": "Goods-trade growth",
+                "points": [
+                  [
+                    "2026-03-31",
+                    15.3
+                  ],
+                  [
+                    "2026-06-30",
+                    18.3
+                  ],
+                  [
+                    "2026-09-30",
+                    22.3
+                  ]
+                ]
+              }
+            ],
+            "source": "China Customs via Xinhua/gov.cn",
+            "source_url": "https://english.www.gov.cn/archive/statistics/202610/14/content_WS6acf1570c6d00ca5f9a0dabb.html"
+          }
         },
         "geopolitics": {
           "state": "stressed",
@@ -11868,7 +11898,96 @@
               "title": "CoreWeave stock and bond yields under pressure (CNBC, October 14)",
               "url": "https://www.cnbc.com/2026/10/14/coreweave-stock-bond-yields-ai-debt.html"
             }
-          ]
+          ],
+          "chart": {
+            "title": "The market's odds of an October Fed increase",
+            "subtitle": "Polymarket daily close, cents on the dollar, October 1 to 18",
+            "suffix": "¢",
+            "decimals": 1,
+            "tick_decimals": 0,
+            "highlight_from": "2026-10-11",
+            "highlight_label": "this issue's week",
+            "series": [
+              {
+                "name": "October increase",
+                "points": [
+                  [
+                    "2026-10-01",
+                    25.5
+                  ],
+                  [
+                    "2026-10-02",
+                    17.5
+                  ],
+                  [
+                    "2026-10-03",
+                    17.5
+                  ],
+                  [
+                    "2026-10-04",
+                    16.5
+                  ],
+                  [
+                    "2026-10-05",
+                    19.5
+                  ],
+                  [
+                    "2026-10-06",
+                    16.5
+                  ],
+                  [
+                    "2026-10-07",
+                    15.5
+                  ],
+                  [
+                    "2026-10-08",
+                    15.5
+                  ],
+                  [
+                    "2026-10-09",
+                    15.5
+                  ],
+                  [
+                    "2026-10-10",
+                    15.5
+                  ],
+                  [
+                    "2026-10-11",
+                    16.5
+                  ],
+                  [
+                    "2026-10-12",
+                    19.5
+                  ],
+                  [
+                    "2026-10-13",
+                    18.5
+                  ],
+                  [
+                    "2026-10-14",
+                    28.5
+                  ],
+                  [
+                    "2026-10-15",
+                    27.5
+                  ],
+                  [
+                    "2026-10-16",
+                    13.5
+                  ],
+                  [
+                    "2026-10-17",
+                    13.5
+                  ],
+                  [
+                    "2026-10-18",
+                    12.5
+                  ]
+                ]
+              }
+            ],
+            "source": "Polymarket"
+          }
         }
       },
       "momentum": {
@@ -12197,6 +12316,16 @@
           ],
           "source": "ICE Brent via Yahoo Finance (BZZ26.NYM)",
           "source_url": "https://finance.yahoo.com/quote/BZZ26.NYM"
+        },
+        "image": {
+          "src": "img/19/hormuz.jpg",
+          "alt": "Satellite image of the Strait of Hormuz, with Iran to the north and the Musandam Peninsula to the south, under scattered cloud.",
+          "caption": "The Strait of Hormuz and the Persian Gulf coast, photographed by NASA's Terra satellite on October 14, 2026. Iran lies to the north and the Musandam Peninsula of Oman to the south.",
+          "credit": "NASA Worldview, MODIS on Terra",
+          "license": "Public domain",
+          "source_url": "https://worldview.earthdata.nasa.gov/?v=54.0,24.0,58.0,28.0&l=MODIS_Terra_CorrectedReflectance_TrueColor,Coastlines_15m&t=2026-10-14",
+          "width": 1280,
+          "height": 823
         }
       },
       "undercurrent": {

@@ -134,7 +134,7 @@ python3 validate_issue.py --quotes   # the quote list the audit must check
 python3 build_site.py                # link lint, media lint, hover-note lint, renders docs/
 ```
 
-Then run the `human-voice` and `humanize` passes over all reader text and re-run the validator.
+Then count the visuals: at least three across the issue (charts and/or an event photo). Then run the `human-voice` and `humanize` passes over all reader text and re-run the validator.
 
 ## 6. Audit (never skip)
 

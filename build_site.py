@@ -811,7 +811,14 @@ def render_across_inline(a: dict) -> str:
 MKT_ORDER = [("trend", "Trend"), ("vol", "Volatility"), ("curve_bp", "Yield curve"),
              ("gdpnow", "Growth (GDPNow)"), ("dollar", "Dollar"), ("credit", "Credit"),
              ("liquidity", "Liquidity"), ("crypto", "Crypto")]
-MKT_FMT = {"curve_bp": lambda v: f"Steep (+{v} bp)", "vol": lambda v: f"Calm ({v})",
+def _vol_label(v) -> str:
+    try:
+        return f"{'Elevated' if float(v) >= 18 else 'Calm'} ({v})"
+    except (TypeError, ValueError):
+        return f"Calm ({v})"
+
+
+MKT_FMT = {"curve_bp": lambda v: f"Steep (+{v} bp)", "vol": _vol_label,
            "gdpnow": lambda v: f"{v}%"}
 MKT_SENSE = {"trend": "pos", "vol": "pos", "curve_bp": "pos", "gdpnow": "pos",
              "dollar": "neutral", "credit": "pos", "liquidity": "neg", "crypto": "neg"}
@@ -825,6 +832,11 @@ MKT_VALUE_SENSE = {"UP": "pos", "DOWN": "neg", "RISK-ON": "pos", "RISK-OFF": "ne
 
 
 def mkt_color(key, val) -> str:
+    if key == "vol":
+        try:
+            return MKT_COLOR["neg" if float(val) >= 18 else "pos"]
+        except (TypeError, ValueError):
+            pass
     sense = MKT_VALUE_SENSE.get(str(val).strip().upper(), MKT_SENSE.get(key, "neutral"))
     return MKT_COLOR[sense]
 
